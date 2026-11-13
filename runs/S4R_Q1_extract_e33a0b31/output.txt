@@ -1,0 +1,108 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "DOI:10.1101/2022.02.08.22270370",
+      "design": "人体STN神经生理记录与神经机器人步态任务相结合的机器学习解码研究（Preprint）",
+      "population": "帕金森病患者；摘要未说明患者是否均存在FOG，也未报告FOG亚组人数。",
+      "n": "18",
+      "condition": "使用神经机器人平台，在受控条件下分解步行的关键组成部分。研究STN对步行启动、终止及腿部肌肉激活强度的编码，并利用机器学习解码步行状态。药物状态及DBS开关状态未报告。",
+      "measure": "STN神经活动动态；机器学习对肌肉激活、步行状态、运动活力及FOG进行解码。",
+      "finding": "研究报告STN神经活动包含可用于解码FOG的信息。同时，STN编码腿部肌肉激活的启动、终止和运动活力。这表明STN活动不仅与一般运动状态有关，也包含与FOG相关的可识别信息。但摘要没有报告FOG发生期间具体的神经活动变化方向、频段或特征。",
+      "effect": "报告成功解码FOG，但未提供FOG解码准确率、灵敏度、特异度或效应量。",
+      "limitations": "摘要未报告STN记录的具体信号类型、FOG事件数量、FOG判定标准及解码性能；未说明药物状态、刺激状态及患者FOG表型分层。机器学习解码成功只能说明信号包含与FOG相关的信息，不能单独证明某种STN活动导致FOG，也不能确定神经活动变化发生在FOG之前还是之后。",
+      "quote": "We translated this understanding into a machine-learning framework that decoded muscle activation, walking states, locomotor vigor, and freezing of gait.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "DOI:10.1101/2025.04.22.650006",
+      "design": "动物模型神经行为表型研究，并在人类FOG患者中进行探索性STN神经信号验证（Preprint）",
+      "population": "帕金森病动物模型；另包括2名伴有FOG的帕金森病患者。",
+      "n": "人类患者n=2；动物样本量摘要未报告。",
+      "condition": "通过运动学轨迹与神经振荡特征构建连续多模态特征向量，研究步态序列中断及运动不能发作。动物实验采用ECoG记录；在人类FOG患者中分析STN记录。药物状态和DBS状态未报告。",
+      "measure": "运动学轨迹、ECoG及STN神经记录；采用低维嵌入和监督分类分析神经振荡特征。动物实验中重点识别Hjorth complexity和Hjorth mobility。",
+      "finding": "动物帕金森病模型中，Hjorth complexity和Hjorth mobility随运动不能发作的出现而变化。在2名FOG患者中，STN记录的神经特征部分反映了动物ECoG研究中的发现。该结果提供了STN神经活动与步态序列中断相关的初步跨物种证据，但没有明确给出人类STN中具体哪些特征与FOG发生相关。",
+      "effect": "报告STN神经特征与动物ECoG发现部分一致；未提供一致性程度、相关系数、分类准确率或独立的FOG效应量。",
+      "limitations": "人类验证仅有2名FOG患者，样本量极小；摘要没有说明STN中具体对应的神经特征及其效应量，也没有报告FOG事件数量、药物状态和刺激状态。动物ECoG与人类STN记录来自不同测量部位，跨物种结果的可比性有限。摘要未报告无FOG患者对照，因而不能判断这些特征是否具有FOG特异性。",
+      "quote": "neural features in STN recordings partially reflected the findings from ECoG measurements in rodents.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "DOI:10.1101/2025.09.25.25336275",
+      "design": "临床可行性观察及慢性自适应DBS与常规DBS的非盲比较（Preprint）",
+      "population": "已接受慢性常规DBS治疗、使用Percept系列神经刺激器的帕金森病患者。",
+      "n": "20名患者获邀；9名符合条件并接受aDBS测试；其中5名进入慢性aDBS阶段，1名转回cDBS，3名仍处于优化阶段。",
+      "condition": "采用双阈值算法，根据STN beta振荡活动动态调整刺激幅度。比较自适应DBS（aDBS）与常规DBS（cDBS）。结果报告截至2025年7月。MDS-UPDRS III评估为非盲评估；具体药物状态和步态测试范式未报告。",
+      "measure": "STN beta振荡活动作为自适应刺激控制信号；临床结局包括MDS-UPDRS III和Freezing of Gait Questionnaire（FOG-Q）。",
+      "finding": "5名接受慢性aDBS的患者中，FOG-Q评分平均下降40%。同时，非盲MDS-UPDRS III评估显示，与cDBS相比，aDBS的平均运动改善幅度增加35%。研究提示以STN beta活动为控制信号的自适应刺激可能改善FOG相关临床表现，但没有直接证明FOG发生与beta活动之间存在特定的时间相关关系。",
+      "effect": "慢性aDBS患者FOG-Q平均下降40%；MDS-UPDRS III运动改善幅度较cDBS平均增加35%。摘要没有明确说明FOG-Q的40%下降所采用的具体比较基准。",
+      "limitations": "实际进入慢性aDBS阶段的患者只有5名，存在明显的样本量和选择偏倚问题。信号伪迹、缺乏明确alpha-beta峰以及既有刺激参数不兼容均导致患者无法进入aDBS阶段。临床评估为非盲评估，且摘要没有报告随机对照设计。FOG-Q属于临床量表，摘要没有提供逐次FOG事件与STN beta活动之间的时间关联分析，也未报告beta活动变化与FOG改善幅度之间的相关系数。因此，临床改善不能直接等同于beta活动是FOG发生的因果机制。",
+      "quote": "Gait outcomes improved most consistently, with an average 40% reduction in Freezing of Gait Questionnaire scores.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:10634253",
+      "design": "FOG患者与非FOG患者的步态比较研究（Comparative Study）",
+      "population": "伴有FOG的帕金森病患者与不伴FOG的帕金森病患者。",
+      "n": "摘要未报告。",
+      "condition": "分别在抗帕金森药物ON和OFF状态下比较步态。研究重点是平均步幅时间和步幅时间变异性，而非STN神经记录。",
+      "measure": "平均stride time、stride-to-stride variability及药物状态对步态变异性的影响。",
+      "finding": "FOG患者与非FOG患者的平均stride time相似，但FOG患者的stride-to-stride variability明显增加。这一差异在药物ON状态（P<0.020）和OFF状态（P<0.002）均存在。左旋多巴似乎能够降低两组患者的步态变异性。研究提出FOG患者可能存在持续性的步态节律调节障碍，而不只是FOG发作期间出现短暂异常。",
+      "effect": "FOG组在ON和OFF药物状态下均表现出更高的步幅时间变异性；摘要未提供具体效应量。",
+      "limitations": "该研究没有记录或分析STN神经活动，因此不能直接证明步态变异性与STN活动之间的联系。其FOG相关发现主要是行为学证据。研究提示药物状态会影响步态变异性，因此不同研究的药物条件可能影响FOG相关步态表型的比较。",
+      "quote": "stride-to-stride variability was markedly increased among PD subjects with freezing of gait compared to those without freezing of gait, both while \"on\" and \"off\" anti-parkinsonian medications.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:10766889",
+      "design": "临床试验（Clinical Trial）",
+      "population": "严重帕金森病患者。",
+      "n": "10",
+      "condition": "术前进行左旋多巴挑战试验，分别评估药物OFF和ON状态；手术后6个月，在持续双侧STN高频刺激状态下评估。另通过ADL问卷评价言语、吞咽、翻身、跌倒、行走及冻结等轴性症状。",
+      "measure": "UPDRS III总运动评分、肢体症状、轴性症状，以及包含walking和freezing项目的UPDRS II相关ADL评分。",
+      "finding": "STN刺激使总运动障碍评分改善62%，肢体症状改善62%，轴性症状改善72%。左旋多巴术前挑战对应的改善分别为68%、69%和59%。左旋多巴与STN刺激联合时，总运动障碍改善达到80%，轴性症状改善达到84%，主要涉及姿势和姿势稳定性。包含行走和冻结项目的ADL轴性症状评分也显示联合治疗后的进一步改善。但研究没有单独报告FOG项目的改善幅度。",
+      "effect": "STN刺激下轴性症状改善72%；联合左旋多巴时改善84%。这些是综合轴性症状结果，不能解释为FOG单项改善72%或84%。",
+      "limitations": "样本量仅10人。FOG被纳入综合ADL轴性症状评价，没有独立的FOG发生频率、持续时间或严重程度结果。术前药物挑战与术后持续刺激属于不同评估条件，无法完全分离刺激、药物及术后状态的影响。研究没有直接记录STN神经活动，因此属于STN刺激干预的临床证据，而非STN神经活动与FOG之间的直接电生理证据。",
+      "quote": "Axial symptoms from the ADL showed similar additional improvement when levodopa and STN stimulation were combined.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:10634253",
+      "design": "病例对照式临床步态比较研究（Comparative Study）",
+      "population": "伴有FOG和不伴有FOG的帕金森病患者。",
+      "n": "摘要未报告。",
+      "condition": "比较不同FOG状态患者在药物ON和OFF状态下的步态时间参数。没有STN刺激或STN神经活动记录。",
+      "measure": "stride-to-stride variability、平均stride time以及左旋多巴对步态节律的影响。",
+      "finding": "FOG患者的步幅时间变异性在药物ON和OFF状态下均显著高于非FOG患者，而平均步幅时间没有明显组间差异。研究认为FOG患者存在持续的步态节律调控异常，而不仅仅是发作时的瞬时运动中断。",
+      "effect": "药物ON状态下组间差异P<0.020；药物OFF状态下P<0.002。",
+      "limitations": "没有STN神经活动测量，不能将行为学差异直接归因于STN。摘要未提供样本量和具体变异性效应量。该研究可作为FOG行为学表型的比较依据，但不能用于判断STN beta或其他频段活动是否与FOG存在相关性。",
+      "quote": "PD subjects with freezing of gait have a continuous gait disturbance: the ability to regulate the stride-to-stride variations in gait timing and maintain a stable walking rhythm is markedly impaired in subjects with freezing of gait.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:10634253",
+      "design": "FOG相关步态行为研究（Comparative Study）",
+      "population": "帕金森病伴FOG患者与不伴FOG患者。",
+      "n": "摘要未报告。",
+      "condition": "药物ON和OFF状态下的步态比较；未进行STN刺激或电生理记录。",
+      "measure": "步幅时间及其逐步变异性。",
+      "finding": "FOG患者的步态节律变异性明显增加，且这一现象在药物ON和OFF状态下均存在。左旋多巴可以降低步态变异性，但不能消除FOG组与非FOG组之间的差异。",
+      "effect": "FOG组步态变异性显著增加；药物ON状态P<0.020，OFF状态P<0.002。",
+      "limitations": "不包含STN记录，不能作为STN神经活动与FOG关系的直接证据。该研究的价值在于说明FOG可能伴随持续性步态节律异常，且药物状态会影响观察到的步态特征。",
+      "quote": "increased gait variability was not related to other measures of motor control (while off medications) and levodopa apparently reduced gait variability, both in subjects with and without freezing.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:10634253",
+      "design": "临床步态比较研究（Comparative Study）",
+      "population": "帕金森病伴FOG患者与不伴FOG患者。",
+      "n": "摘要未报告。",
+      "condition": "分别在药物ON和OFF状态下测量步态。",
+      "measure": "步态节律和步幅时间变异性。",
+      "finding": "FOG患者具有持续的步态节律不稳定，而不是仅在冻结发作时出现异常。这提示FOG与运动节律调节障碍有关。",
+      "effect": "步态变异性在FOG患者中显著增加，ON状态P<0.020，OFF状态P<0.002。",
+      "limitations": "该研究没有STN神经信号数据，不能解释这种节律障碍的STN神经机制。摘要也没有提供具体样本量和效应量。",
+      "quote": "the inability to control cadence might play an important role in this debilitating phenomenon",
+      "basis": "abstract"
+    }
+  ]
+}</escape>
