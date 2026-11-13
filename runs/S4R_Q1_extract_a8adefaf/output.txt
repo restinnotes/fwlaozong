@@ -1,0 +1,108 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:39534364",
+      "design": "research-article；方法学开发研究，包含仿真分析和临床DBS脑信号记录分析",
+      "population": "接受DBS治疗的帕金森病患者；摘要未提供患者详细特征及具体电极靶点",
+      "n": "摘要未报告",
+      "condition": "分析DBS记录中听觉提示存在和撤除时的神经信号变化。药物状态、DBS刺激开关状态、刺激参数、具体步态任务及FOG发作分组未在摘要中说明。",
+      "measure": "采用均匀相位经验模态分解（UPEMD）提取非线性振荡，利用Lempel-Ziv复杂度（LZC）分析复杂度谱，并分析不同频率的功率谱。",
+      "finding": "听觉提示显著影响DBS记录的高频复杂度特征。45–60 Hz频段复杂度在听觉提示作用下增加，提示撤除后短时间内下降；与此同时，听觉提示期间30 Hz以上频段的功率下降。作者认为这些变化可能反映听觉提示改善步态的作用。",
+      "effect": "45–60 Hz：LZC复杂度增加，提示撤除后短暂下降；大于30 Hz：功率下降。摘要未提供具体效应量，也未报告神经信号变化与实际FOG发作之间的直接相关系数。",
+      "limitations": "这是所给论文中与DBS脑内神经活动最直接相关的研究，但摘要没有明确说明记录靶点是否为STN，因此不能将其直接认定为STN-LFP证据。未报告样本量、药物状态、刺激状态及客观FOG事件标注，也没有证明复杂度变化与FOG发生存在直接对应关系。尤其需要区分功率和复杂度：功率下降与复杂度增加同时出现，并不构成真正的结果矛盾，而是提示不同信号特征可能反映不同神经动力学属性。基于本组论文可以提出竞争性解释：①STN局部振荡机制：FOG由STN局部神经活动状态改变驱动，STN-LFP特征应在FOG发生前或发生时出现可重复的事件锁定变化，并在控制药物、刺激和感觉线索后仍能预测FOG；②分布式网络机制：DBS记录中的变化主要反映听觉线索或其他网络状态改变，FOG更多受皮层认知、边缘系统及蓝斑相关网络影响，控制这些因素后STN信号的独立预测作用减弱；③状态依赖机制：STN信号与FOG的关系受药物、刺激参数、听觉提示和具体步态任务调节。以上为跨论文提出的待检验假说，并非该文作者已经证实的结论。可通过同一患者同步记录靶点确认的STN-LFP、EEG和客观步态/FOG事件，交叉操控药物状态、刺激状态及听觉提示进行区分。",
+      "quote": "The high-frequency band (45 ~ 80 Hz) of the UPEMD-based LZC spectrum reflects the impact of auditory cues in modulating the complexity of DBS recording.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39530963",
+      "design": "长期比较性临床研究",
+      "population": "接受双侧Forel田野H1（FF）DBS或STN-DBS的帕金森病患者",
+      "n": "22；FF-DBS组10例，STN-DBS组12例",
+      "condition": "比较术前与术后长期临床结果，平均随访6.18年（95% CI：5.57–6.78），随访超过5年。比较双侧FF-DBS与双侧STN-DBS。摘要未说明药物评估状态及具体刺激参数。",
+      "measure": "MDS-UPDRS III、Mattis Dementia Rating Scale、PDQ-39、Freezing of Gait Questionnaire（FOG-Q）及左旋多巴等效日剂量（LED）。",
+      "finding": "长期随访显示FF-DBS和STN-DBS均能改善运动症状及生活质量。FF-DBS组的FOG评分下降幅度和LED减少幅度均大于STN-DBS组。该结果提示STN-DBS能够改善部分运动症状，但其对FOG的长期改善可能不及FF-DBS。",
+      "effect": "FF-DBS相对于STN-DBS具有更大的FOG改善幅度及LED下降幅度；摘要没有提供两组FOG-Q变化的具体数值或组间效应量。",
+      "limitations": "样本量较小，FF组10例、STN组12例，可能影响组间比较的稳定性。摘要没有说明随机分组、基线FOG严重程度、具体刺激参数和药物评估状态。研究测量的是临床FOG评分，并未记录STN神经活动，因此不能据此确定STN振荡活动与FOG之间的直接关系。FF与STN属于不同刺激靶点，组间差异可能反映靶点相关网络作用的不同，而不一定是STN内部神经活动的差异。两组LED下降幅度也不同，可能是解释FOG改善差异时需要考虑的因素。",
+      "quote": "Patients with FF-DBS had a higher reduction in both FOG and in LED than did those with STN-DBS.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39546883",
+      "design": "单中心回顾性队列研究",
+      "population": "接受STN-DBS治疗的帕金森病患者",
+      "n": "94",
+      "condition": "比较术前与STN-DBS术后3–6个月的轴性症状。摘要未报告具体药物状态、刺激参数及是否按照FOG表型分组。",
+      "measure": "MDS-UPDRS III、Berg Balance Scale、Freezing of Gait Questionnaire（FOG-Q）、Ziegler Course，以及中脑、脑桥、中小脑脚和上小脑脚等区域的MRI体积指标及MR PIGD index。",
+      "finding": "STN-DBS后轴性帕金森病症状总体显著改善，但患者间改善程度存在明显异质性。MR PIGD index及其他皮质灰质体积指标均不能预测术后轴性症状的改善程度。研究将FOG-Q纳入评估，但摘要没有单独报告FOG-Q的具体变化结果。",
+      "effect": "轴性症状改善具有显著个体异质性；MR PIGD index及其他皮质灰质体积与术后轴性症状改善幅度之间未发现显著预测关系。",
+      "limitations": "单中心回顾性研究，随访时间为术后3–6个月，不能充分反映长期FOG变化。虽然纳入FOG-Q，但摘要没有给出FOG特异性结果，不能把总体轴性症状改善等同于FOG改善。研究分析的是结构性MRI指标，而非STN电生理活动，因此不能排除STN局部振荡、神经同步或刺激参数对临床反应的影响。药物状态和刺激设置未在摘要中明确报告。该研究提示仅凭结构影像指标难以解释STN-DBS对轴性症状的个体差异，但并不否定电生理机制。",
+      "quote": "STN-DBS led to significant, but heterogeneous improvement of axial PD symptoms.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39666124",
+      "design": "横断面在线问卷调查",
+      "population": "帕金森病研究组功能神经外科工作组中实际从事DBS编程的专家",
+      "n": "FOG治疗策略项目中，调整刺激幅度的回答为11/29（38%），调整刺激频率的回答为12/33（36%）；各问题有效回答人数不同。",
+      "condition": "调查DBS编程专家在治疗不同帕金森病症状时最可能采用的优化策略，特别比较治疗FOG时首先调整刺激幅度或刺激频率的选择。不是患者层面的治疗效果研究。",
+      "measure": "专家自我报告的DBS编程策略，包括初始编程方法、接触点配置及针对FOG等症状的参数调整选择。",
+      "finding": "针对FOG，专家在首先调整刺激幅度还是刺激频率方面存在明显分歧。选择首先调整幅度者占38%，选择首先调整频率者占36%，没有形成明确一致的编程策略。",
+      "effect": "调整幅度：11/29（38%）；调整频率：12/33（36%）。属于专家实践偏好的描述性结果，不代表两种策略的实际临床疗效相同或不同。",
+      "limitations": "问卷调查反映专家的临床实践选择，而不是通过随机对照或患者随访验证的治疗效果。两个选择的有效回答人数不同，不能将其视为严格的同一分母比较。摘要未报告针对不同刺激靶点、患者FOG表型、药物状态及客观FOG事件的分层结果。该研究不能证明幅度或频率调整对应哪种STN神经活动机制，但提示不同研究中刺激参数的差异可能是临床结果不一致的来源之一。可检验的解释是：如果FOG主要由特定STN振荡状态驱动，调整参数应通过可重复的STN-LFP变化预测FOG改善；如果治疗反应依赖患者表型或其他网络状态，则不同患者可能对幅度和频率调整表现出不同反应。",
+      "quote": "When treating freezing of gait, there was a divergence between first modifying amplitude (n = 11/29, 38%) or frequency (n = 12/33, 36%).",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39527412",
+      "design": "research-article；基于临床数据的EEG信号检测与预测方法研究",
+      "population": "帕金森病患者的临床EEG数据；摘要未报告患者人数和详细临床特征",
+      "n": "摘要未报告",
+      "condition": "比较正常步态、冻结步态及步态转换阶段的EEG信号，用于FOG检测和预测。药物状态、DBS状态及具体步态任务未在摘要中说明。",
+      "measure": "动态模态分解（DMD）提取EEG时空相干模态，结合解析公共空间模式（ACSP），分析运动相关频段的幅度和相位变化，并计算检测与预测准确率及敏感度。",
+      "finding": "不同步态状态具有可区分的EEG时空动态模式。DMD-ACSP在FOG检测任务中取得86.4% ± 3.6%的准确率和83.5% ± 4.3%的敏感度；在预测任务中取得86.5% ± 3.2%的准确率和86.7% ± 7.8%的敏感度。作者认为时空相干模态可以揭示不同步态状态下的大脑功能连接模式。",
+      "effect": "检测准确率86.4% ± 3.6%，敏感度83.5% ± 4.3%；预测准确率86.5% ± 3.2%，敏感度86.7% ± 7.8%。",
+      "limitations": "摘要未报告样本量、药物状态、刺激状态、具体步态任务及外部验证情况。EEG反映的是头皮记录的脑活动，不能直接定位或证明STN局部神经活动与FOG的关系。分类性能较好也不能直接证明相关神经活动具有因果作用。该结果支持FOG可能伴随可识别的分布式脑功能动态变化，但不能据此推断STN是这些变化的起源。",
+      "quote": "Results showed that, in the detection task, the DMD-ACSP achieved an accuracy of 86.4 ± 3.6% and a sensitivity of 83.5 ± 4.3%.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39463818",
+      "design": "横断面观察性研究，包含分组比较和多变量Logistic回归分析",
+      "population": "没有已知帕金森病相关遗传变异的特发性PD患者；iPDFOG+组118例，iPDFOG-组378例。详细神经心理学评估子样本中，FOG+组35例，FOG-组126例。",
+      "n": "总体496例；详细认知评估子样本161例。",
+      "condition": "横断面比较FOG+与FOG-患者，认知子领域分析采用详细神经心理学测试。回归模型调整社会人口学混杂因素和疾病严重程度。药物状态未在摘要中说明。",
+      "measure": "Benton's Judgment of Line Orientation、CERAD word recognition等神经心理学测试，以及MDS-UPDRS、SCOPA-AUT、PDSS和PDQ-39等临床量表。",
+      "finding": "FOG+患者表现出更高的非运动症状负担，包括幻觉、较高的MDS-UPDRS I评分和更明显的自主神经功能障碍。认知子领域分析显示，FOG+患者在Benton线方向判断测试和CERAD词语识别方面得分较低，涉及视觉空间、执行功能及记忆编码方面的损害。作者认为FOG相关认知障碍并不局限于执行功能，而涉及更广泛的皮质认知领域。",
+      "effect": "FOG+组在Benton线方向判断和CERAD词语识别方面表现较差；摘要未提供具体效应量。",
+      "limitations": "横断面研究不能确定认知损害与FOG之间的因果方向。详细认知评估仅包含161例患者，其中FOG+组35例，样本相对较小。研究没有记录STN神经活动，也没有直接检验认知变化与STN-LFP之间的关系。该结果支持皮质认知网络参与FOG的竞争性解释，但不能证明其取代或排除STN局部机制。药物状态未报告。",
+      "quote": "our findings point to a more widespread cortical impairment across cognitive subdomains beyond the executive domain in PDFOG+",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39587184",
+      "design": "横断面实验性步态启动研究",
+      "population": "45名参与者，分为PD-FOG组15例、PD无FOG组15例、健康对照组15例。PD无FOG组明确处于ON药物状态，PD-FOG组的药物状态未在摘要中明确说明。",
+      "n": "45；每组15例",
+      "condition": "参与者站在测力平台上，根据中性、愉快或不愉快的生态性听觉刺激向前迈步。研究比较不同情绪效价刺激下的步态启动反应。",
+      "measure": "步态启动期间的预期姿势调整（APA），包括失衡期和卸载期，以及身体压力中心（CoP）位移等时空参数。采用多元回归分析行为表现与边缘系统相关因素的关系。",
+      "finding": "PD-FOG患者在听到不愉快听觉刺激后，CoP位移减小；愉快刺激则促进CoP位移。PD无FOG患者和健康对照没有表现出类似的情绪刺激效应。多元回归分析显示，FOG患者的情绪刺激相关行为模式主要与边缘系统因素，即抑郁有关。作者认为情绪网络可能通过干扰运动控制所需的注意资源参与FOG发生。",
+      "effect": "不愉快刺激后PD-FOG患者CoP位移下降，愉快刺激后CoP位移增加；另外两组没有观察到类似效应。摘要未提供具体效应量。",
+      "limitations": "每组仅15例，样本量较小。实验考察的是听觉情绪刺激下的步态启动及APA变化，而不是自然行走过程中的实际FOG发作，因此不能直接将CoP位移变化等同于FOG事件。PD无FOG组明确处于ON状态，但PD-FOG组药物状态未明确，存在潜在状态差异。研究没有记录STN神经活动，无法判断边缘系统影响是否通过STN介导。该研究为非运动网络参与FOG提供了行为学证据，但不能直接证明其与STN活动之间的因果关系。",
+      "quote": "PD with FOG showed a reduction of CoP displacements after listening to unpleasant stimuli.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:39839030",
+      "design": "横断面观察性神经影像研究",
+      "population": "PD伴FOG患者22例、PD不伴FOG患者24例，以及匹配健康对照13例。",
+      "n": "59；PD-FOG组22例，PD-nFOG组24例，健康对照组13例。",
+      "condition": "所有参与者接受神经黑色素敏感MRI（NM-MRI）及临床评估。使用两个统计模型筛选和调整潜在混杂因素。药物状态未在摘要中说明。",
+      "measure": "通过NM-MRI测量蓝斑（LC）的信噪对比比（CNR），采用回归模型分析FOG、快速眼动睡眠行为障碍（RBD）和性别与左侧LC CNR的独立关系。",
+      "finding": "FOG与左侧LC CNR存在独立统计学关联。模型1中FOG的β=0.127（95% CI：0.019–0.236，P=0.023），模型2中β=0.153（95% CI：0.019–0.287，P=0.026）。RBD也与左侧LC CNR独立相关，且其影响程度大于FOG。作者认为FOG与LC退变相关的去甲肾上腺素功能障碍有关。",
+      "effect": "FOG与左侧LC CNR的关联：模型1 β=0.127，P=0.023；模型2 β=0.153，P=0.026。RBD的β分别为0.182和0.171，作者报告其影响大于FOG。",
+      "limitations": "样本量较小，特别是FOG组仅22例。横断面影像学相关不能证明LC退变导致FOG。NM-MRI测量的是LC影像信号特征，并非直接神经元放电或STN电生理活动。RBD和性别也与LC CNR有关，提示潜在混杂和患者表型差异需要考虑。该研究支持去甲肾上腺素相关网络参与FOG的竞争性机制，但没有直接检验LC与STN之间的功能关系。",
+      "quote": "Our findings indicated that the FoG is associated with noradrenergic dysfunction caused by LC degeneration.",
+      "basis": "abstract"
+    }
+  ]
+}</escape>
