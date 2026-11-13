@@ -974,9 +974,19 @@ def cmd_audit(args):
                EVIDENCE=f"（全部 {n} 条原始结构化证据见附件 evidence_all.txt，每条以 [证据编号] 开头）",
                REPORT_DRAFT="（报告正文草稿见附件 report_draft.md）",
                STUDY_MAP="（本版本知识库还没有研究/队列/版本映射。请根据证据里的作者、年份、样本和题目自行识别可能的同一研究不同版本或同一队列，写进 integrity_errors。）")
-    print(f"审计：结论 {len(compact)}、假说 {len(syn['hypotheses'])}、证据 {n} 条（附件），提示词 {len(msg)} 字", flush=True)
+    att = [ev_file, draft]
+    if len(msg) > INLINE_MAX:   # 11-13 S4R：结论关联 873 条证据，内联放不下 → 结论和假说作附件（不删减）
+        cf = d / "claims_hypotheses.json"
+        wr(cf, {"claims": compact, "hypotheses": syn["hypotheses"]}); att.append(cf)
+        msg = fill(P("synth_audit"), QUESTION=question(args),
+                   CLAIMS="（候选结论见附件 claims_hypotheses.json 的 claims；每条的 evidence 是 证据编号:关系）",
+                   HYPOTHESES="（候选假说见附件 claims_hypotheses.json 的 hypotheses）",
+                   EVIDENCE=f"（全部 {n} 条原始结构化证据见附件 evidence_all.txt，每条以 [证据编号] 开头）",
+                   REPORT_DRAFT="（报告正文草稿见附件 report_draft.md）",
+                   STUDY_MAP="（本版本没有确认过的研究/队列映射；证据行里标了'这是某正式版的预印本版本'的，与正式版是同一研究。其余请根据作者、年份、样本、题目识别可能的重复，写进 integrity_errors。）")
+    print(f"审计：结论 {len(compact)}、假说 {len(syn['hypotheses'])}、证据 {n} 条（附件），提示词 {len(msg)} 字，附件 {len(att)} 个", flush=True)
     if len(msg) > INLINE_MAX: raise RuntimeError(f"审计提示词超长 {len(msg)}")
-    aud = llm.parse_json(llm.call(f"{args.tag}_{args.q}_audit_{llm.pid(msg + rd(draft))}", msg, attach=[ev_file, draft], model=G6, stage="audit"))
+    aud = llm.parse_json(llm.call(f"{args.tag}_{args.q}_audit_{llm.pid(msg + rd(draft) + ''.join(rd(a) for a in att[2:]))}", msg, attach=att, model=G6, stage="audit"))
     wr(d / "audit.json", aud)
     print("审计结果：", {k: len(v) if isinstance(v, list) else 1 for k, v in aud.items()}, flush=True)
     # 按审计修订

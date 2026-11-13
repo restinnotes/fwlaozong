@@ -179,3 +179,21 @@ S4R 沿用 S1 证据 536 条（143 篇）
 [S4R_Q1_synthmerge1_2_9d3a90ba] gpt4 gpt-6-thinking 完成 420s 20734 字
 [S4R_Q1_synthmerge1_1_66e91596] gpt3 gpt-6-thinking 完成 438s 21005 字
 最终合并：111 条结论，提示词 58604 字
+[S4R_Q1_synthreduce_f742c69a] gpt3 gpt-6-thinking 完成 645s 32115 字
+最终结论 21 条，覆盖证据 884/890 条；未被合并引用的中间结论 0 条
+结论 21，假说 13，缺口 11，引用了库里没有的证据编号 30 处
+写报告输入改为附件： 写报告输入超长 746591 字（结论 21 条、证据 873 条），不静默截断
+写报告：结论文字/假说/缺口内联 27118 字，证据映射和证据表作附件
+[S4R_Q1_report_aa1a1f21] gpt3 gpt-6-thinking 完成 500s 27836 字
+附录：文献 351，证据 873，结论 21，假说 13
+S4R 报告 27836 字
+审计：结论 21、假说 13、证据 890 条（附件），提示词 92325 字
+Traceback (most recent call last):
+  File "D:\fwlaozong\tools\run.py", line 1244, in <module>
+    main()
+  File "D:\fwlaozong\tools\run.py", line 1240, in main
+    globals()["cmd_" + args.cmd](args)
+  File "D:\fwlaozong\tools\run.py", line 978, in cmd_audit
+    if len(msg) > INLINE_MAX: raise RuntimeError(f"审计提示词超长 {len(msg)}")
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 审计提示词超长 92325
