@@ -1,0 +1,25 @@
+分片综合：证据 890 条 → 15 片（年份 ['2000–2013', '2013–2016', '2017–2017', '2017–2019', '2019–2020', '2020–2021', '2021–2022', '2022–2023', '2023–2024', '2024–2025', '2025–2025', '2025–2025', '2025–2026', '2026–2026', '2026–2026']）
+[S4R_Q1_synthmap10_f6890991] gpt3 gpt-6-thinking 完成 373s 30463 字
+[S4R_Q1_synthmap11_66625ea3] gpt4 gpt-6-thinking 完成 403s 32062 字
+[S4R_Q1_synthmap12_17470708] gpt4 gpt-6-thinking 完成 415s 30685 字
+[S4R_Q1_synthmap9_6fb9cdf7] gpt3 gpt-6-thinking 完成 433s 30658 字
+[S4R_Q1_synthmap13_812a89d2] gpt4 gpt-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 238s
+[S4R_Q1_synthmap15_a7a5e3ef] gpt3 gpt-6-thinking 完成 345s 21310 字
+[S4R_Q1_synthmap14_f4c471af] gpt3 gpt-6-thinking 完成 531s 38080 字
+[S4R_Q1_synthmap13_812a89d2] gpt3 gpt-6-thinking 完成 372s 29116 字
+第 1 级分组合并：370 条 → 4 组
+[S4R_Q1_synthmerge1_4_a87ba5bc] gpt3 gpt-6-thinking 完成 137s 9295 字
+[S4R_Q1_synthmerge1_3_0ee39df2] gpt4 gpt-6-thinking 完成 351s 19812 字
+[S4R_Q1_synthmerge1_2_0fdaa494] gpt4 gpt-6-thinking 完成 421s 18394 字
+最终合并：93 条结论，提示词 53341 字
+[S4R_Q1_synthreduce_e25695cc] gpt3 gpt-6-thinking 完成 554s 32841 字
+最终结论 22 条，覆盖证据 888/890 条；未被合并引用的中间结论 0 条
+结论 22，假说 20，缺口 11，引用了库里没有的证据编号 4 处
+审计：结论 22、假说 20、证据 890 条（附件），提示词 2691 字，附件 3 个
+[S4Rb_Q1_audit_4f8a579e] gpt4 gpt-6-thinking 完成 1660s 99229 字
+审计结果： {'claim_audit': 22, 'conflicts': 8, 'hypothesis_audit': 20, 'unrepresented_evidence': 42, 'report_coverage': 68, 'integrity_errors': 16, 'revision_requests': 26}
+[S4Rb_Q1_revise_4885d101] gpt4 gpt-6-thinking 完成 595s 53441 字
+修订后：结论 25（新增 3），假说 20，拒绝的审计要求 6，结论覆盖证据 209/890
+证据关联：底 888 条 EID → 新 893 条；改类型 86、新增 104；丢失 0（应为 0：S2 结论都被 S3d 修订版沿用时）
+写报告输入改为附件： 写报告输入超长 724593 字（结论 25 条、证据 890 条），不静默截断
+写报告：结论文字/假说/缺口内联 40546 字，证据映射和证据表作附件

@@ -1,0 +1,91 @@
+你是一名独立的科学证据审计员，不是原报告的作者。你的职责是检查一个已经完成跨研究综合的研究报告，判断其结论是否真正受到原始证据支持，是否遗漏重要发现，以及提出的竞争性机制是否具有真正的因果区分能力。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+【研究、队列和版本关系】
+（本版本没有确认过的研究/队列映射；证据行里标了'这是某正式版的预印本版本'的，与正式版是同一研究。其余请根据作者、年份、样本、题目识别可能的重复，写进 integrity_errors。）
+
+【原始结构化证据】
+（全部 890 条原始结构化证据见附件 evidence_all.txt，每条以 [证据编号] 开头）
+
+【候选跨研究结论】
+（候选结论见附件 claims_hypotheses.json 的 claims；每条的 evidence 是 证据编号:关系）
+
+【候选机制假说】
+（候选假说见附件 claims_hypotheses.json 的 hypotheses）
+
+【报告正文草稿】
+（报告正文草稿见附件 report_draft.md）
+
+审计规则：
+
+一、证据真实性和独立性
+1. 只能将原始实验结果作为直接证据。综述转述、跨研究综合结论和机制假说不能作为独立于其上游证据的实验支持。
+2. 同一研究的预印本和正式版本不能计为两项独立研究。
+3. 同一队列的不同分析不能自动算作独立重复验证。
+4. 患者数、事件数、试次数和电极数不能混淆。
+5. 摘要没有报告某个结果不等于全文没有报告。必须根据basis区分。
+
+二、FOG终点与阶段
+1. 分开实际冻结、冻结前事件相关活动、一般易感性、虚拟或模拟冻结、主动停止、问卷和一般步态指标。
+2. pre_FOG_event_associated不能写成during_FOG。
+3. 不同冻结定义、时间窗和行为任务不能未经论证直接合并。
+4. 药物状态和临床FOG亚型必须分开。
+5. 任何跨研究结论必须说明其适用的具体事件阶段和结局类型。
+
+三、结论审计
+1. 每条Claim必须关联有效EID。
+2. 对每条Claim分别列出supports、contradicts、qualifies和not_tested证据。
+3. contradicts只能用于在可比的患者群体、任务、时间阶段、测量和结局下真正不相容的结果。没有统计学显著性不能自动作为反证。
+4. 区分独立研究数、独立队列数、患者数和证据片段数。
+5. 直接性、偏倚风险、精确度和外部适用性分别评价。
+6. 如果证据不足，降低结论强度，而不是用模型推理补齐。
+
+四、冲突分析
+对每组冲突检查：患者表型、药物状态、刺激状态、任务范式、实际FOG发生情况、事件阶段、频段定义、解剖位置、信号处理、统计方法、样本量和偏倚风险。区分真正相反的结果与测量对象不同造成的表面冲突。
+
+五、因果模型审计
+每个假说必须明确：
+- 因果起点；
+- 关键中介；
+- 下游结果；
+- 可能的共同原因；
+- 时间顺序；
+- 反馈关系；
+- 与其他假说的兼容关系；
+- 真正互斥的竞争关系；
+- 独特预测；
+- 反证条件；
+- 能够改变目标机制而不是同时改变所有候选机制的干预。
+
+不要强行把所有假说设为互斥。允许多个机制同时存在，但必须明确哪些因果主张互相竞争。
+
+六、实验可识别性
+对每个实验预测，检查是否有其他模型也能产生同样结果。若同一个刺激条件同时改变STN局部活动、网络连接和下游运动输出，就不能仅凭相关变化确定中介机制。区分观察性同步记录、预测验证、干预效应和中介因果验证。检查是否存在对中介变量过度调整的问题。
+
+七、正文覆盖审计
+对所有高度相关的原始研究，检查报告正文是否真正讨论了其发现、条件和限制。只出现在references或附录不算充分综合。发现正文没有讨论的重要证据时，指出它可能改变哪条Claim或Hypothesis。
+
+八、禁止事项
+不能为了增加假说数量而制造模型；不能把模型共识当成实验验证；不能把统计不显著当成等效；不能因为研究年份较新就自动赋予更高权重；不能为了使报告看起来完整而填补未知数据。
+
+输出一个JSON对象，顶层字段为claim_audit、conflicts、hypothesis_audit、unrepresented_evidence、report_coverage、integrity_errors、revision_requests。
+
+claim_audit每项记录cid、supporting_eids、contradicting_eids、qualifying_eids、not_tested_eids、independent_study_ids、independent_cohort_ids、directness、risk_of_bias_summary、status_recommendation、reason。
+
+conflicts每项记录topic、comparable_eids、noncomparable_eids、possible_sources、remaining_conflict。
+
+hypothesis_audit每项记录hid、causal_level、dag_edges、necessary_assumptions、compatible_with、competes_with、unique_prediction、falsifier、intervention_needed、identifiability、reason。
+
+unrepresented_evidence每项记录eid、importance、why_not_represented、suggested_claim_or_gap。
+
+report_coverage每项记录eid、covered_in_body、report_location、coverage_quality、required_revision。
+
+integrity_errors记录无效EID、重复计权、循环支持、缺失来源和数量不一致。
+
+revision_requests记录必须修改的具体CID、HID或报告段落，以及修改理由。
+
+只输出JSON，不写审计报告正文。
