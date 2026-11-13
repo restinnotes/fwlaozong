@@ -1,15 +1,7 @@
 审计：结论 21、假说 13、证据 890 条（附件），提示词 2691 字，附件 3 个
-[S4Ra_Q1_audit_a90c185d] gpt4 gpt-6-thinking 完成 1558s 85487 字
 审计结果： {'integrity_errors': 11, 'claim_audit': 21, 'conflicts': 8, 'hypothesis_audit': 13, 'unrepresented_evidence': 47, 'report_coverage': 40, 'revision_requests': 45}
-Traceback (most recent call last):
-  File "D:\fwlaozong\tools\run.py", line 1254, in <module>
-    main()
-  File "D:\fwlaozong\tools\run.py", line 1250, in main
-    globals()["cmd_" + args.cmd](args)
-  File "D:\fwlaozong\tools\run.py", line 1001, in cmd_audit
-    rev = llm.parse_json(llm.call(f"{args.tag}_{args.q}_revise_{llm.pid(msg2 + audtxt)}", msg2, attach=att, model=G6, stage="revise"))
-                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\fwlaozong\tools\llm.py", line 141, in call
-    assert len(message) <= MAX_CHARS, f"{run_id}: 提示词过长 {len(message)} 字"
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError: S4Ra_Q1_revise_47b57ef7: 提示词过长 96240 字
+[S4Ra_Q1_revise_62a7c207] gpt3 gpt-6-thinking 完成 579s 43635 字
+修订后：结论 21（新增 0），假说 14，拒绝的审计要求 10，结论覆盖证据 142/890
+证据关联：底 884 条 EID → 新 894 条；改类型 55、新增 70；丢失 0（应为 0：S2 结论都被 S3d 修订版沿用时）
+写报告输入改为附件： 写报告输入超长 765061 字（结论 21 条、证据 883 条），不静默截断
+写报告：结论文字/假说/缺口内联 37509 字，证据映射和证据表作附件
