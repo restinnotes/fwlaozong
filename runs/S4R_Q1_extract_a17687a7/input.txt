@@ -1,0 +1,154 @@
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+pid: PMID:30211293
+题目: Neuroimaging and neuropsychological assessment of freezing of gait in Parkinson's disease.
+年份: 2018  类型: research-article; Journal Article
+摘要: IntroductionFreezing of gait (FOG) is a disabling phenomenon characterized by a brief, episodic absence or reduction of forward progression of the feet despite the intention to walk. It is a common cause of falls and mortality in cases with Parkinson's disease (PD). This article reviews neuropsychological and neuroimaging studies to date and introduces a new study of multimodal imaging and cognition in PD-FOG.MethodsA comprehensive literature search identified studies using neuropsychological evaluation and/or neuroimaging to evaluate PD-FOG.ResultsSeveral studies have evaluated PD-FOG, but few have combined neuropsychological and comprehensive neuroimaging and none longitudinally.DiscussionA study using a combined approach longitudinally evaluating cognitive dysfunction and underlying neural networks in FOG is needed. We introduce the framework of a study which demonstrates the use of establishing an infrastructure for studying neurodegenerative disorders using the National Institutes of Health/National Institute of General Medical Science Center of Biomedical Research Excellence grant mechanism.
+
+---
+
+pid: PMID:30213733
+题目: Dichotomy between motor and cognitive functions of midbrain cholinergic neurons.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Cholinergic neurons of the pedunculopontine nucleus (PPN) are interconnected with all the basal ganglia structures, as well as with motor centers in the brainstem and medulla. Recent theories put into question whether PPN cholinergic neurons form part of a locomotor region that directly regulates the motor output, and rather suggest a modulatory role in adaptive behavior involving both motor and cognitive functions. In support of this, experimental studies in animals suggest that cholinergic neurons reinforce actions by signaling reward prediction and shape adaptations in behavior during changes of environmental contingencies. This is further supported by clinical studies proposing that decreased cholinergic transmission originated in the PPN is associated with impaired sensorimotor integration and perseverant behavior, giving rise to some of the symptoms observed in Parkinson's disease and progressive supranuclear palsy. Altogether, the evidence suggests that cholinergic neurons of the PPN, mainly through their interactions with the basal ganglia, have a leading role in action control.
+
+---
+
+pid: PMID:30226827
+题目: Regularizing firing patterns of rat subthalamic neurons ameliorates parkinsonian motor deficits.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: The subthalamic nucleus (STN) is an effective therapeutic target for deep brain stimulation (DBS) for Parkinson's disease (PD), and histamine levels are elevated in the basal ganglia in PD patients. However, the effect of endogenous histaminergic modulation on STN neuronal activities and the neuronal mechanism underlying STN-DBS are unknown. Here, we report that STN neuronal firing patterns are more crucial than firing rates for motor control. Histamine excited STN neurons, but paradoxically ameliorated parkinsonian motor deficits, which we attributed to regularizing firing patterns of STN neurons via the hyperpolarization-activated cyclic nucleotide-gated channel 2 (HCN2) channel coupled to the H2 receptor. Intriguingly, DBS increased histamine release in the STN and regularized STN neuronal firing patterns under parkinsonian conditions. HCN2 contributed to the DBS-induced regularization of neuronal firing patterns, suppression of excessive β oscillations, and alleviation of motor deficits in PD. The results reveal an indispensable role for regularizing STN neuronal firing patterns in amelioration of parkinsonian motor dysfunction and a functional compensation for histamine in parkinsonian basal ganglia circuitry. The findings provide insights into mechanisms of STN-DBS as well as potential therapeutic targets and STN-DBS strategies for PD.
+
+---
+
+pid: PMID:30241951
+题目: Simultaneous low-frequency deep brain stimulation of the substantia nigra pars reticulata and high-frequency stimulation of the subthalamic nucleus to treat levodopa unresponsive freezing of gait in Parkinson's disease: A pilot study.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; Randomized Controlled Trial; Journal Article
+摘要: IntroductionExperimental studies suggest that low-frequency (LF) (63 Hz) deep brain stimulation (DBS) of the substantia nigra pars reticulata (SNr) could be useful to regulate gait disorders refractory to medical treatment in Parkinson's disease (PD). The SNr neurons could act as high-frequency (HF) pacemakers within locomotor control systems. Currently, no specific therapies can treat gait disorders in PD with insufficient response to dopaminergic treatment.ObjectiveTo investigate whether LF-SNr-DBS combined with standard HF stimulation of the subthalamic nucleus (STN) is clinically relevant in improving gait disorders that no longer respond to levodopa in PD patients, compared with HF-STN or LF-SNr stimulation alone.MethodsPatients received LF-SNr or HF-STN stimulation alone or combined (COMB) stimulation of both nuclei (crossover design). The nucleus to be stimulated was randomly assigned and clinical evaluations performed by a blinded examiner after three months follow-up for each. Clinical assessment included the Freezing of Gait questionnaire, Tinetti Balance and Walking Assessing tool, and Unified Parkinson's Disease Rating.ResultsWe included six patients (mean age 59.1 years, disease duration 16.1 years). All patients suffered motor fluctuations and dyskinesias. The best results were obtained with COMB in four patients (who preferred and remained with COMB over 3 years of follow-up) and with HF-STN in two patients. SNr stimulation alone did not produce better results than COMB or STN in any patient.ConclusionCOMB and HF-STN stimulation improved PD-associated gait disorders in this preliminary case series, sustained over time. Further multicenter investigations are required to better explore this therapeutic option.
+
+---
+
+pid: PMID:30306629
+题目: Impaired step-length setting prior to turning in Parkinson's disease patients with freezing of gait.
+年份: 2018  类型: Letter; Research Support, Non-U.S. Gov't; research-article; Research Support, N.I.H., Extramural
+摘要: （无摘要）
+
+---
+
+pid: PMID:30314597
+题目: Molecular Imaging of the Cholinergic System in Parkinson's Disease.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Review; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: One of the first identified neurotransmitters in the brain, acetylcholine, is an important modulator that drives changes in neuronal and glial activity. For more than two decades, the main focus of molecular imaging of the cholinergic system in Parkinson's disease (PD) has been on cognitive changes. Imaging studies have confirmed that degeneration of the cholinergic system is a major determinant of dementia in PD. Within the last decade, the focus is expanding to studying cholinergic correlates of mobility impairments, dyskinesias, olfaction, sleep, visual hallucinations and risk taking behavior in this disorder. These studies increasingly recognize that the regional topography of cholinergic brain areas associates with specific functions. In parallel with this trend, more recent molecular cholinergic imaging approaches are investigating cholinergic modulatory functions and contributions to large-scale brain network functions. A novel area of research is imaging cholinergic innervation functions of peripheral autonomic organs that may have the potential of future prodromal diagnosis of PD. Finally, emerging evidence of hypercholinergic activity in prodromal and symptomatic leucine-rich repeat kinase 2 PD may reflect neuronal cholinergic compensation versus a response to neuro-inflammation. Molecular imaging of the cholinergic system has led to many new insights in the etiology of dopamine non-responsive symptoms of PD (more "malignant" hypocholinergic disease phenotype) and is poised to guide and evaluate future cholinergic drug development in this disorder.
+
+---
+
+pid: PMID:30315142
+题目: Cerebral Metabolic Changes Related to Freezing of Gait in Parkinson Disease.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: Freezing of gait (FOG) in Parkinson disease (PD) often occurs during steering of gait (i.e., complex gait), which is thought to arise from executive dysfunction. Our aim was to test whether cognitive corticobasal ganglia-thalamocortical circuitry is impaired and whether alternate neural circuits are used for complex gait in PD with FOG. Methods: Eighteen individuals with idiopathic PD in the off-medication state, 9 with FOG (aged 68 ± 6 y) and 9 without FOG (aged 65 ± 5 y), were included. PET was used to measure cerebral glucose metabolism during 2 gait tasks, steering and straight walking, performed during the radiotracer uptake period. Results: During steering, there was a reduced change in cerebral glucose metabolism within the cognitive corticothalamic circuit. More specifically, those with FOG had less activation of the posterior parietal cortex, less deactivation of the dorsolateral prefrontal cortex and thalamus, and increased activation in the supplementary motor area. Interestingly, activity in the dorsolateral prefrontal cortex correlated with gait impairment (i.e., reduced stride length) in the FOG group. Conclusion: These results demonstrate decreased parietal control and an alternate control mechanism mediated by prefrontal and supplementary motor areas in PD with FOG.
+
+---
+
+pid: PMID:30319535
+题目: Beyond Dopamine: GABA, Glutamate, and the Axial Symptoms of Parkinson Disease.
+年份: 2018  类型: research-article; Journal Article
+摘要: Introduction: The axial symptoms of Parkinson disease (PD) include difficulties with balance, posture, speech, swallowing, and locomotion with freezing of gait, as well as axial rigidity. These axial symptoms impact negatively on quality of life for many patients, yet remain poorly understood. Dopaminergic treatments typically have little effect on the axial symptoms of PD, suggesting that disruptions in other neurotransmitter systems beyond the dopamine system may underlie these symptoms. The purpose of the present study was to examine the relationship between the axial symptoms of PD and GABA and glutamate levels quantified with magnetic resonance spectroscopy. Methods: The participant group included 20 patients with PD and 17 healthy control participants. Water-scaled GABA and Glx (glutamate + glutamine) concentrations were derived from GABA-edited MEGA-PRESS spectra acquired from the left basal ganglia and prefrontal cortex, and additional water-scaled Glx concentrations were acquired from standard PRESS spectra acquired from the pons. Spectra were analyzed with LCModel. The axial symptoms of PD were evaluated from subscales of the Unified Parkinson's Disease rating scale (MDS-UPDRS). Results: PD patients demonstrated significantly higher GABA levels in the basal ganglia, which correlated with the degree of gait disturbance. Basal ganglia Glx levels and prefrontal GABA and Glx levels did not differ significantly between patient and control groups, but within the PD group prefrontal Glx levels correlated negatively with difficulties turning in bed. Results from an exploratory subgroup analysis indicate that the associations between GABA, Glx, and axial symptoms scores are typically more prominent in akinetic-rigid patients than in tremor-dominant patients. Conclusion: Alterations in GABAergic and glutamatergic neurotransmission may contribute to some of the axial symptoms of PD.
+
+---
+
+pid: PMID:30357911
+题目: An update on adaptive deep brain stimulation in Parkinson's disease.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: Advancing conventional open-loop DBS as a therapy for PD is crucial for overcoming important issues such as the delicate balance between beneficial and adverse effects and limited battery longevity that are currently associated with treatment. Closed-loop or adaptive DBS aims to overcome these limitations by real-time adjustment of stimulation parameters based on continuous feedback input signals that are representative of the patient's clinical state. The focus of this update is to discuss the most recent developments regarding potential input signals and possible stimulation parameter modulation for adaptive DBS in PD. Potential input signals for adaptive DBS include basal ganglia local field potentials, cortical recordings (electrocorticography), wearable sensors, and eHealth and mHealth devices. Furthermore, adaptive DBS can be applied with different approaches of stimulation parameter modulation, the feasibility of which can be adapted depending on specific PD phenotypes. Implementation of technological developments like machine learning show potential in the design of such approaches; however, energy consumption deserves further attention. Furthermore, we discuss future considerations regarding the clinical implementation of adaptive DBS in PD. © 2018 The Authors. Movement Disorders published by Wiley Periodicals, Inc. on behalf of International Parkinson and Movement Disorder Society.
+
+---
+
+pid: PMID:30363375
+题目: Challenges in PD Patient Management After DBS: A Pragmatic Review.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: BackgroundDeep brain stimulation (DBS) of the subthalamic nucleus (STN) or internal globus pallidus (GPi) represents an effective and universally applied therapy for Parkinson's disease (PD) motor complications. However, certain procedure-related problems and unrealistic patient expectations may detract specialists from indicating DBS more widely despite significant clinical effects.MethodsThis review provides a pragmatic educational summary of the most conflicting postoperative management issues in patients undergoing DBS for PD.ResultsDBS in PD has been associated with certain complications and post-procedural management issues, which can complicate surgical outcome interpretation. Many PD patients consider DBS outcomes negative due to unfulfilled expectations, even when significant motor symptom improvement is achieved. Speech, gait, postural stability, and cognition may worsen after DBS and body weight may increase. Although DBS may induce impulse control disorders in some cases, in others, it may actually improve them when dopamine agonist dosage is reduced after surgery. However, apathy may also arise, especially when dopaminergic medication tapering is rapid. Gradual loss of response with time suggests disease progression, rather than the wearing off of DBS effects. Furthermore, implantable pulse generator expiration is considered a movement disorder emergency, as it may worsen parkinsonian symptoms or cause life-threatening akinetic crises due to malignant DBS withdrawal syndrome.ConclusionMajor unsolved issues occurring after DBS therapy preclude complete patient satisfaction. Multidisciplinary management at experienced centers, as well as careful and comprehensive delivery of information to patients, should contribute to make DBS outcome expectations more realistic and allow post procedural complications to be better accepted.
+
+---
+
+pid: PMID:30363872
+题目: The Pirouette Test to Evaluate Asymmetry in Parkinsonian Gait Freezing.
+年份: 2014  类型: Journal Article; Case Reports; case-report
+摘要: （无摘要）
+
+---
+
+pid: PMID:30380506
+题目: The transition between turning and sitting in patients with Parkinson's disease: A wearable device detects an unexpected sequence of events.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundWhen older adults turn to sit, about 80% of the subjects complete the turn before starting to sit i.e., a distinct-strategy, while in about 20%, part of the turning and sitting take place concurrently, i.e., an overlapping-strategy. A prolonged duration of the separation between tasks in the distinct-strategy (D-interval) and a prolonged duration of the overlap interval in overlapping-strategy (O-interval) are related to worse motor symptoms and poorer cognition. In the present study, we evaluated what strategy is employed by patients with Parkinson's disease (PD) when they transition from turning to sitting.Methods96 participants with PD performed turn to sit as part of the Timed Up and Go test, both with and without medications, while wearing a body-fixed sensor. We quantified the turn-to-sit transition and determined which strategy (distinct or overlapping) was employed. We then stratified the cases and used regression models adjusted for age, gender, height, and weight to examine the associations of the D-interval or O-interval with parkinsonian features and cognition.ResultsMost patients (66%) employed the overlapping-strategy, both off and on anti-parkinsonian medications. Longer O-intervals were associated with longer duration of PD, more severe PD motor symptoms, a higher postural-instability-gait-disturbance (PIGD) score, and worse freezing of gait. Longer D-intervals were not associated with disease duration or PD motor symptoms. Neither the D- nor O-intervals were related to cognitive function. Individuals who employed the overlapping-strategy had more severe postural instability (i.e., higher PIGD scores), as compared to those who used the distinct-strategy.SignificanceIn contrast to older adults without PD, most patients with PD utilize the overlapping strategy. Poorer postural and gait control are associated with the strategy choice and with the duration of concurrent performance of turning and sitting. Additional work is needed to further explicate the mechanisms underlying these strategies and their clinical implications.
+
+---
+
+pid: PMID:30392037
+题目: Abnormal Cerebellar Connectivity Patterns in Patients with Parkinson's Disease and Freezing of Gait.
+年份: 2019  类型: Journal Article
+摘要: In this study, we aimed to evaluate the importance of cerebellum in freezing of gait (FOG) pathophysiology. Due to the fundamental role of the cerebellum in posture and gait control, we examined cerebellar structural and functional connectivity (FC) in patients with PD and FOG. We recruited 15 PD with FOG (PD-FOG), 16 PD without FOG (PD-nFOG) patients, and 16 healthy subjects (HS). The FOG Questionnaire (FOG-Q) assessed FOG severity. Three tesla-MRI study included resting-state functional MRI, diffusion tensor imaging (DTI), and 3D T1-w images. We located seed regions in the cerebellar locomotor region, fastigial, and dentate nucleus to evaluate their FC. DTI parameters were obtained on the superior, middle, and inferior cerebellar peduncles. Global and lobular cerebellum volumes were also calculated. Cerebellar locomotor and fastigial FC was higher in cerebellar and posterior cortical areas in PD-FOG than in HS. FC of the cerebellar locomotor region with cerebellar areas positively correlated with FOG-Q. Dentate FC was lower in the prefrontal and parieto-occipital cortices in PD-FOG than in HS and in the brainstem, right basal ganglia, and frontal and parieto-occipital cortices than in PD-nFOG. DTI parameters in superior and middle cerebellar peduncles were altered in PD-FOG compared with PD-nFOG and significantly correlated with FOG-Q. There were no differences in cerebellar volumes between PD-FOG and either PD-nFOG or HS. Our results suggest that altered connectivity of the cerebellum contributes to the pathophysiology of FOG. FC of the cerebellar locomotor region and white matter (WM) properties of cerebellar peduncles correlate with FOG severity, supporting the hypothesis that abnormal cerebellar function underlies FOG in PD.
+
+---
+
+pid: PMID:30398673
+题目: Targeting the pedunculopontine nucleus in Parkinson's disease: Time to go back to the drawing board.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: （无摘要）
+
+---
+
+pid: PMID:30429820
+题目: The Neuromodulatory Impact of Subthalamic Nucleus Deep Brain Stimulation on Gait and Postural Instability in Parkinson's Disease Patients: A Prospective Case Controlled Study.
+年份: 2018  类型: research-article; Journal Article
+摘要: Background: Subthalamic nucleus deep brain stimulation (STN-DBS) has been an established method in improvement of motor disabilities in Parkinson's disease (PD) patients. It has been also claimed to have an impact on balance and gait disorders in PD patients, but the previous results are conflicting. Objective: The aim of this prospective controlled study was to evaluate the impact of STN-DBS on balance disorders in PD patients in comparison with Best-Medical-Therapy (BMT) and Long-term-Post-Operative (POP) group. Methods: DBS-group consisted of 20 PD patients (8F, 12M) who underwent bilateral STN DBS. POP-group consisted of 14 post-DBS patients (6F, 8M) in median 30 months-time after surgery. Control group (BMT-group) consisted of 20 patients (11F, 9M) who did not undergo surgical intervention. UPDRS III scale and balance tests (Up And Go Test, Dual Task- Timed Up And Go Test, Tandem Walk Test) and posturography parameters were measured during 3 visits in 9 ± 2months periods (V1, V2, V3) 4 phases of treatment (BMT-ON/OFF, DBS-ON/OFF). Results: We have observed the slowdown of gait and postural instability progression in first 9 post-operative months followed by co-existent enhancement of balance disorders in next 9-months evaluation (p p p > 0.05): these groups revealed constant progression of static and dynamic instability (p > 0.05). Conclusions: STN-DBS can have modulatory effect on static and dynamic instability in PD patients: it can temporarily improve balance disorders. mainly during first 9 post-operative months, but with possible following deterioration of the symptoms in next post-operative months.
+
+---
+
+pid: PMID:30441036
+题目: The Impact Of Freezing Of Gait On Balance Perception And Mobility In Community-Living With Parkinson'S Disease.
+年份: 2018  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: This pilot study investigated the impact of freezing of gait, objectively measured with three inertial sensors, on mobility function during seven days of communityliving monitoring in people with Parkinson's disease.Twenty-four subjects with PD, of which 14 experiencing freezing of gait, were recruited in this study. Subjects wore three inertial sensors (Opals, APDM) attached to both feet and the lumbar region for a week of continuous monitoring. Walking bouts, of at least 10s, were first identified, and then features of freezing, quantity and quality of mobility were extracted and averaged across the seven days.Results showed significant impairments in freezing and quality of mobility in the freezers group compared to the nonfreezers. Our measures of average and variability of time spent freezing was associated to the subjects' perception of freezing, assessed with the New Freezing of Gait Questionnaire. These preliminary results are introducing promising measures of mobility impairments measured during community-living in PD.
+
+---
+
+pid: PMID:30470656
+题目: The virtual reality of Parkinson's disease freezing of gait: A systematic review.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; research-article; Systematic Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: IntroductionFreezing of gait is an episodic inability to move the feet forward despite the intention to walk. It is a common cause of falls and subsequent morbidity and mortality in Parkinson's disease. Virtual reality paradigms provide an opportunity to safely evaluate freezing of gait, in order to better understand the underlying pathophysiology. This article focuses on the methodology, threshold used to define freezing of gait, results, limitations of studies using virtual reality paradigms, and proposes future directions of research. Summarizing these articles improves our understanding of freezing of gait in Parkinson's disease, and critical evaluation provides an opportunity for future studies to improve upon these efforts.MethodsWe performed a systematic review following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) statement guidelines, of studies using VR paradigms to elucidate the underlying pathophysiology of PD-FOG.ResultsThis review initially identified 57 articles, but after exclusion of duplicates, abstracts, and studies not focused on the underlying pathophysiology of this disorder, 12 peer-reviewed articles using virtual reality paradigms to evaluate freezing of gait in Parkinson's disease were found.ConclusionVirtual reality paradigms are able to reproduce freezing of gait. Studies using MRI compatible virtual reality to evaluate freezing of gait found dysfunctional connectivity between cortical and subcortical structures during episodes. However, several important limitations of these studies should caution our interpretation of these results. Future studies which improve the design and methodology are needed to ultimately identify the cause and subsequent treatments for freezing of gait in Parkinson's disease.
+
+---
+
+pid: PMID:30475908
+题目: A new method based on quiet stance baseline is more effective in identifying freezing in Parkinson's disease.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing, an episodic movement breakdown that goes from disrupted gait patterns to complete arrest, is a disabling symptom in Parkinson's disease. Several efforts have been made to objectively identify freezing episodes (FEs), although a standardized methodology to discriminate freezing from normal movement is lacking. Novel mathematical approaches that provide information in the temporal and frequency domains, such as the continuous wavelet transform, have demonstrated promising results detecting freezing, although still with limited effectiveness. We aimed to determine whether a computerized algorithm using the continuous wavelet transform based on baseline (i.e. no movement) rather than on amplitude decrease is more effective detecting freezing. Twenty-six individuals with Parkinson's disease performed two trials of a repetitive stepping-in-place task while they were filmed by a video camera and tracked by a motion capture system. The number of FEs and their total duration were determined from a visual inspection of the videos and from three different computed algorithms. Differences in the number and total duration of the FEs between the video inspection and each of the three methods were obtained. The accuracy to identify the time of occurrence of a FE by each method was also calculated. A significant effect of Method was found for the number (p = 0.016) and total duration (p = 0.013) of the FEs, with the method based on baseline being the closest one to the values reported from the videos. Moreover, the same method was the most accurate in detecting the time of occurrence, and the one reaching the highest sensitivity (88.2%). Findings suggest that threshold detection methods based on baseline and movement amplitude decreases capture different characteristics of Parkinsonian gait, with the first one being more effective at detecting FEs. Moreover, robust approaches that consider both time and frequency characteristics are more sensitive in identifying freezing.
+
+---
+
+pid: PMID:30515445
+题目: Levodopa/Carbidopa Intestinal Gel Infusion Therapy: Focus on Gait and Balance.
+年份: 2018  类型: Journal Article; Case Reports; case-report
+摘要: BackgroundGait and balance disorders in advanced Parkinson's disease (aPD) heavily impact the disease burden. In this prospective observational open-label study, our aim was to evaluate the effectiveness of levodopa/carbidopa intestinal gel (LCIG) infusion on balance and gait over a long-term follow-up.MethodsThe motor status of 15 aPD patients with balance and gait symptoms was assessed with UPDRS (I-IV) and H&Y at baseline in OFF and ON conditions, and after 52 weeks of LCIG infusion. Berg Balance Scale (BBS), Tinetti Gait & Balance Score (TS), Gait and Falls Questionnaire (G&F-Q), FOG Questionnaire (FOG-Q), and New FOG Questionnaire (NFOG-Q) were used to specifically test balance and gait.ResultsUPDRS, H&Y, BBS, TS, G&F-Q, FOG-Q, NFOG-Q improved significantly. All FOG types benefited from LCIG.ConclusionsOur preliminary data show the beneficial effect of LCIG therapy not only on FOG, but also on gait and balance. Results need to be confirmed in larger cohort studies.
+
+---
+
+pid: PMID:30536108
+题目: Gait festination in parkinsonism: introduction of two phenotypes.
+年份: 2019  类型: research-article; Review; Journal Article
+摘要: Gait festination is one of the most characteristic gait disturbances in patients with Parkinson's disease or atypical parkinsonism. Although festination is common and disabling, it has received little attention in the literature, and different definitions exist. Here, we argue that there are actually two phenotypes of festination. The first phenotype entails a primary locomotion disturbance, due to the so-called sequence effect: a progressive shortening of step length, accompanied by a compensatory increase in cadence. This phenotype strongly relates to freezing of gait with alternating trembling of the leg. The second phenotype results from a postural control problem (forward leaning of the trunk) combined with a balance control deficit (inappropriately small balance-correcting steps). In this viewpoint, we elaborate on the possible pathophysiological substrate of these two phenotypes of festination and discuss their management in daily clinical practice.
