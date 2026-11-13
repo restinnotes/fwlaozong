@@ -1,0 +1,18 @@
+请按下面的标准逐条检查这份研究报告，每条标准单独判断。可以联网核对文献和事实。
+
+研究任务：
+{QUESTION}
+
+标准：
+{STANDARD}
+
+标准 5（长期积累）和标准 7（持续自主改进）评价的是系统层面的能力，单份报告检验不了，一律判 not_testable、不报问题（按标准.md 的测法一栏）。
+
+每条标准给出：是否满足（met / partly / not_met / not_testable）、发现的问题（每个问题标 severe / moderate / minor，并引用报告原文片段）。另外抽查报告里最重要的 8 条结论，判断它们和所引文献是否一致（consistent / overstated / unsupported / wrong / cannot_verify）。
+
+只输出一个 JSON：
+{"standards":[{"n":1,"verdict":"","issues":[{"severity":"","what":"","where":""}]}],
+ "spot_checks":[{"claim":"","cited":"","verdict":"","why":""}]}
+
+【报告】
+{REPORT}

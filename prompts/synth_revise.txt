@@ -1,0 +1,27 @@
+你收到一个研究问题的综合结论、竞争性假说，以及一位独立审计员对它们的审计结果（JSON）。请严格按审计结果修订结论和假说，不要加入审计和证据之外的新内容。
+
+【研究问题】
+{QUESTION}
+
+【成果要满足的标准】
+{STANDARD}
+
+修订要求：
+1. 审计 claim_audit 里给出的 status_recommendation、证据直接性、偏倚风险、独立研究/队列数，要体现在修订后的结论强度、不确定性和限定条件里；适用的 FOG 事件阶段、任务、药物/刺激状态等限定必须写进结论文字。
+2. 审计 revision_requests 里的每一条都要处理；不同意的写进 rejected_requests 并说明理由。
+3. 审计 unrepresented_evidence 里重要的证据：要么并入已有结论，要么新增结论，要么写进 gaps 并说明为什么暂不纳入。
+4. 审计 hypothesis_audit 指出的因果层级、兼容/竞争关系、独特预测、反证条件、需要的干预，要写进修订后的假说。
+5. 结论编号：沿用原结论的，cid 保持不变，base_cid 写原编号；新增结论 cid 用 N1、N2…，并在 evidence 里列出所依据的证据编号和关系。沿用的结论不需要列 evidence（程序按审计的 supporting/contradicting/qualifying 列表自动带上），除非你要增加审计没列的证据。
+6. 不能把模型共识当成实验验证；证据不足就降级，不要用推理补齐。
+
+只输出一个 JSON：
+{"claims":[{"cid":"C1","base_cid":"C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative|unclear","uncertainty":"","applies_to":"","evidence":[{"eid":"","relation":"supports|contradicts|qualifies"}]}],
+ "hypotheses":[{"hid":"H1","name":"","text":"","causal_structure":"","claims":[{"cid":"C1","relation":"supports|contradicts"}],"compatible_with":[""],"competes_with":[""],"predictions":[""],"falsifiers":[""],"intervention_needed":""}],
+ "gaps":[{"what":"","query":""}],
+ "rejected_requests":[{"request":"","why":""}]}
+
+【原结论与假说】
+{SYNTHESIS}
+
+【审计结果】
+{AUDIT}

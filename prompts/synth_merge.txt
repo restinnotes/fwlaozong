@@ -1,0 +1,14 @@
+一个研究问题的证据已分片综合出很多局部结论。下面是其中一组（第 {G}/{NG} 组）。请把这一组里重复或相关的结论合并、整理，但不要丢掉任何对研究问题重要的结论，尤其是较新研究的结论；相互冲突的结论要保留冲突并写明可能来源，不要取多数。
+
+【研究问题】
+{QUESTION}
+
+每条局部结论格式：[编号] [层级/强度] 结论文字 ｜不确定性 ｜证据条数、证据年份范围。
+
+输出每条合并后的结论，写明它由哪些局部结论合并而来（from 里照抄局部结论编号；每条局部结论至少被一条合并结论引用）。编号用 G{G}_C1、G{G}_C2……
+
+只输出一个 JSON：
+{"claims":[{"cid":"G{G}_C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","from":["P1_C3"]}]}
+
+【局部结论】
+{CLAIMS}

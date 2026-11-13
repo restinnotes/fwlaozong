@@ -1,0 +1,132 @@
+===== prompts/plan.txt =====
+你在为一个研究问题设计文献检索。检索会由脚本在 Europe PMC 上执行（语法同 Europe PMC 网页检索：AND/OR/NOT、括号、"短语"、TITLE:、ABSTRACT:、PUB_YEAR:[2000 TO 2026] 等），每条检索式最多取 200 篇按相关度排序的结果，然后由模型逐篇看摘要筛选。所以检索式要有足够的召回，不怕多。
+
+【研究问题】
+{QUESTION}
+
+请做三件事：
+1. 把问题拆成需要证据回答的子问题。
+2. 给出 12–25 条检索式，覆盖：核心问题；每个子问题；不同测量手段和研究设计（如电生理、影像、刺激参数、动物模型、计算模型）；可能相关的交叉方向和相邻脑区/网络；综述和荟萃分析；可能与主流结论相反的证据。每条写明目的。
+3. 联网查一下，列出你认为一定要读到的关键文献（每篇给 PMID 或 DOI，只列你确认存在的），用来检查脚本检索有没有漏。
+
+只输出一个 JSON：
+{"subquestions":[""],"queries":[{"q":"","why":""}],"must_read":[{"pmid":"","doi":"","title":"","why":""}]}
+
+
+===== prompts/screen.txt =====
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+{QUESTION}
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+{PAPERS}
+
+
+===== prompts/extract.txt =====
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+{QUESTION}
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+{PAPERS}
+
+
+===== prompts/synth_map.txt =====
+你拿到的是一个研究问题的证据库的一部分（第 {I}/{N} 份；其余部分会另外处理，最后统一合并）。每条证据来自一篇已读过的论文，带研究条件和局限。
+
+【研究问题】
+{QUESTION}
+
+请只根据这一部分证据，形成跨研究的结论（claims）：
+1. 每条结论写明依据的证据编号及关系（supports/contradicts/qualifies），给出证据强度和不确定性。
+2. 相互冲突的证据要分析冲突可能来自哪里（研究条件、方法、分组、样本），不要简单取多数。
+3. 区分相关与因果，区分直接证据和推断。模型自己的推理不能当成证据。
+4. 尽量覆盖这一部分里所有和研究问题有关的发现，宁可多列结论，不要只挑几条；同一结论合并成一条。
+5. 只用这一部分里出现的证据编号。结论编号用 P{I}_C1、P{I}_C2……
+
+只输出一个 JSON：
+{"claims":[{"cid":"P{I}_C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","evidence":[{"eid":"","relation":"supports|contradicts|qualifies","note":""}]}]}
+
+【证据（第 {I}/{N} 份）】
+{EVIDENCE}
+
+
+===== prompts/synth_merge.txt =====
+一个研究问题的证据已分片综合出很多局部结论。下面是其中一组（第 {G}/{NG} 组）。请把这一组里重复或相关的结论合并、整理，但不要丢掉任何对研究问题重要的结论，尤其是较新研究的结论；相互冲突的结论要保留冲突并写明可能来源，不要取多数。
+
+【研究问题】
+{QUESTION}
+
+每条局部结论格式：[编号] [层级/强度] 结论文字 ｜不确定性 ｜证据条数、证据年份范围。
+
+输出每条合并后的结论，写明它由哪些局部结论合并而来（from 里照抄局部结论编号；每条局部结论至少被一条合并结论引用）。编号用 G{G}_C1、G{G}_C2……
+
+只输出一个 JSON：
+{"claims":[{"cid":"G{G}_C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","from":["P1_C3"]}]}
+
+【局部结论】
+{CLAIMS}
+
+
+===== prompts/synth_reduce.txt =====
+一个研究问题的全部证据（{NE} 条，来自 {NP} 篇论文）已经分成 {N} 份，各自综合出了一批局部结论。下面给你全部局部结论（每条带层级、强度、不确定性、证据条数和证据年份范围；具体证据关联由程序按你写的 from 自动带上）。请把它们合并成最终的综合。
+
+【研究问题】
+{QUESTION}
+
+【成果要满足的标准】
+{STANDARD}
+
+要求：
+1. 合并跨份重复或相关的结论；不同份之间相互冲突的结论要正面处理，分析冲突来源（研究条件、方法、年代、分组、样本），不要简单取多数。每条最终结论用 from 写明由哪些局部结论合并而来（照抄编号；每条局部结论至少被一条最终结论引用）。
+2. 不要丢掉只在某一份里出现、但对研究问题重要的结论，尤其是较新的研究。
+3. 提出竞争性机制假说（hypotheses）：每个假说关联支持和不利于它的结论；给出能把它和其他假说区分开的预测，以及什么结果会推翻它。不同假说的预测要真的不一样。
+4. 区分相关与因果，区分直接证据、推断和假说。模型自己的推理不能当成证据。
+5. 证据缺口写进 gaps，并给出补检索的检索式（Europe PMC 语法）。
+6. 最终结论编号 C1、C2…，假说 H1、H2…。
+
+只输出一个 JSON：
+{"claims":[{"cid":"C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","from":["G1_C1"]}],
+ "hypotheses":[{"hid":"H1","name":"","text":"","claims":[{"cid":"C1","relation":"supports|contradicts"}],"predictions":[""],"falsifiers":[""]}],
+ "gaps":[{"what":"","query":""}]}
+
+【局部结论】
+{CLAIMS}
+
+
+===== prompts/report.txt =====
+根据下面的结构化知识（文献、证据、结论、假说），写一份给领域研究者看的研究报告。
+
+【研究问题】
+{QUESTION}
+
+【成果要满足的标准】
+{STANDARD}
+
+要求：
+- 中文，专业术语可保留英文。Markdown。
+- 只用下面给出的内容，不添加知识库里没有的文献或数据。引用写成 [PMID:xxxx] 或 [DOI:xxxx]（照抄文献编号）。
+- 结构自己定，但要让读者看得到：证据全景、冲突及其可能来源、各竞争性假说及其区分性预测和反证条件、证据缺口和建议的下一步研究。
+- 每个重要结论标明证据状态（直接证据 / 跨研究推断 / 假说）。
+
+【结构化知识】
+{KB}

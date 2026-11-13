@@ -1,0 +1,120 @@
+{
+ "diagnosis": [
+  {
+   "rank": 1,
+   "problem": "检索方法不可复现，系统无法证明自己究竟搜索了什么、遗漏了什么。这是当前最直接影响研究覆盖可信度的问题。S2虽然收集了150篇文献，但正文没有报告实际数据库、检索日期、完整检索式、各式命中数、筛选数量、全文获取数量、排除理由和引文追溯过程。附录中的gaps/query是未来建议检索式，不是本次实际检索记录。",
+   "root_cause": "已验证。L1实际上产生了plan.json、queries、pool.json、search_seeds.json和筛选记录，但L5 report只接收知识库内容。prompts/report.txt明确要求只使用给出的结构化知识，输入没有实际检索日志。因此模型无法如实报告检索方法。这不是模型不会写方法学，而是流程没有提供必要输入。另一个问题是系统没有明确区分结构化叙述性证据综合与系统综述，容易出现覆盖范围表述超过实际方法能力的情况。注意：没有采用PRISMA本身不是缺陷，缺少与研究类型相匹配的可审计方法记录才是缺陷。",
+   "verify": "最便宜的验证是直接导出一次S2的report实际请求payload，与run目录中的plan.json、queries、pool.json、screening表和fetch记录比较。如果这些数据在运行产物中存在，却没有进入report输入，根因成立。随后不需要重跑研究，只需用现有日志生成methods.json，检查能否准确还原检索式、数据库、检索日期、命中数、去重数、筛选数和全文获取数。如果不能还原，缺失的日志字段就是下一步需要补记的内容。现有两份开放评审均将此列为首要问题，绝对验收标准1也判partly。",
+   "verified": true
+  },
+  {
+   "rank": 2,
+   "problem": "证据独立性没有得到可靠管理。538条evidence记录不能代表538份独立研究，预印本与正式发表版本、同一研究的不同分析、综述转述与原始研究之间可能重复计入。这会直接影响证据数量、跨研究重复验证程度和结论强度。",
+   "root_cause": "已验证。当前知识库主要以文献标识符和EID组织证据，没有独立的Study ID、Cohort ID、Version ID及来源依赖关系。现有附录已经出现多组预印本与正式论文重复，例如PMID 40677701及其2024年预印本、PMID 40992964及其预印本、PMID 40709562及其步态启动预印本，以及STN-SNr研究的预印本与正式版本。另有145条review来源的证据记录。当前模型没有足够结构信息判断这些证据究竟是独立重复、同一队列的不同分析，还是二手转述。",
+   "verify": "对现有150篇文献运行一次离线实体匹配：第一轮使用PMID、DOI、标准化标题、作者和发表时间生成候选重复组；第二轮使用患者数量、中心、招募时间、试验注册号和任务条件核实。优先核对评审已经指出的四组版本关系。统计去重前后的独立研究数、独立队列数，以及21条最终结论中每条结论的独立研究支持数。如果至少3组被确认属于同一研究的不同版本，且部分Claim的独立支持数下降，便证明重复计数已经实质影响证据强度。",
+   "verified": true
+  },
+  {
+   "rank": 3,
+   "problem": "没有真正的研究质量和偏倚风险评价。系统能够区分finding、synthesis、mechanism，却不能可靠回答某项finding有多可信。直接观察真实FOG的小样本研究、术中虚拟冻结研究、静息态观察研究、随机交叉试验和Meta分析不能仅靠supports关系及well-supported标签进行同等计权。",
+   "root_cause": "已验证。prompts/extract.txt只有limitations自由文本字段，没有独立的风险偏倚评价字段。prompts/synth_map.txt和synth_reduce.txt要求模型给证据强度，但没有操作性评分标准。P7已经指出544条证据中只有10条在limitations中明确提到偏倚、7条提到队列重叠、7条提到预印本。这意味着大量重要方法学问题没有进入可查询、可比较的结构化数据。直接性、内部有效性、精确度和外部适用性被混在了一起。",
+   "verify": "从现有538条记录中抽取20篇不同设计的核心研究，覆盖随机交叉试验、观察性研究、预测模型、术中电生理、慢性LFP和Meta分析。由独立评价者使用适合研究设计的工具进行评价，再与现有limitations及Claim状态比较。重点看：原来被标为supported或well-supported的结论是否包含高偏倚研究、伪重复、缺少盲法、选择性报告或不充分统计处理。如果超过25%的核心研究存在原有结构化记录没有识别的实质性风险，说明该缺陷不仅存在，而且已经影响结论可信度。",
+   "verified": true
+  },
+  {
+   "rank": 4,
+   "problem": "FOG事件与测量终点的分类没有落实到证据数据结构。实际冻结、虚拟冻结、模拟冻结、冻结易感性、冻结前事件关联、主动停止、问卷结果和一般步态异常不能混为同一种FOG证据。患者人数、实际发生冻结的患者人数、冻结事件数、试次数也没有被独立记录。",
+   "root_cause": "结构性原因已验证，具体个案误分类尚需逐篇复核。extract.txt目前只有population、n、condition、measure等自由文本字段，没有event_phase、event_validation、n_patients、n_events、n_trials等独立字段。患者的临床药物反应亚型与实验记录时的Medication ON/OFF也没有分开。尤其需要区分一般易感性与同一试次中随后真正发生冻结的Pre-FOG证据。现有开放评审和绝对验收均指出这类信息没有贯彻到全部证据记录。",
+   "verify": "选取15篇核心STN电生理研究，逐篇对照全文，建立一张人工核验表。每篇记录实际冻结是否发生、冻结判定依据、记录时间窗、患者数、实际冻结患者数、事件数、试次数、任务类型和临床FOG亚型。特别检查步态启动后最终出现冻结的试次是否被区分为事件相关Pre-FOG，而不是简单归入易感性。若至少3篇研究存在关键分母缺失、阶段标签不明确或不同终点被合并，确认该问题已经影响现有综合。",
+   "verified": true
+  },
+  {
+   "rank": 5,
+   "problem": "文献已经进入附录，却没有充分进入正文的跨研究综合。当前报告可能出现文献覆盖很广、证据表很大，但正文实际讨论的研究集合明显较小的问题。这使得证据提取与最终科学结论之间存在断层。",
+   "root_cause": "尚未独立验证具体遗漏数量，但结构性原因较明确。L4按年份分片形成局部结论，再分组合并，最终reduce只看到局部结论而非完整原始证据。L5报告提示词要求结构由模型自行决定，没有要求建立每条重要证据与正文论证之间的覆盖映射。即使所有证据都进入过一次synth_map，也不意味着它们进入了最终结论，更不意味着读者能够在正文中看到它们对既有解释的影响。评审特别指出PMID 31665229、24361601、31494286、42571859、42236313和42297979等候选研究需要检查其是否真正进入正文综合。",
+   "verify": "不重新提取、不重新综合。直接从当前evidence表筛选30条最相关的原始研究证据，要求另一模型或独立审查者逐条判断：正文是否实际讨论了该研究的结果、条件、限制，以及它对某项Claim或Hypothesis的影响。只出现在references或附录不算进入正文综合。如果有3篇以上高度相关的直接研究只在附录出现，或者只被泛泛引用而没有进入冲突分析，根因成立。",
+   "verified": false
+  },
+  {
+   "rank": 6,
+   "problem": "竞争性机制假说存在逻辑层级混合，部分模型可能同时成立，部分实验即使得到阳性结果也无法区分声称要区分的机制。",
+   "root_cause": "尚未完成独立验证。现有synth_reduce.txt虽然要求不同假说具有不同预测和证伪条件，但没有要求明确绘制因果有向图，没有要求区分上游原因、局部中介、网络中介、下游行为后果、代偿活动和单纯标志物。也没有要求证明某个预测在其他竞争模型下不成立。评审指出的H1/H2、H9/H10等关系存在不同程度的嵌套或共同成立可能。此外，匹配TEED并不能保证组织募集相同；同步观察STN与脑干相关信号也不能自动证明中介因果关系。",
+   "verify": "将13个假说分别整理为五项：因果起点、时间顺序、必要中介、关键干预、独特预测。对13个模型进行两两比较，建立预测重叠矩阵。再由独立模型审查者判断：是否存在两个假说在所有现有预测和实验条件下都无法区分；是否存在同一个实验结果可以同时支持多个本应竞争的假说；是否存在没有测量关键中介却声称能够区分机制的实验。出现任意两组无法区分的模型，即证明现有竞争性假说设计存在缺陷。",
+   "verified": false
+  },
+  {
+   "rank": 7,
+   "problem": "L1仍有检索结果截断，未来研究覆盖可能依赖模型事先知道哪些论文值得搜索。P1已经证明15篇模型点名的必读论文全部被本地检索的前100条结果截掉。虽然当前研究通过模型必读文献种子弥补了这15篇，但对模型没有预先想到的冷门方向，这种补救不成立。",
+   "root_cause": "已验证。current_pipeline.md的search步骤每条检索式取前100篇，而plan.txt描述每条最多取200篇。实际Europe PMC检索采用相关度排序和固定数量截断，没有完整分页、引用滚雪球或独立检索清单验证。P1的15/15精确匹配诊断已经证明是结果截断而不是检索式本身写错。",
+   "verify": "P1已经完成了核心验证，不需要重复原来的实验。下一步最便宜的是对同一组查询执行分页检索，与原始前100条结果比较，检查新增文献中有多少是已知必读研究和独立参考文献清单中的论文。验收标准是43篇必读文献全部能通过本地检索直接找回，同时独立参考文献清单的召回率明显提高。",
+   "verified": true
+  },
+  {
+   "rank": 8,
+   "problem": "全文获取和提取失败没有形成可靠的恢复机制。S2仍有2篇提取失败，并且部分重要研究只有摘要级证据。摘要没有提到某项结果，不等于全文没有报告该结果。",
+   "root_cause": "已验证存在失败记录，具体对最终结论的影响尚未验证。fetch采用本地开放全文优先、无法获取时有限使用Luna的策略；extract对全文一篇一调用，对只有摘要的论文20篇一批。当前流程没有展示按研究重要性排序的全文复核队列，也没有明确的提取失败重试、拆分和结果补齐机制。绝对验收指出PMID 41741462的全文报告了摘要未体现的FOG-Q改善，另有PMID 39470410的样本信息没有从全文完整提取。",
+   "verify": "从S2提取失败清单及所有abstract级核心证据中，选出5篇最重要的论文。优先使用已经获取的全文，分别重试单篇提取，比较原记录与新记录。统计新增的关键finding、样本分母、效应量和限制。如果至少一篇改变重要Claim的证据状态，或者出现摘要未报告但全文明确报告的主要结果，确认这是实质性缺陷。不要为了修复这一问题擅自增加Luna调用次数，保留现有用户设定。",
+   "verified": true
+  },
+  {
+   "rank": 9,
+   "problem": "结构化知识关系存在数据完整性问题，当前附录还不能保证长期自动更新时所有关系都可解析。",
+   "root_cause": "已验证。S2附录存在正文声称539条而实际只有538条的计数差异，47个G类from来源节点没有出现在最终JSON顶层结构中，至少有一条Claim引用了不存在的EID。当前知识库虽然有history，但没有证据表明所有外键、版本关系和引用边都经过强制验证。",
+   "verify": "对当前appendix.json运行一次纯代码完整性检查：统计所有EID、CID、HID、REF和from节点；验证每条边的目标是否存在；验证所有数量是否从实际数组自动计算；检查重复EID、孤立节点和循环引用。任何不存在的目标引用、重复的独立EID或数量不一致均算失败。该测试不需要调用大模型。",
+   "verified": true
+  },
+  {
+   "rank": 10,
+   "problem": "长期知识积累已经有数据库雏形，但自动重新评价旧结论和持续自主改进尚未形成实际运行闭环。当前系统能够保存文献、证据、结论、假说及history，不代表新证据真的能够自动触发旧结论更新。",
+   "root_cause": "已验证当前主线没有定义并展示一个已经跑通的更新流程。current_pipeline.md主要描述一次研究任务的plan、search、screen、fetch、extract、synthesize、report。绝对验收标准5判partly，标准7判partly且存在severe问题。现有报告描述了理想的更新规则，但没有展示从发现缺陷到核实原因、修改、重新提取、重新综合、质量回归测试的完整案例。",
+   "verify": "使用已有KB复制一个测试快照，向其中加入一篇与现有核心Claim直接相关、且结论与原Claim存在明确冲突的测试论文。只提交一次更新任务，不提供人工操作步骤。检查系统能否自动找到受影响的旧Claim、提取新证据、重新计算独立研究数、修改结论状态、保留旧版本、记录修改原因并生成前后差异报告。若任何关键步骤需要人手动指出应该重新评价哪条Claim，或没有保存旧版本和验证指标，则闭环尚未实现。",
+   "verified": true
+  },
+  {
+   "rank": 11,
+   "problem": "当前盲比和绝对验收的评价结果有参考价值，但不能直接当作科学事实的金标准。S2对B0_gpt4的严谨性0:4是一个稳定信号，却不意味着评委给出的每项理由都正确，也不意味着B0_gpt4本身没有问题。",
+   "root_cause": "已验证测量存在这个局限。B0_gpt4的开放评审本身也指出其多臂交叉Meta分析可能重复计权、Tan 2025研究存在前瞻性随机与回顾性描述矛盾、部分机制模型并不互斥、部分实验无法识别目标因果机制。因此它不是科学质量的绝对金标准。另一方面，S2盲比中关于Syrkin-Nikolau 2017和Thenaisie 2022的两处误读指控已经由P5全文核验证明不成立，必须从有效缺陷清单中剔除。但P7指出的研究边界、FOG分类、患者与事件数、队列重叠、自我审计等问题仍然成立，不能因为两处评委错误就否定全部0:4结果。",
+   "verify": "将blind_B0_gpt4_vs_S2.json中的所有事实性批评逐条拆成独立命题，要求每条提供被批评报告的原文位置、对应原始论文、具体证据位置和事实判断。用人工核对或独立全文核验判断其是否成立。分别统计正确批评、错误批评、无法确认的批评。若评委存在没有证据定位的事实性指控，或者把风格偏好当成科学错误，则该票不能作为科学严谨性的有效测量。还应保留两位评委、两种顺序的原始结果，不能事后选择有利票数。",
+   "verified": true
+  }
+ ],
+ "candidates": [
+  {
+   "name": "Evidence Ledger 2.0：研究级证据账本",
+   "targets": "D2、D3、D4、D8、D9；P6、P7。研究版本重复和证据字段缺失已验证；具体每条研究的风险偏倚及事件分类仍需逐项验证。",
+   "layer": "L2全文 / L3提取 / 流程结构 / 数据模型",
+   "change": "这是结构性改造，不是简单修改extract提示词。把现有文献→证据的两层结构升级为论文版本、原始研究、患者队列、证据片段、质量评价五个实体层。\n\n一、数据库结构迁移。\n\n新增五类实体：\n\n1. paper_version：每个预印本、正式论文、会议摘要都是一个独立版本，字段包括version_id、pmid、doi、title、publication_status、published_at、version_of、is_preprint。\n2. study：代表真实研究或实验，字段包括study_id、design、registry_id、center、recruitment_period、protocol_id。\n3. cohort：代表实际参与者队列，字段包括cohort_id、study_id、n_enrolled、n_analyzed、n_pd、n_freezer、n_controls、recruitment_period。\n4. evidence：每个具体结果一个EID，增加study_id、cohort_id、paper_version_id、evidence_role、event_phase、n_patients、n_events、n_trials、effect_size、source_locator、publication_status。\n5. risk_assessment：保存研究设计对应的偏倚风险评价，字段包括tool、domain、judgment、reason、assessed_by、assessment_date。\n\n增加队列关系表cohort_overlap：same、partial、none、unknown，并记录判断依据和置信程度。不能因为作者或中心相同就自动认定队列重叠，也不能因为论文不同就默认独立。\n\n二、版本和队列实体解析。\n\n输入：现有references、标题、作者、DOI、PMID、摘要、全文、样本信息。\n\n步骤：\n- 第一轮代码匹配：相同PMID、DOI、标准化标题和预印本DOI前缀。\n- 第二轮候选匹配：标题相似度、作者重叠、样本数、中心、招募时间、试验注册号。\n- 高置信度匹配自动建立version_of关系。\n- 不确定匹配进入候选列表，不强行合并。\n- 同一研究的不同论文保留各自EID，但计算证据独立性时只计一个Study ID；相同队列的不同分析不能自动算独立重复。\n- 综述中的结果标记为secondary_summary，不能与原始研究结果作为两份独立实验计权。\n\n三、修改extract提示词。以下为新的prompts/extract_v2.txt全文：\n\n你是一个严格的原始研究证据提取员。你的任务是把论文中的实际研究结果转换成可审计的结构化证据，而不是写综述或解释机制。\n\n【研究问题】\n{QUESTION}\n\n【论文元数据】\n{PAPER_META}\n\n【论文全文或摘要】\n{PAPER_TEXT}\n\n规则：\n1. 每条evidence只记录一个具体结果、一项比较或一个统计关系。不同结果不能合并成一条笼统结论。\n2. 只记录论文实际报告的内容。没有报告的字段使用null或unknown，不得根据常识推断。\n3. 必须区分患者数、实际发生FOG的患者数、冻结事件数、试次数、分析片段数和电极数。不能把事件数当作患者数。\n4. 必须区分以下事件阶段：\n   - susceptibility：患者的一般冻结易感性，没有与随后实际发生的冻结事件建立试次级联系。\n   - pre_FOG_event_associated：神经信号在冻结发生前采集，且当前试次随后确实发生了实际FOG。\n   - during_confirmed_FOG：神经信号在已经发生的实际FOG期间采集。\n   - recovery：实际冻结结束及恢复行走阶段。\n   - virtual_or_simulated_FOG：虚拟现实诱发、仰卧模拟或其他模拟冻结任务，没有实际自然行走冻结证据。\n   - active_stop_control：受试者主动停止、任务要求停止或其他主动停止对照。\n   - general_gait：一般步态，没有实际冻结事件关联。\n   - self_report_only：仅有问卷或患者自我报告。\n5. pre_FOG_event_associated不能等同于during_confirmed_FOG，也不能因为研究对象是Freezer就自动归入实际冻结证据。\n6. 患者临床FOG亚型与记录当时的药物状态是两个不同变量。分别记录OFF-FOG、ONOFF-FOG、ON-FOG、biphasic或unknown，以及实验时Medication ON/OFF。不能相互推断。\n7. 区分FOG-Q、NFOG-Q、视频确认冻结次数、冻结持续时间、冻结概率、步速、步幅、APA和一般轴向运动评分。这些不是同一个结局。\n8. 对原始研究与综述严格区分。综述转述原始研究时标记secondary_summary，并在可能时记录其引用的原始研究标识符。不能将综述观点写成新的实验结果。\n9. 记录结果的具体来源位置。尽可能给出页码、章节、图表编号或补充材料位置。quote为原文英文摘录，不超过40词。\n10. basis只有在确实阅读全文时才能填写fulltext。只阅读摘要时必须填写abstract。不能把全文可下载等同于全文已核验。\n11. 对研究设计进行适当的风险偏倚评价。随机试验考虑随机化、分配隐藏、盲法、失访、选择性报告和交叉设计顺序效应；观察研究考虑样本选择、混杂、测量和统计问题；预测模型考虑过拟合、数据泄漏和外部验证；系统综述考虑检索、筛选、纳入研究质量和统计处理。资料不足时必须填写unclear或not_assessed，不能默认low risk。\n12. 风险偏倚评价与证据直接性是两个独立维度。实际FOG直接证据也可能具有高偏倚风险；间接证据也可能具有较好的内部有效性。\n13. 对Meta分析额外记录原始研究数量、独立患者数量、原始研究是否重复、交叉设计是否正确处理配对数据、多臂设计是否重复计权、异质性和证据确定性。\n14. 没有相关证据时返回空evidence数组。\n\n输出JSON对象，顶层包含paper、study_candidates、cohort_candidates、evidence、risk_of_bias。\n\npaper字段：title、pmid、doi、publication_status、version_of_candidate、fulltext_read。\n\nstudy_candidates字段：local_id、design、registry_id、center、recruitment_period、description。\n\ncohort_candidates字段：local_id、study_local_id、n_enrolled、n_analyzed、n_pd、n_freezer、n_controls、overlap_clues。\n\nevidence每项包含：local_id、study_local_id、cohort_local_id、evidence_role、event_phase、event_validation、clinical_FOG_subtype、recording_medication_state、recording_DBS_state、task、population、n_patients_enrolled、n_patients_analyzed、n_patients_with_observed_FOG、n_events、n_trials、n_segments_or_channels、measure、anatomical_location、signal_metric、comparison、finding、effect、limitations、source_locator、quote、basis、missing_or_unreported_fields。\n\nrisk_of_bias每项包含：study_local_id、tool、domains、overall、assessment_limitations。每个domain包含domain、judgment、reason。\n\n四、确定性数据验证。\n\n每次入库必须运行以下检查：\n- 所有EID都能找到对应paper_version和study。\n- 所有引用关系都能解析。\n- 同一研究的预印本和正式版本不会被计为两项独立研究。\n- n_events不能自动替代n_patients。\n- event_phase不能缺失；无法确认时使用unknown。\n- 摘要级证据不能被标记为全文核验。\n- 所有统计计数从数据库实际记录生成，不允许手工填写。\n\n五、历史数据迁移。\n\n旧数据不删除。为无法确认的study_id、cohort_id、version_of标记unknown，逐步补齐。不得通过标题相似度直接把不同研究强行合并。\n\n预期效果：重复研究不再重复计权，证据直接性和可靠性分开，FOG事件阶段及患者/事件分母能够查询。目标是把S2的538/539数量差异和无效引用降到0，使核心证据的研究身份、队列身份和证据来源全部可追溯。",
+   "expected": "确定性指标：所有引用关系100%可解析；538/539计数差异消失；已确认的预印本与正式版本不再重复计为独立研究；核心证据的event_phase和患者/事件分母100%有明确值或明确unknown。盲比严谨分项的目标是从0:4提高至至少2:2；绝对验收标准2、3中的相关中等问题显著减少。以上是试验目标，不是保证结果。",
+   "risk": "提取成本和运行时间增加；字段过多可能降低模型填充准确率。尤其是风险偏倚评价容易产生形式化打分，必须允许unclear和not_assessed。历史研究的队列重叠信息可能无法确定，不能强行补全。不会增加Luna调用次数。",
+   "differs": "只改变证据的最小单位、研究身份和质量描述，不依赖扩大检索，也不依赖增加更多机制假说。它解决的是同一批证据究竟代表多少独立研究、每条证据有多可靠的问题。"
+  },
+  {
+   "name": "Claim Audit：证据驱动的综合与因果审计",
+   "targets": "D5、D6、D9；P7。正文证据遗漏和机制模型不可区分尚未验证，数据关系完整性已经验证。",
+   "layer": "L4综合 / L5写作 / 流程结构",
+   "change": "保留S2分片综合，避免重新引入S1的截断问题，但增加一个独立的最终证据审计阶段。核心思想是：模型生成结论之后，必须再次回到原始证据，检查每项结论是否真的被证据支持，以及正文是否实际使用了重要证据。\n\n一、调整L4结构。\n\n现有：证据分片→局部claims→分组合并→最终reduce→report。\n\n改为：证据分片→局部claims→跨片合并→最终claims/hypotheses→独立审计→修正claims/hypotheses→report→正文覆盖审计。\n\n具体步骤：\n1. 保留现有synth_map和synth_merge，不破坏已验证有效的分片机制。\n2. reduce之后，程序建立所有EID到CID的关联矩阵，记录每条证据是支持、反对、限定、未测试还是尚未归类。\n3. 根据Study ID和Cohort ID计算独立研究数，不再使用EID数量作为独立支持数量。\n4. 按研究主题重新取回原始证据。对beta功率、beta burst、theta、alpha、皮层-STN耦合、运动阶段、药物状态和刺激干预分别进行跨年份审计，确保旧研究与新研究真正比较。\n5. 调用独立审计模型。审计模型不负责重新写整篇报告，而是专门寻找遗漏证据、错误关系、逻辑循环、因果混淆和无法区分的机制。\n6. 根据审计结果修正最终claims和hypotheses，再进入报告阶段。\n7. 报告生成后运行coverage审计：每条高度相关的直接原始证据必须在正文中被实质讨论，或者明确标记为仅供附录、与核心问题关联较弱，并说明理由。\n\n二、新增prompts/synth_audit.txt。以下为完整提示词：\n\n你是一名独立的科学证据审计员，不是原报告的作者。你的职责是检查一个已经完成跨研究综合的研究报告，判断其结论是否真正受到原始证据支持，是否遗漏重要发现，以及提出的竞争性机制是否具有真正的因果区分能力。\n\n【研究问题】\n{QUESTION}\n\n【研究、队列和版本关系】\n{STUDY_MAP}\n\n【原始结构化证据】\n{EVIDENCE}\n\n【候选跨研究结论】\n{CLAIMS}\n\n【候选机制假说】\n{HYPOTHESES}\n\n【报告正文草稿】\n{REPORT_DRAFT}\n\n审计规则：\n\n一、证据真实性和独立性\n1. 只能将原始实验结果作为直接证据。综述转述、跨研究综合结论和机制假说不能作为独立于其上游证据的实验支持。\n2. 同一研究的预印本和正式版本不能计为两项独立研究。\n3. 同一队列的不同分析不能自动算作独立重复验证。\n4. 患者数、事件数、试次数和电极数不能混淆。\n5. 摘要没有报告某个结果不等于全文没有报告。必须根据basis区分。\n\n二、FOG终点与阶段\n1. 分开实际冻结、冻结前事件相关活动、一般易感性、虚拟或模拟冻结、主动停止、问卷和一般步态指标。\n2. pre_FOG_event_associated不能写成during_FOG。\n3. 不同冻结定义、时间窗和行为任务不能未经论证直接合并。\n4. 药物状态和临床FOG亚型必须分开。\n5. 任何跨研究结论必须说明其适用的具体事件阶段和结局类型。\n\n三、结论审计\n1. 每条Claim必须关联有效EID。\n2. 对每条Claim分别列出supports、contradicts、qualifies和not_tested证据。\n3. contradicts只能用于在可比的患者群体、任务、时间阶段、测量和结局下真正不相容的结果。没有统计学显著性不能自动作为反证。\n4. 区分独立研究数、独立队列数、患者数和证据片段数。\n5. 直接性、偏倚风险、精确度和外部适用性分别评价。\n6. 如果证据不足，降低结论强度，而不是用模型推理补齐。\n\n四、冲突分析\n对每组冲突检查：患者表型、药物状态、刺激状态、任务范式、实际FOG发生情况、事件阶段、频段定义、解剖位置、信号处理、统计方法、样本量和偏倚风险。区分真正相反的结果与测量对象不同造成的表面冲突。\n\n五、因果模型审计\n每个假说必须明确：\n- 因果起点；\n- 关键中介；\n- 下游结果；\n- 可能的共同原因；\n- 时间顺序；\n- 反馈关系；\n- 与其他假说的兼容关系；\n- 真正互斥的竞争关系；\n- 独特预测；\n- 反证条件；\n- 能够改变目标机制而不是同时改变所有候选机制的干预。\n\n不要强行把所有假说设为互斥。允许多个机制同时存在，但必须明确哪些因果主张互相竞争。\n\n六、实验可识别性\n对每个实验预测，检查是否有其他模型也能产生同样结果。若同一个刺激条件同时改变STN局部活动、网络连接和下游运动输出，就不能仅凭相关变化确定中介机制。区分观察性同步记录、预测验证、干预效应和中介因果验证。检查是否存在对中介变量过度调整的问题。\n\n七、正文覆盖审计\n对所有高度相关的原始研究，检查报告正文是否真正讨论了其发现、条件和限制。只出现在references或附录不算充分综合。发现正文没有讨论的重要证据时，指出它可能改变哪条Claim或Hypothesis。\n\n八、禁止事项\n不能为了增加假说数量而制造模型；不能把模型共识当成实验验证；不能把统计不显著当成等效；不能因为研究年份较新就自动赋予更高权重；不能为了使报告看起来完整而填补未知数据。\n\n输出一个JSON对象，顶层字段为claim_audit、conflicts、hypothesis_audit、unrepresented_evidence、report_coverage、integrity_errors、revision_requests。\n\nclaim_audit每项记录cid、supporting_eids、contradicting_eids、qualifying_eids、not_tested_eids、independent_study_ids、independent_cohort_ids、directness、risk_of_bias_summary、status_recommendation、reason。\n\nconflicts每项记录topic、comparable_eids、noncomparable_eids、possible_sources、remaining_conflict。\n\nhypothesis_audit每项记录hid、causal_level、dag_edges、necessary_assumptions、compatible_with、competes_with、unique_prediction、falsifier、intervention_needed、identifiability、reason。\n\nunrepresented_evidence每项记录eid、importance、why_not_represented、suggested_claim_or_gap。\n\nreport_coverage每项记录eid、covered_in_body、report_location、coverage_quality、required_revision。\n\nintegrity_errors记录无效EID、重复计权、循环支持、缺失来源和数量不一致。\n\nrevision_requests记录必须修改的具体CID、HID或报告段落，以及修改理由。\n\n只输出JSON，不写审计报告正文。\n\n三、设置自动阻断条件。\n\n出现以下任意情况，不允许将报告标记为最终完成：\n- 核心Claim存在无效EID。\n- 高度相关的直接原始研究没有进入正文，也没有合理排除理由。\n- 同一研究版本被重复计权。\n- 机制假说没有可区分预测或证伪条件。\n- 重要结论把相关性写成因果性。\n- 重要冲突没有解释研究条件差异。\n\n四、报告阶段保留原有中文Markdown写作，但额外提供审计通过的claims、report_coverage和methods记录。报告可以压缩细节，但不能改变证据等级或删除重要反向证据。\n\n预期效果：解决S2的附录很大但正文整合不足的问题，同时使机制模型的因果结构和实验可识别性可以被单独审查。",
+   "expected": "在同一份S2材料上，目标是高度相关原始证据正文覆盖率达到至少95%，无有效EID错误、无机制假说循环支持；13个假说逐一具有明确因果层级、独特预测和反证条件。绝对验收标准2中重要证据未进入正文的问题目标从moderate降为minor或消失。盲比synthesis和rigor至少各达到2:2，而不是只提高篇幅和文献数量。",
+   "risk": "增加模型调用和审计时间；审计模型可能过度要求所有研究都进入正文，造成正文过长。需要设置重要性阈值。因果图也可能被模型编造，因此每条边必须区分原始证据、推断和假说。审计不能把模型自己的判断当成独立科学验证。",
+   "differs": "它不改变L3证据的采集方式，也不扩大L1检索范围，而是改变L4的综合质量控制方式。核心创新是让原始证据重新参与最终结论裁决，而不是只依赖分片阶段形成的压缩结论。"
+  },
+  {
+   "name": "Recall First：检索召回与方法日志重构",
+   "targets": "D1、D7；P1已验证。方法日志缺失和前100条截断均有明确证据。",
+   "layer": "L1检索 / L5写作 / 流程结构",
+   "change": "直接修改search.py和run.py，不依赖提示词中要求模型更加全面。\n\n一、输入。\n- plan.json中的全部queries和must_read。\n- 每条Europe PMC/PubMed检索式及数据库信息。\n- 原始检索API响应、命中总数和分页信息。\n- 现有papers、screening、fetch和extract记录。\n\n二、检索程序修改。\n\n1. 每条检索式首先查询total_count，不能直接把前100条当成完整结果。\n2. 如果命中数量在可处理范围内，按照API分页参数完整获取所有结果。\n3. 如果命中数量过大，程序自动拆分检索式：按年份区间、标题/摘要字段、研究设计和核心关键词分支拆分，再分别分页。\n4. 如果某条查询仍无法穷尽，必须标记retrieval_complete=false，报告实际获取数量、未获取数量和截断原因，禁止静默宣称覆盖完整。\n5. 对纳入的高相关原始研究执行两轮引文追溯：参考文献向后追溯，以及被引研究向前追溯。发现的新文献重新进入screen队列。\n6. 同一文献通过不同检索式命中时，保留所有命中来源，但只建立一个文献实体。\n7. 不再依赖模型must_read作为唯一的召回补丁。must_read只用于独立检索召回率测量。\n8. screen阶段保留include、maybe、exclude及理由。每个筛选批次的输入数量、输出数量和失败数量必须记录。\n\n三、新增机器日志。\n\n每次研究创建一个不可覆盖的search_run_id，生成retrieval_log.json，字段包括：\n- run_id、started_at、finished_at；\n- database、database_version；\n- query_id、query_text、query_purpose；\n- query_total_hits、pages_requested、records_retrieved；\n- records_unique、records_duplicate；\n- records_from_must_read、records_from_backward_citation、records_from_forward_citation；\n- screen_include、screen_maybe、screen_exclude；\n- fulltext_available、fulltext_failed、abstract_only；\n- extract_success、extract_failed；\n- retrieval_complete及失败原因。\n\n所有计数由程序生成，不让模型手工填写。\n\n四、方法部分自动生成。\n\n在report.md生成后，程序根据retrieval_log.json生成一段确定性方法说明和检索流程表。至少包括：\n- 本次研究的类型和边界；\n- 实际使用的数据库；\n- 检索截止日期；\n- 完整检索式及各式命中数；\n- 去重前后数量；\n- 标题摘要筛选数量；\n- 全文获取数量及失败情况；\n- 最终纳入数量；\n- 引文追溯新增数量；\n- 无法完整检索的查询及原因。\n\n如果实际只使用Europe PMC和PubMed，就只能报告这两个来源，不能让模型自动写成使用了Embase、Scopus、Web of Science或Cochrane。明确声明是结构化叙述性证据综合还是范围综述，不得仅凭有检索记录就声称PRISMA系统综述。\n\n五、回归测试。\n\n固定P1的43篇必读文献和B0两份报告参考文献并集作为测试集。分别报告：\n- 原始查询召回率；\n- 模型种子补充后的召回率；\n- 引文追溯新增召回率；\n- 独立参考文献清单召回率；\n- 各数据库实际检索数量。\n\n预期效果：不仅能找到模型已经知道的论文，也能在模型没有预先列出文献的方向上获得较高召回。",
+   "expected": "P1原始本地检索对43篇必读文献的覆盖率从28/43提高至43/43。独立参考文献测试集召回率目标至少90%，且所有查询都有100%的命中数、实际获取数和截断状态记录。绝对验收标准1从partly提升至met或只剩minor问题。覆盖分项维持S2现有4:0优势，不以降低筛选质量换取文献数量。",
+   "risk": "检索池可能显著扩大，导致screen和全文处理成本增加；大量低相关文献会增加筛选负担。引文追溯可能产生循环引用和重复记录，必须使用已有文献去重结构。不能为了追求43/43而把所有检索结果都直接纳入研究。",
+   "differs": "这是L1召回机制和L5方法透明度的改造，与L3提取质量、L4因果综合相互独立。即使模型综合能力完全不变，也能直接修复结果截断和检索不可复现问题。"
+  },
+  {
+   "name": "Knowledge Maintenance Loop：真正运行的自主更新闭环",
+   "targets": "D9、D10；绝对验收标准5和7。数据库持久化已经存在，但自动触发旧结论复审的能力尚未得到验证。",
+   "layer": "流程结构 / 知识库 / L1检索 / L3提取 / L4综合 / 测法",
+   "change": "将一次性研究流水线扩展成可以持续运行的知识维护流水线。\n\n一、输入。\n- 当前KB快照及其版本。\n- 新发现的文献及其Study ID、Cohort ID、Version ID。\n- 新提取的EID和风险偏倚记录。\n- 现有CID、HID及其证据关系。\n- 历史研究的审计结果和固定回归测试集。\n\n二、触发规则。\n出现以下任意情况时，自动建立reassessment任务：\n1. 新的直接FOG电生理研究进入知识库。\n2. 新研究与旧Claim存在contradicts或qualifies关系。\n3. 已有预印本出现正式发表版本。\n4. 已知队列出现新的论文或不同分析。\n5. 新的随机试验、Meta分析或系统综述改变了某项临床结论的证据结构。\n6. 旧Claim的独立研究数量、风险偏倚或证据确定性发生实质变化。\n7. 新证据涉及旧报告中明确列出的gaps。\n\n三、重新评价流程。\n1. 根据新EID和现有CID/HID关系定位受影响的旧结论。\n2. 提取旧结论的原始证据、研究版本和队列依赖关系。\n3. 运行Claim Audit，对旧结论和新证据进行比较。\n4. 生成新旧结论差异：哪些文字不变、哪些限定条件变化、哪些证据关系改变、哪些假说被削弱或增强。\n5. 更新后生成新的claim_version，不覆盖旧版本。\n6. 运行引用完整性、重复计权、风险偏倚、FOG阶段分类和因果一致性检查。\n7. 所有测试通过后才提交新知识库版本；测试失败时保留旧版本，并输出失败原因。\n\n四、history扩展。\n每次更新至少记录：\n- old_claim_version；\n- new_claim_version；\n- triggering_eids；\n- affected_hids；\n- change_reason；\n- evidence_added、evidence_removed、evidence_reclassified；\n- quality_metrics_before；\n- quality_metrics_after；\n- audit_result；\n- commit_status。\n\n五、持续改进测试。\n建立固定人工核验集，包括至少30篇原始研究、10组预印本与正式论文、10组已知队列关系、10条已知证据冲突和一组需要更新的旧Claim。\n\n每次系统改进后运行相同测试集，测量：\n- 文献召回率；\n- 文献版本识别准确率；\n- Cohort关系识别准确率；\n- 关键结果提取准确率；\n- FOG事件阶段分类准确率；\n- 研究偏倚评价一致性；\n- Claim更新正确率；\n- 无效引用率；\n- 旧结论错误保留率；\n- 不应更新却发生更新的比例。\n\n系统不能仅通过自己生成的报告宣布改进成功。必须保留固定测试集的前后结果，并由独立审查者抽查。系统可以自主提出和执行更新，但对于无法通过回归测试的修改，不得自动覆盖旧知识。",
+   "expected": "绝对验收标准5从partly向met提升；标准7从severe问题降为moderate或minor。最小成功条件是完成一次端到端更新实验：新论文进入KB后，系统自动找到受影响旧Claim，产生有证据支持的修订，保存历史版本，并通过所有完整性回归测试。进一步目标是连续3次更新均无需人工指定受影响的Claim。",
+   "risk": "触发规则过于敏感可能造成大量无意义的旧结论重新评价；模型可能在新证据出现时过度改变原有结论。需要设置证据直接性和研究质量阈值，并允许保持原结论不变。版本累积会增加存储和维护成本。",
+   "differs": "前两套主要解决一次研究任务的证据质量和综合质量，这一套解决跨任务的长期知识积累。它不是报告中描述一个理想的更新机制，而是让更新机制成为可执行、可测量、可回滚的系统功能。"
+  }
+ ],
+ "radical": "我认为当前blind.py所代表的整体报告匿名二选一胜负票，不应该继续作为系统质量的主要验收方式，应当换成完全不同的测量结构。原因有三点。第一，P5已经证明评委曾经以两处不成立的原始文献误读作为否定理由，说明当前评审输出可能把事实错误和科学质量判断混在一起。第二，B0_gpt4自身的开放评审已经发现它存在多臂Meta分析重复计权、原始试验设计描述矛盾、机制模型层级混合和实验因果识别不足等问题，因此不能把B0_gpt4当成科学正确性的金标准。第三，整体胜负票无法区分一个报告究竟是因为研究范围更广、原始证据更准确、逻辑更严谨，还是写作风格更符合评委偏好而获胜。\n\n建议把现有blind改成两层评价：第一层是证据锚定的缺陷审计，每条批评必须有报告位置、EID、原始文献位置和可核验的事实判断；未经核验的指控不能计入科学缺陷。第二层是标准分项评价，分别报告覆盖、证据可靠性、综合质量、知识分层、科学严谨性和自主改进能力，给出具体问题数量和严重程度。整体偏好票可以保留为次要参考，但不能决定系统是否通过。\n\n另外，绝对验收标准7不应该仅根据一份研究报告写得多么完善来评分。它评价的是自主科研系统能否实际发现、验证、修复和验证自身缺陷，因此必须通过真实的端到端运行实验评价。报告可以提出改进计划，但不能把改进计划当作已经实现的自主改进能力。\n\n我不会建议放宽用户制定的七项成果标准。相反，建议修改系统自己制定的报告输入限制：保留不允许添加知识库外未经核验的科学事实这一原则，但允许报告使用由实际运行日志生成的方法学元数据。保留合法全文获取、Luna使用次数限制、B0基线提示词独立、报告和结构化附录同时评审等现有合理设定。真正需要放开的，是L5只接收知识库内容而不能获得实际检索过程记录的限制。"
+}

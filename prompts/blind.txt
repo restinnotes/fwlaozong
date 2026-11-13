@@ -1,0 +1,19 @@
+下面是针对同一个研究任务的两份研究报告 X 和 Y。请判断哪一份更好地完成了任务。不要因为篇幅长短本身做判断。可以联网核对。
+
+研究任务：
+{QUESTION}
+
+标准：
+{STANDARD}
+
+请逐项比较，再给总体判断。分项：coverage（研究覆盖）、evidence（证据可靠）、synthesis（深度综合）、structure（知识分层）、rigor（科学严谨）。
+
+只输出一个 JSON：
+{"items":{"coverage":{"better":"X|Y|tie","why":""},"evidence":{"better":"X|Y|tie","why":""},"synthesis":{"better":"X|Y|tie","why":""},"structure":{"better":"X|Y|tie","why":""},"rigor":{"better":"X|Y|tie","why":""}},
+ "better":"X|Y|tie","why":""}
+
+【报告 X】
+{X}
+
+【报告 Y】
+{Y}

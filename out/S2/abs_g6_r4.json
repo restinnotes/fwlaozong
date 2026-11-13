@@ -1,0 +1,128 @@
+{
+ "standards": [
+  {
+   "n": 1,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "研究覆盖面较广，涉及STN-DBS临床疗效、低频刺激、LFP频谱、beta burst、皮层-STN耦合、刺激空间定位、脑干步行网络、胆碱能系统、认知情绪因素及闭环DBS。结构化附录也包含2026年的新研究。但报告没有提供可复现的实际文献检索记录，包括数据库、检索截止日期、完整检索式、纳入排除标准、去重和筛选流程。因此，无法确认这些文献是主动系统检索的结果，还是主要继承了既有知识库。",
+     "where": "“证据范围：以用户提供的结构化知识及 evidence_table.txt 中的原始文献证据为基础。”"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "存在文献版本和发表状态标注不一致。PMID:36070366对应的DOI 10.1126/scitranslmed.abo1800是2022年发表于 Science Translational Medicine 的正式期刊论文，而不是未经过同行评审的medRxiv预印本。该研究确实存在此前的medRxiv版本（DOI:10.1101/2022.02.08.22270370），但报告将正式发表版本的PMID和DOI与预印本状态混用。应明确区分预印本与最终发表版本，避免读者误判证据等级。",
+     "where": "附录 PMID:36070366 的 limitations 字段：“该版本为尚未经过同行评审的medRxiv预印本。”"
+    },
+    {
+     "severity": "minor",
+     "what": "部分原始研究的证据提取只依据摘要，导致重要实验条件和样本信息不完整。例如 PMID:39470410 的全文报告了12名患者，其中5名在实验中出现FOG，共42次冻结事件；附录却将样本量记为未报告。该研究涉及STN活动、肌肉协调及冻结事件，对APA-肌肉协调机制具有直接参考价值。应进一步提取全文中的患者数量、有效事件数量和主要神经生理结果。",
+     "where": "附录 PMID:39470410 的 n 字段：“摘要未报告”。"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "2025年Zhang等（PMID:41131028）的结果存在重要遗漏。报告强调冻结转弯TurnStart阶段PMC-STN alpha coherence增加、M1-STN alpha coherence下降，但没有报告同一研究的TurnPre结果：正常转弯准备阶段PMC-STN alpha coherence增加；更重要的是，TurnPre阶段PMC-STN alpha coherence增加预测更短的冻结持续时间（β=0.205，p=0.006），而PMC alpha功率下降预测更长的冻结持续时间（β=0.154，p=0.035）。前一结果直接为H4的代偿性重组假说提供了支持，遗漏后使H4与H5的证据权重呈现得不够完整。",
+     "where": "第3.5节：“PMC-STN alpha coherence在TurnStart阶段相对于步行基线增加”；第6.3节提出H4与H5。"
+    },
+    {
+     "severity": "moderate",
+     "what": "有几项与核心研究问题直接相关的重要原始研究仅出现在结构化附录中，没有充分进入正文的机制综合。包括：PMID:39470410关于STN活动与拮抗肌抑制、FOG的同步研究；PMID:42236313关于冻结转弯时STN theta活动与焦虑、认知表现的研究；PMID:42571859关于步态周期锁定的皮层-STN信号及其对高频、低频刺激和左旋多巴的响应。这些研究分别能够补充H8、H6/H11以及H1/H2/H9/H10的证据。尤其是PMID:42571859发表于2026年10月，是报告当前时间范围内非常相关的新证据。仅将其保存在附录而不纳入正文综合，降低了报告对最新研究的整合深度。",
+     "where": "正文第3.4、3.5、4.2、4.4及第6节；结构化附录中上述三篇文献的对应证据记录。"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "四层知识结构设计清晰，Evidence、Claims、Mechanisms和Hypotheses之间具有明确的概念区分，且多数证据通过稳定EID与结论建立关联。但结构化数据存在引用完整性问题：正文声称有539条证据，实际JSON evidence数组只有538条；同时有一个claim引用了不存在的证据ID：S2_E_DOI_10.21203_rs.3.rs-9617843_v10，而对应的实际证据记录ID为S2_E_DOI_10.21203_rs.3.rs-9617843_v1_10。这会造成知识图谱中的孤立引用，影响后续证据追溯。",
+     "where": "第10.2节：“将现有539条证据从文献汇总转化为可持续检验的研究体系。”；结构化附录JSON中的 evidence 和 claims 数组。"
+    },
+    {
+     "severity": "minor",
+     "what": "claims中的部分from字段引用了G1_1_C1、G1_2_C12、P6_C11等上游标识，但这些标识在当前报告及附录中没有对应定义。若它们指向外部历史知识库，需要提供可解析的来源映射，否则当前报告无法独立恢复完整的结论来源链。",
+     "where": "结构化附录JSON中claims对象的from字段，例如“G1_1_C1”和“G1_2_C12”。"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "verdict": "not_testable",
+   "issues": []
+  },
+  {
+   "n": 6,
+   "verdict": "met",
+   "issues": []
+  },
+  {
+   "n": 7,
+   "verdict": "not_testable",
+   "issues": []
+  }
+ ],
+ "spot_checks": [
+  {
+   "claim": "STN-DBS能够改善部分帕金森病患者的FOG，但也可能无效、诱发或加重FOG，治疗效果具有明显个体异质性。",
+   "cited": "Ferraye et al., 2008（PMID:18413568）；EARLYSTIM二次分析（PMID:31755599）；Fan et al., 2023（PMID:37701817）；Guo et al., 2025（PMID:41659700）；Behboodi et al., 2026（PMID:42098512）。",
+   "verdict": "consistent",
+   "why": "与原始文献及Meta分析一致。Ferraye研究中，术前存在FOG的患者大多数从刺激中获益，但也报告术后新发FOG或无法完成步行测试的患者。EARLYSTIM二次分析显示STN-DBS组FOG比例从52%下降至34%，而药物治疗组没有相同变化。Fan研究中42/76人改善、22人变化轻微、12人恶化。2026年Meta分析总体支持FOG-Q改善，而另一项网络Meta分析未发现任何DBS模式达到FOG-Q统计学显著改善。报告没有把总体改善解释成普遍疗效，判断恰当。【turn640152search0】【turn640152search1】【turn640152search2】【turn640152search3】【turn481298search1】"
+  },
+  {
+   "claim": "STN参与FOG易感状态及实际冻结事件相关的神经活动，但目前没有证据证明某一种STN自发神经活动是FOG发生的必要或充分原因。",
+   "cited": "Liu et al., 2022（PMID:35310098）；Thenaisie et al., 2022（PMID:36070366）；Pozzi et al., 2019（PMID:31505548）；Anidi et al., 2018（PMID:30196050）。",
+   "verdict": "consistent",
+   "why": "这些研究提供了STN-LFP与实际冻结事件、步态状态或皮层-STN网络变化之间的直接时间关联。但同步记录不能单独证明因果关系。STN-DBS能够改变FOG，也不能自动证明其疗效由某种特定内源性STN活动介导。报告对直接电生理关联与因果机制进行了正确区分。【turn789425search0】【turn789425search3】【turn294011search0】【turn789425search1】"
+  },
+  {
+   "claim": "STN平均beta功率不存在适用于所有患者、任务和冻结阶段的统一变化方向。",
+   "cited": "Liu et al., 2022（PMID:35310098）；Thenaisie et al., 2022（PMID:36070366）；Syrkin-Nikolau et al., 2017（PMID:28890315）；Pozzi et al., 2019（PMID:31505548）。",
+   "verdict": "consistent",
+   "why": "不同研究确实报告了不同结果。Liu及Thenaisie研究观察到FOG期间beta或低beta活动增加；Syrkin-Nikolau全文报告实际冻结期间beta功率低于同一患者无冻结的前向行走阶段；Pozzi研究则发现冻结相关低频皮层-STN耦合改变，但没有发现相应的统一beta功率差异。这些比较的任务、基线和行为阶段不同，不能简单合并成同一个效应。报告对冲突方向的判断有原始研究支持。【turn789425search0】【turn294011search0】【turn238509view2】【turn789425search3】"
+  },
+  {
+   "claim": "Beta burst时间结构、运动相关ERD及步态相位调制可能比平均beta功率更有解释力。",
+   "cited": "Anidi et al., 2018（PMID:30196050）；Klocke et al., 2026（DOI:10.21203/rs.3.rs-9617843/v1）。",
+   "verdict": "consistent",
+   "why": "Anidi研究发现freezers具有较长的beta burst，实际冻结期间burst持续时间也可能延长；Klocke研究进一步报告冻结转弯时长burst比例增加、短burst比例下降，即使平均burst持续时间没有显著变化。这些结果支持将burst分布、占据率及时间结构作为候选指标。不过，目前还没有充分的直接比较证明它们在预测性能上必然优于平均beta功率。报告使用“可能”并明确标注待验证，措辞适当。【turn789425search1】【turn493430search12】"
+  },
+  {
+   "claim": "STN-皮层网络在冻结前后发生行为阶段和脑区特异性的动态重组，而不是整体同步性统一增强或下降。",
+   "cited": "Pozzi et al., 2019（PMID:31505548）；Zhang et al., 2025（PMID:41131028）。",
+   "verdict": "consistent",
+   "why": "Pozzi研究观察到theta-alpha耦合在冻结前和冻结期间下降、恢复行走后恢复；冻结开始时beta耦合增强还可能出现在成功停止行走和通过门洞时。Zhang研究在19名患者中发现，冻结转弯TurnStart阶段PMC-STN alpha coherence增加、M1-STN alpha coherence下降。报告所述具体结果一致。但该研究另有TurnPre阶段PMC-STN coherence预测较短冻结持续时间的结果，报告没有充分纳入，这属于综合遗漏而非已报告结果错误。【turn789425search3】【turn573799search0】【turn573799search1】"
+  },
+  {
+   "claim": "STN刺激的临床效果具有空间定位和结构连接特异性，不能用一个适用于所有患者的最佳STN坐标概括。",
+   "cited": "Fan et al., 2023（PMID:37701817）；Cherif et al., 2025（PMID:39475137）；Fleury et al., 2016（PMID:26887333）；2022年结构连接研究（PMID:36242900）。",
+   "verdict": "consistent",
+   "why": "Fan的76人回顾性研究发现背外侧STN刺激与FOG改善相关，腹内侧中央区域与恶化相关；Cherif的10人随机交叉研究发现中心STN定向刺激优于后部刺激，但中心刺激并未显著优于所有常规ring模式；Fleury研究显示邻近STN结构受到刺激也可能恶化步态。36242900进一步表明感觉运动与前额叶纤维募集可能具有不同方向的临床关联。这些结果支持空间和网络特异性，而不是单一最佳坐标。【turn481298search1】【turn573799search0】【turn481298search0】【turn481298search5】"
+  },
+  {
+   "claim": "FOG包含不同的临床和神经网络亚型，多巴胺反应性及非多巴胺能因素可能参与患者间差异。",
+   "cited": "Lench et al., 2024（PMID:38101024）；Hvingelby et al., 2025（PMID:40512756）；FOG亚型研究（PMID:30153383）。",
+   "verdict": "consistent",
+   "why": "Lench研究纳入55名PD患者，其中38人有FOG，并区分22名多巴胺反应性和16名不反应性患者，观察到不同STN功能连接特征。Hvingelby研究纳入14名ON-FOG患者，发现胆碱能PET网络指标与ON-FOG严重程度相关，但与OFF-FOG没有相同关联。这些是影像学和临床表型证据，不是直接的STN-LFP亚型证明。报告明确保留了这一证据层级区别，因此结论合理。【turn814384search0】【turn743538search0】【turn743538search1】"
+  },
+  {
+   "claim": "低频刺激、beta闭环DBS、定向刺激及STN+SNr联合刺激具有研究价值，但目前尚未证明任何一种策略普遍优于常规STN-DBS。",
+   "cited": "Guo et al., 2025（PMID:41659700）；Behboodi et al., 2026（PMID:42098512）；beta burst自适应DBS研究（PMID:40677701）；STN+SNr Meta分析（PMID:42909654、PMID:42968793）；Cherif et al., 2025（PMID:39475137）。",
+   "verdict": "consistent",
+   "why": "不同研究的结果确实不一致。网络Meta分析没有发现FOG-Q的统计学显著改善；更新Meta分析则报告总体FOG-Q改善，但涉及多个靶点和不同刺激条件。beta burst驱动的aDBS尚未显示相对于连续DBS或随机间歇刺激的明确额外优势。两项2026年STN+SNr Meta分析也得出了不同结论，一项支持额外获益，另一项没有发现明确优势。报告将这些策略定位为值得进一步验证，而不是已经确立的普遍优选治疗，判断恰当。【turn640152search3】【turn640152search2】【turn817640search0】【turn758664search0】【turn758664search1】【turn573799search0】"
+  }
+ ]
+}

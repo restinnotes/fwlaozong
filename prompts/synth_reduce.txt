@@ -1,0 +1,23 @@
+一个研究问题的全部证据（{NE} 条，来自 {NP} 篇论文）已经分成 {N} 份，各自综合出了一批局部结论。下面给你全部局部结论（每条带层级、强度、不确定性、证据条数和证据年份范围；具体证据关联由程序按你写的 from 自动带上）。请把它们合并成最终的综合。
+
+【研究问题】
+{QUESTION}
+
+【成果要满足的标准】
+{STANDARD}
+
+要求：
+1. 合并跨份重复或相关的结论；不同份之间相互冲突的结论要正面处理，分析冲突来源（研究条件、方法、年代、分组、样本），不要简单取多数。每条最终结论用 from 写明由哪些局部结论合并而来（照抄编号；每条局部结论至少被一条最终结论引用）。
+2. 不要丢掉只在某一份里出现、但对研究问题重要的结论，尤其是较新的研究。
+3. 提出竞争性机制假说（hypotheses）：每个假说关联支持和不利于它的结论；给出能把它和其他假说区分开的预测，以及什么结果会推翻它。不同假说的预测要真的不一样。
+4. 区分相关与因果，区分直接证据、推断和假说。模型自己的推理不能当成证据。
+5. 证据缺口写进 gaps，并给出补检索的检索式（Europe PMC 语法）。
+6. 最终结论编号 C1、C2…，假说 H1、H2…。
+
+只输出一个 JSON：
+{"claims":[{"cid":"C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","from":["G1_C1"]}],
+ "hypotheses":[{"hid":"H1","name":"","text":"","claims":[{"cid":"C1","relation":"supports|contradicts"}],"predictions":[""],"falsifiers":[""]}],
+ "gaps":[{"what":"","query":""}]}
+
+【局部结论】
+{CLAIMS}

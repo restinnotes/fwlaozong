@@ -1,0 +1,77 @@
+[
+ {
+  "paper": "Klocke et al., 2024，STN-LFP与腓肠肌相干性、冻结步态（FOG）事件研究",
+  "pmid": "39470410",
+  "doi": "",
+  "report_says": "第2.4节代表性事件级研究表将该研究的样本量标注为“样本量摘要未报告”。",
+  "judge_says": "原始论文报告最终分析了12名患者，其中5名患者出现FOG，共记录42次冻结事件。报告遗漏了明确报告的患者样本量及事件数量。",
+  "source": "abs_g6.json",
+  "pid": "PMID:39470410",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Klocke et al., 2024，STN-LFP与冻结步态研究；2026年13名患者转弯冻结研究",
+  "pmid": "39470410; 42236313",
+  "doi": "",
+  "report_says": "第1.3节的重复计权审计指出Thenaisie四人研究与后续熵分析使用同一患者数据，以及2025年单病例VR研究与2026年五人VR研究可能存在队列重叠，但未识别Klocke 2024与2026年13人研究之间的患者队列重叠。",
+  "judge_says": "Klocke 2024研究的12名分析患者与2026年13人研究的患者中，有12名具有相同的受试者编号。两项研究属于高度重叠的患者队列，不能作为独立患者队列的重复验证。",
+  "source": "abs_g6.json",
+  "verdict": "paper_not_in_kb"
+ },
+ {
+  "paper": "Thenaisie 等，2022，Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "将该研究描述为一项4人研究，称4名患者在冻结期间表现出低beta活动增加及下肢肌肉共同激活；并将其标记为尚未经过同行评审的 medRxiv 预印本。",
+  "judge_says": "原文是2022年发表于 Science Translational Medicine 的正式同行评审论文，整体纳入18名帕金森病患者，其中4名出现频繁FOG。这4人是FOG分析亚组，而非整个研究的总样本量。报告混淆了原始研究总队列与FOG亚组，并错误标记了论文的发表状态。",
+  "source": "open_g56.json",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We included 18 patients with PD (Table S1) who exhibited severe motor fluctuations and varying deficits of gait and balance.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Visual inspection of LFP spectral features revealed that these periods correlated with the emergence of predominant low-beta signatures in bilateral STN LFP, along with partial co-activation of knee extensor muscles that reflected the incapacity to shift bodyweight (Fig. 8A).",
+   "Analysis of spectral components showed increased low-beta power during freezing periods compared to walking or standing, although the predominance of these signatures mirrored the severity of freezing events in each participant, and the frequency and duration of events28 (Fig. 8C).",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "judge_quotes": [
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments.",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "why": "报告的说法为 partly：全文确实支持4名患者出现频繁FOG，并明确报告冻结期间双侧STN低beta活动增加，以及膝伸肌部分共同激活；同时，所提供的文本明确标记为未经同行评审的medRxiv预印本。但是，将整个研究描述为4人研究不符合全文。摘要和Results明确报告18名患者，4人是出现频繁FOG的亚组。Methods还说明最初招募20人，最终不同实验分析分别保留17人和12人。因此，把FOG亚组人数当作整个研究的样本量，遗漏了会改变研究规模判断的关键限定。指控者的说法为 partly：其关于18名患者和4名频繁FOG患者属于亚组的描述有全文依据；但关于2022年发表于Science Translational Medicine、属于正式同行评审论文的说法，无法从所提供的全文得到证实。相反，所提供版本明确声明其为尚未经过同行评审的预印本。全文没有提供后来正式发表的期刊信息，因此不能仅凭该文件判定其是否后来发表为正式期刊论文。综上，报告在样本量描述上存在实质性错误，但其FOG结果描述及对所提供文本发表状态的标记有依据；指控者正确指出了样本量混淆，但其关于正式期刊发表状态的判断超出了全文能够支持的范围。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Klocke 等，2024（真实冻结事件、STN-LFP电生理研究）",
+  "pmid": "39470410",
+  "doi": "",
+  "report_says": "在第二章2.4的事件级研究表中，将该研究的样本量标记为摘要未报告，未提供具体分析人数。",
+  "judge_says": "原文全文明确报告了12名分析患者，其中5人出现FOG，共记录42次FOG事件。因此，报告遗漏了原文已经明确提供的样本量及冻结事件数量。",
+  "source": "open_g56.json",
+  "pid": "PMID:39470410",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Klocke et al., 2024，STN-EMG研究（丘脑底核神经活动与肌电协调）",
+  "pmid": "",
+  "doi": "",
+  "report_says": "报告称该研究摘要未提供最终分析样本量。",
+  "judge_says": "该研究最终分析样本实际为12人，报告遗漏了摘要中可获取的样本量信息。",
+  "source": "blind_S2_vs_S3d2_aX_g56_260e6dd1",
+  "verdict": "paper_not_in_kb"
+ },
+ {
+  "paper": "Philipp Klocke et al., 2024, Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease",
+  "pmid": "39470410",
+  "doi": "10.1093/brain/awae223",
+  "report_says": "报告X正文表格没有报告该研究的样本量，遗漏了这一具体文献信息。",
+  "judge_says": "评委指出，知识库中已有该研究的样本量信息，为12人；报告正文表格应报告样本量为12人。",
+  "source": "blind_S2_vs_S3d2_bX_g56_c048dcd4",
+  "pid": "PMID:39470410",
+  "verdict": "no_fulltext"
+ }
+]

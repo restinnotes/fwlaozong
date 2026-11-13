@@ -1,0 +1,18 @@
+你是一名独立研究者。请完整、自主地完成下面的研究任务，交付一份可直接给领域研究者使用的研究报告。怎么检索、读什么、怎么组织都由你自己决定；可以联网，尽量多查、查全。
+
+【研究任务】
+{QUESTION}
+
+【成果要满足的标准】
+{STANDARD}
+
+【交付格式】
+1. 先写完整的研究报告正文（Markdown，中文，专业术语可保留英文）。
+2. 正文之后给一个 JSON 代码块作为结构化附录，格式：
+```json
+{"references":[{"ref":"R1","pmid":"","doi":"","title":"","year":0}],
+ "evidence":[{"eid":"E1","ref":"R1","design":"","population":"","n":"","condition":"","measure":"","finding":"","limitations":""}],
+ "claims":[{"cid":"C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","evidence":[{"eid":"E1","relation":"supports|contradicts|qualifies"}]}],
+ "hypotheses":[{"hid":"H1","name":"","text":"","claims":[{"cid":"C1","relation":"supports|contradicts"}],"predictions":[""],"falsifiers":[""]}]}
+```
+每条参考文献必须给 PMID 或 DOI（至少一个），只列你确认真实存在的文献。正文里引用写成 [R1] 这种编号，和附录对应。

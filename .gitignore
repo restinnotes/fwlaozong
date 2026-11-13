@@ -1,0 +1,17 @@
+# 论文全文（版权）：只在本地，不公开
+papers/
+out/**/factcheck/
+out/B1/fulltexts_*
+out/B1/materials_abstracts.txt
+# 每次模型调用的输入输出（输入里含论文全文）：只公开两个汇总日志
+runs/*
+!runs/calls.jsonl
+!runs/luna_calls.jsonl
+# 知识库：二进制、含出版社摘要
+kb/
+# 同学的 AROS 方案原文（第三方文档，未获同意公开）
+spec/
+# 运行时屏幕输出
+logs/
+__pycache__/
+*.pyc

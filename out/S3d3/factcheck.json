@@ -1,0 +1,122 @@
+[
+ {
+  "paper": "98人概率性空间映射研究（正确文献为PMID:40408848，报告错误引用了PMID:40117663）",
+  "pmid": "40408848",
+  "doi": "",
+  "report_says": "报告称：「另一项98人概率性空间映射研究报告42人步态改善、7人术后步态恶化，恶化组活动触点具有更腹侧的位置特征。[PMID:40117663]」",
+  "judge_says": "PMID:40117663实际是Zak等人的另一项研究，纳入40名帕金森病患者，分析72个植入物，研究前部STN激活与步态改善的关系，并非98人研究。报告描述的98人研究实际对应PMID:40408848。该研究报告42人步态改善、7人步态恶化，并发现步态恶化组的活动触点位置更偏腹侧。报告将两篇不同研究的PMID错误对应，可能混淆前部STN刺激与腹侧刺激的研究结果。",
+  "source": "open_g56.json",
+  "pid": "PMID:40408848",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:36070366，具体题目未提供",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "报告表格直接将该研究的样本量写为4例，没有明确区分研究总体样本量和FOG事件分析的子组样本量。",
+  "judge_says": "原研究总体纳入18名患者，但实际FOG事件分析仅涉及其中4人。4人是FOG分析子组，而不是整个研究的总体样本量，报告没有明确标注这一层级区别。",
+  "source": "open_g6.json",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "We included 18 patients with PD (Table S1) who exhibited severe motor fluctuations and varying deficits of gait and balance.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Four patients exhibited episodes of freezing, which differed in their types and severity (duration and frequency of events)."
+  ],
+  "judge_quotes": [
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "We included 18 patients with PD (Table S1) who exhibited severe motor fluctuations and varying deficits of gait and balance.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Four patients exhibited episodes of freezing, which differed in their types and severity (duration and frequency of events).",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments."
+  ],
+  "why": "全文明确区分了研究总体样本与不同分析任务的子组样本。摘要和Results部分明确报告研究纳入18名患者；Results的“Decoding of freezing of gait”部分明确指出其中4名参与者出现频繁的冻结步态（FOG）事件，Figure 8图注也再次确认有4名患者出现冻结事件。因此，4人是FOG相关分析的子组人数，而不是整个研究的总体样本量。指控者对原文的理解有明确依据，judge_supported为yes。报告将样本量写为4并非完全没有原文依据，因为4确实是FOG分析涉及的患者人数；但如果将4直接作为整个研究的总体样本量，则遗漏了18人的总体纳入人数及其分析层级，构成关键限定条件的缺失，因此report_supported为partly，而不是yes或no。另需注意，Methods还说明研究最初招募20人（“20 patients ... were recruited”），最终不同分析的保留人数也不同：神经机器人平台分析为17人，步态实验为12人。这进一步说明必须区分研究招募人数、总体纳入人数和特定分析子组人数。仅凭论文全文无法独立核验报告表格是否确实没有标注子组层级，但报告所述的4人不能代表全文所报告的18人总体样本量。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID:40992964，2026年正式发表的期刊论文，具体题目未提供",
+  "pmid": "40992964",
+  "doi": "",
+  "report_says": "部分证据记录仍将该研究的来源标记为medRxiv预印本。",
+  "judge_says": "该文献的参考文献已经指向2026年正式发表的期刊论文，部分证据记录却仍使用medRxiv预印本作为来源标识，未正确统一文献版本身份。",
+  "source": "open_g6.json",
+  "pid": "PMID:40992964",
+  "report_supported": "yes",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "(which was not certified by peer review) is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+   "The copyright holder for this preprintthis version posted May 9, 2025. ; https://doi.org/10.1101/2025.05.08.25327015doi: medRxiv preprint",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "judge_quotes": [
+   "PMID:40992964 | Subthalamic deep brain stimulation alleviates the gait sequence effect and freezing of gait in Parkinson's disease. (2026)",
+   "The copyright holder for this preprintthis version posted May 9, 2025. ; https://doi.org/10.1101/2025.05.08.25327015doi: medRxiv preprint",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "why": "报告的说法有全文明确依据。论文多处明确标注 medRxiv preprint，并注明预印本发布日期为2025年5月9日、DOI及未经同行评审，足以支持该研究仍存在使用medRxiv预印本作为来源标识的证据。指控者的说法部分有依据：全文首行确实出现 PMID:40992964 和2026年年份，同时正文及页脚仍明确标记为medRxiv预印本，呈现出不同版本身份并存的情况。但全文没有明确提供该研究正式发表的期刊名称、卷期页码或正式发表声明，也没有说明外部证据记录如何引用该文献。因此，不能仅凭全文确认其所称的参考文献已经指向2026年正式发表的期刊论文，也不能确认外部证据记录存在版本统一错误。两种说法并不矛盾，报告关于预印本标识的说法不应判为误读。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "Posterior-central STN定向刺激与FOG研究",
+  "pmid": "39475137",
+  "doi": "",
+  "report_says": "第4.2节仅将posterior-central STN功能分工作为候选模型，第8.4节将开展患者内随机区域刺激、直接比较Posterior STN与Central STN列为未来研究建议，实际上将这种直接比较作为尚待开展的实验。",
+  "judge_says": "原研究已经开展了10名患者参与的随机、双盲、交叉研究，直接比较central与posterior定向STN刺激，并报告central刺激减少实际FOG发作（P<0.001）。因此，直接比较本身并非尚未开展的研究，后续研究应定位为独立重复、扩大样本及验证长期疗效，同时考虑该研究样本小、术前FOG筛选严格及急性刺激与长期疗效的区别。",
+  "source": "open_g6.json",
+  "pid": "PMID:39475137",
+  "report_supported": "no",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We included 10 participants who underwent STN‐DBS and presented severe preoperative FOG, in a randomized, double‐blind, crossover study.",
+   "We used segmented DBS electrodes to investigate whether directing the predicted volume of tissue activated (VTA) to overlap the central STN preferentially improved gait and balance disorders compared to directional DBS applied in the more posterior STN (sensorimotor).",
+   "Central STN‐dDBS produced significantly better improvement in gait and balance control compared to posterior STN‐dDBS (p = 0.027), with fewer FOG episodes (p < 0.001).",
+   "Six months after surgery (M7), patients were allocated to central and posterior sensorimotor STN‐dDBS conditions applied in a randomized order and in a double‐blind fashion (OFF‐DOPA, ≥12 hours since their last administration of their PD medication). Each STN‐DBS condition was applied for 30 minutes with a 30‐minute wash‐out period between each."
+  ],
+  "judge_quotes": [
+   "We included 10 participants who underwent STN‐DBS and presented severe preoperative FOG, in a randomized, double‐blind, crossover study.",
+   "Central STN‐dDBS produced significantly better improvement in gait and balance control compared to posterior STN‐dDBS (p = 0.027), with fewer FOG episodes (p < 0.001).",
+   "During straight‐ahead walking and turns, the probability of experiencing at least 1 FOG episode per walking trial was significantly lower with central STN‐dDBS compared to both posterior STN‐dDBS and OFF‐DBS (Fig 5).",
+   "Several limitations should be acknowledged. First, the small sample size restricts the generalizability of our findings. However, we selected a relatively homogeneous group of patients, all with severe FOG before surgery.",
+   "After this first assessment of central STN‐dDBS at month 7, all patients received central STN‐dDBS for the following months in an open‐label manner (see Fig 1). Central STN‐dDBS parameters were adjusted as necessary and patients underwent reassessments at month 8 and month 13 (ie, after 6 months with central STN‐dDBS) (see Fig 1).",
+   "Future investigation is warranted to explore the potential clinical benefit of reprogramming STN‐DBS toward the central STN in PD patients who continue to experience disabling FOG post‐surgery."
+  ],
+  "why": "报告的说法与全文明确不符。原研究已经完成了10名患者参与的随机、双盲、交叉研究，在患者内按随机顺序直接比较central STN-dDBS与posterior STN-dDBS，并报告central刺激在步态和平衡改善方面优于posterior刺激（P=0.027），实际FOG发作相关指标也有显著改善（摘要报告P<0.001）。因此，将central与posterior STN的直接比较描述为尚未开展的实验，属于对原文研究设计和结果的误读，而不只是遗漏了一个候选模型的限定。指控者的核心纠正有充分依据，但其后续研究建议需要区分原文明确陈述与合理推论：原文明确承认样本量小、患者术前均有严重FOG，且指出小样本限制结果的普遍适用性；也明确建议进一步研究术后持续存在严重FOG患者重新编程至central STN的临床获益。然而，独立重复研究、扩大样本量并非原文明确列出的未来研究方案，而是根据局限性提出的合理建议。此外，必须区分急性直接比较与长期疗效：central与posterior的随机比较发生在术后第7个月的短时刺激阶段，每种条件持续30分钟；之后只有central刺激接受了开放标签随访，持续6个月，并没有开展central与posterior的长期随机对照比较。因此，指控者对既有直接比较的描述完全正确，但其对未来研究方向的表述部分属于推论，故评为partly。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "前部STN刺激与步态结局研究；另涉及98人概率性空间映射研究",
+  "pmid": "40117663",
+  "doi": "",
+  "report_says": "第4.1节将一项98人概率性空间映射研究引用为PMID:40117663，并称该研究发现42人步态改善、7人术后步态恶化，恶化组活动触点具有更腹侧的位置特征。",
+  "judge_says": "PMID:40117663实际对应40名患者、72个植入物的前部STN刺激研究，并非98人研究。真正报告98名患者、42人步态改善、7人步态恶化及恶化组活动触点位置更加腹侧的研究是PMID:40408848。报告将两项不同研究的样本量和解剖定位结果混淆，引用编号错误。",
+  "source": "open_g6.json",
+  "pid": "PMID:40117663",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMC-STN alpha coherence与FOG持续时间研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "第3.5节主要报告正常转弯准备阶段和冻结转弯开始阶段的PMC-STN alpha coherence均相对于Walk基线升高，并据此在第7.3节提出H4代偿性重组和H5病理性过度耦合两种解释，没有充分纳入阶段特异性的冻结持续时间预测结果。",
+  "judge_says": "原研究还报告了正常转弯前（TurnPre）的PMC-STN alpha coherence变化与较短冻结持续时间显著相关，回归系数β=0.205，P=0.006。此外，冻结转弯开始阶段存在不同的延迟性和增强性耦合表现。TurnPre结果为保护性、代偿性解释提供了支持，而冻结开始阶段可能反映另一种网络状态。报告遗漏了这一重要回归结果，没有充分区分TurnPre与TurnStart，导致H4与H5被过于对称地呈现。该相关性仍不能证明因果性的代偿作用。",
+  "source": "open_g6.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase.",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32.",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial."
+  ],
+  "judge_quotes": [
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "B Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "B Freezing of Turning: A delayed and exaggerated increase in PMC-STN alpha coherence and concurrent decoupling of M1-STN alpha coherence was observed during the TurnStart phase.",
+   "We observed an increase in PMC-STN alpha coherence during TurnPre in normal turning, suggesting the role of PMC-STN connectivity in the initiation of the turning task. The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32."
+  ],
+  "why": "报告的基本电生理结果有全文依据：正常转弯的TurnPre阶段和冻结转弯的TurnStart阶段，PMC-STN alpha coherence均相对于Walk显著升高；原文讨论也确实提出了代偿性机制和可能参与FOG病理过程两种解释。但报告的概括存在重要不完整之处。原文第3.5节之后的第4节（Electrophysiological predictors of freezing severity）明确报告，TurnPre阶段PMC-STN alpha coherence与冻结持续时间显著相关（β=0.205，P=0.006），而TurnStart阶段没有显著预测作用。Figure 4的图注进一步明确指出，TurnPre阶段相对于walking增加的PMC-STN alpha coherence预测较短的冻结发作。这一结果为TurnPre阶段的保护性或代偿性解释提供了重要支持，也使TurnPre与TurnStart不能被视为具有相同意义的两种耦合增强现象。因此，如果报告仅依据两阶段的相干性升高对H4和H5作近似对称的解释，而没有充分纳入该回归结果，则属于部分支持但存在关键限定条件缺失，判定为partly，而不是no。指控者的核心描述有直接原文依据：TurnPre的回归结果、较短冻结持续时间的方向性关系，以及TurnStart的延迟性和增强性PMC-STN耦合与M1-STN解耦均有明确记载。需要保留的限定是，原文使用的是'may reflect a compensatory mechanism'，说明代偿作用属于可能的机制解释，而非已证实的因果关系。相关性不能证明PMC-STN耦合增强导致冻结减少，也不能证明其具有因果性的保护作用。",
+  "verdict": "accusation_partly"
+ }
+]

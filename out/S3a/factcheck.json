@@ -1,0 +1,497 @@
+[
+ {
+  "paper": "Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping",
+  "pmid": "41388789",
+  "doi": "",
+  "report_says": "第5.6节将该研究作为冻结期间低beta活动与下肢肌肉共同激活可能同时出现的证据；第7.6节又将其作为APA、双侧肌肉协调及冻结前STN-EMG异常的证据。",
+  "judge_says": "原研究纳入14名PD患者，记录坐位、站立和原地踏步时的STN-LFP及下肢EMG，没有记录真正的冻结事件。因此不能用它直接证明实际冻结期间或冻结前存在肌肉共同激活。作者也明确提醒，不能将原地踏步结果直接推广到自由行走和真实冻结。直接研究真实冻结期间STN-LFP与拮抗肌EMG的研究是Klocke等2024年论文（PMID:39470410）。",
+  "source": "open_g6.json",
+  "pid": "PMID:41388789",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Overall, stepping was associated with the highest low-beta band activities and the lowest high-beta activities compared with standing and sitting.",
+   "Furthermore, STN beta bursts were associated with increased muscle activation at movement initiation, potentially reducing the ability to move freely.",
+   "It is further speculated that elevated muscle co-activation, especially during movement phases when the muscles are normally expected to act in opposition, may reflect altered or maladaptive motor control strategies.",
+   "PL, as a major mover and stabilizer of the foot and ankle, acts complementary to GA during stepping, especially in the stance phase.",
+   "The reduction in STN beta activity appears to precede changes in EMG activity (Fig. 3A), suggesting a causal relationship where STN activity influences muscle activation.",
+   "In fact, increases in pathological beta and theta rhythms in the STN have been observed to precede a temporal chain of abnormal lower limb muscle firing detected by EMG.34",
+   "Further analysis examined STN-muscle coherence and IMC (between the gastrocnemius-peroneus longus coherence of the same leg) in relation to the stepping phase."
+  ],
+  "judge_quotes": [
+   "Local field potentials (LFPs) in the STN and leg muscle activity measured as EMG of the gastrocnemius and peroneus longus were recorded in 14 PD patients during sitting, standing and stepping, ON and OFF levodopa.",
+   "The paradigm consisted of three separate segments: resting (sitting), standing and stepping.",
+   "During the stepping-in-place condition, patients were instructed to step at a comfortable and consistent frequency, and to imagine themselves walking normally.",
+   "Moreover, analyses in this study focused on steps that could be reliably detected using force plate measurements and did not include episodes of hastening or true freezing.",
+   "Therefore, attributing the present effects directly to free walking should be approached cautiously, although a previous study showed similar pattern of STN beta-band modulation aligned to the stepping phase within each step cycle during free walking in a few patients.",
+   "Whether the observed increases in STN beta activity and intermuscular coherence during the late stance phase when OFF levodopa are associated with poor motor performance during free walking remains to be tested in future studies.",
+   "Additionally, while the gastrocnemius and peroneus longus were selected in this study for their known roles in stance stability and foot control, simultaneous monitoring of multiple muscles in future studies, especially multiple antagonistic muscle pairs, such as the gastrocnemius and tibialis anterior may offer more insight on the pathophysiology of free walking."
+  ],
+  "why": "报告的说法部分有依据，但存在关键的外推问题。第一，第5.6节所述的生理现象有一定依据：论文发现原地踏步时STN低beta活动高于坐位和站立，并发现STN beta bursts与运动启动时GA和PL肌肉EMG活动增加有关。作者也在引言中提出了肌肉共同激活可能反映异常运动控制的假设。但是，这些结果并非来自真实冻结事件。更重要的是，beta burst与EMG的关联分析使用的是广义beta活动，不能直接等同于低beta特异性与拮抗肌共同激活的关联。GA与PL在文中被描述为互补作用的肌肉，而不是拮抗肌。作者还明确提出，未来需要监测更多肌肉，尤其是GA与TA这样的拮抗肌对。因此，将这些发现描述为真实冻结期间低beta与下肢肌肉共同激活同时出现的证据，缺少改变结论的重要限定。第二，第7.6节的说法也只有部分依据。论文确实记录了左右两侧GA和PL的EMG，也报告了STN活动与EMG变化之间的时间关系，并在引言中引用了既往关于STN beta/theta活动先于异常下肢肌肉放电的研究。但是，本文没有报告anticipatory postural adjustments（APA）的测量或分析。虽然记录了双侧肌肉活动，其IMC分析明确针对同一侧GA与PL之间的协调，而非左右肢体之间的双侧协调。此外，本文观察到的STN-EMG时间关系发生在原地踏步的特定步态阶段，不能据此认定为冻结发生前的异常。指控者关于研究设计、未记录真实冻结以及不能直接推广到自由行走的描述，均得到全文明确支持。特别是作者在Limitations中直接说明，分析没有纳入真实冻结事件，并要求对自由行走的外推保持谨慎。不过，关于Klocke等2024年论文（PMID:39470410）是直接研究真实冻结期间STN-LFP与拮抗肌EMG的研究，这一具体信息没有出现在所提供的本文全文中，因此不能仅依据本文独立确认。综合而言，报告存在过度外推和部分证据归属不准确的问题；指控者对本文研究设计及其局限性的核心判断成立，但其关于另一篇论文的具体说法无法由本文验证。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Pozzi等，2019年，冻结期间theta-alpha皮层-STN耦合及STN局部振荡活动研究",
+  "pmid": "31505548",
+  "doi": "",
+  "report_says": "第5.4节的beta冲突表主要呈现beta增加、降低及运动相关beta抑制增强等结果；第5.4节引用该研究支持冻结期间theta-alpha皮层-STN耦合下降，但没有充分呈现其局部STN阴性结果。",
+  "judge_says": "原研究不仅报告了冻结期间theta-alpha皮层-STN耦合下降，还发现实际冻结期间STN低频功率、beta功率和beta burst持续时间与正常步行相比均无显著差异。这些阴性结果直接限制了将局部STN beta异常解释为普遍冻结机制的结论，应与耦合结果一并报告。",
+  "source": "open_g6.json",
+  "pid": "PMID:31505548",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In contrast, gait freezing was characterized by a low frequency cortical-subthalamic decoupling in the hemisphere with less striatal dopaminergic innervation (H−) (Fig. 4A).",
+   "We first studied power changes in low frequency (i.e. θ-α rhythms) and in the β-frequency band of the two STN and did not find any differences during gait freezing in comparison to (effective) walking (Fig. 3A and B).",
+   "We also assessed the duration of β-burst and did not find a difference between (effective) walking and gait freezing (Fig. 3C)."
+  ],
+  "judge_quotes": [
+   "We first studied power changes in low frequency (i.e. θ-α rhythms) and in the β-frequency band of the two STN and did not find any differences during gait freezing in comparison to (effective) walking (Fig. 3A and B).",
+   "We also assessed the duration of β-burst and did not find a difference between (effective) walking and gait freezing (Fig. 3C).",
+   "In contrast, gait freezing was characterized by a low frequency cortical-subthalamic decoupling in the hemisphere with less striatal dopaminergic innervation (H−) (Fig. 4A).",
+   "Despite the lack of subthalamic activity changes during gait freezing in our study, exaggerated STN β-synchronization may still influence dynamic motor processing in favour of gait freezing development (Anidi et al., 2018)."
+  ],
+  "why": "报告的说法判为partly：原文明确支持冻结期间theta-alpha皮层-STN耦合下降，因此将该研究作为这一网络耦合结果的依据是正确的。但原文同时明确报告了三个局部STN阴性结果：低频（theta-alpha）功率无显著差异、beta功率无显著差异、beta burst持续时间无显著差异。如果第5.4节只呈现耦合下降而没有充分呈现这些结果，就会使研究发现的整体图景不完整，尤其可能造成将网络耦合异常与局部STN振荡异常混为一谈的问题。不过，附件没有提供报告第5.4节本身，因此无法独立核实beta冲突表的具体内容及其实际遗漏程度。指控者的说法判为yes：上述三个阴性结果均有原文直接依据，而且原文第100行附近的结果明确报告了theta-alpha皮层-STN解耦，说明两类结果确实同时存在。阴性结果限制了将局部STN beta异常视为普遍冻结机制的解释，但不能据此断言STN beta活动完全不参与冻结。原文讨论部分明确保留了这种可能性。另需注意，研究比较的是患者冻结期间与患者自身有效步行（effective walking），而不是与健康对照者的正常步行；研究仅纳入7名患者，并记录到14次冻结事件。因此，指控者的核心判断成立，但应避免将实验结果扩大为对所有冻结情境的绝对结论。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Zhang等，2025年，PMC-STN alpha coherence与冻结持续时间研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "第5.7节仅称部分PMC-STN alpha指标与冻结持续时间存在关系，没有说明相关方向；第7.3节仍将H4代偿性耦合与H5病理性过度耦合作为基本对等的竞争解释。",
+  "judge_says": "原研究发现，TurnPre阶段增强的PMC-STN alpha coherence与更短的冻结持续时间相关。这一效应方向目前更支持H4所提出的代偿性解释，而不是H5所提出的病理性过度耦合解释。报告遗漏了具有机制区分价值的相关方向，没有据此调整两个假说的当前支持程度。",
+  "source": "open_g6.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG."
+  ],
+  "judge_quotes": [
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG.",
+   "B Freezing of Turning: A delayed and exaggerated increase in PMC-STN alpha coherence and concurrent decoupling of M1-STN alpha coherence was observed during the TurnStart phase."
+  ],
+  "why": "报告的说法只能部分得到全文支持。首先，报告称原文没有说明相关方向，这与图4图注明确矛盾：原研究明确指出，TurnPre阶段相对于行走状态增强的PMC-STN alpha coherence预测更短的冻结发作。这是具有机制区分价值的方向性结果，不能仅概括为存在相关关系。其次，原文讨论确实同时提出了代偿性耦合和病理性耦合两种可能解释，因此将其描述为竞争性解释有依据；但将二者视为基本对等，忽略了TurnPre阶段增强的耦合与更短冻结持续时间之间的关系，缺少重要限定。指控者的判断也只能部分得到支持：其关于相关方向的描述有明确原文依据，而且这一方向确实更符合代偿性解释；但原文没有正式宣布H4优于H5。讨论仍然保留了病理性解释，并且明确区分了TurnPre阶段与冻结发生时TurnStart阶段延迟且夸大的PMC-STN alpha coherence增强。因此，更准确的结论是：TurnPre阶段的持续时间预测结果为H4提供了相对更有利的证据，但不足以据此排除H5或认定原研究已经完成了两个机制假说的正式比较。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Cholinergic patterns correlate with dopamine medication ON freezing of gait in Parkinson's disease",
+  "pmid": "40512756（正确文献）；40635563（报告错误引用）",
+  "doi": "",
+  "report_says": "第3.3节称14例胆碱能PET研究提示FOG严重程度与多个脑区胆碱能末梢功能降低相关，并引用PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应Disease-Modifying Trials in Treated Parkinson's Disease: Stable Treated Does Not Equate with Biological Stability，与胆碱能PET和FOG研究无关。真正的原始论文是PMID:40512756。该研究确实纳入14名PD患者，但研究对象是ON-medication FOG，发现胆碱能示踪剂空间协变模式与ON-FoG严重程度相关，并没有发现相应的OFF-FoG关联。因此报告既引用了错误的PMID，也将ON-state特异性结果泛化为一般FOG机制。",
+  "source": "open_g6.json",
+  "pid": "PMID:33240199",
+  "report_supported": "partly",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "Additionally, cholinergic loss in the pedunculopontine nucleus may play a role in FoG, as it stands at the crossroads between supraspinal and spinal gait centers (50).",
+   "This review is focused on the electrophysiological findings related to PDFOG+, in which the studies of imaging findings are excluded. However, excellent reviews on imaging technology can be found in recent papers (36, 37, 116)."
+  ],
+  "judge_quotes": [
+   "Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses statement (61), the eligibility criteria for articles included those published before March 2020, written in English, and currently published journal or full-length conference articles.",
+   "This review is focused on the electrophysiological findings related to PDFOG+, in which the studies of imaging findings are excluded. However, excellent reviews on imaging technology can be found in recent papers (36, 37, 116).",
+   "Additionally, cholinergic loss in the pedunculopontine nucleus may play a role in FoG, as it stands at the crossroads between supraspinal and spinal gait centers (50)."
+  ],
+  "why": "报告的说法为partly：全文确实提到PPN胆碱能功能丧失可能参与FOG，因此存在一般性胆碱能机制的依据。但全文没有报告14例患者的胆碱能PET研究，也没有提及FOG严重程度与多个脑区胆碱能末梢功能降低之间的相关性。相反，作者明确说明本文聚焦于电生理研究，并排除影像学研究结果。因此，不能将这句一般性机制描述视为对报告所述具体PET研究结果的完整支持，缺少的研究证据和限定条件具有实质意义。指控者的说法为cannot_tell：全文没有出现PMID:40635563或PMID:40512756，也没有提供所谓原始研究的14例患者、ON-medication FOG、胆碱能示踪剂空间协变模式或ON与OFF状态关联差异等信息。全文的研究纳入时间限定为2020年3月之前，且明确排除影像学研究。故仅凭这篇全文，既不能验证指控者关于两个PMID对应关系的判断，也不能验证其对ON/OFF研究结果的描述。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Moreau等，2008年，13例患者60 Hz低频STN-DBS原始研究",
+  "pmid": "18420482（原始研究）；28529730（报告引用的mini-review）",
+  "doi": "",
+  "report_says": "第4.4节介绍13例60 Hz刺激研究时引用PMID:28529730，作为该项具体临床试验的文献依据。",
+  "judge_says": "PMID:28529730本身是低频与高频STN-DBS研究的mini-review，并不是纳入13例患者的原始试验论文。对应的原始Moreau等研究是PMID:18420482。报告在讨论具体患者数量、刺激参数和随访结果时，应直接引用原始研究，而不能将综述作为原始试验证据。",
+  "source": "open_g6.json",
+  "verdict": "paper_not_in_kb"
+ },
+ {
+  "paper": "PMID:33240199，STN电生理相关mini-review",
+  "pmid": "33240199",
+  "doi": "",
+  "report_says": "第5.4节将PMID:33240199作为STN beta降低的证据来源。",
+  "judge_says": "PMID:33240199是一篇电生理mini-review，而不是原始研究。报告不能将综述对既有研究的总结等同于独立的原始实验结果。讨论具体beta降低现象时，应追溯并引用相应原始论文，而不能将二手综述作为原始证据。",
+  "source": "open_g6.json",
+  "pid": "PMID:33240199",
+  "report_supported": "yes",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In the works by Gratkowski and Storzer, a decreased beta-band activity was observed in the STN from DBS leads.",
+   "Later, Storzer et al. (115) observed a reduction of beta power in the STN during cycling compared to walking in both PDFoG+ and PDFoG– groups during the OFF state.",
+   "During their active gait paradigm, Syrkin-Nikolau et al. (30) compared stepping in place, forward walking, and instrumented walking, which included a turning and barrier course. During stepping in place, a decreased STN beta-band power was found in the PDFoG+ compared to the PDFoG–.",
+   "During FoG events, increased alpha sample entropy and decreased beta power were found compared to walking without FoG."
+  ],
+  "judge_quotes": [
+   "The major aim of this review is to highlight the most up-to-date studies that explain the mechanisms underlying FoG through electrophysiology explorations.",
+   "Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses statement (61), the eligibility criteria for articles included those published before March 2020, written in English, and currently published journal or full-length conference articles. PubMed was used as the primary information source with the search query “EEG OR LFP AND Parkinson's Disease AND Freezing of Gait.”",
+   "In the works by Gratkowski and Storzer, a decreased beta-band activity was observed in the STN from DBS leads.",
+   "Later, Storzer et al. (115) observed a reduction of beta power in the STN during cycling compared to walking in both PDFoG+ and PDFoG– groups during the OFF state.",
+   "During their active gait paradigm, Syrkin-Nikolau et al. (30) compared stepping in place, forward walking, and instrumented walking, which included a turning and barrier course."
+  ],
+  "why": "两个说法可以同时成立。第一，报告的说法有全文依据。该综述明确总结了STN beta降低的现象，包括Gratkowski和Storzer的研究、Storzer等人的骑行与步行比较，以及Syrkin-Nikolau等人的步行实验。因此，将PMID:33240199作为STN beta降低这一现象的文献依据，并不与全文内容矛盾。第二，指控者的说法也有全文依据。文章标题明确标明为Electrophysiology Mini-Review，摘要明确说明其目的是总结既有研究，方法部分也明确描述了文献检索过程。尤其重要的是，文章将具体STN beta变化归属于其他研究者，并标注了原始文献编号（如26、73、115、30），而不是将这些结果报告为本文作者独立开展的实验。因此，PMID:33240199可以支持报告所述现象，但不能因此被视为产生该实验结果的原始研究。如果报告只是将其作为综述性文献引用，则没有读错；如果将其当作独立原始实验数据的来源，则存在证据类型混淆。追溯并引用相应原始论文是合理的证据引用要求。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "TBS-DBS随机、双盲、短期临床研究",
+  "pmid": "40383539",
+  "doi": "",
+  "report_says": "第7.9节将TBS-DBS机制组织为即时病理驱动反弹与长期神经可塑性两种竞争解释；第8.8节仅概括称TBS相关证据主要来自短期探索性研究，没有在核心机制讨论中充分呈现该试验的主要阴性结果。",
+  "judge_says": "原研究是一项随机、双盲、短期研究，纳入15名PD患者。主要结局FoG-Course在整个患者样本中并未显示TBS-DBS优于连续DBS，只有7/15名患者主观评价TBS-DBS相当或更好。该试验也没有直接操纵刺激暂停时间，没有证明暂停期间STN病理活动反弹，更没有证明长期神经可塑性。因此报告遗漏了主要阴性结果，并应明确区分临床试验实际发现与H12、H13提出的待检验机制假说。",
+  "source": "open_g6.json",
+  "pid": "PMID:40383539",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "The spacing of stimulation trains and insertion of stimulation pauses with TBS-DBS might represent a double-edged sword for DBS application.",
+   "On the one hand, there is evidence of re-emerging tremor during spaced thalamic deep brain stimulation depending on the length and timing of the stimulation pause.",
+   "The finding of impaired, short-term efficacy in tremor suppression by non-continuous DBS was interpreted as the inability to mask burst-driver inputs to the thalamus.",
+   "This might partially explain the slightly inferior short-term effect on objective gait parameters and the FoG-Course of TBS-DBS as a whole group compared to cDBS.",
+   "On the other hand, we assumed TBS-DBS to be potentially advantageous for gait due to the following reasons:",
+   "TBS-DBS with its temporal patterning might slowly, progressively increase its subthalamic efficacy in the long-term by beneficial neuroplastic effects from TBS-DBS.",
+   "For the exploration of the full effect strength, a long-term evaluation of TBS-DBS would be necessary, which has not been performed here in the randomised study of short-term effects.",
+   "The most important limitation in the evaluation of patterned DBS algorithms is the assessment of short-term effects of TBS-DBS on gait within one day, since the effects of patterned DBS might evolve over time and axial symptoms typically respond over a longer time course."
+  ],
+  "judge_quotes": [
+   "In this monocentric, randomised, double-blind, short-term study, 12 age-matched controls (11 male, age 59 ± 8 years) and 15 PD participants (14 male, age 62 ± 9 years, disease duration 15 ± 6 years) with subthalamic stimulation (76 ± 39 months) were assessed with clinical scores (FoG-Course, MDS-UPDRS) and a standardized gait course simulating everyday life situations.",
+   "The primary outcome, the relative change of FoG-Course by DBS, was not superior with TBS-DBS compared to cDBS in the entire sample.",
+   "Seven of fifteen PD participants rated subjectively TBS-DBS equal or better than cDBS (“TBS-preference group”).",
+   "In detail, the TBS pattern consists of 5 cycles per second, with each cycle containing 0.1s bursts at 200 Hz followed by a 0.1s pause.",
+   "During the standardized gait course a mobile, 24-channel EEG system and 6 wearable axial kinematic sensors were used.",
+   "On the one hand, there is evidence of re-emerging tremor during spaced thalamic deep brain stimulation depending on the length and timing of the stimulation pause.",
+   "In this study, we found no superior effects of TBS-DBS compared to cDBS for the FoG-Course or the MDS-UPDRS III in the entirety of the group.",
+   "Since axial symptoms might change over days, the EEG might potentially point to advantageous long-term changes, which could not be proven in that acute experimental setting.",
+   "For the exploration of the full effect strength, a long-term evaluation of TBS-DBS would be necessary, which has not been performed here in the randomised study of short-term effects.",
+   "The FoG-Course was not significantly different between TBS-DBS and OFF-DBS and TBS-DBS and cDBS in the whole sample (all p values > 0.362."
+  ],
+  "why": "报告的机制框架有明确原文依据。作者确实使用“double-edged sword”描述TBS-DBS的间歇刺激模式，并分别讨论了两个方向：一是刺激暂停可能使丘脑burst-driver输入重新显现，从而影响短期疗效；二是时间模式可能通过长期神经可塑性改善治疗效果。因此，将其概括为潜在的短期不利机制与长期有利机制，基本符合原文。但存在重要限定：第一种解释引用的是既往间歇性丘脑DBS研究中的震颤重新出现现象，作者只认为它可能部分解释本试验的结果，并没有证明TBS暂停期间STN病理活动反弹。第二种解释也只是作者提出的假设，原文明确承认尚未进行长期评估，不能作为已证实机制。指控者对原研究的描述有全文依据：研究确为随机、双盲、短期研究，共纳入15名PD患者；摘要明确报告全组FoG-Course主要结局未显示TBS-DBS优于cDBS，7/15名患者主观评价相当或更好。方法部分只采用固定的0.1秒刺激暂停，没有比较不同暂停时长；研究使用移动EEG和运动学传感器，没有直接证明暂停期间STN病理活动反弹。作者也明确承认长期神经可塑性尚未得到证明。需要补充一个统计学限定：原文报告全组主要结局未显示TBS-DBS优越，但不能据此简单说TBS-DBS在直接组间比较中显著劣于cDBS，因为原文另报告TBS-DBS与cDBS的FoG-Course直接比较未达到统计学显著性（all p values > 0.362）。因此，报告对两种机制的组织方式有依据，但若没有充分呈现全组主要阴性结果及机制尚未验证的限定，就属于重要信息呈现不充分。至于报告第8.8节实际是否遗漏或低估了该结果，这是对报告文本本身的判断，不能仅凭论文全文独立核实。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping",
+  "pmid": "41388789",
+  "doi": "",
+  "report_says": "第五章5.6称，冻结期间低beta活动与下肢肌肉共同激活可能同时出现，并引用该研究作为证据。",
+  "judge_says": "原研究纳入14名帕金森病患者，记录坐位、站立和踏步任务中的STN-LFP及下肢EMG，没有实际冻结事件分析，也没有FOG与非FOG患者分组。研究报告的是不同运动状态及左旋多巴对低、高beta活动的影响，以及beta burst与运动启动时肌肉活动的关系，并非实际冻结期间的低beta与肌肉共同激活。",
+  "source": "open_g56.json",
+  "pid": "PMID:41388789",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Low-beta (12–20 Hz) and high-beta (21–35 Hz) were differentially modulated by stepping movements and levodopa, with reduced high-beta and increased low-beta during stepping compared with standing and sitting.",
+   "Furthermore, STN beta bursts were associated with increased muscle activation at movement initiation, potentially reducing the ability to move freely.",
+   "It is further speculated that elevated muscle co-activation, especially during movement phases when the muscles are normally expected to act in opposition, may reflect altered or maladaptive motor control strategies.",
+   "Moreover, analyses in this study focused on steps that could be reliably detected using force plate measurements and did not include episodes of hastening or true freezing."
+  ],
+  "judge_quotes": [
+   "Local field potentials (LFPs) in the STN and leg muscle activity measured as EMG of the gastrocnemius and peroneus longus were recorded in 14 PD patients during sitting, standing and stepping, ON and OFF levodopa.",
+   "A total of 14 patients were recruited for the study",
+   "All 1-min segments of standing and stepping included in the analysis were performed without hand support, except for one particularly frail patient who required support during stepping and standing.",
+   "Moreover, analyses in this study focused on steps that could be reliably detected using force plate measurements and did not include episodes of hastening or true freezing.",
+   "It should be recognized that most patients in this study were tremor dominant or exhibited main symptoms of bradykinesia and rigidity, hence, comparisons between patients with and without FOG were not feasible.",
+   "Overall, stepping was associated with the highest low-beta band activities and the lowest high-beta activities compared with standing and sitting.",
+   "A permutation cluster analysis revealed a significant increase in EMG beta band amplitudes around STN beta burst onset between OFF and ON medication for both the gastrocnemius (P = 0.020; Fig. 5C and the peroneus longus (P = 0.040; Fig. 5D)."
+  ],
+  "why": "报告的说法有部分依据，但不能作为该研究直接证明冻结期间低beta活动与下肢肌肉共同激活同时出现的证据。原文确实报告了踏步时STN低beta活动高于坐位和站立，并发现STN beta bursts与运动启动时下肢肌肉活动增加有关；引言也提出了肌肉共同激活可能反映异常运动控制的假设。然而，这些结果针对的是踏步及特定步态阶段，而非实际冻结事件。尤其重要的是，作者在Limitations中明确说明分析不包括真正的冻结事件（true freezing），并明确指出无法进行FOG与非FOG患者之间的比较。此外，beta bursts与EMG活动的关系并不等同于已经证实低beta与肌肉共同激活之间存在特定关联。因此，报告引用该研究支持冻结期间这种现象，缺少改变结论的关键限定条件，判定为partly。指控者对原文研究设计、样本、任务、分析内容及局限性的描述均有明确全文依据，判定为yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Cholinergic patterns correlate with dopamine medication ON freezing of gait in Parkinson's disease",
+  "pmid": "40512756（报告误引为40635563）",
+  "doi": "",
+  "report_says": "第三章3.3称，一项14例胆碱能PET研究发现FOG严重程度与多个脑区胆碱能末梢功能降低相关，引用PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应Disease-Modifying Trials in Treated Parkinson's Disease: Stable Treated Does Not Equate with Biological Stability，与胆碱能PET研究无关。真正的14例胆碱能PET研究是PMID:40512756，题为Cholinergic patterns correlate with dopamine medication ON freezing of gait in Parkinson's disease。",
+  "source": "open_g56.json",
+  "pid": "PMID:33240199",
+  "report_supported": "partly",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "Additionally, cholinergic loss in the pedunculopontine nucleus may play a role in FoG, as it stands at the crossroads between supraspinal and spinal gait centers (50).",
+   "This review is focused on the electrophysiological findings related to PDFOG+, in which the studies of imaging findings are excluded. However, excellent reviews on imaging technology can be found in recent papers (36, 37, 116).",
+   "PET and MRI provide the means to study the loss of brain structure in PDFoG+. These neuroimaging techniques have been extensively utilized to understand the pathophysiological mechanisms of PDFoG+ (36, 37, 116)."
+  ],
+  "judge_quotes": [
+   "This review is focused on the electrophysiological findings related to PDFOG+, in which the studies of imaging findings are excluded.",
+   "Additionally, cholinergic loss in the pedunculopontine nucleus may play a role in FoG, as it stands at the crossroads between supraspinal and spinal gait centers (50)."
+  ],
+  "why": "报告的说法只能获得部分支持。全文确实提到胆碱能功能丧失可能参与FOG，但具体限定为脚桥核（pedunculopontine nucleus），且表述为 may play a role。全文没有报告14例患者的胆碱能PET研究，没有提到FOG严重程度与多个脑区胆碱能末梢功能降低之间的相关性，也没有提供报告所称的具体研究结果。因此，不能将全文对胆碱能功能丧失的一般性描述等同于报告所述的具体PET研究发现。尤其需要注意，作者明确说明本文排除了影像学研究的具体发现。另一方面，指控者关于PMID:40635563对应Disease-Modifying Trials in Treated Parkinson's Disease、而PMID:40512756对应14例胆碱能PET研究的说法，在所提供的全文中均找不到对应的PMID、论文标题或文献题录信息。全文只能证明作者提及了胆碱能功能丧失及影像学研究，不能核实这两个PMID与论文标题之间的对应关系。因此，严格依据全文，指控者的具体文献身份判断应为cannot_tell，而不能判定为yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "13例患者随机、双盲、交叉试验的原始研究",
+  "pmid": "18420482（报告误引为28529730）",
+  "doi": "",
+  "report_says": "第四章4.4将PMID:28529730作为一项纳入13例患者的随机、双盲、交叉原始研究引用。",
+  "judge_says": "PMID:28529730实际对应2017年的mini-review（二手综述），并非所描述的原始随机交叉试验。对应的原始研究是PMID:18420482。",
+  "source": "open_g56.json",
+  "verdict": "paper_not_in_kb"
+ },
+ {
+  "paper": "PMID:31494286，STN电生理与冻结易感步态研究",
+  "pmid": "31494286",
+  "doi": "",
+  "report_says": "报告将该研究纳入FOG相关神经活动证据的比较，但没有明确标注其实际研究的是冻结易感状态。",
+  "judge_says": "原研究使用躯干加速度计计算iFOG指数，区分冻结易感步态与正常步态，并非直接分析实际冻结事件。其证据应归类为冻结易感性证据，不能直接等同于真实FOG发生期间的神经活动。",
+  "source": "open_g56.json",
+  "pid": "PMID:31494286",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:37226972，VR冻结与步态减速研究",
+  "pmid": "37226972",
+  "doi": "",
+  "report_says": "报告将该研究纳入FOG相关证据讨论，但没有明确标注其受影响试次的具体行为定义。",
+  "judge_says": "原研究将8次VR冻结和7次显著步态减速合并为受影响试次。这些试次并非全部属于实际冻结事件，不能将其结果直接解释为真实FOG期间的神经生理变化。",
+  "source": "open_g56.json",
+  "pid": "PMID:37226972",
+  "report_supported": "cannot_tell",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Gait freezing is a common, disabling symptom of Parkinson's disease characterized by sudden motor arrest during walking.",
+   "Episodes of cognitive cue-associated freezing and VR gait slowing were pooled and compared against segments where VR gait metrics were unaffected by concurrent cognitive processing.",
+   "The remaining 15 trials were pooled and classed as cognitive cue-associated VR freezing (n = 8) or significant VR gait slowing where there was >50% FPV reduction (n = 7)."
+  ],
+  "judge_quotes": [
+   "Maintaining validated definitions of VR motor arrests, a “freeze” was defined as any footstep latency >2× a participant's mFSL. Significant VR gait slowing (vs. normal progression) following cognitive cue presentation was pre-defined as >50% reduction in FPV compared to pre-cue footsteps. Episodes of cognitive cue-associated freezing and VR gait slowing were pooled and compared against segments where VR gait metrics were unaffected by concurrent cognitive processing.",
+   "The remaining 15 trials were pooled and classed as cognitive cue-associated VR freezing (n = 8) or significant VR gait slowing where there was >50% FPV reduction (n = 7).",
+   "Further research is required to explore whether the presently reported reduction in θ frequency activity relates specifically to altered cognitive processing or to freezing itself.",
+   "The current study is potentially limited by the surgically mandated supine positioning of the patients, which minimizes any contribution related to anticipatory postural adjustments along with the anxiety of potential falls.",
+   "Future work should obtain recordings from implanted DBS systems postoperatively in ambulant patients undergoing concurrent cognitive dual-tasking, which should also guide reconciliation with previous work in LFPs."
+  ],
+  "why": "report_supported 判为 cannot_tell，是因为附件只有原始论文，没有提供被指控的那份研究报告，因而无法核实报告是否纳入该研究、是否遗漏了具体行为定义。不过，原论文明确给出了受影响试次的操作性定义和构成，不能将原论文描述为没有定义。judge_supported 判为 yes。原文明确说明，15个受影响试次由8次认定为VR freezing的试次和7次显著VR gait slowing试次组成，后者定义为FPV下降超过50%。因此，15个试次并非全部属于冻结事件。进一步地，作者明确指出，尚需研究才能确定θ活动下降究竟特异性关联于认知加工改变还是冻结本身；研究还采用仰卧位VR任务，并提出未来需要在行走状态下进一步研究。因此，指控者认为不能将这组混合试次的神经生理结果直接等同于真实FOG期间特异性的神经生理变化，有全文依据。但需保留一个限定：原文确实将其中8次按操作性标准认定为VR freezing，并非否认这8次冻结事件的存在。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "PMID:36730026，仰卧踏步及freezing-like irregularities研究",
+  "pmid": "36730026",
+  "doi": "",
+  "report_says": "报告将该研究纳入FOG相关证据讨论，但没有明确标注其行为任务与自然直立行走中的真实冻结不同。",
+  "judge_says": "原研究采用仰卧踏步任务，以步态振幅下降超过50%定义freezing-like irregularities。这种替代行为不能直接等同于自然直立行走中的真实FOG。",
+  "source": "open_g56.json",
+  "pid": "PMID:36730026",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Klocke等，转弯任务研究（Research Square预印本）",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "report_says": "第五章5.3称Klocke等的研究提供了新的转弯任务证据，但没有在正文引用位置明确标示其预印本状态。",
+  "judge_says": "该DOI对应Research Square预印本，并非已经完成同行评审的正式期刊论文。报告应明确标注其未经同行评审的出版状态，不能使读者将其与已发表的同行评审原始研究等同看待。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Here, we report findings from turning motions with and without FoG in PwPD, in whom we previously reported neuronal abnormalities related to FoG occurring during regular walking.",
+   "The aim of this study was to characterize the subthalamic signature of freezing while turning.",
+   "Our findings advance the pathophysiological understanding of the neural mechanisms underlying freezing while turning"
+  ],
+  "judge_quotes": [
+   "Posted Date: May 6th, 2026",
+   "DOI: https://doi.org/10.21203/rs.3.rs-9617843/v1",
+   "Research Article",
+   "Supplementary material is available at NPJ Parkinson's Disease online."
+  ],
+  "why": "报告的实质性描述有全文依据。论文明确报告了帕金森病患者转弯及转弯过程中冻结（freezing while turning）的研究，包含实验方法、神经信号分析、运动学结果和分类模型，因此将其描述为提供新的转弯任务证据并无明显误读。但附件只有论文全文，没有报告第五章5.3的正文及其引用位置，因而无法直接核实报告是否确实遗漏了预印本状态标注，整体判为partly。指控者的描述也有部分依据：论文首页列出了Research Square格式的DOI、版本号v1和Posted Date，表明这是一份有明确发布日期和版本信息的在线稿件。不过，全文没有明确出现“preprint”“not peer-reviewed”或“not yet peer-reviewed”等表述，也没有明确声明尚未完成同行评审。另一方面，全文还写有补充材料可在NPJ Parkinson's Disease在线获取。因此，仅凭全文可以支持其具有预印本式发布信息，但不能将其未经同行评审、并非正式期刊论文这一判断视为全文明确证实的事实。两个判断均为partly。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Beaudoin等，2026年STN-LFP与FOG预测研究（bioRxiv预印本）",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "第五章5.5称Beaudoin等2026年的研究分析了4名患者的STN-LFP数据，并报告AUC=0.825，但正文没有明确标注预印本状态。",
+  "judge_says": "该DOI对应bioRxiv预印本，尚未经同行评审。研究只有4名独立患者，患者留一交叉验证不等于独立外部验证，因此AUC=0.825不能直接解释为已经获得稳定的跨患者预测性能。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "STN local field potential recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16).",
+   "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+   "preprint (which was not certified by peer review)",
+   "doi: bioRxiv preprint"
+  ],
+  "judge_quotes": [
+   "preprint (which was not certified by peer review)",
+   "STN local field potential recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16).",
+   "Predictive performance was assessed using leave-one-patient-out logistic regression and threshold classifiers.",
+   "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+   "Across models, entropy consistently provided the most robust and generalizable discrimination between pre-freeze and stable turns, and additional features did not yield meaningful improvements beyond this single measure."
+  ],
+  "why": "报告的核心数据有明确依据：论文确实分析了4名帕金森病患者的STN局部场电位数据，并报告基于Shannon entropy的患者留一交叉验证AUC为0.825。但论文明确标注为bioRxiv预印本，并明确注明未经同行评审。因此，如果报告正文确实没有标明预印本状态，则属于遗漏重要文献状态限定，评级为partly，而不是no。指控者的描述同样有部分充分依据：预印本状态、4名受试者和leave-one-patient-out方法均由原文明确记载。论文没有报告独立外部验证队列，因此不能将内部患者留一交叉验证等同于独立外部验证。仅凭4名患者得到的AUC=0.825，也不足以证明稳定、可推广的跨患者预测性能。不过，后两点属于对研究设计和证据强度的合理方法学判断，并非论文明确作出的结论；论文实际上使用了'reliably separating ... across patients'及'robust and generalizable discrimination'等表述。因此，指控者的核心谨慎性判断有依据，但不能说这些限制是论文作者明确承认的结论。另需说明，附件只有论文全文，无法独立核实报告第五章5.5是否确实遗漏了预印本标注。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Cholinergic patterns correlate with dopamine medication ON freezing of gait in Parkinson's disease",
+  "pmid": "40512756",
+  "doi": "",
+  "report_says": "§4.3将14例胆碱能PET研究引用为PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应另一篇文献Disease-Modifying Trials in Treated Parkinson's Disease: Stable Treated Does Not Equate with Biological Stability，并非胆碱能PET研究。该胆碱能PET研究的正确PMID是40512756。",
+  "source": "abs_g6.json",
+  "pid": "PMID:40512756",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Thenaisie等，2022年，PD患者STN神经活动与步态冻结（FOG）研究",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "§5.1称研究纳入4名PD患者，并进一步称该研究样本只有4人。",
+  "judge_says": "原研究总体纳入18名患者，其中12名参加步态实验，只有4名在实验中实际发生冻结事件。4人是发生FOG的事件亚组，而不是整个研究的样本量。报告将FOG事件亚组人数描述为研究整体样本量，造成研究规模误解。",
+  "source": "abs_g6.json",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Four patients exhibited episodes of freezing, which differed in their types and severity (duration and frequency of events).",
+   "We included 18 patients with PD ( Table S1) who exhibited severe motor fluctuations and varying deficits of gait and balance.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments."
+  ],
+  "judge_quotes": [
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "15 patients performed the walking tasks (small, big and mixed steps).",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Four patients exhibited episodes of freezing, which differed in their types and severity (duration and frequency of events)."
+  ],
+  "why": "报告的说法 partly：全文确实明确提到4名患者发生FOG，因此数字4有原文依据。但这4人是FOG事件亚组，并非整个研究的样本量。全文摘要和Results明确报告18名PD患者，Methods则进一步说明研究共招募20人，其中17人保留用于神经机器人平台分析、12人保留用于步态实验分析。将FOG亚组的4人说成整个研究仅有的4名受试者，遗漏了决定研究规模的关键限定，属于样本范围误读。指控者的说法 partly：其核心判断，即4人属于FOG亚组而非整体样本，得到全文明确支持；18人也确实出现在摘要和Results中。不过，指控者对样本流程的表述不够精确：Methods报告实际招募20人，而非18人；15人实际进行了步态任务，12人是最终保留用于步态实验分析的人数。因此，不能将18人、12人和4人简单理解为全文始终一致的三个样本量层级。总体而言，指控者指出报告把FOG亚组误当作整体样本量这一核心问题是有依据的，但其对研究总体招募人数及步态实验参与人数的描述需要补充限定。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Zhang等，2025年，PMC-STN/M1-STN coherence与冻结步态研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "§5.7认为论文内部部分统计结果与图注的方向报告存在不一致。",
+  "judge_says": "原论文定义的百分比变化为(Walk-Turn)/Walk，因此正系数可能表示转弯期相对于行走基线的下降。图注中PMC-STN coherence增加与较短冻结持续时间相关的描述，可能与该归一化方向相容，并不必然构成统计方向矛盾。报告可能没有结合原论文公式及系数符号正确解释统计结果。",
+  "source": "abs_g6.json",
+  "pid": "PMID:41131028",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "The fixed effects were defined as the normalized electrophysiological changes, calculated by:",
+   "Percentage Change (%) = (Value_Walk - Value_TurnPre or TurnStart) / Value_Walk × 100",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "judge_quotes": [
+   "The fixed effects were defined as the normalized electrophysiological changes, calculated by:",
+   "Percentage Change (%) = (Value_Walk - Value_TurnPre or TurnStart) / Value_Walk × 100",
+   "PMC alpha power reduction during the TurnPre phase (but not during the TurnStart phase) relative to walking positively correlated with freezing duration (β = 0.154, p = 0.035)",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "why": "报告的判断缺乏充分依据，关键问题是没有区分论文中的两种归一化公式。Methods 的 Data normalization and comparison 部分定义了 Normalized Value (%) = Value_Phase / Value_Walk × 100；但在 Statistical analysis 部分，论文明确规定，线性混合效应模型的固定效应使用另一公式，即 Percentage Change (%) = (Value_Walk - Value_TurnPre or TurnStart) / Value_Walk × 100。后一个公式才是解释 β = 0.205 的关键。由于分子方向是 Walk 减 Turn，正系数表示该百分比变化越大，即转弯期 coherence 相对于行走基线越低，预测的冻结持续时间越长。反过来，转弯期 PMC-STN coherence 相对行走基线增加，对应较小或负的百分比变化，因此预测较短的冻结持续时间。这与 Figure 4B 图注的方向完全相容。Figure 4A 中 PMC alpha power 下降与冻结持续时间正相关，也与同一公式及正系数 β = 0.154 相符。此外，Results 正文称 coherence increases predicted freezing duration，但没有明确说是更长还是更短，不能据此认定其与图注矛盾。因此，报告所称的统计方向不一致，实际上忽略了模型自变量的反向百分比编码；指控者的解释有全文依据。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "Beta-burst驱动的自适应DBS研究（预印本与正式发表版本）",
+  "pmid": "40677701",
+  "doi": "10.1101/2024.06.26.24309418",
+  "report_says": "将DOI:10.1101/2024.06.26.24309418和PMID:40677701分别列入参考文献表及证据表，建立两个独立Evidence ID，并同时用于C6和C12的证据支持。",
+  "judge_says": "这两个文献记录实际上是同一项beta-burst驱动自适应DBS研究的预印本和正式发表版本，使用同一研究队列，并非两项独立研究。报告没有建立明确的版本关联，若将其作为独立证据计数，会重复计算同一研究，夸大独立研究的数量和重复验证程度。",
+  "source": "abs_g6.json",
+  "pid": "PMID:40677701",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "The goal of the study was to investigate the feasibility, safety and tolerability of beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson’s disease.",
+   "Seven individuals with Parkinson’s disease were implanted with the investigational Summit™ RC + S deep brain stimulation system (Medtronic, PLC, Dublin, Ireland)."
+  ],
+  "judge_quotes": [
+   "Seven participants (5 male, 2 female) with clinically established Parkinson’s disease underwent bilateral implantation of DBS leads (model 3389, Medtronic, PLC, Dublin, Ireland) in the sensorimotor region of the STN.",
+   "The initial planned cohort was 15 individuals, but recruitment was halted after discontinuation of the Summit™ RC + S in October 2022.",
+   "The current pilot study demonstrated initial safety, tolerability, and feasibility of adaptive deep brain stimulation for freezing of gait in Parkinson’s disease in the acute laboratory setting, supporting the future investigation of its longer-term efficacy in the at-home setting."
+  ],
+  "why": "全文描述的是 PMID:40677701 对一项 beta burst-driven adaptive DBS 研究的正式论文报告，包括研究目的、研究设计及7名参与者的信息。但全文没有提及 DOI:10.1101/2024.06.26.24309418，没有说明该 DOI 对应的预印本，也没有建立预印本与正式发表版本之间的关联。因此，无法根据全文判断报告是否将两个记录分别列入参考文献表和证据表、建立两个独立 Evidence ID，并同时用于 C6 和 C12。报告的具体处理方式不属于论文全文提供的信息。对于指控者，全文虽然明确支持这篇论文报告的是一项包含7名参与者的研究，但没有提供预印本的研究队列、参与者信息或版本关联，因而不能据此确认两个文献记录是否使用同一队列、是否属于同一研究的预印本和正式发表版本。尤其不能仅凭正式论文报告了7名参与者，就推断其与预印本使用相同队列。故两项判断均为 cannot_tell，而不能将缺少版本关联信息直接判定为报告错误，也不能将指控者的描述判定为全文明确支持。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "PMID:42571859，步态周期锁定的皮层低频活动、S1-STN theta coherence及不同刺激条件研究",
+  "pmid": "42571859",
+  "doi": "",
+  "report_says": "在结构化证据关联中将该研究关联至C6（STN beta burst时间结构相关机制）。",
+  "judge_says": "原研究主要提供步态周期锁定的皮层低beta活动和皮层-STN theta coherence证据，并研究HFS、LFS对相关活动及冻结的调节，并非直接研究STN beta burst持续时间。该研究可以支持步态相位调制机制，但不宜不加区分地作为STN beta burst机制的直接证据。其与C2（刺激频率）和C8（皮层-STN耦合）也有直接关联。",
+  "source": "abs_g6.json",
+  "pid": "PMID:42571859",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Syrkin-Nikolau 等，关于步态冻结期间β频段功率变化的原始研究",
+  "pmid": "28890315",
+  "doi": "",
+  "report_says": "实际冻结（实际FOG发作）期间β功率呈上升，与评委引用的原始研究结果相反。",
+  "judge_says": "原始研究实际报告的是冻结期间β功率下降。X直接引用了该原始研究，而Y主要通过电生理综述（PMID:33240199）转述了相反的结果。",
+  "source": "blind_S2_vs_S3a_aX_g56_9b0417f2",
+  "pid": "PMID:28890315",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Among Freezers, beta power was lower during FOG compared to during forward walking without FOG (N = 8 STNs, F(1,51) = 14.45, P < 0.001, Table 4 ).",
+   "When Freezers exhibited FOG, beta power was even lower and neural entropy increased in the alpha band."
+  ],
+  "judge_quotes": [
+   "Among Freezers, beta power was lower during FOG compared to during forward walking without FOG (N = 8 STNs, F(1,51) = 14.45, P < 0.001, Table 4 ).",
+   "Freezers demonstrated lower beta power and greater alpha SampEn during FOG compared to walking without FOG.",
+   "When Freezers exhibited FOG, beta power was even lower and neural entropy increased in the alpha band."
+  ],
+  "why": "原文明确报告，在Freezers中，实际FOG期间的STN beta功率相对于无FOG的前向行走期间下降（lower），且结论部分进一步强调FOG期间beta功率甚至更低（even lower）。因此，报告所称实际FOG期间beta功率上升，与论文全文直接报告的结果相反，不受全文支持。指控者关于原文报告beta功率下降的描述有明确依据。需要区分功率（power）和样本熵（Sample Entropy）：论文报告FOG期间增加的是alpha SampEn，而不是beta power；不能将神经熵增加解释为beta功率增加。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "14例帕金森病患者胆碱能PET研究",
+  "pmid": "40512756",
+  "doi": "",
+  "report_says": "将这项14例患者的胆碱能PET研究引用为PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应的是一篇关于帕金森病疾病修饰试验的综述，并非胆碱能PET研究。该PET研究的正确PMID是40512756。",
+  "source": "blind_S2_vs_S3a_aX_g56_9b0417f2",
+  "pid": "PMID:40512756",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "关于转弯期间神经耦合变化与冻结关系的研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "认为该研究内部统计结果不一致，存在统计矛盾。",
+  "judge_says": "原文区分了正常转弯阶段TurnPre与冻结转弯阶段TurnStart的耦合变化，并报告TurnPre阶段耦合增强与较短的冻结时间相关。这些结果可以通过不同时间阶段的差异解释，不应简单认定为统计矛盾。",
+  "source": "blind_S2_vs_S3a_aX_g56_9b0417f2",
+  "pid": "PMID:41131028",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Enhanced PMC-STN coherence appeared during TurnPre in normal turning and TurnStart in freezing turning, with TurnPre alpha suppression and coherence predicting freezing duration.",
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "judge_quotes": [
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "The turning process is segmented into four phases: TurnPre (1.5 seconds before turn initiation), TurnStart (the first 1.5 seconds of rotation), TurnEnd (the last 1.5 seconds of stabilization), and TurnPost (1.5 seconds after completing the turn) (Fig. 1C)."
+  ],
+  "why": "全文明确区分了不同转弯状态和时间阶段的耦合变化：正常转弯时，PMC-STN alpha coherence在TurnPre阶段相对于步行显著增强（p=0.0045）；冻结转弯时，PMC-STN alpha coherence增强发生在TurnStart阶段（p=0.048），同时M1-STN alpha coherence下降（p=0.043）。此外，预测模型发现TurnPre阶段的PMC-STN alpha coherence变化与冻结持续时间显著相关，图4图注进一步明确指出，TurnPre阶段耦合增强预测较短的冻结时间（β=0.205，p=0.006）。这两组结果分别涉及不同的转弯阶段和分析目的，并不构成统计矛盾。还需注意，方法部分将预测变量的百分比变化定义为（Value_Walk−Value_TurnPre或TurnStart）/Value_Walk×100，因此耦合增强对应负向变化值，正的回归系数并不意味着耦合增强会延长冻结时间。综上，指控者对原文的描述有明确全文依据，而仅凭这些结果认定论文存在内部统计矛盾，属于忽略阶段和变量定义后的错误解读。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "14例胆碱能PET研究",
+  "pmid": "40512756",
+  "doi": "",
+  "report_says": "将14例胆碱能PET研究标注为PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应一篇疾病修饰试验综述，并非该胆碱能PET研究。该PET研究的正确PMID是40512756。",
+  "source": "blind_S2_vs_S3a_aX_g6_9b0417f2",
+  "pid": "PMID:40512756",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "胆碱能PET研究（Cholinergic PET study）",
+  "pmid": "40512756",
+  "doi": "",
+  "report_says": "报告X将胆碱能PET研究标注为PMID:40635563。",
+  "judge_says": "PMID:40635563实际对应一篇疾病修饰治疗综述，并非胆碱能PET研究。胆碱能PET研究的正确PMID为40512756。",
+  "source": "blind_S2_vs_S3a_bX_g56_bd01352f",
+  "pid": "PMID:40512756",
+  "verdict": "no_fulltext"
+ }
+]

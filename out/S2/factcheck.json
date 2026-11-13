@@ -1,0 +1,641 @@
+[
+ {
+  "paper": "Collomb-Clerc et al., 2025，步态启动阶段STN神经活动与FOG研究",
+  "pmid": "40709562",
+  "doi": "",
+  "report_says": "第2.3节称，这些研究主要分析没有实际冻结发生的步态启动试次，因此提供的是FOG易感性证据，而不是实际冻结期间的直接神经活动证据。",
+  "judge_says": "原研究纳入38名患者，其中12名在记录中出现FOG，共有99个发生冻结的步行试次和263次冻结事件。神经信号分析发生在步态启动阶段，研究的是随后发生冻结的试次中的冻结前神经活动，而不是完全没有发生冻结的整段步行试验。报告错误地将这些试次描述为没有实际冻结发生的试次，低估了事件锁定证据的直接性。",
+  "source": "abs_g56.json",
+  "pid": "PMID:40709562",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups.",
+   "The analysis included data from 267 dipoles located within the STN (139 and 128 in the posterior and central STN, respectively), comprising 946 traces (725 in FOG-NOBS and 221 in FOG-OBS patients; see Figs 1D and 4).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG-OBS+ trials) to those without (FOG-OBS− trials) in FOG-OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset."
+  ],
+  "judge_quotes": [
+   "We recorded GI and STN local field potentials (LFPs) via externalized cables in 38 patients with PD (35 reporting FOG in daily life), both OFF- and ON-dopamine (DOPA).",
+   "DOPAOFF, 12 patients with PD had FOG observed (FOG-OBS, 263 episodes), occurring at a mean of 8 steps after GI, and 26 had no FOG observed (NOBS; FOG-NOBS).",
+   "In the 12 FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG-OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G).",
+   "These FOG-OBS patients also completed 212 walking trials without FOG (FOG-OBS− trials; see Fig 1E).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG-OBS+ trials) to those without (FOG-OBS− trials) in FOG-OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset."
+  ],
+  "why": "报告的说法有部分依据。原文确实将大量无FOG试次作为主要分析对象，并报告了946条来自无FOG试次的LFP分析记录；而且神经活动分析发生在步态启动阶段，变化出现在可观察到FOG之前，因此没有直接测量冻结发作进行期间的神经活动。但是，报告遗漏了一个重要限定：研究还明确分析了99个随后实际发生FOG的步行试次，共263次冻结事件，并在Figure 6中比较了发生冻结与未发生冻结的试次。因此，研究不仅提供FOG易感性证据，也提供了与即将发生FOG相关的冻结前神经活动证据。指控者关于38名患者、12名观察到FOG、99个阳性试次和263次冻结事件，以及阳性试次中的神经信号属于冻结前活动的描述，均有全文依据。不过，报告使用了“主要分析”，并非声称所有分析试次都没有FOG；此外，原文的信号分析以步态启动为时间参照，而非与FOG起始时刻直接对齐。因此，指控者认为报告完全错误地描述了这些试次，以及将其称为严格意义上的FOG事件锁定神经活动，都需要限定。最准确的结论是：报告对研究证据的概括不够完整，但指控者指出的阳性试次分析确实存在；两者不能简单理解为完全互斥。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Guo et al., 2026，DBS治疗FOG的网络Meta分析",
+  "pmid": "41659700",
+  "doi": "",
+  "report_says": "第2.1节将该研究标注为Guo 2025，结构化附录的year字段也填写为2025。",
+  "judge_says": "PubMed及论文全文显示，该论文正式出版日期为2026年1月22日。DOI中包含2025不能代替正式出版年份，因此报告的文献年份元数据错误。",
+  "source": "abs_g56.json",
+  "pid": "PMID:41659700",
+  "report_supported": "partly",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "PMID:41659700 | Effects of different types of deep brain stimulation on gait disorders in patients with Parkinson's disease: a network meta-analysis of randomized controlled trials. (2025)",
+   "From a quantitative standpoint, these manifestations can be operationalized through specific spatiotemporal gait metrics, including stride length, gait speed, cadence, swing and stance phase proportions, step variability indices, and turning performance, each of which reflects distinct pathophysiological substrates of the disease (Guo et al., 2022; Nutt et al., 2011; Johansson et al., 2023)."
+  ],
+  "judge_quotes": [
+   "PMID:41659700 | Effects of different types of deep brain stimulation on gait disorders in patients with Parkinson's disease: a network meta-analysis of randomized controlled trials. (2025)",
+   "The protocol was registered on June 15, 2025, in the PROSPERO database (https://www.crd.york.ac.uk/prospero/; registration ID: CRD420251074368) to ensure methodological transparency and reproducibility."
+  ],
+  "why": "报告的年份字段填写为2025有全文依据：文件开头的书目信息明确将论文标注为(2025)。但全文没有明确列出本文作者姓名，无法确认Guo是否为该论文的第一作者。正文中出现的Guo et al.明确对应2022年的参考文献，不能据此证明本文应标注为Guo 2025。因此，报告的说法只能判为partly。对于指控者，全文没有出现2026年1月22日这一日期，也没有明确记载本文的正式出版日期或DOI。全文出现的2025年6月15日是PROSPERO方案注册日期，并非论文出版日期。虽然全文开头标注了(2025)，但仅凭该全文既不能确认正式出版日期为2026年1月22日，也不能否定这一日期。因此，指控者关于正式出版日期的说法属于全文无法判断的事项，判为cannot_tell。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Klocke et al., 2026，冻结转弯期间STN局部场电位及beta burst研究",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "report_says": "第3.2节将其作为Klocke等（2026）的13人研究直接介绍，未在对应研究结论处明确标注其预印本发表状态。",
+  "judge_says": "该研究使用Research Square预印本，而非已正式发表的同行评审论文。报告虽然在第5.6节笼统提醒部分研究属于预印本，但没有将这一状态明确关联到该项具体研究及其结论，可能使读者高估证据成熟度。",
+  "source": "abs_g56.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We recorded subthalamic local field potentials synchronized to gait kinematics in the medication-OFF and stimulation-Off state in 13 Parkinson’s disease patients with freezing of gait.",
+   "The aim of this study was to characterize the subthalamic signature of freezing while turning. STN-LFPs synchronized to gait kinematics in the medication-OFF and stimulation-Off state of 13 PwPD with FoG were recorded.",
+   "In summary, we demonstrate that freezing while turning is marked by frequency-specific abnormalities that emerge prior to freezing onset, most prominently impaired low beta desynchronization that persists throughout freezing episodes and may be suggestive of impaired supraspinal-motor integration during turning."
+  ],
+  "judge_quotes": [
+   "Posted Date: May 6th, 2026",
+   "DOI: https://doi.org/10.21203/rs.3.rs-9617843/v1",
+   "Research Article",
+   "Supplementary material is available at NPJ Parkinson’s Disease online."
+  ],
+  "why": "论文明确支持该研究由Philipp Klocke等作者开展，研究对象为13名帕金森病患者，报告所描述的研究规模及主要结论有原文依据。论文首页显示Research Square格式的DOI和Posted Date，支持该版本属于Research Square发布的研究稿件；摘要及讨论结论没有明确标注预印本身份。不过，附件只有论文全文，没有报告正文，因此无法独立核实报告第3.2节和第5.6节是否确实如指控者所述，没有将预印本状态与这项研究明确关联。指控者的描述有部分依据：DOI和发布日期支持其关于Research Square版本的判断，但全文没有直接声明该稿件未经同行评审或尚未正式发表。此外，原文还写有补充材料可在NPJ Parkinson’s Disease在线获取，这使得仅凭全文无法完全确定该研究是否不存在正式发表的同行评审版本。因此，两项说法均有部分依据，不能据此认定报告对13人研究的科学结果存在实质性误读；争议主要在于预印本身份及证据成熟度的标注是否充分。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Beaudoin et al., 2026，冻结前beta burst entropy及复杂度研究",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "第3.3节将其描述为2026年另一项仅4名患者的研究，介绍其Shannon entropy及Lempel-Ziv complexity结果，但未在对应结论处明确标注预印本状态。",
+  "judge_says": "该研究使用bioRxiv预印本。报告虽然在第5.6节笼统提醒部分研究属于预印本，但没有将发表状态明确关联到这项4人研究及其具体结论，可能使读者高估证据成熟度。",
+  "source": "abs_g56.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "STN recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16) (clinical details in Table S1).",
+   "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+   "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C)."
+  ],
+  "judge_quotes": [
+   "preprint (which was not certified by peer review)",
+   "bioRxiv preprint",
+   "version posted August 18, 2026."
+  ],
+  "why": "报告对研究年份、四名患者的样本规模以及Shannon entropy和Lempel-Ziv complexity的主要结果的描述均有全文依据。原文明确报告，pre-freeze turns期间Shannon entropy降低，而Lempel-Ziv complexity升高，因此这两项结果并不矛盾，可以同时成立。另一方面，原文明确标注该论文为bioRxiv预印本，并注明未经同行评审，指控者关于发表状态的描述有直接依据。不过，附件只有论文全文，没有研究报告本身，因此无法独立核实报告第3.3节是否确实没有在对应结论处标注预印本状态，也无法判断第5.6节的提醒是否足够。另一个需要注意的限定是，论文使用的是此前已经发表的数据集，而非明确报告了一批新招募的四人独立队列。因此，报告的实质性研究描述基本准确，但发表状态的遗漏指控不能仅凭论文全文确认，整体判为partly，而不是no。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Thenaisie et al., 2022, Science Translational Medicine，神经调控治疗帕金森病相关研究",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "将该研究标注为尚未经过同行评审的medRxiv预印本，并报告4人的相关分析样本，但没有明确区分研究总队列与FOG相关分析人群。",
+  "judge_says": "PMID:36070366对应的是已经经过同行评审、正式发表于Science Translational Medicine的论文，而不是medRxiv预印本。研究整体队列为18人，报告中的4人属于FOG相关分析人群，应明确区分总队列与实际冻结事件子集。",
+  "source": "abs_g56_r2.json",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments."
+  ],
+  "judge_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning."
+  ],
+  "why": "两方的说法均有部分依据。第一，附件全文明确标注为medRxiv预印本，并明确声明尚未经过同行评审，因此报告对附件所代表版本的预印本属性判断有直接依据。仅凭这份全文，无法证实指控者所说的PMID对应Science Translational Medicine正式发表版本；全文也没有提供该期刊的发表信息。第二，FOG相关分析确实涉及4名患者，全文明确写道有4名参与者出现频繁的冻结步态事件。但是，样本量需要区分不同统计口径：摘要和结果部分报告18名患者；Methods明确写明实际招募20名患者，其中17名纳入神经机器人平台分析、12名纳入步态实验分析；FOG部分则涉及4名患者。因此，指控者关于4人属于FOG相关分析子集的判断有依据，但将18人直接称为整个研究的总招募队列并不严谨，因为Methods明确记载招募人数为20人。报告将4人作为相关分析样本有依据，但如果没有说明其属于FOG子集，也没有交代更大的研究队列及不同分析的人数，就缺少重要的样本范围限定。综上，报告的说法为partly，指控者的说法也为partly。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "步态启动与STN电生理研究，38名患者",
+  "pmid": "40709562",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "将该DOI对应的预印本和PMID对应的正式发表记录分别列入references及evidence，未建立版本对应关系。",
+  "judge_says": "两个标识对应的是同一项38名患者的步态启动/STN电生理研究，并非两项独立研究。应关联预印本与正式发表版本，避免重复计数和高估独立证据数量。",
+  "source": "abs_g56_r2.json",
+  "pid": "PMID:40709562",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [],
+  "judge_quotes": [
+   "We recorded GI and STN local field potentials (LFPs) via externalized cables in 38 patients with PD (35 reporting FOG in daily life), both OFF‐ and ON‐dopamine (DOPA).",
+   "Here, we investigated the link between STN neuronal activity in the posterior and central STN regions and gait and postural abilities, including FOG, in 38 patients with PD. We recorded STN local field potentials (LFPs) using externalized cables together with gait kinetics and kinematics and identified the occurrence of FOG episodes.",
+   "We recruited 38 patients with PD (mean age [SD] = 57.6 [9.2] years, 27 M/11 F; Supplementary Table S1) scheduled for STN‐DBS at Pitié‐Salpêtrière and Rouen University Hospitals, between February 2013 and September 2021.",
+   "Patients with PD were included in 2 clinical trials: the GB‐MOV study (INSERM sponsor, n = 29) and the MAGIC study (CHU ROUEN sponsor, n = 9)."
+  ],
+  "why": "报告的说法涉及其references和evidence如何分别收录DOI预印本与PMID正式发表记录，以及是否建立版本对应关系。这些属于报告的文献处理行为，论文全文没有涉及DOI、预印本、版本对应关系，也没有提供报告的references或evidence清单，因此无法判断，不能认定为no。指控者的描述部分有依据：全文明确表明，该论文报告的是一项纳入38名帕金森病患者、研究步态启动（GI）与丘脑底核局部场电位（STN-LFP）关系的研究。但是，全文没有提及对应的预印本或其DOI，也没有明确说明预印本与正式发表版本之间的关系。因此，仅凭全文不能确认两个标识对应同一研究的两个版本，也不能独立证明应如何建立版本关联。另需注意，论文说明38名患者分别来自GB-MOV（29人）和MAGIC（9人）两个临床试验，但这是患者来源的说明，并不意味着本文是两项独立发表的研究。综合而言，指控者关于论文所报告的38人研究的描述有全文依据，但关于两个标识之间的版本对应关系缺少全文证据，故为partly。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "Beta-burst自适应DBS研究，7名患者",
+  "pmid": "40677701",
+  "doi": "10.1101/2024.06.26.24309418",
+  "report_says": "将该DOI对应的预印本和PMID对应的正式发表记录分别列入references及evidence，未建立版本对应关系。",
+  "judge_says": "两个标识对应的是同一项7名患者的beta-burst自适应DBS研究，并非两项独立研究。应明确关联预印本与正式发表版本，避免重复计数。",
+  "source": "abs_g56_r2.json",
+  "pid": "PMID:40677701",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "PMID:40677701 | Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease. (2025)"
+  ],
+  "judge_quotes": [
+   "Seven individuals with Parkinson’s disease were implanted with the investigational Summit™ RC + S deep brain stimulation system (Medtronic, PLC, Dublin, Ireland).",
+   "Seven participants (5 male, 2 female) with clinically established Parkinson’s disease underwent bilateral implantation of DBS leads (model 3389, Medtronic, PLC, Dublin, Ireland) in the sensorimotor region of the STN.",
+   "The goal of the current study was to investigate the feasibility, safety and tolerability of beta burst-driven aDBS for gait impairment and FOG in Parkinson’s disease in the laboratory acute setting.",
+   "The current pilot study demonstrated initial safety, tolerability, and feasibility of adaptive deep brain stimulation for freezing of gait in Parkinson’s disease in the acute laboratory setting, supporting the future investigation of its longer-term efficacy in the at-home setting."
+  ],
+  "why": "报告的说法涉及报告如何处理references和evidence，以及是否将预印本与正式发表记录分别列出。这些属于报告的引用操作，论文全文没有提供相关信息，也没有提及对应的DOI预印本，因此无法判断，不能据此认定报告读错。指控者的说法部分有依据：全文明确描述了一项纳入7名患者的beta-burst驱动自适应DBS研究，且使用同一研究目标、研究方案和患者队列。但全文没有提及预印本、DOI或预印本与正式发表版本之间的对应关系。因此，全文能够支持这是一项7名患者的研究，却不能独立证实两个标识对应同一研究，也不能证实版本关联。综合判定为partly，而不是yes。仅凭这份全文，不能认定报告重复计算了研究，也不能认定报告没有建立版本对应关系。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "术后FOG临床及运动学研究，17名患者",
+  "pmid": "40504072",
+  "doi": "10.21203/rs.3.rs-4058858/v1",
+  "report_says": "将该DOI对应的预印本和PMID对应的正式发表记录分别列入references及evidence，未建立版本对应关系。",
+  "judge_says": "两个标识对应的是同一项17名患者的术后FOG临床及运动学研究，并非两项独立研究。应明确关联两个版本，避免重复计数或高估独立证据数量。",
+  "source": "abs_g56_r2.json",
+  "pid": "PMID:40504072",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "PMID:40504072 | Differential Effects of Levodopa and Stimulation on Post-Surgery Freezing of Gait in Subthalamic Nucleus Deep Brain Stimulation Parkinson's Disease Patients: A Clinical and Kinematic Analysis. (2025)"
+  ],
+  "judge_quotes": [
+   "We conducted a cross-sectional and unblinded study to assess the effect of LD and stimulation on post-surgery FOG.",
+   "Seventeen PD patients were included in the study: 71% male, disease onset at 51.9 ± 5.9 years, and age at bilateral STN-DBS 62.2 ± 5.9 years.",
+   "In each condition, gait and FOG episodes (#FOG) were assessed using clinical (eg, a 3 × 14-m Stand-Walk-Sit Test) and kinematic data from inertial measurement units (IMU).",
+   "In the current study, we used both clinical and inertial-sensor-based tools to test FOG response to stimulation and medication in advanced PD patients subjected to STN-DBS and develop some putative mechanisms (as stimulation-induced FOG or possible loss of response)."
+  ],
+  "why": "报告的说法为 cannot_tell：全文能够确认 PMID:40504072 对应的是一篇2025年发表的研究，但没有提及该研究的 DOI 对应预印本，也没有涉及报告如何将两个记录分别列入 references 和 evidence，更没有说明是否建立版本对应关系。因此，不能仅凭全文判断报告是否确实进行了重复列录。指控者的说法为 partly：全文明确支持该正式发表研究是一项纳入17名PD患者、研究术后FOG、同时采用临床评估和惯性传感器运动学分析的研究，相关研究设计和样本特征均有直接依据。但是，全文没有提供 DOI、预印本信息或预印本与正式发表版本之间的对应声明，因此无法仅凭全文确认两个标识确实对应同一项研究。换言之，指控者对研究内容及17名患者的描述有全文依据，但关于两个标识属于同一研究的版本对应关系，全文本身不足以证实。不能将这种信息缺失直接判定为报告与原文矛盾。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "Guo et al., 2025，DBS模式与FOG-Q结局的网络Meta分析",
+  "pmid": "41659700",
+  "doi": "",
+  "report_says": "报告称该研究的11种DBS模式均未达到FOG-Q统计学显著改善（第107–110行），并且只提及论文摘要与正文的步速效应量存在差异。",
+  "judge_says": "虽然论文摘要及主要结果称FOG-Q网络分析中所有干预均未达到统计学显著性，但正文敏感性分析部分却报告了置信区间不跨零、p值小于0.05的相反结果。报告遗漏了这一直接影响FOG结论的原文内部统计矛盾。",
+  "source": "abs_g56_r2.json",
+  "pid": "PMID:41659700",
+  "report_supported": "yes",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "None of the DBS modalities yielded statistically significant improvements in FOG-Q scores (all 95% CIs crossed zero, p > 0.05).",
+   "The overall estimates indicate that, compared with the control group, none of the DBS interventions yielded statistically significant improvements in FOG-Q scores.",
+   "The results indicate that the 95% CIs for all interventions cross zero, and none of the p-values reached statistical significance (p > 0.05), suggesting that no DBS intervention demonstrated a reliable statistical effect in improving FOG-Q scores.",
+   "spDBS [MD = 18.06, 95% CI (10.42, 25.70), p < 0.0001] and STN-DBS [MD = 17.58, 95% CI (13.20, 21.95), p < 0.0001] provided the most pronounced improvements.",
+   "spDBS exhibited the most substantial therapeutic improvement [MD = 14.5369, 95% CI (7.1313; 21.9425), p = 0.0001]... STN-DBS [MD = 11.2475, 95% CI (4.4782; 18.0168), p = 0.0011] also demonstrated robust and clinically meaningful effects."
+  ],
+  "judge_quotes": [
+   "Third, leave-one-out sensitivity analysis was conducted by sequentially omitting each individual study to examine its influence on the overall effect estimate.",
+   "Forest plot of leave-one-out sensitivity analysis. Panel A presents the leave-one-out sensitivity analysis with MDS-UPDRS III as the outcome, Panel B presents the leave-one-out sensitivity analysis with FOG-Q score as the outcome, and Panel C presents the leave-one-out sensitivity analysis with Gait speed as the outcome."
+  ],
+  "why": "报告的FOG-Q结论有明确的全文依据。摘要、FOG-Q主要结果部分均明确指出，11种DBS模式的网络Meta分析结果均未达到统计学显著性，置信区间均跨零。因此，不能仅凭指控者的描述认定报告误读了主要分析结果。此外，论文摘要与正文确实存在步速效应量差异：摘要报告spDBS和STN-DBS的MD分别为18.06和17.58，正文分别报告14.5369和11.2475，报告指出这一差异也有全文依据。对于指控者提出的敏感性分析矛盾，附件中确实说明实施了FOG-Q的leave-one-out敏感性分析，并且图7包含相应的Panel B。但是，附件可读取的全文内容仅提供了图7的说明，没有给出该Panel B中具体的效应量、置信区间或p值，也没有文字报告任何干预在敏感性分析中达到统计学显著性。因此，无法根据现有附件确认指控者所称的置信区间不跨零、p值小于0.05的相反结果。不能把敏感性分析的存在等同于其结果与主要分析相矛盾。最终判断：报告关于主要FOG-Q网络分析的说法有全文明确支持；指控者关于敏感性分析出现相反统计结果的说法，在附件可读取内容中无法核实。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "2025年步态启动阶段STN-LFP与后续FOG事件研究（报告引用预印本，最终同行评审版本）",
+  "pmid": "40709562",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "第201行及第338行称：“这些分析主要来自没有实际冻结发生的步态启动试次。”",
+  "judge_says": "最终同行评审论文纳入38名患者，其中12名观察到实际FOG，共记录263次冻结事件，冻结通常发生在步态启动后约8步。虽然LFP分析窗口位于冻结发生之前的步态启动阶段，但不能据此将整项研究描述为没有实际冻结事件的试次。报告混淆了神经信号分析窗口位于冻结之前与研究试次中没有实际冻结事件这两个不同概念。",
+  "source": "abs_g6.json",
+  "pid": "PMID:40709562",
+  "report_supported": "yes",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "PCA with varimax rotation of GI parameters from trials without FOG (1,130 trials) revealed 5 orthogonally RPC accounting for 73% of variance (see Fig 2C and Supplementary Fig S2).",
+   "We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups (Supplementary Fig S3).",
+   "In the 12 FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG-OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G). These FOG-OBS patients also completed 212 walking trials without FOG (FOG-OBS− trials; see Fig 1E). In the 26 remaining patients with PD for which we observed no FOG episode, 918 trials were recorded (FOG-NOBS, DOPAOFF; see Fig 1E)."
+  ],
+  "judge_quotes": [
+   "We recruited 38 patients with PD (mean age [SD] = 57.6 [9.2] years, 27 M/11 F; Supplementary Table S1) scheduled for STN-DBS at Pitié-Salpêtrière and Rouen University Hospitals, between February 2013 and September 2021.",
+   "In the 12 FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG-OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG-OBS+ trials) to those without (FOG-OBS− trials) in FOG-OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset."
+  ],
+  "why": "报告的说法有明确全文依据。论文明确说明，主要的步态启动表现分析使用了1,130次没有FOG的试次，LFP与步态启动参数的初始关联分析也明确限定在没有FOG的试次。因此，使用“主要来自没有实际冻结发生的试次”是合理的，尤其报告使用的是“主要”，而不是“全部”。指控者所列的另一组事实同样有全文依据：38名患者中，12名在记录期间观察到FOG，共有99次发生冻结的试次和263次冻结事件，冻结发生时间的中位数为步态启动后8步。论文还明确比较了发生冻结与未发生冻结的试次，并指出冻结发生前的步态启动阶段已经出现神经活动变化。因此，指控者正确指出研究并非完全没有实际FOG事件，且分析窗口位于冻结之前不等于整个试次没有冻结。不过，指控者进一步认定报告混淆了这两个概念、因而误读论文，并不能完全成立：报告说的是分析主要来自无冻结试次，并没有声称所有试次均无冻结，也没有否认论文另外分析了实际发生FOG的试次。两种描述可以同时成立，现有全文证据不足以认定报告读错。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "Klocke等，2024年，STN-LFP、拮抗肌EMG及步态运动学同步记录与冻结期间STN-肌肉耦合研究",
+  "pmid": "39470410",
+  "doi": "",
+  "report_says": "结构化附录S2_E_PMID_39470410_1将样本量标记为“摘要未报告”，并将证据基础标记为“abstract”。",
+  "judge_says": "原始论文全文明确报告最终分析队列为12名患者，并提供实际冻结事件、肌肉共同激活以及STN-肌肉耦合的详细分析。因此，将样本量记录为摘要未报告是不准确的，且仅以摘要作为证据基础遗漏了全文中已经报告的关键原始数据。",
+  "source": "abs_g6.json",
+  "pid": "PMID:39470410",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Zhang等，2025年，PMC-STN alpha coherence与冻结持续时间关联研究（关键词：freezing of gait、turning、cortical-subthalamic alpha coherence）",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "报告认为该研究关于PMC-STN alpha coherence与冻结持续时间之间关联方向的描述存在内部不一致，因而将关联方向视为不明确。报告还记录了TurnStart阶段PMC-STN alpha coherence相对于步行基线增加的结果。",
+  "judge_says": "原文Figure 4明确报告：TurnPre阶段PMC-STN alpha coherence增加预测较短的冻结持续时间（β=0.205，p=0.006）。原文采用的计算公式为(Walk-Turn)/Walk，计算方向与Figure 4图注结论一致。因此，原文不存在报告所称的关联方向内部不一致，不应将该结果判定为方向不明确。该发现实际上支持H4代偿性重组解释的可能性，但不能据此证明因果关系。",
+  "source": "abs_g6_r2.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "B Freezing of Turning: A delayed and exaggerated increase in PMC-STN alpha coherence and concurrent decoupling of M1-STN alpha coherence was observed during the TurnStart phase.",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial."
+  ],
+  "judge_quotes": [
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006).",
+   "Percentage Change (%) = (Value_Walk − Value_TurnPre or TurnStart) / Value_Walk × 100",
+   "A linear mixed-effects model was employed to assess whether phase-specific changes in alpha power (M1, PMC) and alpha coherence (M1-STN, PMC-STN) predicted the duration of freezing.",
+   "We observed an increase in PMC-STN alpha coherence during TurnPre in normal turning, suggesting the role of PMC-STN connectivity in the initiation of the turning task. The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32."
+  ],
+  "why": "报告的说法属于部分支持。其记录的TurnStart阶段PMC-STN alpha coherence增加确实有明确原文依据，但这与TurnPre阶段coherence变化预测冻结持续时间是两个不同的结果，不能混为一谈。关于关联方向，Figure 4图注明确指出TurnPre阶段PMC-STN alpha coherence增加预测较短的冻结持续时间。方法部分的计算公式为(Walk−Turn)/Walk，意味着Turn阶段coherence增加对应负向的变化值；结合β=0.205的正回归系数，恰好与Figure 4图注所述的负向关联一致。Results正文虽然使用了“increases ... predicted the freezing duration”这种没有明确说明方向的表述，但没有报告相反方向，因此属于方向描述不够具体，而不是内部矛盾。指控者关于原文关联方向明确、报告将其判定为不明确属于误读的判断有充分依据。关于H4，原文没有直接使用H4这一编号，但Discussion明确提出coherence增加“may reflect a compensatory mechanism”，因此代偿性解释作为一种可能性有原文支持。同时，原文还提出异常耦合也可能参与FOG相关运动障碍，说明代偿解释并非唯一解释。研究采用线性混合效应模型分析预测关系，并未建立因果关系，因此不能将该关联解释为已经证实的因果机制。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "2025年STN步态启动与冻结事件研究（正式发表版本）",
+  "pmid": "40709562",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "这些研究主要分析没有实际冻结发生的步态启动试次，因此更接近FOG易感性证据，而不是实际冻结期间的直接神经活动证据。",
+  "judge_says": "原研究纳入38名帕金森病患者，其中12人在实验记录中实际发生FOG，共记录263次冻结事件，分布于99个含冻结的步行试次。冻结平均发生在步态启动后第8步。研究同步记录STN-LFP和步态，并比较最终发生冻结与未发生冻结的试次。因此，该研究并非仅分析没有冻结的试次，其证据性质应归为冻结前、事件相关的神经活动证据，而非单纯的FOG易感性证据。不过，研究的主要神经分析窗口位于步态启动阶段，信号是在冻结发生前采集的，不能将其误归为冻结期间（During-FOG）的直接神经活动记录。",
+  "source": "open_g56.json",
+  "pid": "PMID:40709562",
+  "report_supported": "yes",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "PCA with varimax rotation of GI parameters from trials without FOG (1,130 trials) revealed 5 orthogonally RPC accounting for 73% of variance (see Fig 2C and Supplementary Fig S2).",
+   "We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups (Supplementary Fig S3).",
+   "STN‐LFPs data were first high‐pass filtered at 1 Hz, notch filtered at 50 Hz, and epoched from 2 seconds before the cue to the end of the second swing phase.",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset."
+  ],
+  "judge_quotes": [
+   "DOPAOFF, 12 patients with PD had FOG observed (FOG‐OBS, 263 episodes), occurring at a mean of 8 steps after GI, and 26 had no FOG observed (NOBS; FOG‐NOBS).",
+   "In the 12 FOG‐OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG‐OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G).",
+   "These FOG‐OBS patients also completed 212 walking trials without FOG (FOG‐OBS− trials; see Fig 1E).",
+   "In the 26 remaining patients with PD for which we observed no FOG episode, 918 trials were recorded (FOG‐NOBS, DOPAOFF; see Fig 1E).",
+   "GI kinetics and LFP signals were simultaneously recorded, synchronized, and exported for off‐line analyses using MATLAB (MathWorks Inc.) toolbox (http://biomechanical-toolkit.github.io).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG‐OBS+ trials) to those without (FOG‐OBS− trials) in FOG‐OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset.",
+   "Our results support the existence of a predisposed state for FOG at gait initiation, which may be partially mitigated through compensatory mechanisms involving widespread low‐beta modulations within the STN; and an actual occurrence of FOG, marked by an early modulation in high‐beta activity in the posterior STN."
+  ],
+  "why": "两个说法均有全文依据，并不必然矛盾。报告的说法成立：DOPAOFF条件下，无冻结试次共1,130次（212次FOG-OBS阴性试次及918次FOG-NOBS试次），明显多于发生冻结的99次试次，因此说主要分析无冻结试次有依据。此外，LFP分析窗口截至步态启动后的第二摆动期，而冻结约在步态启动后第8步发生，因此研究没有提供冻结实际发生期间（During-FOG）的直接神经电活动记录。指控者的说法也成立：研究并非只分析无冻结试次，而是明确纳入99个随后实际发生FOG的试次，并将其与212个未发生FOG的试次比较，分析步态启动阶段与即将发生FOG相关的STN活动。因此，研究不仅涉及FOG易感性，也提供了冻结发生前的事件相关神经活动证据。需要区分的是，冻结前的预测性神经活动不等于冻结期间的直接神经活动。另一个统计细节：摘要将冻结发生时间表述为平均8步（mean），但结果正文报告为中位数8步（median，IQR 6–11.5）；指控者所说的第8步有依据，但平均数这一具体表述并非结果正文采用的统计量。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "2025年步态启动与STN活动、冻结步态研究（预印本）",
+  "pmid": "",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "第3.4节称，该研究的分析主要来自没有实际冻结发生的步态启动试次，将其主要归纳为冻结易感性证据。",
+  "judge_says": "原研究不仅分析了无冻结试次，还直接分析了实际发生冻结的试次。研究纳入38名PD患者，其中12名FOG阳性患者在DOPA-OFF状态下有99次步行试验发生实际冻结，共记录263次冻结事件，另有212次未发生冻结的试验。研究比较了冻结与非冻结试次，发现实际冻结试次中posterior STN高beta活动与步态pace和rhythm的关系发生改变，central STN高beta活动与balance也表现出不同关联。报告弱化了原文已有的事件级证据。",
+  "source": "open_g56_r2.json",
+  "pid": "DOI:10.1101/2025.01.10.632393",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Principal component analysis (PCA) with varimax rotation of gait parameters from trials without FOG (n=1130 trials) revealed five orthogonally RPC accounting for 73% of variance (Fig. 2, Supplementary Fig. 2).",
+   "We examined the relationship between LFP spectral power and gait RPC scores, focusing first on trials without FOG in the DOPA OFF condition.",
+   "This study distinguishes between two FOG states —predisposition and occurrence —each characterized by distinct gait initiation strategies and STN neuronal activity patterns."
+  ],
+  "judge_quotes": [
+   "In the 12 FOG+ patients, 99 trials included FOG events (FOG+/+ trials, DOPA OFF condition), with a median onset of 8 steps (IQR 6 -11.5) after gait initiation. A total of 263 FOG episodes were recorded (Fig 1e -g). These FOG + patients also completed 212 walking trials without FOG (FOG+/- trials, Fig 1e).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG+/+) to those without (FOG+/-) among FOG + patients (DOPAOFF condition, Fig 5).",
+   "We observed stronger negative associations between high beta band power and pace score in FOG+/+ vs. FOG+/- trials, significant only in the posterior STN (Fig 5a-c, Supplementary Fig. 6). In contrast, positive association between rhythm and both high beta and theta band activity emerged in the posterior STN during FOG+/+ trials, but were absent or reversed in FOG+/- trials (Fig 5d-f). For balance, we found a stronger negative association between high beta band power in the central STN and positive association with gamma band power in the posterior STN (Fig 5g-i).",
+   "FOG episodes were preceded by an increased association between high beta band activity and stepping rhythm in the posterior part of the STN, coupled with an inverse association between high beta band activity and balance in the central STN."
+  ],
+  "why": "报告的说法有部分全文依据。论文确实主要先使用无冻结试次进行步态参数PCA，并明确说明首先分析了DOPA-OFF状态下无FOG试次的STN-LFP与步态表现之间的关系。无冻结试次为1130次，也明显多于发生冻结的99次试次。但是，报告如果据此将整项研究主要归纳为冻结易感性研究，就遗漏了一个重要限定：原文另设Predictive patterns of FOG occurrence部分，专门比较发生冻结的FOG+/+试次与未发生冻结的FOG+/-试次，并报告了实际发生冻结的试次中posterior STN高beta活动与pace、rhythm的关联变化，以及central STN高beta活动与balance的关联变化。因此，报告并非完全没有依据，但其概括不完整，弱化了原文关于冻结发生的独立分析。指控者关于38名患者、12名FOG阳性患者、99次冻结试次、263次冻结事件、212次非冻结试次，以及两类试次之间STN活动关联差异的描述均有全文依据。需要保留一个重要精确性限定：原文分析的是步态启动阶段中后来发生冻结的试次，冻结事件的中位发生时间为步态启动后8步；因此，这些结果属于与实际冻结发生相关的启动期预测性证据，并不等于直接分析冻结动作正在发生时的神经活动，也不等于对263次冻结事件分别进行了独立的事件级神经信号分析。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Zhang等，2025，PMC-STN alpha coherence与转弯及冻结步态研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "第3.5节称，PMC-STN alpha coherence在TurnStart阶段相对于步行基线增加，并在第6.3节将其解释为代偿性重组与病理性过度耦合两种竞争机制。",
+  "judge_says": "原研究发现明显的阶段差异：正常转弯时PMC-STN alpha coherence在TurnPre阶段增加，而冻结转弯时这一增加延迟至TurnStart阶段。预测分析还发现，TurnPre阶段PMC-STN alpha coherence增加与较短的冻结持续时间相关，而PMC alpha功率下降与较长的冻结持续时间相关。报告遗漏了这些关键结果，未区分正常转弯与冻结转弯的阶段差异，也未体现提前耦合可能具有保护或代偿意义、延迟耦合可能反映另一种状态。",
+  "source": "open_g56_r2.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32."
+  ],
+  "judge_quotes": [
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "A increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes.",
+   "PMC alpha power reduction during the TurnPre phase (but not during the TurnStart phase) relative to walking positively correlated with freezing duration.",
+   "A delayed and exaggerated increase in PMC-STN alpha coherence and concurrent decoupling of M1-STN alpha coherence was observed during the TurnStart phase.",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32."
+  ],
+  "why": "报告的说法为部分支持，而非完全错误。原文确实明确报告冻结转弯时PMC-STN alpha coherence在TurnStart阶段相对于步行基线增加，也确实提出了该类耦合可能具有代偿作用、也可能参与FOG病理过程的两种解释。但是，报告如果不区分转弯类型，就遗漏了决定结果解释的关键条件：正常转弯时增加发生在TurnPre，而冻结转弯时增加发生在TurnStart。尤其重要的是，原文预测分析发现，TurnPre阶段PMC-STN alpha coherence增加与较短的冻结持续时间相关，而TurnPre阶段PMC alpha功率下降与较长的冻结持续时间相关。这些结果表明提前出现的耦合与较轻的冻结表现相关，具有潜在的保护性或代偿性意义；冻结转弯中的TurnStart耦合则表现为延迟出现的阶段性变化。指控者对这些原始研究结果的描述有明确全文依据。需要保留的限定是，原文没有直接证明提前耦合具有因果性的保护作用，也没有将延迟耦合明确命名为独立病理机制。因此，最准确的判断是：指控者对原文实验结果的概括成立；报告的说法有部分依据，但如果将TurnStart结果及其机制解释作为不区分正常转弯和冻结转弯的一般结论，就遗漏了重要限定，构成实质性的不完整解读。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Thenaisie等，2022，STN-LFP记录与冻结步态研究（Science Translational Medicine）",
+  "pmid": "36070366",
+  "doi": "10.1126/scitranslmed.abo1800",
+  "report_says": "第3.2节称，Thenaisie等对4名患者进行了双侧STN-LFP记录；结构化附录又将该研究标注为尚未经过同行评审的medRxiv预印本。",
+  "judge_says": "原研究总体纳入18名PD患者，其中4名患者出现了实际冻结事件。4人是FOG事件分析的患者子集，并非整个研究的总样本量。该研究已于2022年正式发表于Science Translational Medicine，DOI为10.1126/scitranslmed.abo1800，并非尚未经过同行评审的预印本。报告存在样本量分母不清和发表状态标注错误。",
+  "source": "open_g56_r2.json",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We included 18 patients with PD (Table S1) who exhibited severe motor fluctuations and varying deficits of gait and balance.",
+   "Participants were implanted with DBS leads in the left and right STN (Fig. 1A), which were either externalized for five days after surgery (n = 8) or directly connected to an implantable pulse generator with sensing capabilities22 (Percept PC, Medtronic, USA) (n = 10).",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "judge_quotes": [
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "20 patients with Parkinson’s disease were recruited for the study.",
+   "Overall, 17 patients were retained for analyses on the neurorobotic platform and 12 for gait experiments.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "We finally configured our machine learning classification platform to predict the occurrence of periods during which feet are “glued to the ground” (Fig. 8B,C)."
+  ],
+  "why": "报告关于4名患者的说法有全文依据，但缺少关键限定：这4人是出现频繁冻结步态（FOG）的患者子集，并非整个研究的样本量。全文明确报告了18名PD患者参与研究，同时说明有4名患者出现频繁FOG事件，且研究使用双侧STN-LFP记录。因此，如果报告将4人作为FOG分析的样本量，事实基本成立；如果将其作为整个研究的样本量，则会造成分母误读。故评为partly。关于发表状态，附件全文明确标注为medRxiv预印本，并明确说明尚未经过同行评审认证，因此报告的预印本标注有直接文本依据。不过，这只能证明所提供的版本是预印本，不能证明该研究后来没有正式发表。另一方面，指控者关于4人属于FOG分析子集的说法得到全文明确支持，但其所称总体纳入18人需要进一步限定：摘要和结果部分报告18人，而Materials and Methods明确写明20名患者被招募，最终17人保留用于神经机器人平台分析、12人用于步态实验分析。因此，18人不能不加区分地等同于方法部分的初始招募人数。至于2022年正式发表于Science Translational Medicine及DOI 10.1126/scitranslmed.abo1800，所提供的全文没有出现该期刊名称或该DOI，无法仅凭附件核实。综合而言，指控者对FOG子集的解释正确，但总体样本量表述和正式发表状态均不能完全由附件全文支持，故评为partly。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Klocke等，2026，Research Square预印本（Pre-FoG-Turn与Pre-Regular-Turn频域谱比较）",
+  "pmid": "",
+  "doi": "",
+  "report_says": "第3.3节称，Pre-FoG-Turn与Pre-Regular-Turn的直接比较尚未充分确立；第8.2节将这两种条件的直接比较列为未来需要开展的研究。",
+  "judge_says": "Klocke等2026年的Research Square预印本已经直接比较了Pre-FoG-Turn与Pre-Regular-Turn的频域谱，结果未发现显著差异。研究还发现，Pre-FoG-Turn相对于站立基线存在低beta去同步化异常，并伴随步幅和步速下降、步频增加。报告将已经完成但结果为阴性的直接频域比较写成尚待开展的研究，混淆了与站立基线的比较和两种转弯条件之间的直接比较。需要注意，尚不能据此认定所有时间频率及burst指标均已完成直接比较。",
+  "source": "open_g56_r2.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "When directly comparing the frequency domain spectra of Pre FoG-Turn and Pre Reg-Turn, however, no differences were found (Fig. 3B).",
+   "Numerically, Pre FoG-Turns displayed greater power (13-15 Hz) compared to Pre Reg-Turns, yet this did not reach statistical significance after correcting for multiple comparisons (P > 0.05).",
+   "Both Pre Reg-Turn (P = 0.018) and Pre FoG-Turn (P = 0.010) displayed significantly shortened burst durations compared to Standing.",
+   "Note that the reference used to evaluate significant differences is ‘Standing’ for neuronal parameters (rows 2-4) and Regular Walking for theta peak power (row 5), while kinematic contrasts (rows 6-7) were compared to Pre Reg-Turn."
+  ],
+  "judge_quotes": [
+   "When directly comparing the frequency domain spectra of Pre FoG-Turn and Pre Reg-Turn, however, no differences were found (Fig. 3B).",
+   "We found a lack of low beta band desynchronization in the time-frequency domain in Pre FoG-Turns compared to Standing, while desynchronization of the high beta (non-parametric cluster-based permutation analysis: P = 0.002) and alpha bands was preserved (P = 0.006) (Fig. 2D).",
+   "In addition, kinematic analyses detected lower stride length in Pre FoG-Turns (Wilcoxon signed-rank test: P = 0.037) and lower stride velocity (P = 0.049) compared to Pre Reg-Turns (Fig. 1D).",
+   "Together with an increasing cadence in Pre FoG-Turns compared to Pre Reg-Turns (Wilcoxon signed-rank test: P = 0.037), this indicated a ‘sequence effect’ preceding FoG-Turns.18,66",
+   "Both Pre Reg-Turn (P = 0.018) and Pre FoG-Turn (P = 0.010) displayed significantly shortened burst durations compared to Standing.",
+   "Note that the reference used to evaluate significant differences is ‘Standing’ for neuronal parameters (rows 2-4) and Regular Walking for theta peak power (row 5), while kinematic contrasts (rows 6-7) were compared to Pre Reg-Turn."
+  ],
+  "why": "指控者的核心判断有全文依据。论文明确完成了Pre FoG-Turn与Pre Reg-Turn之间的频域谱直接比较，结果为未发现显著差异（Fig. 3B）；这不是尚未开展的研究。此外，论文还直接比较了两种转弯前状态的运动学指标，发现Pre FoG-Turn的步幅和步速显著降低、步频显著增加。因此，如果报告将两种条件之间的直接比较笼统地列为尚待开展的研究，确实遗漏了已经完成的直接比较及其阴性频域结果。不过，报告的说法评为partly而非no，是因为原文并未完成所有指标的两条件直接比较。例如，Pre FoG-Turn和Pre Reg-Turn的低beta时频变化主要分别与Standing基线比较；burst持续时间也分别与Standing比较，burst分布分析则主要比较各条件与Regular Walking。论文没有因此证明所有时频及burst指标均已完成Pre FoG-Turn与Pre Reg-Turn之间的直接比较。综上，报告关于仍需进一步研究的方向可以在限定具体指标后成立，但将两种条件的直接比较整体描述为尚未开展或尚待开展，缺少关键限定，并与论文已经完成的频域谱和运动学直接比较不符。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID: 40709562（步态启动期 STN-LFP 与后续步态冻结研究）",
+  "pmid": "40709562",
+  "doi": "",
+  "report_says": "报告第2.3节称，该研究主要分析没有实际冻结发生的步态启动试次，因此更接近FOG易感性证据，而不是实际冻结期间的直接神经活动证据。",
+  "judge_says": "该研究纳入38名帕金森病患者，其中12名在实验中观察到FOG，共有99个包含冻结事件的步行试次和263次冻结事件。首次冻结平均发生在步态启动后约8步。因此，步态启动期的STN-LFP不仅反映一般FOG易感性，还包含随后发生实际冻结的试次所提供的冻结前事件关联信息。虽然它不是实际冻结期间的LFP记录，但应归类为Pre-FOG证据，而不能主要归为一般FOG susceptibility证据。",
+  "source": "open_g6.json",
+  "pid": "PMID:40709562",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups (Supplementary Fig S3).",
+   "We recorded LFP signals at rest, while standing, and during GI.",
+   "STN-LFPs data were first high-pass filtered at 1 Hz, notch filtered at 50 Hz, and epoched from 2 seconds before the cue to the end of the second swing phase."
+  ],
+  "judge_quotes": [
+   "DOPAOFF, 12 patients with PD had FOG observed (FOG-OBS, 263 episodes), occurring at a mean of 8 steps after GI, and 26 had no FOG observed (NOBS; FOG-NOBS).",
+   "In the 12 FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG-OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG-OBS+ trials) to those without (FOG-OBS− trials) in FOG-OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset.",
+   "This study distinguishes 3 distinct FOG states in PD—absence, predisposition, and occurrence—each characterized by distinct GI strategies and STN activity patterns.",
+   "FOG-OBS patients with PD show early, identifiable changes in GI and STN activity patterns up to 19 seconds before FOG."
+  ],
+  "why": "报告的说法有部分依据：论文确实首先分析了没有FOG发生的步态启动试次，而且STN-LFP记录集中在步态启动阶段，并未记录实际冻结发生期间的神经活动。但报告的整体证据分类不够完整。论文不仅研究一般FOG易感性，还明确分析了12名FOG-OBS患者中99个随后发生冻结的试次，将这些FOG-OBS-positive trials与没有冻结的试次进行比较，发现步态启动期已经出现与即将发生的FOG相关的STN-LFP变化。论文还专门设置了“Predictive Patterns of FOG Occurrence”和“STN Activity Preceding FOG Episodes”两个部分。因此，这项研究同时提供一般易感性和Pre-FOG事件关联证据，不能因为没有实际冻结期间的LFP记录，就将其整体主要归为一般FOG易感性证据。指控者的核心判断有全文依据。另需注意，摘要称冻结平均发生在步态启动后8步（mean），而Results正文报告的是中位数8步（median，IQR 6–11.5）；两者均支持约8步这一时间描述。综合而言，报告不是完全错误，但遗漏了会影响证据分类的重要Pre-FOG结果，因此判为partly，而非no。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID: 41741462（长期自适应DBS与FOG-Q改善研究）",
+  "pmid": "41741462",
+  "doi": "",
+  "report_says": "结构化附录中该研究的evidence记录称：本研究报告aDBS较cDBS具有额外的运动症状改善，但没有明确报告FOG改善。该记录的依据标记为abstract。",
+  "judge_says": "原始论文全文明确报告，5名长期接受aDBS的患者在优化后FOG-Q评分平均改善40%。因此，不能说研究没有报告FOG改善。准确的表述应是：问卷指标出现探索性改善，但样本仅有5人，缺乏充分的统计推断；日常生活可穿戴设备记录的冻结事件仅在2/5患者中减少，其他患者的变化存在明显差异。因此，这属于有初步问卷改善信号、但客观日常冻结事件结果异质且证据不足的研究。",
+  "source": "open_g6.json",
+  "pid": "PMID:41741462",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "Zhang et al., 2025，PMC-STN alpha coherence与转弯冻结步态的研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "报告称PMC-STN alpha coherence在TurnStart阶段相对于步行基线增加，并以此作为H4（代偿性重组）与H5（病理性过度耦合）竞争性假说的主要依据。",
+  "judge_says": "原文区分了不同转弯阶段和冻结状态。正常转弯期间，PMC-STN alpha coherence在TurnPre阶段已经增加；冻结转弯期间，增加则延迟至TurnStart阶段，并伴随M1-STN alpha coherence下降。TurnPre阶段PMC-STN coherence增加预测更短的冻结持续时间（β=0.205，p=0.006），而TurnStart阶段的coherence变化没有显著预测作用。此外，TurnPre阶段PMC alpha功率下降与更长的冻结持续时间相关（β=0.154，p=0.035）。报告遗漏了TurnPre阶段的关键结果及其与冻结持续时间的关系，将具有不同时间相位和临床意义的结果压缩为TurnStart阶段的耦合增强，导致对原文结果的概括不完整且可能产生误导。",
+  "source": "open_g6_r2.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32.",
+   "We observed an increase in PMC-STN alpha coherence during TurnPre in normal turning, suggesting the role of PMC-STN connectivity in the initiation of the turning task."
+  ],
+  "judge_quotes": [
+   "During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A).",
+   "In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "PMC alpha power reduction during the TurnPre phase (but not during the TurnStart phase) relative to walking positively correlated with freezing duration (β = 0.154, p = 0.035).",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "why": "报告的核心事实有全文依据：冻结转弯期间，PMC-STN alpha coherence相对于步行基线确实在TurnStart阶段增加（p=0.048），同时M1-STN alpha coherence下降（p=0.043）。论文讨论也确实提出了两种可能解释：PMC-STN coherence增加可能反映维持运动控制的代偿机制，也可能与FOG相关的运动障碍有关。因此，不能判定报告完全错误。但是，报告将TurnStart阶段的结果作为H4与H5竞争性假说的主要依据，却省略了会影响解释的重要时间相位和临床关联。首先，正常转弯时PMC-STN alpha coherence已经在TurnPre阶段显著增加（p=0.0045）；冻结转弯时的TurnStart阶段增加被论文描述为延迟且伴随M1-STN alpha coherence解耦。其次，预测分析明确显示，TurnPre阶段PMC-STN alpha coherence增加与更短的冻结持续时间相关（β=0.205，p=0.006），而TurnStart阶段的coherence变化没有显著预测作用。再次，TurnPre阶段PMC alpha功率下降与更长的冻结持续时间相关（β=0.154，p=0.035）。这些结果意味着，PMC-STN alpha coherence不能简单概括为TurnStart阶段的耦合增强，其不同阶段的变化具有不同的行为关联。尤其是TurnPre阶段的coherence增加可能具有保护性或代偿性意义，而冻结期间延迟至TurnStart的增加则具有不同的病理背景。指控者对全文结果的描述准确，judge_supported应为yes。最终判断：报告并非捏造结果，其TurnStart发现及两种可能解释均有依据，但由于遗漏关键的TurnPre结果及其与冻结持续时间的关系，整体概括不完整，并可能改变读者对代偿性与病理性耦合的理解，因此report_supported为partly，而非yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Guo et al., 2025（评审意见标注年份），DBS不同刺激模式治疗冻结步态的网络Meta分析",
+  "pmid": "41659700",
+  "doi": "",
+  "report_says": "报告引用该Meta分析的主要FOG-Q分析结果，称11种刺激模式均未达到统计学显著性，并以此作为Meta分析之间结论不一致的证据，但没有呈现原论文内部结果矛盾。",
+  "judge_says": "原文主要分析确实显示11种刺激模式的FOG-Q结果均未达到统计学显著性，且I²=88.3%，存在明显网络不一致性。但原文敏感性分析部分又称，FOG-Q逐项剔除分析中所有p值均小于0.05，置信区间均不跨零，与主要分析结果相互矛盾。报告只采用主要分析的阴性结果，没有识别或讨论同一篇原始Meta分析中的这一内部结果矛盾，因而对该文证据的呈现不完整。",
+  "source": "open_g6_r2.json",
+  "pid": "PMID:41659700",
+  "report_supported": "yes",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "The network evidence diagram (Figure 4A) depicts that the 10 included studies collectively evaluated a total of 11 distinct stimulation modalities: 60 Hz-STN-DBS, spDBS, 80 Hz-STN-DBS, right STN-DBS, left STN-DBS, IL-IL-DBS, TBS-DBS, STN + SNr LF-DBS, STN + SNr HF-DBS, PPNa-DBS, and STN-DBS. Table 3 presents the results of the network meta-analysis based on a random-effects model. The overall estimates indicate that, compared with the control group, none of the DBS interventions yielded statistically significant improvements in FOG-Q scores.",
+   "The results indicate that the 95% CIs for all interventions cross zero, and none of the p-values reached statistical significance (p > 0.05), suggesting that no DBS intervention demonstrated a reliable statistical effect in improving FOG-Q scores; although all SMD values were negative and hinted at slight improvements, the overall strength of evidence remained limited.",
+   "Heterogeneity and consistency assessments for the FOG-Q outcome showed high variability, with τ2 = 1.3074 and I2 = 88.3% (95% CI: 72.5–95.0%). The total Q was 25.61 (df = 3, p < 0.0001), indicating significant network inconsistency."
+  ],
+  "judge_quotes": [
+   "The overall estimates indicate that, compared with the control group, none of the DBS interventions yielded statistically significant improvements in FOG-Q scores.",
+   "The results indicate that the 95% CIs for all interventions cross zero, and none of the p-values reached statistical significance (p > 0.05)",
+   "Third, leave-one-out sensitivity analysis was conducted by sequentially omitting each individual study to examine its influence on the overall effect estimate.",
+   "Panel B presents the leave-one-out sensitivity analysis with FOG-Q score as the outcome"
+  ],
+  "why": "原文明确支持报告对主要分析结果的描述：FOG-Q涉及11种刺激模式，所有模式的主要分析结果均未达到统计学显著性，且95%置信区间均跨零。同时，原文明确报告I²=88.3%，总Q检验p<0.0001，表明存在显著网络不一致性。因此，报告引用主要分析的阴性结果并非误读。另一方面，指控者关于敏感性分析出现相反结果的描述，只能得到部分支持。原文确实进行了逐项剔除（leave-one-out）敏感性分析，并在Figure 7中列出FOG-Q分析，但所提供的全文文本在敏感性分析部分仅有图注，没有报告逐项剔除后的具体p值或置信区间，也没有明确写出所有p值均小于0.05、置信区间均不跨零。因此，无法仅凭所提供的全文确认指控者所称的内部结果矛盾。最终判断：报告对主要分析的转述有明确依据；指控者对主要分析的描述有依据，但对敏感性分析结果的描述缺乏可核实的全文文字依据，不能据此认定报告遗漏了一个已经由全文明确证实的内部矛盾。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "Science Translational Medicine 2022年发表的论文",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "将该文标记为未经同行评审的 medRxiv 预印本。",
+  "judge_says": "该文实际上已于2022年正式发表于 Science Translational Medicine，属于经过同行评审的正式发表论文，而非未经同行评审的预印本。",
+  "source": "blind_B0_gpt3_vs_S2_aX_g56_856512e5",
+  "pid": "PMID:36070366",
+  "report_supported": "yes",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "This is the author/funder, who has granted medRxiv a license to display the preprint in perpetuity.",
+   "The copyright holder for this version posted February 15, 2022. https://doi.org/10.1101/2022.02.08.22270370 doi: medRxiv preprint"
+  ],
+  "judge_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "The copyright holder for this version posted February 15, 2022. https://doi.org/10.1101/2022.02.08.22270370 doi: medRxiv preprint"
+  ],
+  "why": "全文明确将所提供的论文版本标记为 medRxiv 预印本，并明确声明该预印本尚未经过同行评审，因此报告的说法有直接、明确的全文依据，判定为 yes。但全文没有出现 Science Translational Medicine 的期刊名称、正式发表记录、期刊卷期页码或同行评审完成的信息。因此，指控者关于该研究后来于2022年正式发表于 Science Translational Medicine 的说法，无法仅凭这份全文确认，判定为 cannot_tell，而不是 no。需要区分的是，2022年2月发布未经同行评审的预印本，并不排除同一研究后来经过同行评审并正式发表于期刊。报告对所提供版本的标记有依据，但全文不足以判断该研究是否另有正式发表版本。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "Syrkin-Nikolau et al., 2017, Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease",
+  "pmid": "28890315",
+  "doi": "10.1016/j.nbd.2017.09.002",
+  "report_says": "Y在正文及结构化证据中，将Freezer在无冻结运动期间相较Non-Freezer表现出的较低beta功率，错误解释为实际FOG发生期间beta功率下降，并据此构造beta方向冲突。",
+  "judge_says": "评委认为，原文中的Freezer与Non-Freezer之间较低beta功率的组间差异发生在无FOG运动期间；实际FOG期间的重要发现是alpha Sample Entropy增加，不能将前者解释为FOG期间的结果。不过，原文实际上也明确报告Freezers在FOG期间相较无FOG前向行走时beta功率降低（N=8 STNs，P<0.001），同时alpha Sample Entropy增加（P=0.005）。因此，评委关于原文不存在FOG期间beta功率下降的表述与原文结果并不完全一致；需要区分无FOG时的组间比较和FOG期间的组内条件比较。",
+  "source": "blind_B0_gpt4_vs_S2_aX_g6_028e2c30",
+  "pid": "PMID:28890315",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "During locomotion without FOG, Freezers showed lower beta (13–30 Hz) power (P = 0.036) and greater beta Sample Entropy (P = 0.032), than Non-Freezers, as well as greater gait asymmetry and arrhythmicity (P < 0.05 for both).",
+   "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups (H(1) = 7.17, P = 0.036), which resulted in a greater attenuation of resting state beta power in Freezers (F (1, 15) = 28.37, P < 0.001).",
+   "Among Freezers, beta power was lower during FOG compared to during forward walking without FOG (N = 8 STNs, F(1,51) = 14.45, P < 0.001, Table 4)."
+  ],
+  "judge_quotes": [
+   "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups (H(1) = 7.17, P = 0.036), which resulted in a greater attenuation of resting state beta power in Freezers (F (1, 15) = 28.37, P < 0.001).",
+   "Among Freezers, beta power was lower during FOG compared to during forward walking without FOG (N = 8 STNs, F(1,51) = 14.45, P < 0.001, Table 4).",
+   "Freezers also showed increased alpha SampEn during FOG when compared to walking without FOG (F(1, 51) = 7.67, P = 0.005).",
+   "Among Freezers, STN beta power was lower and alpha sample entropy was higher during FOG compared to during forward walking without FOG."
+  ],
+  "why": "报告的说法部分有依据，但不能完全成立。原文确实明确区分了两种比较：第一种是无FOG运动期间Freezer与Non-Freezer之间的组间比较，Freezer表现出较低beta功率；第二种是Freezer自身发生FOG与无FOG前向行走之间的组内条件比较，原文同样明确报告FOG期间beta功率降低（N=8 STNs，P<0.001）。因此，如果报告指出Y将第一种组间结果直接当作第二种FOG期间的证据，属于对比较条件和统计对象的混淆；但如果报告进一步认为原文并未报告FOG期间beta功率下降，或者认为FOG期间beta下降这一结论本身没有全文依据，则不成立。指控者的描述有全文依据：其关于无FOG时组间差异的判断正确，也正确指出FOG期间alpha Sample Entropy增加（P=0.005）；同时，指控者补充指出原文实际上也报告了FOG期间beta功率下降，这一点同样正确。关键在于不能混淆无FOG时的组间比较与FOG期间的组内条件比较。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Thenaisie et al., 2022, Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease",
+  "pmid": "36070366",
+  "doi": "10.1126/scitranslmed.abo1800",
+  "report_says": "Y将该研究描述为4名患者参与的转弯冻结（turning FOG）研究，并将其作为4人实际冻结的证据。",
+  "judge_says": "原文实际是一项18名帕金森病患者参与的受控步态编码研究，使用神经机器人平台和等速测力椅，在受控条件下研究STN对腿部肌肉激活、步行状态和运动活力等的编码，并通过机器学习解码步态状态及FOG。研究并非4名患者参与的转弯实际冻结研究，不能支持Y所声称的4人实际冻结证据。",
+  "source": "blind_B0_gpt4_vs_S2_aX_g6_028e2c30",
+  "pid": "PMID:36070366",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Two participants showed “complete akinesia” (E2 and P3), while the other two participants exhibited “leg trembling with little effective forward motion” (E3) or “shuffling steps with minimal forward movement” (P1).",
+   "We asked a neurologist expert in movement disorders (A.Z.) to define these periods based on video recordings.",
+   "To capture the precise time windows during which both feet were “glued to the floor” 28, we combined these visually-defined periods with analyses of accelerometer data from sensors attached to the shoes of the participants."
+  ],
+  "judge_quotes": [
+   "We exploited this platform in 18 patients with Parkinson’s disease, which allowed us to demonstrate that the subthalamic nucleus encodes the initiation, termination, and vigor of leg muscle activation.",
+   "We conceived a neurorobotic platform that emulated the key components of walking under well-controlled conditions, thus allowing us to isolate and quantify the encoding of lower-limb movements in the STN.",
+   "Participants were secured in an instrumented dynamometric chair that enabled the concomitant recordings of leg kinematics, force, electromyographic activity, and bilateral STN LFP.",
+   "Patients were comfortably sitting on an instrumented isokinetic machine (HUMAC NORM, CSMI, USA).",
+   "We translated this understanding into a machine-learning framework that decoded muscle activation, walking states, locomotor vigor, and freezing of gait.",
+   "Four participants exhibited frequent episodes of freezing of gait, predominantly whilst turning.",
+   "Kinematic detection of feet “glued to the ground”: Within the periods identified by the neurologist, we computed the times in which the feet of patients were “glued to the ground” using inertial sensors attached to the shoes of the participants."
+  ],
+  "why": "报告的说法部分有依据。原文明确报告有4名患者出现频繁的步态冻结，而且主要发生在转弯过程中；其中包括完全运动不能、腿部颤抖但缺乏有效前进运动、拖步等不同表现。冻结时段由运动障碍专家根据视频判定，并结合鞋部惯性传感器确认双脚均未移动。因此，论文确实支持4名患者实际发生过FOG，不能认为这4人的实际冻结证据不存在。但必须区分整个研究与FOG子组：论文整体是更广泛的STN步态编码研究，摘要报告使用神经机器人平台研究了18名帕金森病患者，研究内容包括单关节腿部肌肉激活、步行状态、运动活力及FOG解码等。4人是出现频繁FOG的子组，并不是整个研究的全部参与者。因此，如果Y将整个研究说成仅有4名患者参与的转弯冻结研究，便缺少重要的研究范围限定；如果其意思是FOG分析涉及4名实际发生冻结的患者，则有原文支持。指控者对研究整体设计的描述基本正确，但其进一步声称论文不能支持4人实际冻结的证据，与原文明确记载的观察结果不符。因此，两项均判定为partly。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Collomb-Clerc et al., 2025, Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease（bioRxiv预印本及Annals of Neurology正式论文）",
+  "pmid": "40709562",
+  "doi": "10.1002/ana.70003",
+  "report_says": "Y将同一研究的bioRxiv预印本和Annals of Neurology正式发表版本分别列为证据来源，未充分标明版本关系及队列重叠。",
+  "judge_says": "两条记录实际上对应同一研究及同一队列，不应作为两项独立研究重复计入证据。原研究纳入38名帕金森病患者，其中12人在DOPA-OFF条件下观察到冻结，共记录263次冻结事件。应明确标注预印本与正式论文的版本关系及样本重叠，避免重复计算独立证据。",
+  "source": "blind_B0_gpt4_vs_S2_aX_g6_028e2c30",
+  "pid": "PMID:40709562",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [],
+  "judge_quotes": [
+   "We recorded GI and STN local field potentials (LFPs) via externalized cables in 38 patients with PD (35 reporting FOG in daily life), both OFF‐ and ON‐dopamine (DOPA).",
+   "DOPAOFF, 12 patients with PD had FOG observed (FOG‐OBS, 263 episodes), occurring at a mean of 8 steps after GI, and 26 had no FOG observed (NOBS; FOG‐NOBS).",
+   "During the DOPAOFF recording session (1,229 trials), we observed FOG episodes in 12 of these 35 patients with PD during straight‐ahead walking or turning (FOG‐OBS), whereas 23 patients with PD had no FOG episodes (FOG‐NOBS) (Fig 1E‐G).",
+   "In the 12 FOG‐OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG‐OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G)."
+  ],
+  "why": "报告的说法 cannot_tell：全文是一篇发表于 Annals of Neurology 的正式论文，没有提及 bioRxiv 预印本，也没有提供预印本与正式发表版本之间的对应关系。因此，仅凭全文无法判断报告 Y 是否将两个版本分别列为证据来源，也无法判断其是否充分标注版本关系及队列重叠；全文没有相关信息，不能据此认定报告读错。指控者的说法 partly：其关于原研究样本量及冻结事件数量的描述有明确依据，全文报告纳入38名帕金森病患者，DOPA-OFF 条件下12名患者观察到冻结，共发生263次冻结事件。但是，全文没有提及 bioRxiv 预印本，也没有说明预印本与正式发表论文是否为同一研究、是否使用完全相同的队列。因此，关于两个版本对应同一研究及同一队列、不应重复计为独立研究的判断，无法由本文全文独立证实。综合而言，指控者引用的核心样本数据正确，但版本关系及队列重叠的判断缺少本文内的直接证据。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "Alberts et al., 2026, An initial machine learning model applied to local field potential data from the subthalamic nucleus to detect freezing of gait in Parkinson’s disease",
+  "pmid": "42239677",
+  "doi": "10.3389/fneur.2026.1793291",
+  "report_says": "报告X正文称，深度学习模型成功检测了24/30次冻结步态（FOG）事件。",
+  "judge_says": "原文摘要报告的是24/29次（80%），而不是24/30次。报告X正文的分母与原文摘要不一致。评委指出，X虽然在后续审计中发现了这一数字冲突，但主文没有统一修正。",
+  "source": "blind_B0_gpt4_vs_S2_bX_g6_8f985d2e",
+  "pid": "PMID:42239677",
+  "report_supported": "yes",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In total, the testing sets contained data from 30 FOG episodes (169 seconds) across all trials (Table 2). The model successfully detected 24 (80%) of the 30 freezes across the cohort with a specificity of 55%."
+  ],
+  "judge_quotes": [
+   "The deep learning model achieved an average weighted F1 score of 0.67, a macro F1 score of 0.62 across eight trials from five participants and successfully detected 24/29 (80%) of FOG episodes."
+  ],
+  "why": "两个说法均有全文明确依据。报告X所述的24/30出现在论文Results部分（第98–103行），而指控者所述的24/29（80%）出现在论文Abstract部分（第5–6行）。因此，论文自身存在摘要与正文结果部分的数字不一致。报告X正文采用24/30有原文依据，不能认定为误读；指控者指出摘要报告24/29也完全有依据。两项判断均应为yes。",
+  "verdict": "accusation_rejected"
+ },
+ {
+  "paper": "Klocke 等，2026，13人转弯研究：预印本《Subthalamic Signatures of Freezing while Turning in Parkinson’s Disease》及正式论文《Cognitive and Emotional Determinants of Subthalamic Oscillations During Freezing While Turning in Parkinson's Disease》",
+  "pmid": "42236313（正式论文）",
+  "doi": "10.21203/rs.3.rs-9617843/v1（预印本）；10.1111/ejn.70570（正式论文）",
+  "report_says": "报告Y分别纳入了该13人转弯研究的预印本和正式论文，但未明确标注两者可能存在队列重叠，存在将同一队列的研究结果误当作两项独立研究或独立重复验证的风险。",
+  "judge_says": "评委指出，Klocke等人的13人转弯研究预印本与正式论文可能存在队列重叠，需要核实并明确标注，避免将其误当成独立重复验证。在确认队列独立之前，不应将两者作为独立重复证据。",
+  "source": "blind_B1_vs_S2_aX_g56_0fe0ae8f",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "We studied subthalamic correlates of turning motions in 13 PwPD (six female, age at onset: 53.1 ± 10.5 years; disease duration 12.6 ± 5.3 years)",
+   "Here, we report findings from turning motions with and without FoG in PwPD, in whom we previously reported neuronal abnormalities related to FoG occurring during regular walking.40"
+  ],
+  "judge_quotes": [
+   "Here, we report findings from turning motions with and without FoG in PwPD, in whom we previously reported neuronal abnormalities related to FoG occurring during regular walking.40",
+   "40. Klocke, P. et al. Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease. Brain 147, 4056-4071, doi:10.1093/brain/awae223 (2024)."
+  ],
+  "why": "全文明确支持该转弯研究纳入13名患者，而且明确披露这些患者此前已经用于报告与常规行走期间FoG相关的神经异常研究（参考文献40，Klocke等，2024）。因此，全文确实存在同一队列被用于不同研究分析的证据，不能忽略队列重叠问题。不过，必须区分两件事：全文明确披露的是本次13人转弯研究与此前常规行走研究之间的队列重叠，而不是明确说明该转弯研究的预印本与正式发表版本之间的关系。全文没有提及报告Y，没有说明报告Y是否分别纳入了预印本和正式论文，也没有提及评委或审稿人提出过相关意见。因此，报告的说法和指控者对评委意见的描述，都只能获得部分支持。全文支持一般性的队列重叠风险及谨慎区分独立证据的必要性，但不足以证实预印本与正式论文被重复纳入报告Y这一具体事实，也不足以证实评委确实作出了所述判断。不能仅凭这篇全文认定报告Y读错了论文。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID:36070366 对应的 Science Translational Medicine 正式发表研究",
+  "pmid": "36070366",
+  "doi": "",
+  "report_says": "将该文献记录的来源描述为尚未经过同行评审的 medRxiv 预印本。",
+  "judge_says": "PMID:36070366 实际对应一篇已正式发表于 Science Translational Medicine 的同行评审研究。报告未明确区分 medRxiv 预印本版本与正式发表版本，来源版本标注存在问题。",
+  "source": "blind_B1_vs_S2_bX_g56_6b12303a",
+  "pid": "PMID:36070366",
+  "report_supported": "yes",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "The copyright holder for this preprint ... has granted medRxiv a license to display the preprint."
+  ],
+  "judge_quotes": [
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "why": "全文明确将所提供的论文版本标注为 medRxiv preprint，并明确说明该预印本尚未经过同行评审，因此报告关于来源版本的描述有直接、明确的全文依据。对于指控者的说法，全文没有提及 Science Translational Medicine，也没有说明 PMID:36070366 对应一篇正式发表的期刊论文，因而无法仅凭全文确认这一出版信息。但是，全文将当前版本标注为未经同行评审的预印本，并不意味着同一研究后来没有正式发表。因此，不能据此认定指控者的说法与全文矛盾，也不能认定该说法得到全文支持。结论是：报告的说法有全文依据；指控者关于正式期刊发表及 PMID 对应关系的说法，仅凭全文无法判断。",
+  "verdict": "accusation_rejected"
+ }
+]
