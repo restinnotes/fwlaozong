@@ -995,9 +995,13 @@ def cmd_audit(args):
                 SYNTHESIS=json.dumps({"claims": compact, "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}, ensure_ascii=False), AUDIT=audtxt)
     if len(msg2) > INLINE_MAX:
         wr(d / "audit.json", aud); att = [d / "audit.json"]
-        msg2 = fill(P("synth_revise"), QUESTION=question(args), STANDARD=standard(),
-                    SYNTHESIS=json.dumps({"claims": compact, "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}, ensure_ascii=False),
+        syntxt = json.dumps({"claims": compact, "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}, ensure_ascii=False)
+        msg2 = fill(P("synth_revise"), QUESTION=question(args), STANDARD=standard(), SYNTHESIS=syntxt,
                     AUDIT="（审计结果 JSON 见附件 audit.json）")
+        if len(msg2) > INLINE_MAX:   # 原结论也放不下：两份都作附件
+            wr(d / "synthesis_before_audit.json", json.loads(syntxt)); att.append(d / "synthesis_before_audit.json")
+            msg2 = fill(P("synth_revise"), QUESTION=question(args), STANDARD=standard(),
+                        SYNTHESIS="（原结论、假说、缺口见附件 synthesis_before_audit.json）", AUDIT="（审计结果 JSON 见附件 audit.json）")
     rev = llm.parse_json(llm.call(f"{args.tag}_{args.q}_revise_{llm.pid(msg2 + audtxt)}", msg2, attach=att, model=G6, stage="revise"))
     # 证据关系：沿用的结论取审计列表（无则取原结论），再并上修订时显式列出的
     ca = {x.get("cid"): x for x in aud.get("claim_audit", [])}
