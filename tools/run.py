@@ -156,6 +156,8 @@ def selected(c, args, decisions=("include",)):
 
 def cmd_fetch(args):
     c = kb.connect(); pids = selected(c, args)
+    tiers = tiers_of(args)
+    if tiers: pids = [p for p in pids if tiers.get(p) == "A"]; print(f"按分层只给 A 层取全文：{len(pids)} 篇", flush=True)
     n = F.fetch(c, pids, use_luna=not args.no_luna)
     print(f"纳入 {len(pids)} 篇，有全文 {n} 篇", flush=True)
 
@@ -174,11 +176,13 @@ def cmd_extract(args):
     rows = {r["pid"]: r for r in c.execute(f"SELECT * FROM papers WHERE pid IN ({','.join('?' * len(inc + mb))})", inc + mb)} if inc + mb else {}
     jobs = []
     abstract_only = []
+    tiers = tiers_of(args)
     for pid in inc:
         if pid in have or pid not in rows: continue
         txt, att = fulltext_of(rows[pid])
-        if txt or att: jobs.append(("full", [pid], txt, att))
+        if (txt or att) and (not tiers or tiers.get(pid) == "A"): jobs.append(("full", [pid], txt, att))
         else: abstract_only.append(pid)
+    if tiers: mb = []   # 有分层的版本没有"待定"（S4R 已终判），也不读待定文献
     abstract_only += [p for p in mb if p not in have and p in rows]
     for i in range(0, len(abstract_only), 20):
         jobs.append(("abs", abstract_only[i:i + 20], None, None))
@@ -1148,6 +1152,49 @@ def cmd_rebase(args):
     wr(OUT / args.tag / "synthesis.json", d)
     print(f"证据关联：底 {n_base} 条 EID → 新 {n_new} 条；改类型 {changed}、新增 {added}；丢失 {len(lost)}（应为 0：S2 结论都被 S3d 修订版沿用时）", flush=True)
     if lost: print("  丢失的 EID（所属 S2 结论没被修订版沿用）：", sorted(lost)[:10], flush=True)
+
+
+def tiers_of(args):
+    p = OUT / args.tag / "tiers.json"
+    return json.loads(rd(p)) if p.exists() else None
+
+
+def cmd_tier(args):
+    """S4R：纳入文献按直接程度分 A/B/C（GPT-5.6 改后方案的"全文优先级"）。A 读全文，B/C 读摘要。"""
+    c = kb.connect(); q = question(args)
+    inc = selected(c, args); papers = {r["pid"]: r for r in c.execute(f"SELECT * FROM papers WHERE pid IN ({','.join('?' * len(inc))})", inc)}
+    old = tiers_of(args) or {}
+    todo = [p for p in inc if p not in old and p in papers]
+    def one(b):
+        body = "\n\n---\n\n".join(paper_brief(papers[p], 700) for p in b)
+        msg = fill(P("tier"), QUESTION=q, PAPERS=body)
+        try:
+            items = llm.parse_json(llm.call(f"{args.tag}_{args.q}_tier_{llm.pid(msg)}", msg, model=G6, stage="tier"))["items"]
+            norm = lambda x: x if ":" in str(x) else (f"PMID:{x}" if str(x).isdigit() else f"DOI:{str(x).lower()}")
+            got = {norm(str(i.get("pid")).strip()): i.get("tier") for i in items}
+            return {p: (got.get(p) if got.get(p) in ("A", "B", "C") else "B") for p in b}   # 漏判的按 B（读摘要）
+        except Exception as e:
+            print("分层失败（这批按 B）", e); return {p: "B" for p in b}
+    out = dict(old)
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for r in ex.map(one, [todo[i:i + 50] for i in range(0, len(todo), 50)]): out.update(r)
+    wr(OUT / args.tag / "tiers.json", out)
+    from collections import Counter
+    print("分层", dict(Counter(out.values())), flush=True)
+
+
+def cmd_inherit(args):
+    """把 --src（S1）已经提取过、且本版本纳入的文献的证据复制过来（同一提取提示词，不重复花调用）。"""
+    c = kb.connect(); inc = set(selected(c, args))
+    if c.execute("SELECT COUNT(*) FROM evidence WHERE run_id=?", (args.tag,)).fetchone()[0]:
+        print(args.tag, "已有证据，不重复沿用"); return
+    cols = [r[1] for r in c.execute("PRAGMA table_info(evidence)")]
+    n, pids = 0, set()
+    for r in c.execute("SELECT * FROM evidence WHERE run_id=?", (args.src,)).fetchall():
+        if r["pid"] not in inc: continue
+        d = dict(r); d["eid"] = f"{args.tag}_{r['eid']}"; d["run_id"] = args.tag
+        c.execute(f"INSERT INTO evidence({','.join(cols)}) VALUES({','.join('?' * len(cols))})", [d[k] for k in cols]); n += 1; pids.add(r["pid"])
+    c.commit(); print(f"{args.tag} 沿用 {args.src} 证据 {n} 条（{len(pids)} 篇）", flush=True)
 
 
 def cmd_appendix(args):
