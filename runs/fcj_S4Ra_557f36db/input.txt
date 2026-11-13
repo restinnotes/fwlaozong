@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:24396010 Effects of deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease: a prospective controlled study. (2014)
+报告的说法：第3.1.1节称STN-DBS组与BMT组在6个月时的FOG发生率差异具有统计学意义，但没有明确呈现基线左旋多巴等效剂量（LED）调整后的结果。
+指控者认为原文的说法：原始研究显示，控制两组基线LED差异后，组别与时间的交互作用不再显著（Wald χ²=1.12，P=0.57）。STN-DBS的FOG获益主要受到基线LED、术后药物摄入变化及运动波动减少的影响。因此，不能仅依据未调整的组间差异强调独立刺激效应，报告遗漏了影响结论解释的关键敏感性分析。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

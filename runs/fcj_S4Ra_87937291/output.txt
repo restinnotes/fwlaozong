@@ -1,0 +1,16 @@
+<escape>{
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+    "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+    "A simple threshold-based classifier achieved comparable or higher performance (AUC = 0.858 for entropy), with thresholds derived within each training fold."
+  ],
+  "judge_quotes": [
+    "Abstract: Entropy of inter-burst intervals was reduced prior to freezing (p < 0.01), with strong predictive performance (AUC = 0.825; threshold AUC = 0.858).",
+    "Methods: Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times.",
+    "Results: Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+    "Results: Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+    "Discussion: Reduced Shannon entropy reflects more constrained and predictable burst timing, suggesting that STN activity explores a narrower range of temporal patterns before freezing."
+  ],
+  "why": "报告将Shannon entropy作为冻结前转弯的识别指标，有明确的全文依据。原文Results明确报告了Shannon entropy能够区分pre-freeze turns与stable turns，并且仅使用该指标的分类器取得AUC = 0.825，因此这一用途本身没有读错。但是，原文确实存在值得指出的定义差异：Abstract将指标描述为entropy of inter-burst intervals，而Methods明确将Shannon entropy定义为burst midpoint times分布的熵。全文没有解释这两种描述是否对应相同的统计构念，不能自行假定二者等价。此外，原文分别报告Shannon entropy下降和Lempel-Ziv complexity上升，并将后者解释为temporal structure增加。Methods和Results实际上分别给出了两种指标的计算方式，因此不能把它们简单合并为一个统一的神经复杂度指标，也不能仅凭其中一个指标的变化推断整体神经复杂度同向变化。故报告使用Shannon entropy作为预测指标有充分依据，但如果没有说明Abstract与Methods之间的定义差异及Shannon entropy与Lempel-Ziv complexity的区别，其解释就缺少重要限定，可能影响读者对实际测量内容及神经动态机制的理解，判定为partly。指控者对原文定义差异和两种指标变化方向不同的描述均有全文依据，判定为yes。另需说明，未提供报告全文，因此报告第3.5节是否确实完全遗漏这些限定，无法独立核验。"
+}</escape>

@@ -5,3 +5,80 @@
 证据关联：底 884 条 EID → 新 894 条；改类型 55、新增 70；丢失 0（应为 0：S2 结论都被 S3d 修订版沿用时）
 写报告输入改为附件： 写报告输入超长 765061 字（结论 21 条、证据 883 条），不静默截断
 写报告：结论文字/假说/缺口内联 37509 字，证据映射和证据表作附件
+[S4Ra_Q1_report_5619836f] gpt4 gpt-6-thinking 完成 571s 38061 字
+附录：文献 352，证据 883，结论 21，假说 14
+S4Ra 报告 38061 字
+S4Ra 引用 352 条 {'ok': 352}
+S4Ra 正文引用 57 个 {'in_kb': 55, 'not_in_kb_not_found': 2} ；疑似挂错编号 2 处
+   not_in_kb_not_found DOI:10.21203/rs.3.rs-9617843/v1）提供了另一类证据 | 
+   not_in_kb_not_found DOI:10.21203/rs.3.rs-9617843/v1：转弯冻结期间存在低beta | 
+  疑似挂错：PMID:39957196（相似 0.0）更像 PMID:24396010（0.538）| …| 10.21203/rs.3.rs-4216535/v1 |
+  疑似挂错：PMID:42098512（相似 0.107）更像 PMID:29089922（0.357）| …它们说明合并结果对纳入研究构成、治疗比较和临床终点十分敏感
+[S4Ra_Q1_abs_g6_22a799e2] gpt3 gpt-6-thinking 完成 665s 7743 字
+[S4Ra_Q1_open_g56_0f56d571] gpt4 gpt-5-6-thinking 完成 886s 7609 字
+[S4Ra_Q1_open_g6_0f56d571] gpt3 gpt-6-thinking 完成 1260s 10742 字
+S4Ra open_g6: major 8，moderate 3
+    1 major 缺少可复现的文献检索与筛选方法，无法证明研究覆盖具有系统性。
+    2 major 结构化参考文献中的预印本—正式发表版本映射存在明确的错误，而且不是孤立的一处笔误。
+    3 major 关键原始研究虽然进入结构化附录，却没有进入正文的核心证据综合，导致对STN beta及网络机制的冲突分析不完整。
+S4Ra open_g56: major 5，moderate 3
+    1 major 没有真正完成研究覆盖所要求的主动文献检索，报告本质上是对既有资料库的封闭式综合，而不是经过可复核检索程序建立的证据综述。
+    2 major 结构化参考文献中的预印本—正式发表版本对应关系存在多处严重错误，且与正文的版本映射相互矛盾，说明文献身份核验和自动去重机制不可靠。
+    3 major 正文没有充分整合附录中已经收集的重要直接人体电生理证据，导致核心的STN beta方向冲突及皮层-STN网络机制分析不完整。
+S4Ra 绝对验收: severe 0，moderate 6，minor 0； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'partly'), (4, 'partly'), (5, 'not_testable'), (6, 'met'), (7, 'not_testable')]
+   抽查 {'consistent': 8}
+[blind_S3d3_vs_S4Ra_aX_g6_8d7d66a8] gpt3 gpt-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 130s
+[blind_S3d3_vs_S4Ra_bX_g56_6a9d31b2] gpt4 gpt-5-6-thinking 完成 326s 2336 字
+[blind_S3d3_vs_S4Ra_aX_g56_8d7d66a8] gpt4 gpt-5-6-thinking 完成 397s 2673 字
+[blind_S3d3_vs_S4Ra_aX_g6_8d7d66a8] gpt4 gpt-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 489s
+盲比解析失败 无回答
+[blind_S3d3_vs_S4Ra_bX_g6_6a9d31b2] gpt3 gpt-6-thinking 完成 772s 3044 字
+g56 aX 总体: S4Ra 分项: {'coverage': 'S4Ra', 'evidence': 'S3d3', 'synthesis': 'S4Ra', 'structure': 'S3d3', 'rigor': 'S4Ra'}
+g6 bX 总体: S3d3 分项: {'coverage': 'S4Ra', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S3d3', 'rigor': 'S3d3'}
+g56 bX 总体: S3d3 分项: {'coverage': 'S4Ra', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S3d3', 'rigor': 'S3d3'}
+[fcx_S4Ra_ff59a873] gpt3 gpt-6-thinking 完成 20s 701 字
+[fcx_S4Ra_fbb5eea8] gpt4 gpt-6-thinking 完成 27s 833 字
+[fcx_S4Ra_1bbd54c4] gpt4 gpt-6-thinking 完成 26s 601 字
+[fcx_S4Ra_4e582af5] gpt4 gpt-6-thinking 完成 72s 2762 字
+[fcx_S4Ra_22ce6b53] gpt4 gpt-6-thinking 完成 53s 773 字
+[fcx_S4Ra_698d2eb9] gpt3 gpt-6-thinking 完成 113s 2128 字
+指控来源 6 份，抽出指控 21 条
+[fcj_S4Ra_05305da5] gpt4 gpt-6-thinking 完成 30s 789 字
+[fcj_S4Ra_1283d5e6] gpt3 gpt-6-thinking 完成 60s 2384 字
+[fcj_S4Ra_63e668b8] gpt3 gpt-6-thinking 完成 66s 1127 字
+[fcj_S4Ra_5e83902f] gpt3 gpt-6-thinking 完成 24s 719 字
+[fcj_S4Ra_557f36db] gpt3 gpt-6-thinking 完成 88s 1635 字
+[fcj_S4Ra_2a6cf4a4] gpt3 gpt-6-thinking 完成 46s 864 字
+[fcj_S4Ra_cb468be0] gpt4 gpt-6-thinking 完成 55s 941 字
+[fcj_S4Ra_45469fdb] gpt4 gpt-6-thinking 完成 50s 1225 字
+[fcj_S4Ra_dcb02279] gpt3 gpt-6-thinking 完成 85s 2102 字
+[fcj_S4Ra_aee8d574] gpt4 gpt-6-thinking 完成 36s 1294 字
+[fcj_S4Ra_3e4dabd2] gpt4 gpt-6-thinking 完成 171s 1086 字
+[fcj_S4Ra_b691e01d] gpt4 gpt-6-thinking 完成 59s 1649 字
+[fcj_S4Ra_8c9589a1] gpt3 gpt-6-thinking 完成 23s 966 字
+[fcj_S4Ra_5213f047] gpt4 gpt-6-thinking 完成 46s 1008 字
+[fcj_S4Ra_ffa86358] gpt4 gpt-6-thinking 完成 81s 3305 字
+[fcj_S4Ra_87937291] gpt4 gpt-6-thinking 完成 104s 2250 字
+[fcj_S4Ra_b4261ba3] gpt4 gpt-6-thinking 完成 71s 1408 字
+S4Ra 指控裁定 {'accusation_partly': 6, 'cannot_tell': 10, 'no_fulltext': 4, 'accusation_holds': 1}
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:24396010 | 指控：原始研究显示，控制两组基线LED差异后，组别与时间的交互作用不再显著（Wald χ²=1.12，P=0.57）。STN-DBS的FOG获益主要受到基线LED、术
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:40709562 | 指控：原始论文除分析未发生冻结的试次外，还比较了同一批FOG患者后续发生冻结的99个FOG阳性试次与212个未发生冻结的试次，共涉及263次真实冻结事件。研究发现，在
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:40709562 | 指控：PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，与该2025年预印本无关。该DOI确实对应PMID
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.64898/2026.08.13.744293 | 指控：PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文
+  [accusation_partly] 报告有依据:partly 指控有依据:partly DOI:10.21203/rs.3.rs-9617843/v1 | 指控：PMID:23225012实际是Mhyre等人2012年的《Parkinson's disease》章节，与该预印本无关。此外，该研究中Pre-FoG-Turn
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.64898/2026.02.02.702843 | 指控：PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.21203/rs.3.rs-4058858/v1 | 指控：PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该预印本的正式发表版本，属于错误的文献版本关联
+  [no_fulltext] 报告有依据:None 指控有依据:None DOI:10.1101/2025.08.20.25333478 | 指控：PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2025年预印本的正式发表版本，属于错误的文
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.64898/2025.12.17.25342333 | 指控：PMID:24245947实际是Mehanna和Lai于2013年发表的《Deep brain stimulation in Parkinson's disea
+  [accusation_holds] 报告有依据:no 指控有依据:partly PMID:28890315 | 指控：原研究发现，Freezers在无冻结运动期间的相对beta功率低于Non-Freezers。这一结果至少不能直接作为beta去同步化不足的正向证据，反而对简单的
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.64898/2026.08.13.744293 | 指控：PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-54
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.1101/2025.01.10.632393 | 指控：PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-54
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.64898/2025.12.17.25342333 | 指控：PMID:24245947实际是Mehanna和Lai于2013年发表的综述《Deep brain stimulation in Parkinson's dis
+  [accusation_partly] 报告有依据:partly 指控有依据:yes DOI:10.64898/2026.08.13.744293 | 指控：原文Methods将Shannon entropy定义为burst midpoint time分布的熵，而Abstract称其为inter-burst inte
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:42860886 | 指控：原文明确将该研究定义为exploratory multicenter randomized controlled double-blind trial（探索性多
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.21203/rs.3.rs-4058858/v1 | 指控：PMID:23225012 实际对应2012年的一般性帕金森病章节，并非该预印本的正式发表版本。该预印本对应的正式论文 PMID 是 40504072。
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:partly DOI:10.1101/2025.01.10.632393 | 指控：PMID:23225012 实际对应2012年的一般性帕金森病章节，并非该预印本的正式发表版本。该38人 STN 电生理研究对应的 PMID 是 4070956
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:23225012 | 指控：PMID:23225012实际对应的是一篇2012年的帕金森病综述章节，而不是报告X所关联的那些不同预印本。因此，报告X存在文献版本与PMID错误关联的问题。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:10634253 | 指控：PMID:10634253实际对应一项STN刺激治疗冻结步态（FOG）的病例研究，因此报告X关于该文献的来源错配判断需要重新核实。
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell DOI:10.1101/2025.01.10.632393 | 指控：PMID:23225012 实际对应的是一篇2012年发表的一般性帕金森病综述，而不是这些预印本。报告正文与结构化附录对同一 DOI 的 PMID 映射也互相矛
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:24245947 | 指控：PMID:24245947 实际对应的是一篇2013年发表的一般性 DBS 综述，而不是低频自适应 DBS 预印本，因此该文献映射错误。

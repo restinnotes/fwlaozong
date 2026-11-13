@@ -1,0 +1,60 @@
+<escape>{
+  "accusations": [
+    {
+      "paper": "2025年预印本，DOI: 10.1101/2025.01.10.632393",
+      "pmid": "40709562",
+      "doi": "10.1101/2025.01.10.632393",
+      "report_says": "正文第2.4节将该预印本对应至PMID:40709562，但结构化附录references中的version_of却错误地指向PMID:23225012。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，与该2025年预印本无关。该DOI确实对应PMID:40709562。正文和附录对同一文献的版本映射相互矛盾。"
+    },
+    {
+      "paper": "2026年预印本，DOI: 10.64898/2026.08.13.744293",
+      "pmid": "",
+      "doi": "10.64898/2026.08.13.744293",
+      "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文献版本关联。"
+    },
+    {
+      "paper": "13名患者转弯冻结研究预印本，DOI: 10.21203/rs.3.rs-9617843/v1",
+      "pmid": "",
+      "doi": "10.21203/rs.3.rs-9617843/v1",
+      "report_says": "附录将该预印本的version_of指向PMID:23225012；正文又将其作为H2（步态相位性beta去同步化不足机制）的支持证据，报告冻结期低beta ERD缺失。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年的《Parkinson's disease》章节，与该预印本无关。此外，该研究中Pre-FoG-Turn与Pre-Regular-Turn之间的直接比较未达到统计学显著性，因此不能据此证明低beta ERD异常在冻结发生之前已经出现，报告对其支持H2的证据强度处理不足。"
+    },
+    {
+      "paper": "2026年预印本，DOI: 10.64898/2026.02.02.702843",
+      "pmid": "",
+      "doi": "10.64898/2026.02.02.702843",
+      "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文献版本关联。"
+    },
+    {
+      "paper": "预印本，DOI: 10.21203/rs.3.rs-4058858/v1",
+      "pmid": "",
+      "doi": "10.21203/rs.3.rs-4058858/v1",
+      "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该预印本的正式发表版本，属于错误的文献版本关联。"
+    },
+    {
+      "paper": "2025年预印本，DOI: 10.1101/2025.08.20.25333478",
+      "pmid": "",
+      "doi": "10.1101/2025.08.20.25333478",
+      "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2025年预印本的正式发表版本，属于错误的文献版本关联。"
+    },
+    {
+      "paper": "2025年预印本，DOI: 10.64898/2025.12.17.25342333",
+      "pmid": "",
+      "doi": "10.64898/2025.12.17.25342333",
+      "report_says": "结构化参考文献将该预印本对应至PMID:24245947，并标注为该PMID对应论文的正式发表版本。",
+      "judge_says": "PMID:24245947实际是Mehanna和Lai于2013年发表的《Deep brain stimulation in Parkinson's disease》综述，并不是该2025年预印本的正式发表版本，属于错误的文献版本关联。"
+    },
+    {
+      "paper": "PMID:28890315，Freezers与Non-Freezers运动期间beta功率研究",
+      "pmid": "28890315",
+      "doi": "",
+      "report_says": "第5.2节将该研究列为H2（步态相位性beta去同步化不足机制）的支持证据。",
+      "judge_says": "原研究发现，Freezers在无冻结运动期间的相对beta功率低于Non-Freezers。这一结果至少不能直接作为beta去同步化不足的正向证据，反而对简单的ERD不足解释构成限制。报告将其列为H2支持证据，没有正确处理研究结果与假说核心命题之间的方向关系。"
+    }
+  ]
+}</escape>

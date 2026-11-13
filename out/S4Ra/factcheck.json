@@ -1,0 +1,429 @@
+[
+ {
+  "paper": "PMID:24396010",
+  "pmid": "24396010",
+  "doi": "",
+  "report_says": "第3.1.1节称STN-DBS组与BMT组在6个月时的FOG发生率差异具有统计学意义，但没有明确呈现基线左旋多巴等效剂量（LED）调整后的结果。",
+  "judge_says": "原始研究显示，控制两组基线LED差异后，组别与时间的交互作用不再显著（Wald χ²=1.12，P=0.57）。STN-DBS的FOG获益主要受到基线LED、术后药物摄入变化及运动波动减少的影响。因此，不能仅依据未调整的组间差异强调独立刺激效应，报告遗漏了影响结论解释的关键敏感性分析。",
+  "source": "abs_g6.json",
+  "pid": "PMID:24396010",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "First, Fisher Exact Statistics on the primary outcome revealed that at six months follow-up, STN-DBS patients were significantly less likely to demonstrate FOG than the BMT-group (Table 2).",
+   "After adjustment for baseline differences in LED scores, the interaction effect of group*time was no longer significant (Wald X² = 1.12; p = 0.57)."
+  ],
+  "judge_quotes": [
+   "After adjustment for baseline differences in LED scores, the interaction effect of group*time was no longer significant (Wald X² = 1.12; p = 0.57).",
+   "STN-DBS-induced benefits on FOG were mostly mediated by baseline levodopa equivalent dose, altered medication-intake and reduced motor fluctuations.",
+   "Freezer-to-non-freezer conversion at 12 months was significantly correlated with the relative reduction in LED (expressed as percentage of baseline LED, R=0.46, p=0.04) and with the reduction in on/off fluctuations (UPDRS IVb scores, R=0.47, p=0.03), meaning that freezers with a more pronounced reduction in LED and on/off fluctuations at 12 months follow-up have a higher likelihood to have become a non-freezer at this time point."
+  ],
+  "why": "报告的说法部分有依据：原文确实报告了未经基线LED调整的6个月FOG发生率组间差异具有统计学意义（Fisher's Exact，p=0.01），GEE事后比较也报告了6个月组间差异（p=0.04）。但是，原文并非没有呈现LED调整结果，而是明确报告控制基线LED差异后，组别与时间的交互作用不再显著（Wald χ²=1.12，p=0.57）。需要注意，该调整结果针对组别与时间的交互作用，并非单独报告调整后的6个月组间比较值。指控者的核心描述有明确全文依据：原文摘要明确指出STN-DBS对FOG的获益主要由基线LED、药物摄入变化及运动波动减少所介导，结果部分也报告了LED减少与运动波动减少和FOG改善之间的相关性。因此，如果报告只强调未经调整的显著组间差异，而没有交代LED调整后交互作用不再显著这一重要结果，就遗漏了影响结论解释的关键证据，不能据此直接强调独立的刺激效应。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID:40709562",
+  "pmid": "40709562",
+  "doi": "",
+  "report_says": "第3.4.7节称该研究的分析主要集中于没有实际冻结发生的步态试次，并将其证据归类为FOG易感性相关，而非真实冻结事件证据。",
+  "judge_says": "原始论文除分析未发生冻结的试次外，还比较了同一批FOG患者后续发生冻结的99个FOG阳性试次与212个未发生冻结的试次，共涉及263次真实冻结事件。研究发现，在冻结出现之前的步态启动阶段，后续发生FOG的试次已经表现出posterior STN高beta与pace之间更强的负向关联，以及high-beta、theta与rhythm之间的异常关联。这属于真实冻结事件的前瞻性关联证据，而非仅仅是无冻结试次中的FOG易感性证据。报告对原始研究的事件相关分析描述不完整，并低估了其阳性证据。",
+  "source": "abs_g6.json",
+  "pid": "PMID:40709562",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "PCA with varimax rotation of GI parameters from trials without FOG (1,130 trials) revealed 5 orthogonally RPC accounting for 73% of variance (see Fig 2C and Supplementary Fig S2).",
+   "We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups (Supplementary Fig S3)."
+  ],
+  "judge_quotes": [
+   "In the 12 FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG-OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G). These FOG-OBS patients also completed 212 walking trials without FOG (FOG-OBS− trials; see Fig 1E).",
+   "To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG-OBS+ trials) to those without (FOG-OBS− trials) in FOG-OBS patients with PD (DOPAOFF condition; Fig 6).",
+   "We observed stronger negative associations between high-beta band power and pace (RPC1) score in FOG-OBS-positive versus FOG-OBS-negative trials, significant only in the posterior STN (see Fig 6A–C and Supplementary Fig S6).",
+   "In contrast, positive association between rhythm (RPC2) and both high-beta and theta band activity emerged in the posterior STN for FOG-OBS-positive trials but were absent or reversed in FOG-OBS-negative trials (see Fig 6D–F).",
+   "These changes were evident as early as the GI phase, prior to the observable FOG onset.",
+   "FOG-OBS patients with PD show early, identifiable changes in GI and STN activity patterns up to 19 seconds before FOG."
+  ],
+  "why": "报告的说法有部分依据，但整体定性不完整。原文确实首先对没有发生FOG的试次进行了大量分析，并将这些结果解释为FOG易感性相关的神经活动特征（predisposition）。然而，原文并未局限于无冻结试次。Results第218节Predictive Patterns of FOG Occurrence明确对同一批12名FOG-OBS患者的99个FOG阳性试次与212个FOG阴性试次进行了直接比较，99个阳性试次中共识别出263次实际FOG事件。研究进一步发现，在后续实际发生FOG的阳性试次中，步态启动阶段posterior STN的high-beta与pace呈更强负向关联，而posterior STN的high-beta和theta与rhythm呈阳性关联；这些关联在阴性试次中不存在或方向相反。原文Discussion第299节及Conclusions也明确将这些结果解释为FOG发生前的变化。因此，指控者的描述有全文明确依据。需要保留一个重要限定：这些电生理关联是在实际发生冻结的试次中、冻结可观察起始之前的步态启动阶段测得的，属于真实FOG事件的前瞻性关联证据，而不是冻结发生瞬间的电生理记录。最终判断：report_supported为partly，因为报告正确指出了无冻结试次的易感性分析，但将研究证据归类为易感性证据而非真实冻结事件相关证据，遗漏了原文明确报告的FOG阳性试次比较及其关键结果；judge_supported为yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "2025年预印本，DOI: 10.1101/2025.01.10.632393",
+  "pmid": "40709562",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "正文第2.4节将该预印本对应至PMID:40709562，但结构化附录references中的version_of却错误地指向PMID:23225012。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，与该2025年预印本无关。该DOI确实对应PMID:40709562。正文和附录对同一文献的版本映射相互矛盾。",
+  "source": "open_g56.json",
+  "pid": "PMID:40709562",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "PMID:40709562 | Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease. (2025)",
+   "ANN NEUROL 2025;98:977–990"
+  ],
+  "judge_quotes": [
+   "PMID:40709562 | Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease. (2025)",
+   "## Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease",
+   "ANN NEUROL 2025;98:977–990"
+  ],
+  "why": "全文明确将《Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease》标识为PMID:40709562，并注明其发表于2025年的Annals of Neurology。因此，报告正文将该论文对应至PMID:40709562这一部分有全文依据。但是，全文没有提供报告正文第2.4节或结构化附录references的内容，也没有出现version_of字段或PMID:23225012，因而无法核实附录是否确实指向PMID:23225012，更无法仅凭论文全文确认这一映射错误。对于指控者，全文支持该2025年论文对应PMID:40709562，但没有提及Mhyre、2012年《Parkinson's disease》章节、PMID:23225012或相关DOI，也没有提供正文与附录之间的版本映射信息。因此，指控者关于PMID:23225012的实际身份、其与该论文无关以及DOI对应关系的具体描述，不能由本文全文独立证实。两项判断均为部分支持；不能仅因全文没有提供报告附录信息，就认定报告读错了论文。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "2026年预印本，DOI: 10.64898/2026.08.13.744293",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文献版本关联。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "https://doi.org/10.64898/2026.08.13.744293",
+   "bioRxiv preprint (which was not certified by peer review)",
+   "This version posted August 18, 2026."
+  ],
+  "judge_quotes": [
+   "bioRxiv preprint (which was not certified by peer review)",
+   "This version posted August 18, 2026."
+  ],
+  "why": "仅依据论文全文，两项说法均无法得到充分验证。对于报告的说法，全文提供了该预印本的DOI、bioRxiv预印本身份及发布日期，但没有出现PMID:23225012，也没有提及结构化参考文献中的version_of字段，因此无法确认该字段是否指向该PMID。对于指控者的说法，全文确实明确标注该文为2026年发布、未经同行评审认证的bioRxiv预印本，但没有提及Mhyre等人、2012年发表的《Parkinson's disease》章节或PMID:23225012，也没有说明该PMID对应的文献是否为该预印本的正式发表版本。特别需要注意，未经同行评审认证不等于不存在正式发表版本。因此，不能仅凭全文确认指控者对PMID所对应文献的具体描述。两项判断均为cannot_tell，而不能将全文未提供的信息直接判定为报告错误或指控正确。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "13名患者转弯冻结研究预印本，DOI: 10.21203/rs.3.rs-9617843/v1",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "report_says": "附录将该预印本的version_of指向PMID:23225012；正文又将其作为H2（步态相位性beta去同步化不足机制）的支持证据，报告冻结期低beta ERD缺失。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年的《Parkinson's disease》章节，与该预印本无关。此外，该研究中Pre-FoG-Turn与Pre-Regular-Turn之间的直接比较未达到统计学显著性，因此不能据此证明低beta ERD异常在冻结发生之前已经出现，报告对其支持H2的证据强度处理不足。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "lack of event-related desynchronization ... low beta range"
+  ],
+  "judge_quotes": [
+   "When directly comparing the frequency domain spectra of Pre FoG-Turn and Pre Reg-Turn, however, no differences were found"
+  ],
+  "why": "报告关于冻结转弯期间低beta ERD缺失的描述有明确全文依据。论文Results明确报告，与Standing相比，FoG-Turn在整个转弯过程中缺乏低beta（13–20 Hz）事件相关去同步化，且聚类置换检验P=0.0002。因此，不能认为报告关于冻结期间低beta ERD缺失的描述与原文不符。另一方面，冻结前的证据需要重要限定：论文确实报告Pre-FoG-Turn相对于Standing缺乏低beta去同步化，也报告Pre-Reg-Turn相对于Standing存在低beta去同步化；但这两项分别与Standing比较的结果，并不能代替Pre-FoG-Turn与Pre-Reg-Turn之间的直接比较。Results明确称该直接比较没有发现差异，Figure 3B进一步说明，Pre-FoG-Turn在13–15 Hz的数值虽高于Pre-Reg-Turn，但多重比较校正后未达到统计学显著性（P>0.05）。因此，该研究能够支持冻结发生期间低beta ERD不足这一现象，但不能据此断言冻结发生之前已经证实存在相对于常规转弯的低beta ERD异常。如果报告将其作为H2的冻结期现象证据，依据成立；如果进一步将其作为冻结前异常已获直接统计验证的证据，则缺少关键限定。另一个问题是，全文没有出现PMID:23225012、Mhyre等人或version_of字段，也没有提供该项附录元数据。因此，仅凭所提供的全文，无法确认该PMID是否确实指向Mhyre等人2012年的章节，也无法判定报告的元数据关联是否错误。最终判断：报告的科学结果描述部分有据，但整体关联及冻结前证据强度不能全部确认；指控者关于直接比较未达显著性的判断有据，但关于PMID实际对应文献身份的判断无法仅凭全文核实。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "2026年预印本，DOI: 10.64898/2026.02.02.702843",
+  "pmid": "",
+  "doi": "10.64898/2026.02.02.702843",
+  "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2026年预印本的正式发表版本，属于错误的文献版本关联。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.64898/2026.02.02.702843",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "The copyright holder for this preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.",
+   "This version posted February 3, 2026."
+  ],
+  "judge_quotes": [
+   "The copyright holder for this preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity.",
+   "This version posted February 3, 2026."
+  ],
+  "why": "全文只能确认该文是2026年2月3日发布的bioRxiv预印本，且未经同行评审。全文没有出现PMID:23225012、Mhyre、2012年《Parkinson's disease》章节，也没有version_of字段或任何将该预印本与PMID:23225012关联的说明。因此，全文既不能证明报告所称的结构化文献版本关联确实存在，也不能证明指控者关于该PMID实际对应Mhyre等人2012年章节的描述。两项判断均为cannot_tell，而不是no：全文没有提供足以证实或反驳这两项外部文献关联信息的证据。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "预印本，DOI: 10.21203/rs.3.rs-4058858/v1",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-4058858/v1",
+  "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该预印本的正式发表版本，属于错误的文献版本关联。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.21203/rs.3.rs-4058858/v1",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "DOI: https://doi.org/10.21203/rs.3.rs-4058858/v1",
+   "Posted Date: April 2nd, 2024"
+  ],
+  "judge_quotes": [
+   "The effect of Levodopa and Stimulation on post-surgery Freezing of Gait in STN-DBS Parkinson's Disease patients: a clinical and kinematic analysis",
+   "DOI: https://doi.org/10.21203/rs.3.rs-4058858/v1"
+  ],
+  "why": "全文明确标识了该文的标题、预印本DOI和发布日期，但没有出现PMID:23225012，也没有提供结构化参考文献中的version_of字段或其他版本关联信息。全文同样没有提及Mhyre等人2012年的《Parkinson's disease》章节，也没有说明PMID:23225012对应的文献身份或其是否为该预印本的正式发表版本。因此，仅依据全文，既无法确认报告所说的version_of关联是否存在，也无法确认指控者对该PMID所指文献的描述是否正确。两项均应判定为cannot_tell，而不能据此认定报告误读了论文。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "2025年预印本，DOI: 10.1101/2025.08.20.25333478",
+  "pmid": "",
+  "doi": "10.1101/2025.08.20.25333478",
+  "report_says": "结构化参考文献将该预印本的version_of指向PMID:23225012。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的《Parkinson's disease》章节，不是该2025年预印本的正式发表版本，属于错误的文献版本关联。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.1101/2025.08.20.25333478",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "2025年预印本，DOI: 10.64898/2025.12.17.25342333",
+  "pmid": "",
+  "doi": "10.64898/2025.12.17.25342333",
+  "report_says": "结构化参考文献将该预印本对应至PMID:24245947，并标注为该PMID对应论文的正式发表版本。",
+  "judge_says": "PMID:24245947实际是Mehanna和Lai于2013年发表的《Deep brain stimulation in Parkinson's disease》综述，并不是该2025年预印本的正式发表版本，属于错误的文献版本关联。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.64898/2025.12.17.25342333",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "Low-Frequency Adaptive Deep Brain Stimulation for Parkinson’s Disease",
+   "This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "judge_quotes": [
+   "This version posted December 27, 2025.",
+   "This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice."
+  ],
+  "why": "全文只能确认该文是题为《Low-Frequency Adaptive Deep Brain Stimulation for Parkinson’s Disease》的2025年medRxiv预印本，DOI为10.64898/2025.12.17.25342333。全文没有出现PMID:24245947，也没有提及Mehanna和Lai的《Deep brain stimulation in Parkinson's disease》，更没有说明该预印本与某个PMID对应的正式发表版本之间存在关联。报告所说的结构化参考文献映射及正式发表版本标注，在全文中找不到依据；但全文也没有提供足够信息证明该映射错误。指控者关于PMID:24245947实际对应哪篇论文的描述同样无法通过全文核实。因此，严格遵循只依据全文的要求，两项均应判定为cannot_tell，不能据此认定报告读错了论文。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "PMID:28890315，Freezers与Non-Freezers运动期间beta功率研究",
+  "pmid": "28890315",
+  "doi": "",
+  "report_says": "第5.2节将该研究列为H2（步态相位性beta去同步化不足机制）的支持证据。",
+  "judge_says": "原研究发现，Freezers在无冻结运动期间的相对beta功率低于Non-Freezers。这一结果至少不能直接作为beta去同步化不足的正向证据，反而对简单的ERD不足解释构成限制。报告将其列为H2支持证据，没有正确处理研究结果与假说核心命题之间的方向关系。",
+  "source": "open_g56.json",
+  "pid": "PMID:28890315",
+  "report_supported": "no",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups (H(1) = 7.17, P = 0.036), which resulted in a greater attenuation of resting state beta power in Freezers (F (1, 15) = 28.37, P < 0.001).",
+   "During repetitive stepping, when subjects were not freezing, STN beta power was lower and beta sample entropy was higher in Freezers compared to Non-Freezers. There was a greater attenuation of resting state beta power in Freezers, when stepping.",
+   "These results also suggest that deep brain stimulation parameters that result in complete attenuation of STN beta power may worsen rather than improve FOG."
+  ],
+  "judge_quotes": [
+   "During locomotion without FOG, Freezers showed lower beta (13–30 Hz) power (P = 0.036) and greater beta Sample Entropy (P = 0.032), than Non-Freezers, as well as greater gait asymmetry and arrhythmicity (P < 0.05 for both).",
+   "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups (H(1) = 7.17, P = 0.036), which resulted in a greater attenuation of resting state beta power in Freezers (F (1, 15) = 28.37, P < 0.001).",
+   "There were no differences in beta power or beta SampEn in the resting state or during FW (without FOG) between the Freezer and Non-Freezer groups.",
+   "Freezers demonstrated decreases in beta power during stepping without freezing compared to Non-Freezers and no difference at rest."
+  ],
+  "why": "报告的说法与论文结果的方向相反。H2的核心命题是步态期间beta去同步化不足，即beta功率下降不充分；但论文在无冻结的原地踏步（SIP）任务中发现，Freezers的相对beta功率显著低于Non-Freezers，而且相对于静息状态的beta功率衰减更大。这意味着观察到的是更强而非更弱的beta功率衰减，不能作为H2的正向支持证据。论文还指出，完全消除STN beta功率可能反而加重FOG，进一步限制了简单的beta功率越低、步态越好的解释。指控者的核心方向判断有全文依据，因此报告将该研究列为H2支持证据确实存在误读。不过判为partly而非yes，是因为指控者对结果的概括需要一个重要限定：组间相对beta功率差异明确出现在无冻结的SIP任务中，而Forward Walking（FW）无冻结期间，Freezers与Non-Freezers之间没有beta功率差异。此外，论文测量的是任务期间的频段功率，并未直接证明步态周期各相位上的相位锁定ERD不足。因此，更严谨的结论是：该研究的SIP结果对H2的简单解释构成反向证据或限制，但不能据此断言所有步态任务中均存在更强的beta去同步化。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "STN-FOG相关预印本（题名未提供，DOI对应的研究被报告映射到错误的正式发表版本）",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "结构化参考文献将该预印本的version_of填写为PMID:23225012，认为该PMID是其正式发表版本。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-5416-4_16，并非该STN-FOG研究的正式发表版本。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson's disease",
+   "preprint (which was not certified by peer review)",
+   "This version posted August 18, 2026."
+  ],
+  "judge_quotes": [
+   "STN local field potential recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16) (clinical details in Table S1).",
+   "16. Thenaisie Y, Lee K, Moerman C, et al. Principles of gait encoding in the subthalamic nucleus of people with Parkinson’s disease. Sci Transl Med 2022;14(661):eabo1800. https://doi.org/10.1126/scitranslmed.abo1800",
+   "Original data can be found at Thenasie et al. (https://zenodo.org/records/6867624)(16)."
+  ],
+  "why": "全文将研究标识为DOI:10.64898/2026.08.13.744293的bioRxiv预印本，并明确标注其尚未经过同行评审。全文没有提及PMID:23225012，也没有提及Mhyre等人2012年的综述章节、DOI:10.1007/978-94-007-5416-4_16，或该PMID与本研究之间的version_of关系。参考文献第16条指向Thenaisie等人2022年发表于Science Translational Medicine的研究，正文说明该研究提供了本论文使用的数据集，但这不能证明其为本预印本的正式发表版本。因此，报告关于PMID的判断缺乏全文依据，但全文也不足以证实指控者对该PMID实际对应文献的描述。两项均应判定为cannot_tell，不能仅凭全文未提及相关信息就判定任何一方与全文不符。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "STN-FOG相关预印本（题名未提供，正文与结构化附录的正式发表版本映射不一致）",
+  "pmid": "",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "结构化附录将该预印本的version_of填写为PMID:23225012，但第2.4节又将其正式发表版本写为PMID:40709562。",
+  "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-5416-4_16，并非该STN-FOG研究的正式发表版本。正文与附录对同一预印本的版本映射也互相矛盾。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.1101/2025.01.10.632393",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "DOI:10.1101/2025.01.10.632393 | Subthalamic Signature of Freezing of Gait in Parkinson’s Disease (2025)",
+   "preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission.",
+   "The copyright holder for thisthis version posted January 11, 2025. ; https://doi.org/10.1101/2025.01.10.632393doi: bioRxiv preprint"
+  ],
+  "judge_quotes": [
+   "preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission.",
+   "The copyright holder for thisthis version posted January 11, 2025. ; https://doi.org/10.1101/2025.01.10.632393doi: bioRxiv preprint"
+  ],
+  "why": "两项均判定为cannot_tell。第一，全文能够确认研究的题目、bioRxiv预印本DOI及2025年1月11日的版本发布时间，但没有提及报告的结构化附录、version_of字段、报告第2.4节，也没有出现PMID:23225012或PMID:40709562。因此，无法仅凭论文全文确认报告是否填写了这两个PMID，也无法判断报告正文与附录是否存在版本映射矛盾。第二，全文没有提及Mhyre等人2012年的Parkinson's disease综述章节、DOI:10.1007/978-94-007-5416-4_16，也没有说明PMID:23225012对应的文献是什么，更没有明确给出本研究正式发表版本的PMID。因此，无法仅凭全文验证指控者关于PMID:23225012实际文献身份及其并非本研究正式发表版本的描述。需要特别区分：全文没有提供相关信息，不等于全文否定了报告或指控者的说法。论文明确标注为未经同行评审的bioRxiv预印本，但这不足以判定两个PMID的版本映射。故不能认定报告读错，也不能认定指控者的文献身份描述已得到全文支持。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "2025年低频自适应刺激相关预印本（题名未提供）",
+  "pmid": "",
+  "doi": "10.64898/2025.12.17.25342333",
+  "report_says": "结构化参考文献将该预印本的version_of填写为PMID:24245947，认为该PMID是其正式发表版本。",
+  "judge_says": "PMID:24245947实际是Mehanna和Lai于2013年发表的综述《Deep brain stimulation in Parkinson's disease》，DOI为10.1186/2047-9158-2-22，并非2025年的低频自适应刺激研究。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.64898/2025.12.17.25342333",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "DOI:10.64898/2025.12.17.25342333 | Low-Frequency Adaptive Deep Brain Stimulation for Parkinson’s Disease (2025)",
+   "NOTE: This preprint reports new research that has not been certified by peer review and should not be used to guide clinical practice.",
+   "This version posted December 27, 2025."
+  ],
+  "judge_quotes": [
+   "8. Sidiropoulos C, Walsh R, Meaney C, Poon YY, Fallis M, Moro E. Low-frequency subthalamic nucleus deep brain stimulation for axial symptoms in advanced Parkinson’s disease. J Neurol. 2013;260(9):2306-2311. doi:10.1007/s00415-013-6983-2",
+   "41. Di Biase L, Fasano A. Low-frequency deep brain stimulation for Parkinson’s disease: Great expectation or false hope?: Low-Frequency Deep Brain Stimulation. Mov Disord. 2016;31(7):962-967. doi:10.1002/mds.26658",
+   "42. Xie T, Padmanaban M, Bloom L, et al. Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Parkinson patients with bilateral STN DBS: a mini-review. Transl Neurodegener. 2017;6(1):13. doi:10.1186/s40035-017-0083-7"
+  ],
+  "why": "全文明确表明研究的 DOI 为 10.64898/2025.12.17.25342333，文章发表于 medRxiv，属于2025年的预印本。但全文没有出现 PMID:24245947，也没有说明该预印本存在对应的正式发表版本，因此无法仅凭全文判断报告填写的 version_of 是否正确，report_supported 为 cannot_tell。另一方面，全文也没有出现 Mehanna、Lai、2013年综述《Deep brain stimulation in Parkinson's disease》或 DOI:10.1186/2047-9158-2-22。参考文献中确实列出了其他关于帕金森病低频脑深部刺激的文献，但这些条目不能证明 PMID:24245947 对应指控者所说的综述。因此，指控者关于该 PMID 实际指向哪篇论文的描述同样无法由本文全文验证，judge_supported 为 cannot_tell。两项判断均不应将全文未提供的信息当作与全文矛盾的证据，也不能据此认定报告读错。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "四名患者的STN-LFP复杂度预印本（题名未提供）",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "第3.5节将该研究的Shannon entropy作为冻结前转弯的识别指标，但正文没有说明该指标存在定义不一致的问题，也没有明确区分不同复杂度指标的含义。",
+  "judge_says": "原文Methods将Shannon entropy定义为burst midpoint time分布的熵，而Abstract称其为inter-burst interval entropy，两者不一定是相同的统计构念，不能直接混为一谈。此外，原文报告Shannon entropy下降、Lempel-Ziv complexity上升，不能将两者简单归纳为统一的神经复杂度升高或降低。报告未解决这一原文定义冲突，就将Shannon entropy作为冻结前转弯的识别指标，可能造成对实际测量内容及神经动态机制的误解。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+   "A simple threshold-based classifier achieved comparable or higher performance (AUC = 0.858 for entropy), with thresholds derived within each training fold."
+  ],
+  "judge_quotes": [
+   "Abstract: Entropy of inter-burst intervals was reduced prior to freezing (p < 0.01), with strong predictive performance (AUC = 0.825; threshold AUC = 0.858).",
+   "Methods: Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times.",
+   "Results: Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+   "Results: Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+   "Discussion: Reduced Shannon entropy reflects more constrained and predictable burst timing, suggesting that STN activity explores a narrower range of temporal patterns before freezing."
+  ],
+  "why": "报告将Shannon entropy作为冻结前转弯的识别指标，有明确的全文依据。原文Results明确报告了Shannon entropy能够区分pre-freeze turns与stable turns，并且仅使用该指标的分类器取得AUC = 0.825，因此这一用途本身没有读错。但是，原文确实存在值得指出的定义差异：Abstract将指标描述为entropy of inter-burst intervals，而Methods明确将Shannon entropy定义为burst midpoint times分布的熵。全文没有解释这两种描述是否对应相同的统计构念，不能自行假定二者等价。此外，原文分别报告Shannon entropy下降和Lempel-Ziv complexity上升，并将后者解释为temporal structure增加。Methods和Results实际上分别给出了两种指标的计算方式，因此不能把它们简单合并为一个统一的神经复杂度指标，也不能仅凭其中一个指标的变化推断整体神经复杂度同向变化。故报告使用Shannon entropy作为预测指标有充分依据，但如果没有说明Abstract与Methods之间的定义差异及Shannon entropy与Lempel-Ziv complexity的区别，其解释就缺少重要限定，可能影响读者对实际测量内容及神经动态机制的理解，判定为partly。指控者对原文定义差异和两种指标变化方向不同的描述均有全文依据，判定为yes。另需说明，未提供报告全文，因此报告第3.5节是否确实完全遗漏这些限定，无法独立核验。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID:42860886（SNr联合刺激的多中心随机对照双盲探索性试验，具体题名未在评审意见中提供）",
+  "pmid": "42860886",
+  "doi": "",
+  "report_says": "第3.1.3节将该研究描述为“多中心双盲试验，45人mITT，较大规模阴性结果”，并据此指出没有证实增加SNr刺激具有群体水平的额外优势。",
+  "judge_says": "原文明确将该研究定义为exploratory multicenter randomized controlled double-blind trial（探索性多中心随机对照双盲试验），FoG-AC主要终点采用P<0.2的探索性评价标准，而非传统确认性试验的显著性阈值。原计划纳入54人，实际mITT为45人。两组90天FoG-AC没有显著差异，不能据此证明联合刺激无效，也不能证明两种方案等效。报告将其概括为较大规模阴性结果，没有充分体现原研究的探索性设计和统计效能限制，可能使读者误认为这是具有充分统计效能的确认性阴性RCT。",
+  "source": "open_g6.json",
+  "pid": "PMID:42860886",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "In this exploratory multicenter randomized controlled double‐blind trial, we recruited patients from our existing cohorts and randomized them 1:1 to STN or STN + SNr.",
+   "The remaining 45 patients (Table 1) were referred to statistical analyses as modified intention‐to‐treat‐cohort (mITT).",
+   "At V6, STN (n = 23) and STN + SNr (n = 22) FoG‐AC outcomes did not differ significantly.",
+   "Our findings extend earlier controlled studies and case series, 12, 17, 19, 26 by showing that, on the group level and in MedON, STN + SNr stimulation cannot be considered more effective than optimized STN for persistent FoG.",
+   "The trial was planned as a non‐confirmatory exploratory study. P‐values were not adjusted for multiple testing and used as descriptive measures.",
+   "We did not prospectively implant patients with SNr, which was the main reason for restricting the sample size and for powering the primary endpoint to P < 0.2 while a confirmatory study would have needed substantially higher sample size."
+  ],
+  "judge_quotes": [
+   "In this exploratory multicenter randomized controlled double‐blind trial, we recruited patients from our existing cohorts and randomized them 1:1 to STN or STN + SNr.",
+   "The Freezing of Gait Assessment Course (FoG‐AC) was the primary endpoint and was evaluated at P < 0.2 with exploratory intent.",
+   "This investigator‐initiated, double‐blind, randomized, controlled multicenter trial (ClinTrials.gov: NCT02588144) intended to enroll 54 patients from 12 expert centers.",
+   "The remaining 45 patients (Table 1) were referred to statistical analyses as modified intention‐to‐treat‐cohort (mITT).",
+   "Given the limited sample size and retrospective patient selection, the alpha for the primary endpoint was set to p < 0.2, and all statistical results were considered as descriptive rather than confirmatory measures.",
+   "The mITT population showed no relevant difference of the FoG‐AC 90 days after randomization (V6) between “STN” and “STN + SNr” group (unadjusted mean ± SD STN: V1 18.0 ± 7.1, V6 18.1 ± 8.9, STN + SNr: V1 14.3 ± 6.3, V6 14.9 ± 11.1; means adjusted for the baseline FOG‐AC value: STN: V6 17.10, STN + SNr: V6 15.94, adjusted Δ = −1.16, 95%CI [−7.03, 4.71], P = 0.692; Hedges g effect size 0.046 95%CI [−0.538, 0.631]) (Fig. 1A).",
+   "On the group‐level, FoG did not differ significantly between STN and STN + SNr, and both treatments were safe.",
+   "Of the entire study cohort, 15 out of 45 patients showed clinically relevant improvement of ≥3 points on the FoG‐AC 25 at V6 compared to baseline (STN (7/23), STN + SNr (8/22 patients))."
+  ],
+  "why": "报告的核心事实和有限结论有全文依据：研究确实是多中心、随机、双盲试验，mITT为45人，90天主要终点两组差异无统计学显著性；而且论文明确指出，STN+SNr在群体水平不能被认为比优化后的STN更有效。因此，如果报告的意思仅仅是该研究没有证实增加SNr刺激具有群体水平的额外优势，这一判断是正确的，并不构成读错。但报告_supported只能判为partly，因为报告没有充分呈现决定结果解释的重要限定：原文明确将研究定位为non-confirmatory exploratory study，主要终点采用P<0.2的探索性标准，统计结果仅作为描述性而非确认性证据；作者还明确说明，确认性研究需要显著更大的样本量。实际45人的mITT不能被等同于具有充分统计效能的确认性阴性RCT。因此，较大规模阴性结果这一概括若使读者认为该研究已经有充分把握排除联合刺激的额外疗效，就会夸大阴性结果的证据强度。指控者的描述有全文依据，故judge_supported为yes。尤其需要区分：两组差异不显著意味着没有证实联合刺激的群体水平额外优势，不等于证明联合刺激无效，也不等于证明两种治疗方案等效。论文没有报告等效性检验；同时，两组均存在达到临床意义改善标准的患者。这些结果不能支持将联合刺激判定为无效或与单独STN刺激等效。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "DOI:10.21203/rs.3.rs-4058858/v1 对应的预印本及其正式发表论文",
+  "pmid": "40504072（正确）；23225012（错误映射）",
+  "doi": "10.21203/rs.3.rs-4058858/v1",
+  "report_says": "将该预印本的 version_of 错误关联到 PMID:23225012，等同于将其正式发表版本指向该 PMID。",
+  "judge_says": "PMID:23225012 实际对应2012年的一般性帕金森病章节，并非该预印本的正式发表版本。该预印本对应的正式论文 PMID 是 40504072。",
+  "source": "blind_S3d3_vs_S4Ra_aX_g56_8d7d66a8",
+  "pid": "DOI:10.21203/rs.3.rs-4058858/v1",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "DOI:10.21203/rs.3.rs-4058858/v1 | The effect of Levodopa and Stimulation on post-surgery Freezing of Gait in STN-DBS Parkinson's Disease patients: a clinical and kinematic analysis (2024)",
+   "Posted Date: April 2nd, 2024",
+   "DOI: https://doi.org/10.21203/rs.3.rs-4058858/v1"
+  ],
+  "judge_quotes": [
+   "DOI:10.21203/rs.3.rs-4058858/v1 | The effect of Levodopa and Stimulation on post-surgery Freezing of Gait in STN-DBS Parkinson's Disease patients: a clinical and kinematic analysis (2024)",
+   "Posted Date: April 2nd, 2024",
+   "DOI: https://doi.org/10.21203/rs.3.rs-4058858/v1"
+  ],
+  "why": "全文只能确认该文的标题、预印本 DOI 和发布日期为2024年4月2日。全文没有出现 PMID:23225012、PMID:40504072 或 version_of 字段，也没有提供该预印本与任何 PubMed 记录之间的关联信息。因此，无法仅凭全文判断报告所称的 version_of 错误关联是否存在，也无法验证指控者关于两个 PMID 分别对应何种出版物的描述。两项说法均缺少全文依据，但也不能据此认定其与全文不符。按照题目规定，应分别判定为 cannot_tell。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "38人 STN 电生理研究（2025年预印本）",
+  "pmid": "40709562（正确）；23225012（错误映射）",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "将该预印本的 version_of 错误关联到 PMID:23225012。",
+  "judge_says": "PMID:23225012 实际对应2012年的一般性帕金森病章节，并非该预印本的正式发表版本。该38人 STN 电生理研究对应的 PMID 是 40709562。",
+  "source": "blind_S3d3_vs_S4Ra_aX_g56_8d7d66a8",
+  "pid": "DOI:10.1101/2025.01.10.632393",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "preprint (which was not certified by peer review)",
+   "this version posted January 11, 2025. ; https://doi.org/10.1101/2025.01.10.632393 doi: bioRxiv preprint"
+  ],
+  "judge_quotes": [
+   "To investigate this, we recorded gait and STN local field potential (LFP) activity in 38 PD patients, both Off and On dopamine medication.",
+   "Here, we investigated the specific link between STN neuronal activity recorded in the posterior and central STN areas, and gait/postural abilities, including FOG, in 38 PD patients."
+  ],
+  "why": "全文明确表明该文是2025年发布的bioRxiv预印本，并明确说明研究对38名帕金森病患者进行了STN局部场电位（LFP）与步态的同步研究。但是，全文没有出现PMID:23225012、PMID:40709562，也没有出现version_of字段或任何将该预印本关联到特定PubMed记录的说明。因此，仅凭全文无法判断报告所称的version_of关联是否错误，report_supported应为cannot_tell。指控者关于该研究是38人STN电生理研究、该文件是预印本的描述得到全文支持；但PMID:23225012是否对应2012年的一般性帕金森病章节，以及PMID:40709562是否对应这项研究，全文均未提供相关信息，无法核实。因此，指控者的整体描述为partly，而不能判定为全文明确支持。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "PMID:23225012，2012年帕金森病综述章节（Parkinson's disease review chapter）",
+  "pmid": "23225012",
+  "doi": "",
+  "report_says": "报告X的附录将不同的预印本关联到PMID:23225012，评委指出至少有六处此类关联。",
+  "judge_says": "PMID:23225012实际对应的是一篇2012年的帕金森病综述章节，而不是报告X所关联的那些不同预印本。因此，报告X存在文献版本与PMID错误关联的问题。",
+  "source": "blind_S3d3_vs_S4Ra_bX_g56_6a9d31b2",
+  "pid": "PMID:23225012",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "STN刺激治疗冻结步态（FOG）的病例研究",
+  "pmid": "10634253",
+  "doi": "",
+  "report_says": "报告X对PMID:10634253作出了来源错配判断，认为其与相关文献来源不匹配。",
+  "judge_says": "PMID:10634253实际对应一项STN刺激治疗冻结步态（FOG）的病例研究，因此报告X关于该文献的来源错配判断需要重新核实。",
+  "source": "blind_S3d3_vs_S4Ra_bX_g56_6a9d31b2",
+  "pid": "PMID:10634253",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "至少六篇未具名预印本，涉及不同研究的版本关联（version_of）",
+  "pmid": "23225012（错误映射的 PMID）",
+  "doi": "10.1101/2025.01.10.632393",
+  "report_says": "报告 X 的结构化参考文献将至少六篇不同预印本的 version_of 错误地指向 PMID:23225012。对于 DOI 10.1101/2025.01.10.632393，正文标注其对应 PMID:40709562，但结构化附录却标注为 PMID:23225012。",
+  "judge_says": "PMID:23225012 实际对应的是一篇2012年发表的一般性帕金森病综述，而不是这些预印本。报告正文与结构化附录对同一 DOI 的 PMID 映射也互相矛盾，造成预印本版本关联和文献去重错误。评审未进一步确认 PMID:40709562 是否为该 DOI 的正确对应记录。",
+  "source": "blind_S3d3_vs_S4Ra_bX_g6_6a9d31b2",
+  "pid": "DOI:10.1101/2025.01.10.632393",
+  "report_supported": "cannot_tell",
+  "judge_supported": "cannot_tell",
+  "report_quotes": [
+   "DOI:10.1101/2025.01.10.632393 | Subthalamic Signature of Freezing of Gait in Parkinson’s Disease (2025)",
+   "preprint (which was not certified by peer review) is the author/funder. All rights reserved. No reuse allowed without permission.",
+   "the copyright holder for this version posted January 11, 2025. ; https://doi.org/10.1101/2025.01.10.632393 doi: bioRxiv preprint"
+  ],
+  "judge_quotes": [
+   "2. Mirelman, A. et al. Gait impairments in Parkinson’s disease. Lancet Neurol 18, 697–708 (2019).",
+   "42. Thevathasan, W. et al. Alpha oscillations in the pedunculopontine nucleus correlate with gait performance in parkinsonism. Brain 135, 148–160 (2012).",
+   "Statistics: Title: 64 characters including spaces, Running title: 26 characters including spaces; Abstract 349 words; Text 5321 words; 6 Figures, 82 References."
+  ],
+  "why": "两项均判为 cannot_tell。第一，附件全文确认了论文标题、DOI及其bioRxiv预印本身份，但没有出现 PMID:40709562、PMID:23225012，也没有报告X的正文或结构化参考文献附录。因此，无法根据论文全文验证报告所称的两个PMID映射是否存在，更无法确认至少六篇预印本被错误关联的情况。第二，指控者关于 PMID:23225012 实际对应2012年一般性帕金森病综述的描述，也无法由附件全文验证。全文参考文献中，2012年的第42条是关于脑脚桥核α振荡与帕金森病步态表现的研究，而第2条《Gait impairments in Parkinson’s disease》发表于2019年。全文没有将这两条参考文献与 PMID:23225012 建立对应关系。因此，不能据此确认或否定指控者关于该PMID实际对应文献的说法，也不能确认报告正文与结构化附录之间的映射矛盾。关键区别是：全文没有提供相关PMID映射证据，并不等于全文证明这些映射错误。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "低频自适应 DBS 预印本（具体题名及 DOI 未在评审意见中提供）",
+  "pmid": "24245947",
+  "doi": "",
+  "report_says": "报告 X 将低频自适应 DBS 预印本映射至 PMID:24245947。",
+  "judge_says": "PMID:24245947 实际对应的是一篇2013年发表的一般性 DBS 综述，而不是低频自适应 DBS 预印本，因此该文献映射错误。",
+  "source": "blind_S3d3_vs_S4Ra_bX_g6_6a9d31b2",
+  "pid": "PMID:24245947",
+  "verdict": "no_fulltext"
+ }
+]

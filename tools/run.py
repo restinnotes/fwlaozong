@@ -600,7 +600,9 @@ def cited_ids(tag):
 def title_sim(a, b):
     w = lambda s: set(re.findall(r"[a-z0-9]+", (s or "").lower())) - {"the", "of", "and", "in", "a", "with", "for", "to", "on"}
     A, B = w(a), w(b)
-    return len(A & B) / max(1, min(len(A), len(B))) if A and B else None
+    # 11-13 S4Ra：原来除以较短标题的词数，短标题"Parkinson's disease"成了 12 篇预印本的"正式版"。改为除以较长标题词数
+    if not A or not B or min(len(A), len(B)) < 5: return None
+    return len(A & B) / max(len(A), len(B))
 
 
 def cmd_bodycheck(args):

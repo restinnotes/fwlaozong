@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：DOI:10.21203/rs.3.rs-9617843/v1 Subthalamic Signatures of Freezing while Turning in Parkinson’s Disease (2026)
+报告的说法：附录将该预印本的version_of指向PMID:23225012；正文又将其作为H2（步态相位性beta去同步化不足机制）的支持证据，报告冻结期低beta ERD缺失。
+指控者认为原文的说法：PMID:23225012实际是Mhyre等人2012年的《Parkinson's disease》章节，与该预印本无关。此外，该研究中Pre-FoG-Turn与Pre-Regular-Turn之间的直接比较未达到统计学显著性，因此不能据此证明低beta ERD异常在冻结发生之前已经出现，报告对其支持H2的证据强度处理不足。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

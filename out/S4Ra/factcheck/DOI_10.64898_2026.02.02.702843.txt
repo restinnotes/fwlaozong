@@ -1,0 +1,963 @@
+DOI:10.64898/2026.02.02.702843 | Body-segment coordination as a new predictor of freezing of gait in people with Parkinson’s disease (2026)
+
+ 1 
+Body-segment coordination as a new predictor of freezing of gait in people 
+with Parkinson’s disease  
+Marco Romanato, PhD,1* Antonio Carlos Costa, PhD,1* Anthony Jannou, MSc,1 Anqi 
+Zhou, PhD, 1 Saoussen Cherif, PhD, 1 Elodie Hainque, MD, PhD, 1,2 David Maltête, 
+MD, PhD,3 Stéphane Derrey, MD, PhD, 4 Mathieu Yeche, PhD,1 Carine Karachi, MD, 
+PhD,1,5 Claire Wyart, PhD,1 Brian Lau, PhD,1 Marie-Laure Welter, MD, PhD.1,6 
+* These authors contributed equally to this work 
+ 
+Authors affiliations 
+1 Sorbonne université, Institut du Cerveau-Paris Brain Institute-ICM, Inserm U1127, 
+CNRS UMR7225, APHP , F-75013 Paris, France 
+2 Neurology Department, Hôpital Pitié-Salpêtrière, AP-HP, F-75013 Paris, France 
+3 Neurology Department, CHU Rouen, Rouen University, F-76000 Rouen, France 
+4 Neurosurgery Department, CHU Rouen, Rouen University, F-76000 Rouen, France 
+5 Neurosurgery Department, Hôpital Pitié-Salpêtrière, AP-HP, F-75013 Paris, France 
+6 Neurophysiology Department, CHU Roue n, Rouen University, F-76000 Rouen, 
+France 
+ 
+Corresponding author:  Pr ML Welter, Paris Brain Institute, Neurophysiology 
+Department, CHU Rouen, 76000 Rouen, France. Mail: marielaure.welter@icm-
+institute.org 
+ 
+Statistics: Title: 15, Abstract: 148, Text: 3988 words, 6 Figures, 1 Table, 73 
+References.  
+ 
+Running title: Effects of STN-DBS on body coordination and FOG in PD 
+ 
+Authors contributions 
+Conception and design of the study: M.R., A.C.C., C.K, B.L, M.L.W.   
+Acquisition and analysis of the data:  M.R, A.C.C., A.J., A.Z., S.C., E.H., D.M., 
+S.D., M.Y ., C.K., C.W., B.L., M.L.W.  
+Drafting a significant portion of the manuscript or figures:  M.R., A.C.C., C.W., 
+B.L., M.L.W.  
+ 
+Competing interests  
+M Romanato, AC Costa, A Jannou, A Zhou, S Cherif, M Yeche, C Wyart, and B Lau 
+declare that they have no known competing financial interests or personal 
+relationships that could have appeared to influence the work reported in this paper.  
+ML Welter received fees from Boston Scientific and Abbott for scientific meetings 
+outside of this work.  
+C Karachi received fees from Boston Scientific and Medtronic for scientific board and 
+meetings, outside of this work.  
+ 
+Data availability statement 
+All relevant data are within the article. Requests for anonymized data should be sent 
+to M.L. Welter at the Paris Brain Institute, 75013 Paris, France. 
+ 
+Code availability statement 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 2 
+All relevant codes used to support this study’s findings are available at the following 
+link https://github.com/marcoromanato/limb_coordination_PDFOG or available from 
+the corresponding author upon request. 
+ 
+Acknowledgments 
+The authors express sincere gratitude to our patients for their dedication in 
+participating in this research. We are also grateful to Sabine Leger and Anais Hervé 
+for their assistance in organizing the research program, and to Dorian Banier, Willy 
+Bertucchi, Claire Olivier, and Julie Bourilhon for their help with patient inclusion and 
+gait recordings. The authors wish to thank Fabrizio de Vico Fallani for insightful 
+discussions during the early stages of data processing. 
+ 
+Funding Sources of the Study 
+This study was supported by research grants from Boston Scientific 
+(N°ISRNMB0015), La Fondation de France (N° 00121421), and the Richard Mille 
+Foundation (RMF, Paris Brain Institute) for the “DBS project - From genetic mutations 
+to motor circuit dysfunctions and recovery”. The funders played no role in study 
+design, data collection, analysis and interpretation of data, or the writing of this 
+manuscript. 
+  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 3 
+Abstract 
+ 
+Freezing of gait (FOG) in Parkinson's disease (PD) involves impaired integration of 
+posture and locomotion with altered body-segment coordination. We measured 
+coordination using gait kinematics during walking in 16 PD patients with FOG, 
+preoperatively with and without dopaminergic medication (OFF/ON-DOPA), and 
+postoperatively with and without subthalamic deep brain stimulation (OFF/ON-DBS). 
+Body-segment coordination was modeled from acceleration-based intersegmental 
+correlations across trunk, pelvis, and limbs. We tested whether coordination metrics 
+predict individual postoperative FOG severity using LASSO regression with nested 
+cross-validation, including preoperative demographics, clinical scores, gait and 
+coordination metrics. Preoperatively, DOPA decreased trunk-pelvis-upper-limb 
+coordination but increased crossed upper-lower-limbs coupling; while STN-DBS 
+selectively increased inter-upper-limb coordination, with DOPA- and STN-DBS-
+induced changes being correlated. Whole-body coordination predicted individual 
+postoperative FOG severity, with the most important couplings being the trunk-pelvis 
+and pelvis-lower-limb. Body-segment coordination captures clinically relevant gait 
+metrics in PD, highlighting coordination as a potential biomarker for patient 
+stratification and treatment response. 
+Keywords: Parkinson’s disease, freezing of gait,  limb coordination, subthalamic 
+nucleus, deep-brain stimulation   
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 4 
+Introduction 
+Body-segment coordination is crucial for natural displacement in the environment, 
+enabling the integration of posture and movement to adapt to anticipated and 
+unexpected changes, such as obstacles, directional adjustments, or social 
+interactions. Across vertebrates, body-segment coordination is closely linked to the 
+mode of displacement. In anamniote species, swimming relies on head-to-tail 
+coordination1–3. In mammals, locomotion is limb-based rather than undulatory, relying 
+on right-left alternation and rostro-caudal sequencing of limb movements 4. In 
+humans, bipedal upright posture adds an additional level of complexity, requiring 
+continuous coordination between lower-limb (LL) movement and postural control to 
+ensure smooth transitions between static and dynamic walking phases
+5.  
+Neural structures involved in limb pattern coordination are partially conserved 
+across species and include spinal central pattern generators (CPGs), the 
+mesencephalic locomotor region (MLR), sensory feedback, and intersegmental 
+coupling3,6, and the cortico-basal ganglia networks, including the supplementary 
+motor area (SMA), which connects with the contralateral motor cortex 7. A tight 
+functional coupling between the MLR and reticulospinal-CPGs pathways plays a 
+critical role in gait initiation, modulation of locomotor frequency, postural adjustments, 
+and LL coordination8,9. In humans, an additional level of coordination exists between 
+upper (UL) and LL during walking, with UL movements leading LL patterns 10–12. This 
+organization supports the concept of a dual-oscillator system for arm-leg coordination 
+mediated by long propriospinal neurons
+13.  
+In Parkinson’s disease (PD), the adaptive integration of posture and 
+locomotion is progressively impaired. One of the earliest motor hallmarks of PD is 
+slowed walking with reduced arm swing, reflecting nigrostriatal dopaminergic 
+degeneration and basal ganglia dysfunction associated with less efficient neural 
+coding
+14–16, and a progressive disruption of intersegmental functional connectivity 
+within the spinal cord 17. As the disease progresses, postural instability, falls, and 
+episodes of freezing of gait (FOG) emerge 18,19. FOG is characterized by sudden, 
+episodic arrests of forward walking, frequently triggered by gait initiation, turning, or 
+dual-task situations, and by a functional disconnection between preparatory 
+programming and motor execution
+19–22. Altered coordination during walking has also 
+been reported in PD patients with FOG23–25. Discoordination of the LL, with disrupted 
+reciprocity, timing and muscle activation pattern, has been described and worsens 
+under complex walking conditions
+26–28. Coordination deficits are not restricted to the 
+LL with motor blocks of the UL during rapid alternating movements 29, and 
+discoordination of all four limbs has also been reported during tasks such as 
+crawling, swimming or dancing 30,31. In this context, increased UL-LL coupling could 
+reflect a compensatory strategy aimed at stabilizing gait by reducing cortical drive 
+when automatic interlimb coordination is impaired 12,32, highlighting the possible role 
+of body-segment coordination breakdown in the pathophysiology of FOG.  
+Despite these advances, FOG remains therapeutically challenging. Its 
+response to dopaminergic medication is often incomplete or inconsistent 22, and deep 
+brain stimulation (DBS) outcomes are highly variable33,34. DBS of the MLR has shown 
+limited efficacy35–37, and optimal STN-DBS can fail to relieve, or even worsen, FOG 
+and LL discoordination38,39.  
+Here, we aimed to assess the effects of dopaminergic medication and STN-
+DBS on body-segment coordination in PD patients with FOG, and to relate 
+coordination metrics to FOG severity to identify predictors of individual postoperative 
+outcomes. To this end, we derived a holistic representation of whole-body 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 5 
+coordination from kinematic recordings obtained during walking in PD patients and 
+examined its relationship with FOG severity and treatment-induced changes.  
+ 
+ 
+  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 6 
+Results 
+Complete preoperative (PREOP) and postoperative (POSTOP) gait kinematic 
+datasets were obtained from 16 PD patients (see supplementary materials). In these 
+patients, both DOPA (PREOP) and STN-DBS (POSTOP) significantly reduced the 
+severity of parkinsonian motor disability (UPDRS III) and gait and balance disorders 
+(GABS). Motor and gait scores were significantly lower in the ON-DOPA PREOP 
+condition than in the ON-DBS POSTOP condition ( Figure S2 ). FOG severity was 
+also significantly reduced following STN-DBS, with a mean FOG-Q reduction of 47%. 
+However, individual responses were highly variable, ranging from a 9% worsening to 
+a 96% improvement in FOG-Q score (Figure S2).   
+ 
+Effects of dopaminergic medication and STN-DBS on gait kinematic 
+parameters 
+Pace (RPC1) significantly improved with DOPA PREOP (OFF vs ON-DOPA, p = 
+0.004) and with STN-DBS POSTOP (OFF vs ON-DBS, p = 0.014), with no significant 
+differences between DOPA and STN-DBS (p=0.617, Figure 2C).  
+Rhythm significantly improved with DOPA PREOP (OFF- vs ON-DOPA, p < 
+0.001) but was not significantly modified by STN-DBS POSTOP (OFF vs ON-DBS, p 
+= 0.0684). Nevertheless, rhythm did not differ significantly between the ON-DOPA 
+PREOP and ON-DBS POSTOP conditions (p = 0.068, Figure 2C).  
+In contrast, dynamic balance significantly worsened with DOPA PREOP (OFF- 
+vs ON-DOPA, p = 0.037). No significant change in dynamic balance was observed 
+with STN-DBS POST-OP (OFF- vs ON-DBS, p = 0.753), but dynamic balance scores 
+were significantly better ON-DBS POST-OP than in the ON-DOPA PREOP condition 
+(p = 0.037, Figure 2C). 
+Gait variability and gait asymmetry were not significantly modified by DOPA 
+(PREOP) or STN-DBS (POSTOP) (p > 0.05 for all comparisons, Figure S3).  
+ 
+Effects of dopaminergic medication and STN-DBS on body-segment 
+coordination  
+Across the 6 anatomical groups, 15 pairwise body-segment coordination features 
+were derived (Figure 1, Figure S4 ). No significant changes were observed in the 
+whole-body coordination score either PREOP between OFF- and ON-DOPA 
+conditions (p = 0.094), POSTOP between OFF- and ON-DBS conditions (p = 0.655), 
+or when comparing ON-DOPA PREOP and ON-DBS POSTOP conditions (p = 0.094, 
+Figure 3A).  
+PREOP DOPA significantly decreased coordination between the trunk and MA 
+UL (p < 0.001), the trunk and LA UL (p < 0.001), the pelvis and MA UL (p = 0.001), 
+the pelvis and LA UL (p = 0.007), and bilateral UL (“UL MA – UL LA”, p = 0.022). 
+Conversely, DOPA significantly increased coordination between the MA UL and LA LL 
+(p = 0.015), between the LA UL and MA LL (p = 0.004), and between bilateral LL (“LL 
+MA – LL LA”, p = 0.022), with no other significant changes (Figure S4).  
+POSTOP, STN-DBS significantly increased bilateral UL coordination (“UL MA 
+– UL LA”, p = 0.029), with values significantly higher than those in the ON-DOPA 
+PREOP condition (p = 0.008), as well as coordination between the MA UL and the LA 
+LL (“UL MA – LL LA”, p = 0.009). This latter feature did not differ significantly from the 
+ON-DOPA PREOP condition (p = 0.29). No other body-segment coordination 
+features were significantly modified by STN-DBS (Figure S4). 
+When directly comparing ON-DOPA PREOP vs ON-DBS POSTOP , significant 
+differences in coordination were observed for “Trunk – UL MA” (p < 0.001), “Trunk – 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 7 
+UL LA” (p = 0.001), “Pelvis – UL MA” (p < 0.005), “Pelvis – UL LA” (p = 0.007), and 
+“UL LA – LL MA” (p = 0.006), with no additional differences (Figure S4).  
+ 
+Relationship between FOG severity and parkinsonian motor disability and 
+body-segment coordination  
+We found a significant negative correlation between PREOP FOG severity and the 
+whole-body coordination score ON-DOPA (r = -0.64, 95% CI [-0.81, -0.35], p < 0.006, 
+Figure 3B, Figure S5A), with no other significant correlations.   
+The UPDRS III score was also significantl y negatively correlated with the “UL 
+MA – LL LA” coordination feature, decreasing 13 points per 0.1-point increase in this 
+coordination metric (coefficient = -132.64, p = 0.031). This relationship was 
+consistent across treatment conditions (“UL MA – LL LA” * Condition [OFF-DOPA], p 
+= 0.778; Condition [ON-DOPA], p = 0.275; Condition [OFF-DBS], p = 0.618, 
+compared to Condition [ON-DBS], Figure 3C, Figure S5B).  
+    
+Prediction of the effects of STN-DBS on FOG 
+Using a nested cross-validation LASSO approach with all PREOP data 
+(demographics, clinic, gait, coordination scores) to identify predictors of POSTOP 
+FOG severity, the model yielded R
+2 = 0.20 and RMSE = 4.77 ( Figure 4). We found 
+that both PREOP whole-body coordination score OFF-DOPA (3.22 ± 0.60) and 
+GABS score ON-DOPA (2.19 ± 0.78) were retained in 100% of folds, followed by 
+UPDRS III OFF-DOPA (-0.67 ± 0.56; 81.3% of folds) and age at inclusion (0.85 ± 
+0.82; 68.8% of folds). Gait domain metrics were retained in fewer than 50% of outer 
+cross-validation folds, contributing minimally to model stability while reducing overall 
+performance. Excluding the gait metrics from the model improved predictive accuracy 
+(R2 = 0.66, RMSE = 3.40), and the retained predictors remained identical ( Figure 
+S6). 
+Restricting the analysis to body-segment coordination metrics, four predictors 
+were retained in 100% of outer cross-validation folds: “Trunk – Pelvis” coordination 
+measured OFF- and ON-DOPA (OFF-DOPA coefficient = 2.92 ± 0.90; ON-DOPA 
+coefficient = −3.22 ± 0.91), “Pelvis – LL MA” OFF-DOPA (coefficient = 4.01 ± 0.55), 
+and “Pelvis – LL LA” ON-DOPA (coefficient = −1.77 ± 0.38), identifying the “Trunk-
+Pelvis-LLs” axis as a key coordination metric. This model yielded an R
+2 of 0.27 and 
+an RMSE of 3.66 under leave-one-out cross-validation (Figure 5A).  
+Visual inspection of body-segment coordination dynamics across the gait cycle 
+in the best responder, the worst responder, and a healthy control revealed that the 
+best responder's trajectory patterns closely resembled those of the healthy subject, 
+whereas the worst responder's patterns were markedly different. These differences 
+were more pronounced in the OFF-DOPA condition, with partial normalization 
+observed in the ON-DOPA condition (Figure 5B). 
+Finally, we examined the relationships between POSTOP FOG severity and 
+PREOP DOPA effects on both whole-body and “Trunk – Pelvis – LLs” coordination, 
+which were found to predict POSTOP FOG severity. For “Trunk – Pelvis – LLs” 
+coordination, analyses were restricted to model-selected metrics and quantified as 
+mean absolute values across the trunk, pelvis, and LLs segments. POSTOP FOG 
+was predicted with high accuracy by PREOP DOPA-induced changes in both the 
+whole-body (R
+2 = 0.48, RMSE = 4.06) and “Trunk – Pelvis – LLs” (R2 = 0.78, RMSE 
+= 2.35) coordination scores (Figure 6A). The POSTOP effects of STN-DBS on these 
+coordination scores were accurately predicted by PREOP DOPA effects on the same 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 8 
+scores (whole-body: R 2 = 0.35, RMSE = 0.01; “Trunk – Pelvis – LLs”: R 2 = 0.59, 
+RMSE = 0.01) (Figure 6B). 
+ 
+Discussion 
+In this study, we assessed body-segment coordination during gait in PD patients with 
+FOG and whether coordination metrics predict individual postoperative FOG 
+outcomes. We found that dopaminergic medication and STN-DBS exert distinct and 
+partially dissociable effects on gait domains and intersegmental coordination. Specific 
+body-segment coordination patterns, rather than global spatiotemporal gait 
+parameters, are associated with FOG severity. We showed that the preoperative 
+coordination profile along “Trunk – Pelvis – lower limbs” axis and its modulation by 
+dopaminergic medication predict the magnitude and direction of FOG response to 
+STN-DBS.    
+ 
+ Consistent with previous reports, both dopaminergic medication and STN-DBS 
+significantly improved gait pace, reflected by increased gait speed and step length, 
+and strengthened cortico-muscular connectivity
+14,39–43. Rhythm, however, improved 
+only with dopaminergic medication, whereas STN-DBS did not significantly affect this 
+domain. This dissociation supports the notion that temporal gait regulation remains 
+partially dopamine-dependent and may rely on basal ganglia–cortical loops that are 
+not fully restored by STN-DBS
+16,44. In contrast, dynamic balance worsened with 
+dopaminergic medication but was preserved with STN-DBS. This finding aligns with 
+previous observations that levodopa may worsen postural instability by increasing 
+movement amplitude without adequately scaling postural control
+18,40,45. Conversely, 
+STN-DBS may stabilize balance by modulating brainstem and axial control networks, 
+possibly via downstream effects on the mesencephalic locomotor region and 
+reticulospinal pathways 6,33. Lastly, neither dopaminergic medication nor STN-DBS 
+significantly altered gait variability or asymmetry. This result is consistent with prior 
+work showing that variability-related gait features are only weakly responsive to 
+dopamine and often persist despite optimal medical or surgical treatment, particularly 
+in patients with FOG 
+46,47.  
+Although whole-body coordination remained globally unchanged across 
+conditions, both dopaminergic medication and STN-DBS induced selective, 
+directionally specific modifications in intersegmental coupling. In PD with FOG, 
+reduced trunk mobility and increased arm-leg coupling have been previously 
+reported32,48,49 and thought to reflect a mechanism that reduces cortical drive and 
+stabilizes gait through interlimb entrainment when automaticity is compromised11,15,23. 
+In our patients, dopaminergic medication reduced coupling between the trunk-upper 
+limb and pelvis-upper limb while increasing coupling between the upper-lower limb 
+and bilateral lower-limb. This pattern suggests a decoupling of upper- and lower-body 
+coordination and a redistribution of coordination away from axial and proximal 
+segments toward distal limb coupling under dopaminergic medication 50. In contrast, 
+STN-DBS predominantly increased bilateral UL coordination and certain UL-LL 
+couplings, thereby better restoring four-limb coordination, with limited effects on 
+trunk-pelvis interactions. This pattern aligns with previous reports of arm-swing and 
+UL coordination normalization with STN-DBS, while axial and postural control may 
+remain only partially improved
+41,51. Together, these findings suggest that 
+dopaminergic medication and STN-DBS act on overlapping but non-identical 
+components of the locomotor network, with dopaminergic medication acting mainly 
+on the cortico-basal ganglia networks and STN-DBS acting on descending locomotor 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 9 
+networks through direct modulation of the MLR-reticulospinal pathways 52,53 that 
+control spinal CPG activity and four-limb coordination patterns54,55.   
+ 
+Among all coordination features, only UL-LL coupling between the most 
+affected UL and the least affected LL was significantly associated with parkinsonian 
+motor disability, independent of treatment condition. This result is consistent with the 
+link between disease severity and asymmetric interlimb coordination 12, with the most 
+affected UL driving this effect 25, and impaired integration across body segments 47,48. 
+More interestingly, FOG severity was consistently associated with whole-body 
+coordination, confirming the role of higher-order breakdown in postural-locomotor 
+integration and inter-segmental coordination in FOG
+19,22,31,56. 
+ FOG severity was substantially improved by STN-DBS. However, as 
+previously reported, responses varied widely among individuals 38,57. To date, reliable 
+predictors of postoperative FOG outcomes are limited to the presence of 
+preoperative FOG itself 33. In this context, the identification of whole-body 
+coordination, assessed preoperatively both OFF- and ON-DOPA, as the strongest 
+predictor of postoperative FOG severity is novel. We also identified trunk-pelvis-LL 
+couplings as critical predictors of postoperative FOG. These features directly reflect 
+axial-locomotor integration, a domain previously implicated in FOG pathophysiology 
+yet rarely quantified within a unified framework 56. The observation that best 
+responders exhibited coordination resembling that of healthy controls, whereas worst 
+responders did not, supports the notion that preserved or compensable axial-lower 
+limb coordination is a prerequisite for favorable DBS outcomes.  We also observed 
+that postoperative FOG severity and STN-DBS-induced changes in whole-body 
+coordination correlated with dopaminergic-induced changes in this coordination, 
+specifically in the Trunk – Pelvis – lower-limbs coordination. This suggests that 
+coordination integrity reflects the functional state of distributed locomotor networks, 
+including the basal ganglia, brainstem, and spinal circuits
+4,6,58, and that dopaminergic 
+responsiveness of coordination, rather than gait speed or rhythm alone, may serve as 
+a marker of the locomotor network's capacity to respond to DBS. This also highlights 
+the potential benefits of modulating spinal circuits to improve body-segment 
+coordination and FOG
+59.  
+ 
+Assessing FOG severity remains a major methodological challenge in PD. 
+FOG is episodic, context-dependent, and often inconsistently expressed during 
+standardized assessments, and clinical scales show limited consistency 22,60. In 
+response to these issues, some groups aimed to develop wearable sensors to 
+reliably quantify gait and FOG, including inertial measurement units and 
+accelerometers placed on the trunk, pelvis, or LL
+61–64. These approaches primarily 
+focus on event detection or local gait features rather than integrative coordination 
+metrics and often require implementing individual algorithms to detect FOG episodes 
+for a single patient 65. Our findings complement these approaches by showing that 
+FOG severity can be inferred from coordination metrics derived from a limited set of 
+body segments, namely the trunk, pelvis, and LL. Importantly, this approach does not 
+require the explicit observation of freezing episodes and substantially reduces the 
+number of sensors needed. Our approach could be used for real-world daily-life 
+assessment and monitoring of FOG severity and measures of treatment effects, 
+addressing a critical unmet need in both clinical practice and interventional trials for 
+FOG. 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 10 
+Limitations 
+This study has several limitations. The sample size, particularly for postoperative 
+analyses, was relatively small, which may limit statistical power and generalizability, 
+although nested cross-validation and sparse modeling were used to reduce 
+overfitting. Gait was assessed in a controlled laboratory environment, which may not 
+fully capture the contextual variability of FOG in daily life, despite our coordination-
+based approach allowing inference of FOG severity even in the absence of overt 
+freezing episodes. Finally, although informative coordination metrics were derived 
+from a reduced set of body segments, validation using wearable sensor–based 
+recordings is required before clinical translation. 
+ 
+Conclusion 
+Taken together, these results highlight body-segment coordination as a clinically 
+relevant, and potentially predictive marker of gait dysfunction and FOG in PD. 
+Coordination metrics capture the integrative control of posture and movement, which 
+appears central to both FOG pathophysiology and treatment response. From a 
+clinical perspective, preoperative assessment of body-segment coordination may 
+help identify patients at risk of poor FOG outcomes after STN-DBS and guide patient 
+selection, counseling, and postoperative management.  
+ 
+ 
+  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 11 
+Methods 
+Participants  
+Twenty patients with PD (14F/6M, mean age ± SD = 61.5 ± 5.1 years, body mass 
+index (BMI) = 28.3 ± 6.8 kg/cm
+2, Table 1) scheduled for STN-DBS were recruited at 
+Pitié-Salpêtrière and Rouen University Hospitals as part of a clinical research trial 
+(MAGIC study, CHU ROUEN sponsor) 40. Inclusion criteria were: 1) diagnosis of PD 
+according to the Unified Parkinson’s Disease Society Brain Bank criteria; 2) eligibility 
+for bilateral STN-DBS, including a > 50% improvement in motor disability with L-dopa 
+treatment; 3) presence of severe FOG in the absence of dopaminergic medication 
+(OFF-DOPA condition, item 2.13 of the Movement-Disorders Society Unified 
+Parkinson’s Disease Rating Scale [MDS-UPDRS]  > 0)
+66; and 4) absence of active 
+and severe psychiatric or neurological disorders, and dementia (Mini-Mental Sate ≥  
+24/30). Ten healthy controls (HCs) were also included as a reference group (GB-
+MOV study, INSERM sponsor, 1F/9M, mean age = 53 ± 6.5 years, BDI = 23.9 ± 2.2 
+kg/cm2)67.  
+All studies complied with the Declaration of Helsinki and Good Clinical Practice 
+guidelines. Ethics approvals were obtained (MAGIC trial: N° 2019-A01717-50; GB-
+MOV trial: N° 2012_A00225-38). Trials were registered on a clinical trial website 
+(ClinicalTrials.gov: NCT04223427 and NCT 01682668), and all participants provided 
+signed written informed consent. 
+ 
+Gait data recordings and clinical assessment 
+Gait was recorded at the Paris Brain Institute Physiology and Analysis of Movement 
+(PANAM) core facility using a three-dimensional motion capture system (200 Hz, 
+Vicon® Oxford, UK). Thirty-two retroreflective markers were placed on anatomical 
+landmarks following the International Society of Biomechanics (ISB) marker set 
+(Figure 1A)68 and synchronized with a force platform (0.9x1.8 m, 1000 Hz, Advanced 
+Medical Technology Ind, Waterform, MA, USA). Each walking trial began with the 
+participant standing still on the force platform.  Following a visual cue, participants 
+were instructed to start walking, walk 6-8 meters at their preferred speed, make a 
+180° turn, and return to the starting position. An average of 20 trials were recorded 
+per participant.  
+For PD patients, the severity of FOG during daily activities (with usual 
+antiparkinsonian medication) was assessed using the FOG Questionnaire (FOG-
+Q)
+69, before (PREOP) and 6 months after STN-DBS (POSTOP). We also assessed 
+the severity of gait and balance disorders and global motor disability by using the 
+MDS-UPDRS Part III66 and the Gait and Balance Scale (GABS, 14 items designed to 
+assess gait, FOG, gait cycle, balance, and posture during examination) 70. Gait 
+parameters, MDS-UPDRS part III and GABS scores were assessed 1) PREOP in the 
+OFF-DOPA condition (withdrawal of 12 hours of dopaminergic treatment) and in the 
+ON-DOPA condition (after administration of a suprathreshold dose of L-dopa), and 2) 
+POSTOP in the OFF-DBS condition (switching OFF the DBS for one hour) and in the 
+ON-DBS condition (usual stimulation parameters), both OFF-DOPA.  
+ 
+Gait data processing 
+Kinematic data were preprocessed using Vicon Nexus software (version 2.14.0). 
+Marker trajectories were filtered using a low-pass Butterworth filter with a 5 Hz cut-off 
+frequency. Trajectory gaps shorter than 50 frames (0.25s) were reconstructed using 
+an inter-marker correlation-based algorithm
+71.  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 12 
+Gait cycles were manually defined from heel strike to the subsequent 
+ipsilateral heel strike using the vertical displacement of the calcaneus marker, and the 
+following spatiotemporal parameters were computed using custom Matlab (R2023b, 
+MathWorks, Natick, MA, USA) scripts: step time, swing time, stance time, cadence, 
+step length, gait speed, and double support time. 
+ 
+Quantification of body-segment coordination 
+To model body-segment coordination, we estimated correlations among accelerations 
+of body markers. We measured the accelerations of 19 markers: the 7th cervical 
+vertebra, bilateral shoulders, elbows, wrists, anterior (ASI) and posterior iliac spines 
+(PSI), knees, ankles, heels, and toes (Figure 1A). Acceleration signals were 
+estimated using a Savitsky-Golay filter (window length = 10 frames, polynomial order 
+= 3). The first gait cycles were segmented, and 19x19 correlation matrices were 
+computed to quantify inter-marker coordination along the mediolateral, 
+anteroposterior, and vertical axes
+72 (Figure 1B). The mean absolute value across the 
+three axes was computed to obtain a summary coordination matrix ( Figure 1C). The 
+average of the upper-triangular elements of this matrix was defined as a whole-body 
+coordination index ( Figure 1C). The 19 markers were then grouped into six major 
+anatomical segments (Figure 1D): UL (elbow and hand), trunk (shoulders and 7th 
+cervical vertebra), pelvis (ASI and PSI), and LL (knee, ankle, calcaneum, and toe). 
+UL and LL were pooled according to the most affected (MA) and least affected (LA) 
+sides based on clinical evaluation. We averaged the absolute values of pairwise 
+correlations within each anatomical segment to yield a reduced feature space of 15 
+intersegmental coordination features (Figure 1E). 
+ 
+Statistical analysis 
+We first assessed the effects of dopaminergic medication PREOP and STN-DBS 
+POSTOP on gait spatiotemporal parameters and body-segment coordination. Gait 
+parameters were aggregated by session (PREOP or POSTOP) and experimental 
+condition (ON/OFF DOPA or ON/OFF STN-DBS). For each aggregation, mean 
+values, variability (standard deviation), and interlimb asymmetry were computed. 
+Asymmetry was quantified using a log-transformed ratio ( 100×
+| ln(R/L)|) averaged 
+across right (R) and left (L) strides). After removing highly correlated parameters (r > 
+0.9, Figure S1A-B), 14 gait measures were retained (Figure 2A-B). These measures 
+were reduced into five gait domains, i.e., pace, rhythm, balance, variability and 
+asymmetry46, using rotated principal component analyses (RPC, Figure 2A-B).  
+For gait domain analyses across patients and trials, 143 steps were included 
+in the OFF-DOPA condition, 237 in the ON-DOPA, 207 in the OFF-DBS, and 275 in 
+the ON-DBS. For body-segment coordination analyses across patients and trials, 147 
+steps were included in the OFF-DOPA condition, 156 in the ON-DOPA, 145 in the 
+OFF-DBS, and 155 in the ON-DBS conditions.  
+Comparisons of gait domains and body-segment coordination scores across 
+conditions were performed using a paired nonparametric permutation test (10.000 
+permutations) for: 1) OFF-DOPA vs ON-DOPA PREOP; 2) OFF-DBS vs ON-DBS 
+POSTOP; and 3) ON-DOPA PREOP vs ON-DBS POSTOP . False discovery rate 
+(FDR) correction was applied using the Benjamini & Hochberg method, and statistical 
+significance was set at p < 0.05.  
+Associations between FOG severity (FOG-Q) and body-segment coordination 
+scores were evaluated using univariate Pearson’s correlation tests, both PREOP 
+(OFF/ON DOPA) and POSTOP (OFF/ON-DBS). Given the limited sample size (n = 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 13 
+16) and potential non-linearities, correlations were estimated using bias-corrected 
+and accelerated bootstrap confidence intervals with 10.000 iterations and FDR 
+corrected. We also assessed associations between parkinsonian motor disability 
+(UPDRS part III) and body-segment coordination scores using a linear mixed-effects 
+model with fixed effects including the interaction between the coordination score and 
+treatment condition (PREOP OFF/ON DOPA and POSTOP OFF/ON-DBS), and 
+random intercepts to account for repeated measures within participants.  
+To identify PREOP predictors of POSTOP FOG severity, we developed a 
+sparse linear model with LASSO regularization and a nested cross-validation 
+framework 
+73. The model aimed to identify predictors of POSTOP FOG severity from 
+PREOP demographics (i.e. , age, disease duration, and BMI), clinical scores (i.e., 
+FOG-Q PREOP, UPDRS III OFF/ON-DOPA, GABS OFF/ON-DOPA), gait domains 
+(i.e., pace, rhythm, balance, variability, and asymmetry OFF/ON-DOPA), and 
+coordination measures (i.e. , whole-body coordination OFF/ON-DOPA). Model 
+validation used an outer leave-one-out cross-validation loop to estimate 
+generalization performance and an inner loop to tune regularization parameters. Out-
+of-fold predictions were aggregated, and model performance was quantified using 
+the coefficient of determination (R 2) and root mean squared error (RMSE) (see 
+supplemental material, supplementary methods section). We also considered the 
+number of times a coefficient was retained across outer folds. An additional predictive 
+model was implemented using the same nested cross-validation framework, with 
+body-segment coordination scores as the sole predictors of individual POSTOP FOG 
+severity.  
+Following model development, we examined the relationships between 1) 
+PREOP dopaminergic-induced changes in coordination metrics and POSTOP FOG 
+severity, and 2) PREOP dopaminergic- and POSTOP STN-DBS-induced changes in 
+these metrics, using leave-one-out cross-validated linear regression. Out-of-fold R
+2 
+and RMSE were reported. 
+All analyses were conducted using custom Python scripts (3.12.1; scikit-learn, 
+NumPy, pandas, SciPy).  
+ 
+  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+Figure legends 
+ 
+Figure 1. Body-segment coordination modeling. 
+A. Schematic of the marker set. The mediolateral (x), anteroposterior (y), and vertical 
+(z) position trajectories of 19 markers ( i.e., the 7 th cervical vertebra, shoulders, 
+elbows, wrists, anterior and posterior iliac spines, knees, ankles, calcanei, and toes) 
+were captured, and their acceleration time series during the gait cycle were estimated 
+(normalized by the temporal length of the gait cycle for visualization purposes).  
+B. Acceleration time series were linearly correlated to produce a 19x19 correlation 
+matrix for each axis. A final correlation matrix C was obtained by averaging the 
+absolute values of the correlation matrix elements across the three dimensions. 
+C. Correlation matrix C is obtained by averaging the absolute values across the three 
+dimensions. The average of its upper triangular matrix is used as a score of whole-
+body coordination. 
+D. Schematic showing how markers are aggregated to define major body segments. 
+E. Final body segments correlation matrix. Aggregation of a segment pair is used as 
+a score for the pairwise correlation of body segments. 
+ 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 
+Figure 2. Principal components analysis on spatiotemporal parameters of 
+walking in PD patients and effects of dopaminergic medication and STN-DBS. 
+A. Variance explained by each rotated ( varimax) component and the cumulative 
+percentage of explained variance. 
+B. Factor loadings for each component included in the RPC analysis. 
+C. Graphs showing scores for pace (RPC1), rhythm (RPC2), and balance (RPC3) 
+(large colored dots) obtained PREOP OFF-DOPA (red) and ON-DOPA (pink), and 
+POSTOP OFF-STN-DBS (dark blue) and ON-STN-DBS (light blue). Each small gray 
+dot represents one individual PD patient. The dashed gray lines represent the 
+average of 10 healthy controls included as references. *p<0.05, **p<0.01, ***p<0.001  
+ 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 
+Figure 3. Effects of dopaminergic medication and STN-DBS on body-segment 
+coordination in PD patients, and the relationship with FOG severity and 
+Parkinson motor disability. 
+A. The graph shows scores for whole-body coordination (large colored dots) PREOP 
+OFF-DOPA (red), ON-DOPA (pink), POSTOP OFF-STN-DBS (dark blue), and ON-
+STN-DBS (light blue). Each small gray dot represents one individual PD patient. The 
+dashed gray line represents the average of 10 HC. *p<0.05, **p<0.01, ***p<0.001 
+B. Scatterplot of the linear correlation between FOG PREOP and the whole-body 
+coordination score ON-DOPA. Each point represents one individual. Correlation 
+value, 95% confidence interval, and FDR-corrected p-value. 
+C. Scatterplot of the linear correlation analysis between the MDS-UPDRS III scores 
+and the “MA UL - LA LL” coordination score. Each point represents one individual, 
+with PREOP OFF-DOPA (red), ON-DOPA (pink), POSTOP OFF-STN-DBS (dark 
+blue), and ON-STN-DBS (light blue). 
+ 
+  
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 
+ 
+Figure 4. Relationships between preoperative demographic, clinical, gait 
+domains and coordination scores, and the effects of STN-DBS on FOG severity. 
+Coefficients stability plot of the model. Dots represent the mean coefficient across 
+each fold, and error bars show the standard deviation, with size indicating frequency. 
+Red dots indicate positive associations and blue dots negative associations. Out-of-
+fold R
+2 and RMSE are reported in the figure. X-axis labels are color-coded by feature 
+type: coordination metrics (yellow), clinical scores (blue), demographics (green), and 
+gait domains (magenta). The scatter plot shows true versus predicted FOG-Q 
+POSTOP scores, color-coded by FOG-Q PREOP scores (blue: mild severity, yellow: 
+high severity); the dashed black line represents the identity line. 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+Figure 5. Relationship between body-segment coordination and the effects of 
+STN-DBS on FOG severity. 
+A. Coefficients stability plot of the model. Each dot represents the mean coefficient 
+across folds between body-segment coordination scores and POSTOP FOG severity 
+with STN-DBS. Error bars show standard deviation, and size indicates the frequency 
+of selection across folds. Red dots indicate positive associations, and blue dots 
+indicate negative associations. Out-of-fold R
+2 and RMSE are reported within the 
+figure. The scatter plot shows true versus predicted FOG-Q POSTOP, color-coded by 
+FOG-Q PREOP scores; the dashed black line represents the identity line. Best and 
+worst responders are highlighted with blue and red circles, respectively. 
+B. Position over time on the vertical plane of one representative marker per model-
+selected segment (‘C7’ for ‘trunk’, ‘MA-ASI’ for ‘pelvis’, ‘MA knee’ for ‘MA - LL’) for the 
+best (
+Δ FOG-Q% = 96.2%, in blue) and worst ( Δ FOG-Q% = -9.1%, in red) FOG 
+responders, against HS (in gray), PREOP both OFF-DOPA (left) and ON-DOPA 
+(right). Dashed lines are the mean over each participant’s trials; shaded areas are the 
+± standard error. For visualization, curves were z-scored and time-normalized over 
+100 samples to be expressed as a percentage of the gait cycle. 
+  
+ 
+ 
+ 
+Figure 6. Relationship between postoperative FOG severity, the effects of STN-
+DBS on body-segment coordination, and preoperative DOPA effects on body-
+segment coordination. 
+A. Scatterplot of the relationship between the POSTOP FOG-Q and PREOP DOPA-
+induced change in the whole-body (left) and “Trunk – Pelvis – LL” (right) coordination 
+scores. Each dot represents one individual PD patient, color-coded by the FOG-Q 
+PREOP (reversed viridis colormap). 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 19 
+B. Same analysis of the relationship between the POSTOP effects of STN-DBS on 
+these body-segment coordination scores and the PREOP effects of DOPA. Each dot 
+represents one individual PD patient, color-coded by the FOG-Q POSTOP (reversed 
+plasma colormap).   
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 20 
+ 
+Table 1. Participants demographics at inclusion. 
+Patient N° Age 
+(y) 
+Weight  
+(kg) 
+Height  
+(cm) 
+BMI  
+(kg/m2) Sex 
+Disease 
+duration  
+(y) 
+MDS-UPDRS III  
+OFF/ON DOPA 
+Axial Score  
+OFF/ON DOPA 
+GABS  
+OFF/ON DOPA FOG-Q MoCA LEDD 
+(mg/day) 
+P01-01 54 103 181 31.4 F 11 64/14 20/3 55/9  22 26 1545 
+P01-02 63 46 157 18.7 M 11 34/7  08/2 17/6 24 26 800 
+P01-03 51 57 160 22.3 F 10 56/20 17/10 41/9 35 25 2200 
+P01-04 48 61 171 20.9 M 12 39/9 12/4 32/7 33 30 1500 
+P01-05 59 100 162 38.1 F 12 66/14 18/3 53/14 31 28 1300 
+P01-06 65 64 169 22.4 F 11 68/11 13/2 39/10 35 29 950 
+P02-01 60 101 175 33.1 M 13 43/10 11/3 32/4 25 26 1630 
+P02-02 63 82 161 31.8 M 16 51/10 05/2 11/0 19 29 875 
+P02-03 62 102 164 38.1 M 9 44/2 12/0 23/0 28 27 860 
+P02-04 68 71 172 23.9 M 17 35/11 15/7 43/12 28 27 1725 
+P02-05 58 91 171 31.2 M 6 34/10 08/3 26/8 22 28 625 
+P02-06 68 71 167 25.6 M 11 23/06 06/1 17/1 21 28 2200 
+P02-09  69 70 186 20.2 M 14 38/12 07/3 22/13 31 25 1464 
+P02-10 63 112 181 34.2 M 14 47/19 13/3 31/2 26 25 700 
+P02-11 58 46 158 18.4 F 2 70/21 10/5 24/9 28 30 500 
+P02-12  56 78 182 23.5 M 10 45/11 8/0 16/10 20 30 971 
+P02-13  64 77 169 27.0 M 14 43/14 09/1 24/4 33 25 2250 
+P02-14 67 63 155 26.2 F 12 58/22 10/1 25/2 21 25 1286.5 
+Mean  
+(SD) 
+60.9 
+(5.8) 
+77.5 
+(19.6) 
+168.9 
+(9.1) 
+27.1 
+(6.2) 12M/6F
+ 11.4 
+(3.4) 
+47.7/12.4 
+(13.5/5.4) 
+10.7/2.9 
+(4.7/2.5) 
+29.5/6.7 
+(12.5/4.5) 
+26.8 
+(5.2) 
+27.2 
+(1.8) 
+1258 
+(638) 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 21 
+References 
+1. Grillner, S. & Wallen, P. Central pattern generators for locomotion, with special 
+reference to vertebrates. Annu Rev Neurosci 8, 233–261 (1985). 
+2. Grillner, S. & Kozlov, A. The CPGs for Limbed Locomotion-Facts and Fiction. 
+Int J Mol Sci 22, 5882 (2021). 
+3. Grillner, S., Markram, H., De Schutter, E., Silberberg, G. & LeBeau, F. E. N. 
+Microcircuits in action--from CPGs to neocortex. Trends Neurosci 28, 525–533 
+(2005). 
+4. Kiehn, O. Decoding the organization of spinal circuits that control locomotion. 
+Nat Rev Neurosci 17, 224–238 (2016). 
+5. Zhao, G., Grimmer, M. & Seyfarth, A. The mechanisms and mechanical 
+energy of human gait initiation from the lower-limb joint level perspective. Sci Rep 11, 
+22473 (2021). 
+6. Takakusaki, K. Forebrain control of locomotor behaviors. Brain Res Rev  57, 
+192–198 (2008). 
+7. Petersen, T. H., Willerslev-Olsen, M., Conway, B. A. & Nielsen, J. B. The 
+motor cortex drives the muscles during walking in human subjects. J Physiol  590, 
+2443–2452 (2012). 
+8. Prentice, S. D. & Drew, T. Contributions of the reticulospinal system to the 
+postural adjustments occurring during voluntary gait modifications. J Neurophysiol  
+85, 679–98. (2001). 
+9. Caggiano, V. et al.  Midbrain circuits that set locomotor speed and gait 
+selection. Nature https://doi.org/10.1038/nature25448 (2018) 
+doi:10.1038/nature25448. 
+10. Wannier, T., Bastiaanse, C., Colombo, G. & Dietz, V. Arm to leg coordination 
+in humans during walking, creeping and swimming activities. Exp Brain Res  141, 
+375–379 (2001). 
+11. Klarner, T. & Zehr, E. P. Sherlock Holmes and the curious case of the human 
+locomotor central pattern generator. J Neurophysiol 120, 53–77 (2018). 
+12. Weersink, J. B., de Jong, B. M., Halliday, D. M. & Maurits, N. M. Intermuscular 
+coherence analysis in older adults reveals that gait-related arm swing drives lower 
+limb muscles via subcortical and cortical pathways. J Physiol 599, 2283–2298 (2021). 
+13. Nathan, P. W., Smith, M. & Deacon, P. Vestibulospinal, reticulospinal and 
+descending propriospinal nerve fibres in man. Brain 119 ( Pt 6), 1809–1833 (1996). 
+14. Morris, M. E., Iansek, R., Matyas, T. A. & Summers, J. J. The pathogenesis of 
+gait hypokinesia in Parkinson’s disease. Brain 117, 1169–81. (1994). 
+15. Gilat, M. et al. Dopamine depletion impairs gait automaticity by altering cortico-
+striatal and cerebellar processing in Parkinson’s disease. Neuroimage 152, 207–220 
+(2017). 
+16. Wu, T., Hallett, M. & Chan, P. Motor automaticity in Parkinson’s disease. 
+Neurobiol Dis 82, 226–234 (2015). 
+17. Landelle, C. et
+  al. Altered Spinal Cord Functional Connectivity Associated with 
+Parkinson’s Disease Progression. Mov Disord 38, 636–645 (2023). 
+18. Bloem, B. R., Hausdorff, J. M., Visser, J. E. & Giladi, N. Falls and freezing of 
+gait in Parkinson’s disease: a review of two interconnected, episodic phenomena. 
+Mov Disord 19, 871–884 (2004). 
+19. Nutt, J. G. et al.  Freezing of gait: moving forward on a mysterious clinical 
+phenomenon. Lancet Neurol 10, 734–744 (2011). 
+20. Cohen, R. G., Nutt, J. G. & Horak, F. B. Recovery from Multiple APAs Delays 
+Gait Initiation in Parkinson’s Disease. Front Hum Neurosci 11, 60 (2017). 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 22 
+21. Giladi, N. et al. Freezing of gait in patients with advanced Parkinson’s disease. 
+J Neural Transm 108, 53-61. (2001). 
+22. Nieuwboer, A. & Giladi, N. Characterizing freezing of gait in Parkinson’s 
+disease: models of an episodic phenomenon. Mov Disord 28, 1509–1519 (2013). 
+23. Dietz, V. & Michel, J. Locomotion in Parkinson’s disease: neuronal coupling of 
+upper and lower limbs. Brain 131, 3421–3431 (2008). 
+24. Van Emmerik, R. E., Wagenaar, R. C., Winogrodzka, A. & Wolters, E. C. 
+Identification of axial rigidity during locomotion in Parkinson disease. Arch Phys Med 
+Rehabil 80, 186–191 (1999). 
+25. Roemmich, R. T. et al.  Interlimb coordination is impaired during walking in 
+persons with Parkinson’s disease. Clin Biomech (Bristol) 28, 93–97 (2013). 
+26. Plotnik, M., Giladi, N. & Hausdorff, J. M. A new measure for quantifying the 
+bilateral coordination of human gait: effects of aging and Parkinson’s disease. Exp 
+Brain Res 181, 561–570 (2007). 
+27. Peterson, D. S. & Smulders, K. Cues and Attention in Parkinsonian Gait: 
+Potential Mechanisms and Future Directions. Front Neurol 6, 255 (2015). 
+28. Klocke, P. et al. Supraspinal contributions to defective antagonistic inhibition 
+and freezing of gait in Parkinson’s disease. Brain 147, 4056–4071 (2024). 
+29. Nieuwboer, A. et al.  Upper limb movement interruptions are correlated to 
+freezing of gait in Parkinson’s disease. Eur J Neurosci 29, 1422–1430 (2009). 
+30. Tosserams, A., Nijkrake, M. J., Voet, N. B. M., Bloem, B. R. & Nonnekes, J. 
+Why People With Parkinson’s Disease Experience Near-Drowning-and How to 
+Prevent It. Mov Disord Clin Pract 7, 573–574 (2020). 
+31. Welter, M.-L. et al. Freezing of Gait During Crawling: The Role of Four-Limb 
+Coordination? Mov Disord 40, 990–991 (2025). 
+32. Weersink, J. B., de Jong, B. M. & Maurits, N. M. Neural coupling between 
+upper and lower limb muscles in Parkinsonian gait. Clin Neurophysiol 134, 65–72 
+(2022). 
+33. Karachi, C. et al.  Clinical and anatomical predictors for freezing of gait and 
+falls after subthalamic deep brain stimulation in Parkinson’s disease patients. 
+Parkinsonism Relat Disord 62, 91–97 (2019). 
+34. Ferraye, M. U. et al. Effects of subthalamic nucleus stimulation and levodopa 
+on freezing of gait in Parkinson disease. Neurology 70, 1431–1437 (2008). 
+35. Goetz, L. et al. Deep Brain Stimulation of the Pedunculopontine Nucleus Area 
+i
+n Parkinson Disease: MRI-Based Anatomoclinical Correlations and Optimal Target. 
+Clinical Neurosurgery  https://doi.org/10.1093/neuros/nyy151 (2019) 
+doi:10.1093/neuros/nyy151. 
+36. Golestanirad, L., Elahi, B., Graham, S. J., Das, S. & Wald, L. L. Efficacy and 
+Safety of Pedunculopontine Nuclei (PPN) Deep Brain Stimulation in the Treatment of 
+Gait Disorders: A Meta-Analysis of Clinical Studies. Can J Neurol Sci 43, 120–126 
+(2016). 
+37. Bourilhon, J. et al. Stimulation of the pedunculopontine and cuneiform nuclei 
+for freezing of gait and falls in Parkinson disease: Cross-over single-blinded study 
+and long-term follow-up. Parkinsonism Relat Disord 96, 13–17 (2022). 
+38. Vercruysse, S. et al.  Effects of deep brain stimulation of the subthalamic 
+nucleus on freezing of gait in Parkinson’s disease: a prospective controlled study. J 
+Neurol Neurosurg Psychiatry 85, 871–877 (2014). 
+39. Fasano, A. et al. Modulation of gait coordination by subthalamic stimulation 
+improves freezing of gait. Mov Disord 26, 844–851 (2011). 
+40. Cherif, S. et al.  Directional Subthalamic Deep Brain Stimulation Better 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 23 
+Improves Gait and Balance Disorders in Parkinson’s Disease Patients: A 
+Randomized Controlled Study. Ann Neurol 97, 149–162 (2024). 
+41. Schlenstedt, C. et al. Effect of high-frequency subthalamic neurostimulation on 
+gait and freezing of gait in Parkinson’s disease: a systematic review and meta-
+analysis. Eur J Neurol 24, 18–26 (2017). 
+42. Santos, P. C. R. D., Heimler, B., Koren, O., Flash, T. & Plotnik, M. Dopamine 
+improves defective cortical and muscular connectivity during bilateral control of gait in 
+Parkinson’s disease. Commun Biol 7, 495 (2024). 
+43. Roeder, L., Boonstra, T. W. & Kerr, G. K. Corticomuscular control of walking in 
+older people and people with Parkinson’s disease. Sci Rep 10, 2980 (2020). 
+44. Hausdorff, J. M., Gruendlinger, L., Scollins, L., O’Herron, S. & Tarsy, D. Deep 
+brain stimulation effects on gait variability in Parkinson’s disease. Mov Disord  24, 
+1688–1692 (2009). 
+45. Curtze, C., Nutt, J. G., Carlson-Kuhta, P., Mancini, M. & Horak, F. B. 
+Levodopa Is a Double-Edged Sword for Balance and Gait in People With Parkinson’s 
+Disease. Mov Disord 30, 1361–1370 (2015). 
+46. Lord, S., Galna, B. & Rochester, L. Moving forward on gait measurement: 
+toward a more refined approach. Mov Disord 28, 1534–1543 (2013). 
+47. Plotnik, M., Giladi, N., Balash, Y., Peretz, C. & Hausdorff, J. M. Is freezing of 
+gait in Parkinson’s disease related to asymmetric motor function? Ann Neurol  57, 
+656–663 (2005). 
+48. Yogev, G., Plotnik, M., Peretz, C., Giladi, N. & Hausdorff, J. M. Gait 
+asymmetry in patients with Parkinson’s disease and elderly fallers: when does the 
+bilateral coordination of gait require attention? Exp Brain Res 177, 336–346 (2007). 
+49. Plotnik, M., Giladi, N. & Hausdorff, J. M. Bilateral coordination of walking and 
+freezing of gait in Parkinson’s disease. Eur J Neurosci 27, 1999–2006 (2008). 
+50. Su, K. J. et al.  Increasing speed to improve arm movement and standing 
+postural control in Parkinson’s disease patients when catching virtual moving balls. 
+Gait Posture 39, 65–69 (2014). 
+51. Ferrarin, M. et al. Effects of bilateral subthalamic stimulation on gait kinematics 
+and kinetics in Parkinson’s disease. Exp Brain Res 160, 517–527 (2005). 
+52. Leiras, R., Cregg, J. M. & Kiehn, O. Brainstem Circuits for Locomotion. Annu 
+Rev Neurosci 45, 63–85 (2022). 
+53. Pierantozzi, M. et al.  Pedunculopontine nucleus deep brain stimulation 
+changes spinal cord excitability in Parkinson’s disease patients. J Neural Transm  
+115, 731–735 (2008). 
+54. Matsuyama, K. et al. Locomotor role of the corticoreticular-reticulospinal-spinal 
+interneuronal system. Prog Brain Res 143,
+ 239–249 (2004). 
+55. Grosse, P. & Brown, P. Acoustic startle evokes bilaterally synchronous 
+oscillatory EMG activity in the healthy human. J Neurophysiol 90, 1654–1661 (2003). 
+56. Snijders, A. H. et al. Physiology of freezing of gait. Ann Neurol 80, 644–659 
+(2016). 
+57. Fasano, A., Aquino, C. C., Krauss, J. K., Honey, C. R. & Bloem, B. R. Axial 
+disability and deep brain stimulation in patients with Parkinson disease. Nat Rev 
+Neurol 11, 98–110 (2015). 
+58. Massion, J. Movement, posture and equilibrium: interaction and coordination. 
+Prog Neurobiol 38, 35–56 (1992). 
+59. Milekovic, T. et al. A spinal cord neuroprosthesis for locomotor deficits due to 
+Parkinson’s disease. Nat Med 29, 2854–2865 (2023). 
+60. Nieuwboer, A. et al.  Reliability of the new freezing of gait questionnaire: 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 
+ 24 
+agreement between patients with Parkinson’s disease and their carers. Gait Posture 
+30, 459–463 (2009). 
+61. Weiss, A. et al.  Does the evaluation of gait quality during daily life provide 
+insight into fall risk? A novel approach using 3-day accelerometer recordings. 
+Neurorehabil Neural Repair 27, 742–752 (2013). 
+62. Mazilu, S. et al.  Prediction of Freezing of Gait in Parkinson’s From 
+Physiological Wearables: An Exploratory Study. IEEE J Biomed Health Inform  19, 
+1843–1854 (2015). 
+63. Mancini, M. et al. Measuring freezing of gait during daily-life: an open-source, 
+wearable sensors approach. J Neuroeng Rehabil 18, 1 (2021). 
+64. Mirelman, A. et al.  Digital Mobility Measures: A Window into Real-World 
+Severity and Progression of Parkinson’s Disease. Mov Disord 39, 328–338 (2024). 
+65. Mancini, M. et al.  Digital gait biomarkers in Parkinson’s disease: 
+susceptibility/risk, progression, response to exercise, and prognosis. NPJ Parkinsons 
+Dis 11, 51 (2025). 
+66. Goetz, C. G. et al.  Movement Disorder Society-sponsored revision of the 
+Unified Parkinson’s Disease Rating Scale (MDS-UPDRS): scale presentation and 
+clinimetric testing results. Mov Disord 23, 2129–2170 (2008). 
+67. Collomb-Clerc, A. et al.  Subthalamic Electrophysiological Mapping of Gait 
+Initiation Dynamics and Freezing in Parkinson’s Disease. Ann Neurol Jul 25, (2025). 
+68. Leardini, A. et al. Rear-foot, mid-foot and fore-foot motion during the stance 
+phase of gait. Gait Posture 25, 453–462 (2007). 
+69. Giladi, N. et al. Validation of the freezing of gait questionnaire in patients with 
+Parkinson’s disease. Mov Disord 24, 655–661 (2009). 
+70. Thomas, M. et al.  Clinical gait and balance scale (GABS): validation and 
+utilization. J Neurol Sci 217, 89–99 (2004). 
+71. Gløersen, Ø. & Federolf, P. Predicting Missing Marker Trajectories in Human 
+Motion Data Using Marker Intercorrelations. PLoS One 11, e0152616 (2016). 
+72. Troisi Lopez, E. et al.  The kinectome: A comprehensive kinematic map of 
+human motion in health and disease. Ann N Y Acad Sci 1516, 247–261 (2022). 
+73.
+ Zou, H. The Adaptive Lasso and Its Oracle Properties. Journal of the 
+American Statistical Association 101, 1418–1429 (2006). 
+ 
+ 
+.CC-BY 4.0 International licenseavailable under a 
+(which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in perpetuity. It is made 
+The copyright holder for this preprintthis version posted February 3, 2026. ; https://doi.org/10.64898/2026.02.02.702843doi: bioRxiv preprint 

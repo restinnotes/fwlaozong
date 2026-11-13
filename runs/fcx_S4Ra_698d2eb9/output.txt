@@ -1,0 +1,39 @@
+<escape>{
+  "accusations": [
+    {
+      "paper": "STN-FOG相关预印本（题名未提供，DOI对应的研究被报告映射到错误的正式发表版本）",
+      "pmid": "",
+      "doi": "10.64898/2026.08.13.744293",
+      "report_says": "结构化参考文献将该预印本的version_of填写为PMID:23225012，认为该PMID是其正式发表版本。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-5416-4_16，并非该STN-FOG研究的正式发表版本。"
+    },
+    {
+      "paper": "STN-FOG相关预印本（题名未提供，正文与结构化附录的正式发表版本映射不一致）",
+      "pmid": "",
+      "doi": "10.1101/2025.01.10.632393",
+      "report_says": "结构化附录将该预印本的version_of填写为PMID:23225012，但第2.4节又将其正式发表版本写为PMID:40709562。",
+      "judge_says": "PMID:23225012实际是Mhyre等人2012年发表的Parkinson's disease综述章节，DOI为10.1007/978-94-007-5416-4_16，并非该STN-FOG研究的正式发表版本。正文与附录对同一预印本的版本映射也互相矛盾。"
+    },
+    {
+      "paper": "2025年低频自适应刺激相关预印本（题名未提供）",
+      "pmid": "",
+      "doi": "10.64898/2025.12.17.25342333",
+      "report_says": "结构化参考文献将该预印本的version_of填写为PMID:24245947，认为该PMID是其正式发表版本。",
+      "judge_says": "PMID:24245947实际是Mehanna和Lai于2013年发表的综述《Deep brain stimulation in Parkinson's disease》，DOI为10.1186/2047-9158-2-22，并非2025年的低频自适应刺激研究。"
+    },
+    {
+      "paper": "四名患者的STN-LFP复杂度预印本（题名未提供）",
+      "pmid": "",
+      "doi": "10.64898/2026.08.13.744293",
+      "report_says": "第3.5节将该研究的Shannon entropy作为冻结前转弯的识别指标，但正文没有说明该指标存在定义不一致的问题，也没有明确区分不同复杂度指标的含义。",
+      "judge_says": "原文Methods将Shannon entropy定义为burst midpoint time分布的熵，而Abstract称其为inter-burst interval entropy，两者不一定是相同的统计构念，不能直接混为一谈。此外，原文报告Shannon entropy下降、Lempel-Ziv complexity上升，不能将两者简单归纳为统一的神经复杂度升高或降低。报告未解决这一原文定义冲突，就将Shannon entropy作为冻结前转弯的识别指标，可能造成对实际测量内容及神经动态机制的误解。"
+    },
+    {
+      "paper": "PMID:42860886（SNr联合刺激的多中心随机对照双盲探索性试验，具体题名未在评审意见中提供）",
+      "pmid": "42860886",
+      "doi": "",
+      "report_says": "第3.1.3节将该研究描述为“多中心双盲试验，45人mITT，较大规模阴性结果”，并据此指出没有证实增加SNr刺激具有群体水平的额外优势。",
+      "judge_says": "原文明确将该研究定义为exploratory multicenter randomized controlled double-blind trial（探索性多中心随机对照双盲试验），FoG-AC主要终点采用P<0.2的探索性评价标准，而非传统确认性试验的显著性阈值。原计划纳入54人，实际mITT为45人。两组90天FoG-AC没有显著差异，不能据此证明联合刺激无效，也不能证明两种方案等效。报告将其概括为较大规模阴性结果，没有充分体现原研究的探索性设计和统计效能限制，可能使读者误认为这是具有充分统计效能的确认性阴性RCT。"
+    }
+  ]
+}</escape>
