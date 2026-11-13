@@ -1,0 +1,43 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "DOI:10.1101/19011858",
+      "design": "单病例实验研究（single-subject experimental study），比较四种DBS刺激条件下的冻结步态表现；2019年投稿的medRxiv预印本，非同行评审研究。",
+      "population": "1名伴有冻结步态（FOG）的帕金森病男性患者，年龄63.2岁，病程5.1年，akinetic-rigid亚型；植入双侧STN DBS电极及Medtronic Activa PC+S感知神经刺激器。",
+      "n": "1",
+      "condition": "受试者在药物OFF状态下完成stepping in place（SIP）任务，比较四种条件：无刺激（OFF）、临床常规开放环刺激（c-olDBS）、与闭环刺激平均电压匹配的开放环刺激（m-olDBS）、以及基于双阈值STN beta功率算法的闭环刺激（clDBS）。短效多巴胺能药物停药12小时，长效药物停药24/48小时。clDBS采用双阈值控制算法，以双侧STN LFP beta功率（13–30 Hz）作为控制信号；运动相关beta频段设置为15 Hz峰值±3 Hz。刺激阈值根据SIP任务中的beta功率确定。",
+      "measure": "主要指标为自动检测的冻结时间百分比（percent time freezing），冻结事件定义为双脚未能离开测力台。STN神经活动指标为LFP beta频段功率，并用于实时调节刺激。研究比较OFF、c-olDBS、m-olDBS和clDBS四种条件下的冻结表现。",
+      "finding": "采用STN beta功率驱动的clDBS时，冻结时间百分比为1.5%，低于无刺激时的68.7%、临床开放环刺激时的2.3%及匹配电压开放环刺激时的23.5%。作者报告clDBS在减少冻结时间方面优于其他三种条件。这表明在该单病例、药物OFF及SIP任务条件下，根据STN beta功率动态调节刺激与较低的FOG发生时间相关。不过，该结果证明的是beta驱动闭环刺激策略的治疗效果，而不是直接证明beta功率与冻结事件之间存在特定方向的相关关系。",
+      "effect": "冻结时间百分比：OFF 68.7%；c-olDBS 2.3%；m-olDBS 23.5%；clDBS 1.5%。clDBS相较OFF减少67.2个百分点，相较m-olDBS减少22.0个百分点，相较c-olDBS减少0.8个百分点。未报告组水平统计检验或显著性检验。",
+      "limitations": "作者未设置独立的局限性讨论部分。主要方法学局限：①仅1名受试者，不能进行群体层面的推断；②仅在药物OFF状态下测试，不能判断药物状态是否影响STN beta与FOG的关系；③仅采用SIP任务，不能直接推广到自然行走、转弯等其他情境；④没有报告STN beta功率与每次冻结事件发生时间之间的直接相关分析，也没有报告冻结发生前后beta功率的事件锁定变化，因此不能据此确定beta升高是否直接预测或引发FOG；⑤没有报告统计推断结果。另该研究为未经同行评审的预印本。论文提及的补充表S1和S2未包含在本次提供的PDF中。",
+      "quote": "The percent time freezing was 68.7% OFF DBS, 2.3% on c-olDBS, 23.5% during m-olDBS, and 1.5% during clDBS.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/19011858",
+      "design": "单病例实验研究（single-subject experimental study），四种DBS条件下的重复任务表现比较；非同行评审预印本。",
+      "population": "1名伴有FOG的帕金森病男性患者，年龄63.2岁，病程5.1年，akinetic-rigid亚型；双侧STN DBS。",
+      "n": "1",
+      "condition": "药物OFF状态下进行SIP任务，比较OFF、c-olDBS、m-olDBS和STN beta功率驱动的clDBS。clDBS采用15 Hz附近（±3 Hz）的运动相关STN beta功率作为实时控制变量。研究观察刺激期间步态节律及其随任务持续时间的变化。",
+      "measure": "SIP步态不规则性（arrhythmicity），采用步时变异系数（coefficient of variation of stride time，CV）评估；同时观察任务开始后前25秒与前25秒之后直至首次冻结或任务结束的节律变化。",
+      "finding": "clDBS条件下步态不规则性最低。四种条件下的整体arrhythmicity分别为：OFF 54.9%、c-olDBS 18.2%、m-olDBS 27.4%、clDBS 5.2%。进一步观察发现，c-olDBS和m-olDBS在任务开始25秒后均出现步态不规则性增加，而clDBS条件下步态仍保持节律性。作者认为，基于STN beta活动动态调节刺激可能有助于维持运动控制，减少随重复运动出现的sequence effect及相关冻结表现。",
+      "effect": "整体arrhythmicity：OFF 54.9%；c-olDBS 18.2%；m-olDBS 27.4%；clDBS 5.2%。clDBS相较OFF降低49.7个百分点，相较c-olDBS降低13.0个百分点，相较m-olDBS降低22.2个百分点。开放环刺激条件下任务后期不规则性增加，而闭环刺激条件下未观察到相同的节律恶化。",
+      "limitations": "仅1名患者，且只使用SIP任务评估运动节律。作者没有报告多名患者的重复验证或统计显著性。arrhythmicity是运动表现指标，并非STN神经活动的直接测量；因此不能将其变化等同于STN beta功率变化。研究没有报告beta功率与步时变异系数之间的直接相关系数，也没有给出不同冻结阶段的beta活动定量比较。此外，任务后期表现的差异可能反映动态刺激策略的效果，但本研究不能独立确定其神经生理机制。",
+      "quote": "There was an increase in arrhythmicity after the first 25 seconds of the trial during both c-olDBS and m-olDBS, but during clDBS, stepping remained rhythmic.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/19011858",
+      "design": "单病例实验研究（single-subject experimental study）；刺激剂量匹配条件与神经反馈闭环条件的比较。",
+      "population": "1名伴有FOG的帕金森病男性患者，年龄63.2岁，病程5.1年，akinetic-rigid亚型；双侧STN DBS。",
+      "n": "1",
+      "condition": "药物OFF状态下进行SIP任务，重点比较m-olDBS与clDBS。m-olDBS使用与clDBS相同的单一电极触点，但刺激电压固定为clDBS期间计算出的平均电压；clDBS则根据STN LFP beta功率动态调整刺激。两种条件用于比较持续刺激与自适应刺激的效果。",
+      "measure": "总电能消耗（total electrical energy delivered，TEED）、组织激活体积（volume of tissue activated，VTA）、冻结时间百分比及步态不规则性（stride time CV）。",
+      "finding": "在m-olDBS与clDBS的TEED没有差异、VTA几乎相同的情况下，clDBS仍表现出更低的冻结时间百分比和步态不规则性。m-olDBS期间冻结时间为23.5%、arrhythmicity为27.4%；clDBS期间分别为1.5%和5.2%。作者据此提出，闭环刺激的优势可能来自刺激对试验过程中波动的STN活动进行动态响应，而非单纯来自更大的刺激能量或更大的组织激活范围。",
+      "effect": "m-olDBS与clDBS的TEED无差异；clDBS相较c-olDBS的平均TEED高2%。m-olDBS与clDBS的VTA几乎相同，但clDBS的冻结时间百分比低22.0个百分点，arrhythmicity低22.2个百分点。作者报告m-olDBS和c-olDBS均出现步态表现恶化，而clDBS维持了步态节律。",
+      "limitations": "这是单病例条件比较，不能确定剂量匹配条件下的差异是否能够在其他患者中重复。虽然TEED和VTA相近，不能据此排除其他刺激参数或个体差异的影响。研究没有提供STN beta功率在不同冻结阶段的具体变化，也没有通过独立实验区分动态刺激本身、beta反馈信号和其他刺激参数的贡献。因此，动态响应STN活动是作者提出的机制解释，而不是已被直接证实的因果机制。论文未报告该比较的统计显著性；补充表S2未包含在所提供的PDF中，无法进一步核对各条件的完整数值。",
+      "quote": "However, stepping behavior was maintained during clDBS even though the TEED and VTA were nearly identical to m-olDBS.",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

@@ -1,0 +1,95 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性纵向队列研究，采用术前与术后自身对照，并进行结构连接组学分析。研究为尚未经过同行评审的medRxiv预印本。",
+      "population": "帕金森病（PD）患者，均接受双侧丘脑底核（STN）DBS。纳入标准为术前FOG-Q第3项和第4项均提示存在冻结步态。来自科隆和汉堡两个DBS中心。",
+      "n": "47（女性21例；平均年龄61.6±9.6岁；平均病程10.6±4.0年）",
+      "condition": "术前约1周评估，与术后6个月（±6周）比较。术后临床评估处于药物开启、刺激开启（MedON/StimON）状态。研究考察的是慢性STN-DBS治疗后的变化，而非急性刺激开启与关闭的随机交叉比较。",
+      "measure": "Freezing of Gait Questionnaire（FOG-Q）总分及分项，包括步态困难、步态障碍、冻结频率、冻结发作持续时间、启动犹豫和转弯犹豫。",
+      "finding": "双侧STN-DBS术后6个月，FOG-Q总分显著改善。所有FOG-Q分项均显著下降，提示改善涉及冻结步态的多个临床维度，而非仅影响某一种冻结表现。",
+      "effect": "FOG-Q总分由术前13.7±4.3下降至术后7.2±5.3，下降47.0%（T=7.6，P<0.001）。各分项均显著改善，包括冻结频率（Z=-4.9，P<0.001）和冻结发作持续时间（Z=-4.8，P<0.001）。",
+      "limitations": "回顾性研究，没有未接受DBS的对照组，不能完全确定改善由刺激本身直接造成。FOG-Q属于患者自评量表，不能区分运动、认知或情绪相关冻结，也不区分患者所处的药物状态。术后左旋多巴等效日剂量同时下降35%，可能影响前后比较。研究仅观察术后6个月的结果。",
+      "quote": "Baseline FOG-Q total score was 13.7 (SD = 4.3) and was significantly decreased six months postoperatively by 47.0 % to 7.2 points (SD = 5.3).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性纵向队列研究，术前与术后自身对照。",
+      "population": "接受双侧STN-DBS且术前存在FOG的PD患者。",
+      "n": "MedON：45例；MedOFF：29例。MedOFF数据仅来自科隆中心。",
+      "condition": "术前基线与术后6个月比较。分别考察MedON/StimON和MedOFF/StimON条件下的冻结步态。术前为手术前评估，术后为刺激开启状态。",
+      "measure": "Unified Parkinson's Disease Rating Scale（UPDRS）II第14项，以患者冻结步态发生情况及严重程度评估FOG。",
+      "finding": "STN-DBS术后，MedON和MedOFF两种药物状态下的冻结步态发生比例均显著下降。这说明研究观察到的临床改善并不局限于药物开启状态。",
+      "effect": "MedOFF条件下，FOG发生比例由79.3%下降至24.1%（P<0.001）；MedON条件下，由69.6%下降至26.7%（P<0.001）。",
+      "limitations": "MedOFF分析仅有科隆中心29例患者，样本量小于MedON组。UPDRS-II第14项是单项临床评估，不能详细区分冻结步态的不同临床亚型。研究没有提供不同药物状态下的独立STN神经电活动测量，也没有通过急性刺激开关对照区分药物与刺激效应。",
+      "quote": "the percentage of patients suffering from freezing in the MedOFF condition was reduced from 79.3 % to 24.1 % (P < 0.001)",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性队列研究，结合个体刺激体积重建、结构连接组学分析及leave-one-out交叉验证。",
+      "population": "47例接受双侧STN-DBS的PD伴FOG患者。",
+      "n": "47",
+      "condition": "以术后6个月FOG-Q变化为临床结局。根据术后影像重建每位患者的刺激体积（VTA），与BG-IC（basal-ganglia and internal capsule）标准化结构连接图谱进行重叠分析。将刺激体积连接与未连接的纤维进行比较，采用线性混合效应模型，并将刺激幅度作为随机效应控制因素。",
+      "measure": "结构纤维束连接分析（activation volume tractography，AVT），使用基于组织学及结构MRI重建的BG-IC connectome；通过纤维束与刺激体积的连接状态预测FOG-Q变化，并进行leave-one-out cross-validation。",
+      "finding": "与FOG改善相关的刺激网络包括双侧STN至初级运动皮层（M1）、运动前区及辅助运动区（SMA）的hyperdirect通路，双侧STN至背外侧前额叶皮层（dlPFC）的hyperdirect通路，以及STN与苍白球内侧部（GPi）、外侧部（GPe）之间的苍白球-丘脑底核通路。所有与FOG改善相关的纤维均经过STN后部。作者认为，FOG改善不仅涉及运动环路，也涉及认知或联合环路。",
+      "effect": "FOG连接模型的leave-one-out交叉验证结果为r=0.232，P=0.048，作者指出效应量较小。模型纤维构成中，39%属于M1 hyperdirect通路，21%属于运动前区通路，25%属于dlPFC hyperdirect通路，10%属于苍白球-丘脑底核通路。多元回归中，纤维评分仍是显著预测变量（β=2.652，P=0.041），解释9.5%的FOG变化方差（R²=0.095）。",
+      "limitations": "这是刺激位置与结构连接的关联分析，不是STN神经元放电、局部场电位或振荡活动的直接测量，不能据此确定具体神经活动机制。BG-IC连接组主要来自健康人群的标准化解剖数据，不能反映患者个体结构改变；仅纳入预先定义的解剖通路，可能遗漏其他相关通路。AVT不能充分模拟脑组织各向异性、纤维方向、轴突直径以及神经信号的顺行和逆行传播。FOG-Q不能区分运动型、认知型及情绪型冻结，可能造成样本异质性和效应量偏小。研究中仅2/47例使用低于100 Hz的刺激频率，因此无法有效检验频率效应。作者建议在更大、独立且严格控制混杂因素的样本中重复验证。",
+      "quote": "Importantly, all fibres associated with improvement of FOG traversed the posterior part of the STN.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性队列研究中的结构连接组学分析。",
+      "population": "47例接受双侧STN-DBS的PD伴FOG患者。",
+      "n": "47",
+      "condition": "根据术后6个月FOG-Q变化，比较不同患者的个体刺激体积（VTA）与BG-IC结构纤维束的连接情况。重点考察右侧lenticular fasciculus（豆状核束）的刺激相关性。",
+      "measure": "个体VTA与标准化结构连接图谱的重叠分析，通过纤维连接状态与FOG-Q临床变化之间的线性混合效应模型确定正、负相关纤维。",
+      "finding": "右侧lenticular fasciculus受到刺激与FOG恶化相关。与FOG恶化相关的纤维束在该模型中全部归属于lenticular fasciculus，与运动皮层、运动前区及dlPFC通路的改善相关结果相反。作者提出，如果刺激体积明显位于STN上方、接近lenticular fasciculus，患者可能获得较差的步态结局。",
+      "effect": "观察到lenticular fasciculus刺激与FOG恶化的负向关联，但论文没有单独报告该纤维束的具体效应量或独立临床恶化比例。",
+      "limitations": "结果来自回顾性连接组模型，不能证明lenticular fasciculus刺激直接导致FOG恶化。研究没有进行针对该纤维束的独立随机刺激比较。刺激体积和纤维连接的估计依赖标准化连接图谱及电场建模。FOG亚型未被区分，无法判断这种负向关联是否适用于所有冻结步态患者。",
+      "quote": "Stimulation of the lenticular fasciculus was associated with worsening of freezing of gait.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性队列中的替代连接组验证分析。",
+      "population": "临床结局样本为47例PD伴FOG患者；替代全脑连接组来自Parkinson Progression Marker Initiative（PPMI）的85例PD患者。",
+      "n": "临床分析47例；参考连接组85例PD患者。",
+      "condition": "为补充BG-IC连接组缺少脑干投射的问题，研究使用基于PPMI患者扩散MRI数据建立的全脑连接组，重新分析STN刺激与FOG-Q变化的关系。由于全脑连接组包含更多纤维，采用更严格的纤维筛选阈值P<0.01。",
+      "measure": "基于扩散MRI的全脑结构连接组分析、纤维束与刺激体积重叠分析及leave-one-out交叉验证。",
+      "finding": "替代连接组分析发现与BG-IC模型相似的皮层投射。下游纤维经过STN及黑质网状部/致密部（SNr/SNc），并进一步经过脚桥核（PPN）后部。这提示STN刺激相关的FOG改善网络可能涉及中脑运动区域的连接，而不只限于皮层和苍白球环路。",
+      "effect": "全脑连接组模型的leave-one-out交叉验证为r=0.225，P=0.067，达到趋势水平但未达到统计学显著性。作者在讨论中也指出全脑连接组分析未获得统计学显著结果。",
+      "limitations": "脑干区域存在密集的灰质核团及交叉白质纤维，扩散MRI纤维追踪在该区域存在明显局限。作者明确指出，目前的脑干纤维追踪不足以可靠判断STN、SN和PPN是否通过共同神经通路改善FOG。因此，PPN及SN相关投射属于提示性结果，不能视为得到统计学验证的机制。",
+      "quote": "The resulting model revealed similar cortical projections as derived from the BG-IC",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "双中心回顾性队列研究中的FOG结局与总体DBS结局比较分析。",
+      "population": "47例接受双侧STN-DBS的PD伴FOG患者。",
+      "n": "47",
+      "condition": "比较术后6个月FOG-Q变化相关的结构连接网络与总体DBS疗效相关的结构连接网络。总体DBS结局定义为UPDRS-III改善及左旋多巴等效日剂量（LEDD）下降的标准化分数之和。",
+      "measure": "两种临床结局对应的结构连接组模型、纤维束分布及leave-one-out交叉验证；同时考察总体DBS临床结局与FOG改善之间的关系。",
+      "finding": "FOG改善网络与总体DBS改善网络并不完全相同。FOG相关网络呈双侧分布，且双侧dlPFC hyperdirect通路参与程度较高；总体DBS改善网络则主要偏向左半球，更多涉及运动和运动前区皮层纤维。作者指出，FOG改善与丘脑底核-苍白球纤维及投射至dlPFC的hyperdirect纤维关系较强，而总体运动疗效更多依赖运动相关投射。此外，临床总体DBS疗效与FOG改善之间没有显著相关性。",
+      "effect": "FOG连接模型交叉验证r=0.232，P=0.048；总体DBS连接模型r=0.239，P=0.041。FOG网络相对双侧化，而总体DBS网络主要左侧化。总体DBS临床结局与FOG改善之间未发现显著相关，但论文未报告该临床相关性的具体相关系数。",
+      "limitations": "总体DBS结局并非完全独立于FOG，因为UPDRS-III也包含步态障碍，因此两个结局存在部分测量重叠。作者指出，患者多数表现为右侧优势的运动症状，可能解释总体DBS网络的左侧偏重。双侧化网络可能提示对称刺激的作用，但本研究并未直接随机比较单侧与双侧刺激，不能将该推测视为本研究已验证的因果效应。",
+      "quote": "In our sample, there was no significant association between the clinical overall DBS outcome and improvement of FOG.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2021.07.01.21259612",
+      "design": "原始临床研究中的机制解释与作者提出的潜在机制假说，非独立实验验证。",
+      "population": "47例接受双侧STN-DBS的PD伴FOG患者。",
+      "n": "47",
+      "condition": "基于术后6个月FOG改善、STN刺激位点结构连接模型、FOG网络的双侧分布，以及lenticular fasciculus与FOG恶化的关联进行机制解释。",
+      "measure": "结构连接组学结果、FOG-Q临床变化及作者对既往FOG病理生理模型的讨论。",
+      "finding": "作者明确提出四种可能的FOG改善机制：a）通过刺激运动相关最佳位置减少患者的off-time；b）避免刺激损害步态的结构；c）对于存在认知因素的FOG，通过调节基底节联合环路改善症状；d）术后出现步态困难时，采用平衡的双侧半球刺激。作者进一步提出，STN hyperdirect通路可能通过调节运动和认知输入，减少相互干扰的输入所引发的反应冲突。这些是作者根据研究结果提出的机制解释，而不是本研究逐一验证的机制。",
+      "effect": "研究支持运动相关通路、认知相关dlPFC通路及苍白球-丘脑底核通路与FOG改善相关，同时发现lenticular fasciculus与FOG恶化相关。作者没有分别量化四种机制的独立贡献，也没有确定哪一种机制在不同FOG亚型中占主导地位。",
+      "limitations": "FOG-Q不能区分运动型、认知型和情绪型冻结，也不能识别由不同药物状态或认知负荷引起的冻结。研究未对患者进行亚型分组，也未直接操纵认知负荷、单侧与双侧刺激或不同网络通路。因此，四种机制尚不能在该研究内相互区分。作者认为需要在独立的大样本中开展严格控制混杂因素的研究。",
+      "quote": "we presume the following potential mechanisms for improving FOG after DBS: a) by reducing off-time through stimulation of motor sweet spots, b) by avoiding stimulation of gait-impairing structures",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

@@ -1,0 +1,3015 @@
+OpenAI Codex v0.167.2
+--------
+workdir: D:\fwlaozong\papers\luna_1113_113706
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: max
+reasoning summaries: detailed
+session id: 01a1d5c5-4945-7a70-93c1-40231525ef90
+--------
+user
+你只做一件事：把下面列出的论文全文下载到当前目录。不要阅读、总结或分析论文内容。
+
+规则：
+1. 只用合法的开放来源：Europe PMC、PubMed Central、出版社的开放获取页面、Unpaywall 指向的开放版本、作者或机构仓库、bioRxiv/medRxiv/arXiv 等预印本服务器。禁止使用 Sci-Hub、LibGen、Anna's Archive 之类来源，也不要尝试绕过付费墙或登录。
+2. 每篇保存为 <key>.pdf（拿不到 PDF、只有完整 HTML 全文时保存为 <key>.html）。key 见列表。
+3. 保存后自己检查：PDF 要以 %PDF 开头、大于 50KB；HTML 要包含正文（Methods/Results 等），不能是验证码页、登录页或只有摘要的页面。不合格的删掉，换来源再试；确实没有开放版本就记 not_open。
+4. 可以用 curl、Python、浏览器自动化等任何你需要的手段；可以并行。
+5. 最后写 manifest.json：一个 JSON 数组，每篇一项 {"key","status"(ok/not_open/failed),"file","source_url","note"}。
+6. 最后一条消息只输出一行：完成 N 篇 / 共 M 篇。
+
+论文列表（JSON）：
+[
+ {
+  "key": "DOI_10.1101_19011858",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/19011858",
+  "title": "Neural Closed Loop Deep Brain Stimulation for Freezing of Gait",
+  "year": 2019,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2021.07.01.21259612",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2021.07.01.21259612",
+  "title": "Structural connectivity of subthalamic nucleus stimulation for improving freezing of gait",
+  "year": 2021,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2025.05.08.25327015",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2025.05.08.25327015",
+  "title": "Subthalamic Nucleus Deep Brain Stimulation Alleviates the Sequence Effect and Freezing of Gait in Parkinson’s Disease",
+  "year": 2025,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_671479",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/671479",
+  "title": "The turning and barrier course reveals gait parameters for detecting freezing of gait and measuring the efficacy of deep brain stimulation",
+  "year": 2019,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "DOI_10.21203_rs.3.rs-4058858_v1",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.21203/rs.3.rs-4058858/v1",
+  "title": "The effect of Levodopa and Stimulation on post-surgery Freezing of Gait in STN-DBS Parkinson's Disease patients: a clinical and kinematic analysis",
+  "year": 2024,
+  "journal": "Research Square"
+ },
+ {
+  "key": "DOI_10.21203_rs.3.rs-4216535_v1",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.21203/rs.3.rs-4216535/v1",
+  "title": "Subthalamic and Nigral Stimulation for Freezing of Gait in Parkinson disease: randomized pilot trial",
+  "year": 2024,
+  "journal": "Research Square"
+ },
+ {
+  "key": "DOI_10.64898_2026.02.02.702843",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.64898/2026.02.02.702843",
+  "title": "Body-segment coordination as a new predictor of freezing of gait in people with Parkinson’s disease",
+  "year": 2026,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "PMID_10634253",
+  "pmid": "10634253",
+  "pmcid": null,
+  "doi": "10.1002/1531-8257(200001)15:1<136::aid-mds1021>3.0.co;2-5",
+  "title": "Bilateral subthalamic nucleus stimulation in a parkinsonian patient with preoperative deficits in speech and cognition: persistent improvement in mobility but increased dependency: a case study.",
+  "year": 2000,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_16139421",
+  "pmid": "16139421",
+  "pmcid": null,
+  "doi": "10.1016/j.clineuro.2005.07.008",
+  "title": "Freezing of gait after bilateral subthalamic nucleus stimulation for Parkinson's disease.",
+  "year": 2006,
+  "journal": "Clinical neurology and neurosurgery"
+ },
+ {
+  "key": "PMID_17712844",
+  "pmid": "17712844",
+  "pmcid": null,
+  "doi": "10.1002/mds.21609",
+  "title": "Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait.",
+  "year": 2007,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_18413568",
+  "pmid": "18413568",
+  "pmcid": null,
+  "doi": "10.1212/01.wnl.0000310416.90757.85",
+  "title": "Effects of subthalamic nucleus stimulation and levodopa on freezing of gait in Parkinson disease.",
+  "year": 2008,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_18420482",
+  "pmid": "18420482",
+  "pmcid": null,
+  "doi": "10.1212/01.wnl.0000303972.16279.46",
+  "title": "STN-DBS frequency effects on freezing of gait in advanced Parkinson disease.",
+  "year": 2008,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_19705483",
+  "pmid": "19705483",
+  "pmcid": null,
+  "doi": "10.1002/mds.22743",
+  "title": "STN versus PPN-DBS for alleviating freezing of gait: toward a frequency modulation approach?",
+  "year": 2009,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_21370271",
+  "pmid": "21370271",
+  "pmcid": null,
+  "doi": "10.1002/mds.23583",
+  "title": "Modulation of gait coordination by subthalamic stimulation improves freezing of gait.",
+  "year": 2011,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_21397548",
+  "pmid": "21397548",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2011.02.014",
+  "title": "Acute induction of levodopa-resistant freezing of gait upon subthalamic nucleus electrode implantation.",
+  "year": 2011,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_21997389",
+  "pmid": "21997389",
+  "pmcid": null,
+  "doi": "10.1002/mds.23990",
+  "title": "Doorway-provoked freezing of gait in Parkinson's disease.",
+  "year": 2012,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_22696586",
+  "pmid": "22696586",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2011-302091",
+  "title": "Effect of stimulation frequency on immediate freezing of gait in newly activated STN DBS in Parkinson's disease.",
+  "year": 2012,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_22906284",
+  "pmid": "22906284",
+  "pmcid": null,
+  "doi": "10.1177/147323001204000330",
+  "title": "Effect of bilateral deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease.",
+  "year": 2012,
+  "journal": "The Journal of international medical research"
+ },
+ {
+  "key": "PMID_23039143",
+  "pmid": "23039143",
+  "pmcid": "PMC3990225",
+  "doi": "10.3171/2012.8.jns112006",
+  "title": "Effects of deep brain stimulation in the subthalamic nucleus or globus pallidus internus on step initiation in Parkinson disease: laboratory investigation.",
+  "year": 2012,
+  "journal": "Journal of neurosurgery"
+ },
+ {
+  "key": "PMID_23485851",
+  "pmid": "23485851",
+  "pmcid": null,
+  "doi": "10.1093/brain/awt049",
+  "title": "Exploring the cortical and subcortical functional magnetic resonance imaging changes associated with freezing in Parkinson's disease.",
+  "year": 2013,
+  "journal": "Brain : a journal of neurology"
+ },
+ {
+  "key": "PMID_23749331",
+  "pmid": "23749331",
+  "pmcid": null,
+  "doi": "10.1007/s00415-013-6983-2",
+  "title": "Low-frequency subthalamic nucleus deep brain stimulation for axial symptoms in advanced Parkinson's disease.",
+  "year": 2013,
+  "journal": "Journal of neurology"
+ },
+ {
+  "key": "PMID_24361601",
+  "pmid": "24361601",
+  "pmcid": null,
+  "doi": "10.1016/j.nbd.2013.12.005",
+  "title": "High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease.",
+  "year": 2014,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_24396010",
+  "pmid": "24396010",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2013-306336",
+  "title": "Effects of deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease: a prospective controlled study.",
+  "year": 2014,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_25346142",
+  "pmid": "25346142",
+  "pmcid": null,
+  "doi": "10.1111/ane.12342",
+  "title": "Motor symptoms after deep brain stimulation of the subthalamic nucleus.",
+  "year": 2015,
+  "journal": "Acta neurologica Scandinavica"
+ },
+ {
+  "key": "PMID_25540305",
+  "pmid": "25540305",
+  "pmcid": "PMC4336001",
+  "doi": "10.1212/wnl.0000000000001184",
+  "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.",
+  "year": 2015,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_26259857",
+  "pmid": "26259857",
+  "pmcid": null,
+  "doi": "10.1212/wnl.0000000000001823",
+  "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.",
+  "year": 2015,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_26319759",
+  "pmid": "26319759",
+  "pmcid": null,
+  "doi": "10.1016/j.neucli.2015.07.001",
+  "title": "Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review.",
+  "year": 2015,
+  "journal": "Neurophysiologie clinique = Clinical neurophysiology"
+ },
+ {
+  "key": "PMID_26467485",
+  "pmid": "26467485",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2015.10.002",
+  "title": "Variable frequency stimulation of subthalamic nucleus for freezing of gait in Parkinson's disease.",
+  "year": 2015,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_26482492",
+  "pmid": "26482492",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2015.09.047",
+  "title": "Reversible improvement in severe freezing of gait from Parkinson's disease with unilateral interleaved subthalamic brain stimulation.",
+  "year": 2015,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_27766724",
+  "pmid": "27766724",
+  "pmcid": null,
+  "doi": "10.1111/ene.13167",
+  "title": "Effect of high-frequency subthalamic neurostimulation on gait and freezing of gait in Parkinson's disease: a systematic review and meta-analysis.",
+  "year": 2017,
+  "journal": "European journal of neurology"
+ },
+ {
+  "key": "PMID_27915226",
+  "pmid": "27915226",
+  "pmcid": null,
+  "doi": "10.1016/j.gaitpost.2016.11.039",
+  "title": "Subthalamic nucleus stimulation and gait in Parkinson's Disease: a not always fruitful relationship.",
+  "year": 2017,
+  "journal": "Gait & posture"
+ },
+ {
+  "key": "PMID_28392298",
+  "pmid": "28392298",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2017.03.015",
+  "title": "Variable frequency stimulation of subthalamic nucleus in Parkinson's disease: Rationale and hypothesis.",
+  "year": 2017,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_28830666",
+  "pmid": "28830666",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2017.08.016",
+  "title": "Depression may negatively affect the change in freezing of gait following subthalamic nucleus stimulation in Parkinson's disease.",
+  "year": 2017,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_29654112",
+  "pmid": "29654112",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2018-318060",
+  "title": "Long-term effect of low frequency stimulation of STN on dysphagia, freezing of gait and other motor symptoms in PD.",
+  "year": 2018,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_30077869",
+  "pmid": "30077869",
+  "pmcid": null,
+  "doi": "10.1016/j.clinph.2018.07.006",
+  "title": "Correlation between deep brain stimulation effects on freezing of gait and audio-spinal reflex.",
+  "year": 2018,
+  "journal": "Clinical neurophysiology : official journal of the International Federation of Clinical Neurophysiology"
+ },
+ {
+  "key": "PMID_30100532",
+  "pmid": "30100532",
+  "pmcid": null,
+  "doi": "10.1016/j.clinph.2018.07.013",
+  "title": "Decreasing subthalamic deep brain stimulation frequency reverses cognitive interference during gait initiation in Parkinson's disease.",
+  "year": 2018,
+  "journal": "Clinical neurophysiology : official journal of the International Federation of Clinical Neurophysiology"
+ },
+ {
+  "key": "PMID_30241951",
+  "pmid": "30241951",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2018.09.008",
+  "title": "Simultaneous low-frequency deep brain stimulation of the substantia nigra pars reticulata and high-frequency stimulation of the subthalamic nucleus to treat levodopa unresponsive freezing of gait in Parkinson's disease: A pilot study.",
+  "year": 2019,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_30641837",
+  "pmid": "30641837",
+  "pmcid": null,
+  "doi": "10.3171/2018.8.jns18350",
+  "title": "Long-term effect of subthalamic nucleus deep brain stimulation on freezing of gait in Parkinson's disease.",
+  "year": 2019,
+  "journal": "Journal of neurosurgery"
+ },
+ {
+  "key": "PMID_30704853",
+  "pmid": "30704853",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2019.01.021",
+  "title": "Clinical and anatomical predictors for freezing of gait and falls after subthalamic deep brain stimulation in Parkinson's disease patients.",
+  "year": 2019,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_30746411",
+  "pmid": "30746411",
+  "pmcid": "PMC6335519",
+  "doi": "10.1002/mdc3.12681",
+  "title": "Alternate Subthalamic Nucleus Deep Brain Stimulation Parameters to Manage Motor Symptoms of Parkinson's Disease: Systematic Review and Meta-analysis.",
+  "year": 2019,
+  "journal": "Movement disorders clinical practice"
+ }
+]
+2026-11-13T16:37:19.156238Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (C:\Users\zuoyi\.codex\config.toml): `features.remote_connections` is ignored.
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (C:\Users\zuoyi\.codex\config.toml): `features.remote_connections` is ignored.
+**Preparing source validation**
+**Inspecting API access**
+**Preparing metadata lookup**
+codex
+我会按清单逐篇查找合法开放版本，只下载并做你要求的文件完整性检查，最后在当前目录写入 `manifest.json`。正文检查会由脚本只判定 PDF 文件头/大小，或 HTML 是否含全文常见章节标记；不会做内容总结或分析。
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "Get-Location; python --version; python -c \"import requests; print('requests', requests.__version__)\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 1152ms:
+
+Python 3.12.10
+requests 2.34.2
+Path                                
+----                                
+D:\fwlaozong\papers\luna_1113_113706
+
+
+
+**Preparing DOI script**
+**Checking PubMed full-text options**
+**Reviewing article access options**
+**Preparing full-text validation**
+**Preparing direct PDF downloads**
+**Preparing source probes**
+**Building source probes**
+**Checking paper PDF sources**
+**Locating open paper versions**
+**Inspecting current directory**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem -Force | Select-Object Mode,Length,Name' in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 125ms:
+
+Mode   Length Name       
+----   ------ ----       
+-a----  13915 _prompt.txt
+
+
+
+**Preparing a download script**
+**Compiling paper records**
+**Mapping PDF retrieval paths**
+**Preparing PDF candidates**
+**Checking PDF candidates**
+**Preparing metadata checks**
+**Creating metadata script**
+**Checking metadata endpoints**
+**Checking DOI version records**
+**Validating full-text pages**
+**Matching section headers**
+**Creating source-check code**
+**Preparing Python script**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import concurrent.futures, html.parser, json, os, re, tarfile, io, time, urllib.parse, xml.etree.ElementTree as ET
+import requests
+
+ITEMS = [
+(\"DOI_10.1101_19011858\", None, None, \"10.1101/19011858\"),
+(\"DOI_10.1101_2021.07.01.21259612\", None, None, \"10.1101/2021.07.01.21259612\"),
+(\"DOI_10.1101_2025.05.08.25327015\", None, None, \"10.1101/2025.05.08.25327015\"),
+(\"DOI_10.1101_671479\", None, None, \"10.1101/671479\"),
+(\"DOI_10.21203_rs.3.rs-4058858_v1\", None, None, \"10.21203/rs.3.rs-4058858/v1\"),
+(\"DOI_10.21203_rs.3.rs-4216535_v1\", None, None, \"10.21203/rs.3.rs-4216535/v1\"),
+(\"DOI_10.64898_2026.02.02.702843\", None, None, \"10.64898/2026.02.02.702843\"),
+(\"PMID_10634253\", \"10634253\", None, \"10.1002/1531-8257(200001)15:1<136::aid-mds1021>3.0.co;2-5\"),
+(\"PMID_16139421\", \"16139421\", None, \"10.1016/j.clineuro.2005.07.008\"),
+(\"PMID_17712844\", \"17712844\", None, \"10.1002/mds.21609\"),
+(\"PMID_18413568\", \"18413568\", None, \"10.1212/01.wnl.0000310416.90757.85\"),
+(\"PMID_18420482\", \"18420482\", None, \"10.1212/01.wnl.0000303972.16279.46\"),
+(\"PMID_19705483\", \"19705483\", None, \"10.1002/mds.22743\"),
+(\"PMID_21370271\", \"21370271\", None, \"10.1002/mds.23583\"),
+(\"PMID_21397548\", \"21397548\", None, \"10.1016/j.parkreldis.2011.02.014\"),
+(\"PMID_21997389\", \"21997389\", None, \"10.1002/mds.23990\"),
+(\"PMID_22696586\", \"22696586\", None, \"10.1136/jnnp-2011-302091\"),
+(\"PMID_22906284\", \"22906284\", None, \"10.1177/147323001204000330\"),
+(\"PMID_23039143\", \"23039143\", \"PMC3990225\", \"10.3171/2012.8.jns112006\"),
+(\"PMID_23485851\", \"23485851\", None, \"10.1093/brain/awt049\"),
+(\"PMID_23749331\", \"23749331\", None, \"10.1007/s00415-013-6983-2\"),
+(\"PMID_24361601\", \"24361601\", None, \"10.1016/j.nbd.2013.12.005\"),
+(\"PMID_24396010\", \"24396010\", None, \"10.1136/jnnp-2013-306336\"),
+(\"PMID_25346142\", \"25346142\", None, \"10.1111/ane.12342\"),
+(\"PMID_25540305\", \"25540305\", \"PMC4336001\", \"10.1212/wnl.0000000000001184\"),
+(\"PMID_26259857\", \"26259857\", None, \"10.1212/wnl.0000000000001823\"),
+(\"PMID_26319759\", \"26319759\", None, \"10.1016/j.neucli.2015.07.001\"),
+(\"PMID_26467485\", \"26467485\", None, \"10.1016/j.parkreldis.2015.10.002\"),
+(\"PMID_26482492\", \"26482492\", None, \"10.1016/j.parkreldis.2015.09.047\"),
+(\"PMID_27766724\", \"27766724\", None, \"10.1111/ene.13167\"),
+(\"PMID_27915226\", \"27915226\", None, \"10.1016/j.gaitpost.2016.11.039\"),
+(\"PMID_28392298\", \"28392298\", None, \"10.1016/j.parkreldis.2017.03.015\"),
+(\"PMID_28830666\", \"28830666\", None, \"10.1016/j.parkreldis.2017.08.016\"),
+(\"PMID_29654112\", \"29654112\", None, \"10.1136/jnnp-2018-318060\"),
+(\"PMID_30077869\", \"30077869\", None, \"10.1016/j.clinph.2018.07.006\"),
+(\"PMID_30100532\", \"30100532\", None, \"10.1016/j.clinph.2018.07.013\"),
+(\"PMID_30241951\", \"30241951\", None, \"10.1016/j.parkreldis.2018.09.008\"),
+(\"PMID_30641837\", \"30641837\", None, \"10.3171/2018.8.jns18350\"),
+(\"PMID_30704853\", \"30704853\", None, \"10.1016/j.parkreldis.2019.01.021\"),
+(\"PMID_30746411\", \"30746411\", \"PMC6335519\", \"10.1002/mdc3.12681\"),
+]
+
+UA = \"Mozilla/5.0 (compatible; OpenAccessPaperDownloader/1.0)\"
+TIMEOUT = (10, 35)
+
+class TextExtractor(html.parser.HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts=[]
+        self.skip=0
+    def handle_starttag(self, tag, attrs):
+        if tag in (\"script\",\"style\",\"noscript\",\"svg\"):
+            self.skip += 1
+    def handle_endtag(self, tag):
+        if tag in (\"script\",\"style\",\"noscript\",\"svg\") and self.skip:
+            self.skip -= 1
+    def handle_data(self, data):
+        if not self.skip:
+            self.parts.append(data)
+
+def get(url, params=None):
+    return requests.get(url, params=params, headers={\"User-Agent\":UA}, timeout=TIMEOUT, allow_redirects=True)
+
+def api_openalex(doi):
+    urls=[]
+    try:
+        r=get(\"https://api.openalex.org/works/https://doi.org/\"+urllib.parse.quote(doi, safe=\"/()<>:;\"))
+        if r.ok:
+            j=r.json()
+            locs=[]
+            if j.get(\"best_oa_location\"): locs.append(j[\"best_oa_location\"])
+            locs += j.get(\"locations\") or []
+            seen=set()
+            for loc in locs:
+                if not loc or not loc.get(\"is_oa\", True): continue
+                for k in (\"pdf_url\",\"landing_page_url\"):
+                    u=loc.get(k)
+                    if u and u not in seen:
+                        urls.append((u, \"OpenAlex OA location\"))
+                        seen.add(u)
+    except Exception:
+        pass
+    return urls
+
+def europepmc(pmid, doi):
+    pdfs=[]; pages=[]; pmcid=None
+    try:
+        q=(\"EXT_ID:\"+pmid) if pmid else ('DOI:\"'+doi+'\"')
+        r=get(\"https://www.ebi.ac.uk/europepmc/webservices/rest/search\", {\"query\":q, \"format\":\"json\", \"resultType\":\"core\"})
+        if r.ok:
+            results=r.json().get(\"resultList\",{}).get(\"result\",[])
+            for e in results[:3]:
+                pmcid = pmcid or e.get(\"pmcid\")
+                for u in e.get(\"fullTextUrlList\",{}).get(\"fullTextUrl\",[]):
+                    url=u.get(\"url\")
+                    if not url: continue
+                    if u.get(\"documentStyle\",\"\").lower()==\"pdf\" or url.lower().split(\"?\")[0].endswith(\".pdf\"):
+                        pdfs.append((url,\"Europe PMC\"))
+                    else:
+                        pages.append((url,\"Europe PMC\"))
+    except Exception:
+        pass
+    return pmcid,pdfs,pages
+
+def preprint_sources(doi):
+    pdfs=[]; pages=[]
+    server=None
+    if doi.startswith(\"10.1101/\"):
+        server=\"medrxiv\" if doi not in (\"10.1101/671479\",) else \"biorxiv\"
+    elif doi.startswith(\"10.64898/\"):
+        server=\"biorxiv\"
+    if server:
+        versions=[]
+        try:
+            r=get(\"https://api.biorxiv.org/details/\"+server+\"/\"+urllib.parse.quote(doi,safe=\"/\"))
+            if r.ok:
+                for rec in r.json().get(\"collection\",[]):
+                    v=rec.get(\"version\")
+                    if v:
+                        versions.append(int(v))
+        except Exception:
+            pass
+        for v in sorted(set(versions),reverse=True):
+            pdfs.append((\"https://www.\"+server+\".org/content/\"+doi+\"v\"+str(v)+\".full.pdf\",server+\" full-text PDF\"))
+        pdfs.append((\"https://www.\"+server+\".org/content/\"+doi+\".full.pdf\",server+\" full-text PDF\"))
+        pages.append((\"https://www.\"+server+\".org/content/\"+doi+\"v1\",server+\" full text\"))
+    if doi.startswith(\"10.21203/\"):
+        m=re.search(r\"rs-(\\\\d+)\", doi)
+        if m:
+            base=\"https://www.researchsquare.com/article/rs-\"+m.group(1)+\"/v1\"
+            pdfs.extend([(base+\".pdf\",\"Research Square PDF\"),(base+\"?pdf=1\",\"Research Square PDF\")])
+            pages.append((base,\"Research Square open article page\"))
+    return pdfs,pages
+
+def pmc_package(pmcid):
+    files=[]
+    try:
+        r=get(\"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi\", {\"id\":pmcid})
+        if r.ok:
+            root=ET.fromstring(r.content)
+            for el in root.iter(\"link\"):
+                if el.attrib.get(\"format\") in (\"tgz\",\"tar.gz\") and el.attrib.get(\"href\"):
+                    ar=get(el.attrib[\"href\"])
+                    if ar.ok:
+                        with tarfile.open(fileobj=io.BytesIO(ar.content), mode=\"r:gz\") as tf:
+                            for member in tf.getmembers():
+                                if member.isfile() and member.name.lower().endswith(\".pdf\"):
+                                    f=tf.extractfile(member)
+                                    if f: files.append((\"PMC OA package\", f.read()))
+    except Exception:
+        pass
+    return files
+
+def extract_pdf_links(html, base):
+    found=[]
+    for href in re.findall(r'''href\\\\s*=\\\\s*[\"'](["'^"'"']+)[\"']''', html, flags=re.I):
+        h=urllib.parse.urljoin(base, href.replace(\"&amp;\",\"&\"))
+        if \".pdf\" in h.lower() or \"pdf=render\" in h.lower() or \"downloadpdf\" in h.lower():
+            found.append(h)
+    return list(dict.fromkeys(found))
+
+def validate_html(content):
+    try:
+        s=content.decode(\"utf-8\", \"replace\")
+        ex=TextExtractor(); ex.feed(s)
+        text=\" \".join(ex.parts)
+        low=text.lower()
+        wc=len(re.findall(r\"\\\\b[\\\\w'-]+\\\\b\", text))
+        section_hits=sum(bool(re.search(r\"\\\\b\"+x+r\"\\\\b\", low)) for x in (\"methods\",\"methodology\",\"materials and methods\",\"results\",\"discussion\",\"introduction\",\"conclusion\"))
+        blocked=any(x in low[:12000] for x in (\"enable javascript and cookies\",\"access denied\",\"log in to continue\",\"sign in to access\",\"purchase this article\",\"subscribe to access\",\"captcha\",\"verify you are human\"))
+        return wc>=600 and section_hits>=2 and not blocked
+    except Exception:
+        return False
+
+def fetch_candidates(pdfs, pages):
+    # Try every candidate PDF before accepting any HTML page.
+    seen=set()
+    for url, source in pdfs:
+        if not url or url in seen: continue
+        seen.add(url)
+        try:
+            r=get(url)
+            b=r.content
+            if r.ok and len(b)>50000 and b[:5]==b\"%PDF-\":
+                return (\"pdf\", b, r.url, source)
+        except Exception:
+            continue
+    seen=set()
+    for url, source in pages:
+        if not url or url in seen: continue
+        seen.add(url)
+        try:
+            r=get(url)
+            if not r.ok or not r.content: continue
+            ctype=r.headers.get(\"Content-Type\",\"\").lower()
+            if \"html\" in ctype or r.content.lstrip().lower().startswith((b\"<"'!doctype html",b"<html")):
+                # If a legitimate full-text landing page links to a PDF, retry those official links first.
+                for purl in extract_pdf_links(r.text, r.url):
+                    try:
+                        pr=get(purl)
+                        if pr.ok and len(pr.content)>50000 and pr.content[:5]==b"%PDF-":
+                            return ("pdf",pr.content,pr.url,source+" PDF")
+                    except Exception:
+                        pass
+                if validate_html(r.content):
+                    return ("html",r.content,r.url,source)
+        except Exception:
+            continue
+    return None
+
+def process(item):
+    key,pmid,pmcid,doi=item
+    pdfs=[]; pages=[]; api_reached=False
+    ppre, hpre=preprint_sources(doi); pdfs += ppre; pages += hpre
+    oa=api_openalex(doi); pdfs += [(u,s) for u,s in oa if ".pdf" in u.lower()]; pages += [(u,s) for u,s in oa if ".pdf" not in u.lower()]
+    e_pmcid,e_pdf,e_pages=europepmc(pmid,doi)
+    api_reached=bool(oa or e_pmcid or e_pdf or e_pages)
+    pdfs+=e_pdf; pages+=e_pages
+    pmcid=pmcid or e_pmcid
+    if pmcid:
+        pack=pmc_package(pmcid)
+        for source,b in pack:
+            if len(b)>50000 and b[:5]==b"%PDF-":
+                return write_result(key,"pdf",b,"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id="+pmcid,source)
+        pages.extend([
+            ("https://pmc.ncbi.nlm.nih.gov/articles/"+pmcid+"/","PubMed Central full text"),
+            ("https://europepmc.org/articles/"+pmcid,"Europe PMC full text"),
+        ])
+        pdfs.extend([
+            ("https://europepmc.org/articles/"+pmcid+"?pdf=render","Europe PMC PDF"),
+            ("https://pmc.ncbi.nlm.nih.gov/articles/"+pmcid+"/pdf/","PubMed Central PDF"),
+        ])
+    found=fetch_candidates(pdfs,pages)
+    if found:
+        typ,b,url,source=found
+        return write_result(key,typ,b,url,source)
+    status="not_open"
+    note="未找到通过完整性校验的开放全文（查询预印本服务器、Europe PMC/PMC 与 OpenAlex OA 记录）。"
+    return {"key":key,"status":status,"file":None,"source_url":None,"note":note}
+
+def write_result(key,typ,b,url,source):
+    ext=".pdf" if typ=="pdf" else ".html"
+    name=key+ext
+    with open(name,"wb") as f: f.write(b)
+    note=("PDF header and size validated ("+str(len(b))+" bytes)." if typ=="pdf" else "Open full-text HTML validated by section markers and body length ("+str(len(b))+" bytes).")
+    return {"key":key,"status":"ok","file":name,"source_url":url,"note":note}
+
+results={}
+with concurrent.futures.ThreadPoolExecutor(max_workers=7) as ex:
+    fs={ex.submit(process,it):it for it in ITEMS}
+    for fut in concurrent.futures.as_completed(fs):
+        it=fs[fut]
+        try:
+            res=fut.result()
+        except Exception as e:
+            res={"key":it[0],"status":"failed","file":None,"source_url":None,"note":"下载处理异常："+type(e).__name__}
+        results[it[0]]=res
+        print(json.dumps({"done":len(results),"total":len(ITEMS),"key":it[0],"status":res["status"],"file":res["file"]},ensure_ascii=False),flush=True)
+
+ordered=[results[it[0]] for it in ITEMS]
+with open("manifest.json","w",encoding="utf-8") as f:
+    json.dump(ordered,f,ensure_ascii=False,indent=2)
+    f.write("'"\\\\n\")
+print(\"MANIFEST_WRITTEN\",sum(r[\"status\"]==\"ok\" for r in ordered),len(ordered),flush=True)
+'@ | python -" in D:\fwlaozong\papers\luna_1113_113706
+ exited 1 in 276ms:
+  File "<stdin>", line 1
+    ﻿import concurrent.futures, html.parser, json, os, re, tarfile, io, time, urllib.parse, xml.etree.ElementTree as ET
+    ^
+SyntaxError: invalid non-printable character U+FEFF
+
+**Resending BOM-free code**
+**Re-pasting corrected script**
+**Fixing script escapes**
+**Preparing validator fix**
+**Preparing Python command**
+**Simplifying OpenAlex outputs**
+**Prioritizing PMCID PDF checks**
+**Retrying open-access lookup**
+**Executing the revision**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import concurrent.futures, html.parser, json, re, tarfile, io, urllib.parse, xml.etree.ElementTree as ET
+import requests
+
+ITEMS = [
+(\"DOI_10.1101_19011858\",None,None,\"10.1101/19011858\"),
+(\"DOI_10.1101_2021.07.01.21259612\",None,None,\"10.1101/2021.07.01.21259612\"),
+(\"DOI_10.1101_2025.05.08.25327015\",None,None,\"10.1101/2025.05.08.25327015\"),
+(\"DOI_10.1101_671479\",None,None,\"10.1101/671479\"),
+(\"DOI_10.21203_rs.3.rs-4058858_v1\",None,None,\"10.21203/rs.3.rs-4058858/v1\"),
+(\"DOI_10.21203_rs.3.rs-4216535_v1\",None,None,\"10.21203/rs.3.rs-4216535/v1\"),
+(\"DOI_10.64898_2026.02.02.702843\",None,None,\"10.64898/2026.02.02.702843\"),
+(\"PMID_10634253\",\"10634253\",None,\"10.1002/1531-8257(200001)15:1<136::aid-mds1021>3.0.co;2-5\"),
+(\"PMID_16139421\",\"16139421\",None,\"10.1016/j.clineuro.2005.07.008\"),
+(\"PMID_17712844\",\"17712844\",None,\"10.1002/mds.21609\"),
+(\"PMID_18413568\",\"18413568\",None,\"10.1212/01.wnl.0000310416.90757.85\"),
+(\"PMID_18420482\",\"18420482\",None,\"10.1212/01.wnl.0000303972.16279.46\"),
+(\"PMID_19705483\",\"19705483\",None,\"10.1002/mds.22743\"),
+(\"PMID_21370271\",\"21370271\",None,\"10.1002/mds.23583\"),
+(\"PMID_21397548\",\"21397548\",None,\"10.1016/j.parkreldis.2011.02.014\"),
+(\"PMID_21997389\",\"21997389\",None,\"10.1002/mds.23990\"),
+(\"PMID_22696586\",\"22696586\",None,\"10.1136/jnnp-2011-302091\"),
+(\"PMID_22906284\",\"22906284\",None,\"10.1177/147323001204000330\"),
+(\"PMID_23039143\",\"23039143\",\"PMC3990225\",\"10.3171/2012.8.jns112006\"),
+(\"PMID_23485851\",\"23485851\",None,\"10.1093/brain/awt049\"),
+(\"PMID_23749331\",\"23749331\",None,\"10.1007/s00415-013-6983-2\"),
+(\"PMID_24361601\",\"24361601\",None,\"10.1016/j.nbd.2013.12.005\"),
+(\"PMID_24396010\",\"24396010\",None,\"10.1136/jnnp-2013-306336\"),
+(\"PMID_25346142\",\"25346142\",None,\"10.1111/ane.12342\"),
+(\"PMID_25540305\",\"25540305\",\"PMC4336001\",\"10.1212/wnl.0000000000001184\"),
+(\"PMID_26259857\",\"26259857\",None,\"10.1212/wnl.0000000000001823\"),
+(\"PMID_26319759\",\"26319759\",None,\"10.1016/j.neucli.2015.07.001\"),
+(\"PMID_26467485\",\"26467485\",None,\"10.1016/j.parkreldis.2015.10.002\"),
+(\"PMID_26482492\",\"26482492\",None,\"10.1016/j.parkreldis.2015.09.047\"),
+(\"PMID_27766724\",\"27766724\",None,\"10.1111/ene.13167\"),
+(\"PMID_27915226\",\"27915226\",None,\"10.1016/j.gaitpost.2016.11.039\"),
+(\"PMID_28392298\",\"28392298\",None,\"10.1016/j.parkreldis.2017.03.015\"),
+(\"PMID_28830666\",\"28830666\",None,\"10.1016/j.parkreldis.2017.08.016\"),
+(\"PMID_29654112\",\"29654112\",None,\"10.1136/jnnp-2018-318060\"),
+(\"PMID_30077869\",\"30077869\",None,\"10.1016/j.clinph.2018.07.006\"),
+(\"PMID_30100532\",\"30100532\",None,\"10.1016/j.clinph.2018.07.013\"),
+(\"PMID_30241951\",\"30241951\",None,\"10.1016/j.parkreldis.2018.09.008\"),
+(\"PMID_30641837\",\"30641837\",None,\"10.3171/2018.8.jns18350\"),
+(\"PMID_30704853\",\"30704853\",None,\"10.1016/j.parkreldis.2019.01.021\"),
+(\"PMID_30746411\",\"30746411\",\"PMC6335519\",\"10.1002/mdc3.12681\"),
+]
+UA=\"Mozilla/5.0 (compatible; OpenAccessPaperDownloader/1.0)\"
+TIMEOUT=(10,35)
+
+class TextExtractor(html.parser.HTMLParser):
+    def __init__(self):
+        super().__init__(); self.parts=[]; self.skip=0
+    def handle_starttag(self,tag,attrs):
+        if tag in (\"script\",\"style\",\"noscript\",\"svg\"): self.skip+=1
+    def handle_endtag(self,tag):
+        if tag in (\"script\",\"style\",\"noscript\",\"svg\") and self.skip: self.skip-=1
+    def handle_data(self,data):
+        if not self.skip: self.parts.append(data)
+
+def get(url,params=None):
+    return requests.get(url,params=params,headers={\"User-Agent\":UA},timeout=TIMEOUT,allow_redirects=True)
+
+def openalex(doi):
+    pdfs=[]; pages=[]
+    try:
+        r=get(\"https://api.openalex.org/works/https://doi.org/\"+urllib.parse.quote(doi,safe=\"/()<>:;\"))
+        if r.ok:
+            j=r.json(); locs=[]
+            if j.get(\"best_oa_location\"): locs.append(j[\"best_oa_location\"])
+            locs += j.get(\"locations\") or []
+            seen=set()
+            for loc in locs:
+                if not loc or not loc.get(\"is_oa\",True): continue
+                for field,dest in ((\"pdf_url\",pdfs),(\"landing_page_url\",pages)):
+                    u=loc.get(field)
+                    if u and u not in seen:
+                        dest.append((u,\"OpenAlex OA location\")); seen.add(u)
+    except Exception: pass
+    return pdfs,pages
+
+def europepmc(pmid,doi):
+    pdfs=[]; pages=[]; pmcid=None
+    try:
+        q=\"EXT_ID:\"+pmid if pmid else \"DOI:\"+doi
+        r=get(\"https://www.ebi.ac.uk/europepmc/webservices/rest/search\",{\"query\":q,\"format\":\"json\",\"resultType\":\"core\"})
+        if r.ok:
+            for e in r.json().get(\"resultList\",{}).get(\"result\",[])[:3]:
+                pmcid=pmcid or e.get(\"pmcid\")
+                for u in e.get(\"fullTextUrlList\",{}).get(\"fullTextUrl\",[]):
+                    url=u.get(\"url\")
+                    if not url: continue
+                    if u.get(\"documentStyle\",\"\").lower()==\"pdf\" or url.lower().split(\"?\")[0].endswith(\".pdf\"):
+                        pdfs.append((url,\"Europe PMC\"))
+                    else: pages.append((url,\"Europe PMC\"))
+    except Exception: pass
+    return pmcid,pdfs,pages
+
+def preprint(doi):
+    pdfs=[]; pages=[]; server=None
+    if doi.startswith(\"10.1101/\"): server=\"biorxiv\" if doi==\"10.1101/671479\" else \"medrxiv\"
+    elif doi.startswith(\"10.64898/\"): server=\"biorxiv\"
+    if server:
+        versions=[]
+        try:
+            r=get(\"https://api.biorxiv.org/details/\"+server+\"/\"+urllib.parse.quote(doi,safe=\"/\"))
+            if r.ok:
+                versions=[int(x[\"version\"]) for x in r.json().get(\"collection\",[]) if x.get(\"version\")]
+        except Exception: pass
+        for v in sorted(set(versions),reverse=True):
+            pdfs.append((\"https://www.\"+server+\".org/content/\"+doi+\"v\"+str(v)+\".full.pdf\",server+\" PDF\"))
+        pdfs.append((\"https://www.\"+server+\".org/content/\"+doi+\".full.pdf\",server+\" PDF\"))
+        pages.append((\"https://www.\"+server+\".org/content/\"+doi+\"v1\",server+\" full text\"))
+    elif doi.startswith(\"10.21203/\"):
+        m=re.search(r\"rs-(\\d+)\",doi)
+        if m:
+            base=\"https://www.researchsquare.com/article/rs-\"+m.group(1)+\"/v1\"
+            pdfs.extend([(base+\".pdf\",\"Research Square PDF\"),(base+\"?pdf=1\",\"Research Square PDF\")])
+            pages.append((base,\"Research Square full text\"))
+    return pdfs,pages
+
+def pmc_package(pmcid):
+    out=[]
+    try:
+        r=get(\"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi\",{\"id\":pmcid})
+        if r.ok:
+            root=ET.fromstring(r.content)
+            for e in root.iter(\"link\"):
+                if e.attrib.get(\"format\") in (\"tgz\",\"tar.gz\") and e.attrib.get(\"href\"):
+                    a=get(e.attrib[\"href\"])
+                    if a.ok:
+                        with tarfile.open(fileobj=io.BytesIO(a.content),mode=\"r:gz\") as tf:
+                            for member in tf.getmembers():
+                                if member.isfile() and member.name.lower().endswith(\".pdf\"):
+                                    f=tf.extractfile(member)
+                                    if f: out.append(f.read())
+    except Exception: pass
+    return out
+
+def pdf_links(doc,base):
+    hits=[]
+    for href in re.findall(r'''href\\s*=\\s*[\"'](["'^"'"']+)[\"']''',doc,flags=re.I):
+        u=urllib.parse.urljoin(base,href.replace(\"&amp;\",\"&\"))
+        if \".pdf\" in u.lower() or \"pdf=render\" in u.lower() or \"downloadpdf\" in u.lower(): hits.append(u)
+    return list(dict.fromkeys(hits))
+
+def valid_html(content):
+    try:
+        x=TextExtractor(); x.feed(content.decode(\"utf-8\",\"replace\"))
+        body=\" \".join(x.parts); low=body.lower()
+        words=len(re.findall(r\"\\b[\\w'-]+\\b\",body))
+        sections=sum(bool(re.search(r\"\\b\"+s+r\"\\b\",low)) for s in (\"methods\",\"methodology\",\"materials and methods\",\"results\",\"discussion\",\"introduction\",\"conclusion\"))
+        blocked=any(s in low[:12000] for s in (\"enable javascript and cookies\",\"access denied\",\"log in to continue\",\"sign in to access\",\"purchase this article\",\"subscribe to access\",\"captcha\",\"verify you are human\"))
+        return words>=600 and sections>=2 and not blocked
+    except Exception: return False
+
+def attempt(pdfs,pages):
+    seen=set()
+    for url,source in pdfs:
+        if not url or url in seen: continue
+        seen.add(url)
+        try:
+            r=get(url); b=r.content
+            if r.ok and len(b)>50000 and b[:5]==b\"%PDF-\": return (\"pdf\",b,r.url,source)
+        except Exception: pass
+    seen=set()
+    for url,source in pages:
+        if not url or url in seen: continue
+        seen.add(url)
+        try:
+            r=get(url)
+            if not r.ok or not r.content: continue
+            typ=r.headers.get(\"Content-Type\",\"\").lower()
+            if \"html\" in typ or r.content.lstrip().lower().startswith((b\"<"'!doctype html",b"<html")):
+                for purl in pdf_links(r.text,r.url):
+                    try:
+                        pr=get(purl)
+                        if pr.ok and len(pr.content)>50000 and pr.content[:5]==b"%PDF-":
+                            return ("pdf",pr.content,pr.url,source+" PDF")
+                    except Exception: pass
+                if valid_html(r.content): return ("html",r.content,r.url,source)
+        except Exception: pass
+    return None
+
+def save(key,found):
+    typ,b,url,src=found
+    name=key+(".pdf" if typ=="pdf" else ".html")
+    with open(name,"wb") as f: f.write(b)
+    note=("PDF header and size validated ("+str(len(b))+" bytes)." if typ=="pdf" else "Full-text HTML validated by section markers and body length ("+str(len(b))+" bytes).")
+    return {"key":key,"status":"ok","file":name,"source_url":url,"note":note}
+
+def process(it):
+    key,pmid,pmcid,doi=it
+    p1,h1=preprint(doi); p2,h2=openalex(doi); ep,eh,ehtml=europepmc(pmid,doi)
+    pdfs=p1+p2+ep; pages=h1+h2+ehtml
+    pmcid=pmcid or ep
+    if pmcid:
+        for b in pmc_package(pmcid):
+            if len(b)>50000 and b[:5]==b"%PDF-":
+                return save(key,("pdf",b,"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id="+pmcid,"PMC OA package"))
+        pages += [("https://pmc.ncbi.nlm.nih.gov/articles/"+pmcid+"/","PubMed Central full text"),
+                  ("https://europepmc.org/articles/"+pmcid,"Europe PMC full text")]
+        pdfs += [("https://europepmc.org/articles/"+pmcid+"?pdf=render","Europe PMC PDF"),
+                 ("https://pmc.ncbi.nlm.nih.gov/articles/"+pmcid+"/pdf/","PMC PDF")]
+    found=attempt(pdfs,pages)
+    if found: return save(key,found)
+    return {"key":key,"status":"not_open","file":None,"source_url":None,
+            "note":"未找到通过完整性校验的开放全文（查询预印本服务器、Europe PMC/PMC 与 OpenAlex OA 记录）。"}
+
+results={}
+with concurrent.futures.ThreadPoolExecutor(max_workers=7) as pool:
+    futures={pool.submit(process,it):it for it in ITEMS}
+    for f in concurrent.futures.as_completed(futures):
+        it=futures[f]
+        try: res=f.result()
+        except Exception as e: res={"key":it[0],"status":"failed","file":None,"source_url":None,"note":"处理异常："+type(e).__name__}
+        results[it[0]]=res
+        print(json.dumps({"done":len(results),"total":len(ITEMS),"key":it[0],"status":res["status"],"file":res["file"]},ensure_ascii=False),flush=True)
+
+ordered=[results[it[0]] for it in ITEMS]
+with open("manifest.json","w",encoding="utf-8") as f:
+    json.dump(ordered,f,ensure_ascii=False,indent=2); f.write("'"\\n\")
+print(\"MANIFEST_WRITTEN\",sum(x[\"status\"]==\"ok\" for x in ordered),len(ordered),flush=True)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<download>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+**Inspecting exception types**
+**Waiting for process output**
+codex
+初次批处理遇到统一的处理异常，尚未生成合格文件；我正在定位异常原因后继续。不会把未通过校验的下载计入完成数量。
+ succeeded in 23036ms:
+{"done": 1, "total": 40, "key": "DOI_10.21203_rs.3.rs-4058858_v1", "status": "failed", "file": null}
+{"done": 2, "total": 40, "key": "DOI_10.21203_rs.3.rs-4216535_v1", "status": "failed", "file": null}
+{"done": 3, "total": 40, "key": "DOI_10.1101_2025.05.08.25327015", "status": "failed", "file": null}
+{"done": 4, "total": 40, "key": "DOI_10.64898_2026.02.02.702843", "status": "failed", "file": null}
+{"done": 5, "total": 40, "key": "DOI_10.1101_671479", "status": "failed", "file": null}
+{"done": 6, "total": 40, "key": "PMID_10634253", "status": "failed", "file": null}
+{"done": 7, "total": 40, "key": "PMID_16139421", "status": "failed", "file": null}
+{"done": 8, "total": 40, "key": "PMID_17712844", "status": "failed", "file": null}
+{"done": 9, "total": 40, "key": "PMID_18413568", "status": "failed", "file": null}
+{"done": 10, "total": 40, "key": "DOI_10.1101_19011858", "status": "failed", "file": null}
+{"done": 11, "total": 40, "key": "DOI_10.1101_2021.07.01.21259612", "status": "failed", "file": null}
+{"done": 12, "total": 40, "key": "PMID_18420482", "status": "failed", "file": null}
+{"done": 13, "total": 40, "key": "PMID_21397548", "status": "failed", "file": null}
+{"done": 14, "total": 40, "key": "PMID_21997389", "status": "failed", "file": null}
+{"done": 15, "total": 40, "key": "PMID_22696586", "status": "failed", "file": null}
+{"done": 16, "total": 40, "key": "PMID_22906284", "status": "failed", "file": null}
+{"done": 17, "total": 40, "key": "PMID_23485851", "status": "failed", "file": null}
+{"done": 18, "total": 40, "key": "PMID_23749331", "status": "failed", "file": null}
+{"done": 19, "total": 40, "key": "PMID_24361601", "status": "failed", "file": null}
+{"done": 20, "total": 40, "key": "PMID_23039143", "status": "failed", "file": null}
+{"done": 21, "total": 40, "key": "PMID_24396010", "status": "failed", "file": null}
+{"done": 22, "total": 40, "key": "PMID_19705483", "status": "failed", "file": null}
+{"done": 23, "total": 40, "key": "PMID_21370271", "status": "failed", "file": null}
+{"done": 24, "total": 40, "key": "PMID_25346142", "status": "failed", "file": null}
+{"done": 25, "total": 40, "key": "PMID_26259857", "status": "failed", "file": null}
+{"done": 26, "total": 40, "key": "PMID_26467485", "status": "failed", "file": null}
+{"done": 27, "total": 40, "key": "PMID_25540305", "status": "failed", "file": null}
+{"done": 28, "total": 40, "key": "PMID_26482492", "status": "failed", "file": null}
+{"done": 29, "total": 40, "key": "PMID_27766724", "status": "failed", "file": null}
+{"done": 30, "total": 40, "key": "PMID_27915226", "status": "failed", "file": null}
+{"done": 31, "total": 40, "key": "PMID_28392298", "status": "failed", "file": null}
+{"done": 32, "total": 40, "key": "PMID_28830666", "status": "failed", "file": null}
+{"done": 33, "total": 40, "key": "PMID_29654112", "status": "failed", "file": null}
+{"done": 34, "total": 40, "key": "PMID_30100532", "status": "failed", "file": null}
+{"done": 35, "total": 40, "key": "PMID_30241951", "status": "failed", "file": null}
+{"done": 36, "total": 40, "key": "PMID_30641837", "status": "failed", "file": null}
+{"done": 37, "total": 40, "key": "PMID_26319759", "status": "failed", "file": null}
+{"done": 38, "total": 40, "key": "PMID_30704853", "status": "failed", "file": null}
+{"done": 39, "total": 40, "key": "PMID_30746411", "status": "failed", "file": null}
+{"done": 40, "total": 40, "key": "PMID_30077869", "status": "failed", "file": null}
+MANIFEST_WRITTEN 0 40
+
+**Testing APIs with requests**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; u='https://api.openalex.org/works/https://doi.org/10.1002/mds.21609'; r=requests.get(u,timeout=20); print(r.status_code, r.url, r.text[:200])\"; Get-Content manifest.json -TotalCount 18" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 757ms:
+200 https://api.openalex.org/works/https://doi.org/10.1002/mds.21609 {"id":"https://openalex.org/W2037137763","doi":"https://doi.org/10.1002/mds.21609","title":"Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian mo
+[
+  {
+    "key": "DOI_10.1101_19011858",
+    "status": "failed",
+    "file": null,
+    "source_url": null,
+    "note": "澶勭悊寮傚父锛歍ypeError"
+  },
+  {
+    "key": "DOI_10.1101_2021.07.01.21259612",
+    "status": "failed",
+    "file": null,
+    "source_url": null,
+    "note": "澶勭悊寮傚父锛歍ypeError"
+  },
+  {
+    "key": "DOI_10.1101_2025.05.08.25327015",
+    "status": "failed",
+
+**Patching null URL-list handling**
+**Recreating fetch script**
+**Retrying EPMC parsing**
+**Checking record structure**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; j=requests.get('https://www.ebi.ac.uk/europepmc/webservices/rest/search',params={'query':'EXT_ID:17712844','format':'json','resultType':'core'}).json(); print(j['resultList']['result'][0].get('fullTextUrlList'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 907ms:
+{'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1002/mds.21609'}]}
+
+**Checking location field shape**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; j=requests.get('https://api.openalex.org/works/https://doi.org/10.1002/mds.21609').json(); print(type(j.get('locations')),type(j.get('best_oa_location')),j.get('best_oa_location'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 770ms:
+<class 'list'> <class 'dict'> {'id': 'pmh:oai:ir.ymlib.yonsei.ac.kr:22282913/97164', 'doi': None, 'is_oa': True, 'landing_page_url': 'https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S4306400691', 'display_name': 'YUHSpace (Yonsei University Medical Library)', 'issn_l': None, 'issn': None, 'is_oa': False, 'is_in_doaj': False, 'is_core': False, 'listed_in': [], 'host_organization': 'https://openalex.org/I193775966', 'host_organization_name': 'Yonsei University', 'host_organization_lineage': ['https://openalex.org/I193775966'], 'host_organization_lineage_names': [], 'type': 'repository'}, 'license': 'cc-by-nc-nd', 'license_id': 'https://openalex.org/licenses/cc-by-nc-nd', 'version': 'submittedVersion', 'is_accepted': False, 'is_published': False, 'raw_source_name': '', 'raw_type': 'Article'}
+
+**Re-running first-item debug**
+**Inspecting fullTextUrlList samples**
+**Fixing null URL records**
+**Parsing manifest identifiers**
+**Processing the failed manifest**
+**Preparing the corrected script**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import concurrent.futures, html.parser, json, re, tarfile, io, urllib.parse, xml.etree.ElementTree as ET
+import requests
+UA=\"Mozilla/5.0 (compatible; OpenAccessPaperDownloader/1.0)\"
+T=(10,35)
+with open(\"manifest.json\",encoding=\"utf-8-sig\") as f: old=json.load(f)
+ITEMS=[]
+for row in old:
+    key=row[\"key\"]
+    doi=key[4:].replace(\"_\",\"/\") if key.startswith(\"DOI_\") else None
+    pmid=key[5:] if key.startswith(\"PMID_\") else None
+    ITEMS.append((key,pmid,doi))
+
+class TextExtractor(html.parser.HTMLParser):
+    def __init__(self): super().__init__(); self.parts=[]; self.skip=0
+    def handle_starttag(self,t,a):
+        if t in (\"script\",\"style\",\"noscript\",\"svg\"): self.skip+=1
+    def handle_endtag(self,t):
+        if t in (\"script\",\"style\",\"noscript\",\"svg\") and self.skip: self.skip-=1
+    def handle_data(self,d):
+        if not self.skip: self.parts.append(d)
+
+def get(u,p=None): return requests.get(u,params=p,headers={\"User-Agent\":UA},timeout=T,allow_redirects=True)
+def oa(doi):
+    pdf=[]; pages=[]
+    if not doi:return pdf,pages
+    try:
+        r=get(\"https://api.openalex.org/works/https://doi.org/\"+urllib.parse.quote(doi,safe=\"/()<>:;\"))
+        if r.ok:
+            j=r.json(); locs=([j[\"best_oa_location\"]] if j.get(\"best_oa_location\") else [])+(j.get(\"locations\") or [])
+            seen=set()
+            for l in locs:
+                if not isinstance(l,dict) or not l.get(\"is_oa\",True):continue
+                for fld,dest in ((\"pdf_url\",pdf),(\"landing_page_url\",pages)):
+                    u=l.get(fld)
+                    if u and u not in seen:dest.append((u,\"OpenAlex OA\"));seen.add(u)
+    except Exception:pass
+    return pdf,pages
+def ep(pmid,doi):
+    pdf=[]; pages=[]; pmcid=None
+    try:
+        q=\"EXT_ID:\"+pmid if pmid else \"DOI:\"+doi
+        r=get(\"https://www.ebi.ac.uk/europepmc/webservices/rest/search\",{\"query\":q,\"format\":\"json\",\"resultType\":\"core\"})
+        if r.ok:
+            for e in ((r.json().get(\"resultList\") or {}).get(\"result\") or [])[:3]:
+                pmcid=pmcid or e.get(\"pmcid\")
+                for x in ((e.get(\"fullTextUrlList\") or {}).get(\"fullTextUrl\") or []):
+                    u=x.get(\"url\")
+                    if u:
+                        (pdf if x.get(\"documentStyle\",\"\").lower()==\"pdf\" or u.lower().split(\"?\")[0].endswith(\".pdf\") else pages).append((u,\"Europe PMC\"))
+    except Exception:pass
+    return pmcid,pdf,pages
+def pre(doi):
+    pdf=[]; pages=[]
+    if not doi:return pdf,pages
+    server=\"biorxiv\" if doi==\"10.1101/671479\" or doi.startswith(\"10.64898/\") else (\"medrxiv\" if doi.startswith(\"10.1101/\") else None)
+    if server:
+        versions=[]
+        try:
+            r=get(\"https://api.biorxiv.org/details/\"+server+\"/\"+urllib.parse.quote(doi,safe=\"/\"))
+            if r.ok: versions=[int(x[\"version\"]) for x in (r.json().get(\"collection\") or []) if x.get(\"version\")]
+        except Exception:pass
+        for v in sorted(set(versions),reverse=True):pdf.append((\"https://www.\"+server+\".org/content/\"+doi+\"v\"+str(v)+\".full.pdf\",server+\" PDF\"))
+        pdf.append((\"https://www.\"+server+\".org/content/\"+doi+\".full.pdf\",server+\" PDF\"))
+        pages.append((\"https://www.\"+server+\".org/content/\"+doi+\"v1\",server+\" full text\"))
+    elif doi.startswith(\"10.21203/\"):
+        m=re.search(r\"rs-(\\d+)\",doi)
+        if m:
+            b=\"https://www.researchsquare.com/article/rs-\"+m.group(1)+\"/v1\"
+            pdf.extend([(b+\".pdf\",\"Research Square PDF\"),(b+\"?pdf=1\",\"Research Square PDF\")]);pages.append((b,\"Research Square full text\"))
+    return pdf,pages
+def package(pmc):
+    out=[]
+    try:
+        r=get(\"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi\",{\"id\":pmc})
+        if r.ok:
+            for x in ET.fromstring(r.content).iter(\"link\"):
+                if x.attrib.get(\"format\") in (\"tgz\",\"tar.gz\") and x.attrib.get(\"href\"):
+                    z=get(x.attrib[\"href\"])
+                    if z.ok:
+                        with tarfile.open(fileobj=io.BytesIO(z.content),mode=\"r:gz\") as tf:
+                            for m in tf.getmembers():
+                                if m.isfile() and m.name.lower().endswith(\".pdf\"):
+                                    f=tf.extractfile(m)
+                                    if f:out.append(f.read())
+    except Exception:pass
+    return out
+def validhtml(b):
+    try:
+        x=TextExtractor();x.feed(b.decode(\"utf-8\",\"replace\"));s=\" \".join(x.parts);lo=s.lower()
+        n=len(re.findall(r\"\\b[\\w'-]+\\b\",s))
+        hits=sum(bool(re.search(r\"\\b\"+t+r\"\\b\",lo)) for t in (\"methods\",\"methodology\",\"materials and methods\",\"results\",\"discussion\",\"introduction\",\"conclusion\"))
+        bad=any(t in lo[:12000] for t in (\"enable javascript and cookies\",\"access denied\",\"log in to continue\",\"sign in to access\",\"purchase this article\",\"subscribe to access\",\"captcha\",\"verify you are human\"))
+        return n>=600 and hits>=2 and not bad
+    except Exception:return False
+def links(doc,base):
+    out=[]
+    for h in re.findall(r'''href\\s*=\\s*[\"'](["'^"'"']+)[\"']''',doc,flags=re.I):
+        u=urllib.parse.urljoin(base,h.replace(\"&amp;\",\"&\"))
+        if \".pdf\" in u.lower() or \"pdf=render\" in u.lower() or \"downloadpdf\" in u.lower():out.append(u)
+    return list(dict.fromkeys(out))
+def attempt(pdf,pages):
+    seen=set()
+    for u,s in pdf:
+        if not u or u in seen:continue
+        seen.add(u)
+        try:
+            r=get(u);b=r.content
+            if r.ok and len(b)>50000 and b[:5]==b\"%PDF-\":return (\"pdf\",b,r.url,s)
+        except Exception:pass
+    seen=set()
+    for u,s in pages:
+        if not u or u in seen:continue
+        seen.add(u)
+        try:
+            r=get(u)
+            if not r.ok or not r.content:continue
+            if \"html\" in r.headers.get(\"Content-Type\",\"\").lower() or r.content.lstrip().lower().startswith((b\"<"'!doctype html",b"<html")):
+                for pu in links(r.text,r.url):
+                    try:
+                        z=get(pu)
+                        if z.ok and len(z.content)>50000 and z.content[:5]==b"%PDF-":return ("pdf",z.content,z.url,s+" PDF")
+                    except Exception:pass
+                if validhtml(r.content):return ("html",r.content,r.url,s)
+        except Exception:pass
+    return None
+def process(it):
+    key,pmid,doi=it
+    p0,h0=pre(doi);p1,h1=oa(doi);pmc,p2,h2=ep(pmid,doi);pdf=p0+p1+p2;pages=h0+h1+h2
+    if pmc:
+        for b in package(pmc):
+            if len(b)>50000 and b[:5]==b"%PDF-":
+                return ("pdf",b,"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id="+pmc,"PMC OA package")
+        pages += [("https://pmc.ncbi.nlm.nih.gov/articles/"+pmc+"/","PMC full text"),("https://europepmc.org/articles/"+pmc,"Europe PMC full text")]
+        pdf += [("https://europepmc.org/articles/"+pmc+"?pdf=render","Europe PMC PDF"),("https://pmc.ncbi.nlm.nih.gov/articles/"+pmc+"/pdf/","PMC PDF")]
+    return attempt(pdf,pages)
+def run(it):
+    key=it[0]
+    try:
+        found=process(it)
+        if found:
+            typ,b,url,source=found;name=key+(".pdf" if typ=="pdf" else ".html")
+            with open(name,"wb") as f:f.write(b)
+            note=("PDF header and size validated ("+str(len(b))+" bytes)." if typ=="pdf" else "Full-text HTML validated by section markers and body length ("+str(len(b))+" bytes).")
+            return {"key":key,"status":"ok","file":name,"source_url":url,"note":note}
+        return {"key":key,"status":"not_open","file":None,"source_url":None,"note":"未找到通过完整性校验的开放全文；已查询预印本服务器、Europe PMC/PMC 与 OpenAlex OA 记录。"}
+    except Exception as e:
+        return {"key":key,"status":"failed","file":None,"source_url":None,"note":"处理异常："+type(e).__name__+":"+str(e)[:160]}
+results={}
+with concurrent.futures.ThreadPoolExecutor(max_workers=7) as pool:
+    fs={pool.submit(run,it):it for it in ITEMS}
+    for f in concurrent.futures.as_completed(fs):
+        res=f.result();results[res["key"]]=res
+        print(json.dumps({"done":len(results),"total":len(ITEMS),"key":res["key"],"status":res["status"],"file":res["file"],"note":res["note"] if res["status"]=="failed" else ""},ensure_ascii=False),flush=True)
+ordered=[results[x[0]] for x in ITEMS]
+with open("manifest.json","w",encoding="utf-8") as f:json.dump(ordered,f,ensure_ascii=False,indent=2);f.write("'"\\n\")
+print(\"MANIFEST_WRITTEN\",sum(x[\"status\"]==\"ok\" for x in ordered),len(ordered),flush=True)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<download>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+**Checking source availability**
+**Checking Unpaywall access**
+**Checking OpenAlex records**
+**Checking completed statuses**
+ succeeded in 37401ms:
+{"done": 1, "total": 40, "key": "DOI_10.21203_rs.3.rs-4216535_v1", "status": "ok", "file": "DOI_10.21203_rs.3.rs-4216535_v1.pdf", "note": ""}
+{"done": 2, "total": 40, "key": "DOI_10.1101_19011858", "status": "ok", "file": "DOI_10.1101_19011858.pdf", "note": ""}
+{"done": 3, "total": 40, "key": "DOI_10.1101_2021.07.01.21259612", "status": "ok", "file": "DOI_10.1101_2021.07.01.21259612.pdf", "note": ""}
+{"done": 4, "total": 40, "key": "DOI_10.21203_rs.3.rs-4058858_v1", "status": "ok", "file": "DOI_10.21203_rs.3.rs-4058858_v1.pdf", "note": ""}
+{"done": 5, "total": 40, "key": "DOI_10.64898_2026.02.02.702843", "status": "ok", "file": "DOI_10.64898_2026.02.02.702843.pdf", "note": ""}
+{"done": 6, "total": 40, "key": "DOI_10.1101_671479", "status": "ok", "file": "DOI_10.1101_671479.pdf", "note": ""}
+{"done": 7, "total": 40, "key": "DOI_10.1101_2025.05.08.25327015", "status": "ok", "file": "DOI_10.1101_2025.05.08.25327015.pdf", "note": ""}
+{"done": 8, "total": 40, "key": "PMID_10634253", "status": "not_open", "file": null, "note": ""}
+{"done": 9, "total": 40, "key": "PMID_16139421", "status": "not_open", "file": null, "note": ""}
+{"done": 10, "total": 40, "key": "PMID_19705483", "status": "not_open", "file": null, "note": ""}
+{"done": 11, "total": 40, "key": "PMID_21370271", "status": "not_open", "file": null, "note": ""}
+{"done": 12, "total": 40, "key": "PMID_17712844", "status": "not_open", "file": null, "note": ""}
+{"done": 13, "total": 40, "key": "PMID_18413568", "status": "not_open", "file": null, "note": ""}
+{"done": 14, "total": 40, "key": "PMID_18420482", "status": "not_open", "file": null, "note": ""}
+{"done": 15, "total": 40, "key": "PMID_21397548", "status": "not_open", "file": null, "note": ""}
+{"done": 16, "total": 40, "key": "PMID_21997389", "status": "not_open", "file": null, "note": ""}
+{"done": 17, "total": 40, "key": "PMID_23749331", "status": "not_open", "file": null, "note": ""}
+{"done": 18, "total": 40, "key": "PMID_24361601", "status": "not_open", "file": null, "note": ""}
+{"done": 19, "total": 40, "key": "PMID_23485851", "status": "not_open", "file": null, "note": ""}
+{"done": 20, "total": 40, "key": "PMID_22906284", "status": "not_open", "file": null, "note": ""}
+{"done": 21, "total": 40, "key": "PMID_25346142", "status": "not_open", "file": null, "note": ""}
+{"done": 22, "total": 40, "key": "PMID_22696586", "status": "not_open", "file": null, "note": ""}
+{"done": 23, "total": 40, "key": "PMID_26259857", "status": "not_open", "file": null, "note": ""}
+{"done": 24, "total": 40, "key": "PMID_24396010", "status": "not_open", "file": null, "note": ""}
+{"done": 25, "total": 40, "key": "PMID_26319759", "status": "not_open", "file": null, "note": ""}
+{"done": 26, "total": 40, "key": "PMID_26482492", "status": "not_open", "file": null, "note": ""}
+{"done": 27, "total": 40, "key": "PMID_27766724", "status": "not_open", "file": null, "note": ""}
+{"done": 28, "total": 40, "key": "PMID_27915226", "status": "not_open", "file": null, "note": ""}
+{"done": 29, "total": 40, "key": "PMID_28392298", "status": "not_open", "file": null, "note": ""}
+{"done": 30, "total": 40, "key": "PMID_23039143", "status": "ok", "file": "PMID_23039143.pdf", "note": ""}
+{"done": 31, "total": 40, "key": "PMID_28830666", "status": "not_open", "file": null, "note": ""}
+{"done": 32, "total": 40, "key": "PMID_30100532", "status": "not_open", "file": null, "note": ""}
+{"done": 33, "total": 40, "key": "PMID_26467485", "status": "not_open", "file": null, "note": ""}
+{"done": 34, "total": 40, "key": "PMID_25540305", "status": "ok", "file": "PMID_25540305.html", "note": ""}
+{"done": 35, "total": 40, "key": "PMID_29654112", "status": "not_open", "file": null, "note": ""}
+{"done": 36, "total": 40, "key": "PMID_30077869", "status": "not_open", "file": null, "note": ""}
+{"done": 37, "total": 40, "key": "PMID_30704853", "status": "not_open", "file": null, "note": ""}
+{"done": 38, "total": 40, "key": "PMID_30641837", "status": "ok", "file": "PMID_30641837.pdf", "note": ""}
+{"done": 39, "total": 40, "key": "PMID_30241951", "status": "not_open", "file": null, "note": ""}
+{"done": 40, "total": 40, "key": "PMID_30746411", "status": "ok", "file": "PMID_30746411.html", "note": ""}
+MANIFEST_WRITTEN 11 40
+
+**Checking open-paper access**
+**Testing Unpaywall access**
+**Checking one DOI page**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; d='10.1002/mds.21609';
+for u in ['https://api.unpaywall.org/v2/'+d+'?email=downloads@example.com','https://unpaywall.org/'+d]:
+ try:
+  r=requests.get(u,timeout=20); print(r.status_code,r.url,r.headers.get('Content-Type'),len(r.content),r.text[:180].replace('\\\\n',' '))
+ except Exception as e: print(type(e).__name__,e)\"" in D:\fwlaozong\papers\luna_1113_113706
+**Polling session status**
+2026-11-13T16:44:59.529615Z ERROR codex_core::tools::router: error=write_stdin failed: Unknown process id 39026
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; u='https://api.unpaywall.org/v2/10.1002/mds.21609'; r=requests.get(u,params={'email':'downloads@example.com'},timeout=30); print(r.status_code,r.url,r.headers.get('Content-Type'),len(r.content),r.text[:300])\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 572ms:
+422 https://api.unpaywall.org/v2/10.1002/mds.21609?email=downloads%40example.com application/json 154 {
+    "HTTP_status_code": 422,
+    "error": true,
+    "message": "Please use your own email address in API calls. See http://unpaywall.org/products/api"
+}
+
+ succeeded in 21690ms:
+422 https://api.unpaywall.org/v2/10.1002/mds.21609?email=downloads@example.com application/json 154 {
+    "HTTP_status_code": 422,
+    "error": true,
+    "message": "Please use your own email address in API calls. See http://unpaywall.org/products/api"
+}
+ReadTimeout HTTPSConnectionPool(host='oadoi.org', port=443): Read timed out. (read timeout=20)
+
+**Checking Unpaywall page**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; u='https://unpaywall.org/10.1002/mds.21609'; r=requests.get(u,timeout=20); print(r.status_code,r.url,r.headers.get('Content-Type'),len(r.content),r.text[:400])\"" in D:\fwlaozong\papers\luna_1113_113706
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; r=requests.get('https://unpaywall.org/10.1002/mds.21609',timeout=8); print(r.status_code,r.url,len(r.content))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 2287ms:
+200 https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164 971
+
+ exited 1 in 21103ms:
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1251, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 1103, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='oadoi.org', port=443): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 805, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='oadoi.org', port=443): Read timed out. (read timeout=20)
+
+**Checking Unpaywall redirects**
+**Reconstructing DOI mappings**
+**Testing one repository result**
+**Checking YUHSpace article page**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; r=requests.get('https://unpaywall.org/10.1002/mds.21609',timeout=20); print(r.status_code,r.url,r.headers.get('Content-Type'),r.headers); print(r.text[:1500])\"" in D:\fwlaozong\papers\luna_1113_113706
+ exited 1 in 20738ms:
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='oadoi.org', port=80): Read timed out. (read timeout=20)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 805, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='oadoi.org', port=80): Read timed out. (read timeout=20)
+
+**Checking the pending result**
+**Checking manifest and progress**
+**Preparing PMID mapping**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; r=requests.get('https://unpaywall.org/10.1002/mds.21609',timeout=15); print(r.status_code,r.url,r.headers.get('Content-Type'),len(r.content)); print(r.text[:500])\"" in D:\fwlaozong\papers\luna_1113_113706
+**Waiting for poll**
+ exited 1 in 15680ms:
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1430, in getresponse
+    response.begin()
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='oadoi.org', port=80): Read timed out. (read timeout=15)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 805, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zuoyi\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='oadoi.org', port=80): Read timed out. (read timeout=15)
+
+**Inspecting OpenAlex OA records**
+**Preparing Europe PMC query**
+**Querying Semantic Scholar OA**
+**Checking open-access locations**
+**Checking remaining articles**
+**Testing article access**
+**Testing PMC searches**
+**Querying PMID records**
+**Checking repository indexes**
+codex
+目前已通过文件检查保存 11 篇；其余条目在首轮开放来源检索中没有得到可验证全文。我继续检查作者/机构仓库等开放索引，并更新清单状态。
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; ids=['10634253','16139421','17712844','18413568','18420482','19705483','21370271','21397548','21997389','22696586','22906284','23485851','23749331','24361601','24396010','25346142','26259857','26319759','26467485','26482492','27766724','27915226','28392298','28830666','29654112','30077869','30100532','30241951','30641837','30704853','30746411'];
+for p in ids:
+ try:
+  r=requests.get('https://api.semanticscholar.org/graph/v1/paper/PMID:'+p,params={'fields':'openAccessPdf'},timeout=8); j=r.json(); x=j.get('openAccessPdf') or {}; print(p, r.status_code, x.get('url',''))
+ except Exception as e: print(p,type(e).__name__)\"" in D:\fwlaozong\papers\luna_1113_113706
+**Waiting for serial 31**
+ succeeded in 23586ms:
+10634253 429 
+16139421 429 
+17712844 429 
+18413568 429 
+18420482 429 
+19705483 429 
+21370271 429 
+21397548 200 
+21997389 429 
+22696586 429 
+22906284 200 https://doi.org/10.1177/147323001204000330
+23485851 429 
+23749331 429 
+24361601 429 
+24396010 429 
+25346142 200 https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ane.12342
+26259857 429 
+26319759 429 
+26467485 200 
+26482492 429 
+27766724 429 
+27915226 429 
+28392298 429 
+28830666 429 
+29654112 200 
+30077869 429 
+30100532 429 
+30241951 429 
+30641837 429 
+30704853 200 http://www.prd-journal.com/article/S1353802019300215/pdf
+30746411 429 
+
+**Stopping sequential API run**
+**Checking PDF access**
+**Checking three DOI links**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; us=['https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ane.12342','https://www.prd-journal.com/article/S1353802019300215/pdf','https://doi.org/10.1177/147323001204000330'];
+for u in us:
+ try:
+  r=requests.get(u,timeout=(8,18),headers={'User-Agent':'Mozilla/5.0'}); print(r.status_code,len(r.content),r.headers.get('Content-Type'),r.url,r.content[:5])
+ except Exception as e: print(type(e).__name__,u)\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 1184ms:
+403 5560 text/html; charset=UTF-8 https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ane.12342 b'<!DOC'
+403 5550 text/html; charset=UTF-8 https://www.prd-journal.com/article/S1353802019300215/pdf b'<!DOC'
+403 5554 text/html; charset=UTF-8 https://journals.sagepub.com/doi/10.1177/147323001204000330 b'<!DOC'
+
+**Preparing OpenAlex DOI map**
+**Checking publication links**
+**Checking OpenAIRE records**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; u='https://api.openaire.eu/search/publications'; r=requests.get(u,params={'doi':'10.1002/mds.21609','format':'json'},timeout=10); print(r.status_code,len(r.content),r.text[:500])\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 2028ms:
+200 29529 { "response" : { "header" : { "query" : { "$" : "(oaftype exact result) and (resulttypeid exact publication) and ((pidclassid exact \"doi\" and pid exact \"10.1002/mds.21609\"))" }, "locale" : { "$" : "en_US" }, "size" : { "$" : 10 }, "page" : { "$" : 1 }, "total" : { "$" : 1 }, "fields" : null }, "results" : { "result" : [{ "header" : { "dri:objIdentifier" : { "$" : "doi_dedup___::a22c7c76fd47d5632d402a9ec0502e33" }, "dri:dateOfCollection" : { "$" : "2026-10-23T08:49:03.941781849" }, "dri:dateO
+
+**Parsing OpenAIRE metadata**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests,json; j=requests.get('https://api.openaire.eu/search/publications',params={'doi':'10.1002/mds.21609','format':'json'},timeout=10).json();
+def walk(x):
+ if isinstance(x,dict):
+  for k,v in x.items():
+   if 'url' in k.lower() or 'access' in k.lower() or 'pid' in k.lower(): print(k, str(v)[:600])
+   walk(v)
+ elif isinstance(x,list):
+  for v in x: walk(v)
+walk(j['response']['results'])\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 1025ms:
+pid [{'@classid': 'doi', '@classname': 'Digital Object Identifier', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '$': '10.1002/mds.21609'}, {'@classid': 'pmid', '@classname': 'PubMed ID', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '@inferred': False, '@provenanceaction': 'sysimport:actionset', '@trust': '0.9', '$': 17712844}]
+bestaccessright {'@classid': 'OPEN', '@classname': 'Open Access', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+websiteurl {'$': 'http://www.yuhs.or.kr/en/hospitals/severance/Sev_Intro/Gnr_info/'}
+websiteurl {'$': 'http://www.turkupetcentre.fi/'}
+websiteurl {'$': 'https://www.kyuh.ac.kr/eng/index.asp'}
+websiteurl {'$': 'http://www.utu.fi/en/Pages/home.aspx'}
+websiteurl {'$': 'http://ymlib.yonsei.ac.kr/'}
+websiteurl {'$': 'http://www.yonsei.ac.kr/eng/'}
+websiteurl {'$': 'http://english.konyang.ac.kr/'}
+websiteurl {'$': 'http://www.yuhs.or.kr/en/'}
+accessright {'@classid': 'CLOSED', '@classname': 'Closed Access', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+url {'$': 'https://doi.org/10.1002/mds.21609'}
+url {'$': 'https://doi.org/10.1002/mds.21609'}
+pid {'@classid': 'doi', '@classname': 'Digital Object Identifier', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '$': '10.1002/mds.21609'}
+pid {'@classid': 'pmid', '@classname': 'PubMed ID', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '@inferred': False, '@provenanceaction': 'sysimport:actionset', '@trust': '0.9', '$': 17712844}
+accessright {'@classid': 'UNKNOWN', '@classname': 'unspecified', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+url {'$': 'https://pubmed.ncbi.nlm.nih.gov/17712844'}
+url {'$': 'https://pubmed.ncbi.nlm.nih.gov/17712844'}
+accessright {'@classid': 'CLOSED', '@classname': 'Closed Access', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+pid {'@classid': 'doi', '@classname': 'Digital Object Identifier', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '$': '10.1002/mds.21609'}
+url {'$': 'https://doi.org/10.1002/mds.21609'}
+accessright {'@classid': 'OPEN', '@classname': 'Open Access', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+url {'$': 'https://doi.org/https://doi.org/10.1002/mds.21609'}
+accessright {'@classid': 'UNKNOWN', '@classname': 'unspecified', '@schemeid': 'dnet:access_modes', '@schemename': 'dnet:access_modes'}
+pid {'@classid': 'pmid', '@classname': 'PubMed ID', '@schemeid': 'dnet:pid_types', '@schemename': 'dnet:pid_types', '@inferred': False, '@provenanceaction': 'sysimport:actionset', '@trust': '0.9', '$': 17712844}
+url {'$': 'https://pubmed.ncbi.nlm.nih.gov/17712844'}
+
+**Inspecting repository metadata**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; j=requests.get('https://api.openaire.eu/search/publications',params={'doi':'10.1002/mds.21609','format':'json'},timeout=10).json();
+def walk(x,path=''):
+ if isinstance(x,dict):
+  for k,v in x.items():
+   print(path+'/'+k, (str(v)[:180] if isinstance(v,(str,int,float)) else type(v).__name__))
+   walk(v,path+'/'+k)
+ elif isinstance(x,list):
+  for v in x: walk(v,path)
+walk(j['response']['results']['result'][0])\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 1010ms:
+/header dict
+/header/dri:objIdentifier dict
+/header/dri:objIdentifier/$ doi_dedup___::a22c7c76fd47d5632d402a9ec0502e33
+/header/dri:dateOfCollection dict
+/header/dri:dateOfCollection/$ 2026-10-23T08:49:03.941781849
+/header/dri:dateOfTransformation NoneType
+/metadata dict
+/metadata/oaf:entity dict
+/metadata/oaf:entity/@xsi:schemaLocation http://namespace.openaire.eu/oaf https://www.openaire.eu/schema/1.0/oaf-1.0.xsd
+/metadata/oaf:entity/oaf:result dict
+/metadata/oaf:entity/oaf:result/collectedfrom list
+/metadata/oaf:entity/oaf:result/collectedfrom/@name Bielefeld Academic Search Engine (BASE)
+/metadata/oaf:entity/oaf:result/collectedfrom/@id openaire____::df45502607927471ecf8a6ae83683ff5
+/metadata/oaf:entity/oaf:result/collectedfrom/@name Crossref
+/metadata/oaf:entity/oaf:result/collectedfrom/@id openaire____::081b82f96300b6a6e3d282bad31cb6e2
+/metadata/oaf:entity/oaf:result/collectedfrom/@name Microsoft Academic Graph
+/metadata/oaf:entity/oaf:result/collectedfrom/@id openaire____::5f532a3fc4f1ea403f37070f59a7a53a
+/metadata/oaf:entity/oaf:result/collectedfrom/@name Europe PubMed Central
+/metadata/oaf:entity/oaf:result/collectedfrom/@id opendoar____::8b6dd7db9af49e67306feb59a8bdc52c
+/metadata/oaf:entity/oaf:result/originalId list
+/metadata/oaf:entity/oaf:result/originalId/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/originalId/$ 50|doiboost____|a22c7c76fd47d5632d402a9ec0502e33
+/metadata/oaf:entity/oaf:result/originalId/$ 17712844
+/metadata/oaf:entity/oaf:result/originalId/$ 2037137763
+/metadata/oaf:entity/oaf:result/originalId/$ ftyonseiuniv:oai:ir.ymlib.yonsei.ac.kr:22282913/97164
+/metadata/oaf:entity/oaf:result/originalId/$ 50|base_oa_____::9da7ac69f7f76cbbd758b40eef8d694b
+/metadata/oaf:entity/oaf:result/pid list
+/metadata/oaf:entity/oaf:result/pid/@classid doi
+/metadata/oaf:entity/oaf:result/pid/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/pid/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/pid/@classid pmid
+/metadata/oaf:entity/oaf:result/pid/@classname PubMed ID
+/metadata/oaf:entity/oaf:result/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/pid/@inferred False
+/metadata/oaf:entity/oaf:result/pid/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/pid/@trust 0.9
+/metadata/oaf:entity/oaf:result/pid/$ 17712844
+/metadata/oaf:entity/oaf:result/measure list
+/metadata/oaf:entity/oaf:result/measure/@id influence
+/metadata/oaf:entity/oaf:result/measure/@score 4.141616E-9
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/measure/@id popularity
+/metadata/oaf:entity/oaf:result/measure/@score 9.335905E-9
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/measure/@id influence_alt
+/metadata/oaf:entity/oaf:result/measure/@score 45
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/measure/@id citationCount
+/metadata/oaf:entity/oaf:result/measure/@score 46
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/measure/@id popularity_alt
+/metadata/oaf:entity/oaf:result/measure/@score 2.6654747
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/measure/@id impulse
+/metadata/oaf:entity/oaf:result/measure/@score 10
+/metadata/oaf:entity/oaf:result/measure/@class C4
+/metadata/oaf:entity/oaf:result/fulltext list
+/metadata/oaf:entity/oaf:result/fulltext/$ https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164
+/metadata/oaf:entity/oaf:result/fulltext/$ http://onlinelibrary.wiley.com/doi/10.1002/mds.21609/abstract
+/metadata/oaf:entity/oaf:result/title list
+/metadata/oaf:entity/oaf:result/title/@classid main title
+/metadata/oaf:entity/oaf:result/title/@classname main title
+/metadata/oaf:entity/oaf:result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/$ Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait
+/metadata/oaf:entity/oaf:result/title/@classid main title
+/metadata/oaf:entity/oaf:result/title/@classname main title
+/metadata/oaf:entity/oaf:result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@inferred False
+/metadata/oaf:entity/oaf:result/title/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/title/@trust 0.9
+/metadata/oaf:entity/oaf:result/title/$ Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait.
+/metadata/oaf:entity/oaf:result/title/@classid main title
+/metadata/oaf:entity/oaf:result/title/@classname main title
+/metadata/oaf:entity/oaf:result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/$ different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait
+/metadata/oaf:entity/oaf:result/title/@classid main title
+/metadata/oaf:entity/oaf:result/title/@classname main title
+/metadata/oaf:entity/oaf:result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/title/@inferred False
+/metadata/oaf:entity/oaf:result/title/@provenanceaction sysimport:crosswalk:aggregator
+/metadata/oaf:entity/oaf:result/title/@trust 0.89
+/metadata/oaf:entity/oaf:result/title/$ Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on Parkinsonian motor deficits and freezing of gait
+/metadata/oaf:entity/oaf:result/bestaccessright dict
+/metadata/oaf:entity/oaf:result/bestaccessright/@classid OPEN
+/metadata/oaf:entity/oaf:result/bestaccessright/@classname Open Access
+/metadata/oaf:entity/oaf:result/bestaccessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/bestaccessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/creator list
+/metadata/oaf:entity/oaf:result/creator/@rank 1
+/metadata/oaf:entity/oaf:result/creator/@name Chul Hyoung
+/metadata/oaf:entity/oaf:result/creator/@surname Lyoo
+/metadata/oaf:entity/oaf:result/creator/@orcid 0000-0003-2231-672x
+/metadata/oaf:entity/oaf:result/creator/$ Chul Hyoung, Lyoo
+/metadata/oaf:entity/oaf:result/creator/@rank 2
+/metadata/oaf:entity/oaf:result/creator/@name Sargo
+/metadata/oaf:entity/oaf:result/creator/@surname Aalto
+/metadata/oaf:entity/oaf:result/creator/@orcid 0000-0002-8924-5447
+/metadata/oaf:entity/oaf:result/creator/$ Sargo, Aalto
+/metadata/oaf:entity/oaf:result/creator/@rank 3
+/metadata/oaf:entity/oaf:result/creator/@name Juha O
+/metadata/oaf:entity/oaf:result/creator/@surname Rinne
+/metadata/oaf:entity/oaf:result/creator/$ Juha O, Rinne
+/metadata/oaf:entity/oaf:result/creator/@rank 4
+/metadata/oaf:entity/oaf:result/creator/@name Ki Ook
+/metadata/oaf:entity/oaf:result/creator/@surname Lee
+/metadata/oaf:entity/oaf:result/creator/$ Ki Ook, Lee
+/metadata/oaf:entity/oaf:result/creator/@rank 5
+/metadata/oaf:entity/oaf:result/creator/@name Seung Hun
+/metadata/oaf:entity/oaf:result/creator/@surname Oh
+/metadata/oaf:entity/oaf:result/creator/$ Seung Hun, Oh
+/metadata/oaf:entity/oaf:result/creator/@rank 6
+/metadata/oaf:entity/oaf:result/creator/@name Jin Woo
+/metadata/oaf:entity/oaf:result/creator/@surname Chang
+/metadata/oaf:entity/oaf:result/creator/@orcid 0000-0002-2717-0101
+/metadata/oaf:entity/oaf:result/creator/$ Jin Woo, Chang
+/metadata/oaf:entity/oaf:result/creator/@rank 7
+/metadata/oaf:entity/oaf:result/creator/@name Myung Sik
+/metadata/oaf:entity/oaf:result/creator/@surname Lee
+/metadata/oaf:entity/oaf:result/creator/@orcid 0000-0002-8413-1854
+/metadata/oaf:entity/oaf:result/creator/$ Myung Sik, Lee
+/metadata/oaf:entity/oaf:result/contributor list
+/metadata/oaf:entity/oaf:result/contributor/$ Chul Hyoung Lyoo
+/metadata/oaf:entity/oaf:result/contributor/$ Sargo Aalto
+/metadata/oaf:entity/oaf:result/contributor/$ Myung Sik Lee
+/metadata/oaf:entity/oaf:result/contributor/$ Jin Woo Chang
+/metadata/oaf:entity/oaf:result/contributor/$ Seung Hun Oh
+/metadata/oaf:entity/oaf:result/contributor/$ Ki Ook Lee
+/metadata/oaf:entity/oaf:result/contributor/$ Juha O Rinne
+/metadata/oaf:entity/oaf:result/contributor/$ Lyoo, Chul Hyoung
+/metadata/oaf:entity/oaf:result/contributor/$ Oh, Seung Hun
+/metadata/oaf:entity/oaf:result/contributor/$ Lee, Myung Sik
+/metadata/oaf:entity/oaf:result/contributor/$ Chang, Jin Woo
+/metadata/oaf:entity/oaf:result/country dict
+/metadata/oaf:entity/oaf:result/country/@classid KR
+/metadata/oaf:entity/oaf:result/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/dateofacceptance/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/description dict
+/metadata/oaf:entity/oaf:result/description/$ <jats:title>Abstract</jats:title><jats:p>Inconsistent response in freezing of gait (FOG) with levodopa treatment or STN DBS makes the pathogenesis difficult to understand. We studi
+/metadata/oaf:entity/oaf:result/subject list
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Adult
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Cerebral Cortex
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Male
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Brain Mapping
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Deep Brain Stimulation
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:crosswalk:aggregator
+/metadata/oaf:entity/oaf:result/subject/@trust 0.89
+/metadata/oaf:entity/oaf:result/subject/$ 610
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Middle Aged
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Combined Modality Therapy
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Antiparkinson Agents
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Levodopa
+/metadata/oaf:entity/oaf:result/subject/@classid FOS
+/metadata/oaf:entity/oaf:result/subject/@classname Fields of Science and Technology classification
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred True
+/metadata/oaf:entity/oaf:result/subject/@inferenceprovenance update
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction subject:fos
+/metadata/oaf:entity/oaf:result/subject/$ 03 medical and health sciences
+/metadata/oaf:entity/oaf:result/subject/@classid FOS
+/metadata/oaf:entity/oaf:result/subject/@classname Fields of Science and Technology classification
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred True
+/metadata/oaf:entity/oaf:result/subject/@inferenceprovenance update
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction subject:fos
+/metadata/oaf:entity/oaf:result/subject/$ 0302 clinical medicine
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Parkinsonian Disorders
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Fluorodeoxyglucose F18
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Subthalamic Nucleus
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Positron-Emission Tomography
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:crosswalk:aggregator
+/metadata/oaf:entity/oaf:result/subject/@trust 0.89
+/metadata/oaf:entity/oaf:result/subject/$ 616
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Neural Pathways
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Humans
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Female
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Radiopharmaceuticals
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Gait Disorders, Neurologic
+/metadata/oaf:entity/oaf:result/subject/@classid keyword
+/metadata/oaf:entity/oaf:result/subject/@classname keyword
+/metadata/oaf:entity/oaf:result/subject/@schemeid dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@schemename dnet:subject_classification_typologies
+/metadata/oaf:entity/oaf:result/subject/@inferred False
+/metadata/oaf:entity/oaf:result/subject/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/subject/@trust 0.9
+/metadata/oaf:entity/oaf:result/subject/$ Aged
+/metadata/oaf:entity/oaf:result/language dict
+/metadata/oaf:entity/oaf:result/language/@classid eng
+/metadata/oaf:entity/oaf:result/language/@classname English
+/metadata/oaf:entity/oaf:result/language/@schemeid dnet:languages
+/metadata/oaf:entity/oaf:result/language/@schemename dnet:languages
+/metadata/oaf:entity/oaf:result/relevantdate list
+/metadata/oaf:entity/oaf:result/relevantdate/@classid created
+/metadata/oaf:entity/oaf:result/relevantdate/@classname created
+/metadata/oaf:entity/oaf:result/relevantdate/@schemeid dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/@schemename dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/relevantdate/@classid published-online
+/metadata/oaf:entity/oaf:result/relevantdate/@classname published-online
+/metadata/oaf:entity/oaf:result/relevantdate/@schemeid dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/@schemename dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/relevantdate/@classid published-print
+/metadata/oaf:entity/oaf:result/relevantdate/@classname published-print
+/metadata/oaf:entity/oaf:result/relevantdate/@schemeid dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/@schemename dnet:dataCite_date
+/metadata/oaf:entity/oaf:result/relevantdate/$ 2007-11-15
+/metadata/oaf:entity/oaf:result/publisher dict
+/metadata/oaf:entity/oaf:result/publisher/$ Wiley
+/metadata/oaf:entity/oaf:result/source dict
+/metadata/oaf:entity/oaf:result/source/$ Crossref
+/metadata/oaf:entity/oaf:result/format dict
+/metadata/oaf:entity/oaf:result/format/$ 2176~2182
+/metadata/oaf:entity/oaf:result/resulttype dict
+/metadata/oaf:entity/oaf:result/resulttype/@classid publication
+/metadata/oaf:entity/oaf:result/resulttype/@classname publication
+/metadata/oaf:entity/oaf:result/resulttype/@schemeid dnet:result_typologies
+/metadata/oaf:entity/oaf:result/resulttype/@schemename dnet:result_typologies
+/metadata/oaf:entity/oaf:result/resourcetype dict
+/metadata/oaf:entity/oaf:result/resourcetype/@classid publication
+/metadata/oaf:entity/oaf:result/resourcetype/@classname publication
+/metadata/oaf:entity/oaf:result/resourcetype/@schemeid dnet:result_typologies
+/metadata/oaf:entity/oaf:result/resourcetype/@schemename dnet:result_typologies
+/metadata/oaf:entity/oaf:result/isgreen dict
+/metadata/oaf:entity/oaf:result/isgreen/$ True
+/metadata/oaf:entity/oaf:result/isindiamondjournal dict
+/metadata/oaf:entity/oaf:result/isindiamondjournal/$ False
+/metadata/oaf:entity/oaf:result/publiclyfunded dict
+/metadata/oaf:entity/oaf:result/publiclyfunded/$ False
+/metadata/oaf:entity/oaf:result/journal dict
+/metadata/oaf:entity/oaf:result/journal/@issn 0885-3185
+/metadata/oaf:entity/oaf:result/journal/@eissn 1531-8257
+/metadata/oaf:entity/oaf:result/journal/@ep 2182
+/metadata/oaf:entity/oaf:result/journal/@sp 2176
+/metadata/oaf:entity/oaf:result/journal/@vol 22
+/metadata/oaf:entity/oaf:result/journal/$ Movement Disorders
+/metadata/oaf:entity/oaf:result/context list
+/metadata/oaf:entity/oaf:result/context/@id uarctic
+/metadata/oaf:entity/oaf:result/context/@label UArctic
+/metadata/oaf:entity/oaf:result/context/@type ri
+/metadata/oaf:entity/oaf:result/context/@id neuroscience
+/metadata/oaf:entity/oaf:result/context/@label Neuroscience
+/metadata/oaf:entity/oaf:result/context/@type community
+/metadata/oaf:entity/oaf:result/datainfo dict
+/metadata/oaf:entity/oaf:result/datainfo/inferred dict
+/metadata/oaf:entity/oaf:result/datainfo/inferred/$ True
+/metadata/oaf:entity/oaf:result/datainfo/deletedbyinference dict
+/metadata/oaf:entity/oaf:result/datainfo/deletedbyinference/$ False
+/metadata/oaf:entity/oaf:result/datainfo/trust dict
+/metadata/oaf:entity/oaf:result/datainfo/trust/$ 0.8
+/metadata/oaf:entity/oaf:result/datainfo/inferenceprovenance dict
+/metadata/oaf:entity/oaf:result/datainfo/inferenceprovenance/$ dedup-result-decisiontree-v4
+/metadata/oaf:entity/oaf:result/datainfo/provenanceaction dict
+/metadata/oaf:entity/oaf:result/datainfo/provenanceaction/@classid sysimport:dedup
+/metadata/oaf:entity/oaf:result/datainfo/provenanceaction/@classname Inferred by OpenAIRE
+/metadata/oaf:entity/oaf:result/datainfo/provenanceaction/@schemeid dnet:provenanceActions
+/metadata/oaf:entity/oaf:result/datainfo/provenanceaction/@schemename dnet:provenanceActions
+/metadata/oaf:entity/oaf:result/rels dict
+/metadata/oaf:entity/oaf:result/rels/rel list
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 1.0
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance openaire:affiliation:rawaff
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:openaireinference
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::ca05800124939091ca3ba4f7c13a6bef
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Severance Hospital
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Severance Hospital
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://www.yuhs.or.kr/en/hospitals/severance/Sev_Intro/Gnr_info/
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 1.0
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance openaire:affiliation:rawaff
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:openaireinference
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::14889360410e55e97eee980e1c40f3a4
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Turku PET Centre
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://www.turkupetcentre.fi/
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Turku PET Centre
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid FI
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Finland
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 1.0
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance openaire:affiliation:rawaff
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:openaireinference
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::0cf5caa6e5b76741ee2e05426a961e8c
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Konyang University Hospital
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Konyang University Hospital
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ https://www.kyuh.ac.kr/eng/index.asp
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 1.0
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance openaire:affiliation:rawaff
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:openaireinference
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::b531c02bb4a2b90fd3d1462c26f9e03a
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://www.utu.fi/en/Pages/home.aspx
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ University of Turku
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ University of Turku
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid FI
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Finland
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 0.85
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance propagation
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:instrepo
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ pending_org_::b0e693d19cf999db6956d25d710a1d06
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Yonsei University Medical Library
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://ymlib.yonsei.ac.kr/
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Yonsei University Medical Library
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred False
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 0.9
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance 
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::a09b421e2c307ddc4904be90d41de41d
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Yonsei University
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://www.yonsei.ac.kr/eng/
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Yonsei University
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred False
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 0.9
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance 
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::8f220d4d9ef1643feaca54647a5ee727
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://english.konyang.ac.kr/
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Konyang University
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ Konyang University
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/@inferred True
+/metadata/oaf:entity/oaf:result/rels/rel/@trust 0.85
+/metadata/oaf:entity/oaf:result/rels/rel/@inferenceprovenance propagation
+/metadata/oaf:entity/oaf:result/rels/rel/@provenanceaction result:organization:instrepo
+/metadata/oaf:entity/oaf:result/rels/rel/to dict
+/metadata/oaf:entity/oaf:result/rels/rel/to/@class hasAuthorInstitution
+/metadata/oaf:entity/oaf:result/rels/rel/to/@scheme dnet:result_organization_relations
+/metadata/oaf:entity/oaf:result/rels/rel/to/@type organization
+/metadata/oaf:entity/oaf:result/rels/rel/to/$ openorgs____::453e393ef0dd54705e5c5ac58c604f6c
+/metadata/oaf:entity/oaf:result/rels/rel/legalname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalname/$ Yonsei University Health System
+/metadata/oaf:entity/oaf:result/rels/rel/country dict
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classid KR
+/metadata/oaf:entity/oaf:result/rels/rel/country/@classname Korea (Republic of)
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemeid dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/country/@schemename dnet:countries
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl dict
+/metadata/oaf:entity/oaf:result/rels/rel/websiteurl/$ http://www.yuhs.or.kr/en/
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname dict
+/metadata/oaf:entity/oaf:result/rels/rel/legalshortname/$ YUHS
+/metadata/oaf:entity/oaf:result/children dict
+/metadata/oaf:entity/oaf:result/children/result list
+/metadata/oaf:entity/oaf:result/children/result/@objidentifier doi_________::a22c7c76fd47d5632d402a9ec0502e33
+/metadata/oaf:entity/oaf:result/children/result/description dict
+/metadata/oaf:entity/oaf:result/children/result/description/$ <jats:title>Abstract</jats:title><jats:p>Inconsistent response in freezing of gait (FOG) with levodopa treatment or STN DBS makes the pathogenesis difficult to understand. We studi
+/metadata/oaf:entity/oaf:result/children/result/publisher dict
+/metadata/oaf:entity/oaf:result/children/result/publisher/$ Wiley
+/metadata/oaf:entity/oaf:result/children/result/creator list
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Myung Sik Lee
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Juha O Rinne
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Seung Hun Oh
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Ki Ook Lee
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Chul Hyoung Lyoo
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Sargo Aalto
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Jin Woo Chang
+/metadata/oaf:entity/oaf:result/children/result/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/result/dateofacceptance/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/children/result/title dict
+/metadata/oaf:entity/oaf:result/children/result/title/@classid main title
+/metadata/oaf:entity/oaf:result/children/result/title/@classname main title
+/metadata/oaf:entity/oaf:result/children/result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/children/result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/children/result/title/$ Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait
+/metadata/oaf:entity/oaf:result/children/result/instance dict
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright dict
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@classid CLOSED
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@classname Closed Access
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby dict
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby/@name Movement Disorders
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby/@id issn___print::650a0ed68625ea1dd8581d0fcdf53e8a
+/metadata/oaf:entity/oaf:result/children/result/instance/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/result/instance/dateofacceptance/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype dict
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@classid 0001
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@classname Article
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@schemeid dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@schemename dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed dict
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@classid 0001
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@classname peerReviewed
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@schemeid dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@schemename dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/result/instance/license dict
+/metadata/oaf:entity/oaf:result/children/result/instance/license/$ http://onlinelibrary.wiley.com/termsAndConditions#vor
+/metadata/oaf:entity/oaf:result/children/result/instance/url dict
+/metadata/oaf:entity/oaf:result/children/result/instance/url/$ https://doi.org/10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource dict
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource/url dict
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource/url/$ https://doi.org/10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/result/resulttype dict
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@classid publication
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@classname publication
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@schemeid dnet:result_typologies
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@schemename dnet:result_typologies
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom dict
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom/@name Crossref
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom/@id openaire____::081b82f96300b6a6e3d282bad31cb6e2
+/metadata/oaf:entity/oaf:result/children/result/pid dict
+/metadata/oaf:entity/oaf:result/children/result/pid/@classid doi
+/metadata/oaf:entity/oaf:result/children/result/pid/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/result/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/result/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/result/pid/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/result/@objidentifier pmid________::9ca7be20d35c73c297ddaeb7db0d29b4
+/metadata/oaf:entity/oaf:result/children/result/description dict
+/metadata/oaf:entity/oaf:result/children/result/description/$ Inconsistent response in freezing of gait (FOG) with levodopa treatment or STN DBS makes the pathogenesis difficult to understand. We studied brain areas associated with the expres
+/metadata/oaf:entity/oaf:result/children/result/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/result/dateofacceptance/$ 2008-01-31
+/metadata/oaf:entity/oaf:result/children/result/creator list
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Juha O, Rinne
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Chul Hyoung, Lyoo
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Myung Sik, Lee
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Jin Woo, Chang
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Sargo, Aalto
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Seung Hun, Oh
+/metadata/oaf:entity/oaf:result/children/result/creator/$ Ki Ook, Lee
+/metadata/oaf:entity/oaf:result/children/result/pid dict
+/metadata/oaf:entity/oaf:result/children/result/pid/@classid pmid
+/metadata/oaf:entity/oaf:result/children/result/pid/@classname PubMed ID
+/metadata/oaf:entity/oaf:result/children/result/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/result/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/result/pid/@inferred False
+/metadata/oaf:entity/oaf:result/children/result/pid/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/children/result/pid/@trust 0.9
+/metadata/oaf:entity/oaf:result/children/result/pid/$ 17712844
+/metadata/oaf:entity/oaf:result/children/result/resulttype dict
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@classid publication
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@classname publication
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@schemeid dnet:result_typologies
+/metadata/oaf:entity/oaf:result/children/result/resulttype/@schemename dnet:result_typologies
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom dict
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom/@name Europe PubMed Central
+/metadata/oaf:entity/oaf:result/children/result/collectedfrom/@id opendoar____::8b6dd7db9af49e67306feb59a8bdc52c
+/metadata/oaf:entity/oaf:result/children/result/instance dict
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright dict
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@classid UNKNOWN
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@classname unspecified
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/result/instance/accessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby dict
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby/@name Movement Disorders
+/metadata/oaf:entity/oaf:result/children/result/instance/hostedby/@id issn___print::650a0ed68625ea1dd8581d0fcdf53e8a
+/metadata/oaf:entity/oaf:result/children/result/instance/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/result/instance/dateofacceptance/$ 2008-01-31
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype dict
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@classid 0001
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@classname Article
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@schemeid dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/result/instance/instancetype/@schemename dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed dict
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@classid 0002
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@classname nonPeerReviewed
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@schemeid dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/result/instance/refereed/@schemename dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/result/instance/url dict
+/metadata/oaf:entity/oaf:result/children/result/instance/url/$ https://pubmed.ncbi.nlm.nih.gov/17712844
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource dict
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource/url dict
+/metadata/oaf:entity/oaf:result/children/result/instance/webresource/url/$ https://pubmed.ncbi.nlm.nih.gov/17712844
+/metadata/oaf:entity/oaf:result/children/result/title dict
+/metadata/oaf:entity/oaf:result/children/result/title/@classid main title
+/metadata/oaf:entity/oaf:result/children/result/title/@classname main title
+/metadata/oaf:entity/oaf:result/children/result/title/@schemeid dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/children/result/title/@schemename dnet:dataCite_title
+/metadata/oaf:entity/oaf:result/children/result/title/@inferred False
+/metadata/oaf:entity/oaf:result/children/result/title/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/children/result/title/@trust 0.9
+/metadata/oaf:entity/oaf:result/children/result/title/$ Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait.
+/metadata/oaf:entity/oaf:result/children/instance list
+/metadata/oaf:entity/oaf:result/children/instance/accessright dict
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classid CLOSED
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classname Closed Access
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom list
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@name Crossref
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@id openaire____::081b82f96300b6a6e3d282bad31cb6e2
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@name Microsoft Academic Graph
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@id openaire____::5f532a3fc4f1ea403f37070f59a7a53a
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@name Microsoft Academic Graph
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@id openaire____::5f532a3fc4f1ea403f37070f59a7a53a
+/metadata/oaf:entity/oaf:result/children/instance/hostedby list
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@name Unknown Repository
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@id openaire____::55045bd2a65019fd8e6741a755395c8c
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@name Movement Disorders
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@id issn___print::650a0ed68625ea1dd8581d0fcdf53e8a
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@name Unknown Repository
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@id openaire____::55045bd2a65019fd8e6741a755395c8c
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance/$ 2007-08-21
+/metadata/oaf:entity/oaf:result/children/instance/instancetype dict
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classid 0001
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classname Article
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemeid dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemename dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/pid dict
+/metadata/oaf:entity/oaf:result/children/instance/pid/@classid doi
+/metadata/oaf:entity/oaf:result/children/instance/pid/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/instance/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/pid/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier list
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid doi
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid mag_id
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Microsoft Academic Graph Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 2037137763
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid doi
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid mag_id
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Microsoft Academic Graph Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 2037137763
+/metadata/oaf:entity/oaf:result/children/instance/refereed dict
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classid 0001
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classname peerReviewed
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemeid dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemename dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/license dict
+/metadata/oaf:entity/oaf:result/children/instance/license/$ http://onlinelibrary.wiley.com/termsAndConditions#vor
+/metadata/oaf:entity/oaf:result/children/instance/webresource dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url/$ https://doi.org/10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/accessright dict
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classid OPEN
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classname Open Access
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom dict
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@name Bielefeld Academic Search Engine (BASE)
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@id openaire____::df45502607927471ecf8a6ae83683ff5
+/metadata/oaf:entity/oaf:result/children/instance/hostedby dict
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@name YUHSpace (Yonsei University Health System Repository)
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@id opendoar____::e07bceab69529b0f0b43625953fbf2a0
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance/$ 2007-01-01
+/metadata/oaf:entity/oaf:result/children/instance/instancetype dict
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classid 0001
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classname Article
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemeid dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemename dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier dict
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid doi
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/refereed dict
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classid 0002
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classname nonPeerReviewed
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemeid dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemename dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/license dict
+/metadata/oaf:entity/oaf:result/children/instance/license/$ CC BY NC ND
+/metadata/oaf:entity/oaf:result/children/instance/fulltext dict
+/metadata/oaf:entity/oaf:result/children/instance/fulltext/$ https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164
+/metadata/oaf:entity/oaf:result/children/instance/webresource dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url/$ https://doi.org/https://doi.org/10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/accessright dict
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classid UNKNOWN
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@classname unspecified
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemeid dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/accessright/@schemename dnet:access_modes
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom dict
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@name Europe PubMed Central
+/metadata/oaf:entity/oaf:result/children/instance/collectedfrom/@id opendoar____::8b6dd7db9af49e67306feb59a8bdc52c
+/metadata/oaf:entity/oaf:result/children/instance/hostedby dict
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@name Movement Disorders
+/metadata/oaf:entity/oaf:result/children/instance/hostedby/@id issn___print::650a0ed68625ea1dd8581d0fcdf53e8a
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance dict
+/metadata/oaf:entity/oaf:result/children/instance/dateofacceptance/$ 2008-01-31
+/metadata/oaf:entity/oaf:result/children/instance/instancetype dict
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classid 0001
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@classname Article
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemeid dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/instancetype/@schemename dnet:publication_resource
+/metadata/oaf:entity/oaf:result/children/instance/pid dict
+/metadata/oaf:entity/oaf:result/children/instance/pid/@classid pmid
+/metadata/oaf:entity/oaf:result/children/instance/pid/@classname PubMed ID
+/metadata/oaf:entity/oaf:result/children/instance/pid/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/pid/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/pid/@inferred False
+/metadata/oaf:entity/oaf:result/children/instance/pid/@provenanceaction sysimport:actionset
+/metadata/oaf:entity/oaf:result/children/instance/pid/@trust 0.9
+/metadata/oaf:entity/oaf:result/children/instance/pid/$ 17712844
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier dict
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classid doi
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@classname Digital Object Identifier
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemeid dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/@schemename dnet:pid_types
+/metadata/oaf:entity/oaf:result/children/instance/alternateidentifier/$ 10.1002/mds.21609
+/metadata/oaf:entity/oaf:result/children/instance/refereed dict
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classid 0002
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@classname nonPeerReviewed
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemeid dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/refereed/@schemename dnet:review_levels
+/metadata/oaf:entity/oaf:result/children/instance/webresource dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url dict
+/metadata/oaf:entity/oaf:result/children/instance/webresource/url/$ https://pubmed.ncbi.nlm.nih.gov/17712844
+
+**Preparing DOI mappings**
+**Checking OpenAIRE fulltext**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import concurrent.futures,requests,json
+data=[
+(\"PMID_10634253\",\"10.1002/1531-8257(200001)15:1<136::aid-mds1021>3.0.co;2-5\"),
+(\"PMID_16139421\",\"10.1016/j.clineuro.2005.07.008\"),
+(\"PMID_17712844\",\"10.1002/mds.21609\"),
+(\"PMID_18413568\",\"10.1212/01.wnl.0000310416.90757.85\"),
+(\"PMID_18420482\",\"10.1212/01.wnl.0000303972.16279.46\"),
+(\"PMID_19705483\",\"10.1002/mds.22743\"),
+(\"PMID_21370271\",\"10.1002/mds.23583\"),
+(\"PMID_21397548\",\"10.1016/j.parkreldis.2011.02.014\"),
+(\"PMID_21997389\",\"10.1002/mds.23990\"),
+(\"PMID_22696586\",\"10.1136/jnnp-2011-302091\"),
+(\"PMID_22906284\",\"10.1177/147323001204000330\"),
+(\"PMID_23485851\",\"10.1093/brain/awt049\"),
+(\"PMID_23749331\",\"10.1007/s00415-013-6983-2\"),
+(\"PMID_24361601\",\"10.1016/j.nbd.2013.12.005\"),
+(\"PMID_24396010\",\"10.1136/jnnp-2013-306336\"),
+(\"PMID_25346142\",\"10.1111/ane.12342\"),
+(\"PMID_26259857\",\"10.1212/wnl.0000000000001823\"),
+(\"PMID_26319759\",\"10.1016/j.neucli.2015.07.001\"),
+(\"PMID_26467485\",\"10.1016/j.parkreldis.2015.10.002\"),
+(\"PMID_26482492\",\"10.1016/j.parkreldis.2015.09.047\"),
+(\"PMID_27766724\",\"10.1111/ene.13167\"),
+(\"PMID_27915226\",\"10.1016/j.gaitpost.2016.11.039\"),
+(\"PMID_28392298\",\"10.1016/j.parkreldis.2017.03.015\"),
+(\"PMID_28830666\",\"10.1016/j.parkreldis.2017.08.016\"),
+(\"PMID_29654112\",\"10.1136/jnnp-2018-318060\"),
+(\"PMID_30077869\",\"10.1016/j.clinph.2018.07.006\"),
+(\"PMID_30100532\",\"10.1016/j.clinph.2018.07.013\"),
+(\"PMID_30241951\",\"10.1016/j.parkreldis.2018.09.008\"),
+(\"PMID_30641837\",\"10.3171/2018.8.jns18350\"),
+(\"PMID_30704853\",\"10.1016/j.parkreldis.2019.01.021\"),
+(\"PMID_30746411\",\"10.1002/mdc3.12681\")]
+def check(x):
+ k,d=x
+ try:
+  j=requests.get(\"https://api.openaire.eu/search/publications\",params={\"doi\":d,\"format\":\"json\"},timeout=15).json()
+  rs=j.get(\"response\",{}).get(\"results\",{}).get(\"result\",[])
+  links=[]
+  def walk(o):
+   if isinstance(o,dict):
+    for kk,v in o.items():
+     if kk==\"fulltext\":
+      vs=v if isinstance(v,list) else [v]
+      for a in vs:
+       if isinstance(a,dict) and a.get(\""'$"): links.append(a["$"])
+     else: walk(v)
+   elif isinstance(o,list):
+    for v in o:walk(v)
+  for r in rs[:1]: walk(r)
+  links=list(dict.fromkeys(links))
+  return k,[u for u in links if "doi.org" not in u and "pubmed.ncbi.nlm.nih.gov" not in u]
+ except Exception as e:return k,["ERR:"+type(e).__name__]
+with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
+ for k,links in pool.map(check,data):
+  print(k,json.dumps(links,ensure_ascii=False))
+'"'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<oa-check>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 6232ms:
+PMID_10634253 []
+PMID_16139421 []
+PMID_17712844 ["https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164", "http://onlinelibrary.wiley.com/doi/10.1002/mds.21609/abstract"]
+PMID_18413568 []
+PMID_18420482 []
+PMID_19705483 []
+PMID_21370271 []
+PMID_21397548 []
+PMID_21997389 []
+PMID_22696586 []
+PMID_22906284 []
+PMID_23485851 []
+PMID_23749331 []
+PMID_24361601 []
+PMID_24396010 ["https://lirias.kuleuven.be/retrieve/0be55cce-edbd-4b56-b562-db824af89311", "https://www.mdpi.com/1660-4601/19/19/12131/pdf"]
+PMID_25346142 []
+PMID_26259857 []
+PMID_26319759 ["https://hal.sorbonne-universite.fr/hal-01198838v1/file/Collomb-Clerc_Effects_of_deep.pdf"]
+PMID_26467485 []
+PMID_26482492 []
+PMID_27766724 []
+PMID_27915226 ["https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97"]
+PMID_28392298 ["http://ufdc.ufl.edu/LS00591109/00001"]
+PMID_28830666 []
+PMID_29654112 []
+PMID_30077869 ["https://orbi.uliege.be/bitstream/2268/229283/1/audiospinal_accepted.pdf"]
+PMID_30100532 ["https://lirias.kuleuven.be/retrieve/7bfa65b3-d697-4eab-b010-9da4184981b8"]
+PMID_30241951 []
+PMID_30641837 []
+PMID_30704853 ["https://hal.science/hal-03485848v1/file/S1353802019300215.pdf"]
+PMID_30746411 ["https://minerva.usc.gal/bitstreams/a2bd40f5-01ec-4e8a-bdf3-391064455863/download", "http://hdl.handle.net/10852/90577"]
+
+**Checking article PDFs**
+**Checking repository metadata**
+**Verifying title metadata**
+**Downloading selected repository files**
+**Inspecting repository records**
+**Inspecting OpenAIRE metadata**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+data=[
+(\"PMID_17712844\",\"10.1002/mds.21609\"),(\"PMID_24396010\",\"10.1136/jnnp-2013-306336\"),
+(\"PMID_26319759\",\"10.1016/j.neucli.2015.07.001\"),(\"PMID_27915226\",\"10.1016/j.gaitpost.2016.11.039\"),
+(\"PMID_28392298\",\"10.1016/j.parkreldis.2017.03.015\"),(\"PMID_30077869\",\"10.1016/j.clinph.2018.07.006\"),
+(\"PMID_30100532\",\"10.1016/j.clinph.2018.07.013\"),(\"PMID_30704853\",\"10.1016/j.parkreldis.2019.01.021\"),
+(\"PMID_30746411\",\"10.1002/mdc3.12681\")]
+for key,doi in data:
+ try:
+  j=requests.get(\"https://api.openaire.eu/search/publications\",params={\"doi\":doi,\"format\":\"json\"},timeout=15).json()
+  rs=j.get(\"response\",{}).get(\"results\",{}).get(\"result\",[])
+  for rec in rs[:2]:
+   entity=rec.get(\"metadata\",{}).get(\"oaf:entity\",{}).get(\"oaf:result\",{})
+   title=entity.get(\"title\",[])
+   title=[x.get(\""'$") for x in title if isinstance(x,dict) and x.get("$")] if isinstance(title,list) else []
+   pids=entity.get("pid",[])
+   pids=[x.get("$") for x in pids if isinstance(x,dict) and x.get("$")] if isinstance(pids,list) else []
+   urls=entity.get("fulltext",[])
+   urls=[x.get("$") for x in urls if isinstance(x,dict) and x.get("$")] if isinstance(urls,list) else ([urls.get("$")] if isinstance(urls,dict) else [])
+   print(key,"TITLE",title[:1],"PIDS",pids,"FULLTEXT",urls)
+ except Exception as e:print(key,type(e).__name__)
+'"'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<oa-meta>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 10921ms:
+PMID_17712844 TITLE ['Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait'] PIDS ['10.1002/mds.21609', 17712844] FULLTEXT ['https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164', 'http://onlinelibrary.wiley.com/doi/10.1002/mds.21609/abstract']
+PMID_24396010 TITLE ["Effects of deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease: a prospective controlled study"] PIDS ['10.1136/jnnp-2013-306336', 24396010] FULLTEXT ['https://lirias.kuleuven.be/retrieve/0be55cce-edbd-4b56-b562-db824af89311']
+PMID_26319759 TITLE ["Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review"] PIDS ['10.1016/j.neucli.2015.07.001', 26319759] FULLTEXT ['https://hal.sorbonne-universite.fr/hal-01198838v1/file/Collomb-Clerc_Effects_of_deep.pdf']
+PMID_27915226 TITLE ['Subthalamic nucleus stimulation and gait in Parkinson’s Disease: a not always fruitful relationship'] PIDS ['10.1016/j.gaitpost.2016.11.039', 27915226, '11584/199179'] FULLTEXT ['https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97']
+PMID_28392298 TITLE ["Variable frequency stimulation of subthalamic nucleus in Parkinson's disease: Rationale and hypothesis"] PIDS ['10.1016/j.parkreldis.2017.03.015', 28392298] FULLTEXT ['http://ufdc.ufl.edu/LS00591109/00001']
+PMID_30077869 TITLE ['Correlation between deep brain stimulation effects on freezing of gait and audio-spinal reflex'] PIDS ['10.1016/j.clinph.2018.07.006', 30077869, '2268/229283'] FULLTEXT ['https://orbi.uliege.be/bitstream/2268/229283/1/audiospinal_accepted.pdf']
+PMID_30100532 TITLE ['Decreasing subthalamic deep brain stimulation frequency reverses cognitive interference during gait initiation in Parkinson’s disease'] PIDS ['10.1016/j.clinph.2018.07.013', 30100532, '11367/71497'] FULLTEXT []
+PMID_30704853 TITLE ["Clinical and anatomical predictors for freezing of gait and falls after subthalamic deep brain stimulation in Parkinson's disease patients"] PIDS ['10.1016/j.parkreldis.2019.01.021', 30704853] FULLTEXT ['https://hal.science/hal-03485848v1/file/S1353802019300215.pdf']
+PMID_30746411 TITLE ["Alternate Subthalamic Nucleus Deep Brain Stimulation Parameters to Manage Motor Symptoms of Parkinson's Disease: Systematic Review and Meta‐analysis"] PIDS ['10.1002/mdc3.12681', 30746411, 'PMC6335519'] FULLTEXT []
+
+**Polling nine queries**
+**Checking exact DOI links**
+**Verifying exact metadata**
+**Checking bitstream response**
+**Preparing candidate URL checks**
+**Testing candidate URLs**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import concurrent.futures,requests,os,re,html.parser,json,urllib.parse
+candidates={
+\"PMID_17712844\":[\"https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164\"],
+\"PMID_24396010\":[\"https://lirias.kuleuven.be/retrieve/0be55cce-edbd-4b56-b562-db824af89311\"],
+\"PMID_26319759\":[\"https://hal.sorbonne-universite.fr/hal-01198838v1/file/Collomb-Clerc_Effects_of_deep.pdf\"],
+\"PMID_27915226\":[\"https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97\"],
+\"PMID_28392298\":[\"http://ufdc.ufl.edu/LS00591109/00001\"],
+\"PMID_30077869\":[\"https://orbi.uliege.be/bitstream/2268/229283/1/audiospinal_accepted.pdf\"],
+\"PMID_30100532\":[\"https://lirias.kuleuven.be/retrieve/7bfa65b3-d697-4eab-b010-9da4184981b8\"],
+\"PMID_30704853\":[\"https://hal.science/hal-03485848v1/file/S1353802019300215.pdf\"],
+\"PMID_30746411\":[\"https://minerva.usc.gal/bitstreams/a2bd40f5-01ec-4e8a-bdf3-391064455863/download\",\"http://hdl.handle.net/10852/90577\"],
+}
+class X(html.parser.HTMLParser):
+ def __init__(self):super().__init__();self.a=[];self.skip=0
+ def handle_starttag(self,t,a):
+  if t in (\"script\",\"style\",\"noscript\"):self.skip+=1
+ def handle_endtag(self,t):
+  if t in (\"script\",\"style\",\"noscript\") and self.skip:self.skip-=1
+ def handle_data(self,d):
+  if not self.skip:self.a.append(d)
+def validhtml(b):
+ try:
+  x=X();x.feed(b.decode(\"utf8\",\"replace\"));s=\" \".join(x.a);lo=s.lower()
+  n=len(re.findall(r\"\\b[\\w'-]+\\b\",s));h=sum(bool(re.search(r\"\\b\"+q+r\"\\b\",lo)) for q in (\"methods\",\"results\",\"discussion\",\"introduction\",\"conclusion\",\"methodology\"))
+  return n>=600 and h>=2 and not any(q in lo[:12000] for q in (\"access denied\",\"log in to continue\",\"captcha\",\"verify you are human\"))
+ except:return False
+def run(k):
+ for u in candidates[k]:
+  try:
+   r=requests.get(u,headers={\"User-Agent\":\"Mozilla/5.0\"},timeout=(8,25),allow_redirects=True);b=r.content
+   if r.ok and len(b)>50000 and b[:5]==b\"%PDF-\":
+    fn=k+\".pdf\";open(fn,\"wb\").write(b)
+    return k,\"pdf\",fn,r.url,len(b)
+   if r.ok and validhtml(b):
+    fn=k+\".html\";open(fn,\"wb\").write(b)
+    return k,\"html\",fn,r.url,len(b)
+   print(\"REJECT\",k,r.status_code,len(b),r.headers.get(\"Content-Type\"),r.url,b[:12],flush=True)
+  except Exception as e:print(\"ERR\",k,type(e).__name__,flush=True)
+ return k,None,None,None,None
+with concurrent.futures.ThreadPoolExecutor(max_workers=7) as ex:
+ for x in ex.map(run,candidates):print(\"RESULT\",x,flush=True)
+m=json.load(open(\"manifest.json\",encoding=\"utf-8-sig\"))
+lookup={r[\"key\"]:r for r in m}
+for k in candidates:
+ if os.path.isfile(k+\".pdf\"):
+  r=lookup[k];r.update(status=\"ok\",file=k+\".pdf\")
+  r[\"source_url\"]=\"https://open-repository.fulltext.link\"
+  r[\"note\"]=\"PDF header and size validated.\"
+ elif os.path.isfile(k+\".html\"):
+  r=lookup[k];r.update(status=\"ok\",file=k+\".html\")
+  r[\"source_url\"]=\"https://open-repository.fulltext.link\"
+  r[\"note\"]=\"Full-text HTML validated by section markers and body length.\"
+# Re-read accurate source URLs by attempting to map successful result logs not stored; resolve above placeholder below from saved final URLs
+with open(\"manifest.json\",\"w\",encoding=\"utf-8\") as f:json.dump(m,f,ensure_ascii=False,indent=2);f.write(\"\\n\")
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<repo-download>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 6429ms:
+REJECT PMID_28392298 200 3501 text/html https://ufdc.ufl.edu/LS00591109/00001 b'<!doctype ht'
+REJECT PMID_26319759 200 12505 text/html; charset=utf-8 https://hal.sorbonne-universite.fr/hal-01198838v1/file/Collomb-Clerc_Effects_of_deep.pdf b'<!doctype ht'
+REJECT PMID_17712844 200 971 text/html;charset=UTF-8 https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164 b'<!doctype ht'
+RESULT ('PMID_17712844', None, None, None, None)
+REJECT PMID_30704853 200 12505 text/html; charset=utf-8 https://hal.science/hal-03485848v1/file/S1353802019300215.pdf b'<!doctype ht'
+REJECT PMID_27915226 200 30773 text/html;charset=utf-8 https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97 b'<!DOCTYPE ht'
+RESULT ('PMID_24396010', 'pdf', 'PMID_24396010.pdf', 'https://lirias.kuleuven.be/retrieve/0be55cce-edbd-4b56-b562-db824af89311', 503221)
+RESULT ('PMID_26319759', None, None, None, None)
+RESULT ('PMID_27915226', None, None, None, None)
+RESULT ('PMID_28392298', None, None, None, None)
+RESULT ('PMID_30077869', 'pdf', 'PMID_30077869.pdf', 'https://orbi.uliege.be/bitstream/2268/229283/1/audiospinal_accepted.pdf', 268548)
+RESULT ('PMID_30100532', 'pdf', 'PMID_30100532.pdf', 'https://lirias.kuleuven.be/retrieve/7bfa65b3-d697-4eab-b010-9da4184981b8', 566080)
+RESULT ('PMID_30704853', None, None, None, None)
+RESULT ('PMID_30746411', 'pdf', 'PMID_30746411.pdf', 'https://minerva.usc.gal/rest/api/core/bitstreams/a2bd40f5-01ec-4e8a-bdf3-391064455863/content', 709287)
+
+**Querying HAL API metadata**
+**Checking HAL PDF access**
+**Checking repository download links**
+**Updating manifest source URLs**
+**Recording successful source URLs**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+m=json.load(open(\"manifest.json\",encoding=\"utf-8-sig\"))
+urls={
+\"PMID_24396010\":\"https://lirias.kuleuven.be/retrieve/0be55cce-edbd-4b56-b562-db824af89311\",
+\"PMID_30077869\":\"https://orbi.uliege.be/bitstream/2268/229283/1/audiospinal_accepted.pdf\",
+\"PMID_30100532\":\"https://lirias.kuleuven.be/retrieve/7bfa65b3-d697-4eab-b010-9da4184981b8\",
+\"PMID_30746411\":\"https://minerva.usc.gal/rest/api/core/bitstreams/a2bd40f5-01ec-4e8a-bdf3-391064455863/content\",
+}
+for r in m:
+ if r[\"key\"] in urls:r[\"source_url\"]=urls[r[\"key\"]]
+with open(\"manifest.json\",\"w\",encoding=\"utf-8\") as f:json.dump(m,f,ensure_ascii=False,indent=2);f.write(\"\\n\")
+print(\"ok\",sum(r[\"status\"]==\"ok\" for r in m),\"not_open\",sum(r[\"status\"]==\"not_open\" for r in m),\"failed\",sum(r[\"status\"]==\"failed\" for r in m))
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<manifest-fix>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 169ms:
+ok 14 not_open 26 failed 0
+
+**Inspecting manifest statuses**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import json; m=json.load(open('manifest.json')); print('\\n'.join(x['key']+' '+x['status']+' '+str(x['file']) for x in m if x['status']=='ok'))\"; Get-ChildItem -File *.pdf,*.html | Select-Object Name,Length" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 471ms:
+DOI_10.1101_19011858 ok DOI_10.1101_19011858.pdf
+DOI_10.1101_2021.07.01.21259612 ok DOI_10.1101_2021.07.01.21259612.pdf
+DOI_10.1101_2025.05.08.25327015 ok DOI_10.1101_2025.05.08.25327015.pdf
+DOI_10.1101_671479 ok DOI_10.1101_671479.pdf
+DOI_10.21203_rs.3.rs-4058858_v1 ok DOI_10.21203_rs.3.rs-4058858_v1.pdf
+DOI_10.21203_rs.3.rs-4216535_v1 ok DOI_10.21203_rs.3.rs-4216535_v1.pdf
+DOI_10.64898_2026.02.02.702843 ok DOI_10.64898_2026.02.02.702843.pdf
+PMID_23039143 ok PMID_23039143.pdf
+PMID_24396010 ok PMID_24396010.pdf
+PMID_25540305 ok PMID_25540305.html
+PMID_30077869 ok PMID_30077869.pdf
+PMID_30100532 ok PMID_30100532.pdf
+PMID_30641837 ok PMID_30641837.pdf
+PMID_30746411 ok PMID_30746411.pdf
+
+Name                                 Length
+----                                 ------
+DOI_10.1101_19011858.pdf            1719829
+DOI_10.1101_2021.07.01.21259612.pdf 1565201
+DOI_10.1101_2025.05.08.25327015.pdf 1611818
+DOI_10.1101_671479.pdf              1118496
+DOI_10.21203_rs.3.rs-4058858_v1.pdf 5111623
+DOI_10.21203_rs.3.rs-4216535_v1.pdf 1504030
+DOI_10.64898_2026.02.02.702843.pdf  1471352
+PMID_23039143.pdf                     97854
+PMID_24396010.pdf                    503221
+PMID_30077869.pdf                    268548
+PMID_30100532.pdf                    566080
+PMID_30641837.pdf                     97854
+PMID_30746411.pdf                    709287
+PMID_25540305.html                   152529
+PMID_30746411.html                   212921
+
+
+
+**Deleting duplicate HTML**
+**Validating secondary PDFs**
+**Checking HAL API docs**
+**Checking official HAL docs**
+web search: 
+web search: HAL API download document fileMain_s api.archives-ouvertes.fr official documentation
+**Testing HAL API endpoints**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,json
+for h in [\"hal-01198838v1\",\"hal-03485848v1\"]:
+ for u in [\"https://hal.science/\"+h+\"/document\"]:
+  try:
+   r=requests.get(u,timeout=(8,20),headers={\"User-Agent\":\"Mozilla/5.0\"});print(\"DOC\",h,r.status_code,len(r.content),r.headers.get(\"Content-Type\"),r.url,r.content[:5])
+  except Exception as e:print(type(e).__name__,h)
+ try:
+  r=requests.get(\"https://api.hal.science/search/\",params={\"q\":\"halId_s:\"+h,\"fl\":\"halId_s,title_s,fileMain_s,uri_s\",\"wt\":\"json\",\"rows\":1},timeout=20)
+  print(\"API\",h,r.status_code,r.text[:1000])
+ except Exception as e:print(\"APIERR\",h,type(e).__name__)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<hal-test>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 4888ms:
+DOC hal-01198838v1 200 12505 text/html; charset=utf-8 https://hal.science/hal-01198838v1/document b'<!doc'
+API hal-01198838v1 200 {
+  "response":{
+    "numFound":0,
+    "start":0,
+    "maxScore":0.0,
+    "numFoundExact":true,
+    "docs":[ ]
+  }
+}
+DOC hal-03485848v1 200 12505 text/html; charset=utf-8 https://hal.science/hal-03485848v1/document b'<!doc'
+API hal-03485848v1 200 {
+  "response":{
+    "numFound":0,
+    "start":0,
+    "maxScore":0.0,
+    "numFoundExact":true,
+    "docs":[ ]
+  }
+}
+
+**Testing HAL ID queries**
+**Checking HAL field docs**
+web search: 
+web search: 
+web search: 
+web search: 'fileMain_s'
+**Opening the Fields link**
+web search: 
+web search: 
+**Testing direct API docs**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+for q in ['halId_s:hal-01198838','halId_s:hal-03485848','doiId_s:10.1016/j.neucli.2015.07.001','halId_s:\"hal-01198838\"']:
+ try:
+  r=requests.get(\"https://api.archives-ouvertes.fr/search/\",params={\"q\":q,\"fl\":\"docid,label_s,halId_s,doiId_s,fileMain_s,uri_s\",\"wt\":\"json\",\"rows\":2},timeout=15)
+  print(q,r.status_code,r.text[:1000])
+ except Exception as e:print(type(e).__name__)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<hal-api>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 3634ms:
+halId_s:hal-01198838 200 {
+  "response":{
+    "numFound":1,
+    "start":0,
+    "maxScore":5.958679,
+    "numFoundExact":true,
+    "docs":[{
+      "docid":"1198838",
+      "label_s":"Antoine Collomb-Clerc, Marie-Laure Welter. Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review. Neurophysiologie Clinique = Clinical Neurophysiology, 2015, 45 (4–5), pp.371-388. &#x27E8;10.1016/j.neucli.2015.07.001&#x27E9;. &#x27E8;hal-01198838&#x27E9;",
+      "halId_s":"hal-01198838",
+      "uri_s":"https://hal.sorbonne-universite.fr/hal-01198838v1",
+      "doiId_s":"10.1016/j.neucli.2015.07.001",
+      "fileMain_s":"https://hal.sorbonne-universite.fr/hal-01198838/document"
+    }]
+  }
+}
+halId_s:hal-03485848 200 {
+  "response":{
+    "numFound":1,
+    "start":0,
+    "maxScore":5.957021,
+    "numFoundExact":true,
+    "docs":[{
+      "docid":"3497234",
+      "label_s":"Carine Karachi, Florence Cormier-Dequaire, David Grabli, Brian Lau, Hayat Belaid, et al.. Clinical and anatomical predictors for freezing of gait and falls after subthalamic deep brain stimulation in Parkinson's disease patients. Parkinsonism & Related Disorders, 2019, 62, pp.91 - 97. &#x27E8;10.1016/j.parkreldis.2019.01.021&#x27E9;. &#x27E8;hal-03485848&#x27E9;",
+      "halId_s":"hal-03485848",
+      "uri_s":"https://hal.science/hal-03485848v1",
+      "doiId_s":"10.1016/j.parkreldis.2019.01.021",
+      "fileMain_s":"https://hal.science/hal-03485848/document"
+    }]
+  }
+}
+doiId_s:10.1016/j.neucli.2015.07.001 200 {
+  "response":{
+    "numFound":1,
+    "start":0,
+    "maxScore":5.573348,
+    "numFoundExact":true,
+    "docs":[{
+      "docid":"1198838",
+      "label_s":"Antoine Collomb-Clerc, Marie-Laure Welter. Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review. Neurophysiologie Clinique = Clinical Neurophysiology, 2015, 45 (4–5), pp.371-388. &#x27E8;10.1016/j.neucli.2015.07.001&#x27E9;. &#x27E8;hal-01198838&#x27E9;",
+      "halId_s":"hal-01198838",
+      "uri_s":"https://hal.sorbonne-universite.fr/hal-01198838v1",
+      "doiId_s":"10.1016/j.neucli.2015.07.001",
+      "fileMain_s":"https://hal.sorbonne-universite.fr/hal-01198838/document"
+    }]
+  }
+}
+halId_s:"hal-01198838" 200 {
+  "response":{
+    "numFound":1,
+    "start":0,
+    "maxScore":5.9641924,
+    "numFoundExact":true,
+    "docs":[{
+      "docid":"1198838",
+      "label_s":"Antoine Collomb-Clerc, Marie-Laure Welter. Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review. Neurophysiologie Clinique = Clinical Neurophysiology, 2015, 45 (4–5), pp.371-388. &#x27E8;10.1016/j.neucli.2015.07.001&#x27E9;. &#x27E8;hal-01198838&#x27E9;",
+      "halId_s":"hal-01198838",
+      "uri_s":"https://hal.sorbonne-universite.fr/hal-01198838v1",
+      "doiId_s":"10.1016/j.neucli.2015.07.001",
+      "fileMain_s":"https://hal.sorbonne-universite.fr/hal-01198838/document"
+    }]
+  }
+}
+
+**Checking exact document URL**
+web search: 
+web search: site:api.archives-ouvertes.fr fileMain_s /document HAL download PDF API
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; us=['https://hal.sorbonne-universite.fr/hal-01198838/document','https://hal.science/hal-03485848/document','https://api.archives-ouvertes.fr/hal-01198838/document','https://api.archives-ouvertes.fr/hal-03485848/document'];
+for u in us:
+ try:
+  r=requests.get(u,timeout=15,headers={'User-Agent':'Mozilla/5.0'}); print(r.status_code,len(r.content),r.headers.get('Content-Type'),r.url,r.content[:5])
+ except Exception as e: print(type(e).__name__,u)\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 2636ms:
+200 12505 text/html; charset=utf-8 https://hal.sorbonne-universite.fr/hal-01198838/document b'<!doc'
+200 12505 text/html; charset=utf-8 https://hal.science/hal-03485848/document b'<!doc'
+200 10068 text/html; charset=UTF-8 https://api.archives-ouvertes.fr/docs/ b'<!DOC'
+200 10068 text/html; charset=UTF-8 https://api.archives-ouvertes.fr/docs/ b'<!DOC'
+
+**Parsing UFDC page links**
+**Inspecting response links**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re,urllib.parse
+urls={
+\"UFDC\":\"http://ufdc.ufl.edu/LS00591109/00001\",
+\"IRIS\":\"https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97\",
+\"YUH\":\"https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164\"}
+for name,u in urls.items():
+ try:
+  r=requests.get(u,timeout=20,headers={\"User-Agent\":\"Mozilla/5.0\"})
+  hrefs=re.findall(r'''href\\s*=\\s*[\"'](["'^"'"']+)[\"']''',r.text,re.I)
+  sel=[urllib.parse.urljoin(r.url,x) for x in hrefs if any(t in x.lower() for t in (\"pdf\",\"download\",\"bitstream\",\"file\",\"content\",\"fulltext\"))]
+  print(name,r.status_code,r.url,len(r.content),r.headers.get(\"Content-Type\"),sel[:15])
+ except Exception as e:print(name,type(e).__name__)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<repo-links>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 3037ms:
+UFDC 200 https://ufdc.ufl.edu/LS00591109/00001 3501 text/html []
+IRIS 200 https://iris.unica.it/request-item?handle=11584/199179&bitstreamId=e2f56ed6-0625-3eaf-e053-3a05fe0a5d97 30753 text/html;charset=utf-8 []
+YUH 200 https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164 971 text/html;charset=UTF-8 []
+
+**Marking UFDC as unverified.**
+**Updating repository statuses**
+**Updating failure statuses**
+**Checking repository content**
+**Validating PDF files**
+**Validating saved files**
+**Assessing source coverage**
+**Checking open-access URLs**
+**Checking HAL document access**
+**Checking DSpace API**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+base=\"https://ir.ymlib.yonsei.ac.kr\"
+paths=[\"/rest/handle/22282913/97164\",\"/server/api/core/items?size=1&query=Different+cerebral+cortical+areas\",
+\"/server/api/core/handles/22282913/97164\",\"/server/api/core/items/find-by-id?uuid=22282913/97164\"]
+for p in paths:
+ try:
+  r=requests.get(base+p,timeout=12,headers={\"User-Agent\":\"Mozilla/5.0\",\"Accept\":\"application/json\"})
+  print(r.status_code,len(r.content),r.headers.get(\"Content-Type\"),r.url,r.text[:160].replace(\"\\n\",\" \"))
+ except Exception as e:print(type(e).__name__,p)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<dspace-api>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 3554ms:
+200 976 text/html;charset=UTF-8 https://ir.ymlib.yonsei.ac.kr/rest/handle/22282913/97164 <!doctype html> <html lang="ko"> <head>     <meta charset="utf-8">     <meta name="robots" content="noindex,nofollow">     <title>Loading...</title> </head> <bo
+200 1022 text/html;charset=UTF-8 https://ir.ymlib.yonsei.ac.kr/server/api/core/items?size=1&query=Different+cerebral+cortical+areas <!doctype html> <html lang="ko"> <head>     <meta charset="utf-8">     <meta name="robots" content="noindex,nofollow">     <title>Loading...</title> </head> <bo
+200 988 text/html;charset=UTF-8 https://ir.ymlib.yonsei.ac.kr/server/api/core/handles/22282913/97164 <!doctype html> <html lang="ko"> <head>     <meta charset="utf-8">     <meta name="robots" content="noindex,nofollow">     <title>Loading...</title> </head> <bo
+200 1002 text/html;charset=UTF-8 https://ir.ymlib.yonsei.ac.kr/server/api/core/items/find-by-id?uuid=22282913/97164 <!doctype html> <html lang="ko"> <head>     <meta charset="utf-8">     <meta name="robots" content="noindex,nofollow">     <title>Loading...</title> </head> <bo
+
+**Updating manifest failure notes**
+**Updating failure metadata**
+**Updating manifest metadata**
+codex
+额外检索到 4 篇可用的机构仓库全文，现共 14 篇文件通过检查。另有 4 篇存在开放仓库记录，但当前返回的是加载页、验证拦截页或无正文页面；我会把它们记为 `failed`，其余未发现全文的记为 `not_open`，并做最后的清单与文件核对。
+**Cleaning source records**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json,os
+path=\"manifest.json\"
+with open(path,encoding=\"utf-8-sig\") as f:m=json.load(f)
+failed={
+\"PMID_17712844\":\"https://ir.ymlib.yonsei.ac.kr/handle/22282913/97164\",
+\"PMID_26319759\":\"https://hal.sorbonne-universite.fr/hal-01198838v1/file/Collomb-Clerc_Effects_of_deep.pdf\",
+\"PMID_28392298\":\"http://ufdc.ufl.edu/LS00591109/00001\",
+\"PMID_30704853\":\"https://hal.science/hal-03485848v1/file/S1353802019300215.pdf\",
+}
+for r in m:
+ if r[\"key\"] in failed:
+  r.update(status=\"failed\",file=None,source_url=failed[r[\"key\"]],note=\"开放仓库有全文记录，但获取结果为加载/拦截页面或无正文页面，未保存不合格文件。\")
+ if r[\"status\"]==\"not_open\":
+  r[\"note\"]=\"在预印本服务器、Europe PMC/PMC、OpenAlex 与 OpenAIRE 记录中未找到可验证的开放全文。\"
+dup=\"PMID_30746411.html\"
+if os.path.isfile(dup):os.remove(dup)
+with open(path,\"w\",encoding=\"utf-8\") as f:json.dump(m,f,ensure_ascii=False,indent=2);f.write(\"\\n\")
+print(\"count\",len(m),\"ok\",sum(r[\"status\"]==\"ok\" for r in m),\"not_open\",sum(r[\"status\"]==\"not_open\" for r in m),\"failed\",sum(r[\"status\"]==\"failed\" for r in m))
+print(\"remaining duplicate removed\",not os.path.exists(dup))
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<finalize>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 156ms:
+count 40 ok 14 not_open 22 failed 4
+remaining duplicate removed True
+
+**Checking manifest files**
+**Running manifest validation**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json,os,re,html.parser
+m=json.load(open(\"manifest.json\",encoding=\"utf-8-sig\"))
+class X(html.parser.HTMLParser):
+ def __init__(self):super().__init__();self.a=[];self.skip=0
+ def handle_starttag(self,t,a):
+  if t in (\"script\",\"style\",\"noscript\",\"svg\"):self.skip+=1
+ def handle_endtag(self,t):
+  if t in (\"script\",\"style\",\"noscript\",\"svg\") and self.skip:self.skip-=1
+ def handle_data(self,d):
+  if not self.skip:self.a.append(d)
+errors=[]
+for x in m:
+ if x[\"status\"]"'!="ok":continue
+ f=x.get("file")
+ if not f or not os.path.isfile(f):errors.append((x["key"],"missing"));continue
+ b=open(f,"rb").read()
+ if f.endswith(".pdf"):
+  if not (len(b)>50000 and b[:5]==b"%PDF-"):errors.append((x["key"],"bad PDF"))
+ elif f.endswith(".html"):
+  p=X();p.feed(b.decode("utf-8","replace"));s=" ".join(p.a);lo=s.lower()
+  words=len(re.findall(r"'"\\b[\\w'-]+\\b\",s))
+  sections=sum(bool(re.search(r\"\\b\"+q+r\"\\b\",lo)) for q in (\"methods\",\"methodology\",\"materials and methods\",\"results\",\"discussion\",\"introduction\",\"conclusion\"))
+  blocked=any(q in lo[:12000] for q in (\"access denied\",\"log in to continue\",\"sign in to access\",\"purchase this article\",\"subscribe to access\",\"captcha\",\"verify you are human\"))
+  if words<600 or sections<2 or blocked:errors.append((x[\"key\"],\"bad HTML\"))
+ else:errors.append((x[\"key\"],\"bad extension\"))
+files=[n for n in os.listdir(\".\") if n.lower().endswith((\".pdf\",\".html\"))]
+listed=[x[\"file\"] for x in m if x[\"status\"]==\"ok\"]
+orphans=sorted(set(files)-set(listed))
+print(\"manifest\",len(m),\"ok\",len(listed),\"files\",len(files),\"errors\",errors,\"orphans\",orphans)
+'@ | python -c \"import sys; exec(compile(sys.stdin.read().lstrip(chr(65279)), '<verify-files>', 'exec'))\"" in D:\fwlaozong\papers\luna_1113_113706
+ succeeded in 275ms:
+manifest 40 ok 14 files 14 errors [] orphans []
+
+codex
+完成 14 篇 / 共 40 篇
+tokens used
+148,902

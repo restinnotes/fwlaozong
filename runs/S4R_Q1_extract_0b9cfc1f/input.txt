@@ -1,0 +1,175 @@
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+pid: PMID:32431656
+题目: Clinical and Kinematic Correlates of Favorable Gait Outcomes From Subthalamic Stimulation.
+年份: 2020
+全文：
+# Clinical and Kinematic Correlates of Favorable Gait Outcomes From Subthalamic Stimulation
+
+## Abstract
+Objective: Gait and freezing of gait (FoG) are highly relevant to the outcomes of subthalamic nucleus deep brain stimulation (STN-DBS) in Parkinson's disease (PD). Previous studies pointed to variable response to combined dopaminergic and STN-DBS treatment. Here, we performed a prospective exploratory study on associations of preoperative clinical and kinematic gait measures with quantitative gait and FoG outcomes after STN-DBS implantation. Methods: We characterized 18 consecutive PD patients (13 freezers) before and after STN-DBS implantation. The patients received preoperative levodopa challenges (MedOff vs. MedOn) and a postoperative reassessment at 6 months from surgery in MedOn/StimOn condition. We correlated the FoG outcome, calculated as improvement of Freezing of Gait Assessment Course (FoG-AC) from baseline MedOff to 6-month follow-up MedOn/StimOn, with the levodopa response of preoperative clinical and kinematic gait measures. We considered measures with significant correlations for a multiple regression model. Results: We found that the postoperative gait and FoG outcomes were associated with the preoperative levodopa response of clinical and kinematic gait measures. In particular, preoperative levodopa sensitivity of FoG showed high correlation with a favorable quantitative FoG outcome. Among kinematic measures, preoperative levodopa response of stride length and range of motion showed high correlation with favorable FoG outcome. In addition, the preoperative levodopa sensitivity of FoG predicted postoperative FoG outcome with high accuracy (R2 = 0.952; 95% CI: 0.95–1.29; P < 0.001). Conclusions: Preoperative clinical and kinematic measures correlated with favorable postoperative gait and FoG outcomes. The findings should be reproduced in larger and independent cohorts to verify their predictive value.
+
+## Introduction
+
+Gait disturbance and freezing of gait (FoG) hamper quality of life and lead to falls and morbidity in Parkinson's disease (PD) (1, 2). Given the variable response to dopaminergic medication and deep brain stimulation of the subthalamic nucleus (STN-DBS), a preoperative stratification of postoperative gait and FoG outcomes is needed (3–6). Because gait and FoG outcomes did not constitute primary endpoints in previous large-scale, randomized controlled trials, the present evidence is incomplete (7, 8). One recent meta-analysis suggested that the levodopa response of the Movement Disorder Society (MDS)-sponsored Revision of the Unified Parkinson's Disease Rating Scale part III (MDS-UPDRS III) summary score indicates favorable FoG outcome (9). A recent secondary analysis of the EARLYSTIM cohort found that the patients with preoperative FoG were more likely to stay freezers at 24-month follow-up when having longer disease duration (10).
+
+To improve therapeutic decisions in the context of FoG, fine-grained multimodal measures specific to gait and FoG outcomes are needed to account for the complexity of postoperative outcomes of gait. Beyond clinical variables, sensor-based kinematic features receive converging interest in order to achieve objective and quantitative features of PD gait (11, 12). Some parameters such as reduction in step length, decreased velocity, increased cadence, stride-to-stride variability (13), and lower limb asymmetry (14) are precursors for FoG and falls (15). Previous studies concluded that both dopaminergic medication and STN-DBS modulated such features alone or in combination (16–20), in particular, stride length, velocity, and range of motion (ROM) at hip, knee, and ankle levels (16–19, 21–23).
+
+In this study, we characterized consecutive patients with idiopathic PD evaluated for STN-DBS therapy with respect to gait measures, and FoG in particular, including clinical and kinematic gait and FoG assessments. First, patients received a diagnostic workup of gait measures in a preoperative levodopa challenge. Then, patients were followed up postoperatively, and both (i) the effect of STN-DBS 8 weeks after surgery and (ii) the overall gait and FoG outcome of combined dopaminergic medication and STN-DBS 6 months after surgery were characterized. The aim of this prospective study was to explore meaningful clinical and kinematic candidate features that correlate with favorable gait and, in specific, quantitative FoG outcomes. With this study, we wished to identify candidate features for a future larger and independent prospective prediction study.
+
+## Materials and Methods
+
+The trial was approved by the Ethics Committee of the University of Tübingen (355/2015BO1). All patients participated with written informed consent.
+
+### Patients
+
+We consecutively recruited 24 advanced PD patients among DBS candidates during an inpatient-screening visit between May 2015 and November 2016. Inclusion criteria were disease duration longer than 5 years and age >18 and <80 years. The presence of FoG was not an inclusion criterion. Exclusion criteria were as follows: cognitive impairment [Mini-Mental State Examination (MMSE) <25], participation in other clinical trials, and chronic pathological conditions interfering with the interpretability of gait assessments (e.g., major orthopedic or psychiatric conditions like depression or psychosis).
+
+Out of the 24 patients, 18 underwent subthalamic nucleus implantation (STN-DBS) according to regular DBS indication criteria (7, 8). The remaining six patients stayed under best oral medical treatment. Reasons were sufficient amelioration of tremor (n = 2), sufficient amelioration of motor fluctuations (n = 3) after optimizing oral medication, or lack of objective motor fluctuations (n = 1) (8, 24).
+
+The mean age of the study cohort (n = 18) was 66.9 ± 6.9 years, and mean disease duration was 12.8 ± 6.0 years. The median MMSE score was 30 [min 26–max 30]. The levodopa equivalent dosage at baseline was 1,334 ± 147 mg/day. Detailed patient characteristics are given in Table 1.
+
+[table-wrap T1] Patient characteristics at baseline.
+
+### Study Design
+
+Patients underwent a preoperative “baseline assessment” in two conditions: (i) clinical off-state after overnight withdrawal of dopaminergic medication (MedOff) and (ii) clinical on-state (MedOn) assessed within 1 h after intake of immediate release levodopa preparation (1.5-fold individual morning dose). We performed (i) a 7-m timed walking test [Core Assessment Program for Surgical Interventional Therapies in Parkinson's Disease (CAPSIT-PD)], (ii) Freezing of Gait Assessment Course (FoG-AC) for quantitative FoG assessment (25), and (iii) Push and Release Test for assessing postural stability (26). These tests were performed using wearable inertial measurement units (APDM Inc., Portland, OR, USA). Additional clinical characterization included MDS-UPDRS III, Postural Instability and Gait Disorder (PIGD) subscore (sum of items 10–12 from MDS-UPDRS III), and Berg Balance Scale. For the PIGD subscore, we decided to use only clinical motor items 3.10–3.12 from MDS-UPDRS part III. We did not use the MDS-UPDRS II items 2.12 and 2.13, which rely on patient reporting. The main reason for this decision was that we expected MDS-UPDRS II not to be sensitive to the clinical transitions between clinical conditions (i.e., narrow time intervals between preoperative MedOff vs. MedOn and postoperative StimOff vs. StimOn). We further obtained MDS-UPDRS parts I, II, and IV and Parkinson's Disease Questionnaire (PDQ-39) for quality of life.
+
+Eighteen patients underwent surgery for bilateral STN-DBS with Medtronic quadripolar leads, model 3389 (n = 17) or model 3387 (n = 1); and all received an Activa PC impulse generator (Medtronic, Minneapolis, Minnesota). No surgical complications were reported. DBS was turned on within the first week after surgery. Three patients experienced falls in the first 8 weeks after surgery (ID 9 owing to an accident; ID 12 and 20 owing to FoG). One patient required inpatient care and surgery owing to radius fracture. One patient showed psychosis (ID 15) 10 weeks after surgery, which reverted under treatment with clozapine 25 mg/day. An “interim assessment” with a detailed reprogramming session was carried out 8 weeks from surgery after attenuation of the postoperative stun effect (i) to achieve optimized stimulation settings and (ii) to determine the pure STN-DBS effect on gait and FoG. This reprogramming session was performed after overnight withdrawal of all dopaminergic medication in MedOff/StimOff and MedOff/StimOn conditions. We performed first MedOff/StimOff assessment about 30 min after switching the stimulation off and then MedOff/StimOn assessment at least 30 min after switching the stimulation on. We used a similar approach elsewhere (27). We performed the CAPSIT-PD, the FoG-AC, the Push and Release Test, and MDS-UPDRS III in both conditions.
+
+A detailed postoperative characterization was performed 6 months from implantation under the best individual treatment (follow-up MedOn/StimOn). Detailed information on the stimulation parameters is provided (Table e-1). One patient was lost to follow-up after retracting consent (ID 2). We decided for this time point to ensure that the postoperative stun effect would have fully remitted and to ensure that stimulation parameters and medication had been adjusted. We decided for the MedOn/StimOn condition, because we wished to determine the gait and FoG outcome in the treatment state close to the regular daily life conditions. Furthermore, we reasoned that another MedOff session and reinsertion of levodopa by means of a challenge would not have reflected the true daily life outcome. However, this choice also meant that we assessed the pure stimulation effect at the 8-week interim assessment, but not at the postoperative 6-month follow-up. The detailed study protocol is given in Figure 1.
+
+[fig F1] Study design and protocol. *Tests were performed using wearable inertial measurement units (APDM Inc., Portland, OR, USA).
+
+### Kinematic Recordings
+
+Three wearable Opal® inertial measurement units (APDM Inc., Portland, OR, USA) were used for gait kinematic analysis. These sensors comprise tri-axial accelerometer, gyroscope, and magnetometer attached to both ankles and in lumbar position. We computed the kinematic gait measures with the “Mobility Lab” algorithm (APDM Inc., Portland, OR, USA) (28). The spatial (stride length), temporal (gait cycle time), and spatiotemporal (stride velocity) parameters as well as ROM of shanks and knees were extracted. In addition, we computed swing time asymmetry (Equation 1).
+
+In two patients, the quality of the kinematic time series was not adequate for analysis owing to technical problems (ID 3 at follow-up; ID 16 at baseline MedOff).
+
+### Outcome Measures and Statistical Analysis
+
+In this prospective study, we aimed to explore the preoperative clinical and kinematic correlates from a comprehensive set of candidate features potentially related to gait and FoG outcomes.
+
+#### Quantitative Comparisons of Outcomes Including Levodopa and Stimulation Effects on the Entire Group and on the Freezer Subgroup
+
+We first assessed the preoperative levodopa response (MedOff vs. MedOn) at “baseline assessment” on clinical gait, FoG, balance scores, and kinematic measures. Then, we defined the stimulation effect by comparing MedOff/StimOff and MedOff/StimOn conditions during the “interim assessment,” which took place 8 weeks from surgery. A comparison of MedOff condition from “baseline assessment” and MedOn/StimOn condition from “follow-up” determines the gait and FoG outcomes. We tested for normal distribution using the Kolmogorov–Smirnov test (P < 0.05). To compare between conditions, we used t-test for parametric data, Wilcoxon, or sign test for non-parametric data. We performed the analysis for the entire group and for the freezer subgroup. Patients were classified as definite freezers according to previous criteria (29), that is, if the examiner observed FoG. We corrected the clinical measures as well as the kinematic measures using the false discovery rate (FDR) (30).
+
+#### Correlations of Preoperative Scores With Postoperative 6-Month Freezing Outcome in the Freezer Subgroup
+
+We tested whether preoperative clinical and kinematic variables with significant levodopa response correlate with the postoperative 6 months outcome of regular therapy in MedOn/StimOn. We used Spearman correlations to this end.
+
+#### Prediction of the 6-Month Freezing Outcome From Preoperative Clinical and Kinematic Variables in the Freezer Subgroup
+
+Owing to the limited sample size of this monocentric study, we did not design the study as a prediction study. However, following an exploratory approach, we evaluated whether valid predictions of the FoG outcomes in terms of FoG-AC (as dependent variable, calculated as improvement of FoG-AC from baseline MedOff to 6-month follow-up MedOn/StimOn) could be made from the preoperative levodopa-sensitive clinical and kinematic measures. This means that we carried forward the preoperative variables (MedOn–MedOff) that showed significant correlation with the postoperative 6 months outcomes of FoG. We considered these findings rather hypothesis-generating instead of confirmatory, owing to the limited sample size and the high selection in this cohort; that is, the findings should be reproduced in independent cohorts. We used a stepwise multiple regression model to this end.
+
+All statistical analyses were performed with IBM SPSS statistics, version 25.0 (IBM Deutschland GmbH, Ehningen, Germany). We report descriptive statistics as mean ± SD for parametric data and median [min–max] for non-parametric data depending on their distribution.
+
+## Results
+
+### Comparison of Gait Outcomes on the Entire Group
+
+A detailed overview of the statistical descriptives and results of the “entire group” analysis is given in Table 2.
+
+[table-wrap T2] Clinical and kinematic data of entire group.
+
+#### Preoperative MedOff vs. MedOn
+
+MedOn improved the CAPSIT-PD in “number of steps” (P = 0.001) and “time” (P = 0.001). We observed an improvement of joint ROM at shank level (P < 0.001) and knee level (P = 0.003), of stride length (P = 0.001), and stride velocity (P = 0.003). There was no difference in gait cycle time and swing time asymmetry.
+
+#### 8-Week StimOff vs. StimOn
+
+CAPSIT-PD showed an improvement with STN-DBS in the “number of steps” (P = 0.004) and “time” (P = 0.002). Spatiotemporal and kinematic gait parameters showed an improvement of joint ROM at shank level (P = 0.006) and at knee level (P < 0.001) and of stride length (P = 0.028, n.s. after FDR correction). There was no difference in stride velocity, gait cycle time, and swing time asymmetry.
+
+#### Preoperative MedOff vs. 6-Month MedOn/StimOn
+
+CAPSIT-PD showed an improvement 6 months after STN-DBS implantation in the “number of steps” (P = 0.009) and “time” (P = 0.017). We observed an improvement of joint ROM at shank level (P = 0.008) and knee level (P = 0.005) and of stride length (P = 0.012). There was no difference in stride velocity and gait cycle time. Swing time asymmetry worsened after 6 months (P = 0.041, n.s. after FDR correction).
+
+### Comparison of Gait and Freezing of Gait Outcomes in the Freezer Subgroup
+
+A detailed overview of the statistical descriptives and results of “freezer subgroup” analysis is given in Table 3. The FoG-AC scores at each assessment and condition are given in Figure 2 as box plots.
+
+[table-wrap T3] Clinical and kinematic data of freezing patients.
+
+[fig F2] Severity of Freezing Assessment Course in different conditions. Results are given as box plots. x-axis, therapeutic condition; y-axis, score of the Freezing of Gait Assessment Course. *Significant after false discovery rate (FDR) correction (Benjamini–Hochberg).
+
+#### Preoperative MedOff vs. MedOn
+
+FoG-AC improved (P = 0.002) preoperatively, as well as the CAPSIT-PD in the “number of steps” (P = 0.002) and “time” (P = 0.002). Spatiotemporal and kinematic gait parameters showed an improvement of ROM at shank level (P = 0.002) and at knee level (P = 0.002) as well as stride length (P = 0.002) and stride velocity (P = 0.008). There was no difference in gait cycle time and swing time asymmetry.
+
+#### 8-Week StimOff vs. StimOn
+
+With STN-DBS turned on, the FoG-AC improved (P = 0.003). CAPSIT-PD showed also an improvement in “number of steps” (P = 0.017), “time” (P = 0.006), and “number of freezing episodes” (P = 0.046, n.s. after FDR correction). Spatiotemporal and kinematic gait parameters showed an improvement of joint ROM at shank level (P = 0.009) and knee level (P = 0.002) and of stride length (P = 0.028, n.s. after FDR correction). There was no difference in stride velocity, gait cycle time, and swing time asymmetry.
+
+#### Preoperative MedOff vs. 6-Month MedOn/StimOn
+
+FoG-AC improved between postoperative 6-month follow-up MedOn/StimOn and baseline MedOff (P = 0.003). CAPSIT-PD showed improvements in the “number of steps” (P = 0.028) and “time” (P = 0.041). We observed an improvement of joint ROM at shank level (P = 0.010) and knee level (P = 0.010), of stride length (P = 0.013), and of stride velocity (P = 0.033). There was no difference in gait cycle time and swing time asymmetry.
+
+### Correlations of Preoperative Scores With Postoperative 6-Month Freezing Outcome in the Freezer Subgroup
+
+We observed that a favorable outcome of FoG at 6-month follow-up (calculated as improvement of FoG-AC from baseline MedOff to 6-month follow-up MedOn/StimOn) correlated with preoperative severity of FoG in MedOff (defined by FoG-AC score) (P = 0.016), as well as with preoperative levodopa response of the FoG-AC (P < 0.001) and the preoperative levodopa response of the PIGD subscore (P = 0.004).
+
+Among kinematic parameters, preoperative levodopa response of stride length (P = 0.004), ROM at shank (P = 0.005), and ROM at knee level (P = 0.001) pointed to a favorable outcome of FoG. All correlations are given in Table 4, and the significant correlations can be found in Figure 3.
+
+[table-wrap T4] Clinical and kinematic variables correlating to favorable FoG outcome.
+
+[fig F3] Correlation between freezing of gait (FoG) outcome, calculated as improvement of Freezing of Gait Assessment Course (FoG-AC) from baseline MedOff to follow-up MedOn/StimOn. (A) Preoperative FoG severity in baseline MedOff, defined by FoG-AC score (r = 0.649; P = 0.016). (B) Preoperative levodopa response of freezing of gait, calculated as improvement of FoG-AC from baseline MedOff to baseline MedOn (r = 0.957; P < 0.001). (C) Preoperative levodopa response of PIGD subscore, calculated as improvement of PIGD subscore from baseline MedOff to baseline MedOn (r = 0.743; P = 0.004). (D) Preoperative levodopa response of ROM at shank level, calculated as improvement of ROM at shank level from baseline MedOff to baseline MedOn (r = 0.746; P = 0.005). (E) Preoperative levodopa response of ROM at knee level, calculated as improvement of ROM at knee level from baseline MedOff to baseline MedOn (r = 0.817; P = 0.001). (F) Preoperative levodopa response of stride length, calculated as improvement of stride length from baseline MedOff to baseline MedOn (r = 0.761; P = 0.004).
+
+### Prediction of the 6-Month Follow-Up Freezing Outcome From Preoperative Clinical and Kinematic Variables in the Freezer Subgroup
+
+We included the clinical and kinematic variables to our regression model that showed significant correlation with FoG-AC outcomes, namely, the preoperative levodopa response of FoG-AC, preoperative levodopa response of PIGD subscore, preoperative levodopa response of ROM shank, preoperative levodopa response of ROM knee, preoperative levodopa response of stride velocity, and preoperative levodopa response of stride length. The preoperative levodopa response of FoG-AC predicted the postoperative outcome (difference between 6-month follow-up in MedOn/StimOn condition and preoperative MedOff condition) to a great extent (R2 = 0.952, 95% CI: 0.95–1.29, P < 0.001) (Figure 3B). Levodopa response of the other variables did not show significant predictive values (preoperative levodopa response of PIGD subscore P = 0.086, preoperative levodopa response of ROM at shank P = 0.508, preoperative levodopa response of ROM at knee P = 0.666, preoperative levodopa response of stride velocity P = 0.959, and preoperative levodopa response of stride length P = 0.200). In addition, these kinematic variables did not improve the accuracy of our prediction model.
+
+## Discussion
+
+In this prospective study, we found that both clinical and kinematic levodopa responsive gait measures improved after STN-DBS. This was in particular true for the quantitative FoG outcomes in PD freezers. Interestingly, the preoperative response assessed with the fine-grained clinical FoG Assessment Course and the kinematic gait features were associated with a favorable outcome of FoG.
+
+These findings are relevant to improve the preoperative stratification and patient counseling on STN-DBS procedures with respect to gait and FoG. We identified the preoperative severity of FoG in medication off state, as well as the preoperative levodopa response of quantitative FoG assessment and preoperative levodopa response of PIGD subscore as candidate features related to a favorable FoG outcome. Likewise, preoperative levodopa response of ROM at shank and knee levels and that of stride length were also such candidate features among kinematic measures. Previous studies suggested that gait outcomes after STN-DBS are highly heterogeneous with up to 50% of preoperative “freezers” continuing FoG 1 year after surgery (3) and 42% in another study (4). Furthermore, FoG seems to worsen substantially under STN-DBS as disease progresses, and reprogramming strategies like low-frequency programming of STN stimulation or interleaved stimulation of STN+SNr may lead to partial success (6, 27, 31). However, the long-term effects of such reprogramming are variable, and definite conclusion cannot be drawn yet on these strategies (27, 31). Together, the preoperative stratification process needs refinement in order to identify the patients with favorable gait and FoG outcomes (32, 33).
+
+In this sense, one recent meta-analysis found the preoperative levodopa response of the total UPDRS III to predict favorable FoG outcomes on the UPDRS II item 14 on FoG (which reflects narrative information on FoG on the basis of the patients' self-perception) (9). In addition, a recent secondary analysis of the EARLYSTIM-trial showed that 52% of the patients had FoG preoperatively, and it decreased to 34% at 24-month follow-up. Interestingly, patients who stayed as freezers had significantly longer disease duration than had those who became non-freezers (10). As main difference to our study, the EARLYSTIM cohort was younger than our cohort (mean 52.6 ± 6.3 years) and had a shorter disease duration (mean 7.5 ± 2.8 years) in comparison with our study (mean age 66.9 ± 6.9 years and mean disease duration 12.8 ± 6.8 years). Further, FoG assessment was based on patient-reported FoG in terms of item 14 of UPDRS II, whereas our study used a quantitative clinical assessment specific to gait as outcome parameter. Similarity between the two studies is a well-preserved levodopa-response of motor symptoms, which is established as a main selection criterion for DBS (7, 8, 34). This study, as well as related studies, increasingly support that the importance of levodopa sensitivity also applies for FoG.
+
+However, given that some patients continue to exhibit FoG despite good levodopa response, more specific quantitative outcomes and predictors on gait measures and FoG in specific are needed. Interestingly, the preoperative correlates identified in this study include FoG severity as clinical measure and also spatial kinematic measures like ROM and stride length. This is in good accordance with previous literature that showed modulation of spatial parameters with STN-DBS (21, 35). In contrast, we did not find limb asymmetry measures to inform about the 6 months FoG outcomes. This is an important caveat, because acute reprogramming strategies in STN-DBS therapy aim to improve lower limb asymmetry measures in order improve FoG outcomes. But also with STN-DBS reprogramming, asymmetry seems to be a short-term marker (36), whereas its role for stable long-term outcomes is less clear and under ongoing consideration (37). Therefore, the correlates of a stable 6 months gait outcome may be more relevant to overall FoG outcomes, as opposed to short-term neuromodulation effects on gait.
+
+### Methodological Considerations and Study Limitations
+
+This study, in which we aimed to identify correlates of 6 months gait and FoG outcomes in patients treated with STN-DBS, was performed with exploratory intent. Because of this and the fact that this was a single-center study, the sample size was limited. Nevertheless, we focused on narrowing down the clinical and kinematic features that correlated with favorable FoG outcomes. Surely, this is not a final confirmation of these findings. Hence, the prediction model—albeit significant—should be reproduced in a larger cohort. The data from this prospective study provide a good basis to challenge the measures in a larger prediction study.
+
+In this study, FoG outcomes were primarily predicted from the preoperative FoG-AC scores. The kinematic measures did not further improve the prediction accuracy of our model; this should be re-challenged in the future. In particular, our patients showed near-to-full levodopa response of FoG preoperatively. However, this must not necessarily be true in other patients with motor fluctuations referred to STN-DBS. In addition to FoG-AC assessments, other clinical measures of long-term response of FoG should be included, like FoG questionnaire. Eventually, in the future, ambulatory kinematic measurements may enable objective assessments of FoG under daily life conditions to get even superior information on the true outcomes of a highly episodic and context-dependent clinical symptom (11).
+
+Patients with unfavorable gait and FoG outcomes after STN-DBS may have been under-represented in this study given that we found a high rate of responders on gait and FoG measures. This may have been caused by the fact that the PD patients were selected according to existing clinical criteria, with levodopa-responsive parkinsonism being one core component in the selection process. It was not intended in this study to refer patients outside these stringent criteria for STN-DBS.
+
+The fact that we assessed only MedOn/StimOn condition at follow-up may be seen as a limitation on the one hand, but on the other hand, this therapeutic condition is closest to the patients' daily life situation and, therefore, most representative for the true therapeutic outcome. Withdrawal and reinsertion of levodopa at the 6-month follow-up would have enabled the evaluation of pure stimulation effect. However, it would have been less representative for the true daily life outcome, because of the artificial condition induced by reinsertion of immediate release levodopa. This was the main reason for our choice.
+
+## Conclusion
+
+In summary, our findings show that favorable outcomes on gait and FoG from STN-DBS are achieved if quantitative FoG measures, stride length, and ROM at shank and knee levels show robust preoperative levodopa response. This study provides novel candidate features specific to gait and FoG that should be re-evaluated and reproduced as predictive stratification model in order to facilitate gait outcomes in STN-DBS for PD.
+
+## Data Availability Statement
+
+The datasets generated for this study are available on request to the corresponding author.
+
+## Ethics Statement
+
+The studies involving human participants were reviewed and approved by University of Tübingen. The patients/participants provided their written informed consent to participate in this study.
+
+## Author Contributions
+
+IC, AG, and DW designed and conceptualized the study. IC, MS, and DW analyzed and interpreted data. IC, MS, AG, and DW drafted and revised the manuscript for intellectual content.
+
+## Conflict of Interest
+
+IC, MS, AG report no disclosures relative to the research covered in the submitted manuscript. DW received research grants from the German Research Council (DFG, WE5375/1-1, WE5375/1-3) and research funding from Medtronic, as well as speakers honoraria/travel grants from Medtronic, Abott (St. Jude), Boston Scientific, and Abbvie.

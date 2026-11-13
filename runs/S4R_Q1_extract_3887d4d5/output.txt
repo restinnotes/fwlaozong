@@ -1,0 +1,69 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "DOI:10.1101/671479",
+      "design": "原始研究；受试者内随机顺序、重复测量的STN-DBS频率干预研究",
+      "population": "接受双侧STN-DBS治疗的帕金森病患者，包括freezers和non-freezers。Freezer根据FOG-Q第3题评分≥2或实验任务中观察到冻结事件定义。",
+      "n": "DBS子组12人，其中freezers 7人、non-freezers 5人；FOG改善分析主要涉及7名freezers。",
+      "condition": "受试者此前已接受至少21个月优化的连续高频STN-DBS治疗。实验期间停用多巴胺能药物，在OFF DBS、60 Hz STN-DBS和140 Hz STN-DBS三种条件下随机顺序完成Turning and Barrier Course（TBC）。同一受试者在两种刺激频率下使用相同电压，各实验条件之间至少休息5分钟。",
+      "measure": "TBC任务期间的冻结步态时间百分比（percent time freezing）。",
+      "finding": "Freezers在OFF DBS、60 Hz和140 Hz条件下的冻结时间分别为35±23%、5±7%和9±10%。两种刺激频率均显著降低冻结时间（p<0.05），刺激后的冻结时间与non-freezers的0%无显著差异。作者认为60 Hz和140 Hz均能改善FOG，且改善程度相近。",
+      "effect": "STN-DBS刺激开启与FOG减少相关，且这一改善同时出现在低频（60 Hz）和高频（140 Hz）刺激条件下。本研究未证明两种频率之间存在显著疗效差异。属于STN刺激干预对FOG的行为学证据，而非STN内源性神经活动与FOG的直接相关证据。",
+      "limitations": "FOG分析的freezer样本仅7人，样本量较小。实验仅在停药状态和TBC任务中进行，不能直接推广至其他药物状态或自然行走环境。虽然使用了具有同步感知和刺激功能的植入式设备，但本文没有报告STN局部场电位、神经元放电、β振荡或神经熵等神经活动指标，也没有分析STN神经信号与冻结事件的时间关系。因此无法判断FOG改善是否由特定STN神经活动变化介导。每个刺激条件之间仅安排至少5分钟休息，文章未报告频率切换后残留效应的验证。",
+      "quote": "the percent time spent freezing in the TBC was lower during either 60 Hz or 140 Hz DBS compared to when OFF DBS in freezers",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/671479",
+      "design": "原始研究；受试者内随机顺序、重复测量的STN-DBS频率干预研究",
+      "population": "接受STN-DBS治疗的帕金森病患者，重点分析freezers的非冻结步态。",
+      "n": "DBS子组12人（7名freezers、5名non-freezers）；主要异常改善结果涉及7名freezers。",
+      "condition": "停用多巴胺能药物，在OFF DBS、60 Hz和140 Hz刺激条件下完成TBC椭圆行走及8字行走任务。受试者此前接受至少21个月优化的连续高频STN-DBS。",
+      "measure": "非冻结步态期间的步态不规则性（gait arrhythmicity），采用双腿步幅时间（stride time）的变异系数（coefficient of variation）衡量。",
+      "finding": "OFF DBS时，freezers的步态不规则性显著高于non-freezers（p<0.01）。在60 Hz和140 Hz STN-DBS下，freezers的步态不规则性均下降至与non-freezers无统计学差异的水平（p>0.05）。总体重复测量分析显示DBS频率对步态不规则性存在显著影响（p<0.05）。",
+      "effect": "两种STN刺激频率均改善了freezers在非冻结状态下的步态节律性。这说明刺激对FOG相关的异常步态特征具有改善作用，但不能据此确定产生异常节律的具体STN神经振荡机制。",
+      "limitations": "样本量较小，且只在停药状态下测试。步态不规则性是外周运动学指标，并非STN神经活动指标。研究没有同步报告STN神经信号的变化，无法判断步态节律性改善与β活动、神经熵或其他STN神经活动特征之间的关系。作者指出，其整体FOG检测模型仅使用一个IMU，且模型样本量有限。",
+      "quote": "Freezers’ gait arrhythmicity during the TBC decreased to values not statistically different from those of non-freezers during both 60 Hz and 140 Hz DBS",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/671479",
+      "design": "原始研究；受试者内随机顺序、重复测量的STN-DBS频率干预研究",
+      "population": "接受STN-DBS治疗的帕金森病患者，重点分析freezers的非冻结步态。",
+      "n": "DBS子组12人，其中freezers 7人、non-freezers 5人。",
+      "condition": "停药状态下，分别在OFF DBS、60 Hz和140 Hz STN-DBS条件下完成TBC任务。比较刺激前后非冻结步态的运动学表现。",
+      "measure": "非冻结步态期间的平均峰值小腿矢状面角速度（average peak shank angular velocity），使用固定于双侧小腿的可穿戴惯性测量单元（IMU）记录。",
+      "finding": "Freezers在60 Hz或140 Hz STN-DBS期间的小腿角速度均显著增加（p<0.01）。但刺激后freezers的小腿角速度仍显著低于OFF DBS状态下的non-freezers（p=0.036）。",
+      "effect": "STN-DBS开启伴随步态运动幅度及速度相关指标改善。作者将其视为FOG及步态障碍改善的相关运动学表现，但该结果不能证明小腿角速度变化对应某种特定STN神经活动变化。",
+      "limitations": "角速度属于外周运动学测量，不能反映STN局部神经元放电或神经振荡。研究没有同步分析刺激引起的STN神经活动变化与小腿角速度变化之间的相关性。样本量仅12人，且仅在停药和特定障碍诱发任务下进行。作者没有提供足以区分不同STN神经机制的神经生理证据。",
+      "quote": "Freezers’ shank angular velocity increased during either frequency of DBS",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/671479",
+      "design": "原始研究；受试者内随机顺序、重复测量的STN-DBS频率干预研究",
+      "population": "接受STN-DBS治疗的帕金森病患者，包括freezers和non-freezers。",
+      "n": "DBS子组12人，其中freezers 7人、non-freezers 5人。",
+      "condition": "停药状态下，在OFF DBS、60 Hz和140 Hz三种刺激条件下完成TBC椭圆及8字行走任务。",
+      "measure": "非冻结步态的stride time和双侧步态不对称性（asymmetry）。",
+      "finding": "与步态不规则性及小腿角速度不同，DBS对freezers的stride time和asymmetry没有显著影响；对于non-freezers，DBS对任何所测步态参数均未检测到显著影响。",
+      "effect": "STN-DBS对不同步态参数的作用并不一致。刺激改善了freezers的冻结时间、步态不规则性和小腿角速度，但没有显著改变stride time或asymmetry，提示不能将所有FOG相关运动学指标视为对STN刺激具有相同反应。",
+      "limitations": "研究样本量较小，尤其是freezer组仅7人。作者指出部分步态参数的统计检验效能较低。该结果只涉及行为学和运动学测量，没有提供相应的STN神经活动数据，无法解释不同步态指标对刺激反应不一致的神经生理原因。",
+      "quote": "There was no effect of DBS on stride time or asymmetry as determined by three-way repeated measures ANOVAs in freezers",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/671479",
+      "design": "本论文讨论部分转述的既往研究；被引研究为病例系列及综述（Ramdhani et al., 2015），非本论文直接实验结果。",
+      "population": "接受STN-DBS治疗的帕金森病患者；本论文未提供被引研究的具体样本构成。",
+      "n": "本论文未报告被引研究的样本量。",
+      "condition": "本论文转述的既往研究比较了低频60 Hz与高频130 Hz STN刺激，评估发生于DBS治疗开始后较早阶段的FOG表现。作者明确指出该研究采用MDS-UPDRS III临床评估FOG。具体药物状态、刺激参数及任务条件未在本论文中详细报告。",
+      "measure": "MDS-UPDRS III临床评估的冻结步态表现。",
+      "finding": "本论文报告，Ramdhani等人的研究发现60 Hz低频STN刺激能够降低FOG，而130 Hz高频刺激没有产生相同的改善效果。该结果与本论文中60 Hz和140 Hz均能改善FOG的结果存在差异。",
+      "effect": "提示不同研究中低频与高频STN-DBS对FOG的相对疗效可能不一致。本论文作者没有将低频刺激确定为普遍优于高频刺激，并指出实际步行任务中60 Hz与140 Hz的优劣并不明确。",
+      "limitations": "该结果是本论文对另一项研究的二次转述，而非本研究直接验证的数据。本论文没有提供被引研究的样本量、详细刺激参数、药物状态及完整统计结果，因此无法进行严格的条件匹配比较。可以确认的条件差异包括：被引研究采用MDS-UPDRS III临床评估，而本研究采用TBC及客观冻结时间测量；被引研究比较60 Hz与130 Hz，本研究比较60 Hz与140 Hz；被引研究发生在DBS开始后的较早阶段，而本研究受试者已经接受至少21个月优化的连续高频STN-DBS。这些差异是解释结果不一致时需要考虑的研究条件，但本论文没有证明其中任何一个是冲突的确定原因。",
+      "quote": "Ramdhani et al. reported that lower frequency (60 Hz) DBS reduced FOG when high frequency (130 Hz) DBS did not, even shortly after DBS was initiated",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

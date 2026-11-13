@@ -1,0 +1,91 @@
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+pid: PMID:34466251
+题目: Case series: New-onset freezing of gait in combined use of deep brain stimulation and Levodopa.
+年份: 2021
+全文：
+# Case series: New‐onset freezing of gait in combined use of deep brain stimulation and Levodopa
+
+## Abstract
+Concurrent use of DBS and levodopa in Parkinson's disease patients can lead to freezing of gait. This phenomenon may be due to an inverted‐U‐Shaped function of dopamine. Keywords: deep brain stimulation, freezing of gait, levodopa, Parkinson's disease
+
+## INTRODUCTION
+
+The effect of DBS on occurrence or improvement of freezing of gait (FoG) in the course of Parkinson's Disease (PD) is still unknown. Four PD patients presented FoG in the concurrent use of deep brain stimulation (DBS) and levodopa which was improved through discontinuation of either DBS or levodopa.
+
+Parkinson's disease (PD) is a progressive neurodegenerative disorder of central nervous system which affects dopaminergic neurons, mostly in the Substantia Nigra.1 Freezing of gate (FoG) is an abnormal and common gait pattern in PD and it is defined as a short and sudden episode of inability to initiate or continue walking despite the intention, especially in turning.2 Freezing is most commonly relieved by dopaminergic medication known as “off” FoG and conversely “on” state is a FoG resistant to dopaminergic medication.2 Another medical strategy that can improve FoG is deep brain stimulation (DBS) of the subthalamic nucleus (STN).3 In this paper, we intend to report the combined effect of levodopa and STN‐DBS which led to FoG in four patients.
+
+## CASE PRESENTATIONS
+
+Herein, we present 4 patients with PD that they all underwent STN‐DBS surgery under local anesthesia after obtaining the consent form. These patients were all referred to Shohada Tajrish University Hospital which is a referral center for DBS. This study was approved by ethical committee of Shahid Beheshti University of Medical Science.
+
+### Patient 1
+
+A 54‐year‐old, right‐handed man presented with bradykinesia at age of 39, and PD was diagnosed for him at this age. By the time, the disease progressed and he experienced severe wearing off which could not be controlled by medical management, and he did not have dyskinesia, dystonia, or FoG. Patients’ surgery was done in another country when he was 44. After 4 years, he started to present freezing of gait and arm rising dystonia on the left hand which became more severe over times. Two years ago, he came to our DBS clinic to consult for spinal stimulation surgery. He was on levodopa/carbidopa 100/25 mg, four times a day, propranolol 20 mg/day, and diazepam 2 mg/day. The patient stated that his FoG and dystonia occur 30 minutes after taking levodopa and 30 minutes before the next dose. Therefore, levodopa/carbidopa has been reduced to 100mg/day and his FoG improved completely without changing DBS parameters (Table 1), and then, amantadine was added to his medications and his dystonia improved as well.
+
+[table-wrap ccr34695-tbl-0001] Patients stimulation adjustments and medications
+
+### Patient 2
+
+A 57‐year‐old right‐handed woman was diagnosed with PD, akinetic rigid type, at age 47, and at age of 54, STN‐DBS surgery was carried out for her because of severe wearing off and dyskinesia, but she did not have FoG before surgery. She referred to our clinic because of FoG and dyskinesia, while she was on levodopa/carbidopa 200/50mg, 8 times a day, pramipexole 0.18 mg, 2 times a day, and amantadine once daily. Because of severe dyskinesia, levodopa was decreased gradually to levodopa/carbidopa 100/25 mg, five times a day, and in addition to her dyskinesia, FoG improved dramatically. During 2 years of follow‐up, she could not decrease levodopa/carbidopa anymore and she currently has mild freezing of gait after using levodopa. DBS parameters are available in Table 1.
+
+### Patient 3
+
+A 65‐year‐old right‐handed woman with a 10‐year history of PD referred to our DBS clinic due to FoG and backward arms movement during walking, and DBS surgery was done at age 61 because of severe refractory tremor. She did not have dyskinesia and FoG before surgery. She was on levodopa/benserazide 200/50 mg, 5 times a day. Medication was reduced to levodopa/benserazide 250 mg, ¼ tab, 4 times per day. In response to medication reduction, patient has shown relieving in FoG and sudden episodes of movement breakdown compared with simultaneous use of DBS and high dosage of dopaminergic medication. DBS parameters are available in Table 1.
+
+### Patient 4
+
+A 62‐year‐old right‐handed woman with history of akinetic rigid PD since age of 49 was referred to our clinic because of severe FoG and dyskinesia. STN‐DBS electrodes were implanted when she was at the age of 59, when she did not have freezing of gait. The patient was wheelchair bound due to FoG and was taking Levodopa/carbidopa 125 mg, 10 times per day. Because of dyskinesia, levodopa/carbidopa was tapered without DBS adjustment. Three weeks later, she came to our clinic when she withdrew her medication and could walk with cane, and did not have FoG and dyskinesia. DBS parameters are available in Table 1. After 2 years of follow‐up, she still remained drug‐free without episodes of FoG.
+
+## DISCUSSION
+
+DBS is among the treatment strategies considered for poorly controlled patients with Parkinson's disease, but it has demonstrated controversial outcomes specifically in the improvement of FoG.3 STN is shown to be a possibly proper target for DBS in PD.3 Although some studies have noted an improvement in the FoG subsequent to STN‐DBS, some others have reported worsening of FoG or emergence of new cases.4, 5 Malposition of the electrodes (eg, anteromedial placement of electrode in STN) and improper (possibly high) voltage and frequency of stimulation may be responsible for newly emerged FoG and progression of the disease may lead to a decline in FoG improvement during years after DBS.5, 6, 7 In a case report by Mei et al., a patient with new‐onset FoG, subsequent to the combined utilization of levodopa and DBS, has been reported for the first time.8 Similar to their report, here we present 4 cases of PD undergone STN‐DBS who showed new‐onset FoG whenever they took levodopa and the DBS device was on. FoG of these patients was induced by neither dopamine medication nor DBS alone, and it resolved after discontinuation of levodopa.
+
+It has been suggested that disturbances in dopamine‐related neural pathways are among the most possible underlying causes of Parkinson's disease signs and symptoms including FoG.2 Intake of levodopa would increase the level of dopamine and improves the patients’ status.1 Roshan Cools and Mark D’Esposito have discussed that dopamine possesses an inverted‐U‐shaped performance meaning that through the range of doses/concentration, the maximal effect would be achieved at the middle of the range, whereas extrema of this range demonstrate significantly lower performance (eg, FoG).9 Interestingly, DBS would lead to changes in the concentration of dopamine in a frequency‐dependent manner in a similar way so that within a range of frequencies, the highest concentration is achieved via the frequencies in the middle of the range while lower and higher frequencies lead to lower concentration of dopamine.10 These two latter statements are consistent with each other, and it would be possible that the response of FoG to DBS varies depending on the frequency of the DBS and concentration of dopamine. As all four patients developed FoG subsequent to the combination of dopamine and DBS and neither of levodopa and DBS were capable of inducing FoG alone, it can be hypothesized that because of the dopamine medication which would increase the basal levels of dopamine and further DBS utilization which would induce the release of dopamine more than before, the level of dopamine would pass the concentration threshold that respected optimal function is expected and would reach to the concentration threshold which the function of dopamine is not beneficial and effective (the higher extremum of inverted‐U‐shaped performance) (Figure 1). In this case, although the combination of dopamine intake and DBS increases the level of dopamine, the proper decrease of FoG would not be observed. Three of these reported patients also developed dystonia in simultaneous utilization of levodopa and DBS. It has been suggested that dystonia and FoG may have similar underlying mechanisms and our evidences may strengthen this hypothesis.11
+
+[fig ccr34695-fig-0001] Schematic illustration of the cases explanation. If the amount of released dopamine subsequent to DBS (in a range of Z) in addition to the basal dopamine of the lesion and the dopamine medication exceeds the concentration of dopamine with optimal function (Xmid), the function of dopamine reduces gradually as this total concentration increases (in a range of A)
+
+## CONCLUSION
+
+Here, we have reported that new‐onset FoG can occur in concurrent use of levodopa and DBS in PD patients. It has been suggested that this observation may be due to high concentrations of dopamine in certain sites of brain subsequent to concurrent use of levodopa and DBS and an inverted‐U‐shaped function of dopamine.
+
+## CONFLICTS OF INTEREST
+
+All authors declare no conflicts of interest.
+
+## AUTHOR CONTRIBUTIONS
+
+Reza Jalili khoshnood performed the surgery. Mehri Salari involved in visiting patients and stimulation adjustment. Sepand Tehrani Fateh and Zahra Aminzade wrote the manuscript. Sepand Tehrani Fateh involved in schematic illustration. Mehri Salari and Sepand Tehrani Fateh edited the study. Mehri Salari involved in supervision.
+
+## ACKNOWLEDGMENTS
+
+Published with written consent of the patient.
+
+Salari M, Aminzade Z, Jalili khoshnood R, Tehrani Fateh S. Case series: New‐onset freezing of gait in combined use of deep brain stimulation and Levodopa. Clin Case Rep. 2021;9:e04695. 10.1002/ccr3.4695
+
+## DATA AVAILABILITY STATEMENT
+
+All data will be available through a request from the corresponding author.
+
+## REFERENCES
+
+## Associated Data
+
+### Data Availability Statement
+
+All data will be available through a request from the corresponding author.
