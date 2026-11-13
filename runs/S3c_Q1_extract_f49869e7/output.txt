@@ -1,0 +1,1351 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:28890315; DOI:10.1016/j.nbd.2017.09.002; PMCID:PMC6386531",
+    "title": "Subthalamic Neural Entropy is a feature of Freezing of Gait in freely moving people with Parkinson’s disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID28890315_DOI10.1016/j.nbd.2017.09.002",
+    "cohort_id_candidate": "Stanford_ActivaPCplusS_PD_FOG_cohort_2017_candidate",
+    "cohort_relation_basis": "单中心Stanford University研究。共纳入14例PD患者，均接受双侧STN DBS植入，使用Medtronic Activa PC+S记录设备，8例为Freezers，6例为Non-Freezers。5例因间歇性震颤或后续随访缺乏可识别beta峰而被排除神经信号分析，最终9例进入神经分析。作者及研究中心与Quinn et al. 2015（PMID:26360123）、Trager et al. 2016（PMID:27553876）、Shreve et al. 2017（PMID:27889627）及Blumenfeld et al. 2017（PMID:27859579）存在重叠，且均涉及Stanford的Activa PC+S研究。但本文未明确声明患者队列重叠，因此仅标记possible_overlap，不认定为同一队列。本文是独立发表的原始患者数据研究，不是上述论文的重复发表。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID28890315_E01",
+      "design": "单中心观察性人体研究；同步STN LFP与运动学记录；不同步态任务的重复测量比较。",
+      "population": "14例PD患者，8例Freezers、6例Non-Freezers。全部14例完成FW、SIP及TBC。该证据比较自然直立行走任务中的FOG发生情况。",
+      "n_enrolled": 14,
+      "n_analyzed": 14,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：全文未报告各任务FOG事件总数，仅报告每试次平均事件数。n_electrodes_contacts：全文未报告实际使用的总接触点数。行为分析使用14例，神经分析有效样本为9例。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "未报告akinetic、trembling-in-place等亚型。原文将FW/TBC中的FOG描述为步态模式改变，包括步幅缩短、步频加快（festination）及无向前运动阶段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。长效多巴胺能药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "所有任务均OFF DBS至少87分钟。FW及TBC在STN DBS启用后平均14.6个月进行。测试期间无治疗性刺激。20 Hz、1.5 V短暂刺激仅用于神经信号与运动学信号同步，不属于实验治疗刺激条件。",
+      "task": "TBC与FW的FOG发生情况比较。FW包括10 m直行、掉头返回，重复至总直行距离40 m；TBC包括绕障碍物椭圆行走及穿过狭窄开口的figure-eight行走。每个任务分为4个分析试次。",
+      "recording_location": "双侧STN LFP，记录电极双极组合为0–2或1–3。具体患者对应触点见Supplementary Table S1，所提供附件未包含该补充表。",
+      "measure": "FOG视频评估及运动学确认。30 fps视频由神经科医师判定；通过胫段角速度轨迹变化验证冻结事件。",
+      "frequency_and_analysis_window": "本证据为行为结局，不涉及神经频段分析。视频30 fps；IMU采样128 Hz，运动学信号使用9 Hz低通滤波。",
+      "finding": "8例Freezers中，7例在TBC出现FOG，4例在FW出现FOG。作者指出TBC比FW更容易诱发冻结，但未对两种任务进行有统计效力的正式比较。",
+      "effect_estimate": "TBC：7/8 Freezers出现FOG；FW：4/8。Table 2中TBC平均每试次9.07±6.86次FE，FW为2±0.82次FE。任务间比较未报告P值，作者明确指出研究未对此比较进行充分统计效力设计。",
+      "statistical_unit_and_method": "患者级描述性比较。分母为8例Freezers，报告出现冻结的患者数及每试次平均FE数量。未进行正式任务间推断性统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心14例植入式神经记录设备患者；神经分析排除5例，限制代表性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "视频由神经科医师判定并由运动学信号验证，但未报告评定者间一致性或评估者盲法。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤病例排除和ECG伪迹触点选择问题；本证据主要为行为结局。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "不同任务的转弯、障碍物和认知运动要求不同，且SIP与FW/TBC的DBS暴露历史不同。",
+            "source_locator": "Methods—Experimental Protocol; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者完成多个任务和多个试次；行为任务间统计比较未报告。",
+            "source_locator": "Methods—Experimental Protocol; Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "研究涉及多个任务和多个行为、神经结局，未见全面的多重比较校正说明。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本证据未建立预测模型。",
+            "source_locator": "Results—Gait tasks that elicited freezing behavior"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "全文未报告预注册或预先制定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者明确指出TBC诱发更多、更长的冻结事件，但未对此进行有统计效力的任务间比较。不能将该结果解释为TBC条件下STN活动变化必然由FOG引起。",
+      "quote": "Among the eight Freezers, four exhibited freezing episodes (FEs) during FW, five during SIP, and seven during TBC.",
+      "source_locator": {
+        "section": "Results—Gait tasks that elicited freezing behavior",
+        "page": null,
+        "figure_table": "Table 2; Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E02",
+      "design": "单中心观察性人体研究；同步STN LFP及双力台运动学记录；模拟/替代步态任务。",
+      "population": "14例PD患者，其中8例Freezers、6例Non-Freezers。全部14例完成SIP；5例Freezers出现FE。",
+      "n_enrolled": 14,
+      "n_analyzed": 14,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 1,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：全文未报告SIP全部FE总数，仅报告每试次平均FE数量。n_electrodes_contacts：全文未报告总接触点数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "原文术语为freezing episodes（FEs）；通过已验证的计算机算法识别。未报告akinetic、trembling-in-place等亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "SIP任务在12/14例患者中于初次DBS编程、STN DBS系统激活前完成；另2例在初次编程后6个月完成。所有任务均OFF DBS至少87分钟。20 Hz、1.5 V短暂刺激仅用于信号同步。",
+      "task": "Stepping in Place（SIP）：患者在双力台上以自选速度交替原地踏步100秒。该任务为原地踏步，不是自然直立向前行走。",
+      "recording_location": "双侧STN LFP，双极触点组合0–2或1–3；患者具体触点信息见未随附件提供的Supplementary Table S1。",
+      "measure": "FE计算机算法识别，双力台地面反作用力及胫段角速度验证。",
+      "frequency_and_analysis_window": "本证据为FE行为终点。地面反作用力采样100 Hz；IMU采样128 Hz，低通滤波9 Hz。SIP单个试次100秒。",
+      "finding": "8例Freezers中，5例在SIP任务中出现FE。该结果表明原地踏步任务可诱发冻结样表现，但不等同于自然向前行走中的视频确认FOG。",
+      "effect_estimate": "5/8 Freezers出现FE；平均每试次3±0.71次FE，平均单次持续时间9.54±6.35秒，任务冻结时间比例27.05%±17.15%。",
+      "statistical_unit_and_method": "患者级描述性统计；每位患者1个SIP试次。FE使用计算机算法识别。作者引用Nantel et al. 2011（DOI:10.1016/j.gaitpost.2011.05.020）作为该任务的既往验证依据；本文不是该验证研究的独立重复。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心14例患者，神经分析排除5例。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "SIP使用已验证算法识别FE，但本文未提供本队列算法评估者盲法或一致性数据。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除和ECG伪迹触点选择；算法与运动学信号质量细节有限。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "原地踏步缺少自然前向运动及视觉流信息，且多数患者在DBS启用前测试。",
+            "source_locator": "Methods—Experimental Protocol; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "每位患者仅一个SIP试次；双侧STN数据不能直接等同于独立患者。",
+            "source_locator": "Methods—Experimental Protocol; Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "SIP同时分析多频段和多项神经指标，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本证据为FE检测和描述性分析，不是预测模型。",
+            "source_locator": "Results—Gait tasks that elicited freezing behavior"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "全文未报告预注册或预先制定的分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "SIP是替代性任务，不能直接归类为自然直立行走FOG。本文中SIP与FW/TBC的测试时间及DBS暴露历史不同，作者明确指出不宜直接比较不同任务的全部神经指标。",
+      "quote": "During the SIP task, five during SIP",
+      "source_locator": {
+        "section": "Results—Gait tasks that elicited freezing behavior",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E03",
+      "design": "单中心观察性人体研究；自然行走中视频确认FOG的空间分布分析。",
+      "population": "14例PD患者，其中8例Freezers；TBC中7例Freezers出现FOG。",
+      "n_enrolled": 14,
+      "n_analyzed": 14,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：全文未报告TBC事件总数及各位置的事件总计。n_electrodes_contacts：全文未报告总接触点数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "原文报告FOG、festination及无向前运动阶段；未进行akinetic、trembling-in-place等亚型分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW及TBC在长期STN DBS治疗后进行，平均DBS治疗时间14.6个月。",
+      "task": "Turning and Barrier Course（TBC）：绕障碍物椭圆行走及穿过狭窄开口进行figure-eight行走。比较冻结发生的空间位置。",
+      "recording_location": "双侧STN LFP，双极触点0–2或1–3；此证据主要为FOG空间位置的行为分析。",
+      "measure": "视频记录、神经科医师判定、胫段角速度轨迹确认及冻结位置映射。",
+      "frequency_and_analysis_window": "行为分析；视频30 fps，IMU 128 Hz，低通滤波9 Hz。TBC每位患者分4个分析时段。",
+      "finding": "TBC中的FOG主要聚集在转弯处和通过狭窄开口时。少数冻结事件出现在坐到站行走启动或行走到坐下的转换阶段。作者另报告除1例外，figure-eight部分比椭圆部分诱发更多冻结。",
+      "effect_estimate": "7/8 Freezers在TBC出现FOG。Table 3列出7例患者figure-eight与ellipse的冻结时间比例；作者描述除1例外，figure-eight冻结时间比例更高。未报告该比较的P值。",
+      "statistical_unit_and_method": "患者级描述性空间分布及任务分段冻结时间比例；未报告位置间推断性统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心14例患者，8例Freezers。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "神经科医师视频识别并以胫段角速度确认，但未报告盲法及评定者间一致性。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "运动伪迹和神经记录排除情况可能影响可分析样本。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "转弯、狭窄开口和figure-eight具有不同运动及注意要求。",
+            "source_locator": "Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者完成多次椭圆和figure-eight任务，未报告独立事件级统计模型。",
+            "source_locator": "Methods—Experimental Protocol; Results"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个任务分段和位置比较，未报告多重比较校正。",
+            "source_locator": "Results—Gait tasks that elicited freezing behavior"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "Results—Gait tasks that elicited freezing behavior"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定的空间分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "空间分布是任务依赖性行为结果，不能直接推断转弯或狭窄开口处出现的STN神经变化。作者没有报告figure-eight与ellipse之间的统计显著性检验。",
+      "quote": "FOG occurred most commonly during turns and when walking through a narrow opening",
+      "source_locator": {
+        "section": "Results—Gait tasks that elicited freezing behavior",
+        "page": null,
+        "figure_table": "Figure 2G; Table 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E04",
+      "design": "单中心观察性人体电生理研究；Freezer与Non-Freezer组间比较。",
+      "population": "14例PD患者中9例进入神经分析，包括5例Freezers和4例Non-Freezers。该比较使用18个STN记录。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 1,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：本比较仅分析无FOG的SIP片段，冻结事件数不适用。n_electrodes_contacts：全文报告18个STN，但没有报告接触点总数，不能用STN数替代contacts数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "Freezer与Non-Freezer分组；Freezer依据临床病史和/或术前或任务中观察到的冻结行为分类。该比较本身不包含FOG事件。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "所有任务OFF DBS至少87分钟。SIP在12/14例中于DBS启用前进行，另2例在启用后6个月进行。测试期间没有治疗性DBS刺激。",
+      "task": "SIP任务中没有冻结证据的交替原地踏步阶段。每位患者一个100秒试次。",
+      "recording_location": "双侧STN LFP，双极电极组合0–2或1–3。",
+      "measure": "STN beta频段相对功率。相对功率通过beta频段总功率除以静息状态40–70 Hz频段总功率获得。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz。LFP采样422 Hz；Welch PSD，1秒Hanning窗、0.5秒重叠、频率分辨率1 Hz。功率在13–30 Hz求和并以静息40–70 Hz功率归一化。",
+      "finding": "在没有FOG的SIP期间，Freezers的STN相对beta功率低于Non-Freezers。",
+      "effect_estimate": "Freezers：4.085±2.077；Non-Freezers：11.258±8.493（Table 4，任意单位）。组间比较H(1)=7.17，P=0.036。",
+      "statistical_unit_and_method": "报告18个STN记录。SIP组间比较采用Kruskal-Wallis秩和检验。统计单位是否充分处理双侧STN在同一患者内的相关性，全文未明确说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "14例中5例因震颤或缺乏持续beta峰被排除神经分析，可能产生选择偏倚。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类依据临床病史和/或观察到的冻结行为，未报告盲法或评估者一致性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除3例有间歇性震颤的患者，且根据ECG伪迹选择不同电极组合。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "SIP多数在DBS启用前完成，少数在启用后完成；不同患者的DBS暴露历史不完全一致。",
+            "source_locator": "Methods—Experimental Protocol; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "18个STN来自9例患者，双侧STN的患者内相关性在该Kruskal-Wallis分析中如何处理不清楚。",
+            "source_locator": "Statistics; Results—Decreased beta power and increased beta sample Entropy"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析alpha、beta功率及熵和多个任务，未报告全面的多重比较校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "该比较不是预测模型。",
+            "source_locator": "Results—Decreased beta power and increased beta sample Entropy"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该组间差异仅在SIP无冻结阶段观察到。作者明确报告静息状态和FW无FOG期间Freezer与Non-Freezer之间没有beta功率差异。alpha功率也不能区分两组。此前研究结果存在方向冲突：Toledo et al. 2014（PMID:24361601）报告Freezers静息高beta功率较高；Singh et al. 2013（DOI:10.1016/j.baga.2012.10.002）报告行走时低beta功率较高。作者提出微损伤效应及beta频段划分不同可能是冲突来源。这些为作者对既往研究的二次转述，不是本文独立重复数据。",
+      "quote": "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups",
+      "source_locator": {
+        "section": "Results—Decreased beta power and increased beta sample Entropy distinguish Freezers from Non-Freezers during stepping without FOG",
+        "page": null,
+        "figure_table": "Table 4; Figure 3; Figure S2",
+        "supplement": "Figure S2及Supplementary Table S1被正文引用，未包含在所提供附件中"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E05",
+      "design": "单中心观察性人体电生理研究；Freezer与Non-Freezer组间比较。",
+      "population": "14例PD患者中9例进入神经分析，5例Freezers、4例Non-Freezers；该比较使用18个STN记录。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 1,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：该比较分析无FOG的SIP片段，事件数不适用。n_electrodes_contacts：全文未报告接触点总数；报告的18个STN不是接触点数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "Freezer与Non-Freezer表型分组；SIP分析片段不包含冻结事件。未报告具体FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟。SIP在多数患者DBS启用前完成；2例在启用后6个月完成。无治疗性刺激。",
+      "task": "SIP无FOG阶段，交替原地踏步，每位患者一个100秒试次。",
+      "recording_location": "双侧STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta频段Sample Entropy（SampEn），反映时间序列的可预测性。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；LFP先进行相应频段滤波。SampEn参数m=4，r=20%数据标准差，采用Chebyshev距离。具体时间序列片段长度未报告。",
+      "finding": "Freezers在无冻结的SIP期间具有高于Non-Freezers的STN beta SampEn，提示beta时间序列的可预测性较低。",
+      "effect_estimate": "Freezers：0.407±0.031；Non-Freezers：0.337±0.062（Table 4）。Kruskal-Wallis：H(1)=4.61，P=0.032。",
+      "statistical_unit_and_method": "18个STN记录；SIP组间比较采用Kruskal-Wallis秩和检验。是否对同一患者双侧STN的相关性进行充分处理，全文未明确说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "14例中5例因震颤或缺乏持续beta峰被排除神经分析。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类基于病史和/或观察到的冻结行为，未报告盲法及评估者一致性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "震颤排除、ECG伪迹触点选择以及信号质量量化不足。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "SIP测试时间与DBS启用历史在部分患者中不同。",
+            "source_locator": "Methods—Experimental Protocol; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "18个STN来自9例患者；Kruskal-Wallis分析中患者内双侧记录的依赖关系不清。",
+            "source_locator": "Statistics; Results—Decreased beta power and increased beta sample Entropy"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个频段、任务及神经指标同时比较，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "该比较不是预测模型。",
+            "source_locator": "Results—Decreased beta power and increased beta sample Entropy"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这一发现是Freezer表型相关性，而非随后FOG事件前的事件级预测。作者提出两种竞争性解释：其一，较高熵代表异常神经信息传递及运动抑制；其二，较高beta复杂性可能是提高信息传递能力、补偿步态异常的反应。本文不能区分因果与补偿。作者还指出Handojoseno et al. 2015（PMID:25532186）报告FOG转换时皮层EEG beta熵下降，与本文STN beta熵在Freezer无冻结步态时升高的结果不同，但两者信号来源和分析阶段不同。",
+      "quote": "SampEn in the beta band was greater during SIP (without FOG) in Freezers compared to Non-Freezers",
+      "source_locator": {
+        "section": "Results—Decreased beta power and increased beta sample Entropy distinguish Freezers from Non-Freezers during stepping without FOG",
+        "page": null,
+        "figure_table": "Table 4; Figure 3; Figure S2",
+        "supplement": "Figure S2及Supplementary Table S1未包含在所提供附件中"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E06",
+      "design": "单中心观察性人体电生理研究；Freezer患者内FOG与无FOG步态条件比较。",
+      "population": "14例PD患者中9例具有有效神经数据。该分析限定于Freezers，报告8个STN记录；参与该特定比较的独立患者数未明确报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_patients_with_FOG：全文仅报告该比较N=8 STNs，未报告对应的独立患者数。n_FOG_events：未报告参与分析的FOG事件总数。n_electrodes_contacts：全文未报告contacts总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "原文为FOG，视频识别包括festination和无向前运动阶段；未报告具体亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW及TBC在长期STN DBS治疗后进行，平均14.6个月。测试中无治疗性刺激。",
+      "task": "Freezers在TBC中出现的实际FOG阶段，与FW中没有FOG的前向行走阶段比较。两任务运动要求不同，TBC包含转弯和狭窄障碍。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta频段相对功率。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；LFP采样422 Hz；Welch PSD使用1秒Hanning窗、0.5秒重叠、1 Hz分辨率。相对功率以静息40–70 Hz总功率归一化。FW与TBC各有4个分析试次。",
+      "finding": "在Freezers中，FOG期间STN beta功率低于FW无FOG期间。",
+      "effect_estimate": "TBC/FOG：7.321±4.429；FW/无FOG：9.143±6.835（Table 4，任意单位）。F(1,51)=14.45，P<0.001。",
+      "statistical_unit_and_method": "报告N=8 STNs。FW和TBC采用线性混合效应模型，STN作为随机效应并设置随机截距，以考虑4个试次。独立患者数和FOG事件数未分别报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "14例中5例排除神经分析，最终有效样本较小。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由神经科医师视频判定并以运动学确认，但未报告盲法或评定者一致性。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除震颤病例并处理ECG伪迹，但未报告全部记录的伪迹量化。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "FOG条件来自TBC，而无FOG对照来自FW；冻结状态与转弯、障碍物、视觉流和认知运动要求同时改变，无法独立归因于FOG。",
+            "source_locator": "Methods—Experimental Protocol; Results—Neural Analysis of Freezing of Gait; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用混合模型处理重复试次，但STN嵌套于患者的层级结构是否充分处理不清。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "分析多个频段、功率和熵指标，未报告全面多重比较校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是TBC冻结阶段与FW无冻结阶段的跨任务比较，不是同一任务内FOG与非FOG事件的严格匹配比较。特别重要的是，Non-Freezers在没有发生FOG的情况下也表现出TBC相对于FW的beta功率下降。因此，beta功率下降可能部分反映任务要求，而不一定是FOG特异性信号。作者关于完全抑制STN beta功率的DBS参数可能加重FOG的推测，并未在本研究中通过DBS ON/OFF干预直接检验。",
+      "quote": "Among Freezers, beta power was lower during FOG compared to during forward walking without FOG",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E07",
+      "design": "单中心观察性人体电生理研究；Freezer患者内FOG与无FOG步态条件比较。",
+      "population": "14例PD患者中9例具有有效神经数据。该分析为Freezer亚组，报告8个STN记录；独立患者数未明确报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_patients_with_FOG：全文只报告该比较N=8 STNs，没有报告独立患者数。n_FOG_events：全文未报告用于SampEn分析的FOG事件总数。n_electrodes_contacts：未报告contacts总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "原文FOG；视频判定包括festination和无向前运动阶段；未报告akinetic或trembling亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW和TBC在长期STN DBS治疗后进行，平均14.6个月。",
+      "task": "Freezers在TBC中发生FOG的阶段与FW中无FOG的步行阶段比较。属于跨任务比较。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN alpha频段Sample Entropy（SampEn）。",
+      "frequency_and_analysis_window": "Alpha为8–12 Hz；SampEn采用m=4、r=20%数据标准差、Chebyshev距离。具体时间序列片段长度未报告。LFP采样422 Hz。",
+      "finding": "Freezers在FOG期间的STN alpha SampEn高于无FOG步行期间，表示alpha时间序列的可预测性降低。",
+      "effect_estimate": "TBC/FOG：0.253±0.003；FW/无FOG：0.248±0.007（Table 4）。Results报告F(1,51)=7.67，P=0.005。注意：摘要报告P<0.001，与Results中的P=0.005不一致。本记录采用全文Results的具体统计值。",
+      "statistical_unit_and_method": "N=8 STNs；线性混合效应模型处理4个试次，STN作为随机效应并设置随机截距。患者级独立样本数未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "14例中5例排除神经分析，剩余有效样本较小。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "视频由神经科医师判定并由运动学确认，但未报告评定者盲法或一致性。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除及ECG伪迹触点选择，未报告完整信号质量指标。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "TBC中的FOG与FW中的无FOG比较同时改变了任务复杂度、转弯及障碍物要求，不能区分FOG效应与认知运动负荷效应。",
+            "source_locator": "Methods—Experimental Protocol; Discussion—Subthalamic neural oscillations in Freezers during gait and FOG; Discussion—Limitations"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "混合模型处理试次，但患者与双侧STN的层级相关性未充分说明。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个频段、任务和神经指标比较，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的统计分析计划；摘要与Results的P值存在不一致。",
+            "source_locator": "Abstract; Results—Neural Analysis of Freezing of Gait"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "FOG期间alpha SampEn增加可能反映FOG本身，也可能反映TBC任务更高的注意、执行功能及空间认知要求。作者在Discussion中明确提出alpha活动可能与注意和执行功能有关。摘要P<0.001与Results P=0.005不一致，应保留这一原文差异。作者提出的异常信息处理与补偿性复杂度两种机制均未被本研究直接区分。",
+      "quote": "Freezers also showed increased alpha SampEn during FOG when compared to walking without FOG",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E08",
+      "design": "单中心观察性人体电生理研究；Non-Freezer患者内TBC与FW任务比较。",
+      "population": "14例PD患者中9例进入神经分析。该结果为Non-Freezer亚组；报告N=7 STNs，独立患者数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：Non-Freezer组的该比较没有FOG事件，不适用。n_electrodes_contacts：全文报告N=7 STNs，但未报告接触点总数及独立患者数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer组；该组在研究任务中未观察到FOG。无FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW与TBC在平均14.6个月长期STN DBS治疗后完成。",
+      "task": "Non-Freezer患者在TBC与FW无FOG步行条件下比较。TBC包括转弯和狭窄障碍物；FW为40 m直行往返。",
+      "recording_location": "STN LFP，双极触点0–2或1–3。",
+      "measure": "STN alpha频段相对功率。",
+      "frequency_and_analysis_window": "Alpha为8–12 Hz；LFP采样422 Hz；Welch PSD使用1秒Hanning窗、0.5秒重叠、1 Hz分辨率。相对功率以静息40–70 Hz功率归一化。",
+      "finding": "Non-Freezers在没有FOG的情况下，TBC期间STN alpha功率低于FW期间，说明alpha功率下降并非FOG发生的充分条件。",
+      "effect_estimate": "TBC：1.890±1.351；FW：2.753±3.261（Table 4，任意单位）。F(1,48)=3.83，P<0.05。",
+      "statistical_unit_and_method": "N=7 STNs；线性混合效应模型，4个试次，STN作为随机效应并设置随机截距。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，5/14患者未进入神经分析。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer分类依据病史和观察，未报告盲法及评估者一致性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除及ECG伪迹触点选择。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "TBC与FW的运动复杂度、转弯及障碍物要求不同。",
+            "source_locator": "Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用混合模型处理4个试次，但患者内双侧STN相关性处理不充分明确。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析多频段、多任务和多个神经指标。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本比较不是预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "全文未报告预注册或预先指定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是重要的非冻结对照结果：TBC本身即可改变STN alpha功率。因而Freezers中TBC/FOG与FW/无FOG之间的alpha变化不能直接视为FOG特异性变化。",
+      "quote": "Non-Freezers demonstrated lower alpha and beta power during TBC than during FW, even though they did not freeze",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E09",
+      "design": "单中心观察性人体电生理研究；Non-Freezer患者内TBC与FW任务比较。",
+      "population": "14例PD患者中9例进入神经分析。Non-Freezer亚组报告N=7 STNs，具体独立患者数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：该Non-Freezer组没有FOG事件，不适用。n_electrodes_contacts：全文未报告接触点总数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer组；研究任务中没有观察到FOG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW和TBC在长期STN DBS治疗后进行，平均14.6个月。",
+      "task": "Non-Freezer组TBC与FW步行比较；两个任务均无FOG。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta频段相对功率。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；Welch PSD，1秒Hanning窗、0.5秒重叠、1 Hz分辨率。相对功率以静息40–70 Hz功率归一化。",
+      "finding": "Non-Freezers在TBC期间的STN beta功率低于FW期间，尽管TBC中没有发生FOG。",
+      "effect_estimate": "TBC：6.993±0.207；FW：8.400±5.529（Table 4，任意单位）。F(1,48)=5.84，P=0.02。",
+      "statistical_unit_and_method": "N=7 STNs；线性混合效应模型，4个试次，STN作为随机效应并设置随机截距。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，5例患者排除神经分析。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer分类依据临床病史和/或任务观察，未报告盲法。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除和ECG伪迹触点选择。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "TBC与FW在转弯、障碍物及注意要求方面不同。",
+            "source_locator": "Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用混合模型，但STN与患者的层级相关性处理细节有限。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多任务、多频段、多项神经指标，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本比较不是预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果表明TBC任务本身可以降低STN beta功率，即使没有FOG。它削弱了将Freezers在FOG期间beta功率降低完全归因于冻结事件本身的解释。",
+      "quote": "Non-Freezers demonstrated lower alpha and beta power during TBC than during FW, even though they did not freeze",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E10",
+      "design": "单中心观察性人体电生理研究；Non-Freezer患者内TBC与FW任务比较。",
+      "population": "14例PD患者中9例进入神经分析；该结果为Non-Freezer亚组，患者数及STN数未在该项alpha SampEn结果中单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：Non-Freezer任务中没有FOG，不适用。n_electrodes_contacts：全文未报告总接触点数。该项alpha SampEn比较未单独报告有效患者数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer组，无任务中FOG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW及TBC在平均14.6个月长期STN DBS治疗后进行。",
+      "task": "Non-Freezer组TBC与FW比较，两个任务均无FOG。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN alpha频段Sample Entropy。",
+      "frequency_and_analysis_window": "Alpha为8–12 Hz；SampEn参数m=4、r=20%数据标准差、Chebyshev距离。具体时间序列窗口长度未报告。",
+      "finding": "Non-Freezers在TBC与FW之间没有显著alpha SampEn差异。",
+      "effect_estimate": "Table 4：FW 0.247±0.007；TBC 0.250±0.004。正文未提供该比较的独立P值或F统计量。",
+      "statistical_unit_and_method": "TBC和FW采用线性混合效应模型，4个试次，STN作为随机效应；该项阴性比较没有单独报告统计量。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，5例患者被排除神经分析。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类依据病史和观察，未报告盲法及一致性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除和ECG伪迹处理，但缺少完整信号质量量化。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "TBC和FW任务复杂度不同。",
+            "source_locator": "Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用混合效应模型，但患者内STN嵌套处理细节不充分。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多任务和多指标分析，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本证据不是预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该阴性结果是Non-Freezer任务对照。作者同时报告Non-Freezers在TBC期间alpha及beta功率降低，说明任务复杂度可以影响功率指标，但并不必然改变alpha SampEn。",
+      "quote": "There was no difference in alpha SampEn",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E11",
+      "design": "单中心观察性人体电生理研究；Freezer组TBC与FW任务比较。",
+      "population": "14例PD患者中9例具有有效神经数据，其中5例Freezers。该项beta SampEn比较未单独报告STN数量。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：未报告beta SampEn分析对应的冻结事件总数。n_electrodes_contacts：全文未报告contacts总数。该项比较未单独报告有效STN及患者数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "unclear",
+      "freezing_phenotype": "Freezer组；TBC包括实际FOG阶段，但beta SampEn比较没有进行事件级分段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW和TBC在长期STN DBS治疗后进行。",
+      "task": "Freezer组TBC与FW比较；TBC包含冻结行为，FW主要为无FOG步行条件。每个任务分4个试次。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta频段Sample Entropy。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；SampEn参数m=4、r=20%数据标准差、Chebyshev距离；具体时间序列窗口长度未报告。",
+      "finding": "Freezers的beta SampEn在TBC与FW之间没有显著差异。即使TBC中出现实际FOG，beta SampEn也没有表现出与FOG一致的显著增加。",
+      "effect_estimate": "FW：0.380±0.050；TBC：0.377±0.050（Table 4）。正文未报告独立P值或F统计量。",
+      "statistical_unit_and_method": "FW和TBC采用线性混合效应模型，STN为随机效应，考虑4个试次；该阴性比较未单独报告统计量。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "有效神经分析样本仅9例，Freezer子组仅5例。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG通过视频及运动学确认，但未报告盲法和评定者一致性。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "震颤排除和ECG伪迹触点选择可能影响分析样本。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "TBC与FW任务不同，且该比较没有事件级分段。",
+            "source_locator": "Methods—Experimental Protocol; Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用混合效应模型，但患者内双侧STN层级处理细节不充分。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多频段、多任务及多指标比较，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本证据不是预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果提示beta SampEn与FOG事件的关联并不稳定。它与SIP无FOG条件下Freezer组beta SampEn较高的组间差异不是同一种比较，不能将二者合并为统一的beta熵异常。",
+      "quote": "Neither Freezers nor Non-Freezers showed any difference in beta SampEn during TBC compared to FW",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E12",
+      "design": "单中心观察性人体电生理研究；Non-Freezer组TBC与FW任务比较。",
+      "population": "14例PD患者中9例具有有效神经数据；该项分析为Non-Freezer亚组，具体有效STN数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：Non-Freezer组无FOG，不适用。n_electrodes_contacts：全文未报告接触点总数。该项beta SampEn阴性比较未单独报告STN数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer组；任务中没有观察到FOG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW及TBC在长期STN DBS治疗后进行。",
+      "task": "Non-Freezer组TBC与FW比较，均为无FOG步行条件；每个任务4个试次。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta频段Sample Entropy。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；SampEn参数m=4、r=20%数据标准差、Chebyshev距离；具体时间序列窗口长度未报告。",
+      "finding": "Non-Freezers的beta SampEn在TBC与FW之间没有显著差异。",
+      "effect_estimate": "FW：0.376±0.053；TBC：0.376±0.052（Table 4）。正文未报告独立P值或F统计量。",
+      "statistical_unit_and_method": "线性混合效应模型处理4个试次，STN作为随机效应；该阴性比较未单独报告统计量。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，5例排除神经分析。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类依据病史和任务观察，未报告盲法及一致性。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除及ECG伪迹处理。",
+            "source_locator": "Methods—Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "TBC与FW运动要求不同。",
+            "source_locator": "Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "混合模型处理试次，但STN与患者的层级关系报告不足。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多任务、多频段及多指标分析，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本证据不是预测模型。",
+            "source_locator": "Results—Neural Analysis of Freezing of Gait"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的统计分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该阴性结果与Freezer组beta SampEn在TBC与FW之间无差异的结果方向一致。未报告独立统计量，因此不能据此认为两个任务的beta SampEn完全等效。",
+      "quote": "Neither Freezers nor Non-Freezers showed any difference in beta SampEn during TBC compared to FW",
+      "source_locator": {
+        "section": "Results—Neural Analysis of Freezing of Gait (FOG)",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E13",
+      "design": "单中心观察性人体电生理研究；beta功率与beta SampEn的横断面指数拟合关联分析。",
+      "population": "14例PD患者中9例进入神经分析，包含5例Freezers和4例Non-Freezers。具体进入FW指数拟合的独立观测数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：该分析不是事件级分析，未报告FOG事件总数。n_electrodes_contacts：全文未报告总接触点数。指数拟合的确切独立观测数未单独报告。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "包含Freezer与Non-Freezer患者；FW分析被作者描述为无FOG步行阶段。未按具体FOG亚型分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；FW在平均14.6个月长期STN DBS治疗后进行。",
+      "task": "Forward Walking（FW），40 m前向直行步行；分析时排除掉头转弯阶段。每位患者4个试次，指数拟合前试次平均为一个值。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta相对功率与beta SampEn之间的关系。功率与熵是不同信号特征，不应合并解释为单一beta异常。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz。相对功率以静息40–70 Hz功率归一化，PSD采用Welch方法、1秒Hanning窗、0.5秒重叠。SampEn使用m=4、r=20%数据标准差、Chebyshev距离。FW的4个试次先取平均再拟合。",
+      "finding": "整个研究组在FW期间STN beta功率与beta SampEn呈负指数关系：beta功率越高，beta SampEn越低。",
+      "effect_estimate": "y=966.65e^(-13.49x)；F=42.07；Adjusted R²=0.71；P<0.001。图中x为beta SampEn，y为相对beta功率。",
+      "statistical_unit_and_method": "指数曲线拟合；Freezers与Non-Freezers合并分析。FW的多个试次先平均为每个患者一个值，以避免重复试次使部分患者权重过高。具体拟合样本量未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "有效神经分析仅9例患者，5例因震颤或缺乏持续beta峰被排除。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类基于病史和观察；FW事件分段由视频和运动学识别。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除、ECG伪迹处理及小样本信号质量限制。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "功率与熵可能共同受患者表型、任务状态和信号幅度影响；未报告多变量混杂调整。",
+            "source_locator": "Statistics; Results—Gait Entropy is inversely correlated with beta, but not alpha band power"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "试次平均降低重复试次权重问题，但患者双侧STN的统计层级仍未充分明确。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个任务及频段进行相关拟合，未报告全面校正。",
+            "source_locator": "Statistics; Figure 4"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "小样本指数拟合，未报告交叉验证、独立验证队列或拟合稳定性分析。",
+            "source_locator": "Statistics; Figure 4"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定的模型分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是患者/任务平均值之间的关联，不是FOG事件发生前或发生期间的事件级预测。指数拟合不能证明beta功率变化导致熵变化。作者还报告alpha功率与alpha SampEn没有相关关系，但未提供相应分任务拟合系数。",
+      "quote": "In FW, SIP, and TBC, there was an inverse relationship between beta power and beta SampEn across the whole group",
+      "source_locator": {
+        "section": "Results—Gait Entropy is inversely correlated with beta, but not alpha band power",
+        "page": null,
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E14",
+      "design": "单中心观察性人体电生理研究；beta功率与beta SampEn的横断面指数拟合关联分析。",
+      "population": "14例PD患者中9例进入神经分析，5例Freezers和4例Non-Freezers。SIP指数拟合的确切独立观测数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 1,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：该分析不是事件级分析，未报告事件总数。n_electrodes_contacts：全文未报告总接触点数。拟合样本量未单独报告。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "包含Freezer与Non-Freezer患者；SIP相关分析针对无FOG步态阶段。未报告具体FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；多数患者在DBS启用前完成SIP，少数在启用后6个月完成。",
+      "task": "Stepping in Place（SIP），每位患者一个100秒试次。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta相对功率与beta SampEn之间的关系。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；相对功率以静息40–70 Hz功率归一化；PSD使用1秒Hanning窗和0.5秒重叠。SampEn采用m=4、r=20%数据标准差、Chebyshev距离。",
+      "finding": "整个研究组在SIP期间STN beta功率与beta SampEn呈负指数关系。",
+      "effect_estimate": "y=989.79e^(-13.07x)；F=72.22；Adjusted R²=0.82；P<0.001。",
+      "statistical_unit_and_method": "指数拟合；Freezers与Non-Freezers合并分析。SIP每位患者只有一个试次。确切拟合观测数未单独报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "有效神经样本仅9例，排除5例。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer表型基于病史和/或观察，SIP FE通过算法识别。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除和ECG伪迹触点选择。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "患者表型、DBS暴露历史及任务性质可能影响功率与熵。",
+            "source_locator": "Methods—Experimental Protocol; Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "每人一个SIP试次，但双侧STN的患者内相关性处理未充分报告。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个任务、频段和指标进行分析，未报告全面校正。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "小样本指数拟合，未报告交叉验证或外部验证。",
+            "source_locator": "Statistics; Figure 4"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定模型分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "SIP没有自然前向运动及视觉流。作者指出SIP与FW的beta SampEn组间差异不一致可能来自任务性质不同，也可能来自长期DBS暴露历史不同。该相关性不是FOG事件级关联。",
+      "quote": "In FW, SIP, and TBC, there was an inverse relationship between beta power and beta SampEn across the whole group",
+      "source_locator": {
+        "section": "Results—Gait Entropy is inversely correlated with beta, but not alpha band power",
+        "page": null,
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID28890315_E15",
+      "design": "单中心观察性人体电生理研究；beta功率与beta SampEn的横断面指数拟合关联分析。",
+      "population": "14例PD患者中9例进入神经分析，包含5例Freezers和4例Non-Freezers。TBC拟合的确切独立观测数未单独报告。",
+      "n_enrolled": 14,
+      "n_analyzed": 9,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 9,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：TBC指数拟合使用任务平均值而非FOG事件级数据，未报告事件总数。n_electrodes_contacts：全文未报告总接触点数。拟合样本量未单独报告。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "unclear",
+      "freezing_phenotype": "包含Freezer和Non-Freezer患者；TBC中部分Freezers发生实际FOG，但该分析将整个任务的试次平均后拟合，不能确定具体事件阶段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；长效药物停药24小时，缓释多巴胺受体激动剂停药72小时，短效药物停药12小时。",
+      "DBS_state_and_parameters": "OFF DBS至少87分钟；TBC在平均14.6个月长期STN DBS治疗后进行。",
+      "task": "Turning and Barrier Course（TBC），包含绕行、转弯、figure-eight及通过狭窄开口。每位患者4个分析试次，拟合前试次平均为一个值。",
+      "recording_location": "STN LFP，双极触点组合0–2或1–3。",
+      "measure": "STN beta相对功率与beta SampEn之间的关系。",
+      "frequency_and_analysis_window": "Beta为13–30 Hz；相对功率以静息40–70 Hz功率归一化；PSD使用1秒Hanning窗、0.5秒重叠。SampEn采用m=4、r=20%数据标准差、Chebyshev距离。",
+      "finding": "整个研究组在TBC期间STN beta功率与beta SampEn呈负指数关系。该关系是在包含FOG事件的任务整体数据上获得，而不是在FOG事件与非FOG事件之间进行比较。",
+      "effect_estimate": "y=674.65e^(-12.74x)；F=78.36；Adjusted R²=0.82；P<0.001。",
+      "statistical_unit_and_method": "指数拟合；Freezers与Non-Freezers合并分析。TBC的4个试次先平均为每个患者一个值。确切拟合观测数未单独报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究，adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "有效神经分析仅9例患者，5例排除。",
+            "source_locator": "Methods—Human Subjects"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "TBC中的实际FOG由视频和运动学确认，但指数拟合没有事件级标签。",
+            "source_locator": "Methods—Data Acquisition and Analysis; Statistics"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在震颤排除及ECG伪迹处理，完整信号质量指标未报告。",
+            "source_locator": "Methods—Human Subjects; Data Acquisition and Analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "任务复杂度、转弯和障碍物要求及冻结发生情况均可能影响任务平均神经信号。",
+            "source_locator": "Methods—Experimental Protocol; Discussion"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "试次平均降低重复试次权重，但双侧STN的患者内相关性处理未充分说明。",
+            "source_locator": "Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个任务和频段进行指数拟合，未报告全面多重比较校正。",
+            "source_locator": "Statistics; Figure 4"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "小样本指数拟合，未报告交叉验证、外部验证或模型稳定性评估。",
+            "source_locator": "Statistics; Figure 4"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先制定的模型分析计划。",
+            "source_locator": "Methods; Statistics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "TBC拟合使用患者试次平均值，因此无法判断beta功率与beta SampEn的负相关是否在FOG发生前、FOG期间或冻结解除时分别存在。不能把任务级负相关直接解释为FOG事件机制。作者报告alpha功率与alpha SampEn没有相关关系，但未提供具体分任务统计量。",
+      "quote": "In FW, SIP, and TBC, there was an inverse relationship between beta power and beta SampEn across the whole group",
+      "source_locator": {
+        "section": "Results—Gait Entropy is inversely correlated with beta, but not alpha band power",
+        "page": null,
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

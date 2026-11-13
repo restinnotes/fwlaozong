@@ -1,0 +1,367 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:42829632
+题目: Local field potential biomarkers for adaptive deep brain stimulation in Parkinson's disease: A scoping review.
+年份: 2026
+全文：
+# Local field potential biomarkers for adaptive deep brain stimulation in Parkinson’s disease: A scoping review
+
+## Abstract
+Parkinson’s disease (PD) is the second most common neurodegenerative disorder in the elderly. Conventionally, to combat the symptoms, drugs such as Levodopa and conventional deep brain stimulation (DBS) are routinely used. However, with time, the efficiency of both treatment modalities wears off and accompany side effects. Advocating for the need to explore subsequent management options such as adaptive DBS (aDBS) - a tailor-made DBS promising more personalized and favorable outcomes. The main objective of this review was to explore local field potentials (LFPs) as biomarkers for aDBS in PD. In addition, to investigate any correlations between the LFPs biomarkers, their physiology, and how they affect the quality of aDBS. A literature search was conducted using two primary electronic databases, PubMed and Scopus, which were examined from 2005 to April 2026. The inclusion criteria were set as LFPs within the DBS framework, focusing on biomarkers such as beta, gamma, phase–amplitude coupling (PAC), or oscillatory activity in PD. A narrative data synthesis was conducted to chart and summarize the main findings from the included studies. A total of 73 articles were included in this review. Suppression of exaggerated beta-band oscillations (13– 35 Hz) consistently correlated with improved motor performance and emerged as the most validated feedback signal for adaptive stimulation. Gamma oscillations demonstrated an emerging role in differentiating motor states, while PAC and other low-frequency oscillations remain exploratory, showing promise for integration with multimodal systems. Based on accumulated evidence, biomarkers were categorized into three tiers: Established (beta-band activity), emerging (gamma oscillations), and exploratory (PAC and others). Although DBS has shown marked improvement in symptoms, LFP-based aDBS represents a future toward personalized, precise, and adaptive treatment for PD; clinical usage of aDBS requires standardization and broader validation.
+
+## INTRODUCTION
+
+Parkinson’s disease (PD) is the second most common chronic neurodegenerative disorder after Alzheimer’s disease. Currently, about 11–12 million individuals are suffering from PD, and the number is projected to double (approximately 25 million) by 2050, which is attributed to the aging population.[139] This increase poses serious implications for both the economic and social burden associated with PD. In terms of the economy, a study from 2017 conducted in the US revealed the expenditure to be around $51.9 billion in 2017 and expected to go up to $79 billion by 2030. Apart from the monetary burden, the social burden is immense among these individuals. Patients with PD generally experience a reduced quality of life, which further deteriorates with age and as the disease progresses.[168]
+
+Pathologically, PD is characterized by progressive loss of dopaminergic neurons in the substantia nigra pars compacta, which leads to striatal dopamine deficiency and subsequent interruption of the basal ganglia circuitry, resulting in the hallmark motor symptoms: Tremors, bradykinesia, rigidity, gait disturbances, and postural instability. In addition, based on the extra nigral areas involved, there are several non-motor symptoms, including autonomic and sleep-related disorders and sensory disorders.
+
+Although the first-line treatment for most PD patients is levodopa, it has been linked to adverse effects such as the wearing-off phenomenon and levodopa-induced dyskinesia in the long term.[81,102] As the disease progresses, 10–20% of PD patients may develop pharmacological resistance, which further compromises their quality of life as symptomatic management becomes more challenging.
+
+In 1987, Benabid et al.[10] decided to explore how deep brain stimulation (DBS) helps in the management of pharmacologically resistant PD. Conventional DBS, which continuously sends signals at the same settings, involves placing electrodes in deep brain areas such as the subthalamic nucleus (STN), globus pallidus internus (GPi), or ventral intermediate nucleus (VIM). An extension wire connects the electrodes in the brain to a battery-powered pulse generator implanted under the skin of the chest below the clavicle. Electro stimulations applied to these brain regions reduce tremors, rigidity, and dyskinesias.[62] Despite its advantages, this method has the drawback of being unable to adapt stimulation in real time to fluctuations in symptoms, leading to periods of suboptimal control, increased side effects, greater battery consumption, and limited personalization due to the absence of feedback-based adjustments. In contrast, emerging adaptive DBS (aDBS) addresses some of these issues by offering a more personalized approach that adjusts stimulation and parameters based on symptom evaluation using feedback variables [Figure 1].[14]
+
+[fig F1] Conventional and adaptive deep brain stimulation (DBS): Mechanisms and outcomes. LFP: Local field potential; VS: Versus.
+
+An aDBS system revolves around a closed-loop model with three functional modules: a sensing module to detect reliable feedback variables, a control module to analyze the neural biomarker and update stimulation parameters, and a stimulation module to deliver this adjusted output to the targeted brain regions.[58]
+
+With increasing research into LFP-based aDBS, there remain many variations when it comes to biomarkers (beta, phase–amplitude coupling [PAC], gamma, etc.), recording conditions (ON/OFF meds, DBS), outcomes (motor vs. non-motor), and methodologies. Such heterogeneity has led to the limited integration of findings from physiological studies into clinical applications. Given these variations, a scoping review would help to systematically map the existing evidence and identify key gaps in the field.
+
+This scoping review aims to map the LFP biomarkers already explored for aDBS, as well as potential ones for future exploration in PD. In addition, also identifying and categorize these biomarkers as well-established or emerging/exploratory signals based on the level of evidence. Moreover, examine their physiological basis, clinical implications, and potential roles in aDBS systems, simultaneously identifying methodological limitations in the existing literature and highlighting the current gaps and scope.
+
+### Understanding local field potentials (LFPs)
+
+LFPs refer to cumulative extracellular discharges, primarily produced by synaptic transmembrane currents.[18,19] This electrophysiological activity can be recorded, for instance, by DBS electrodes when placed near a cluster of nerve cells.[41]
+
+In contrast to the electrocorticography (ECoG) and electroencephalography (EEG), which focus on the cortical spiking neural signals,[121] LFPs offer a clear perspective on the collective basal ganglia dynamics.[17]
+
+Typically, these low-frequency oscillations serve as investigative biomarkers for aDBS.[151] In PD, a distinctive pattern of exaggerated beta-band activity (13–30 Hz) is recorded from STN and is associated with bradykinesia and stiffness.[79]
+
+Hence, LFPs are essential for revealing the neural mechanisms behind PD and are key in refining deep DBS treatments.[20] These signals detect abnormal brain wave patterns that closely correlate with PD motor symptoms, serving as indicators of the disease.[8] Recent studies also suggest LFPs may be linked to non-motor issues such as sleep problems and psychiatric symptoms, expanding their clinical use.[8] aDBS uses LFPs to fine-tune stimulation in real time, enhancing therapy and tracking medication effects.[3]
+
+In PD, two main methods record LFPs within the STN: Intraoperatively through microelectrodes or DBS macroelectrodes and chronically using sensing-enabled implantable pulse generators, like the Medtronic Percept PC.[138] The Percept PC records bipolar LFPs from the STN within defined time frames and frequencies, conducting real-time fast Fourier transform (FFT) analysis.[125] These captured LFP segments, frequently comprising beta-band events, undergo offline processing using further filtering and Welch FFT to measure power spectra and transient beta bursts.[33,125] Biomarkers, such as elevated beta power, can inform DBS contact selection and enable adaptive stimulation.
+
+Table 1 summarizes established LFPs biomarkers currently incorporated into aDBS algorithms, while Table 2 highlights emerging and exploratory signals with potential translational relevance.
+
+[table-wrap T1] Established local-field-potential biomarkers for adaptive DBS in Parkinson’s disease.
+
+[table-wrap T2] Emerging local-field-potential biomarkers for adaptive DBS in Parkinson’s disease.
+
+### Measurement techniques in context
+
+Among various recording devices of LFPs, Medtronic Percept PC concurrently triggers neural impulses, while registering them for prolonged periods.[56,148] Alternatively, ECoG relies on superficial electrodes to acquire brief cortical transmissions during intraoperative mapping of brain functions.[24]
+
+Notably, Percept PC monitors real-time pathological neural oscillations, such as beta-band power, and guides aDBS, resulting in therapy optimization based on these indicators.[48] Likewise, ECoG provides instant high-resolution LFPs, but it cannot be applied chronically in terms of PD management.[99] Both tools are effective in tracking LFPs; however, they are invasive methods with limited bandwidth and spatial coverage.[72,116]
+
+Microelectrode recording (MER) is commonly employed during DBS surgeries for PD to improve anatomical accuracy. It detects both single and multiple neuronal activities, enabling identification of unique electrophysiological patterns in areas such as the STN or GPi.[46,94] This method facilitates real-time functional mapping, which aids precise electrode positioning and reduces adverse effects.[93] Combined with imaging techniques, MER boosts the accuracy of the procedure and enhances clinical results in patients with severe motor symptoms.[114] In preclinical Parkinson’s models, LFPs are recorded from the basal ganglia using implanted electrodes.[16] Common models include 6-hydroxydopamine rats and 1-methyl-4-phenyl-1,2,3,4-tetrahydropyridine-treated monkeys, which replicate Parkinsonian motor and neural features.[127] Chronic implants such as microwire arrays or silicon probes target regions such as the striatum or STN.[104] Recordings are mostly tethered, though wireless systems are emerging. Benefits include precision and stability; limitations involve invasiveness, mobility constraints and interspecies variability.
+
+### Main neuroanatomical sites for LFP analysis
+
+Several brain regions have been investigated as potential sources of LFP activity in PD, with the STN being the most extensively studied.[84] Indeed, the STN generates characteristic beta-band oscillatory bursts, playing a pivotal role in the distinct development of Parkinsonian motor deficits.[42,157] Since the severity of symptoms, such as rigidity and dyskinesia, is directly proportional to the increased frequency of beta oscillations,[78] both aDBS and dopaminergic drug administration have been observed to significantly reduce it.[43,105] Hence, the instantaneous and interactive detection of this pathological hyperactivity in the STN has been demonstrated to be functionally relevant for more patient-tailored stimulations and more predictable clinical outcomes.[151]
+
+In addition to neural signal variation, LFPs recorded in the STN have been found to exhibit a specific spatial configuration, which in turn reflects the phenotypical manifestations of PD, particularly the postural instability and gait difficulty (PIGD) and tremor-dominant (TD) subtypes.[147] This means that functionally separated subregions of the STN manifest unique LFP activity. Specifically, in patients with the TD subtype, slow high-frequency oscillations (HFOs) (200–260 Hz) have been recognized within the superior STN subregion, whereas in patients with the PIGD subtype, fast HFOs (260–450 Hz) are predominant in the inferior subregion of the STN.[147]
+
+Another site that has been concurrently but less extensively examined as a possible target for DBS is the GPi, owing to its aberrant beta and gamma frequencies, linked with motor dysfunctions.[35,42] Although comparative reviews have established the presence of abnormal beta power in both the GPi and STN in PD, this raises concerns regarding the specificity of this promising biomarker.[57]
+
+In experimental studies, tracking of LFPs in the motor cortex of preclinical models has shown atypical PAC between gamma and beta oscillatory patterns, especially in advanced PD.[34] Thus, PAC, a phenomenon explained further in the next section, also indicates cortical involvement in the disease pathophysiology, underscoring this brain region as an emerging site of interest and expanding the breadth of the implicated neuronal network.[52]
+
+Besides, altered thalamic LFP traces, including band oscillatory activity in the range 4–6 Hz, have been notably documented in the VIM of patients with the TD subtype of PD.[40,52] However, the available body of data for this site remains limited, prompting further investigation while emphasizing translational importance.[133]
+
+Collectively, comprehensive recording, analysis and integration of the complementary LFP dynamics from multiple regions may be essential for improving the efficacy and specificity of aDBS algorithms.[65,91] This approach could reshape the rationale for more precise electrode placement, contributing to the advancement of personalized neuromodulation intervention.[107,157]
+
+### LFP relevance in PD pathophysiology
+
+Current research efforts predominantly focus on LFPs due to their potential diagnostic and therapeutic value in the management of PD.[7,170] Since unique electrophysiological activities appear to characterize dysfunctional neural pathways and the pathological motor states underlying PD, LFP-led aDBS has been reported to successfully modulate exaggerated oscillatory activity.[77] Notably, in patients refractory to pharmacotherapy, LFPs support a more evidence-based and precision-guided treatment approach, as they serve both as biomarkers and modulatory targets for real-time adjusted electrode stimulation.[4,97]
+
+The combined delivery of aDBS, aided by LFP inputs, and dopaminergic medications such as levodopa to dopamine-depleted circuits within the basal ganglia has been implicated in a marked reduction in beta-band bursts, leading to rapid motor recovery.[14,62,87,120] As PD progresses, chronic recordings of objective neurophysiological signals, captured by LFPs, allow for more refined symptom monitoring and ongoing assessment of therapeutic response.[20,97]
+
+Moreover, the sensitivity of LFPs to beta-band flare-ups makes them suitable, if not exclusive, feedback carriers in PD, thereby enhancing treatment effectiveness while minimizing the burden of side effects.[14,167] In closed-loop neuromodulation, the temporal and spatial variability of LFPs, correlated with pathological beta oscillations, enables patient selection, individualized DBS planning and clinical prognosis.[66,102,117]
+
+Beyond motor state fluctuations, recent evidence has associated measurements of LFPs with non-motor findings, including cognitive impairment and sleep disturbances, thus broadening their applicability in understanding the pathophysiology of PD.[9,55]
+
+These practical features remarkably leverage the strategic utility of LFP-based aDBS algorithms in transforming PD management.[125] Clinical insights and analytical studies suggest that real-time, LFP-informed aDBS produces better outcomes than traditional, constant stimulation, resulting in patients’ enhanced quality of life.[11]
+
+Indeed, multiregional and dynamic registration of these signals is a critical step in improving symptom control systems and restoring motor functions through aDBS.[7] As such, these promising biomarkers may represent a bridge toward a data-driven continuum of care in PD, replacing conventional open-loop neuromodulation interventions.[3]
+
+## METHODOLOGY
+
+A scoping review was conducted in adherence to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) extension for Scoping Reviews checklist,[154] along with a predefined methodology before study initiation. This review evaluates studies examining LFP biomarkers in relation to aDBS for PD.
+
+### Search strategy
+
+Two primary electronic databases, PubMed and Scopus, were examined from 2005 to April 2026. The keywords used in the search included “Local field potential (LFP),” “Deep brain stimulation (DBS),” “Parkinson’s disease,” “Biomarker,” and “Adaptive deep brain stimulation (aDBS).”
+
+### Search string
+
+Pubmed-(“Local field potential” [ti] or “LFP” [ti] or “Biomarker” [ti] or “oscillation*” [ti] or “beta” [ti] or “alpha” [ti] or “gamma” [ti] or “theta” [ti] or “phase amplitude coupling” [ti] or “PAC” [ti]) and (“Deep brain stimulation” [ti] or “DBS” [ti] or “aDBS” [ti] or “Adaptive deep brain stimulation” [ti] or “close*-loop*” [ti]) and (“PD” [ti] or “Parkinson disease” [MeSH] or “Parkinson*” [ti] or “Parkinsonian” [ti]) not (“review” or “systematic*” or “Meta*”).
+
+### Study selection
+
+Rayyan software was used to carry out the screening and selection of articles for inclusion in this review.[111] Two independent reviewers conducted a screening of titles and abstracts for all the retrieved studies. A third reviewer handled the final screen and resolved any disputes regarding eligibility. The reviewers applied strict inclusion and exclusion criteria.
+
+### Eligibility criteria
+
+#### Inclusion criteria
+
+Studies were included if they (1) focused on PD patients undergoing DBS or aDBS; (2) focused on biomarkers such as alpha, beta, gamma, theta, PAC, and oscillatory activity; and (3) were written in English and with full text published in peer-reviewed journals.
+
+#### Exclusion criteria
+
+Studies were excluded if they: (1) were case reports/series, conference abstracts, reviews, editorials, or reviews lacking original data; (2) did not evaluate LFP-based biomarkers in the context of DBS or aDBS in PD; (3) focused on nonhuman models such as animals or in silico.
+
+### Data extraction and synthesis
+
+Data extraction was conducted independently by the authors using a standardized template. The studies were classified based on their frequency and type of LFP biomarker investigation. Data were synthesized narratively, highlighting trends, methodological variations, and implications for aDBS systems in PD.
+
+## RESULTS
+
+### Study selection
+
+A total of 764 papers were found and uploaded to the Rayyan software for screening (PubMed [n = 387], Scopus [n = 377]) [Figure 2].[60] After 202 duplicates were found and eliminated, 562 publications were reviewed for titles and abstracts, and 134 articles were sought for full-text screening, of which 73 studies were ultimately chosen [Supplementary Table 1].
+
+[fig F2] Preferred Reporting Items for Systematic Reviews and Meta-Analyses flow diagram of study selection process.
+
+### Study characteristics
+
+Decades of research have been carried out to identify reliable biomarkers across the globe. Although the research design varies, the locations from which the LFPs are recorded and how the effectiveness is measured are both ON and OFF the medication/stimulation; the studies assess various endpoints, which provides an opportunity to better understand whether a particular LFP correlates with a specific symptom of PD compared to others. Several studies examine associations between LFP and severity of motor symptoms, treatment responsiveness, movement-related dynamics and network-level synchronization. Supplementary Table 1 presents the characteristics of the selected studies.
+
+### Established local-field-potential biomarkers for aDBS in PD
+
+#### Beta biomarkers
+
+##### Freezing of gait (FOG)
+
+Beta activity in STN and GPi has been suggested as a well-established LFP marker in PD patients. These oscillations are segregated by spectral analysis into lower beta (±13–20Hz),[47,48] higher beta (±21–35Hz),[5,97,142] beta burst (≥200 ms),[100] and aperiodic activity utilizing a frequency-domain representation by Fourier/Wavelet Transform.[6,51,165] Periodic and aperiodic beta power demonstrates low-moderate mixed association to gait performance in people with PD, and is inconsistent with FOG patients.[6,101,137,149] For instance, people without gait hesitations had reduced beta activity during walking without medication; meanwhile, those with FOG had a nonsignificant increase in lower beta power during walking.[137] Syrkin-Nikolau et al., noted that complexity in walking patterns and overall gait entropy (analyses regularity and complexity of gait with time) were inversely proportional to beta power when standing, walking forward, or doing tasks.[144] Recently, a cohort of 7 PD patients found beta burst-driven aDBS to be safe and tolerable compared to continuous DBS (cDBS).[168] Indicated by improved gait metrics, overall FOG, and mean peak shank angular velocity according to the harnessed stepping-in-place task, a free walking turning and barrier course.[168] Another cohort of 20 chronic patients concluded that increased bursting rate (the number of discrete beta bursts captured) and cumulative time in bursting were positively associated with severe clinical outcomes.[6] These studies convey that LFP biomarkers, such as beta bands, can relate to gait performance and its dysfunction.
+
+##### Bradykinesia, rigidity, and tremor
+
+Moreover, a pooled analysis by Van Wijk et al., suggests that 17% of the variance in severity of bradykinesia/rigidity can be explained by beta activity.[155] Reports found beta bands with larger spectral power with reduced fluctuations,[78,79,86,92,104,106,112,113,145,156,161] longer beta bursts in ongoing time series,[151,152] lower complexity of time series,[27] and larger spatial visualization correlate frequently with cardinal symptoms of PD.[119,161] Short-term preliminary data reiterate that aDBS provides immediate enhanced clinical benefits related to PD motor symptoms and reduced side effects compared to cDBS.[3,14,85,87,88,122,123,165] Long-term preliminary studies on aDBS improve outcomes of PD patients with and without medication compared to cDBS.[22,61] After a year of monitoring subthalamic recordings, the report highlighted a reduction in beta activity during sleep compared to awake hours with stabilized beta modulations over time.[22,61] A retrospective clinical trial by Swinnen et al., demonstrated that sensing-based initial programmed DBS with chronically implanted neurostimulators was effective in 15 PD patients,[143] unlike prior reports that utilized conventional monopolar review for contact selection.[70,108,130,138,146,150,167] The study found beta power was not significantly different between 8 and 15 tremor-dominant patients with a mean preoperative tremor score of 10.9 off medication, comparatively.[143]
+
+##### Smoothing window and cognitive function
+
+He et al., noted a physiological reduction in beta power before and when pursuing the voluntary action, potentially leading to reduced aDBS stimulations in PD patients, thereby compromising motor function.[63,80] The authors demonstrated that a shorter smoothing window of 200 ms from 400 ms (time interval over which the signal is averaged and the noise is filtered) improved responsiveness because of frequent short beta bursts.[63] Yet it resulted in no clinical difference when evaluating resting tremor, reaction time, movement velocity, and other bradykinesia-focused tasks.[63] This supports the narrative that only prolonged beta bursts are pathological with potential motor impairment in PD patients.[63,90,152,153] In addition, closed-loop stimulation showed comparable improvements in motor function to cDBS and did not hinder movement initiation, though there was a considerable increase in the number of resting tremors.[63] Interestingly, a retrospective cohort correlated cognitive function with aDBS in 26 PD patients.[64] Cognitively impaired patients with lower Montreal Cognitive Assessment (MoCA) scores exhibited substantial modulation of beta power compared to cognitively normal patients.[64]
+
+##### Onset timing and stun effect
+
+Onset timing of stimulus (time interval between signal above the pathological threshold and stimulation initiation) was another parameter that determined the duration of beta suppression during rest. For instance, Busch et al., reported in 12 PD patients undergoing single-threshold aDBS that the parameters included: onset time of 250, 500, or 1000 ms in relation to no smoothing, 4-value and 8-value smoothing.[21] The authors derived that combining a higher smoothing window countered the effects of higher onset time and noted the strongest beta suppression was achieved with an onset time of 250 ms and a 4-value smoothing window.[21] Modulation of these parameters influenced overall stimulation patterns of the closed-loop algorithm, resulting in lowered sensitivity,[22] causal of pronounced beta desynchronization effect during movement.[2,26,80,90,113,132] These studies corroborate that episodic beta activity modulation is imperative for managing PD symptoms and its predetermining parameters to preserve the patient’s physiologic condition.[63,90] According to De Neeling et al., a neurophysiological stun effect is often observed caused by transient symptomatic relief experienced in the absence of electrical stimulation in PD patients.[37] The stun effect persisted up to 24 days post-surgery in 32 patients along with elevated impedance.[36] The authors reiterate the importance of appropriately timing aDBS activation not earlier than three and a ½ weeks post-surgery, to avoid confounding LFP readings caused by the stun effect.[36]
+
+##### Power consumption and amplitude
+
+Furthermore, recent studies indicate an improvement in power consumption at home and clinic when using aDBS models. According to Schmidt et al., a proportionally controlled plus integrated aDBS lowered the average power consumption in 6 PD patients compared to dual target cDBS, while alleviating tremors/dyskinesia.[126,160] Beta band with the largest amplitude was observed on the segmented middle contacts in STN, perhaps due to its smaller footprint compared to GPi,[143] and the amplitude of applied current is a major contributing factor toward momentary improvement of single threshold stimulation pattern in patients with PD.[43,48] Another study reiterated that beta power influenced phase-dependent modulation of amplitude and finger-tapping velocity in 4 PD patients.[59] In addition, STN patients frequently visited for stimulation contact changes during the DBS optimization phase and experienced milder fluctuations in amplitude compared to GPi.[166] In addition, there are some limitations to LFP-guided closed-loop DBS. Such retrospective studies lack control groups, thereby potentially limiting generalization,[143] especially preliminary trials with relatively small sample size.[20,63,126] Studies reiterated that a combined LFP modality maximized the effectiveness of aDBS and preserved physiologic state.[63,130] These promising signs can lead to long-term improvement using aDBS, along with plausible neuronal activity restoration.
+
+### Gamma biomarkers
+
+Finely tuned gamma (FTG) refers to narrowband gamma oscillations that occur between 60 and 90Hz recorded in the STN and motor cortex.[31,141,164] Spontaneous FTG has been shown to appear during the OFF stimulation, ONdopaminergic medication status, and scales with dyskinesia and decreases at risk.[110,141] It also appears as DBS-entrained FTG (1:2),[31,89,96,129] which locks at half the stimulation frequency that is associated with a distinct pro-kinetic state, unlike spontaneous FTG, as demonstrated by patients who exhibited 1:2 entrainment showing faster finger tapping than those without entrainment. Alongside an increase in entrainment power with movement.[75,96]
+
+FTG increase in ON versus OFF dopaminergic state is consistent with greater pathological synchrony and reduced phase locking, correlating with dyskinesia.[31,110] However, DBS suppressed spontaneous FTG while simultaneously inducing entrainment of FTG at half the stimulation frequency.[103] This entrainment occurred at variable stimulation frequencies (100, 125, 145Hz), inducing entrainment of FTG, respectively (55, 63, 73H).[96] DBSentrained FTG can increase during voluntary movement and was accompanied by finer motor control.[31,71,86] Nonetheless, the entrainment of FTG depended on the frequency and amplitude power of stimulation.[96,129]
+
+FTG is measured through LFP recordings from implanted DBS leads in the STN and ECoG in the motor cortex.[31,110,141] Long-term recordings are made available with DBS devices (Activa PC+ S, SenSight, etc.) that allow for stimulation and sensing with a sufficient variable rate, which permits programming across an extensive frequency range (2–250Hz), and facilitates precision in recording and stimulation.[31] Entrained FTG is identified using phase-locking value to quantify the alignment of FTG to the DBS pulses, and spectral peak analysis to isolate FTG. Permitting tracking of symptom fluctuation, identification of motor state, and exploration of FTG as a real-time feedback marker for aDBS.[96] The real-time feedback mechanism of FTG can make its integration into aDBS useful for tracking motor circuit engagement during stimulation, thereby improving accuracy and precision by modulating the frequency and amplitude of the stimulation, adapting the stimulation to motor activity requirements, and reducing side effects by reducing the stimulation threshold, preventing overstimulation, and dyskinesia linked with FTG.[31,96]
+
+A few issues arise when it comes to utilizing gamma power, particularly when it comes to variation between individuals, since the peaks in power and frequency vary from one person to another; the creation of a universal biomarker becomes more difficult.[22,31,110] The limitations with separating spontaneous and DBS entrained gamma frequencies due to overlapping frequencies, and lack of validating research also pose a challenge when it comes to implementing gamma band power in aDBS.[31,110]
+
+Nonetheless, many promising solutions fill the gap for gamma power in aDBS, mainly utilizing personalized FTG entrainment as an individualized biomarker that reflects motor improvement in PD patients.[31,96] It is also imperative to include gamma-band power in future aDBS clinical trials alongside beta power to make LFP implementation into treatment more comprehensive and better understood.[31,39,96]
+
+#### Tremor and low-frequency biomarkers
+
+Tremor-band power is the oscillatory activity that occurs during tremor in the STN and GPi at 4–7Hz. These oscillations under healthy conditions appear to be subtle and not associated with any involuntary movements but are often linked with the severity and presence of resting tremor in PD. Moreover, the increase in the tremor band power occurs due to rhythmic synchronization in the basal ganglia- thalamo-cortical loop as a consequence of substantial depletion of dopaminergic neurons in patients with PD, leading to an increased vulnerability of this circuit to tremor-like oscillations.[67,140]
+
+During DBS, tremor-band power has been shown to decrease significantly, with the highest correlation located at the ventrolateral STN during effective therapy; and although levodopa also demonstrated an inhibitory capacity for tremor, it was noticeably less effective than DBS, with some patients still exhibiting mild tremors.[12,67,140]
+
+These frequencies were recorded using chronically implanted DBS leads, and validated with surface EMG or accelerometry. Their detection centrally through LFP recordings is a must, however, for aDBS implementation, and the use of novel algorithms has enabled selective stimulation using a combination of tremor-band, beta-band, and HFOs.[140] The biggest challenges faced when incorporating tremor bands are present during recording, such as artifact contamination with movement and signal overlap. In addition to challenges with individual variability. Future clinical trials are needed to investigate and establish the safety and efficacy of tremor-band-driven aDBS.
+
+Delta/theta power and theta power refer to the activity arising at 2–8Hz between the motor cortex, STN and GPi,[53] which are aligned with resting tremor, and are positively correlated with tremor severity, particularly in the OFF medication state.[140] STN and Motor Cortex theta power were found to be elevated during tremor; theta power preceded tremor at the STN, before transitioning and synchronizing to the motor cortex in PD patients.[82] These aforementioned oscillations reflect an association with abnormal synchronization, which induces dystonia. Moreover, they were also found to be elevated during FoG and dyskinesia.[110,118,140]
+
+During STN high-frequency DBS, LF power has been shown to reduce,[118] in particular during pathological synchronization. Yet some patients continued to exhibit low-frequency power post-stimulation, and sometimes this occurred despite evident improvement in motor symptoms or tremor.[118,140]
+
+Delta/theta activity is typically recorded using scalp EEG and implanted DBS leads, which are equipped with sensing capabilities that enable both chronic and intraoperative mapping of LFP from the GPi and STN.[118] These recordings are primarily used as real-time biomarkers for tremors, Fog, and gait disturbances in aDBS, and could potentially drive DBS only in pathological states, reducing possible side effects and increasing the efficiency of treatment.[140]
+
+The variability between patients during different states (walking, rest, reaching), and lack of specificity for classical tremor, combined with artifact contamination due to their vulnerability, pose a challenge that requires a prompt solution, through real-world aDBS trials that center delta/theta power detection and employment in the treatment.[140]
+
+### Emerging local-field-potential biomarkers for aDBS in Parkinson’s Disease
+
+#### Phase-Amplitude Coupling
+
+PAC is a cross-frequency neural phenomenon in which the amplitude of high-frequency activity (HFA) is modulated by the phase of low-frequency rhythm. PAC is evident in the LFP recorded from the STN and GPi when beta band activity suppresses the pro-kinetic HFOs. The recording is optimal when the lead is placed in the motor part of the STN,[15] and the PAC detected is commonly quantified by the modulation index (MI), a measure of entropy of the phase-amplitude distribution, where a higher MI indicates a stronger coupling.
+
+Beta-HFO PAC in the STN is positively correlated to the severity of motor impairment,[44,156,169] with the MI higher in the more affected STN.[15,135] Notably, walking elicits a higher dopamine-dependent PAC than standing, and poor PAC modulation – resulting in low PAC while walking – also contributes to gait complications in PD patients.[45] PAC is affected by the medication states, with a higher PAC observed in the medication-OFF state, followed by a significant decrease after levodopa administration and dopaminergic therapies.[15,45,138] This pattern is similar to the reduction in beta peaks after DBS or in the medication-ON state. It is interesting to note that asymmetry is observed in the Beta-HFO PAC in the right and left STN, independent of the motor onset side.[13] Higher PAC is recorded in the right STN during the medication-OFF state, followed by a fall in PAC in the medication-ON state. Conversely, an initially low PAC in the left STN is accompanied by a rise after medication.[13]
+
+Due to its sensitivity to dopaminergic medication and therapeutic strategies, it can be used as a reliable biomarker for aDBS, where targeting PAC may help alleviate motor symptoms.[15,45] Phase-specific stimulation of STN beta oscillations has also been shown to modulate motor performance, supporting the functional relevance of phase-dependent neural activity.[59] Furthermore, PAC reflects real-time gait changes and may help further personalize aDBS therapy.[45] In addition, PAC is seen in the STN of nearly all PD patients;[15,135] even when the beta peaks are inconclusive, therefore, PAC may aid in accurate electrode placement for aDBS.[15]
+
+A recent article notes that, although PAC shows promise as an emerging biomarker, it does not display much statistical difference as a better biomarker when compared to beta peaks.[15] In addition, PAC may either reflect pathological synchronization or serve a compensatory role in different scenarios, which might make interpretation difficult.[151]
+
+#### High-Frequency Oscillations
+
+HFOs are fast rhythms ranging from 200 to 400 Hz, first reported in the STN of PD patients in the medicationON state,[50] while their presence in the medicationOFF state was confirmed.[158] HFOs are negatively correlated with akinesia and rigidity, and increase in the STN during voluntary movement, indicating a prokinetic role.[50,54,68,113,115,144] Although HFOs are detected in the GPi, where they negatively correlate with bradykinesia and rigidity, movement-related changes in HFOs are not observed.[73]
+
+STN HFOs show two distinct peaks: A low peak at 200– 300 Hz and a high peak at 300–400 Hz.[66,113] These are subject to modulation by levodopa and other dopaminergic therapies. Low HFOs decrease in activity in the medicationON state, followed by a rise in activity and amplitude of high HFOs.[50,54,113,115,169] Hence, a decrease in the low-to-high HFO ratio is observed following medication. In the GPi, no clear HFO peaks are seen, and a striking decrease in HFOs (100– 300 Hz) occurs following levodopa administration.[73]
+
+Unlike the decrease in the low-to-high HFO ratio in the STN in the medication-ON state, an increase in the ratio is observed during resting tremor in PD patients, and is reported as the best individual marker for resting tremor detection,[66] with the increase occurring despite medication states.
+
+Due to this feature, low-to-high HFO ratio in the STN is proposed as an emerging LFP biomarker in aDBS, reflecting real-time neural states of the patients such as akinetic, prokinetic states, and tremors.[73,115,163]
+
+However, the neural origins of HFOs remain uncertain, and their spatial distribution appears to be focused around the dorsolateral border of the STN, slightly anterior to the typical DBS target site.[144] Furthermore, the HFOs detected in the GPi are also observed in other pathologies such as Tourette’s syndrome.[73] HFOs are present in other brain regions apart from the STN and GPi, and must not be considered indicative of PD only.
+
+#### Hjorth parameters
+
+Hjorth parameters are time-domain features first described by Hjorth in 1970 as EEG quantifiers.[69] They consist of three measures: Activity, mobility, and complexity. Activity describes the variance of the signal and measures the overall power. Mobility indicates the mean frequency, whereas complexity measures the deviation of the signal from a sine wave, reflecting its irregularity.[69] Although Hjorth parameters are primarily used to analyze EEG, they have been used as time-domain features in several studies of PD, where they are detected in STN LFPs.[131,132,169]
+
+Hjorth measures, specifically Hjorth complexity, are shown to have a strong correlation with motor impairment and tremors when recorded from the STN.[159,169] Since Hjorth parameters are evident in PD patients when an EEG is performed, they are used as diagnostic markers for PD.[30,38,83] Hjorth features are computationally inexpensive and relatively simple, which makes them efficient for real-time applications.[83,95] Despite their advantages, when detected from EEG of PD patients, no significant differences among the parameters are observed between medication-OFF and medication-ON states.[30] While Hjorth parameters are recognized neural features of PD, their relevance as biomarkers for aDBS cannot be established as of now. To the best of our knowledge, no study has measured the changes in Hjorth parameters pre- and post-DBS, underscoring the need for further research.
+
+#### Wavelet entropy (WE)
+
+WE quantifies the degree of order or disorder in a signal and measures the transient features of a non-stationary signal. It was first introduced as a tool to analyze dynamics in EEG.[124] WE is calculated by applying the discrete wavelet transform, which decomposes a signal into wavelet coefficients. A wavelet is a small oscillation well-localized in time and frequency. Shannon entropy formula is then applied to compute WE.[124]
+
+WE is used as a tool to locate the STN, where specific WE coefficients are found to be higher in the STN compared to other brain regions,[74] which could help in proper electrode implantation.[169] Furthermore, it is proposed as a marker for resting tremor detection due to differences in WE in tremor and non-tremor states.[128]
+
+In addition, WE has a negative correlation with beta activity;[38] therefore, WE is minimal when synchronized beta bands are high, whereas low beta activity is associated with higher entropy.[128] Although detection of WE is computationally expensive,[159] it has the advantage of being parameter-free.[124] Despite its relevance in PD, to the best of our knowledge, the use of WE as a promising biomarker for aDBS is yet to be studied. Hence, further research is required.
+
+#### Cortico–STN theta phase-locking
+
+Cortico-subthalamic theta phase-locking refers to phase-synchronized brain oscillations in the theta frequency range (4–8 Hz) that occur between the STN, assessed by LFPs, and the motor cortex (M1), recorded by EEG or ECoG.
+
+Physiologically, the synchrony of theta oscillation in the cortical-basal ganglia circuit is considered a prokinetic sign. By increasing when movement is initiated, it facilitates the neural state transition from rest to voluntary action. Pathologically, this phase has also been observed during Parkinsonian resting tremor, possibly reflecting a counteracting activity to improve abnormal downstream transmission between motor structures.[28,75,163]
+
+Furthermore, in a hypodopaminergic state, hypoactive theta coupling contributes to the impairment of motor initiation and cognitive function.[109,134] However, in PD clinical manifestations, like akinesia, have been more extensively associated with upregulated beta coupling rather than the synchronization of low frequencies, such as theta or delta (1–4 Hz).[75,163] LFPs, used as biomarkers, represent an unprecedented opportunity for modulation of therapeutic modalities, including dopaminergic medications and STN DBS. Indeed, the combination of both levodopa and aDBS appears to shift cortico-subthalamic oscillatory activity from anti-kinetic beta rhythms to pro-kinetic theta rhythms.[162] In addition, stimulation through HFOs demonstrates a constant reduction in tremor-linked band power, preserving physiological theta activity, while indirectly suppressing pathological theta synchrony.[63,75,163]
+
+Interestingly, recording methods of brain activity, such as sensorimotor cortex ECoG or external EEG, bipolar STN LFPs, and surface accelerometry, incorporated into Granger causality analysis, enable coherence and time estimation of frequencies. This multimodal approach not only attenuates irregularities but also requires only standard telemetry and surface electrode references to evaluate the direction of neuronal transmission, thereby improving clinical application.[28,63,163]
+
+In terms of PD management, theta phase-locking finds an important role within the algorithms of aDBS as a useful indicator of optimal therapeutic states. Notably, when failure of β-guided aDBS occurs and severity of symptoms does not match, the utilization of theta orientation becomes advantageous in signaling the error, while activating additional stimulation, especially in TD phenotypes.[28,63,163] Despite the evidence of true cortico-STN phase metrics, in the studies conducted by Hirschmann et al. (2013) and Qasim et al. (2016),[67,121] the clinical effectiveness of this emerging biomarker must be established through its permanent integration into a precision medicine approach. Till now, the accuracy of tremor-associated band power has been attested mainly for machine-learning frameworks.[169]
+
+### Broadband gamma (HFA)
+
+Broadband HFA is a non-rhythmic high-frequency neural signal, which ranges from 60 to 500 Hz and manifests in a greater, synchronized, local neural network, especially in the STN of PD patients.[15,98] This STN multiunit activity, scaling with HFA, becomes most prominent during the phenomenon of beta-HFO PAC. However, gamma sub-bands can also reflect dynamic changes in neural states in connection with different pathological motor and cognitive requirements.[28,98,119]
+
+In the context of PD pathophysiology, HFA is momentarily suppressed during resting state but rises during voluntary movement. On the one hand, excessive or abnormal patterns of HFA tend to disrupt information processing; on the other hand, altered motor control signals cause atypical excitability of the basal ganglia, particularly in dyskinetic conditions.[28,29]
+
+In the attempt to normalize HFA spikes, the administration of dopaminergic drugs during DBS demonstrates a relevant reduction of beta-HFA PAC phenomena as well as motor restoration, according to surges of gamma or broadband HFA.[15,75,98]
+
+In contrast to cDBS, beta oscillation-guided aDBS also supports the movement-related gamma power, displaying its prokinetic function.[28,75] Data regarding spectral decomposition of bipolar STN-LFPs are collected by chronic implantation of pulse generators and analyzed through sophisticated recording models, such as Fourier and Hilbert transforms, which are commonly optimized between 60 and 500 Hz.[119,136] Remarkably, HFA-based PAC has been found to outperform beta power in providing electrode-guided contact solutions and allowing titration of minimum effective DBS amplitude for optimal therapeutic outcome.[15,119]
+
+Besides, it has been observed in aDBS algorithms that real-time HFA presence or PC disappearance can act as an error signal or patient-specific control variable. This feature permits implementation of state-dependent neural networks and hybrid stimulation models, reducing pathological beta phase-locking and its side effects by simultaneously triggering physiological gamma expression.[28,119,136] Early recording models have clearly shown the useful advantage of gamma power over beta power, especially for tremor and sleep symptom classification. Nonetheless, recent studies have highlighted the need for the incorporation of multi-band HFA biomarkers into the next-generation aDBS platforms.[1,119]
+
+#### Subthalamic evoked potentials deep-lead evoked potentials (DLEPs)
+
+Evoked resonant neural activity (ERNA) or subthalamic evoked potentials, also called DLEPs, are typically large neural responses locked to the stimulus. These time-wavelet-locked DLEPs are generated within the STN-GPi loops after each DBS pulse, representing not only the neural network resonance but also the involvement of axonal synaptic activity within the interconnected pathways of basal ganglia nuclei.[32,76,96]
+
+Moreover, these potentials are characterized by an initial frequency of ~350 Hz in an under-damped oscillatory activity, which then declines toward a steady state of ~260 Hz. This usually occurs over 70 s of stimulation, reflecting a direct measurement of neural circuit excitability as well as the target arrangement with replicable spectral characteristics.[25,96] Physiologically, DLEPs exhibit the neuronal ability in the STN to respond to the cortical inputs, especially during motor preparation and execution sequences. DLEP amplitudes also represent the index of neural network excitability, with larger responses often accompanying the beneficial 1:2 gamma activity in optimal therapeutic states.[25,32,76] From a pathological perspective, the timing and amplitude alteration of the subthalamic evoked responses is used as an indicator of a disrupted communication within the cortico-basal ganglia circuit. Indeed, their extended latencies and lower amplitudes are directly correlated to bradykinesia and akinesia severity, suggesting that dysfunction of the underlying neural transmission hinders the initiation of voluntary movement.[25,76]
+
+With the aim of modulating the characteristics of these evoked potentials, DBS and dopaminergic medications have found widespread application so far. Standardization of both therapies increases the predictive value of neural responses on voluntary motor initiation.
+
+It is noteworthy that DLEPs emerge only above specific patient thresholds (≈2 mA) and decline in case of impaired stimulation or amplitudes, expressing the clinical phenomenon of wash-in and wash-out.[32,63,76] In addition, if the stimulation ends before the appearance of persistent oscillations, it indicates the levels of neural network excitability and the contact proximity to STN. In this way, extensive DLEP responses may serve as biomarkers of dyskinesia onset, while offering real-time feedback regarding therapeutic windows and enabling accurate amplitude titration for effective management.[32,96,117]
+
+Recording methods employ continuously streamed STN LFPs together with template subtraction techniques to extract DLEPs, through a quadripolar lead set up in bipolar montage. Within this framework, pulse-dependent parameters from implanted generators are balanced against test trains at treatment settings, without the need for external sensors.[32,96] Modern methods of signal processing usually include machine learning, such as spiking Laguerre–Volterra network, which facilitates synchronous capture of STN LFPs along with movement-related events or cortical region stimulations. This technique, combined with fixed latency of DLEPs, avoids movement artifacts and favors bedside titration throughout the clinical programming sessions.[25,96]
+
+Importantly, DLEP features, such as frequency and amplitude, typically stabilize the stimulation within the 1st min, promoting rapid calibration metrics for real-time contact selection and energy optimization.[96,117] They serve as instantaneous biomarkers for implementation of aDBS, whose algorithms spontaneously elevate until the plateau of DLEP amplitude is reached. Their useful applicability secures enough target recruitment, while stopping overstimulation through prediction of spike patterns and real-time analysis of latent responses.[25,32,96]
+
+The benefits of aDBS system in modulating amplitude till ERNA enters predetermined steady-state windows include expanding the target population and reducing the charge delivery. This intervention also supports the temporal adjustment of stimulatory parameters, enhancing restoration of normal cortico-basal ganglia neural association and timing, which results in improved abilities of motor initiation.[25,96] Evidence gathered from adaptive models using evoked potentials as biomarkers has thus far shown approximately a 50% reduction of total stimulation in comparison with cDBS. Although the promising utility of DLEPs is evident, further long-term and larger clinical trials are necessary to confirm therapeutic efficacy and stability across pharmacotherapy cycles and combined ERNA-beta strategies. Undoubtedly, it is still a great opportunity for the development of next-generation aDBS systems.[63,96]
+
+### Limitation
+
+A significant limitation is that the studies included in the analysis have variations in terms of the study design, sample, and methodology. This leads to differences in recording the LFPs and reporting correlations with various outcomes, making direct comparisons unreliable. This variability hinders generalizability and makes it unfeasible to make definitive statements about LFPs and their clinical implications.
+
+The extraction of information was based on key study parameters; the omission of a risk of bias assessment in a systematic review shows that the methodologies of each study were difficult to effectively analyze. However, the scoping review aims to map current studies, not an appraisal of the quality of evidence.
+
+## CONCLUSION
+
+DBS has improved motor symptoms in patients suffering from PD; however, the conventional DBS lacks adaptability, which leads to increased side effects and inefficiency. aDBS incorporates real-time feedback control, adjusting stimulation based on neural activity, i.e., LFP. Among these, Beta-band oscillations are the most consistent biomarker associated with bradykinesia and rigidity, while gamma activity points toward movement facilitation and is linked to dyskinesia. Other biomarkers, including tremor-related low-frequency bands, PAC and HFOs, further help in symptom detection and adaptive response.
+
+aDBS guided by these biomarkers has shown better motor control, fewer side effects, and lower energy use when compared to conventional DBS. However, a few challenges that exist in aDBS are individual variability, lack of standardized thresholds, technical limitations, and small-scale studies.
+
+Future progress requires standardized protocols for biomarker acquisition and interpretation, along with large multicentral trials to confirm safety and long-term efficacy. Ultimately, integration of multiple biomarkers with behavioral and cortical feedback could help in establishing a fully adaptive, closed-loop neuromodulation system. In conclusion, LFP-based aDBS represents a future toward personalized, precise, and adaptive treatment for PD, but clinical usage of aDBS requires standardization and broader validation.

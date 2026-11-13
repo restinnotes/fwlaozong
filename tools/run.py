@@ -549,7 +549,11 @@ def export_appendix(c, args):
     used = [x for x in dict.fromkeys(used) if x in ev]
     pids = list(dict.fromkeys(ev[x]["pid"] for x in used))
     papers = {r["pid"]: r for r in c.execute(f"SELECT * FROM papers WHERE pid IN ({','.join('?' * len(pids))})", pids)} if pids else {}
-    app = {"references": [{"ref": p, "pmid": papers[p]["pmid"] or "", "doi": papers[p]["doi"] or "", "title": papers[p]["title"], "year": papers[p]["year"]} for p in pids if p in papers],
+    # 11-13 S3c：版本关联只进了综合输入，附录没标，评委看到的仍是重复。附录每篇带发表状态和 version_of
+    app = {"references": [{"ref": p, "pmid": papers[p]["pmid"] or "", "doi": papers[p]["doi"] or "", "title": papers[p]["title"], "year": papers[p]["year"],
+                           **({"version_of": papers[p]["version_of"], "note": f"同一研究的预印本版本，正式版 {papers[p]['version_of']}，不计为独立研究"} if papers[p]["version_of"] else {}),
+                           **({"publication_status": papers[p]["publication_status"]} if papers[p]["publication_status"] else {})}
+                          for p in pids if p in papers],
            "evidence": [{"eid": x, "ref": ev[x]["pid"], **{k: ev[x][k] for k in ("design", "population", "n", "condition", "measure", "finding", "limitations", "quote", "basis")}} for x in used],
            "claims": syn["claims"], "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}
     wr(OUT / args.tag / "appendix.json", app)

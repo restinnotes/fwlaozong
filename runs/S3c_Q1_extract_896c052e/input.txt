@@ -1,0 +1,250 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:40760816
+题目: DBS-STN&amp;SNr combined stimulation versus DBS-STN monotarget stimulation for Parkinson's disease freezing: A comparative efficacy study.
+年份: 2025
+全文：
+# DBS-STN&SNr combined stimulation versus DBS-STN monotarget stimulation for Parkinson's disease freezing: A comparative efficacy study
+
+## Abstract
+Freezing of gait (FOG) is a common and disabling symptom in patients with Parkinson's disease (PD), significantly impairing motor function and quality of life. While traditional deep brain stimulation (DBS) of the subthalamic nucleus (STN) provides some benefits, its efficacy in alleviating FOG remains limited. Combined stimulation of the STN and the substantia nigra pars reticulata (SNr) has recently emerged as a potentially superior approach. To compare the efficacy of STN-only stimulation and combined STN + SNr stimulation in improving FOG symptoms and quality of life in patients with PD. This multicenter, prospective, randomized, crossover study was conducted between May 2020 and May 2024 and enrolled patients with PD and significant FOG. All participants received bilateral DBS electrode implantation. Each subject sequentially underwent both STN-only and combined STN + SNr stimulation conditions according to a randomized crossover schedule, with each stimulation period lasting for six months. Outcome assessments, including the Freezing of Gait Questionnaire (FOG-Q) and the Parkinson's Disease Questionnaire Summary Index (PDQ-SI), were conducted at baseline, 6, 12, and 18 months. Data were analyzed using mixed-model repeated-measures analysis of variance, followed by post hoc Bonferroni-adjusted pairwise comparisons to account for the crossover design. Compared to STN-only stimulation, combined STN + SNr stimulation resulted in significantly greater improvement in FOG-Q scores and PDQ-SI scores. The benefits were observed at each assessment following the switch to combined stimulation. Combined STN and SNr stimulation was more effective than STN-only stimulation in alleviating FOG symptoms and improving quality of life in patients with PD. This dual-target DBS approach may represent a promising therapeutic strategy for managing refractory FOG in PD.
+
+## Introduction
+
+Parkinson's disease (PD) is a prevalent neurodegenerative disorder characterized by bradykinesia, tremor, rigidity, and various gait disturbances, among which freezing of gait (FOG) is particularly disabling.1,2 FOG is defined as a sudden, brief inability to initiate or maintain forward movement of the feet, often occurring during gait initiation, turning, or when navigating narrow spaces.
+3
+ This symptom significantly increases the risk of falls and leads to substantial deterioration in quality of life for affected individuals.4,5
+
+Although pharmacological therapy remains the mainstay of PD management, its efficacy in treating FOG is often limited, especially in advanced disease stages where patients may become resistant to dopaminergic medications.5–7 Deep brain stimulation (DBS) targeting the subthalamic nucleus (STN) is an established surgical intervention that can substantially improve tremor, rigidity, and bradykinesia by modulating abnormal basal ganglia circuitry.7,8 However, the impact of conventional STN-DBS on FOG is inconsistent, and a significant proportion of patients continue to experience FOG despite optimal stimulation.6,9
+
+Recent research has explored the potential of dual-target DBS strategies, particularly the combined stimulation of the STN and the substantia nigra pars reticulata (SNr), to address refractory FOG.
+10
+ The SNr, a major output nucleus of the basal ganglia, plays a critical role in gait regulation and locomotor control.
+11
+ Dysfunctional SNr output has been implicated in the pathophysiology of FOG, as excessive inhibitory output from the SNr to brainstem locomotor centers may contribute to gait freezing.
+12
+ It is hypothesized that concurrent stimulation of both STN and SNr may more effectively restore normal gait patterns by modulating both the input and output nodes of the basal ganglia-thalamo-cortical circuits.
+13
+
+Preliminary studies and small clinical series have suggested that dual-target DBS may provide greater improvement in FOG than conventional STN stimulation alone, though robust comparative data remain limited. Most existing research has focused on general motor outcomes or single-target stimulation, with few large-scale, systematic studies specifically evaluating the benefits of dual-target approaches for FOG. Thus, further investigation is needed to clarify the therapeutic value of combined STN and SNr stimulation in this challenging population.
+
+The primary aim of this multicenter, prospective, randomized, crossover study is to compare the efficacy of combined STN and SNr stimulation versus conventional STN-only stimulation in alleviating FOG in patients with PD. Secondary objectives include evaluating the effects of these approaches on overall motor function, quality of life (QoL), and safety profiles. We hypothesize that dual-target stimulation will result in superior improvement in FOG and QoL compared to STN-only stimulation. By systematically evaluating these two approaches, this study seeks to provide evidence-based guidance for optimizing DBS strategies in PD patients with refractory FOG.
+
+FOG remains a major unmet need in PD management. As an emerging strategy, combined DBS targeting the STN and SNr may offer a promising avenue for patients unresponsive to conventional treatment. The findings of this study may contribute to refining DBS protocols and improving clinical outcomes for individuals with PD.
+
+## Methods
+
+### Clinical data
+
+This multicenter, prospective, randomized, crossover study included 24 patients diagnosed with Parkinson's disease (PD) and experiencing freezing of gait (FOG), who underwent DBS targeting the subthalamic nucleus (STN) and the SNr at Guangyuan Central Hospital, Dazhou Central Hospital, Guang'an People's Hospital, and Yibin First People's Hospital between May 2020 and May 2024. Detailed demographic and clinical characteristics of the participants are presented in Table 1.
+
+[table-wrap table1-1877718X251359241] Clinical characteristics and DBS treatment-related data.
+
+#### Inclusion criteria
+
+(1) Diagnosis of Parkinson's disease according to the Movement Disorder Society Clinical Diagnostic Criteria; (2) Presence of significant FOG, defined as a Freezing of Gait Questionnaire (FOG-Q) score ≥10, with patients exhibiting off FOG, on FOG, or on-off FOG phenotypes; (3) Age 40–80 years and disease duration ≥5 years; (4) Clear surgical indication for DBS therapy, defined as disabling motor fluctuations, dyskinesias, or medication-refractory motor symptoms, and a positive response to levodopa challenge (>30% improvement in UPDRS-III score).
+
+#### Exclusion criteria
+
+(1) Presence of other severe neurological or psychiatric disorders, including: Cognitive impairment, defined as a Mini-Mental State Examination score <24;Major depressive disorder, defined as a diagnosis by Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) criteria. or a Hamilton Depression Rating Scale score >17; (2) Inability to tolerate surgery or high risk for postoperative complications; (3) Medical or neurological conditions other than PD that significantly interfere with gait; (4) Severe systemic diseases (e.g., cardiac, pulmonary, or hepatic dysfunction).
+
+### Study protocol
+
+All enrolled patients underwent bilateral implantation of DBS electrodes targeting the STN, with electrode extension to the SNr. Intraoperative microelectrode recordings were used to validate target coordinates and ensure electrode coverage of both STN and SNr regions at different depths. Postoperative imaging confirmed accurate electrode placement. Electrode impedance and stimulation testing were performed to verify device functionality. All procedures were conducted by an experienced neurosurgical team following standardized protocols.
+
+Detailed individual stimulation parameters and clinical outcomes for each participant in both intervention periods are provided in Table 2. This includes electrode contact configurations, voltage, frequency, pulse width, and corresponding changes in clinical scales.
+
+[table-wrap table2-1877718X251359241] Treatment effect data for Group A (maintaining the original target) and Group B (initiating dual-target stimulation).
+
+#### Randomization and crossover design
+
+At six months postoperatively, all patients were randomly assigned (1:1) to one of two groups by an independent third party using a computer-generated randomization table.
+Group A: Received single-target STN stimulation.Group B: Received dual-target STN + SNr stimulation.Randomization details were blinded to both patients and evaluators.
+
+At 12 months, the stimulation protocols were crossed over:
+Group A switched to dual-target STN + SNr stimulation.Group B switched to single-target STN stimulation.
+
+All patients were evaluated at baseline (post-surgery), 6 months, 12 months, and 18 months.
+
+### Outcome measures
+
+Primary outcomes:
+Severity of FOG, assessed by the FOG-Q score.Quality of life, evaluated by the Parkinson's Disease Questionnaire-39 (PDQ-39) Summary Index.
+
+Secondary outcomes:
+Motor symptoms, assessed by the Unified Parkinson's Disease Rating Scale Part III (UPDRS-III).Adverse events related to DBS.
+
+All assessments were performed in the medication-off state by trained, blinded evaluators following standardized protocols. Only validated clinical scales were used; objective measurements with wearable devices were not employed in this study. Future studies may integrate wearable technology for additional quantitative assessment.
+
+In addition to individual-level data, group-level summaries of stimulation parameters and associated clinical scores are shown in Table 3. This table highlights mean voltage, frequency, and pulse width settings across the two groups, as well as their average changes in FOG-Q, PDQ-39 SI, and UPDRS-III scores at each time point.
+
+[table-wrap table3-1877718X251359241] Stimulation parameters and clinical scores for Group A (dual-target activation) and Group B (single-target DBS).
+
+### Statistical analysis
+
+All statistical analyses were conducted using SPSS 27.0 (IBM Corp., Armonk, NY) and MATLAB R2024b (MathWorks Inc., Natick, MA). Continuous variables were expressed as mean ± standard deviation (SD) or median (interquartile range, IQR) based on data distribution. Between-group comparisons were performed using independent samples t-tests or Mann–Whitney U tests, while within-group comparisons across time points were assessed using paired t-tests or Wilcoxon signed-rank tests as appropriate.
+
+Repeated-measures analysis of variance was used to evaluate the interaction effect between stimulation type (STN-only vs. STN&SNr), time (baseline, 6 months, 12 months, 18 months), and their interaction on primary and secondary outcomes. Post hoc pairwise comparisons were adjusted using Bonferroni correction.
+
+To assess potential nonlinear relationships between stimulation parameters (e.g., voltage, frequency) and clinical outcomes (e.g., ΔFOG-Q score), curve fitting analysis was conducted using second-order polynomial regression models. Model fit was evaluated by the coefficient of determination (R²) and statistical significance of the regression coefficients.
+
+Categorical variables, including adverse events, were analyzed using chi-square test or Fisher's exact test when appropriate. A two-tailed p-value < 0.05 was considered statistically significant.
+
+## Results
+
+A total of 24 patients were enrolled in this study, of whom 20 (83.3%) completed all scheduled follow-up assessments. Four patients discontinued participation: two due to stimulation-related adverse events, one due to inability to complete gait assessments, and one due to poor tolerance to stimulation settings. All analyzed patients met the inclusion criteria, and there were no significant between-group differences in baseline demographic or clinical characteristics (Table 1).
+
+### Primary outcomes
+
+Repeated-measures ANOVA was performed to examine the effects of stimulation mode (STN-only vs. STN + SNr), time (6, 12, and 18 months), and their interaction on FOG-Q and PDQ-39 Summary Index (PDQ-SI) scores.
+
+For FOG-Q scores, there were significant main effects of stimulation type (F(1,19) = 16.21, p = 0.001) and time (F(2,38) = 11.92, p < 0.001), as well as a significant stimulation-by-time interaction (F(2,38) = 7.48, p = 0.002), indicating that dual-target stimulation yielded greater improvements in gait freezing across time compared with STN-only stimulation.
+
+Similarly, PDQ-SI scores showed significant main effects of stimulation type (F(1,19) = 13.07, p = 0.002) and time (F(2,38) = 9.65, p = 0.001), along with a significant interaction effect (F(2,38) = 6.13, p = 0.005), reflecting superior quality-of-life outcomes with STN + SNr stimulation.
+
+Group-level trends over time are detailed in Tables 2 and 3 and visualized in Figures 1–3. Notably, the FOG-Q score decreased more markedly under the dual-target condition, particularly at 12 and 18 months (Figures 1 and 2). Figure 3 presents boxplots demonstrating consistent reduction in FOG-Q scores across both stimulation paradigms.
+
+[fig fig1-1877718X251359241] (a) Group A maintains the original target; (b) Group B initiates dual targets, improvement in FOG-Q scores.
+
+[fig fig2-1877718X251359241] FOG Improvement Scores for Group A with Dual-Target DBS Activation and Group B with Single-Target DBS Activation.
+
+[fig fig3-1877718X251359241] Overall Improvement in FOG-Q Scores
+
+### Pairwise comparisons and effect sizes
+
+Post hoc pairwise comparisons (Bonferroni-corrected) revealed that the mean improvement in FOG-Q scores was significantly greater during STN + SNr stimulation compared to STN-only stimulation (mean difference: 4.7 points; 95% CI: 2.1–7.3; p = 0.001). For PDQ-SI, the corresponding mean difference was 3.2 points (95% CI: 1.0–5.4; p = 0.006). These results demonstrate a clinically meaningful and statistically significant benefit of dual-target stimulation over conventional single-target therapy.
+
+### Association between gait and quality-of-life outcomes
+
+Correlation analysis demonstrated a moderate positive relationship between percentage improvements in FOG-Q and PDQ-SI scores (Pearson r = 0.59, p = 0.004), suggesting a linked but not identical trajectory of improvement in motor and quality-of-life domains (Figure 4). Subgroup variability was noted, highlighting the multifactorial nature of therapeutic response in advanced PD.
+
+[fig fig4-1877718X251359241] Overall Improvement Rates of FOG-Q and PDQ-SI
+
+### Adverse events
+
+Among the 24 enrolled patients, four discontinued the study during follow-up. Two of these withdrawals were due to stimulation-induced adverse events: one patient developed persistent dysarthria refractory to reprogramming, and another experienced chronic dizziness attributed to dual-target stimulation. One patient was unable to tolerate parameter adjustments, and one withdrew due to logistical barriers in completing gait assessments.
+
+Among the 20 patients who completed the crossover protocol, no serious or irreversible adverse events occurred. The incidence of adverse events did not differ significantly between stimulation conditions (Fisher's exact test, p > 0.05), as summarized in Table 4.
+
+[table-wrap table4-1877718X251359241] Changes in freezing symptom scores before and after Intervention.
+
+## Discussion
+
+This randomized crossover trial provides compelling evidence that combined subthalamic nucleus (STN) and SNr deep brain stimulation (DBS-STN + SNr) yields superior therapeutic benefits for FOG in PD, compared to conventional STN-only stimulation. Repeated-measures analysis demonstrated significant main effects of stimulation type and time, as well as a robust stimulation-by-time interaction, with dual-target stimulation consistently resulting in greater FOG-Q and PDQ-39 Summary Index (PDQ-SI) score improvements.
+
+The observed mean reduction of 4.7 points in FOG-Q scores with STN + SNr stimulation versus STN-only (95% CI: 2.1–7.3, p = 0.001) represents not only statistical significance but also a clinically meaningful absolute gain of 25.1% in efficacy. Notably, the decrease in post-intervention score variability (SD 4.1 vs. 5.5) suggests enhanced interindividual consistency of response under dual-target stimulation. These findings contribute novel data to a field in which prior studies have reported more modest improvements (28–38%) with single-target protocols.14–17 Thus, our results provide critical validation of multi-target stimulation as a promising therapeutic innovation in advanced PD.
+
+From a mechanistic perspective, the enhanced efficacy of dual-target DBS may reflect synergistic modulation of distinct motor circuit components.16,18–20 The STN is involved in motor initiation and scaling, while the SNr regulates motor inhibition and brainstem locomotor centers.21–23 In PD, hyperactivity in the STN and disinhibition in the SNr may jointly contribute to the manifestation of FOG.24–27 Simultaneous stimulation of both targets may rebalance these pathological circuits, potentially restoring more physiologic gait dynamics.28,29 This hypothesis aligns with emerging neurophysiological and connectomic models of freezing, and underscores the need for future functional imaging and electrophysiological studies (e.g., local field potential recording, fMRI, or magnetoencephalography (MEG)) to elucidate the precise mechanisms underlying multi-target DBS efficacy.30,31
+
+Our findings are consistent with recent literature supporting multi-target neuromodulation strategies. For instance, several studies have demonstrated benefit from combined stimulation of the STN and the globus pallidus internus in addressing complex motor symptoms in PD.5,6,32 However, studies specifically evaluating DBS-STN & SNr dual-target stimulation remain scarce.
+33
+ Our work helps to fill this knowledge gap by systematically evaluating clinical outcomes using a prospective, crossover design, and by focusing on a highly disabling symptom—freezing of gait—that is often resistant to traditional DBS approaches.
+
+It should be noted, however, that not all previous studies have found significant benefit with dual-target DBS.17,22,34 Discrepancies in the literature may stem from heterogeneity in sample selection, variability in follow-up durations, and differences in stimulation parameters or electrode placement. Furthermore, inconsistent control of confounding variables such as medication status, disease subtype, and duration may contribute to divergent results. Our study partially addresses these issues through a standardized surgical protocol, blinded outcome assessments, and crossover design, but additional multicenter trials with harmonized inclusion criteria and stratified analyses are needed to further validate our findings.
+
+Despite its strengths, this study has several limitations. First, the sample size was modest, and although power analysis supported the cohort size, larger samples are needed to generalize findings and explore subgroup differences. Second, long-term outcomes beyond 18 months remain unknown. Third, we did not perform stratified analyses by PD subtype or disease duration, which may influence DBS responsiveness. Finally, although clinical scales such as the FOG-Q and PDQ-39 were used, objective gait metrics from wearable sensors or gait labs were not employed; future trials integrating such technologies may offer more granular insights.
+
+From a clinical standpoint, our results suggest that DBS-STN + SNr combined stimulation represents a viable strategy for patients with refractory FOG, offering both enhanced efficacy and improved consistency of response. This approach may be especially valuable for patients who fail to respond adequately to conventional DBS or who exhibit complex gait phenotypes. As neuromodulation technologies evolve, individualized stimulation paradigms incorporating adaptive closed-loop DBS, patient-specific connectomics, and advanced electrode design may further enhance outcomes. Future research may explore closed-loop DBS systems capable of dynamically adjusting STN and SNr stimulation based on real-time gait biomarkers, potentially enhancing therapeutic efficacy for FOG.
+
+### Conclusion
+
+This prospective, randomized crossover study demonstrates that combined STN and SNr stimulation significantly improves freezing of gait and quality of life in Parkinson's disease compared to conventional STN-only DBS. These findings provide strong clinical support for the use of dual-target neuromodulation strategies in advanced PD and offer a potential new therapeutic pathway for patients with FOG unresponsive to standard treatment. Future large-scale, multicenter trials with extended follow-up and objective gait quantification are warranted to confirm the long-term efficacy, refine patient selection criteria, and optimize stimulation protocols for broader clinical adoption.

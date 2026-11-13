@@ -1,0 +1,2152 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:30196050; PMCID:PMC6422345; DOI:10.1016/j.nbd.2018.09.004",
+    "title": "Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID30196050_Anidi2018_STN_beta_bursts_gait_DBS",
+    "cohort_id_candidate": "Stanford_ActivaPCplusS_PD_gait_cohort_possible_overlap_SyrkinNikolau2017",
+    "cohort_relation_basis": "本研究为Stanford Human Motor Control and Balance Laboratory开展的双侧STN植入Activa PC+S患者研究。作者、研究中心和设备与Syrkin-Nikolau et al. 2017（PMID:28890315; DOI:10.1016/j.nbd.2017.09.002）存在重叠。尤其是本文Limitations明确指出，先前研究中的部分受试者随时间进展而由非Freezer转变为Freezer，并引用Syrkin-Nikolau et al. 2017。提示两项研究可能存在患者队列重叠，但未提供患者级对应关系、重叠人数或完整招募时间，不能认定为完全相同队列，也不能视为独立重复验证。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID30196050_E01",
+      "design": "单中心、自由活动人类观察性电生理研究；同步记录双侧STN-LFP和步态运动学；随机顺序呈现no DBS、60 Hz和140 Hz刺激条件。",
+      "population": "12名PD患者，7名男性；Freezer 8名，Non-Freezer 4名。Freezer根据临床症状史和/或任务中出现冻结行为分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "有效神经数据患者数、总FOG事件数和试次数未报告。18指SIP任务中用于神经分析的STN记录半球数，不是18名患者或18个单独触点。各患者实际记录触点组合见Supplementary Table 1，但本次上传HTML未包含该补充文件。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer vs Non-Freezer；未报告akinetic、trembling-in-place等FOG亚型。",
+      "medication_phenotype": "unknown；未按FOG对多巴胺药物的反应进行分型。",
+      "experimental_medication_state": "Med-Off。短效药停用至少12小时，长效药停用至少24小时；缓释多巴胺受体激动剂停用72小时。",
+      "DBS_state_and_parameters": "植入后已持续接受至少21个月高频DBS。实验比较no DBS、60 Hz和140 Hz；本条为no DBS条件。刺激采用monopolar configuration，电压由临床医生确定，并在同一STN的60 Hz与140 Hz条件下保持一致。每次实验前停刺激2分钟，实验间休息至少5分钟。",
+      "task": "Stepping in Place（SIP）：先站立30秒，随后在相邻双测力台上进行100秒交替、自选步频原地踏步。本条仅分析没有冻结事件的踏步时段。",
+      "recording_location": "双侧STN sensorimotor region。通过DBS导线电极对0–2或1–3记录双极LFP；具体患者对应的电极对见未随本次上传文件提供的Supplementary Table 1。",
+      "measure": "STN movement-band beta burst duration，单位为秒。每个burst定义为LFP滤波平方信号的振幅包络超过基线的持续时间；基线为包络局部谷值中位数的2倍。",
+      "frequency_and_analysis_window": "Beta范围为13–30 Hz，但实际使用每个STN独立确定的movement band：根据beta峰及两侧1/f交叉点确定带宽。平均带宽6.84±2.08 Hz。使用零相位8阶Butterworth带通滤波。分析单位为单个burst持续时间；未报告统一的事件对齐窗口长度。",
+      "finding": "在SIP无冻结时段，Freezer的STN movement-band beta burst持续时间显著长于Non-Freezer。该差异出现在实际冻结事件之外，说明该指标与Freezer易感表型及无冻结时的步态状态相关，不能单独解释为冻结发生前的事件级神经变化。",
+      "effect_estimate": "H(1)=45.068，P<0.001。作者未报告组间均值差、置信区间或标准化效应量。",
+      "statistical_unit_and_method": "Kruskal-Wallis one-way ANOVA on ranks；Shapiro-Wilk正态性检验未通过后采用秩检验。比较Freezer与Non-Freezer的burst duration分布。具体统计单位是否为独立burst、是否处理同一患者内重复burst的聚类，未明确报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单，非正式验证工具。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "样本仅12人，Freezer与Non-Freezer人数不均衡（8比4）；作者指出设备可用数量限制了队列规模。",
+            "source_locator": "Methods—Human subjects, P6；Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类依据临床史和/或任务中表现；没有报告本研究对所有冻结事件进行视频或临床逐事件确认。",
+            "source_locator": "Methods—Human subjects, P6；Data Acquisition and Analysis, P8"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "作者报告存在ECG伪迹和刺激期间通道过载，多个STN半球未进入分析。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "统一采用Med-Off测试，但未报告对疾病不对称性、其他临床因素进行多变量调整。两组基线临床指标无显著差异不能排除残余混杂。",
+            "source_locator": "Methods, P6–P7；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "同一患者可贡献大量burst观测；组间检验比较burst分布，未明确报告患者层级聚类或混合效应模型。",
+            "source_locator": "Statistics, P14；Results, P20"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "涉及多个任务、组别和信号指标；未报告针对所有分析的统一多重比较校正策略。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "本分析不是预测模型开发或外部验证研究。",
+            "source_locator": "Discussion, P41；Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "全文未提供预注册方案或预先指定分析计划，无法判断选择性报告。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是Freezer易感表型比较，不是同一患者冻结发生前的事件级预测。SIP属于原地踏步替代任务，不等同于自然直立行走。样本量小且组间不均衡。统计分析没有明确说明burst层级重复观测的患者内聚类处理。",
+      "quote": "during SIP without FOG, burst durations were significantly longer in Freezers compared to Non-Freezers",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P19–P20",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": "Supplementary Table 1 referenced for subject-specific recording electrode pairs; supplementary DOCX not included in uploaded file."
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E02",
+      "design": "单中心、自由活动人类观察性电生理研究；同步STN-LFP和步态运动学；随机顺序、受试者盲法的DBS条件比较。",
+      "population": "12名PD患者；Freezer 8名，Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据人数和试次数未报告。20为FW任务中用于DBS效果神经分析的STN半球数，并非患者数或独立触点数；各患者具体触点组合需查Supplementary Table 1。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer vs Non-Freezer；FOG具体运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；短效药停用至少12小时，长效药停用至少24小时。",
+      "DBS_state_and_parameters": "持续高频DBS至少21个月后的患者；实验条件包括no DBS、60 Hz、140 Hz。本条为no DBS。刺激为monopolar，电压由临床医生确定并在频率间保持一致。",
+      "task": "Forward Walking（FW）：向前行走10米、转身返回，重复至总计40米。本条为无冻结的自然直立行走时段。",
+      "recording_location": "双侧STN sensorimotor region，LFP记录电极对0–2或1–3。",
+      "measure": "STN movement-band beta burst duration，单位秒；逐个burst检测，不是平均beta功率。",
+      "frequency_and_analysis_window": "患者和STN特异的movement beta band，峰值位于13–30 Hz范围；平均带宽6.84±2.08 Hz；零相位8阶Butterworth滤波。burst持续时间由包络超过2倍谷值中位数基线的连续时间确定。",
+      "finding": "FW无冻结时段，Freezer的movement-band beta burst持续时间显著长于Non-Freezer。该结果支持Freezer表型与步态期间持续性beta活动异常有关，但没有证明每次自然行走冻结事件均由该信号变化直接伴随。",
+      "effect_estimate": "H(1)=69.564，P<0.001；未报告组间均值差、置信区间或标准化效应量。",
+      "statistical_unit_and_method": "Kruskal-Wallis one-way ANOVA on ranks；组间比较burst duration分布。统计单位和患者内重复burst的聚类处理未明确说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "12人小样本，Freezer与Non-Freezer人数不均衡。",
+            "source_locator": "Methods, P6；Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Freezer标签来自病史和/或任务表现；FW事件的逐事件视频或临床复核未明确报告。",
+            "source_locator": "Methods, P6–P8；Results, P28"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "四个STN半球因刺激或ECG伪迹被排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "采用Med-Off测试，但未报告充分的患者级协变量调整。",
+            "source_locator": "Methods, P6–P7；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst为重复观测，未明确说明患者内聚类模型。",
+            "source_locator": "Statistics, P14；Results, P20"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务、组别和指标比较，未见完整多重检验控制说明。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型或进行外部验证。",
+            "source_locator": "Discussion, P41；Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划供核对。",
+            "source_locator": "Methods—Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "本条是自然直立行走中的非冻结时段和Freezer表型比较。FW中确实出现过一次冻结事件，但作者将该事件排除于神经和运动学分析，见E24。因此本结果不能被解释为自然行走冻结事件的直接神经关联。",
+      "quote": "The same result was seen during the FW task without FOG (H(1) = 69.564, P <0.001).",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": "Supplementary Table 1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E03",
+      "design": "观察性电生理研究；Freezer与Non-Freezer静息态STN-LFP比较。",
+      "population": "12名PD患者；Freezer 8名，Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "静息态比较的患者级有效STN记录数未单独报告；植入总数为24个STN DBS导线半球，但不能据此推断全部静息态信号均有效。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "Freezer vs Non-Freezer；未报告具体FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "静息态无刺激条件；研究总体采用no DBS、60 Hz和140 Hz随机刺激条件。",
+      "task": "静息状态；与SIP及FW运动状态进行比较。",
+      "recording_location": "双侧STN sensorimotor region，双极LFP。",
+      "measure": "STN beta burst duration；使用movement-band定义的频段计算静息态burst持续时间。",
+      "frequency_and_analysis_window": "13–30 Hz beta峰周围的患者/STN特异movement band；具体静息态分析窗口长度未报告。",
+      "finding": "静息状态下，Freezer与Non-Freezer之间的beta burst duration没有显著差异。作者强调组间差异在运动状态下出现，而不是静息状态下出现。",
+      "effect_estimate": "未报告具体检验统计量、P值、均值差或置信区间；仅报告无显著差异。",
+      "statistical_unit_and_method": "作者对Freezer和Non-Freezer的burst dynamics使用Kruskal-Wallis秩检验；静息态该项比较的具体统计量未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "总样本12人且组间人数不平衡。",
+            "source_locator": "Methods, P6；Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Freezer分类依赖病史和/或任务表现，未提供FOG亚型。",
+            "source_locator": "Methods, P6"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "作者报告部分STN信号受到ECG伪迹和刺激伪迹影响。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告患者级多变量调整。",
+            "source_locator": "Methods, P6；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst分布比较的患者内聚类处理未明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "静息和多个运动任务、多个信号指标并行比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析方案。",
+            "source_locator": "Methods—Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "没有报告静息态组间差异的具体效应量和P值。不能将静息态无差异解释为STN beta活动与FOG完全无关；研究测量的是burst duration，而非所有beta特征。",
+      "quote": "there was no significant difference in burst duration between Freezers and Non-Freezers during rest.",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20；Discussion，P31",
+        "page": null,
+        "figure_table": "无单独统计图表",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E04",
+      "design": "观察性电生理研究；Freezer与Non-Freezer在SIP无冻结时段的STN-LFP比较。",
+      "population": "12名PD患者；Freezer 8名，Non-Freezer 4名；SIP分析中一名无法完成任务的患者被排除。",
+      "n_enrolled": 12,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "患者级有效神经数据数、burst总数和试次数未完整报告；18为SIP神经分析使用的STN半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer vs Non-Freezer；FOG亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "本条为no DBS条件；整体实验还包括随机呈现的60 Hz和140 Hz刺激。",
+      "task": "SIP，100秒交替原地踏步；仅分析无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region；双极电极对0–2或1–3。",
+      "measure": "Relative mean beta burst power。每个burst内滤波平方LFP的平均功率，并进行相对功率归一化；不等同于平均beta频段功率。",
+      "frequency_and_analysis_window": "患者/STN特异movement band，beta峰位于13–30 Hz。Relative burst power以该患者no DBS静息态40–70 Hz范围的平均burst幅度作为归一化参考。",
+      "finding": "在SIP无冻结时段，Freezer的relative mean beta burst power高于Non-Freezer。",
+      "effect_estimate": "H(1)=212.680，P<0.001；未报告绝对功率差或置信区间。",
+      "statistical_unit_and_method": "Kruskal-Wallis one-way ANOVA on ranks；比较relative burst power分布。患者内重复burst是否聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "样本量小，Freezer与Non-Freezer组不平衡。",
+            "source_locator": "Methods, P6；Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "采用Freezer表型分组，而非本条无冻结时段的事件级冻结确认。",
+            "source_locator": "Methods, P6；Results, P20"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "四个STN半球因伪迹排除；归一化依赖40–70 Hz参考频段。",
+            "source_locator": "Methods, P11；Results, P16"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告多变量调整，组间临床差异可能残留。",
+            "source_locator": "Methods, P6；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst级重复测量的患者内聚类处理不明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时比较多个任务、频段和指标。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果与burst duration结果是不同指标，不能合并解释为同一种beta异常。作者报告两者之间仅存在很弱的相关性。此比较没有事件级FOG记录。",
+      "quote": "Freezers also had higher relative mean beta burst power than Non-Freezers while stepping without freezing",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E05",
+      "design": "观察性电生理研究；Freezer与Non-Freezer在FW无冻结时段的STN-LFP比较。",
+      "population": "12名PD患者；Freezer 8名，Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据数未报告；20为FW任务使用的STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer vs Non-Freezer；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "本条为no DBS条件。",
+      "task": "FW，40米自然直立行走，包含转身；分析无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region；双极LFP。",
+      "measure": "Relative mean STN movement-band beta burst power。",
+      "frequency_and_analysis_window": "13–30 Hz范围内的STN特异movement band；relative power归一化参考为no DBS静息态40–70 Hz平均burst幅度。",
+      "finding": "FW无冻结时段，Freezer与Non-Freezer之间的mean burst power没有显著差异。该结果与SIP任务中观察到的组间功率差异不同。",
+      "effect_estimate": "未报告统计量、P值、效应量或置信区间；仅报告无显著组间差异。",
+      "statistical_unit_and_method": "Methods指定Kruskal-Wallis秩检验用于Freezer与Non-Freezer burst dynamics比较；本项具体统计量未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "12人小样本且Freezer组与Non-Freezer组人数不平衡。",
+            "source_locator": "Methods, P6；Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Freezer是患者表型分组，本条比较不包含冻结事件本身。",
+            "source_locator": "Methods, P6；Results, P20"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN半球因伪迹排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告多变量混杂调整。",
+            "source_locator": "Methods, P6–P7；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst级重复观测的聚类处理未明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多任务、多指标比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案可核查。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者没有给出该无显著差异结果的精确P值和置信区间。不能将SIP与FW的功率结果合并为一个统一结论。",
+      "quote": "mean burst power was not different between the two groups during forward walking.",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E06",
+      "design": "同一Freezer组内的事件相关电生理比较；同步STN-LFP和SIP运动学。",
+      "population": "在SIP任务中发生冻结的Freezer患者，N=5。",
+      "n_enrolled": 12,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "作者报告参与冻结/非冻结时段比较的Freezer人数N=5，但未报告这些患者的总冻结事件数、试次数或各患者具体有效触点数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；SIP中实际检测到freezing episodes；akinetic、trembling-in-place等亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "本条为no DBS条件下的冻结与非冻结时段比较；实验另设60 Hz和140 Hz刺激条件。",
+      "task": "SIP，100秒原地交替踏步。使用测力台数据和已验证的计算机算法识别freezing episodes；比较同一Freezer在有冻结和无冻结踏步时段的神经活动。",
+      "recording_location": "双侧STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration，单位秒；逐burst测量。",
+      "frequency_and_analysis_window": "STN特异movement beta band，峰位于13–30 Hz；burst起止由包络超过2倍谷值中位数基线的交叉点确定。未报告统一的冻结前时间窗。",
+      "finding": "在5名SIP中发生冻结的Freezer患者中，冻结期间的beta burst duration显著长于同一任务中的非冻结踏步时段。这是本文最直接的事件相关STN-LFP证据，但来自原地踏步替代任务。",
+      "effect_estimate": "F(1,815)=13.114，P<0.001。未报告冻结与非冻结阶段的均值差及置信区间。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA。F检验自由度显示大量重复观测；统计模型是否对同一患者内多个burst进行层级处理未明确报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "只有5名在SIP中出现冻结且进入该分析的Freezer患者。",
+            "source_locator": "Results—P23"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "冻结事件通过测力台数据和已验证计算机算法识别，但本篇未说明视频或临床逐事件复核。",
+            "source_locator": "Methods—Data Acquisition and Analysis, P8；Results, P23"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在ECG和刺激伪迹造成的STN记录排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "虽然为同一患者内比较，但冻结与非冻结阶段也可能伴随任务状态和运动学变化，未报告充分协变量调整。",
+            "source_locator": "Results, P22–P23；Statistics, P14"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F(1,815)提示大量burst级观测；未明确报告患者层级随机效应或聚类校正。",
+            "source_locator": "Statistics, P14；Results, P23"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "持续时间和功率均在多个状态和刺激条件下比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "不是预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "SIP不是自然前行行走。作者没有报告每个冻结事件的精确持续时间、事件数量及FOG亚型。F(1,815)的统计自由度提示重复burst数据量较大，但患者内聚类方法不清楚。",
+      "quote": "burst duration was significantly longer during stepping with freezing compared to stepping when not freezing",
+      "source_locator": {
+        "section": "Results—Freezers exhibit longer burst durations during periods of FOG，P22–P23",
+        "page": null,
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E07",
+      "design": "同一Freezer组内的事件相关电生理比较。",
+      "population": "SIP任务中发生冻结的Freezer患者，N=5。",
+      "n_enrolled": 12,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "总冻结事件数、试次数及各患者具体有效触点数未报告；18为SIP神经分析STN半球数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；SIP中出现freezing episodes；具体FOG亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "本条为no DBS条件；60 Hz和140 Hz另行比较。",
+      "task": "SIP原地交替踏步；比较有冻结与无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region；双极LFP。",
+      "measure": "Relative mean beta burst power；每个burst内滤波平方LFP的平均功率，经静息态40–70 Hz参考归一化。",
+      "frequency_and_analysis_window": "STN特异movement band，13–30 Hz beta峰周围；每个burst作为功率测量单位。",
+      "finding": "与burst duration在冻结期间显著延长不同，burst power在有冻结与无冻结踏步时段之间没有显著差异。说明本文的事件相关发现主要体现在持续时间，而非同样明确地体现在burst功率。",
+      "effect_estimate": "未报告具体检验统计量、P值或置信区间；仅报告无显著差异。",
+      "statistical_unit_and_method": "Methods规定对冻结与非冻结时段的burst power采用one-way repeated-measures ANOVA；具体统计结果未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "事件分析仅包括5名发生SIP冻结的患者。",
+            "source_locator": "Results, P23"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "使用测力台算法识别冻结，但未报告视频或临床逐事件复核。",
+            "source_locator": "Methods, P8；Results, P23"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在ECG和刺激伪迹排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "冻结与非冻结时段的运动状态不同，未报告充分协变量调整。",
+            "source_locator": "Results, P22–P23"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "多个burst来自同一患者，患者内聚类处理未明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "功率与持续时间、多任务、多刺激条件同时分析。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册分析计划。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不能将burst power无显著差异解释为完全没有功率变化；论文没有给出该比较的效应量或P值。SIP属于替代任务。",
+      "quote": "there was no significant difference in burst power during stepping with compared to without freezing episodes.",
+      "source_locator": {
+        "section": "Results—Freezers exhibit longer burst durations during periods of FOG，P23",
+        "page": null,
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E08",
+      "design": "患者级双侧STN电生理与双下肢运动学相关性分析。",
+      "population": "有双侧STN数据的10名PD患者；整个队列包括8名Freezer和4名Non-Freezer，但该10人子集中的分组人数未报告。",
+      "n_enrolled": 12,
+      "n_analyzed": 10,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 10,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "明确报告10名患者有双侧STN数据；未报告该子集内Freezer人数和总冻结事件数。20为10名患者的双侧STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "包含Freezer与Non-Freezer；分析时为SIP无冻结步态；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS条件。",
+      "task": "SIP原地交替踏步，无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region。",
+      "measure": "患者级双侧STN平均movement-band beta burst duration之差，与双腿平均stride time之差之间的相关性。",
+      "frequency_and_analysis_window": "STN特异movement band；burst duration为逐burst测量后计算STN平均值。患者级分析，不是单个burst事件相关分析。",
+      "finding": "双侧STN平均burst duration之差与双腿stride time之差呈强正相关。作者据此提出步态可能受到双侧半球共同影响。",
+      "effect_estimate": "Pearson r=0.853，P=0.002。未报告置信区间。",
+      "statistical_unit_and_method": "患者级Pearson product-moment correlation；n=10。每位患者贡献双侧STN和双腿步态差值。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "仅10名患者有可用双侧STN数据，可能产生可用信号选择偏倚。",
+            "source_locator": "Results—P25"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "该比较为无冻结SIP步态，不能直接作为事件级FOG标签。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN半球因ECG和刺激伪迹排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告对疾病不对称程度、步态严重程度等因素的多变量调整。",
+            "source_locator": "Results, P24–P25；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "low",
+            "reason": "该相关性以10名患者的患者级均值差为单位，不是将所有burst作为独立患者样本。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "还进行了单侧STN与对侧腿stride time相关性分析。",
+            "source_locator": "Results, P25；Statistics, P14"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "不是预测模型。",
+            "source_locator": "Discussion, P35"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册分析计划。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "样本仅10名双侧数据完整患者；相关性不证明双侧STN不对称导致步态不对称，也没有直接证明其预测随后发生的FOG。",
+      "quote": "the difference in the mean burst duration between hemispheres (STNs) of individuals strongly correlated with the difference in stride time between their legs",
+      "source_locator": {
+        "section": "Results—Bilateral hemispheric control of alternating stepping，P24–P25",
+        "page": null,
+        "figure_table": "Figure 5",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E09",
+      "design": "患者级双侧STN-LFP与对侧下肢运动学相关性分析。",
+      "population": "10名具有双侧STN数据的PD患者。",
+      "n_enrolled": 12,
+      "n_analyzed": 10,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 10,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "该10人子集的Freezer分组构成未报告；没有报告相关系数的精确数值。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer和Non-Freezer混合；SIP无冻结步态。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS。",
+      "task": "SIP，无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region。",
+      "measure": "每侧STN平均movement-band beta burst duration与对侧腿平均stride time的相关性。",
+      "frequency_and_analysis_window": "STN特异movement band；患者级平均burst duration。",
+      "finding": "作者未发现单个STN平均burst duration与其对侧腿stride time之间的相关性。该阴性结果与双侧STN之间差值的强相关性并存。",
+      "effect_estimate": "未报告r值、P值或置信区间；仅报告无相关性。",
+      "statistical_unit_and_method": "Pearson product-moment correlation；患者级分析，n=10。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "仅包括有双侧有效STN数据的10名患者。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "比较无冻结步态，不是事件级FOG记录。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN记录因伪迹排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告多变量协变量调整。",
+            "source_locator": "Results, P24–P25"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "low",
+            "reason": "相关性基于患者级均值。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时分析双侧差值相关性和单侧STN相关性。",
+            "source_locator": "Results, P25"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Discussion, P35"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者没有报告该阴性相关性的具体统计量，因此不能判断其估计精度。该结果提示不能将双侧差值相关性简化为单侧STN对侧腿控制关系。",
+      "quote": "there was no correlation between mean burst duration of each STN and mean stride time of the contralateral leg.",
+      "source_locator": {
+        "section": "Results—Bilateral hemispheric control of alternating stepping，P25",
+        "page": null,
+        "figure_table": "Figure 5",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E10",
+      "design": "全队列STN-LFP信号指标相关性分析。",
+      "population": "12名PD患者，包含Freezer和Non-Freezer。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "作者未报告该静息态相关分析的有效患者数、burst数和具体记录半球数。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "Freezer与Non-Freezer混合；未进行事件级FOG分组。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS。",
+      "task": "静息状态。",
+      "recording_location": "STN双极LFP。",
+      "measure": "逐burst beta burst duration与burst power之间的相关性；两个指标分别计算，不合并为平均beta功率。",
+      "frequency_and_analysis_window": "Movement-band beta burst；功率采用burst内平均滤波平方信号，relative power使用静息态40–70 Hz no DBS参考归一化。",
+      "finding": "静息状态下burst duration与burst power之间仅存在很弱的相关关系。",
+      "effect_estimate": "R²=0.0625，P<0.001；作者未报告置信区间。",
+      "statistical_unit_and_method": "Pearson product-moment correlation；方法描述为比较所有患者的单个burst持续时间和功率分布。患者内burst聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "小样本患者队列。",
+            "source_locator": "Methods, P6；Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "not_assessable",
+            "reason": "该分析没有事件级FOG行为标签。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "设备伪迹和部分半球排除已在全文报告。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告患者级混杂调整。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "Pearson分析基于大量单个burst，患者内重复观测的聚类处理未明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "静息和多个运动任务分别进行相关分析。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "不是预测模型。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "R²很小但P值显著，提示统计显著不等于强相关。该分析不是FOG事件关联分析。",
+      "quote": "a very weak relationship was seen between burst duration and burst power during rest",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E11",
+      "design": "全队列STN-LFP信号指标相关性分析。",
+      "population": "12名PD患者，包含Freezer和Non-Freezer。",
+      "n_enrolled": 12,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "患者级有效神经数据人数和burst总数未报告；18为SIP神经分析使用的STN半球数。",
+      "endpoint_class": "unclear",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer与Non-Freezer混合；本相关性不是Freezer分组比较。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS。",
+      "task": "SIP原地交替踏步；全队列相关性分析。",
+      "recording_location": "STN双极LFP。",
+      "measure": "逐burst beta burst duration与relative burst power之间的相关性。",
+      "frequency_and_analysis_window": "STN特异movement band，13–30 Hz beta峰周围；逐burst计算持续时间和归一化功率。",
+      "finding": "SIP期间burst duration与burst power之间存在统计显著但很弱的相关关系。",
+      "effect_estimate": "R²=0.108，P<0.001。",
+      "statistical_unit_and_method": "Pearson product-moment correlation；burst级分析；患者内重复测量处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "小样本，SIP有一名患者被排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "not_assessable",
+            "reason": "该相关分析不使用事件级冻结标签。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN记录存在伪迹。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告患者级混杂调整。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst级相关分析未明确处理患者内重复观测。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务均进行了duration-power相关分析。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不能把R²=0.108解释为duration和power具有高度一致性；该结果支持两类指标应分别提取。",
+      "quote": "R² = 0.108, P < 0.001",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E12",
+      "design": "全队列STN-LFP信号指标相关性分析。",
+      "population": "12名PD患者，包含Freezer和Non-Freezer。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据数和burst总数未报告；20为FW神经分析使用的STN半球数。",
+      "endpoint_class": "unclear",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer与Non-Freezer混合。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS。",
+      "task": "FW自然直立行走。",
+      "recording_location": "STN双极LFP。",
+      "measure": "逐burst beta burst duration与relative burst power之间的相关性。",
+      "frequency_and_analysis_window": "STN特异movement band，beta峰位于13–30 Hz；逐burst计算。",
+      "finding": "FW期间burst duration与burst power的相关性很弱。",
+      "effect_estimate": "R²=0.006；该项未给出P值。",
+      "statistical_unit_and_method": "Pearson product-moment correlation；burst级分析；患者内重复测量处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "12名患者的小样本研究。",
+            "source_locator": "Methods, P6；Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "not_assessable",
+            "reason": "相关性分析没有使用事件级FOG标签。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在ECG和刺激伪迹排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告多变量调整。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst级相关分析的患者内聚类处理不明确。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "在多个任务分别开展相关性分析。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Statistics, P14"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "未报告P值，不能判断统计学显著性。R²仅0.006，不能把burst power与burst duration视为等价信号指标。",
+      "quote": "R²=0.006, respectively.",
+      "source_locator": {
+        "section": "Results—Freezers demonstrate longer duration beta bursts than non-freezers during 'normal' gait，P20",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E13",
+      "design": "随机顺序受试者内DBS刺激条件比较；Freezer患者SIP冻结时段的STN-LFP分析。",
+      "population": "SIP任务中出现冻结的Freezer患者；作者在事件相关分析中报告N=5。",
+      "n_enrolled": 12,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "未报告每个刺激条件下用于burst分析的患者级有效记录人数和总冻结事件数；18为整个SIP神经分析使用的STN半球数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；SIP中实际冻结事件；FOG运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "随机呈现no DBS、60 Hz、140 Hz；monopolar刺激；每个STN在60 Hz和140 Hz条件下电压保持一致。具体电压和脉宽未在正文报告。",
+      "task": "SIP原地交替踏步中的冻结时段；比较no DBS、60 Hz和140 Hz。",
+      "recording_location": "双侧STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration，单位秒。",
+      "frequency_and_analysis_window": "STN特异movement beta band；以每个冻结时段内的逐burst持续时间进行比较；没有报告固定的冻结前时间窗。",
+      "finding": "Freezer在SIP冻结期间，60 Hz和140 Hz DBS均显著缩短beta burst duration；两种刺激频率之间的缩短效果没有显著差异。",
+      "effect_estimate": "刺激条件总体效应F(2,3007)=24.27，P<0.001；60 Hz与140 Hz分别较no DBS缩短，二者之间无显著差异。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；大量burst重复观测；未明确说明患者层级随机效应或burst聚类校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "冻结事件分析仅涉及少数Freezer患者。",
+            "source_locator": "Results, P23；P29"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "SIP冻结由测力台算法识别，但未报告视频或临床逐事件复核。",
+            "source_locator": "Methods, P8；Results, P23"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "刺激期间存在通道过载及ECG伪迹，部分STN记录排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激顺序随机且受试者盲法，但作者未记录每次刺激后步态表现是否恢复基线。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F(2,3007)反映大量重复观测，患者内聚类模型未明确。",
+            "source_locator": "Statistics, P14；Results, P29"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个刺激频率、任务和神经指标同时比较。",
+            "source_locator": "Statistics, P14–P15；Results, P29–P30"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有独立预测模型验证。",
+            "source_locator": "Discussion, P41；Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "SIP是替代任务而非自然行走。刺激比较反映急性刺激效应，不等于长期临床治疗效果。作者承认刺激后步态是否恢复基线没有记录，且使用的monopolar刺激参数可能不是患者最优临床参数。",
+      "quote": "Both 60- and 140 Hz significantly shortened duration of bursts compared to no DBS",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P29",
+        "page": null,
+        "figure_table": "Figure 6；Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E14",
+      "design": "随机顺序受试者内DBS条件比较；Freezer患者SIP非冻结时段的STN-LFP分析。",
+      "population": "Freezer患者；8名Freezer中有1名因整个SIP任务持续冻结而被排除于该任务的神经和运动学分析。",
+      "n_enrolled": 12,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "正文没有单独报告此项分析的患者级有效神经数据数；7为8名Freezer减去1名SIP任务排除患者的推算分析人数，作者未明确给出该亚组最终人数，故仅作为候选分析分母，需后续审计。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer；本条分析无冻结踏步阶段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "随机no DBS、60 Hz、140 Hz；monopolar刺激，电压在两种刺激频率间保持一致。",
+      "task": "SIP原地踏步；仅比较Freezer无冻结时段的刺激条件。",
+      "recording_location": "STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration。",
+      "frequency_and_analysis_window": "STN特异movement beta band，逐burst持续时间；未报告统一固定窗口。",
+      "finding": "Freezer在SIP无冻结时段，60 Hz和140 Hz DBS均缩短较长的beta burst duration，且两种刺激频率的效果无显著差异。",
+      "effect_estimate": "F(2,2803)=22.247，P<0.001；两种刺激均较no DBS缩短；两频率之间无显著差异。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；burst级重复观测；患者内聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "小样本Freezer组且SIP有一名持续冻结患者被排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Freezer分组依赖病史和/或任务冻结；本条为无冻结阶段。",
+            "source_locator": "Methods, P6；Results, P29"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在刺激伪迹和ECG伪迹排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激条件随机，但步态基线恢复未记录。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F(2,2803)提示大量burst重复观测，未明确聚类校正。",
+            "source_locator": "Statistics, P14；Results, P29"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个频率、任务和信号指标比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是Freezer表型患者的无冻结踏步阶段，不是冻结事件发生率或冻结前预测证据。7名分析人数是根据明确排除信息推算，原文未直接给出该亚组最终N。",
+      "quote": "Both 60- and 140 Hz significantly shortened duration of bursts compared to no DBS",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P29",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E15",
+      "design": "随机顺序受试者内DBS条件比较；Freezer患者FW无冻结时段的STN-LFP分析。",
+      "population": "Freezer 8名。",
+      "n_enrolled": 12,
+      "n_analyzed": 8,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据数未单独报告；20为FW分析使用的STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer；分析时为无冻结步行时段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "随机no DBS、60 Hz、140 Hz；monopolar刺激；电压在两种频率间保持一致。",
+      "task": "FW自然直立行走40米；无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration。",
+      "frequency_and_analysis_window": "STN特异movement band，13–30 Hz beta峰周围；逐burst持续时间。",
+      "finding": "Freezer在FW无冻结时段，刺激条件对burst duration存在显著总体影响；60 Hz和140 Hz均缩短burst duration。",
+      "effect_estimate": "F(2,1202)=3.376，P=0.034；作者报告两种刺激频率均较no DBS缩短持续时间。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；burst级重复观测；患者内聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Freezer组仅8人，部分神经半球因伪迹排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "本条为Freezer患者无冻结步行时段，不能视为事件级FOG关联。",
+            "source_locator": "Methods, P6–P8；Results, P29"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "刺激期间和ECG伪迹影响部分记录。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激条件随机，但未记录每次刺激后的步态基线恢复情况。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F检验自由度反映大量burst观测，患者内聚类处理未明确。",
+            "source_locator": "Statistics, P14；Results, P29"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务、刺激频率和指标同时比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析方案。",
+            "source_locator": "Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该分析的F检验自由度较大，未明确说明重复burst的患者内聚类处理。FW自然行走中实际发生的一个冻结事件被排除于神经分析，见E24。",
+      "quote": "Both 60- and 140 Hz significantly shortened duration of bursts compared to no DBS",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P29",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E16",
+      "design": "随机顺序受试者内DBS条件比较；Non-Freezer患者SIP任务的STN-LFP分析。",
+      "population": "Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "患者级有效神经数据数未报告；18为SIP任务整体神经分析的STN半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "随机no DBS、60 Hz、140 Hz；monopolar刺激；同一STN的刺激电压保持一致。",
+      "task": "SIP原地交替踏步；Non-Freezer组。",
+      "recording_location": "STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration。",
+      "frequency_and_analysis_window": "STN特异movement band；逐burst持续时间。",
+      "finding": "Non-Freezer的较短beta burst duration在no DBS、60 Hz和140 Hz条件之间没有显著变化。",
+      "effect_estimate": "未报告具体F统计量或P值；作者报告两种任务中均无显著持续时间变化。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；刺激条件受试者内比较；burst层级聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer组仅4名患者。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer表型由病史和/或任务表现定义。",
+            "source_locator": "Methods, P6"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在伪迹造成的半球排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激条件随机，但小样本无法充分排除其他因素。",
+            "source_locator": "Methods, P7；Results, P16"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "患者内重复burst的统计处理未明确。",
+            "source_locator": "Statistics, P14；Results, P29"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务和信号指标并行比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "Non-Freezer组只有4人。不能把持续时间不变推广到所有非FOG患者或其他刺激参数。",
+      "quote": "there was no significant change in burst duration during no, 60 Hz, and 140 Hz DBS for either task.",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P29",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E17",
+      "design": "随机顺序受试者内DBS条件比较；Non-Freezer患者FW任务的STN-LFP分析。",
+      "population": "Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据人数未报告；20为FW神经分析使用的STN半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "随机no DBS、60 Hz和140 Hz刺激条件。",
+      "task": "FW自然直立行走40米；Non-Freezer组。",
+      "recording_location": "STN sensorimotor region，双极LFP。",
+      "measure": "STN movement-band beta burst duration。",
+      "frequency_and_analysis_window": "STN特异movement band，逐burst持续时间。",
+      "finding": "Non-Freezer的较短movement-band beta burst duration在no DBS、60 Hz和140 Hz条件间没有显著变化。",
+      "effect_estimate": "未报告具体统计量和P值；作者报告FW和SIP均无显著持续时间变化。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；burst层级患者内重复观测处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer组仅4名患者。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer分类依赖病史和/或任务表现。",
+            "source_locator": "Methods, P6"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN记录因伪迹排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "小样本且没有多变量调整。",
+            "source_locator": "Methods, P7；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "患者内重复burst聚类处理未明确。",
+            "source_locator": "Statistics, P14；Results, P29"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多任务和多信号指标比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果仅适用于本文Non-Freezer小样本和所使用的急性刺激参数。",
+      "quote": "there was no significant change in burst duration during no, 60 Hz, and 140 Hz DBS for either task.",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P29",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E18",
+      "design": "随机顺序受试者内DBS刺激条件比较；Freezer患者SIP无冻结时段的STN-LFP功率分析。",
+      "population": "Freezer患者；SIP分析中一名持续冻结患者被排除于神经和运动学分析。",
+      "n_enrolled": 12,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "作者未直接报告该子组最终患者级有效神经数据数；7为排除一名SIP无法完成患者后的推算人数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer；无冻结SIP时段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz、140 Hz随机呈现；monopolar刺激；同一STN刺激电压保持一致。",
+      "task": "SIP原地交替踏步，无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region，双极LFP。",
+      "measure": "Relative beta burst power；每个burst内平均滤波平方LFP功率，并按静息态40–70 Hz no DBS参考归一化。",
+      "frequency_and_analysis_window": "STN特异movement band；逐burst计算relative power。",
+      "finding": "Freezer在SIP无冻结时段，60 Hz和140 Hz DBS均降低beta burst power；60 Hz对功率的衰减程度显著大于140 Hz。",
+      "effect_estimate": "F(2,2380)=245.361，P<0.001；60 Hz与140 Hz均较no DBS降低，60 Hz较140 Hz进一步降低，P<0.001。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA及刺激条件间post hoc比较；大量burst级重复观测，患者内聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Freezer组小，且一名患者被排除于SIP任务分析。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "本条为Freezer表型的无冻结步态，不是事件级冻结分析。",
+            "source_locator": "Methods, P6；Results, P29–P30"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "刺激期间存在通道过载和ECG伪迹。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激顺序随机，但步态基线恢复未记录。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F(2,2380)提示大量burst观测，患者内聚类处理未明确。",
+            "source_locator": "Results, P30；Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个刺激频率、任务和组别进行比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "重要的是，功率降低并不等于burst duration缩短；本文对两个指标报告了不同的刺激反应模式。患者级分析人数没有直接报告。",
+      "quote": "60 Hz attenuated burst power to a greater degree in comparison to 140 Hz DBS",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P30",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E19",
+      "design": "随机顺序受试者内DBS刺激条件比较；Freezer患者FW无冻结时段的STN-LFP功率分析。",
+      "population": "Freezer 8名。",
+      "n_enrolled": 12,
+      "n_analyzed": 8,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据数未单独报告；20为FW任务使用的STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Freezer；FW无冻结时段。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz、140 Hz；monopolar刺激。",
+      "task": "FW自然直立行走40米；无冻结时段。",
+      "recording_location": "双侧STN sensorimotor region。",
+      "measure": "Relative STN movement-band beta burst power。",
+      "frequency_and_analysis_window": "STN特异movement band；逐burst计算relative power。",
+      "finding": "Freezer在FW任务中，60 Hz和140 Hz DBS均降低beta burst power。",
+      "effect_estimate": "F(2,1195)=136.211，P<0.001；两种刺激频率分别较no DBS降低，具体两种频率之间是否存在差异未报告。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA；刺激条件内比较；患者内burst重复观测的聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Freezer组仅8名患者。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "本条分析的是Freezer患者无冻结时段。",
+            "source_locator": "Methods, P6；Results, P30"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在伪迹和部分STN记录排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激条件随机但步态基线恢复未记录。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "F检验具有大量burst级自由度，患者内聚类方法未明确。",
+            "source_locator": "Results, P30；Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个频率和任务比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "没有报告60 Hz与140 Hz之间的功率差异，不能把SIP中的频率差异直接外推至FW。",
+      "quote": "Freezers during the FW task showed a similar attenuation of burst power during both 60 Hz and 140 Hz DBS compared to no DBS.",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P30",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E20",
+      "design": "随机顺序受试者内DBS刺激条件比较；Non-Freezer患者SIP任务的STN-LFP功率分析。",
+      "population": "Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 18,
+      "missing_reason": "患者级有效神经数据数未单独报告；18为SIP任务使用的STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz和140 Hz随机呈现。",
+      "task": "SIP原地交替踏步；Non-Freezer组。",
+      "recording_location": "STN sensorimotor region，双极LFP。",
+      "measure": "Relative movement-band beta burst power。",
+      "frequency_and_analysis_window": "STN特异movement band；逐burst平均功率并进行相对归一化。",
+      "finding": "Non-Freezer在SIP和FW任务中均出现刺激相关burst power下降；SIP中60 Hz和140 Hz均较no DBS降低，且140 Hz的衰减程度更大。",
+      "effect_estimate": "SIP：F(2,2282)=89.353，P<0.001；60 Hz和140 Hz均较no DBS降低，140 Hz较60 Hz进一步降低，P<0.001。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA及post hoc比较；burst级重复观测，患者内聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer组只有4人。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer分类依赖临床史和/或任务表现。",
+            "source_locator": "Methods, P6"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "部分STN半球因伪迹排除。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激随机呈现，但样本量不足以充分评估其他混杂。",
+            "source_locator": "Methods, P7；Results, P16"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "大量burst级观测的患者内聚类处理未明确。",
+            "source_locator": "Results, P30；Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务、频率和指标比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册分析计划。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果显示刺激可以改变Non-Freezer的burst power，但没有改变其burst duration。这一点说明功率下降本身并不能被当作FOG特异性指标。",
+      "quote": "140 Hz DBS significantly attenuated burst power compared to the 60 Hz DBS condition",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P30",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E21",
+      "design": "随机顺序受试者内DBS刺激条件比较；Non-Freezer患者FW任务的STN-LFP功率分析。",
+      "population": "Non-Freezer 4名。",
+      "n_enrolled": 12,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 20,
+      "missing_reason": "患者级有效神经数据数未单独报告；20为FW任务使用的STN记录半球数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "Non-Freezer。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz和140 Hz随机呈现；monopolar刺激。",
+      "task": "FW自然直立行走40米；Non-Freezer组。",
+      "recording_location": "STN sensorimotor region，双极LFP。",
+      "measure": "Relative STN movement-band beta burst power。",
+      "frequency_and_analysis_window": "STN特异movement band；逐burst计算relative power。",
+      "finding": "Non-Freezer在FW任务中，60 Hz和140 Hz均降低burst power；140 Hz较60 Hz产生更大程度的功率衰减。",
+      "effect_estimate": "F(2,735)=17.615，P<0.001；60 Hz和140 Hz均较no DBS降低，140 Hz较60 Hz进一步降低，P<0.001。",
+      "statistical_unit_and_method": "one-way repeated-measures ANOVA及post hoc比较；burst级重复观测，患者内聚类处理未明确。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Non-Freezer组仅4名患者。",
+            "source_locator": "Results, P16"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "本条为Non-Freezer表型，不是事件级FOG分析。",
+            "source_locator": "Methods, P6"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "some_concerns",
+            "reason": "存在部分STN记录伪迹排除。",
+            "source_locator": "Results, P16；Limitations, P42"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "小样本且未报告多变量调整。",
+            "source_locator": "Methods, P7；Statistics, P14–P15"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "burst级重复测量的患者内聚类处理未明确。",
+            "source_locator": "Results, P30；Statistics, P14"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个任务和刺激条件比较。",
+            "source_locator": "Statistics, P14–P15"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Discussion, P41"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析方案。",
+            "source_locator": "Statistics, P14"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果说明DBS对burst power的影响并非Freezer特异。不能把刺激后功率降低直接解释为FOG改善的特异神经机制。",
+      "quote": "140 Hz DBS significantly attenuated burst power compared to the 60 Hz DBS condition",
+      "source_locator": {
+        "section": "Results—STN DBS differentially affects burst duration and power in Freezers compared to Non-Freezers，P30",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E22",
+      "design": "随机顺序受试者内刺激条件比较；SIP冻结发生人数的描述性统计。",
+      "population": "Freezer组8名患者。",
+      "n_enrolled": 12,
+      "n_analyzed": 8,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "报告的是出现冻结事件的患者人数，而不是总冻结事件次数。总事件数、每名患者的事件分布和试次数未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；SIP中由计算机算法识别的freezing episodes；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz和140 Hz；刺激顺序随机；monopolar配置。",
+      "task": "SIP原地交替踏步；统计各刺激条件下出现至少一次FE的Freezer患者人数。",
+      "recording_location": "FOG人数统计来自步态测力台和冻结事件识别；本条不以特定STN-LFP指标为结局。",
+      "measure": "每种刺激条件下出现freezing episodes的患者人数。",
+      "frequency_and_analysis_window": "100秒SIP任务；各条件下整个任务期间的冻结事件统计。",
+      "finding": "8名Freezer中，no DBS时5人出现SIP冻结事件；60 Hz时2人出现；140 Hz时2人出现。该结果是患者发生比例的描述性比较，不是事件总次数比较。",
+      "effect_estimate": "no DBS：5/8；60 Hz：2/8；140 Hz：2/8。未报告统计检验、风险比或置信区间。",
+      "statistical_unit_and_method": "患者级描述性人数统计；没有报告对各条件发生人数进行的统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "仅8名Freezer患者，整体队列较小。",
+            "source_locator": "Results, P16；P28"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "SIP冻结通过已验证计算机算法识别，但未报告本研究视频或临床逐事件确认。",
+            "source_locator": "Methods, P8；Results, P28"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "not_assessable",
+            "reason": "本条是行为事件人数统计，不依赖STN-LFP信号。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激顺序随机，但作者未记录刺激条件后步态表现是否完全恢复基线。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "low",
+            "reason": "本条以患者人数而非单个burst或事件作为统计单位。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "还比较了冻结持续时间和步态运动学结局。",
+            "source_locator": "Results, P28；Table 1"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册方案。",
+            "source_locator": "Methods, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "患者人数不能替代冻结事件次数。SIP是替代任务。作者未提供各刺激条件间发生人数差异的P值或置信区间。",
+      "quote": "five exhibited FEs during no DBS, two during 60 Hz DBS, and two during 140 Hz DBS during SIP",
+      "source_locator": {
+        "section": "Results—Neurostimulation at 60 Hz and 140 Hz improves FOG and shortens beta burst durations，P28",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E23",
+      "design": "随机顺序受试者内刺激条件比较；SIP冻结负担的描述性统计。",
+      "population": "Freezer组8名患者。",
+      "n_enrolled": 12,
+      "n_analyzed": 8,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "报告总冻结时间和任务冻结百分比，但未报告总冻结事件数及每名患者的事件次数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；SIP freezing episodes；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS、60 Hz、140 Hz随机呈现；monopolar刺激。",
+      "task": "SIP原地交替踏步；整个100秒任务期间的冻结负担。",
+      "recording_location": "测力台记录步态；本条结局为冻结时间，不是STN-LFP信号。",
+      "measure": "总冻结时间（秒）及Freezer组任务冻结百分比（mean±SD）。",
+      "frequency_and_analysis_window": "整个SIP任务；无单独事件前时间窗。",
+      "finding": "Freezer组在no DBS条件下总冻结时间239.4秒，60 Hz条件下122秒，140 Hz条件下152.3秒。Table 1还报告任务冻结百分比均值在三种条件下分别为29.37%、11.01%和18.13%。",
+      "effect_estimate": "总冻结时间：no DBS 239.4 s；60 Hz 122 s；140 Hz 152.3 s。Table 1 SIP冻结比例：29.37±38.27%、11.01±29.57%、18.13±34.58%。未报告这些差异的统计检验P值。",
+      "statistical_unit_and_method": "总冻结时间为Freezer组描述性汇总；Table 1为mean±SD。没有报告冻结总时间的正式推断统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "仅8名Freezer患者。",
+            "source_locator": "Results, P16；P28"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "SIP冻结由计算机算法识别；未报告视频或临床逐事件复核。",
+            "source_locator": "Methods, P8；Results, P28"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "not_assessable",
+            "reason": "冻结时间结局来自行为测量，不依赖STN-LFP信号。",
+            "source_locator": "Results, P28；Table 1"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "刺激顺序随机，但作者未记录每次刺激后步态表现是否恢复基线。",
+            "source_locator": "Methods, P7；Limitations, P42"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "low",
+            "reason": "本条为组水平总时间和任务百分比描述，不是将单个事件作为独立患者样本。",
+            "source_locator": "Results, P28；Table 1"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个刺激条件和多个步态结局并行报告。",
+            "source_locator": "Results, P28；Table 1"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "无预注册方案。",
+            "source_locator": "Methods—Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "总冻结时间和任务冻结百分比是两个不同表达方式，但均为描述性结果；不能据此推断60 Hz与140 Hz之间存在统计学差异。也不能把总冻结时间转换为事件次数。",
+      "quote": "subjects spent a total of 239.4 seconds freezing no DBS, 122 seconds during 60 Hz DBS, and 152.3 seconds during 140 Hz DBS",
+      "source_locator": {
+        "section": "Results—Neurostimulation at 60 Hz and 140 Hz improves FOG and shortens beta burst durations，P28",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30196050_E24",
+      "design": "自然前行任务中的单个冻结事件描述；该事件被排除于后续神经和运动学分析。",
+      "population": "一名PD患者，属于Freezer组。",
+      "n_enrolled": 12,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 1,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "明确报告一名患者发生一次FW冻结事件，但该事件被排除于神经和运动学分析；没有报告该事件的有效STN-LFP数据。",
+      "endpoint_class": "unclear",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezer；具体冻结表现亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "no DBS条件下发生一次事件；作者另报告60 Hz和140 Hz条件下Freezer未出现FW冻结事件。",
+      "task": "Forward Walking，自然直立行走40米，包括转身。",
+      "recording_location": "患者植入双侧STN DBS导线，但该冻结事件被排除于神经和运动学分析，因此没有可提取的事件相关STN-LFP定位结果。",
+      "measure": "FOG事件发生情况；没有可分析的神经信号结局。",
+      "frequency_and_analysis_window": "no DBS条件下单次FW冻结事件；事件神经时间窗未分析。",
+      "finding": "一名患者在FW的no DBS条件下出现一次freezing episode，该事件被排除于神经和运动学分析。作者同时报告，60 Hz和140 Hz DBS条件下没有Freezer在FW任务中出现冻结事件。",
+      "effect_estimate": "no DBS：1名患者、1次FE；60 Hz：0名Freezer出现FE；140 Hz：0名Freezer出现FE。未报告发生率检验或置信区间。",
+      "statistical_unit_and_method": "描述性事件报告；该事件未进入神经或运动学统计分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "自然行走中只有一个明确报告的事件，且该事件被排除于分析。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "unclear",
+            "reason": "正文未明确说明该FW事件由视频、临床评审还是IMU算法确认。",
+            "source_locator": "Methods, P8；Results, P28"
+          },
+          {
+            "domain": "signal_quality_artifact",
+            "judgement": "not_assessable",
+            "reason": "该事件没有进入STN-LFP神经分析。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "仅单次事件，不能充分比较刺激条件下的自然冻结发生率。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "repeated_measures_pseudoreplication",
+            "judgement": "not_assessable",
+            "reason": "仅报告一个事件，没有重复测量推断。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "not_assessable",
+            "reason": "没有对该单次事件进行统计检验。",
+            "source_locator": "Results, P28"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Conclusion, P43"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册方案可供核查。",
+            "source_locator": "Methods—Statistics, P14–P15"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该事件是自然直立行走中的事件，但作者没有明确描述逐事件确认方式，因此不能归为视频或临床明确确认的A_actual_natural，也不能确认其属于客观可穿戴设备识别的B_objective_natural。最重要的是，该事件被排除于神经分析，不能作为自然行走FOG与STN活动之间的直接证据。",
+      "quote": "this FE was excluded from the neural and kinematic analysis.",
+      "source_locator": {
+        "section": "Results—Neurostimulation at 60 Hz and 140 Hz improves FOG and shortens beta burst durations，P28",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

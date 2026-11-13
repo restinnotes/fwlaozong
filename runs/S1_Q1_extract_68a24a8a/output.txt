@@ -1,0 +1,56 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:42580034",
+      "design": "动物实验、离体电生理、化学遗传学干预与多尺度计算建模相结合的实验研究",
+      "population": "雄性6-OHDA帕金森病大鼠模型；离体纹状体中型棘状神经元（MSNs）；计算神经网络模型",
+      "n": "摘要未报告动物及电生理实验的具体样本量",
+      "condition": "比较早期与晚期多巴胺（DA）去神经支配状态；在6-OHDA大鼠中化学遗传学抑制皮质-纹状体投射，并在DA完整大鼠中激活该投射；比较纹状体NMDA与AMPA受体阻断的作用。计算模型进一步考察丘脑底核（STN）至运动皮层反馈环路对病理性beta活动的维持作用。",
+      "measure": "CBT（皮质-基底节-丘脑）网络beta振荡及皮质-纹状体相干性；纹状体MSN突触前谷氨酸释放；运动表现；计算模型中的神经元同步性及STN-运动皮层反馈环路活动。",
+      "finding": "早期DA去神经支配引起运动不能，但未出现beta振荡增强；晚期DA退变则出现明显高beta振荡（25-40 Hz）及皮质-纹状体相干性增加。MSN谷氨酸释放增强与beta功率相关。抑制皮质-纹状体投射可降低6-OHDA大鼠的beta同步性并改善运动表现；激活该投射在DA完整大鼠中没有明显作用。纹状体NMDA受体阻断能够降低beta振荡和运动障碍，而AMPA受体阻断没有表现出相同效果。计算网络模拟进一步提示STN→运动皮层反馈环路参与维持病理性beta状态。",
+      "effect": "早期DA缺失与晚期DA退变对beta活动的影响不同；晚期退变伴随高beta振荡增强。抑制皮质-纹状体谷氨酸输入或阻断NMDA受体可降低beta活动及运动障碍。STN反馈环路的作用来自计算模型，而非直接记录或干预STN神经元的实验结果。",
+      "limitations": "摘要未报告作者明确承认的局限。与本研究问题相关的方法学限制：研究采用雄性6-OHDA大鼠，而非PD患者；研究终点是运动不能、一般运动表现及beta振荡，没有直接测量或区分FOG；没有提供STN神经元放电或局部场电位与FOG发作之间的相关性；STN→运动皮层反馈环路的作用主要来自计算模拟，不能等同于人体STN神经活动与FOG的直接证据；动物及实验样本量未报告。",
+      "quote": "Network simulations implicated the subthalamic → motor cortex feedback loop in the maintenance of this pathological beta state.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42641912",
+      "design": "横断面观察性研究，采用EEG比较不同PD-FOG分组及任务条件下的脑电振荡",
+      "population": "健康对照（HC）21例；无FOG的PD患者（PDFOG-）16例；有FOG的PD患者（PDFOG+）34例。",
+      "n": "71例，其中HC=21、PDFOG-=16、PDFOG+=34",
+      "condition": "采用步态想象（GI）和步态观察（GO）任务，并以闭眼和睁眼静息态EEG作为基线；另考察降低GI和GO任务节奏的影响。研究比较有无FOG的PD患者及健康对照。",
+      "measure": "EEG中额中线区域的theta、delta、alpha及beta频段功率；比较不同任务及FOG分组下的振荡活动。",
+      "finding": "GI任务中，两个PD组的额中线theta功率均高于健康对照；GO任务中，theta功率增加仅出现在PDFOG-组。两个PD亚组的额中线beta振荡存在组间差异。具体而言，GO任务中PDFOG-组的alpha和beta功率均高于HC及PDFOG+组；GI任务中PDFOG+组的beta功率显著低于PDFOG-组。降低GI节奏使PDFOG+组delta活动显著下降；降低GO节奏则使delta和theta功率均显著下降。",
+      "effect": "FOG组与非FOG组之间存在任务相关的额中线beta活动差异：GI时FOG组beta功率较低，GO时非FOG组beta功率较高。结果显示beta活动与FOG分组的关系依赖任务范式，而非简单表现为FOG患者beta功率持续升高。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学限制：研究采用头皮EEG测量额中线活动，没有直接记录STN神经活动，无法确定观察到的beta差异是否源于STN；GI和GO是认知任务，并非实际步行或FOG发作期间的神经活动记录；不同组样本量较小且不均衡；因此不能直接将额中线beta差异解释为STN-FOG机制。",
+      "quote": "In the GI task, PDFOG+ was characterized by significantly reduced beta power compared to the PDFOG- group.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42778807",
+      "design": "多中心横断面观察性研究，采用静息态EEG频段特异性burst分析",
+      "population": "三个研究中心的237名参与者，包括88名健康对照和149名PD患者；PD患者根据临床标准分为PDFOG+和PDFOG-。",
+      "n": "总计237例；HC=88，PD=149；摘要未报告PDFOG+和PDFOG-各自的具体人数。",
+      "condition": "所有PD患者均在临床定义的ON-medication状态下评估。采用静息态EEG，统一三个中心的11个共同EEG导联；比较HC、PDFOG-和PDFOG+。FOG严重程度采用研究中心标准化的FOGQ z-score评估。",
+      "measure": "通过振幅包络阈值法量化theta、alpha、low-beta和high-beta频段的burst动力学，包括burst发生率、持续时间及振幅相关指标；主要分析额中线导联的beta burst，并分析FOG严重程度与振荡指标的关系。",
+      "finding": "与健康对照相比，PD患者表现出low-beta burst时间结构异常，具体为burst发生频率增加、持续时间缩短。在HC、PDFOG-和PDFOG+三组比较中，low-beta burst发生率和持续时间存在组间差异，但在调整后的PD患者内部模型中，PDFOG+与PDFOG-之间没有得到稳健的差异证据。相比之下，FOG严重程度与theta振幅相关的burst指标存在最一致的关联。",
+      "effect": "low-beta burst异常主要反映PD相关的整体运动网络功能异常，而不是稳定、特异的FOG分组标志；theta burst振幅相关指标与FOG严重程度的关联更一致。该结果对将beta活动增强视为FOG特异性神经标志的观点构成限制。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学限制：所有PD患者均处于ON-medication状态，不能直接推广到OFF-medication状态；采用静息态EEG而非实际FOG发作期间的神经记录；11个共同头皮导联不能直接测量或定位STN局部神经活动；调整后的PDFOG+与PDFOG-比较未发现稳健差异，提示分组差异可能受到临床变量及分析条件影响；摘要未报告FOG两个亚组的具体样本量。",
+      "quote": "In contrast, FOG severity was most consistently associated with theta amplitude-related burst metrics.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42823526",
+      "design": "STN-DBS患者纵向临床观察研究，采用主成分分析（PCA）和协方差分析（ANCOVA）",
+      "population": "接受STN-DBS的PD患者，平均年龄60.2 ± 7.6岁，男性占67%。",
+      "n": "100例；其中33例具有3-5年随访数据。",
+      "condition": "比较STN-DBS术前、术后1年以及部分患者术后3-5年的临床状态。使用13项运动和非运动症状分项进行PCA；通过ANCOVA检验术前非运动症状严重程度与术后1年运动恢复之间的关系。摘要未说明具体药物状态和刺激开关状态。",
+      "measure": "步态、移动能力、FOG及其他运动和非运动临床分项；PCA提取临床协方差结构，报告各主成分解释的方差比例；ANCOVA分析非运动症状与运动恢复之间的交互作用。",
+      "finding": "PCA发现步态、移动能力和FOG构成核心运动三联征，是各随访时间点临床变异的主要来源。该主成分PC1解释的方差比例从术前35%下降至术后3-5年的28%。此外，较高的术前非运动症状负担与较差的术后移动能力恢复相关，术后情绪症状与同期运动负担相关。",
+      "effect": "FOG、步态和移动能力在STN-DBS术前及术后随访中持续构成主要临床协变维度，但其解释的临床变异比例有所下降。该研究支持FOG与其他运动及非运动临床维度存在关联，但没有证明这种关联由STN特定神经振荡或神经元放电变化介导。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学限制：采用临床症状评分及PCA，而非STN神经活动记录，不能直接检验STN beta活动与FOG的关系；PC1包含步态、移动能力和FOG，不能将其解释为FOG单独的效应；3-5年随访仅有33例，长期结果的样本量有限；摘要未提供FOG单独的效应量、组间比较及完整统计结果，也未说明药物和刺激状态，限制了不同研究之间的条件比较。",
+      "quote": "PCA identified a core motor triad: gait, mobility, and freezing of gait as the primary source of clinical variance at all timepoints",
+      "basis": "abstract"
+    }
+  ]
+}</escape>

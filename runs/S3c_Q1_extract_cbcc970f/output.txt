@@ -1,0 +1,491 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40648292; DOI:10.3390/s25134036",
+    "title": "An Experimental Approach for Investigating Freezing of Gait in Parkinson's Disease Using Virtual Reality and Neural Sensing: A Pilot Study",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "CC-VHE larger investigation; Cleveland Clinic IRB protocol 23-957; single-participant pilot case-study component",
+    "cohort_id_candidate": "CC-VHE STN-DBS cohort; possible overlap with the five-participant cohort in the 2026 study DOI:10.3389/fneur.2026.1793291",
+    "cohort_relation_basis": "The 2025 article reports one 65-year-old male participant with PD duration of 6 years, bilateral STN DBS approximately 8 months previously, LEDD 1150 mg/day and MDS-UPDRS-III OFF-medication/OFF-DBS score of 59. A subsequent original research article from the same Cleveland Clinic research group, using the same CC-VHE platform and STN-LFP recording approach, reports five participants; its Subject 1 has a matching profile (65-year-old male, PD duration 6 years, DBS duration 0.75 years, LEDD 1150 mg/day, MDS-UPDRS-III score 59). This is a strong possible cohort-overlap signal. However, the later publication does not explicitly identify Subject 1 as the participant in this 2025 article. Record as possible_match, not confirmed duplicate or independent replication. The 2025 article itself explicitly describes its participant as initial data from a larger CC-VHE investigation.",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID40648292_E01",
+      "design": "Single-participant proof-of-concept case study; within-subject observational electrophysiological comparison of clinician/video-confirmed FOG and non-freezing walking epochs.",
+      "population": "One 65-year-old male with Parkinson's disease diagnosed 6 years previously, history of FOG, bilateral STN DBS approximately 8 months before testing, two falls during the preceding 6 months, LEDD 1150 mg/day.",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 4,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled: the total enrollment of the larger CC-VHE investigation is not reported; the article presents one participant. n_trials: the exact number of repeated trials is not explicitly tabulated. n_electrodes_contacts: six bipolar channel pairs (three per hemisphere) and twelve reconstructed channels are reported, but the number of physical electrode contacts is not separately specified. The four Physical-module FOG events are explicitly reported in Table 1 for the OFF-medication/OFF-DBS condition.",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported; episodes are identified as FOG by a physical therapist and confirmed by synchronized video; akinetic, trembling-in-place, kinetic-no-trembling or mixed subtype is not specified.",
+      "medication_phenotype": "unknown; FOG was elicited in both tested medication states, but the participant's usual clinical medication-response phenotype is not formally classified.",
+      "experimental_medication_state": "OFF antiparkinsonian medication, operationally defined as at least 12 hours since the last dose; DBS OFF.",
+      "DBS_state_and_parameters": "Bilateral STN DBS implanted approximately 8 months before testing. Stimulation was OFF during the analyzed session. Percept PC was used for LFP sensing. Stimulation amplitude, frequency, pulse width, contact configuration and directional settings are not reported. A separate ON-medication/ON-DBS clinical assessment was performed the preceding day.",
+      "task": "Physical CC-VHE module: physical walking on an omnidirectional treadmill through a virtual environment containing changes in flooring patterns, narrow doorways approximately 68 cm wide, narrow hallways approximately 70 cm wide and multiple 90-degree turns. Comparison condition: clinician/video-reviewed single-task straight-line walking without FOG. The Walk epochs were used as the non-freezing baseline.",
+      "recording_location": "Bilateral STN local field potentials recorded using Medtronic Percept PC at 250 Hz. Six bipolar channel pairs were streamed, three per hemisphere; six reconstructed bipolar channels per hemisphere were available. One channel per hemisphere with the largest beta power in the Reference module during session one (OFF medication/OFF DBS) was selected for subsequent analyses. Exact anatomical contact coordinates and STN subterritory are not reported.",
+      "measure": "STN-LFP power spectral density, expressed as average power in individual 1-Hz frequency bands, comparing FOG epochs with Walk epochs. The authors interpret elevated PSD as increased neural synchrony. This is average spectral power, not beta-burst duration, burst occupancy, entropy, phase modulation or interregional coherence.",
+      "frequency_and_analysis_window": "STN-LFP analysis range 8–35 Hz, in 1-Hz bands. FOG and Walk epochs of at least 2 seconds were retained. Each epoch was segmented into 2-second windows with a 0.5-second moving-window step. Welch PSD used a 1-second Hanning window and 0.5-second overlap. Monte Carlo permutation testing used 10000 permutations, a 95% confidence-limit criterion and Benjamini-Hochberg FDR correction at alpha 0.05. Isolated significant 1-Hz bands surrounded by non-significant bands were removed in a secondary conservative analysis.",
+      "finding": "In the Physical module, there were no statistically significant increases in STN-LFP power during FOG compared with Walk after FDR correction. Figure 6B reports zero significantly elevated 1-Hz frequency bands in both the left and right STN. This is a module-specific negative finding despite the occurrence of four clinically/video-confirmed FOG episodes.",
+      "effect_estimate": "LSTN: 0 significantly elevated 1-Hz bands. RSTN: 0 significantly elevated 1-Hz bands. No numerical FOG-versus-Walk PSD difference, standardized effect size, exact P value or numerical confidence interval is reported for this module.",
+      "statistical_unit_and_method": "Monte Carlo permutation comparison of FOG and Walk power values separately for each 1-Hz frequency band, with 10000 permutations and FDR correction. The underlying spectral observations are derived from overlapping 2-second windows advanced by 0.5 seconds. The number of windows and the handling of within-episode temporal dependence are not reported. The statistical inference is based on one participant, not an independent patient-level sample.",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated observational electrophysiology risk-of-bias checklist",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "Only one selected male participant with PD, FOG history and bilateral STN DBS is presented. No sampling frame, consecutive recruitment information or control cohort is provided. Patient-level representativeness and generalizability are consequently very limited.",
+            "source_locator": "Section 3, pp. 9–10; Section 4, p. 14."
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG was marked by one physical therapist during testing and reviewed using synchronized video by the same therapist. This provides direct behavioral confirmation, but independent adjudication, inter-rater reliability and blinding of the behavioral reviewer are not reported.",
+            "source_locator": "Section 2.3.1, p. 7."
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "some_concerns",
+            "reason": "LFP signals were visually inspected and epochs with movement artifacts were removed. However, quantitative LFP artifact-rejection criteria, independent signal-quality verification and residual movement-artifact estimates are not reported.",
+            "source_locator": "Sections 2.1.5 and 2.4.1–2.4.2, pp. 5–8."
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "Within-participant comparisons reduce between-patient confounding, and medication and DBS states are specified. However, differences in gait demands, environmental triggers, movement speed and FOG burden between modules are not adjusted for in the reported comparisons.",
+            "source_locator": "Sections 2.1.2, 3.1 and 3.5, pp. 4–5, 9–12."
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "high",
+            "reason": "The analysis uses overlapping 2-second windows advanced by 0.5 seconds. Permutation testing is performed on shuffled FOG and Walk power values, but the number of windows, treatment of temporal autocorrelation and explicit episode-level or participant-level clustering are not reported. A large number of spectral windows cannot substitute for independent patients.",
+            "source_locator": "Sections 2.4.5 and 2.5, pp. 8–9."
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "FDR correction is explicitly applied across the 1-Hz frequency bands. However, whether the full family of comparisons across modules, hemispheres and other exploratory analyses was jointly controlled is unclear. A secondary analysis also removes isolated significant frequency bands.",
+            "source_locator": "Section 2.5, p. 9."
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "not_assessable",
+            "reason": "No predictive model is trained in this article. External model validation and machine-learning overfitting are therefore not directly applicable to the reported spectral comparison. The single-participant findings remain hypothesis-generating.",
+            "source_locator": "Sections 2.5 and 4, pp. 9 and 14."
+          },
+          {
+            "domain": "neural_channel_selection",
+            "judgement": "some_concerns",
+            "reason": "The STN channel used for each hemisphere was selected according to maximum beta power in the Reference module. This selection may favor beta-dominant signals. The analysis does not report independent channel-selection validation in another patient or dataset.",
+            "source_locator": "Section 2.4.2, p. 8."
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "A preregistered analysis plan and prespecified primary frequency bands are not identified in the article. The authors report their channel-selection procedure and secondary removal of isolated significant bins, but available information is insufficient to establish whether selective reporting occurred.",
+            "source_locator": "Sections 2.4.2–2.5, pp. 8–9."
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "Single-patient result with no patient-level replication. The Physical module produced four FOG events but no significant STN-LFP frequency bands. This does not establish absence of STN involvement in physical-triggered FOG. The Walk reference consists of straight-line single-task walking and is not necessarily matched for turning, obstacle negotiation or other movement demands. FOG subtype, pre-FOG activity and offset/recovery activity were not separately analyzed. The result is from a virtual environment with treadmill-based locomotion, not natural overground walking.",
+      "quote": "there were no significant changes in power during FOG compared to Walk in the Physical modules.",
+      "source_locator": {
+        "section": "Section 3.5, Changes in STN-LFP Between FOG and Walking Across CC-VHE Modules",
+        "page": "12",
+        "figure_table": "Figure 6A–B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40648292_E02",
+      "design": "Single-participant proof-of-concept case study; within-subject observational electrophysiological comparison of FOG and Walk epochs in the Anxiety module.",
+      "population": "One 65-year-old male with Parkinson's disease diagnosed 6 years previously, history of FOG, bilateral STN DBS approximately 8 months before testing, two falls during the preceding 6 months, LEDD 1150 mg/day.",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 2,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled: total enrollment of the larger CC-VHE investigation is not reported. n_trials: exact repeated trial count is not explicitly tabulated. n_electrodes_contacts: six bipolar channel pairs and twelve reconstructed channels are reported, but physical contact count is not separately stated. Anxiety-module FOG event count and cumulative duration are reported in Table 1.",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported; clinician/video-confirmed FOG, without classification into akinetic, trembling-in-place, kinetic-no-trembling or mixed phenotype.",
+      "medication_phenotype": "unknown; test-elicited FOG occurred during both tested medication states, but usual clinical medication-response phenotype is not classified.",
+      "experimental_medication_state": "OFF antiparkinsonian medication, at least 12 hours since last dose; DBS OFF.",
+      "DBS_state_and_parameters": "Bilateral STN DBS implanted approximately 8 months before testing; stimulation OFF. Medtronic Percept PC used for bilateral LFP sensing. Stimulation frequency, amplitude, pulse width and contact configuration are not reported.",
+      "task": "Anxiety CC-VHE module: walking on an approximately 0.10-m-wide virtual walkway suspended 8 m above the ground, crossing a 6-m elevated plank, turning 180 degrees on a platform and returning. Two FOG events were recorded during the OFF-medication/OFF-DBS condition. Compared with clinician/video-reviewed single-task straight-line Walk epochs without FOG.",
+      "recording_location": "Bilateral STN-LFP recorded at 250 Hz using Percept PC. One channel per hemisphere was selected from twelve reconstructed channels based on the highest beta power during the Reference module in session one, OFF medication/OFF DBS. Exact anatomical contact coordinates are not reported.",
+      "measure": "Average power spectral density in 1-Hz frequency bands from bilateral STN-LFP, comparing Anxiety-module FOG epochs with Walk epochs. This is spectral power, not beta-burst duration, burst occupancy, entropy, phase modulation or cortical-STN coherence.",
+      "frequency_and_analysis_window": "STN-LFP frequency range 8–35 Hz, with 1-Hz bins. Epochs at least 2 seconds were retained and divided into 2-second windows with 0.5-second steps. Welch PSD used a 1-second Hanning window and 0.5-second overlap. Monte Carlo permutation testing used 10000 permutations and FDR correction at alpha 0.05. Isolated significant frequency bins were removed in a secondary analysis.",
+      "finding": "STN-LFP PSD was elevated during Anxiety-module FOG compared with Walk. Figure 6B reports 15 significantly elevated 1-Hz bands in LSTN and 4 in RSTN. Anxiety had the largest number and frequency range of elevated bands in both hemispheres. The paper further reports that significant high-beta activity above 20 Hz occurred only in the Anxiety module and only in the LSTN. The prose describes the 15 LSTN bands in the alpha–low-beta range (8–20 Hz), but does not enumerate every significant bin center.",
+      "effect_estimate": "LSTN: 15 significantly elevated 1-Hz bands. RSTN: 4 significantly elevated 1-Hz bands. Total reported across hemispheres: 19 bands. Significant high-beta activity above 20 Hz was restricted to LSTN in the Anxiety module. Exact power differences, standardized effect sizes, exact P values and numerical confidence intervals are not reported.",
+      "statistical_unit_and_method": "Monte Carlo permutation testing with 10000 permutations, comparing FOG and Walk power values at each 1-Hz frequency. Significance determined using the 95% confidence limits of shuffled differences, followed by Benjamini-Hochberg FDR correction. The spectral inputs were overlapping 2-second windows with 0.5-second steps. Number of windows and explicit treatment of temporal dependence are not reported. Single-patient inference only.",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated observational electrophysiology risk-of-bias checklist",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "Only one selected participant with PD, FOG history and bilateral STN DBS contributes data. No representative sampling frame or independent patient replication is provided.",
+            "source_locator": "Section 3, pp. 9–10."
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "A physical therapist identified FOG in real time and the same therapist confirmed/refined events using synchronized video. Independent adjudication and inter-rater reliability are not reported.",
+            "source_locator": "Section 2.3.1, p. 7."
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "some_concerns",
+            "reason": "Movement-artifact epochs were visually inspected and removed, but quantitative LFP artifact rejection and independent signal-quality verification are not described.",
+            "source_locator": "Sections 2.4.1–2.4.2, p. 8."
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "The comparison is within one medication and DBS state, but anxiety-provoking navigation differs substantially from straight-line Walk. Gait speed, turning demands, stress response and other movement variables are not adjusted for.",
+            "source_locator": "Sections 2.1.2 and 3.5, pp. 4–5 and 12."
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "high",
+            "reason": "Overlapping 2-second windows with 0.5-second steps are analyzed using permutation testing. The number of independent FOG episodes and windows is small or incompletely reported, and the statistical handling of within-event temporal dependence is unclear.",
+            "source_locator": "Sections 2.4.5 and 2.5, pp. 8–9."
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "FDR correction is applied across frequency bands, but joint correction across both hemispheres, all three modules and exploratory analyses is not clearly documented. Isolated significant bins are additionally removed in a secondary analysis.",
+            "source_locator": "Section 2.5, p. 9."
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "not_assessable",
+            "reason": "No predictive model is fitted in this article; external validation of a trained model is not applicable.",
+            "source_locator": "Sections 2.5 and 4, pp. 9 and 14."
+          },
+          {
+            "domain": "neural_channel_selection",
+            "judgement": "some_concerns",
+            "reason": "The analyzed STN channel per hemisphere was selected based on maximum beta power in the Reference trial. Independent validation of channel selection is unavailable.",
+            "source_locator": "Section 2.4.2, p. 8."
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "No preregistered analysis plan or prespecified frequency-band selection is identified. Available information is insufficient to determine selective reporting.",
+            "source_locator": "Sections 2.4.2–2.5, pp. 8–9."
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "Only two Anxiety-module FOG events in one participant. The findings support trigger-dependent differences within this case, not a generalizable anxiety-specific STN signature. The Walk baseline is straight-line single-task walking rather than a movement- and stress-matched control. The exact frequency-bin centers are not fully enumerated in the prose. The reported number of significant bins is not an effect size. The study does not separate pre-FOG, during-FOG and recovery dynamics beyond event-level segmentation.",
+      "quote": "For both the RSTN and LSTN, the Anxiety module displayed the largest number of 1 Hz frequency bands that were elevated during FOG.",
+      "source_locator": {
+        "section": "Section 3.5, Changes in STN-LFP Between FOG and Walking Across CC-VHE Modules",
+        "page": "12",
+        "figure_table": "Figure 6A–B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40648292_E03",
+      "design": "Single-participant proof-of-concept case study; within-subject observational electrophysiological comparison of Cognitive-module FOG and Walk epochs.",
+      "population": "One 65-year-old male with Parkinson's disease diagnosed 6 years previously, history of FOG, bilateral STN DBS approximately 8 months before testing, two falls during the preceding 6 months, LEDD 1150 mg/day.",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 4,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled: total enrollment of the larger CC-VHE study is not reported. n_trials: exact repeated trial count is not explicitly tabulated. n_electrodes_contacts: six bipolar channel pairs and twelve reconstructed channels are reported, but physical contact count is not separately stated. Cognitive-module FOG event count and cumulative duration are explicitly reported in Table 1.",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported; FOG events were clinically identified and video-reviewed, without subtype classification.",
+      "medication_phenotype": "unknown; FOG occurred in both tested medication states, but the usual clinical medication-response phenotype is not classified.",
+      "experimental_medication_state": "OFF antiparkinsonian medication, at least 12 hours since last dose; DBS OFF.",
+      "DBS_state_and_parameters": "Bilateral STN DBS implanted approximately 8 months before testing; stimulation OFF. Percept PC used for bilateral LFP sensing. Amplitude, frequency, pulse width and active contact configuration are not reported.",
+      "task": "Cognitive CC-VHE module: continuous walking around a virtual kitchen island while simultaneously performing a picture interference task, identifying congruent/incongruent animal-picture and text pairs using hand controllers at 1.5-second intervals. The module lasted 120 seconds. Four FOG episodes totaling 40.1 seconds occurred in the OFF-medication/OFF-DBS condition. Compared with clinician/video-reviewed straight-line single-task Walk epochs without FOG.",
+      "recording_location": "Bilateral STN-LFP recorded using Medtronic Percept PC at 250 Hz. One channel per hemisphere was selected from twelve reconstructed bipolar channels based on maximum beta power in the Reference module during session one, OFF medication/OFF DBS. Exact contact coordinates and anatomical subterritory are not specified.",
+      "measure": "Average STN-LFP power spectral density in 1-Hz frequency bands during FOG versus Walk. The measure is average spectral power and does not quantify beta-burst duration, burst occupancy, entropy, phase modulation or interregional coherence.",
+      "frequency_and_analysis_window": "8–35 Hz, analyzed in 1-Hz bands. FOG and Walk epochs of at least 2 seconds were divided into 2-second windows advanced by 0.5 seconds. Welch PSD used a 1-second Hanning window and 0.5-second overlap. Monte Carlo permutation testing used 10000 permutations and FDR correction at alpha 0.05. Isolated significant frequency bins were removed in a secondary conservative analysis.",
+      "finding": "STN-LFP PSD was elevated during Cognitive-module FOG compared with Walk. Figure 6B reports 11 significantly elevated 1-Hz bands in LSTN and 2 in RSTN. The prose describes the LSTN elevations as occurring in the alpha–low-beta range (8–20 Hz). Significant high-beta activity above 20 Hz was reported only in the Anxiety module, not the Cognitive module.",
+      "effect_estimate": "LSTN: 11 significantly elevated 1-Hz bands. RSTN: 2 significantly elevated 1-Hz bands. Total across hemispheres: 13 bands. No numerical PSD effect size, exact P value or numerical confidence interval is reported. The reported frequency distribution is not equivalent to a quantified overall beta-power increase.",
+      "statistical_unit_and_method": "Monte Carlo permutation testing with 10000 permutations for individual 1-Hz bins; significance based on 95% confidence limits of shuffled differences and Benjamini-Hochberg FDR correction. Spectral observations were derived from overlapping 2-second windows advanced by 0.5 seconds. Number of analyzed windows and episode-level clustering procedures are not reported.",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated observational electrophysiology risk-of-bias checklist",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "One participant contributes all analyzed FOG and Walk observations. The study is a selected single-case proof-of-concept rather than a representative sample of patients with FOG.",
+            "source_locator": "Section 3, pp. 9–10."
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "A single therapist identified and subsequently video-reviewed the FOG episodes. No independent second reviewer or inter-rater reliability statistic is reported.",
+            "source_locator": "Section 2.3.1, p. 7."
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "some_concerns",
+            "reason": "Visual inspection and removal of movement-artifact epochs are described, but quantitative LFP artifact rejection and residual movement contamination are not reported.",
+            "source_locator": "Sections 2.4.1–2.4.2, p. 8."
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "The Cognitive module includes continuous dual-task walking and cognitive interference, whereas Walk is single-task straight-line walking. Cognitive load, gait speed and motor task demands are not separately adjusted for.",
+            "source_locator": "Sections 2.1.2, 2.3.2 and 3.5, pp. 4–5, 7 and 12."
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "high",
+            "reason": "Overlapping 2-second windows with 0.5-second steps create repeated, temporally dependent observations from one participant. The article does not report the number of windows or how temporal dependence was handled in the permutation test.",
+            "source_locator": "Sections 2.4.5 and 2.5, pp. 8–9."
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "Frequency-band FDR correction is described, but the overall multiplicity across hemispheres, modules and exploratory comparisons is unclear. A secondary analysis removes isolated significant bins.",
+            "source_locator": "Section 2.5, p. 9."
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "not_assessable",
+            "reason": "The study does not train a predictive model; external predictive validation is not applicable to this spectral comparison.",
+            "source_locator": "Sections 2.5 and 4, pp. 9 and 14."
+          },
+          {
+            "domain": "neural_channel_selection",
+            "judgement": "some_concerns",
+            "reason": "One channel per hemisphere was selected based on maximum beta power in the Reference module, without independent validation of the selected channels.",
+            "source_locator": "Section 2.4.2, p. 8."
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "No preregistered primary analysis or public statistical analysis plan is identified. The information provided is insufficient to assess selective reporting.",
+            "source_locator": "Sections 2.4.2–2.5, pp. 8–9."
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "Four FOG episodes and 40.1 seconds of cumulative freezing are available for this module in one participant. The result cannot establish a general cognitive-trigger-specific STN signature. The cognitive dual task differs substantially from the straight-line single-task Walk reference. The significant-band counts are not standardized effect sizes. No patient-level replication, event-specific beta-burst analysis, pre-FOG analysis or recovery analysis is provided. The paper's later discussion explicitly identifies larger-sample testing as necessary.",
+      "quote": "Specifically, power was elevated in the LSTN in the Anxiety (15 bands) and Cognitive (11 bands) modules in the alpha-low beta frequencies (8–20 Hz).",
+      "source_locator": {
+        "section": "Section 3.5, Changes in STN-LFP Between FOG and Walking Across CC-VHE Modules",
+        "page": "12",
+        "figure_table": "Figure 6A–B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40648292_E04",
+      "design": "Single-participant proof-of-concept case study; descriptive within-subject spectral comparison of pooled Cognitive-module FOG epochs against Walk epochs.",
+      "population": "One 65-year-old male with Parkinson's disease diagnosed 6 years previously, history of FOG, bilateral STN DBS approximately 8 months before testing, two falls during the preceding 6 months, LEDD 1150 mg/day.",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 4,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled: total enrollment of the larger study not reported. n_trials: explicit number of repeated trials not tabulated. n_electrodes_contacts: six bipolar channel pairs and twelve reconstructed channels reported, but physical electrode/contact number not reported. Four Cognitive-module FOG events and cumulative FOG duration are available from Table 1.",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported; the article does not classify the observed episodes into distinct clinical FOG subtypes.",
+      "medication_phenotype": "unknown; usual clinical medication-response phenotype not reported.",
+      "experimental_medication_state": "OFF antiparkinsonian medication, at least 12 hours since last dose; DBS OFF.",
+      "DBS_state_and_parameters": "Bilateral STN DBS implanted approximately 8 months previously; stimulation OFF during recording. Medtronic Percept PC used for LFP streaming. Stimulation parameters are not reported.",
+      "task": "Cognitive module FOG episodes versus Walk epochs. The Cognitive module produced four FOG events with a cumulative duration of 40.1 seconds. Section 3.4 states that the comparator Walk epochs totaled 24.4 seconds and were averaged across all modules. However, the Figure 5 caption describes the PSD comparison as FOG and Walk epochs during the Cognitive module. The comparator scope is therefore internally inconsistent in the publication.",
+      "recording_location": "Bilateral STN-LFP using Medtronic Percept PC, 250 Hz. One maximum-beta channel per hemisphere selected from reconstructed bipolar channels using the Reference module in the OFF-medication/OFF-DBS session.",
+      "measure": "Descriptive Welch power spectral density comparison of bilateral STN-LFP during pooled Cognitive-module FOG episodes versus pooled Walk epochs. The reported outcome is average PSD, not burst duration, beta-burst occupancy, entropy, phase modulation or cross-region coherence.",
+      "frequency_and_analysis_window": "Beta band 13–35 Hz. The paper reports 40.1 seconds of Cognitive-module FOG and 24.4 seconds of Walk epochs. General methods describe 2-second analysis windows advanced by 0.5 seconds and Welch estimation using a 1-second Hanning window with 0.5-second overlap. Exact number of windows and the precise aggregation procedure for Figure 5C are not stated.",
+      "finding": "Visual inspection of the pooled PSDs indicated elevated power during FOG compared with Walk in both LSTN and RSTN across nearly all beta-band frequencies (13–35 Hz). This is a descriptive visual result; the specific pooled comparison in Section 3.4 is not accompanied by a separate inferential P value or FDR result. The comparison is distinct from the module-specific statistical analysis in Section 3.5.",
+      "effect_estimate": "Direction: STN-LFP PSD higher during FOG than Walk in both hemispheres across nearly all 13–35 Hz beta frequencies by visual inspection. Numerical differences, standardized effect sizes and numerical confidence intervals are not reported. Figure 5 indicates that trace widths represent 95% confidence intervals of the mean.",
+      "statistical_unit_and_method": "Welch PSD estimates from pooled FOG and Walk epochs, followed by visual comparison of the mean spectral traces. No separate Monte Carlo permutation result or exact P value is reported for this particular pooled comparison. The number of contributing windows and the independence of repeated windows are not specified.",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated observational electrophysiology risk-of-bias checklist",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "The pooled spectral comparison is based on a single selected participant and cannot establish patient-level reproducibility.",
+            "source_locator": "Section 3, pp. 9–10."
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG and Walk epochs were identified and video-reviewed by the same therapist. No independent adjudication or inter-rater reliability is reported.",
+            "source_locator": "Section 2.3, p. 7."
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "some_concerns",
+            "reason": "Movement-artifact epochs were visually removed, but quantitative LFP artifact assessment and residual artifact validation are not reported.",
+            "source_locator": "Section 2.4.1, p. 8."
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "FOG epochs are from a dual-task cognitive environment, while the Walk reference is single-task straight-line walking. The comparison may reflect differences in task demands as well as freezing itself.",
+            "source_locator": "Sections 2.1.2, 2.3.2 and 3.4, pp. 4–5, 7 and 11."
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "high",
+            "reason": "Pooled PSD traces may contain overlapping windows from a small number of FOG episodes in one participant. The number of independent windows and handling of within-event temporal dependence are not reported.",
+            "source_locator": "Sections 2.4.5 and 3.4, pp. 8 and 11."
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "The specific Figure 5C visual comparison is not accompanied by a separately specified multiplicity-adjusted inferential test. Frequency-band correction described elsewhere should not be assumed to apply to this visual comparison.",
+            "source_locator": "Sections 2.5 and 3.4, pp. 9 and 11."
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "not_assessable",
+            "reason": "No predictive model is trained in this descriptive PSD analysis.",
+            "source_locator": "Section 3.4, p. 11."
+          },
+          {
+            "domain": "neural_channel_selection",
+            "judgement": "some_concerns",
+            "reason": "The analyzed STN channels were selected based on maximum beta power in the Reference trial, without independent patient-level validation.",
+            "source_locator": "Section 2.4.2, p. 8."
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "The precise analysis plan for the pooled PSD comparison is not provided. There is also an internal discrepancy between the Section 3.4 description of Walk epochs averaged across all modules and the Figure 5 caption describing Walk epochs during the Cognitive module.",
+            "source_locator": "Section 3.4 and Figure 5 caption, p. 11."
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "This result is based on visual inspection rather than a separately reported inferential comparison. The comparator population of Walk epochs is ambiguously described: Section 3.4 specifies Walk epochs averaged across all modules, whereas the Figure 5 caption specifies Walk epochs during the Cognitive module. The result should not be treated as equivalent to the module-specific FDR-corrected findings in Section 3.5. The result also pools multiple time windows from only one participant and cannot establish a universal beta-band signature.",
+      "quote": "Visual inspection of the PSDs show elevated power during the FOG epochs compared to Walking in subcortical (L- and R-STN) regions for nearly all beta-band frequencies (13–35 Hz).",
+      "source_locator": {
+        "section": "Section 3.4, Neural Synchrony Increased During FOG",
+        "page": "11",
+        "figure_table": "Figure 5C",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40648292_E05",
+      "design": "Single-participant within-subject descriptive comparison of STN-LFP beta power between OFF-medication/OFF-DBS and ON-medication/OFF-DBS conditions.",
+      "population": "One 65-year-old male with Parkinson's disease diagnosed 6 years previously, history of FOG, bilateral STN DBS approximately 8 months before testing, two falls during the preceding 6 months, LEDD 1150 mg/day.",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 5,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled: total enrollment of the larger CC-VHE study is not reported. n_trials: the two medication-state Cognitive-module recordings are described, but an explicit trial count is not provided. n_electrodes_contacts: six bipolar channel pairs and twelve reconstructed channels are reported, but physical electrode/contact count is not specified. n_FOG_events: five Cognitive-module events are explicitly documented across the two conditions, four OFF medication and one ON medication.",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported; the study does not classify FOG into distinct clinical subtypes.",
+      "medication_phenotype": "unknown; FOG was elicited in both experimental medication states, but the patient's usual clinical medication-response phenotype is not classified.",
+      "experimental_medication_state": "Within-subject comparison: (1) OFF antiparkinsonian medication, defined as at least 12 hours since last dose, with DBS OFF; (2) ON antiparkinsonian medication with DBS OFF. Exact ON-medication dose and time since administration are not reported. Testing was performed in two sessions on the same day, with OFF medication/OFF DBS followed by ON medication/OFF DBS.",
+      "DBS_state_and_parameters": "Bilateral STN DBS implanted approximately 8 months before testing. DBS stimulation was OFF in both compared recording conditions. Percept PC recorded bilateral STN-LFP. Stimulation amplitude, frequency, pulse width and active contacts are not reported. An ON-medication/ON-DBS clinical assessment was performed on the preceding day but is not the comparison reported here.",
+      "task": "Cognitive CC-VHE module, lasting 120 seconds, involving continuous walking around a virtual kitchen island while performing a picture interference cognitive-motor dual task. Full-trial STN beta power was compared between OFF-medication/OFF-DBS and ON-medication/OFF-DBS conditions. The trials contain both FOG and non-FOG periods; the reported beta-power outcome is not segmented by FOG event.",
+      "recording_location": "Bilateral STN-LFP recorded at 250 Hz using Medtronic Percept PC. One channel per hemisphere was selected according to maximum beta power during the Reference module in the OFF-medication/OFF-DBS session. Six bipolar channel pairs and twelve reconstructed channels were available. Exact anatomical contact locations are not reported.",
+      "measure": "Average bilateral STN-LFP beta-band power across the entire Cognitive-module trial, comparing medication states. This is full-trial average spectral power, not event-specific beta power, beta-burst duration, burst occupancy, entropy or phase coupling.",
+      "frequency_and_analysis_window": "Beta frequency range 13–35 Hz. Average beta power calculated across the complete 120-second Cognitive-module trial. The article does not separately specify the precise spectral averaging window and overlap for the medication comparison in Section 3.3. The general channel-selection PSD procedure uses a 1-second Hanning window and 0.5-second overlap.",
+      "finding": "STN beta power was higher during OFF medication/OFF DBS than during ON medication/OFF DBS. The reported reduction with medication was 48% in LSTN and 40% in RSTN. This is a full-trial medication-state comparison and does not establish that the beta difference occurred specifically during FOG.",
+      "effect_estimate": "OFF-medication/OFF-DBS relative to ON-medication/OFF-DBS: LSTN beta power was 48% greater; RSTN beta power was 40% greater. No confidence intervals, exact P values, standardized effect sizes or between-trial variance are reported.",
+      "statistical_unit_and_method": "Descriptive within-participant comparison of average 13–35 Hz power across the 120-second Cognitive-module recordings. No inferential statistical test or confidence interval for the medication effect is reported. The outcome is calculated over the entire trial, not from independently analyzed FOG events. The Cognitive module contained four FOG events totaling 40.1 seconds OFF medication and one event totaling 7.6 seconds ON medication, according to Table 1.",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated observational electrophysiology risk-of-bias checklist",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "Only one participant contributes data. No independent patients or representative medication-response groups are available to establish reproducibility.",
+            "source_locator": "Section 3, pp. 9–10."
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG was identified and video-reviewed by the same therapist. The medication-related full-trial beta outcome itself was not event-segmented, so the precise relationship between beta power and confirmed FOG is not established.",
+            "source_locator": "Sections 2.3.1 and 3.3, pp. 7 and 11."
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "some_concerns",
+            "reason": "LFP data were visually inspected for movement artifacts, but quantitative residual-artifact estimates and independent signal-quality validation are not provided.",
+            "source_locator": "Sections 2.4.1–2.4.2, p. 8."
+          },
+          {
+            "domain": "confounding",
+            "judgement": "high",
+            "reason": "The comparison involves one participant and two medication states tested in a fixed order on the same day. Randomization or counterbalancing of medication order is not reported. Medication state is therefore potentially confounded with time and order effects. In addition, FOG burden differs between conditions, changing the composition of the full-trial spectral average.",
+            "source_locator": "Sections 3 and 3.1–3.3, pp. 9–11."
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "The full-trial spectral comparison is based on repeated time-series observations from one participant. The precise number of contributing spectral windows and the statistical handling of temporal dependence are not separately reported.",
+            "source_locator": "Sections 2.4.2 and 3.3, pp. 8 and 11."
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "The article does not report a separate inferential medication comparison with confidence intervals or a multiplicity-adjusted P value. The number of exploratory frequency and hemisphere comparisons is not fully specified for this outcome.",
+            "source_locator": "Sections 2.5 and 3.3, pp. 9 and 11."
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "not_assessable",
+            "reason": "No predictive model is fitted for this medication-state beta-power comparison. External validation of a predictive model is not applicable.",
+            "source_locator": "Section 3.3, p. 11."
+          },
+          {
+            "domain": "neural_channel_selection",
+            "judgement": "some_concerns",
+            "reason": "One channel per hemisphere was selected based on maximum beta power in the Reference module during the OFF-medication/OFF-DBS condition. Independent validation of this selection is not reported.",
+            "source_locator": "Section 2.4.2, p. 8."
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "No preregistered analysis plan or prespecified primary medication-state spectral comparison is identified. Selective reporting cannot be established from the available information.",
+            "source_locator": "Sections 2.4.2–2.5 and 3.3, pp. 8–11."
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "The most important limitation is that beta power was averaged over the entire 120-second Cognitive-module trial, not specifically during FOG. The same participant had four Cognitive-module FOG events totaling 40.1 seconds OFF medication versus one event totaling 7.6 seconds ON medication; the percentage of the trial spent freezing decreased from 33.6% to 6.3%. Therefore, the medication-related beta-power reduction may reflect a general medication effect, altered movement state, changed FOG/non-FOG composition, or a combination of these. The study cannot establish whether beta power predicts FOG, accompanies FOG, or mediates medication-related improvement. The comparison is descriptive, single-patient and lacks inferential uncertainty estimates.",
+      "quote": "STN beta power was greater in the off–Off condition than on–Off by 48% and 40% for the LSTN and RSTN, respectively.",
+      "source_locator": {
+        "section": "Section 3.3, Beta Power Was Reduced with Medications",
+        "page": "11",
+        "figure_table": "Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

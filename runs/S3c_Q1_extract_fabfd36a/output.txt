@@ -1,0 +1,906 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:41654501; PMCID:PMC12992695; DOI:10.1038/s41531-026-01280-4",
+    "title": "Deep neurobehavioral phenotyping uncovers neural fingerprints of locomotor deficits in Parkinson’s disease",
+    "publication_status": "published",
+    "version_of_candidate": "存在同一DOI的Article in Press早期版本，属于同一论文的早期发表版本，不作为独立研究或独立队列。正式发表日期：2026-02-07。",
+    "study_id_candidate": "PMID41654501_PRIMARY_STUDY",
+    "cohort_id_candidate": "PMID41654501_HUMAN_STN_FOG_COHORT; PMID41654501_6OHDA_RAT_COHORT",
+    "cohort_relation_basis": "原始研究包含两个不同实验样本。人体部分：2名男性PD患者，年龄68和70岁，双侧STN-DBS，Medtronic SenSight B33005电极及Percept PC IPG，数据来自TRR 295 ReTune项目24778381，Würzburg大学伦理审批103/20-am。动物部分：6只6-OHDA大鼠及8只sham大鼠。两个人体患者构成同一人体研究队列，动物与人体队列完全不同。论文引用Thenaise等（2021，参考文献59）作为既往18名PD患者的临床beta证据，但没有说明与当前2名患者存在队列重叠，也没有患者编号或招募时间支持重叠判断，因此外部队列关系为unknown，不合并。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID41654501_HUMAN_HJORTH_COMPLEXITY_FOG",
+      "design": "原始患者数据；探索性观察性电生理研究；患者内FOG与正常步态事件比较。人体队列共2人，但该显著神经调制结果仅出现在Subject 2。",
+      "population": "2名男性PD患者，年龄68和70岁，均有临床FOG并接受双侧STN-DBS。本条阳性结果来自Subject 2，其双侧电极定位于STN内。Subject 1未出现相应神经调制，且右侧电极位于STN外。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 8,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 2：双侧DBS leads共2根，每根4个contacts，共8个contacts。Methods列出每侧3组非相邻双极记录对：[0-2]、[1-3]、[0-3]。Results报告6个STN channels（左3、右3），但该6通道数是否为每名患者或整个队列的计数，主文未明确。",
+      "missing_reason": "论文人体队列总数为2，但阳性调制仅来自Subject 2，因此本条n_analyzed=1。Subject 2分析了8个FOG事件及9个gait事件。原始采集部分报告Subject 1有20个FOG事件，而Human data analysis报告19个，差异原因未说明。论文没有报告独立trial总数；虽然说明进行了10次往返步行，但没有明确trial的统计定义。没有报告效应量及置信区间。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。没有将FOG分类为akinetic、trembling-in-place、shuffling或其他亚型。视频判定标准包括无法启动、尝试但不能继续行走，以及没有明显外部原因的突然行走中断。",
+      "medication_phenotype": "OFF-FOG。患者在meds-off/stim-off状态明确存在FOG；是否在meds-on时仍存在FOG或是否完全消失，未明确报告。",
+      "experimental_medication_state": "meds-off：实验前隔夜停用所有多巴胺能药物；测试时处于停药状态。",
+      "DBS_state_and_parameters": "患者已植入双侧STN-DBS，Medtronic SenSight B33005电极及Percept PC IPG。测试时stim-off至少1小时。刺激频率、幅度、脉宽及治疗触点参数未报告；测试时没有主动DBS刺激。LFP通过双极非相邻触点对记录。",
+      "task": "实际直立行走任务：患者赤足沿约10 m走道以自选速度往返10次，包括直行、转弯和返回。同步采集视频、运动学和STN-LFP。Subject 2的多数FOG事件发生于转弯。FOG起止由两名运动障碍临床医师独立视频标记。",
+      "recording_location": "双侧STN局部场电位（LFP），通过植入式DBS电极的双极触点对记录。Subject 2双侧电极均准确定位于STN。LFP原始采样率250 Hz，分析前重采样至100 Hz。",
+      "measure": "STN-LFP Hjorth complexity，时间域神经信号复杂度指标。不是beta功率、burst持续时间或跨区coherence。",
+      "frequency_and_analysis_window": "Hjorth complexity为时间域指标，论文没有报告对应频段边界。LFP原始采样率250 Hz，神经特征分析重采样至100 Hz。按FOG和gait事件分段，计算每个事件的特征均值。具体Hjorth计算窗长及重叠参数未报告。",
+      "finding": "Subject 2在实际FOG事件期间的STN Hjorth complexity较正常gait事件显著升高。该方向与作者在6-OHDA大鼠M1-ECoG akinesia期间观察到的Hjorth complexity增加一致，但人体结果只在1名患者中出现。",
+      "effect_estimate": "Hjorth complexity升高；P=0.004。采用Bonferroni校正4项神经特征检验。未报告原始差值、标准化效应量、95% CI或患者间合并效应。",
+      "statistical_unit_and_method": "患者内事件级分析。Subject 2：8个FOG事件、9个gait事件，每个事件计算特征均值。使用within-patient、trial-constrained permutation test，并对4项特征进行Bonferroni校正。P值不是基于2名患者的患者级组间推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅2名男性PD患者，未报告连续入组过程、筛选流程或未纳入患者数量。阳性结果仅来自1人。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "两名有运动障碍经验的临床医师独立检查视频，独立标注FOG起止时间，并通过讨论解决分歧；FOG判定标准明确。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除零填充区段，并剔除Subject 2一次6秒强STN伪迹。但未报告定量信噪比或全部通道的独立质量指标；Subject 1存在电极定位问题。",
+            "source_locator": "Methods—Human data analysis，p.9；Supplementary Fig.4、Fig.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "统一在meds-off/stim-off条件测试，减少药物及刺激状态混杂。但患者疾病严重程度、临床侧化和电极定位存在差异，样本不足以进行可靠的多变量混杂控制。",
+            "source_locator": "Methods—Human data collection，p.9；Results，p.5。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用患者内事件均值及trial-constrained permutation test，但显著结果基于单名患者的8个FOG事件。事件数不能替代独立患者数，无法支持人群层面的重复验证。",
+            "source_locator": "Results—Modulation of identified neural correlates，p.5；Methods—Human data analysis，p.9。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "报告对4项神经特征进行Bonferroni校正，但主文未明确说明是否对所有通道及通道筛选过程进行完整的多重比较控制。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立人体队列进行重复验证，也没有对人类FOG预测模型进行外部验证。",
+            "source_locator": "Results，p.5；Discussion。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预设分析计划。主文报告P值和方向，但没有完整效应量及置信区间；完整通道结果指向补充材料。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是单名患者中的事件级阳性结果，不是2名患者均重复出现的结果。Subject 1没有相同神经调制，且其右侧电极位于STN外。测试只在meds-off/stim-off进行，不能说明ON状态或刺激开启时的调制方向。Hjorth计算窗长没有报告。与大鼠结果的相似性仅是跨物种、跨记录位置的方向一致，不能直接视为STN机制的动物重复验证。",
+      "quote": "Hjorth complexity was up-modulated (P = 0.004)",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient；Methods—Human data analysis",
+        "page": "5；Methods: 9",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_HUMAN_HJORTH_MOBILITY_FOG",
+      "design": "原始患者数据；探索性观察性电生理研究；患者内FOG与正常步态事件比较。",
+      "population": "论文人体队列共2名男性PD患者；本条显著结果来自Subject 2，其双侧电极准确定位于STN。Subject 1没有观察到相同神经调制。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 8,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 2：2根双侧DBS leads，8个contacts；Methods列出3组非相邻双极触点对/半球。",
+      "missing_reason": "阳性结果仅来自Subject 2。该患者分析8个FOG事件及9个gait事件。独立trial总数及每个Hjorth计算窗长未报告。Subject 1的采集事件数与分析事件数存在20与19的差异，原因不明。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。没有按akinetic、trembling或shuffling等FOG亚型分类。",
+      "medication_phenotype": "OFF-FOG。明确在meds-off/stim-off时存在FOG；ON-FOG状态未知。",
+      "experimental_medication_state": "meds-off，隔夜停用所有多巴胺能药物。",
+      "DBS_state_and_parameters": "已植入双侧STN-DBS；记录时stim-off至少1小时。主动刺激频率、幅度及脉宽不适用，具体治疗参数未报告。使用双极非相邻触点对记录LFP。",
+      "task": "实际10 m过道赤足往返步行10次，自选速度，包括直行和转弯。视频确认实际FOG，Subject 2多数FOG发生于转弯。",
+      "recording_location": "双侧STN-LFP，Medtronic SenSight B33005电极，原始采样率250 Hz，分析时重采样100 Hz。",
+      "measure": "STN-LFP Hjorth mobility，时间域神经信号活动度/频率内容指标。",
+      "frequency_and_analysis_window": "没有指定频段边界。LFP采样250 Hz，重采样100 Hz。每个FOG和gait事件计算特征均值；具体Hjorth计算窗长未报告。",
+      "finding": "Subject 2在FOG期间的STN Hjorth mobility相较正常gait显著下降。该方向与6-OHDA大鼠M1-ECoG在akinesia onset附近的mobility下降一致。",
+      "effect_estimate": "Hjorth mobility下降；P=0.004。Bonferroni校正4项特征检验。无报告效应量、95% CI或原始差值。",
+      "statistical_unit_and_method": "Subject 2患者内事件级分析，8个FOG事件、9个gait事件；within-patient、trial-constrained permutation test；Bonferroni校正4项神经特征。非患者级组间推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人体样本只有2名男性患者，阳性结果仅来自1人；招募和筛选流程不充分报告。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "两名临床医师独立视频确认FOG并讨论解决分歧，事件起止时间有明确标注。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除零填充和6秒强伪迹，但缺少定量信号质量指标；另一患者存在STN电极定位不佳。",
+            "source_locator": "Methods—Human data analysis，p.9；Supplementary Fig.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物和刺激状态固定，但患者临床严重程度、侧化及电极位置不同，无法进行充分的人群级混杂调整。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "统计以患者内多个事件为单位，阳性结果只有1名患者，不能将多个事件当作独立患者重复验证。",
+            "source_locator": "Results，p.5；Methods—Human data analysis，p.9。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对4项特征进行了Bonferroni校正，但所有通道筛选过程的多重比较处理未充分说明。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立人体队列或外部验证。",
+            "source_locator": "Discussion。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未见预注册分析计划；未提供效应量和置信区间。",
+            "source_locator": "Results，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "单名患者阳性结果，不能估计患者间一致性。Hjorth mobility下降虽然与大鼠M1-ECoG akinesia方向一致，但人体记录部位为STN，行为终点为临床FOG，不能直接认为两者具有相同的神经发生机制。未报告具体计算窗长和效应量。统计单位为患者内事件，而非独立患者。",
+      "quote": "Hjorth mobility was downregulated (P = 0.004)",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient",
+        "page": "5",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_HUMAN_BETA_13_20_FOG",
+      "design": "原始患者数据；探索性观察性STN-LFP研究；患者内FOG与正常步态事件比较。",
+      "population": "2名男性PD患者，均有FOG。该项显著beta调制来自Subject 2；Subject 1没有相同神经调制。Subject 2双侧电极准确位于STN。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 8,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 2：2根双侧DBS leads、8个contacts；Methods列出3组双极非相邻触点对/半球。",
+      "missing_reason": "阳性结果仅来自Subject 2，使用8个FOG事件及9个gait事件。论文没有报告独立trial总数、beta功率的绝对差值或置信区间。通道计数在Results与Methods中的表述未明确说明是否为每名患者或整个队列。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。未对FOG表现进行akinetic、trembling、shuffling等亚型分类。",
+      "medication_phenotype": "OFF-FOG。患者明确在meds-off/stim-off条件存在FOG；ON状态的FOG表型未明确。",
+      "experimental_medication_state": "meds-off，隔夜停用所有多巴胺能药物。",
+      "DBS_state_and_parameters": "双侧STN-DBS植入，测试时stim-off至少1小时。刺激频率、幅度、脉宽未报告且测试时没有主动刺激。记录使用非相邻双极触点对。",
+      "task": "10 m实际直立步行任务，赤足往返10次，自选速度，包含直行和转弯。FOG由两名临床医师视频确认。Subject 2的多数FOG事件发生于转弯。",
+      "recording_location": "双侧STN局部场电位；Medtronic SenSight B33005 DBS电极；原始采样率250 Hz，特征提取前重采样100 Hz。",
+      "measure": "STN-LFP beta-band amplitude。论文人体分析明确使用beta 13–20 Hz；属于频段功率/幅度指标，不是beta burst持续时间、占据率或相位调制。",
+      "frequency_and_analysis_window": "Beta频段13–20 Hz。LFP原始采样250 Hz，重采样100 Hz。按FOG与gait事件分段，对每个事件计算特征均值。频谱估计的具体窗长、窗函数及归一化方式未报告。",
+      "finding": "Subject 2的STN beta-band amplitude在实际FOG事件期间显著升高，相较正常gait方向为上调。作者指出这一方向与6-OHDA大鼠的beta相关活动在akinesia期间增加一致，但动物记录为M1 ECoG的20–42 Hz HB-LG，而不是人体13–20 Hz beta。",
+      "effect_estimate": "Beta amplitude升高；P=0.006。对4项神经特征检验进行Bonferroni校正。未报告绝对效应量、标准化效应量或95% CI。",
+      "statistical_unit_and_method": "Subject 2患者内事件级比较：8个FOG事件、9个gait事件；每个事件计算均值；within-patient、trial-constrained permutation test；Bonferroni校正4项特征。没有患者级组间统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有2名男性PD患者，显著结果仅来自1名患者；招募及筛选流程未详细报告。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "两名临床医师独立视频标记FOG起止时间，并讨论解决分歧。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除强STN伪迹及零填充数据，但没有报告完整的定量信号质量指标；Subject 1右侧电极定位在STN外。",
+            "source_locator": "Methods—Human data analysis，p.9；Supplementary Fig.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "测试时药物和刺激状态一致，但转弯、疾病严重程度、临床侧化及电极定位可能影响神经活动。",
+            "source_locator": "Methods—Human data collection，p.9；Results，p.5。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "P值来自单名患者内部的事件级比较，不能作为独立患者层面的重复验证。",
+            "source_locator": "Results，p.5。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对4项特征进行了Bonferroni校正，但通道选择及所有探索性分析的完整校正过程不清楚。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立人体队列验证beta调制的可重复性。",
+            "source_locator": "Discussion。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先规定的完整分析计划；未提供效应量及置信区间。",
+            "source_locator": "Results，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "人体beta结果来自1名患者，只有8个FOG事件。测试仅为meds-off/stim-off，不代表刺激开启时beta与FOG的关系。人体beta定义为13–20 Hz，而动物部分使用20–42 Hz HB-LG，两者不能简单作为同一频段进行定量比较。该研究测量的是事件期间的平均幅度，不提供beta burst持续时间、占据率或burst级预测证据。没有患者级效应量或置信区间。",
+      "quote": "the beta band was up-modulated (P = 0.006)",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient",
+        "page": "5",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_HUMAN_GAMMA_FOG",
+      "design": "原始患者数据；探索性观察性STN-LFP研究；患者内FOG与正常步态事件比较。",
+      "population": "2名男性PD患者，均有FOG。该项显著gamma调制仅出现在Subject 2，双侧STN电极定位准确。Subject 1未出现相同的神经调制。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 8,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 2：2根DBS leads、8个contacts；3组非相邻双极触点对/半球，具体通道统计口径未完全明确。",
+      "missing_reason": "显著结果来自Subject 2的8个FOG事件和9个gait事件。论文没有明确报告gamma频段上下边界、频谱估计窗长、归一化方法及效应量。独立trial数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。未明确报告FOG具体运动亚型。",
+      "medication_phenotype": "OFF-FOG。明确在meds-off/stim-off时出现FOG；ON状态未知。",
+      "experimental_medication_state": "meds-off，隔夜停用所有多巴胺能药物。",
+      "DBS_state_and_parameters": "双侧STN-DBS植入，记录时stim-off至少1小时。无主动刺激；刺激频率、幅度及脉宽未报告。",
+      "task": "10 m过道赤足往返步行10次，自选速度；直行、转弯、返回；由临床医师视频确认实际FOG。",
+      "recording_location": "双侧STN-LFP，通过植入式SenSight B33005电极的非相邻双极触点对记录；采样250 Hz，重采样100 Hz。",
+      "measure": "STN-LFP gamma-band amplitude。属于频段幅度指标。",
+      "frequency_and_analysis_window": "Gamma频段边界未报告。LFP原始采样250 Hz，特征提取重采样100 Hz；按FOG和gait事件分段，每个事件计算均值。具体频谱计算窗长未报告。",
+      "finding": "Subject 2在实际FOG事件期间的STN gamma amplitude显著升高。值得注意的是，同篇论文的大鼠M1-ECoG结果显示gamma amplitude在akinesia期间相较gait下降，人体STN与动物M1的gamma调制方向相反。",
+      "effect_estimate": "Gamma amplitude升高；P=0.004；Bonferroni校正4项特征检验。未报告效应量、绝对功率差值或95% CI。",
+      "statistical_unit_and_method": "Subject 2患者内事件级均值比较：8个FOG事件、9个gait事件；within-patient、trial-constrained permutation test；Bonferroni校正4项特征。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有2名男性患者，阳性结果仅来自1名患者。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "由两名临床医师独立视频评审并讨论解决FOG事件标记分歧。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "排除了已识别的强伪迹，但gamma频段定义及定量信号质量指标未报告。",
+            "source_locator": "Methods—Human data analysis，p.9。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "仅meds-off/stim-off条件；不同患者的临床侧化和电极定位存在差异。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "事件级统计来自单名患者，不能代替患者级重复验证。",
+            "source_locator": "Results，p.5。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对4项特征校正，但所有通道选择及探索性分析的校正情况不清楚。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立患者队列验证gamma方向和FOG关联。",
+            "source_locator": "Discussion。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册；未提供gamma频段边界、效应量和置信区间。",
+            "source_locator": "Results，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是非常重要的方向性冲突：人体STN gamma在FOG期间上调，而同篇研究的大鼠M1 gamma在akinesia期间下调。两者不能直接解释为同一生理机制的相反结果，因为物种、记录解剖位置、行为表型和频段定义不同。人体gamma上下边界未报告，且显著性只来自一名患者。",
+      "quote": "the gamma band was up-modulated (P = 0.004)",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient",
+        "page": "5",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_HUMAN_SUBJECT1_NO_MODULATION",
+      "design": "原始患者数据；探索性观察性电生理研究；单患者内FOG与正常步态比较的阴性结果。",
+      "population": "Subject 1，男性PD患者，论文总人体样本为2人。Subject 1右侧DBS电极定位不佳，位于STN外；3D重建显示右侧全部触点位于STN外。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 19,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 1：双侧DBS leads共2根、8个contacts。右侧全部触点定位于STN外；左侧电极的具体定位情况在该段文字中未充分描述。双侧记录的通道统计口径不完全明确。",
+      "missing_reason": "Subject 1采集阶段报告20个FOG事件，但Human data analysis报告19个用于分析的FOG事件，原因不明。存在LFP数据，但由于右侧电极不在STN内，无法确定患者层面双侧有效STN神经数据的数量，因此n_patients_with_valid_neural_data=null。没有报告独立trial数量。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。FOG事件没有进一步划分运动亚型。",
+      "medication_phenotype": "OFF-FOG。患者在meds-off/stim-off条件下存在FOG。",
+      "experimental_medication_state": "meds-off，隔夜停用所有多巴胺能药物。",
+      "DBS_state_and_parameters": "双侧STN-DBS植入，记录时stim-off至少1小时。右侧电极定位在STN外。主动刺激参数未报告，测试时无刺激。",
+      "task": "10 m过道赤足往返步行10次，自选速度。Subject 1的FOG事件发生于转弯和连续行走。",
+      "recording_location": "双侧植入式DBS电极LFP记录。Subject 1右侧电极位于STN外；因此该患者不能被简单视为双侧准确STN定位的记录。",
+      "measure": "Hjorth complexity、Hjorth mobility、beta amplitude及gamma amplitude四类STN相关神经特征的FOG与gait调制模式。",
+      "frequency_and_analysis_window": "LFP原始采样250 Hz，重采样100 Hz；各FOG和gait事件计算特征均值。Beta为13–20 Hz；gamma边界和Hjorth计算窗长未报告。",
+      "finding": "作者报告Subject 1没有显示神经调制。该阴性观察与Subject 2的四项特征显著调制形成患者间异质性。由于Subject 1右侧电极位于STN外，不能将该阴性结果直接解释为STN神经机制不存在。",
+      "effect_estimate": "没有报告Subject 1各特征的具体P值、效应量、置信区间或定量阴性阈值。属于作者描述的无明显调制结果。",
+      "statistical_unit_and_method": "Subject 1单患者；Human data analysis报告19个FOG事件及20个gait事件，每个事件计算均值。主文没有提供该患者四项指标的独立统计量。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "阴性结果来自单名患者，患者选择和招募流程未详细报告。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "两名临床医师独立评估视频并解决FOG事件标注分歧。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "high",
+            "reason": "Subject 1右侧电极全部触点位于STN外，直接影响双侧STN定位有效性。未报告足够证据证明阴性结果代表真实STN生理阴性。",
+            "source_locator": "Methods—Human data collection，p.9；Supplementary Fig.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "电极位置、疾病侧化及患者临床严重程度可能影响记录结果；无法区分生理阴性和记录位置造成的阴性。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多个FOG事件来自同一患者，不能视为独立患者层面的重复验证。",
+            "source_locator": "Methods—Human data analysis，p.9。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "研究整体报告4项特征的校正，但该患者的完整通道及单特征阴性统计未在主文提供。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立人体队列验证阴性结果及其与电极定位的关系。",
+            "source_locator": "Discussion。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文没有给出Subject 1四项特征的完整定量结果和置信区间。",
+            "source_locator": "Results，p.5；Supplementary Fig.4。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "该患者右侧电极定位于STN外，是解释阴性结果的重要技术因素。不能将其简单计为一例确认的STN神经活动阴性患者。另一侧的精确定位也需要结合Supplementary Fig.8审查。患者内事件数较多不能弥补独立患者数只有1的限制。",
+      "quote": "one subject did not display any neural modulation",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient；Methods—Human data collection",
+        "page": "5；9",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 4；Supplementary Fig. 8"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_HUMAN_TURN_CONFOUND_CHECK",
+      "design": "原始患者数据；探索性患者内神经信号混杂因素检查。",
+      "population": "Subject 2，男性PD患者，双侧STN电极准确定位于STN。该患者共8个FOG事件，主要发生在转弯期间。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 8,
+      "n_trials": null,
+      "n_electrodes_contacts": "Subject 2：2根双侧DBS leads、8个contacts；Methods列出3组双极非相邻触点对/半球。",
+      "missing_reason": "主文只报告作者进行了转弯相关神经信号检查，没有提供完整的统计量、效应量、比较样本数及独立trial数。详细结果指向Supplementary Fig.6。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。Subject 2的多数FOG发生于转弯，但没有具体FOG运动亚型。",
+      "medication_phenotype": "OFF-FOG。",
+      "experimental_medication_state": "meds-off，隔夜停药。",
+      "DBS_state_and_parameters": "双侧STN-DBS已植入；测试时stim-off至少1小时；具体刺激频率、幅度、脉宽未报告。",
+      "task": "10 m过道实际步行，直行、转弯及返回。FOG事件主要发生在转弯期间。作者额外检查转弯本身是否产生不同的STN神经信号特征。",
+      "recording_location": "双侧STN-LFP，双极非相邻触点对；原始250 Hz，重采样100 Hz。",
+      "measure": "转弯相关STN神经活动特征与FOG相关调制之间的混杂关系。主文没有列明该项检查的完整特征列表。",
+      "frequency_and_analysis_window": "LFP重采样100 Hz。转弯检查的具体频段、时间窗及统计窗口未在主文明确报告。",
+      "finding": "作者报告Subject 2的FOG相关神经调制不能由转弯本身产生的不同神经信号特征解释。该检查针对一个重要的行为任务混杂因素，但主文没有提供足够数据独立复核其效应量。",
+      "effect_estimate": "未在主文报告P值、效应量、置信区间或具体转弯对照统计量。",
+      "statistical_unit_and_method": "主文只报告进行了转弯相关神经签名检查；具体统计单位、试次匹配方法和检验方法需要查阅Supplementary Fig.6及其对应补充说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "检查仅基于Subject 2一名患者。",
+            "source_locator": "Results，p.5。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "low",
+            "reason": "FOG标签由两名临床医师独立视频确认。",
+            "source_locator": "Methods—Human data collection，p.9。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在一次6秒强STN伪迹排除，但转弯混杂分析的完整信号质量细节未在主文报告。",
+            "source_locator": "Methods—Human data analysis，p.9；Supplementary Fig.6。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "作者专门检查转弯混杂，方向上支持其结果；但缺少主文中的完整统计细节，不能独立确认排除程度。",
+            "source_locator": "Results，p.5；Supplementary Fig.6。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "单患者内多事件及任务阶段比较，不能提供患者级复制证据。",
+            "source_locator": "Results，p.5。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "该转弯混杂检查的完整多重比较范围未在主文说明。",
+            "source_locator": "Supplementary Fig.6。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "未在独立患者或独立任务中重复验证转弯混杂排除结果。",
+            "source_locator": "Results，p.5。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文只给出定性结论，完整分析细节位于补充材料。",
+            "source_locator": "Results，p.5；Supplementary Fig.6。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是作者对转弯混杂的定性报告，主文没有给出完整的定量统计证据。由于Subject 2多数FOG发生在转弯期间，转弯混杂仍然是后续复核时必须重点检查的因素。不能仅凭主文一句话认定所有任务复杂性混杂均已排除。",
+      "quote": "the modulation in subject 2 was not due to a different neural signature of turns",
+      "source_locator": {
+        "section": "Results—Modulation of identified neural correlates is confirmed during freezing of gait in a Parkinson’s patient",
+        "page": "5",
+        "figure_table": "Fig. 5e",
+        "supplement": "Supplementary Fig. 6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_RAT_M1_HB_LG_AKINESIA",
+      "design": "原始动物实验数据；单侧6-OHDA帕金森病模型；自由活动跑道行为观察与M1-ECoG同步记录。此项是跨物种背景证据，不是人体STN-FOG直接证据。",
+      "population": "14只雄性Sprague Dawley大鼠：6只单侧6-OHDA模型，8只sham。HB-LG状态比较主要在6只6-OHDA大鼠中进行，sham用于部分对照。",
+      "n_enrolled": 14,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "动物研究，患者相关分母不适用。没有报告该PSD比较使用的独立trial总数。Methods明确说明虽然植入了双侧STN LFP探针，但本研究没有分析这些LFP数据；M1 ECoG电极总数未明确汇总。动物研究的行为终点为akinesia，而不是人体FOG事件。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "大鼠akinesia，作者定义为几乎完全缺乏任何类型的运动；与grooming、sniffing等stationary movement及正常gait分开标记。不是人体FOG亚型。",
+      "medication_phenotype": "not_applicable，动物6-OHDA模型。",
+      "experimental_medication_state": "没有报告跑道测试期间的多巴胺能药物给药状态或药物挑战。",
+      "DBS_state_and_parameters": "未进行DBS刺激。双侧STN LFP探针虽然植入，但Methods明确指出本研究没有分析这些电极的数据。",
+      "task": "15×140 cm跑道自由活动任务。大鼠自发启动行走，每只动物最多完成15次成功穿越或记录20分钟。视频以50 fps记录，人工标记gait、stationary movement和akinesia。",
+      "recording_location": "双侧初级运动皮层M1-ECoG，原始采样率24,414.1 Hz。双侧STN LFP探针仅植入，未分析。",
+      "measure": "M1-ECoG high-beta–low-gamma（HB-LG）频段平均功率/幅度。",
+      "frequency_and_analysis_window": "PSD计算范围5–100 Hz；提取20–42 Hz平均值作为HB-LG指标。Fig.1状态特异性PSD使用每次状态发生后最初1.5秒的数据。原始神经信号采样24,414.1 Hz。",
+      "finding": "6-OHDA大鼠在akinesia期间的M1-ECoG HB-LG band amplitude高于stationary movement和gait状态。该结果属于大鼠皮层信号与akinesia的关系，不是STN信号与人体FOG的关系。",
+      "effect_estimate": "Akinesia vs stationary movement：P<0.001；akinesia vs gait：P<0.001。没有报告效应量和置信区间。",
+      "statistical_unit_and_method": "状态发生片段的PSD。Linear mixed model：locomotor state作为固定效应，recording day嵌套于subject作为随机效应。6只6-OHDA大鼠为主要神经比较样本；sham组N=8用于对照。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：动物观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅雄性Sprague Dawley大鼠；6只6-OHDA及8只sham。随机化、盲法和动物排除流程未充分报告。",
+            "source_locator": "Methods—Animal model and surgical procedures，p.8。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "行为由视频人工标记，akinesia有明确操作性定义，但未报告标注者间一致性或盲法。",
+            "source_locator": "Methods—Locomotor states labeling，p.8。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "使用Intan headstage降低运动伪迹，但未报告定量伪迹指标；STN LFP明确未纳入分析。",
+            "source_locator": "Methods—Neural data recording，p.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "单侧6-OHDA损伤导致半球不对称，状态及记录日可能影响信号；LMM对记录日嵌套于subject进行了处理。",
+            "source_locator": "Results—Basic processing，p.2；Methods—Statistical analysis。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多个状态片段和记录日来自同一只动物；LMM纳入subject相关随机效应，但状态事件数及其独立性未完整报告。",
+            "source_locator": "Results—Basic processing，p.2。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "部分行为分布比较使用Bonferroni-Holm校正，但全部频段和探索性特征筛选的整体比较范围不完全明确。",
+            "source_locator": "Methods—Locomotor states distribution analysis；Results，p.2。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "后续机器学习使用55 runs进行Group-K-Fold交叉验证，但数据来自同一小型动物队列，没有独立动物队列验证。",
+            "source_locator": "Methods—Multimodal dataset creation and testing parameters。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "使用多维数据驱动特征筛选，未报告预注册；无法判断全部预设频段和指标是否完整报告。",
+            "source_locator": "Results；Methods—Neural features dataset creation。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果不能作为STN-FOG直接证据。记录部位为M1 ECoG，行为为大鼠akinesia，而不是人体实际FOG。虽然大鼠双侧STN LFP探针已植入，但作者明确没有分析STN数据。人体beta为13–20 Hz，而此处HB-LG为20–42 Hz，不能将两者当作相同频段的重复证据。",
+      "quote": "HB-LG band amplitude was higher in akinesia than in stationary or gait (both P < 0.001)",
+      "source_locator": {
+        "section": "Results—Basic processing of locomotor deficits confirms established neural biomarkers in 6-OHDA rats",
+        "page": "2",
+        "figure_table": "Fig. 1g–h",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_RAT_M1_HJORTH_COMPLEXITY",
+      "design": "原始动物电生理数据；单侧6-OHDA模型；事件对齐的神经特征时间序列分析。",
+      "population": "6只6-OHDA Sprague Dawley大鼠；论文另外纳入8只sham动物用于部分行为及神经比较。",
+      "n_enrolled": 14,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "动物研究，没有人体FOG患者或FOG事件。时间对齐分析明确报告N=75次akinesia episodes，但没有单独报告每只动物贡献的事件数。55 runs是机器学习数据集的总运行次数，不确定是否全部用于该项事件对齐统计，因此n_trials为null。STN探针植入但未分析。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "大鼠akinesia，近乎完全无运动；不等同于人体临床FOG，也没有按人体FOG亚型分类。",
+      "medication_phenotype": "not_applicable，动物6-OHDA模型。",
+      "experimental_medication_state": "未报告跑道测试期间药物干预。",
+      "DBS_state_and_parameters": "无DBS刺激；双侧STN LFP探针植入但未分析。",
+      "task": "自由活动跑道任务；视频人工标记gait、stationary movement和akinesia；对akinesia onset进行事件对齐。",
+      "recording_location": "双侧M1-ECoG；不是STN-LFP。原始采样率24,414.1 Hz，神经特征提取采样率200 Hz。",
+      "measure": "M1-ECoG Hjorth complexity，时间域复杂度指标。",
+      "frequency_and_analysis_window": "特征采样率200 Hz。以akinesia onset为0秒，对前后各1秒进行平均时间调制分析，N=75次akinesia episodes。具体Hjorth计算内部窗口未单独报告。",
+      "finding": "Hjorth complexity在akinesia onset前逐渐升高，并在akinesia onset附近进一步升高。状态组比较显示akinesia期间complexity显著上调。",
+      "effect_estimate": "报告显著上调；使用相关t检验并对12项检验进行Bonferroni-Holm校正。具体P值、效应量及置信区间未报告。",
+      "statistical_unit_and_method": "事件对齐时间曲线基于N=75次akinesia episodes，报告mean±SD。状态比较使用related t-test，Bonferroni-Holm校正12项检验。该项分析的精确独立统计单位未完全说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：动物观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅6只6-OHDA大鼠用于主要神经分析，且仅雄性动物；动物筛选及排除流程未充分报告。",
+            "source_locator": "Methods—Animal model and surgical procedures，p.8。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "视频人工标记，akinesia定义清楚，但没有标注者间一致性和盲法报告。",
+            "source_locator": "Methods—Locomotor states labeling，p.8。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "使用headstage降低运动伪迹，但没有定量信号质量结果。",
+            "source_locator": "Methods—Neural data recording，p.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "单侧损伤和左右半球功能差异可能影响复杂度指标；模型中没有完整报告所有混杂因素。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "75个事件来自6只动物，事件不是独立动物。事件级分析与动物级推断的关系未充分说明。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用Holm校正12项检验，但108项神经特征的前期筛选存在数据驱动多重比较问题。",
+            "source_locator": "Methods—Statistical analysis of selected features alignment。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "交叉验证使用同一动物队列的55 runs，没有独立动物队列验证复杂度指标。",
+            "source_locator": "Methods—Multimodal dataset creation and testing parameters。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册；108项特征经过数据驱动筛选，无法判断全部预设指标是否完整呈现。",
+            "source_locator": "Methods—Neural features dataset creation；Results，p.4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是M1皮层信号与大鼠akinesia的关系，不是STN与人体FOG的直接证据。N=75为事件数，不是动物数。作者没有提供该指标的精确P值及效应量，也没有明确说明所有状态统计的独立分析单位。STN LFP数据没有被分析。",
+      "quote": "Hjorth Complexity was significantly up-modulated specifically during states of akinesia",
+      "source_locator": {
+        "section": "Results—Identified neural features modulate during akinetic state",
+        "page": "4",
+        "figure_table": "Fig. 4c、Fig. 4e",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_RAT_M1_HJORTH_MOBILITY",
+      "design": "原始动物电生理数据；6-OHDA模型；事件对齐的时间域神经特征分析。",
+      "population": "6只6-OHDA大鼠；另外8只sham动物用于部分对照。",
+      "n_enrolled": 14,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "动物akinesia事件不是人体FOG事件。作者报告75次akinesia episodes用于时间对齐，但未报告每只动物的事件数及独立trial总数。STN探针植入但未分析。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "大鼠akinesia，近乎完全无运动；不是人体FOG亚型。",
+      "medication_phenotype": "not_applicable，动物6-OHDA模型。",
+      "experimental_medication_state": "没有报告跑道测试期间的药物干预状态。",
+      "DBS_state_and_parameters": "没有DBS刺激。双侧STN LFP探针植入，但没有分析这些数据。",
+      "task": "自由活动跑道任务；视频人工标记三种运动状态，并对akinesia onset进行事件对齐。",
+      "recording_location": "双侧M1-ECoG；不是STN-LFP。",
+      "measure": "M1-ECoG Hjorth mobility，时间域活动度/频率内容特征。",
+      "frequency_and_analysis_window": "神经特征采样率200 Hz；平均时间调制曲线覆盖akinesia onset前后各1秒；N=75次akinesia episodes。具体Hjorth mobility计算窗长未报告。",
+      "finding": "Hjorth mobility在akinesia onset前逐渐下降，并在akinesia onset期间保持下降趋势。作者将其作为可能的状态转变实时标志，但没有在主文中报告该特征独立的显著性P值。",
+      "effect_estimate": "方向为下降；没有报告该项独立效应量、P值或95% CI。不能仅根据Fig.4d时间曲线认定存在独立显著的组水平效应。",
+      "statistical_unit_and_method": "N=75次akinesia episodes用于平均时间调制曲线。作者使用related t-test和Holm校正12项检验评估四项特征及状态，但没有明确报告Hjorth mobility本身的独立显著性结果。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：动物观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "6只6-OHDA雄性大鼠，样本规模小，动物筛选和排除情况不充分。",
+            "source_locator": "Methods—Animal model and surgical procedures，p.8。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "人工视频标记akinesia，但没有报告盲法和标注者间一致性。",
+            "source_locator": "Methods—Locomotor states labeling，p.8。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "使用headstage降低运动伪迹，但没有定量信号质量指标。",
+            "source_locator": "Methods—Neural data recording，p.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "单侧损伤、左右半球差异及行为状态可能影响Hjorth mobility；未报告完整混杂控制。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "75个akinesia事件来自6只动物，不能当作75个独立生物学样本。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用12项检验的Holm校正，但前期108项神经特征筛选存在探索性多重比较问题。",
+            "source_locator": "Methods—Statistical analysis of selected features alignment。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "未在独立动物队列验证Hjorth mobility下降。",
+            "source_locator": "Methods—Multimodal dataset creation and testing parameters。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文没有报告mobility独立P值和效应量，预注册情况不明。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该证据仅支持大鼠M1-ECoG mobility在akinesia onset附近下降。不能直接等同于人体STN-F​​OG证据。尤其需要区分：作者报告的是事件对齐曲线的下降趋势，而不是明确报告的独立显著组间效应。N=75为事件数，不是独立动物数。",
+      "quote": "Hjorth mobility displayed a gradual decline preceding and during the akinetic episode onset",
+      "source_locator": {
+        "section": "Results—Identified neural features modulate during akinetic state",
+        "page": "4",
+        "figure_table": "Fig. 4d",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41654501_RAT_M1_GAMMA_AKINESIA",
+      "design": "原始动物电生理数据；单侧6-OHDA模型；不同运动状态下神经特征比较。",
+      "population": "6只6-OHDA Sprague Dawley大鼠；另有8只sham动物用于部分对照。",
+      "n_enrolled": 14,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "动物研究，不适用人体FOG患者及事件分母。作者没有报告gamma比较的独立trial总数。75次akinesia episodes用于整体事件对齐分析，但未明确每项gamma统计的具体事件分母。STN LFP数据未分析。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "大鼠akinesia，近乎完全无运动；不等同于人体临床FOG。",
+      "medication_phenotype": "not_applicable，动物6-OHDA模型。",
+      "experimental_medication_state": "没有报告跑道测试期间的药物给药状态。",
+      "DBS_state_and_parameters": "未进行DBS刺激。虽然植入了双侧STN LFP探针，但没有分析STN记录。",
+      "task": "自由活动跑道任务；视频人工标记akinesia、stationary movement及gait。",
+      "recording_location": "双侧M1-ECoG，非STN；原始采样率24,414.1 Hz，神经特征采样率200 Hz。",
+      "measure": "M1-ECoG gamma amplitude。",
+      "frequency_and_analysis_window": "Gamma频段具体上下边界未在主文报告。神经特征采样率200 Hz；事件对齐曲线覆盖akinesia onset前后各1秒，N=75次akinesia episodes。",
+      "finding": "大鼠M1-ECoG gamma amplitude在akinesia期间下降，相较gait状态呈下调。该方向与同篇论文人体Subject 2的STN gamma在FOG期间上调相反。",
+      "effect_estimate": "Gamma amplitude在akinesia相较gait下降；使用related t-test并对12项检验进行Holm校正。具体P值及效应量未报告。",
+      "statistical_unit_and_method": "事件对齐曲线基于N=75次akinesia episodes；状态比较采用related t-test和Bonferroni-Holm校正12项检验。具体独立统计单位未完全说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：动物观察性电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅6只雄性6-OHDA大鼠用于主要神经特征分析。",
+            "source_locator": "Methods—Animal model and surgical procedures，p.8。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "行为由视频人工标记，但未报告标注者间一致性和盲法。",
+            "source_locator": "Methods—Locomotor states labeling，p.8。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "使用headstage降低运动伪迹，但没有定量信号质量指标或完整伪迹分析。",
+            "source_locator": "Methods—Neural data recording，p.8。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "记录部位为M1，且存在单侧6-OHDA损伤，半球和行为状态可能影响gamma变化。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "75个事件来自6只动物，事件级重复测量不能替代独立动物复制。",
+            "source_locator": "Results，p.4。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用12项检验的Holm校正，但前期108项神经特征筛选的总体多重比较处理不完全明确。",
+            "source_locator": "Methods—Statistical analysis of selected features alignment。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "没有独立动物队列验证gamma下调结果。",
+            "source_locator": "Methods—Multimodal dataset creation and testing parameters。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "Gamma具体频段边界和精确P值未报告；未见预注册分析计划。",
+            "source_locator": "Results—Identified neural features modulate during akinetic state，p.4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该动物gamma结果不能直接与人体STN gamma结果合并。大鼠记录部位是M1 ECoG，行为终点是akinesia；人体记录部位是STN LFP，行为终点是实际临床FOG。两个实验的gamma频段边界均未充分明确，且物种及任务不同。方向相反是需要后续机制研究解释的观察，而不是直接的生理矛盾证据。",
+      "quote": "gamma amplitude demonstrated a down-modulation during episodes of akinesia, in comparison to the gait state",
+      "source_locator": {
+        "section": "Results—Identified neural features modulate during akinetic state",
+        "page": "4",
+        "figure_table": "Fig. 4d–e",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:35309576
+题目: Corrigendum: Neural Correlates of Freezing of Gait in Parkinson's Disease: An Electrophysiology Mini-Review.
+年份: 2022  类型: Published Erratum; correction
+摘要: [This corrects the article DOI: 10.3389/fneur.2020.571086.].
+
+---
+
+pid: PMID:35310098
+题目: Synchronized Intracranial Electrical Activity and Gait Recording in Parkinson's Disease Patients With Freezing of Gait.
+年份: 2022  类型: methods-article; Journal Article
+摘要: BackgroundThis study aimed to describe a synchronized intracranial electroencephalogram (EEG) recording and motion capture system, which was designed to explore the neural dynamics during walking of Parkinson's disease (PD) patients with freezing of gait (FOG). Preliminary analysis was performed to test the reliability of this system.MethodsA total of 8 patients were enrolled in the study. All patients underwent bilateral STN-DBS surgery and were implanted with a right subdural electrode covering premotor and motor area. Synchronized electrophysiological and gait data were collected using the Nihon Kohden EEG amplifier and Codamotion system when subjects performed the Timed Up and Go (TUG) test. To verify the reliability of the acquisition system and data quality, we calculated and compared the FOG index between freezing and non-freezing periods during walking. For electrophysiological data, we first manually reviewed the scaled (five levels) quality during waking. Spectra comprising broadband electrocorticography (ECoG) and local field potential (LFP) were also compared between the FOG and non-FOG states. Lastly, connectivity analysis using coherence between cortical and STN electrodes were conducted. In addition, we also use machine learning approaches to classified FOG and non-FOG.ResultsA total of 8 patients completed 41 walking tests, 30 of which had frozen episodes, and 2
+
+---
+
+pid: PMID:35356461
+题目: Past, Present, and Future of Deep Brain Stimulation: Hardware, Software, Imaging, Physiology and Novel Approaches.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: Deep brain stimulation (DBS) has advanced treatment options for a variety of neurologic and neuropsychiatric conditions. As the technology for DBS continues to progress, treatment efficacy will continue to improve and disease indications will expand. Hardware advances such as longer-lasting batteries will reduce the frequency of battery replacement and segmented leads will facilitate improvements in the effectiveness of stimulation and have the potential to minimize stimulation side effects. Targeting advances such as specialized imaging sequences and "connectomics" will facilitate improved accuracy for lead positioning and trajectory planning. Software advances such as closed-loop stimulation and remote programming will enable DBS to be a more personalized and accessible technology. The future of DBS continues to be promising and holds the potential to further improve quality of life. In this review we will address the past, present and future of DBS.
+
+---
+
+pid: PMID:35418844
+题目: Subthalamic Deep Brain Stimulation Lead Asymmetry Impacts the Parkinsonian Gait Disorder.
+年份: 2022  类型: brief-report; Journal Article
+摘要: BackgroundThe preferable position of Deep Brain Stimulation (DBS) electrodes is proposed to be located in the dorsolateral subthalamic nucleus (STN) to improve general motor performance. The optimal DBS electrode localization for the post-operative improvement of balance and gait is unknown.MethodsIn this single-center, retrospective analyses, 66 Parkinson's disease (PD) patients (24 female, age 63 ± 7 years) were assessed pre- and post-operatively (8.45 ± 4.2 months after surgery) by using MDS-UPDRS, freezing of gait (FoG) score, Giladi's gait and falls questionnaire and Berg balance scale. The clinical outcome was related to the DBS electrode coordinates in x, y, z plane as revealed by image-based reconstruction (SureTune™). Binomial generalized linear mixed models with fixed-effect variables electrode asymmetry, parkinsonian subtype, medication, age class and clinical DBS induced changes were analyzed.ResultsSubthalamic nucleus-deep brain stimulation improved all motor, balance and FoG scores in MED OFF condition, however there were heterogeneous results in MED ON condition. DBS electrode reconstructed coordinates impacted the responsiveness of axial symptoms. FoG and balance responders showed slightly more medially located STN electrode coordinates and less medio-lateral asymmetry of the electrode reconstructed coordinates across hemispheres compared to non-responders.Concl
+
+---
+
+pid: PMID:35431262
+题目: Structural Connectivity of Subthalamic Nucleus Stimulation for Improving Freezing of Gait.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: BackgroundFreezing of gait (FOG) is among the most common and disabling symptoms of Parkinson's disease (PD). Studies show that deep brain stimulation (DBS) of the subthalamic nucleus (STN) can reduce FOG severity. However, there is uncertainty about pathways that need to be modulated to improve FOG.ObjectiveTo investigate whether STN-DBS effectively reduces FOG postoperatively and whether structural connectivity of the stimulated tissue explains variance of outcomes.MethodsWe investigated 47 patients with PD and preoperative FOG. Freezing prevalence and severity was primarily assessed using the Freezing of Gait Questionnaire (FOG-Q). In a subset of 18 patients, provoked FOG during a standardized walking course was assessed. Using a publicly available model of basal-ganglia pathways we determined stimulation-dependent connectivity associated with postoperative changes in FOG. A region-of-interest analysis to a priori defined mesencephalic regions was performed using a disease-specific normative connectome.ResultsFreezing of gait significantly improved six months postoperatively, marked by reduced frequency and duration of freezing episodes. Optimal stimulation volumes for improving FOG structurally connected to motor areas, the prefrontal cortex and to the globus pallidus. Stimulation of the lenticular fasciculus was associated with worsening of FOG. This connectivity profile w
+
+---
+
+pid: PMID:35441231
+题目: Cortical phase-amplitude coupling is key to the occurrence and treatment of freezing of gait.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait is a debilitating symptom in advanced Parkinson's disease and responds heterogeneously to treatments such as deep brain stimulation. Recent studies indicated that cortical dysfunction is involved in the development of freezing, while evidence depicting the specific role of the primary motor cortex in the multi-circuit pathology of freezing is lacking. Since abnormal beta-gamma phase-amplitude coupling recorded from the primary motor cortex in patients with Parkinson's disease indicates parkinsonian state and responses to therapeutic deep brain stimulation, we hypothesized this metric might reveal unique information on understanding and improving therapy for freezing of gait. Here, we directly recorded potentials in the primary motor cortex using subdural electrocorticography and synchronously captured gait freezing using optoelectronic motion-tracking systems in 16 freely-walking patients with Parkinson's disease who received subthalamic nucleus deep brain stimulation surgery. Overall, we recorded 451 timed up-and-go walking trials and quantified 7073 s of stable walking and 3384 s of gait freezing in conditions of on/off-stimulation and with/without dual-tasking. We found that (i) high beta-gamma phase-amplitude coupling in the primary motor cortex was detected in freezing trials (i.e. walking trials that contained freezing), but not non-freezing trials, and t
+
+---
+
+pid: PMID:35456362
+题目: Combined Stimulation of the Substantia Nigra and the Subthalamic Nucleus for the Treatment of Refractory Gait Disturbances in Parkinson's Disease: A Preliminary Study.
+年份: 2022  类型: research-article; Journal Article
+摘要: Deep brain stimulation of the subthalamic nucleus is efficient for the treatment of motor symptoms (i.e., tremors) in patients with Parkinson's disease. Gait disorders usually appear during advanced stages of idiopathic Parkinson's disease in up to 80% of patients and have an important impact on their quality of life. The effects of deep brain stimulation of the subthalamic nucleus on gait and balance are still controversial. For this reason, alternative targets have been considered, such as stimulation of the pedunculopontine nucleus and the pars reticulata of substantia nigra, involved in the integration of the functional connections for gait. Due to the proximity of the subthalamic nucleus to the substantia nigra, their combined stimulation is feasible and may lead to better outcomes, improving axial symptoms. Our objective was to prospectively compare simultaneous stimulation of both structures versus conventional subthalamic stimulation in improving gait disorders. In ten patients with advanced Parkinson's disease, deep brain stimulation leads (eight linear contacts) were implanted, and gait analysis was performed 6 months after surgery in off-stimulation and after 4 weeks of dual or single subthalamic stimulation. An improvement in gait parameters was confirmed with both stimulation conditions, with better results with combined substantia nigra and subthalamic stimulation
+
+---
+
+pid: PMID:35490252
+题目: Stepping up to meet the challenge of freezing of gait in Parkinson's disease.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article
+摘要: There has been a growing appreciation for freezing of gait as a disabling symptom that causes a significant burden in Parkinson's disease. Previous research has highlighted some of the key components that underlie the phenomenon, but these reductionist approaches have yet to lead to a paradigm shift resulting in the development of novel treatment strategies. Addressing this issue will require greater integration of multi-modal data with complex computational modeling, but there are a number of critical aspects that need to be considered before embarking on such an approach. This paper highlights where the field needs to address current gaps and shortcomings including the standardization of definitions and measurement, phenomenology and pathophysiology, as well as considering what available data exist and how future studies should be constructed to achieve the greatest potential to better understand and treat this devastating symptom.
+
+---
+
+pid: PMID:35652005
+题目: Troubleshooting Gait Disturbances in Parkinson's Disease With Deep Brain Stimulation.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: Deep brain stimulation (DBS) of the subthalamic nucleus or the globus pallidus is an established treatment for Parkinson's disease (PD) that yields a marked and lasting improvement of motor symptoms. Yet, DBS benefit on gait disturbances in PD is still debated and can be a source of dissatisfaction and poor quality of life. Gait disturbances in PD encompass a variety of clinical manifestations and rely on different pathophysiological bases. While gait disturbances arising years after DBS surgery can be related to disease progression, early impairment of gait may be secondary to treatable causes and benefits from DBS reprogramming. In this review, we tackle the issue of gait disturbances in PD patients with DBS by discussing their neurophysiological basis, providing a detailed clinical characterization, and proposing a pragmatic programming approach to support their management.
+
+---
+
+pid: PMID:35786442
+题目: Therapeutic deep brain stimulation disrupts movement-related subthalamic nucleus activity in parkinsonian mice.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Subthalamic nucleus deep brain stimulation (STN DBS) relieves many motor symptoms of Parkinson's disease (PD), but its underlying therapeutic mechanisms remain unclear. Since its advent, three major theories have been proposed: (1) DBS inhibits the STN and basal ganglia output; (2) DBS antidromically activates motor cortex; and (3) DBS disrupts firing dynamics within the STN. Previously, stimulation-related electrical artifacts limited mechanistic investigations using electrophysiology. We used electrical artifact-free GCaMP fiber photometry to investigate activity in basal ganglia nuclei during STN DBS in parkinsonian mice. To test whether the observed changes in activity were sufficient to relieve motor symptoms, we then combined electrophysiological recording with targeted optical DBS protocols. Our findings suggest that STN DBS exerts its therapeutic effect through the disruption of movement-related STN activity, rather than inhibition or antidromic activation. These results provide insight into optimizing PD treatments and establish an approach for investigating DBS in other neuropsychiatric conditions.
+
+---
+
+pid: PMID:35848860
+题目: Towards adaptive deep brain stimulation for freezing of gait.
+年份: 2022  类型: Comment; Research Support, Non-U.S. Gov't; discussion; Editorial
+摘要: （无摘要）
+
+---
+
+pid: PMID:35875799
+题目: Pedunculopontine Nucleus Dysconnectivity Correlates With Gait Impairment in Parkinson's Disease: An Exploratory Study.
+年份: 2022  类型: research-article; Journal Article
+摘要: BackgroundGait impairment is a debilitating and progressive feature of Parkinson's disease (PD). Increasing evidence suggests that gait control is partly mediated by cholinergic signaling from the pedunculopontine nucleus (PPN).ObjectiveWe investigated whether PPN structural connectivity correlated with quantitative gait measures in PD.MethodsTwenty PD patients and 15 controls underwent diffusion tensor imaging to quantify structural connectivity of the PPN. Whole brain analysis using tract-based spatial statistics and probabilistic tractography were performed using the PPN as a seed region of interest for cortical and subcortical target structures. Gait metrics were recorded in subjects' medication ON and OFF states, and were used to determine if specific features of gait dysfunction in PD were related to PPN structural connectivity.ResultsTract-based spatial statistics revealed reduced structural connectivity involving the corpus callosum and right superior corona radiata, but did not correlate with gait measures. Abnormalities in PPN structural connectivity in PD were lateralized to the right hemisphere, with pathways involving the right caudate nucleus, amygdala, pre-supplementary motor area, and primary somatosensory cortex. Altered connectivity of the right PPN-caudate nucleus was associated with worsened cadence, stride time, and velocity while in the ON state; altered c
+
+---
+
+pid: PMID:35886651
+题目: New Targets and New Technologies in the Treatment of Parkinson's Disease: A Narrative Review.
+年份: 2022  类型: Review; discussion; Journal Article
+摘要: Parkinson's disease (PD) is a progressive neurodegenerative disease, whose main neuropathological finding is pars compacta degeneration due to the accumulation of Lewy bodies and Lewy neurites, and subsequent dopamine depletion. This leads to an increase in the activity of the subthalamic nucleus (STN) and the internal globus pallidus (GPi). Understanding functional anatomy is the key to understanding and developing new targets and new technologies that could potentially improve motor and non-motor symptoms in PD. Currently, the classical targets are insufficient to improve the entire wide spectrum of symptoms in PD (especially non-dopaminergic ones) and none are free of the side effects which are not only associated with the procedure, but with the targets themselves. The objective of this narrative review is to show new targets in DBS surgery as well as new technologies that are under study and have shown promising results to date. The aim is to give an overview of these new targets, as well as their limitations, and describe the current studies in this research field in order to review ongoing research that will probably become effective and routine treatments for PD in the near future.
+
+---
+
+pid: PMID:35917720
+题目: Imaging the neural underpinnings of freezing of gait in Parkinson's disease.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article
+摘要: Freezing of gait (FoG) is a paroxysmal and sporadic gait impairment that severely affects PD patients' quality of life. This review summarizes current neuroimaging investigations that characterize the neural underpinnings of FoG in PD. The review presents and discusses the latest advances across multiple methodological domains that shed light on structural correlates, connectivity changes, and activation patterns associated with the different pathophysiological models of FoG in PD. Resting-state fMRI studies mainly report cortico-striatal decoupling and disruptions in connectivity along the dorsal stream of visuomotor processing, thus supporting the 'interference' and the 'perceptual dysfunction' models of FoG. Task-based MRI studies employing virtual reality and motor imagery paradigms reveal a disruption in functional connectivity between cortical and subcortical regions and an increased recruitment of parieto-occipital regions, thus corroborating the 'interference' and 'perceptual dysfunction' models of FoG. The main findings of fNIRS studies of actual gait primarily reveal increased recruitment of frontal areas during gait, supporting the 'executive dysfunction' model of FoG. Finally, we discuss how identifying the neural substrates of FoG may open new avenues to develop efficient treatment strategies.
+
+---
+
+pid: PMID:35976323
+题目: Deep brain stimulation in Parkinson's disease: state of the art and future perspectives.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: For more than 30 years, Deep Brain Stimulation (DBS) has been a therapeutic option for Parkinson's disease (PD) treatment. However, this therapy is still underutilized mainly due to misinformation regarding risks and clinical outcomes. DBS can ameliorate several motor and non-motor symptoms, improving patients' quality of life. Furthermore, most of the improvement after DBS is long-lasting and present even in advanced PD. Adequate patient selection, precise electric leads placement, and correct DBS programming are paramount for good surgical outcomes. Nonetheless, DBS still has many limitations: axial symptoms and signs, such as speech, balance and gait, do not improve to the same extent as appendicular symptoms and can even be worsened as a direct or indirect consequence of surgery and stimulation. In addition, there are still unanswered questions regarding patient's selection, surgical planning and programming techniques, such as the role of surgicogenomics, more precise imaging-based lead placement, new brain targets, advanced programming strategies and hardware features. The net effect of these innovations should not only be to refine the beneficial effect we currently observe on selected symptoms and signs but also to improve treatment resistant facets of PD, such as axial and non-motor features. In this review, we discuss the current state of the art regarding DBS selecti
+
+---
+
+pid: PMID:35979336
+题目: Case report: Combined therapy of bilateral subthalamic nucleus deep brain stimulation and spinal cord stimulation significantly improves motor function in a patient with multiple system atrophy with predominant parkinsonism.
+年份: 2022  类型: Journal Article; Case Reports; case-report
+摘要: Multiple system atrophy with predominant parkinsonism (MSA-P) is a highly incapacitating disease with a short life expectancy and symptomatic therapy is still limited. In this report, we presented the case of a 65-year-old woman with a 3-year history of severe rigidity, bradykinesia, and gait dysfunction alongside severe freezing of gait diagnosed with MSA-P. She underwent combined therapy of bilateral subthalamic nucleus deep brain stimulation (DBS) and low-thoracic spinal cord stimulation (SCS). The double-blind evaluation of the Movement Disorder Society Sponsored Revision of the Unified Parkinson's Disease Rating Scale part III and 7-m Timed Up and Go at follow-ups showed her cardinal parkinsonian symptoms benefit significantly from DBS stimulation, while the improvement of SCS was mainly embodied in lower-limb symptoms. The combined stimulation achieved a better improvement of motor function than either DBS or SCS stimulation alone. Most notably, the improvement of lower-limb symptoms was significantly enhanced by the combined stimulation.
+
+---
+
+pid: PMID:35989935
+题目: Editorial: Biomarkers of neurodegeneration and brain function and their relationships with clinical and neuropsychological outcomes in monitoring deep brain stimulation efficacy in movement disorder patients.
+年份: 2022  类型: Editorial
+摘要: （无摘要）
+
+---
+
+pid: PMID:36069345
+题目: The effect of age and disease duration on the efficacy of subthalamic nuclei deep brain stimulation in Parkinson's disease patients.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundPrevious studies have reported the effects of age and disease duration on the efficacy of subthalamic nuclei deep brain stimulation (STN-DBS) of Parkinson's disease (PD) patients. However, available data involving these issues are not consistent. In particular, the effect of age and disease duration on the initial efficacy of STN-DBS has not been established.MethodsA total of 51 patients with PD treated with bilateral STN-DBS were involved in the present study. They received clinical symptom evaluation during the preoperative, initial, and chronic stages of surgery. The correlations between age when undergoing surgery/age at disease onset/disease duration and outcomes of STN-DBS were measured.ResultsThe preoperative levodopa response was negatively associated with age. During the initial stage, the age when undergoing surgery and age at disease onset were negatively correlated with the effect on bradykinesia, with better symptom control of general symptoms in long-term disease patients. Similarly, patients with an early time of surgery and disease onset and long-term disease duration showed better control of bradykinesia and axial symptoms at the chronic stage. Furthermore, a long-term disease duration and early disease onset benefited from an increase of therapeutic efficacy in general, rigid, and axial symptoms with STN-DBS after a long period. Nevertheless, patient
+
+---
+
+pid: PMID:36070366
+题目: Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: Disruption of subthalamic nucleus dynamics in Parkinson's disease leads to impairments during walking. Here, we aimed to uncover the principles through which the subthalamic nucleus encodes functional and dysfunctional walking in people with Parkinson's disease. We conceived a neurorobotic platform embedding an isokinetic dynamometric chair that allowed us to deconstruct key components of walking under well-controlled conditions. We exploited this platform in 18 patients with Parkinson's disease to demonstrate that the subthalamic nucleus encodes the initiation, termination, and amplitude of leg muscle activation. We found that the same fundamental principles determine the encoding of leg muscle synergies during standing and walking. We translated this understanding into a machine learning framework that decoded muscle activation, walking states, locomotor vigor, and freezing of gait. These results expose key principles through which subthalamic nucleus dynamics encode walking, opening the possibility to operate neuroprosthetic systems with these signals to improve walking in people with Parkinson's disease.
+
+---
+
+pid: PMID:36110462
+题目: Deep Brain Stimulation and Microelectrode Recording for the Treatment of Parkinson's Disease.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is a neurological disorder in which nigrostriatal pathways involving the basal ganglia experience a decrease in neural activity regarding dopaminergic neurons. PD symptoms, such as muscle stiffness and involuntary tremors, have an adverse impact on the daily lives of those affected. Current medical treatments seek to decrease the severity of these symptoms. Deep brain stimulation (DBS) has become the preferred safe, and reliable treatment approach. DBS involves implanting microelectrodes into subcortical areas that produce electrical impulses directly to high populations of dopaminergic neurons. The most common targets are the subthalamic nucleus (STN), and the basal ganglia's globus pallidus pars interna (GPi). Research studies suggest that DBS of the STN may cause a significant reduction in the daily dose of L-DOPA compared to DBS of the GPi. DBS of the STN has suggested that there may be sweet spots within the STN that provide hyper-direct cortical connectivity pathways to the primary motor cortex (M1), supplementary motor area (SMA), and prefrontal cortex (PFC). In addition, the pedunculopontine nucleus (PPN) may be a new target for DBS that helps treat locomotion problems associated with gait and posture. Both microelectrode recording (MER) and magnetic resonance imaging (MRI) are used to ensure electrode placement accuracy. Using MER, stimulation 
+
+---
+
+pid: PMID:36185822
+题目: Abnormal neural oscillations during gait and dual-task in Parkinson's disease.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: Gait dysfunctions are debilitating motor symptoms of Parkinson's disease (PD) and may result in frequent falling with health complications. The contribution of the motor-cognitive network to gait disturbance can be studied more thoroughly by challenging motor-cognitive dual-task gait performances. Gait is a complex motor task that requires an appropriate contribution from motor and cognitive networks, reflected in frequency modulations among several cortical and subcortical networks. Electrophysiological recordings by scalp electroencephalography and implanted deep brain stimulation (DBS) electrodes have unveiled modulations of specific oscillatory patterns in the cortical-subcortical circuits in PD. In this review, we summarize oscillatory contributions of the cortical, basal ganglia, mesencephalic locomotor, and cerebellar regions during gait and dual-task activities in PD. We detail the involvement of the cognitive network in dual-task settings and compare how abnormal oscillations in the specific frequency bands in the cortical and subcortical regions correlate with gait deficits in PD, particularly freezing of gait (FOG). We suggest that altered neural oscillations in different frequencies can cause derangements in broader brain networks, so neuromodulation and pharmacological therapies should be considered to normalize those network oscillations to improve challenged gait
+
+---
+
+pid: PMID:36209243
+题目: A systematic review of local field potential physiomarkers in Parkinson's disease: from clinical correlations to adaptive deep brain stimulation algorithms.
+年份: 2023  类型: research-article; Systematic Review; Journal Article
+摘要: Deep brain stimulation (DBS) treatment has proven effective in suppressing symptoms of rigidity, bradykinesia, and tremor in Parkinson's disease. Still, patients may suffer from disabling fluctuations in motor and non-motor symptom severity during the day. Conventional DBS treatment consists of continuous stimulation but can potentially be further optimised by adapting stimulation settings to the presence or absence of symptoms through closed-loop control. This critically relies on the use of 'physiomarkers' extracted from (neuro)physiological signals. Ideal physiomarkers for adaptive DBS (aDBS) are indicative of symptom severity, detectable in every patient, and technically suitable for implementation. In the last decades, much effort has been put into the detection of local field potential (LFP) physiomarkers and in their use in clinical practice. We conducted a research synthesis of the correlations that have been reported between LFP signal features and one or more specific PD motor symptoms. Features based on the spectral beta band (~ 13 to 30 Hz) explained ~ 17% of individual variability in bradykinesia and rigidity symptom severity. Limitations of beta band oscillations as physiomarker are discussed, and strategies for further improvement of aDBS are explored.
+
+---
+
+pid: PMID:36211167
+题目: Dramatic Recovery of Freezing of Gait with Subthalamic Nucleus Deep Brain Stimulation.
+年份: 2022  类型: letter; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:36211184
+题目: The Detailed İnvestigation of Eyelid-Opening Apraxia after Subthalamic Nucleus Deep Brain Stimulation.
+年份: 2022  类型: letter; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:36242900
+题目: Freezing of gait depends on cortico-subthalamic network recruitment following STN-DBS in PD patients.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: IntroductionSubthalamic deep-brain-stimulation (STN-DBS) is an effective means to treat Parkinson's disease (PD) symptoms. Its benefit on gait disorders is variable, with freezing of gait (FOG) worsening in about 30% of cases. Here, we investigate the clinical and anatomical features that could explain post-operative FOG.MethodsGait and balance disorders were assessed in 19 patients, before and after STN-DBS using clinical scales and gait recordings. The location of active stimulation contacts were evaluated individually and the volumes of activated tissue (VAT) modelled for each hemisphere. We used a whole brain tractography template constructed from another PD cohort to assess the connectivity of each VAT within the 39 Brodmann cortical areas (BA) to search for correlations between postoperative PD disability and cortico-subthalamic connectivity.ResultsSTN-DBS induced a 100% improvement to a 166% worsening in gait disorders, with a mean FOG decrease of 36%. We found two large cortical clusters for VAT connectivity: one "prefrontal", mainly connected with BA 8,9,10,11 and 32, and one "sensorimotor", mainly connected with BA 1-2-3,4 and 6. After surgery, FOG severity positively correlated with the right prefrontal VAT connectivity, and negatively with the right sensorimotor VAT connectivity. The right prefrontal VAT connectivity also tended to be positively correlated with the 
+
+---
+
+pid: PMID:36270803
+题目: Cortico-Subthalamic Field Potentials Support Classification of the Natural Gait Cycle in Parkinson's Disease and Reveal Individualized Spectral Signatures.
+年份: 2022  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: The ability of humans to coordinate stereotyped, alternating movements between the two legs during bipedal walking is a complex motor behavior that requires precisely timed activities across multiple nodes of the supraspinal network. Understanding of the neural network dynamics that underlie natural walking in humans is limited. We investigated cortical and subthalamic neural activities during overground walking and evaluated spectral biomarkers to decode the gait cycle in three patients with Parkinson's disease without gait disturbances. Patients were implanted with chronic bilateral deep brain stimulation (DBS) leads in the subthalamic nucleus (STN) and electrocorticography paddles overlaying the primary motor and somatosensory cortices. Local field potentials were recorded from these areas while the participants performed overground walking and synchronized to external gait kinematic sensors. We found that the STN displays increased low-frequency (4-12 Hz) spectral power during the period before contralateral leg swing. Furthermore, STN shows increased theta frequency (4-8 Hz) coherence with the primary motor through the initiation and early phase of contralateral leg swing. Additional analysis revealed that each patient had specific frequency bands that could detect a significant difference between left and right initial leg swing. Our findings indicate that there are alter
+
+---
+
+pid: PMID:36389071
+题目: Large-scale frontoparietal theta, alpha, and beta phase synchronization: A set of EEG differential characteristics for freezing of gait in Parkinson's disease?
+年份: 2022  类型: research-article; Journal Article
+摘要: Freezing of gait (FOG) is a complex gait disturbance in Parkinson's disease (PD), during which the patient is not able to effectively initiate gait or continue walking. The mystery of the FOG phenomenon is still unsolved. Recent studies have revealed abnormalities in cortical activities associated with FOG, which highlights the importance of cortical and cortical-subcortical network dysfunction in PD patients with FOG. In this paper, phase-locking value (PLV) of eight frequency sub-bands between 0.05 Hz and 35 Hz over frontal, motor, and parietal areas [during an ankle dorsiflexion (ADF) task] is used to investigate EEG phase synchronization. PLV was investigated over both superficial and deeper networks by analyzing EEG signals preprocessed with and without Surface Laplacian (SL) spatial filter. Four groups of participants were included: PD patients with severe FOG (N = 5, 5 males), PD patients with mild FOG (N = 7, 6 males), PD patients without FOG (N = 14, 13 males), and healthy age-matched controls (N = 13, 10 males). Fifteen trials were recorded from each participant. At superficial layers, frontoparietal theta phase synchrony was a unique feature present in PD with FOG groups. At deeper networks, significant dominance of interhemispheric frontoparietal alpha phase synchrony in PD with FOG, in contrast to beta phase synchrony in PD without FOG, was identified. Alpha phase 
+
+---
+
+pid: PMID:36411569
+题目: Surgical Advances in Parkinson's Disease.
+年份: 2024  类型: review-article; Review; Journal Article
+摘要: While symptomatic pharmacological therapy remains the main therapeutic strategy for Parkinson's disease (PD), over the last two decades, surgical approaches have become more commonly used to control levodopa-induced motor complications and dopamine-resistant and non-motor symptoms of PD. In this paper, we discuss old and new surgical treatments for PD and the many technological innovations in this field. We have initially reviewed the relevant surgical anatomy as well as the pathological signaling considered to be the underlying cause of specific symptoms of PD. Subsequently, early attempts at surgical symptom control will be briefly reviewed. As the most well-known surgical intervention for PD is deep brain stimulation, this subject is discussed at length. As deciding on whether a patient stands to benefit from DBS can be quite difficult, the different proposed paradigms for precisely this are covered. Following this, the evidence regarding different targets, especially the subthalamic nucleus and internal globus pallidus, is reviewed as well as the evidence for newer proposed targets for specific symptoms. Due to the rapidly expanding nature of knowledge and technological capabilities, some of these new and potential future capabilities are given consideration in terms of their current and future use. Following this, we have reviewed newer treatment modalities, especially mag
+
+---
+
+pid: PMID:36504662
+题目: Dystonia and the pedunculopontine nucleus: Current evidences and potential mechanisms.
+年份: 2022  类型: review-article; Review; Journal Article
+摘要: Being a major component of the midbrain locomotion region, the pedunculopontine nucleus (PPN) is known to have various connections with the basal ganglia, the cerebral cortex, thalamus, and motor regions of the brainstem and spinal cord. Functionally, the PPN is associated with muscle tone control and locomotion modulation, including motor initiation, rhythm and speed. In addition to its motor functions, the PPN also contribute to level of arousal, attention, memory and learning. Recent studies have revealed neuropathologic deficits in the PPN in both patients and animal models of dystonia, and deep brain stimulation of the PPN also showed alleviation of axial dystonia in patients of Parkinson's disease. These findings indicate that the PPN might play an important role in the development of dystonia. Moreover, with increasing preclinical evidences showed presence of dystonia-like behaviors, muscle tone changes, impaired cognitive functions and sleep following lesion or neuromodulation of the PPN, it is assumed that the pathological changes of the PPN might contribute to both motor and non-motor manifestations of dystonia. In this review, we aim to summarize the involvement of the PPN in dystonia based on the current preclinical and clinical evidences. Moreover, potential mechanisms for its contributions to the manifestation of dystonia is also discussed base on the dystonia-rel
+
+---
+
+pid: PMID:36561025
+题目: Letter Regarding the Article Entitled: "The Effect of Dual Tasking and Deep Brain Stimulation Frequency Parameters on Gait in Advanced Parkinson's Disease".
+年份: 2022  类型: Letter
+摘要: （无摘要）

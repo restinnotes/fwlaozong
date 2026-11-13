@@ -1,0 +1,257 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:37226972
+题目: Subthalamic Nucleus Activity during Cognitive Load and Gait Dysfunction in Parkinson's Disease.
+年份: 2023
+全文：
+# Subthalamic Nucleus Activity during Cognitive Load and Gait Dysfunction in Parkinson's Disease
+
+## Abstract
+Gait freezing is a common, disabling symptom of Parkinson's disease characterized by sudden motor arrest during walking. Adaptive deep brain stimulation devices that detect freezing and deliver real‐time, symptom‐specific stimulation are a potential treatment strategy. Real‐time alterations in subthalamic nucleus firing patterns have been demonstrated with lower limb freezing, however, whether similar abnormal signatures occur with freezing provoked by cognitive load, is unknown. We obtained subthalamic nucleus microelectrode recordings from eight Parkinson's disease patients performing a validated virtual reality gait task, requiring responses to on‐screen cognitive cues while maintaining motor output. Signal analysis during 15 trials containing freezing or significant motor output slowing precipitated by dual‐tasking demonstrated reduced θ frequency (3–8 Hz) firing compared to 18 unaffected trials. These preliminary results reveal a potential neurobiological basis for the interplay between cognitive factors and gait disturbances including freezing in Parkinson's disease, informing development of adaptive deep brain stimulation protocols. © 2023 The Authors. Movement Disorders published by Wiley Periodicals LLC on behalf of International Parkinson and Movement Disorder Society. Keywords: freezing of gait, Parkinson's disease, subthalamic nucleus, deep brain stimulation, virtual reality
+
+Freezing of gait (FOG) in Parkinson's disease (PD) is a common and disabling symptom characterized by sudden, paroxysmal motor arrest during walking that often leads to falls and poor quality of life.
+1
+ There are various observed triggers for freezing including dual‐tasking, where additional cognitive demands are imposed during walking.2, 3 Patients with PD and FOG have impaired cognitive and inhibitory control, particularly during cognitive load.4, 5 It has been suggested that pathophysiology in fronto‐subthalamic circuits within the cognitive control network
+6
+ may contribute to FOG.
+7
+ Functional neuroimaging has demonstrated decoupling within this network in PD patients with FOG during high cognitive load.
+8
+ Furthermore, microelectrode recordings obtained during deep brain stimulation (DBS) surgery identified altered subthalamic nucleus (STN) firing coincident with lower limb freezing during virtual reality (VR) gait task performance.
+9
+ This suggests FOG pathogenesis involves an interplay between cognitive and motor factors within cortico‐basal ganglia circuits, potentially converging in the STN. To date, STN activity patterns between effective and dysfunctional motor‐cognitive dual‐tasking in PD have not been examined, limiting the development of adaptive DBS systems toward targeting freezing in a variety of contexts.
+
+We used a validated intraoperative VR gait paradigm14, 15 to explore STN activity in PD patients during periods of motor output with concurrent cognitive load. We sought to identify alterations in STN firing during cognitive cue processing that occurred with disruption of ongoing motor output (“gait” dysfunction) compared to periods where motor output and associated VR gait progression were unaffected by cognitive dual‐tasking.
+
+## Methods
+
+### Participants and Clinical Assessments
+
+Eight patients were recruited through the ForeFront Parkinson's Disease Research Clinic, University of Sydney and Westmead Private Hospital with Human Research Ethics Committee approval. Written informed consent was obtained according to the Declaration of Helsinki. Patients were not selected for the presence of FOG, although patients who experienced freezing during the VR task all had FOG preoperatively.
+
+### Intraoperative VR Gait Paradigm and Cognitive Dual‐Task
+
+The intraoperative setup and VR gait task4, 14, 15, 16 were as described in previous work.
+9
+ Participants were off dopaminergic medication for ≥12 hours. Patients used foot pedals to navigate a VR environment displayed in first‐person view on a 40‐inch screen while lying supine on the operating table (Supplementary Fig. S2). The testing paradigm included cues requiring cognitive input from participants that appeared in the bottom third of the screen (Fig. 1) and consisted of pseudorandomized color‐word pairs that were either congruent (eg, “BLUE” written in blue text) or incongruent (eg, “RED” written in green text).14, 15 Subjects were instructed to keep walking for congruent color‐word cues and to stop for incongruent cues. Only appropriate responses to congruent (keep walking) cues were included in the analysis because we were specifically only interested in STN activity with cognitive load and ongoing motor output, and any incongruent (stop) segments would be confounded by STN activity associated with purposeful stopping. Overall, the task took between 2 and 3 minutes to complete with a minimum of 100 steps and 4 or 5 cognitive cues faced.
+
+[fig mds29455-fig-0001] Display of cognitive cues presented during virtual reality (VR) gait task. Upper row displays congruent color‐word pairs for which patients were instructed to respond by continuing with their VR walking. The lower two rows contain incongruent color‐word pairs for which the patients were instructed to stop. After stopping, patients were instructed to recommence walking when an explicit “WALK” cue appeared on the screen within a variable 3–5 second period to avoid anticipation. [Color figure can be viewed at wileyonlinelibrary.com]
+
+### Measures of VR Gait Performance with Cognitive Load
+
+The timepoints of each foot pedal depression were recorded, along with foot pedal amplitude as a percentage of maximum range. The modal inter‐footstep latency (mFSL) was taken as a measure of typical latency between sequential VR footsteps for each patient computed from blocks free of “contaminants” (eg, cognitive cues, freezing, and start/stop cues).9, 14, 15 Foot pedal velocity (FPV) was calculated by taking the first derivative of foot pedal amplitude over time (dA/dt). Further details are provided in the Supplementary Data 
+S1
+.
+
+Maintaining validated definitions of VR motor arrests, a “freeze” was defined as any footstep latency >2× a participant's mFSL.9, 14, 15 Significant VR gait slowing (vs. normal progression) following cognitive cue presentation was pre‐defined as >50% reduction in FPV compared to pre‐cue footsteps. Episodes of cognitive cue‐associated freezing and VR gait slowing were pooled and compared against segments where VR gait metrics were unaffected by concurrent cognitive processing.
+
+### Neurosurgical STN Recordings
+
+Please refer to the Supplementary Data 
+S1
+.
+
+### Signal Processing
+
+A time series of smoothed standardized STN multi‐unit activity (MUA) firing rate was computed according to an established protocol to facilitate permutation statistics.
+9
+ Further details are included in the Supplementary Data 
+S1
+.
+
+### Time‐Frequency Analysis
+
+Data segments were aligned to cognitive cue presentation. Following previous approaches,9, 19, 20, 21, 22 the θ (3–8 Hz), α (9–12 Hz), β (13–30 Hz), and γ (40–150 Hz) modulation of the MUA signal was computed using a 2nd‐order Butterworth band‐pass filter. The envelope of θ, α, β, and γ modulation was calculated by passing these respective time series through a low‐pass (<4 Hz) filter.
+
+### Statistical Analysis
+
+Please refer to the Supplementary Data 
+S1
+.
+
+## Results
+
+Please see the Supplementary Data 
+S1
+ for results of VR gait task performance parameters. There were 33 trials of congruent cognitive cue responses during VR gait. In 18 of these trials, motor output was not affected. The remaining 15 trials were pooled and classed as cognitive cue‐associated VR freezing (n = 8) or significant VR gait slowing where there was >50% FPV reduction (n = 7).
+
+Statistical permutation testing revealed a sustained and significant reduction in θ frequency STN firing centered on cognitive cue presentation in trials that evolved into lower limb freezing or significant VR motor output slowing compared to trials where VR gait progression was unaffected by cognitive load (Fig. 2). No significant differences were observed for other frequencies (Supplementary Fig. S3). We observed transient increases in STN MUA firing rate during the interval between cue presentation and the first post‐cue footstep in trials that contained freezing or VR gait slowing.
+
+[fig mds29455-fig-0002] Subthalamic nucleus (STN) θ activity changes observed with cognitive dual‐tasking. θ frequency (3–8 Hz) modulation (power) of the group‐level mean MUA signal (y‐axis) is plotted over time (x‐axis, virtual reality [VR] footsteps). There was an observed reduction in STN θ (3–8 Hz) activity at the moment of cognitive cue presentation and shortly after for trials that evolved into freezing of gait or significant VR gait disturbance (red = VR gait affected) compared to those trials where VR gait progression was unaffected by cognitive cue processing (blue). There were also relative reductions in θ activity in close proximity to ensuing footsteps in these affected trials. The data has been aligned to cognitive cue presentation (footstep 0) and spans from 2 footsteps where subjects are walking before cue presentation (pre‐cue period = shaded green) to 3 footsteps after cue presentation (post‐cue period = shaded purple). Data has been scaled with linear interpolation to standardize each inter‐footstep latency to a segment of 1000 data points so that footsteps remain aligned. Shaded gray bars designate periods where differences in STN θ activity between trials was statistically significant. Results obtained using nonparametric statistical permutation testing with a significance level set to P = 0.05 with a correction for multiple comparisons. [Color figure can be viewed at wileyonlinelibrary.com]
+
+## Discussion
+
+We report real‐time changes in STN MUA that occurred when progression of ongoing VR motor output was disturbed by concurrent cognitive processing. Specifically, we observed reduced θ activity coincident with cue presentation for trials where ongoing VR gait was disturbed by concurrent cognitive processing (either VR freezing or >50% FPV reduction), compared to trials that were unaffected by dual‐tasking (Fig. 2).
+
+Recent work established a link between rhythmic cortical and subcortical θ activity and the dynamic allocation of attentional resources toward relevant environmental information.
+25
+ Reduced θ activity at cognitive cue presentation may be inadequate to reallocate attentional resources for effective gait maintenance with concurrent cognitive load, resulting in increased stepping variability, reduced velocity, and ultimately FOG.
+7
+ This is supported by functional neuroimaging studies demonstrating poor recruitment within the cognitive control network during periods of high cognitive load with VR gait in freezers.
+26
+ Another study observed increases in 7 to 12 Hz pedunculopontine activity (overlapping our θ range) that correlated with gait and cognitive performance and is thought to support the role of these frequencies in maintaining attention.27, 28
+
+The emergence of STN DBS therapy in PD has enabled interrogation of neuronal oscillatory dynamics within neurophysiology and disease.29, 30 STN β and θ activity are understood to be required for suppression of pre‐potent responses during decision making and cognitive control.6, 30 STN θ power increases with cognitive processing, and when intentionally disrupted by STN stimulation, results in an increased error rate during high conflict cognitive trials.
+31
+ Impaired θ frequency synchronization in the STN of patients with PD also correlates with longer reaction times and cognitive errors.
+32
+ Taken together, our observations are consistent with the hypothesis that adequate STN θ synchrony is required for timely and accurate responses to cognitive tasks and the reduction of θ activity with cue presentation observed in trials where VR gait progression was subsequently disturbed, may relate to impaired cognitive dual‐tasking.
+
+We recently reported significant increases in STN θ activity immediately before freeze onset in subjects performing the VR task, and to a lesser degree, with volitional stopping.
+9
+ Further research is required to explore whether the presently reported reduction in θ frequency activity relates specifically to altered cognitive processing or to freezing itself. The absence of previously demonstrated changes in STN β activity associated with freezing
+9
+ may potentially relate to inter‐trial variability in cognitive processing time, footstep latency, or the small dataset. We previously hypothesized that freezing should occur secondary to increased multi‐unit activity firing rate in the STN, mediated via conflict in cortical networks triggering a hyperdirect pathway.8, 9 This STN activity drives the globus pallidus internus to inhibit the pedunculopontine nucleus, impairing the coordination of central pattern generators in the spinal cord, culminating in dysfunctional firing of paired agonist–antagonist lower limb muscles.
+8
+ Conflict arising from dysfunctional cognitive processing may be one of many triggers for this cascade of abnormal firing, and reduced STN θ activity may represent a targetable substrate in DBS applications.
+
+Closed loop adaptive DBS might represent an effective treatment strategy with dynamic stimulation parameters modulated in response to real‐time monitoring to abort a freeze.33, 34, 35, 36 This would require detection of signals that reliably precede FOG episodes, including those related to cognitive dual‐tasking. A remaining challenge for future work is to confirm our preliminary findings in a larger cohort and discern robust features that distinguish pathological freezing and gait disturbances with cognitive dual‐tasking from volitional stopping.
+
+The current study is potentially limited by the surgically mandated supine positioning of the patients, which minimizes any contribution related to anticipatory postural adjustments along with the anxiety of potential falls.
+37
+ Another challenge lies in translating these findings to the development of adaptive DBS systems, which use implanted macroelectrodes to monitor local field potential (LFP) signals and are poorly suited to the acquisition of MUA.
+34
+ The relationship between LFP and MUA signals is not fully understood, but it may be possible to characterize the coherence between them, which could assist in overcoming this challenge along with novel DBS devices capable of recording additional signal types.18, 34, 38 Future work should obtain recordings from implanted DBS systems postoperatively in ambulant patients undergoing concurrent cognitive dual‐tasking, which should also guide reconciliation with previous work in LFPs.30, 31, 32
+
+In conclusion, we have observed changes in STN activity that appear to be related to the phenomenon of dual‐task freezing in PD. By demonstrating alterations in STN firing patterns linked to gait dysfunction with cognitive dual‐tasking, we provide preliminary evidence for an accessible locus within the wider neurobiological substrate underpinning the phenomenon of cognitive dual‐task provoked freezing and gait dysfunction in PD. Given the prominent and well‐evidenced interplay between cognitive factors and gait disturbances in PD, this has implications for future therapies such as adaptive closed loop DBS systems that may be able to target this and improve quality of life for many patients.
+
+## Author Roles
+
+(1) Research Project: A. Conception and Design; B. Acquisition of Data; C. Analysis and Interpretation of Data; D. Neurosurgical Operation; E. Intraoperative Neurological Assessment; F. Principal Investigator (2) Manuscript: A. Writing of the First Draft; B. Review and Critique.
+
+M.J.G.: 1A, 1B, 1C, 2A.
+
+J.M.S.: 1A, 1B, 1C, 2B.
+
+M.G.: 1B, 2B.
+
+J.M.: 1D, 2B.
+
+B.O.: 1D, 2B.
+
+N.M.: 1A, 1B, 1E, 2B.
+
+S.J.G.L: 1A, 1F, 2B.
+
+## Financial Disclosures
+
+ForeFront is a collaborative research group at the Brain and Mind Centre, University of Sydney. We thank the support from National Health and Medical Research Council (NHMRC) program (1132524), Dementia Research Team (1095127) and NeuroSleep Centre for Research Excellence (1060992) grants. M.J.G. was supported by the RA Money Postgraduate Research Scholarship in Neuroscience, University of Sydney. J.M.S. is supported by a NHMRC Fellowship (1193857). M.G. is funded by the Marie Sklodowska‐Curie Actions grant agreement (838576). S.J.G.L. is supported by a NHMRC Leadership Fellowship (1195830). The funding sources had no role in study design, data collection, analysis, interpretation, or manuscript preparation.
+
+## Supporting information
+
+## Acknowledgments
+
+We thank the staff of the Movement Disorders Team at Westmead Private Hospital. We thank Jason Hatvany for his technical input. We also thank Mark Pearson for contributions to equipment development and maintenance and Simon Wadsworth (Turambar Software) for VR software development. Most importantly, we thank our patients for generously volunteering to be part of this study. Open access publishing facilitated by The University of Sydney, as part of the Wiley ‐ The University of Sydney agreement via the Council of Australian University Librarians.
+
+## Data Availability Statement
+
+The data that support the findings of this study and custom code used for analyses are available from the corresponding author upon reasonable request. The data are not publicly available as they contain information that could compromise research participant privacy.
+
+## References
+
+## Associated Data
+
+### Supplementary Materials
+
+### Data Availability Statement
+
+The data that support the findings of this study and custom code used for analyses are available from the corresponding author upon reasonable request. The data are not publicly available as they contain information that could compromise research participant privacy.

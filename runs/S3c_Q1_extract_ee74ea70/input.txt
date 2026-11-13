@@ -1,0 +1,231 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:41131028
+题目: Neural signatures of turn-induced freezing of gait in Parkinson's disease: insights from phase-specific cortico-subthalamic dynamics.
+年份: 2025
+全文：
+# Neural signatures of turn-induced freezing of gait in Parkinson’s disease: insights from phase-specific cortico-subthalamic dynamics
+
+## Abstract
+Freezing of gait (FOG), particularly during turning, is common in Parkinson’s disease (PD), but its phase-specific neural mechanisms remain unclear. This study investigated cortico-subthalamic dynamics underlying turning-induced FOG and their modulation by dopaminergic medication. Local field potentials from primary motor cortex (M1), premotor cortex (PMC), bilateral subthalamic nucleus (STN), and kinematic data were recorded from 19 PD patients during timed up-and-go tasks in medication-off and medication-on states. Turns were segmented into four phases: TurnPre, TurnStart, TurnEnd, and TurnPost. During freezing episodes, alpha power in M1 and PMC significantly decreased in early turning phases. Enhanced PMC-STN coherence appeared during TurnPre in normal turning and TurnStart in freezing turning, with TurnPre alpha suppression and coherence predicting freezing duration. Medication normalized these abnormal oscillations and improved turning. These findings reveal phase-specific cortico-subthalamic disruptions in FOG and suggest novel electrophysiological biomarkers for intervention. Trial Registration: ChiCTR1900026601, registered October 15, 2019.
+
+## Introduction
+
+Freezing of gait (FOG), a debilitating motor phenomenon in Parkinson’s disease (PD), manifests as abrupt, transient episodes of gait arrest despite preserved movement intention1. Affecting over 60% of advanced PD patients, FOG significantly elevates fall risk, restricts mobility, and impairs quality of life2,3. Among FOG subtypes, turning-induced freezing is particularly prevalent, constituting 48.4% of all episodes4,5. Although dopaminergic medications and deep brain stimulation (DBS) can offer relief from turn-related freezing, the benefits are often insufficient6. As turning-induced FOG imposes a disproportionate clinical burden and its etiology remains poorly understood, identifying its underlying neural mechanisms has become an urgent priority in advancing targeted interventions.
+
+Turning maneuvers demand precise spatiotemporal integration of motor execution and cognitive control, governed by interconnected cortico-subcortical networks7–12. Among these circuits, the hyperdirect pathway connecting frontal cortical areas to the subthalamic nucleus(STN) plays a pivotal role in orchestrating movement selection, timing, and spatial scaling functions crucial for successful turning13,14. The STN plays a critical role, receiving input from the striatum via the indirect pathway and from frontal cortical regions via the hyperdirect pathway15,16. Concurrently, the primary motor cortex (M1) and premotor cortex (PMC) exhibit abnormal local field potential(LFP) dynamics, including exaggerated beta-band synchronization and reduced movement-related desynchronization in the alpha and beta bands10,17,18, along with decreased blood oxygen level-dependent responses during freezing episodes, suggesting cortical-level disruptions in generating motor commands19–21.
+
+One previous study reported synchronized cortico-subthalamic activity during FOG22, indicating that the cortex, STN, and their connections are all involved in the FOG process. However, prior investigations have largely failed to distinguish between freezing during straight-line walking and turning-induced freezing, and they have not examined the distinct phases of turning freeze—particularly across the pre-turn (TurnPre), onset (TurnStart), final (TurnEnd), and post-turn (TurnPost) segments, which remain poorly characterized.
+
+In this study, we aim to fill this gap by integrating electrocorticography (ECoG) recordings from the M1/PMC, bilateral STN-LFPs, and kinematic data from PD patients performing walking tasks under both medication-off (Med-off) and medication-on (Med-on) conditions (Fig. 1). Our objectives are twofold: (1) to identify the FOG-related phase-specific electrophysiological biomarkers that emerge during distinct turning segments, and (2) to evaluate how dopaminergic therapy modulates these biomarkers. By employing a dynamic, phase-resolved framework, this work aims to advance our understanding of FOG and inform novel strategies to mitigate turn-induced freezing.Fig. 1Experimental design, freezing quantification and phase-specific definitions of turning.A Representative illustration of electrode coverage and task setup. ECoG electrodes are positioned to cover the M1 and PMC regions, while DBS electrodes are placed in the bilateral STN. The schematic depicts participants performing the 5-meter Timed Up-and-Go (TUG) task, which includes straight walking, 180° right turns, and return walking under both Med-off and Med-on states. B Illustration of the Freezing Index (iFOG) within a trial. The blue lines indicate the vertical positions of the heel, the red line represents the iFOG, and the green line shows the forward distance. Turns are defined as freezing when the iFOG exceeds 3. C Overview of trial segmentation and body marker trajectories. The turning process is divided into four consecutive 1.5-second phases: TurnPre (before turn initiation), TurnStart (onset of rotation), TurnEnd (end of rotation), and TurnPost (after turn completion). A timeline beneath the schematic indicates the duration of each phase. Colored rectangles above represent the real-time 3D trajectories of reflective markers placed on the body, captured by the optoelectronic motion system. These visualizations illustrate changes in body orientation and limb dynamics during turning.
+
+## Results
+
+### Patient characteristics
+
+The study enrolled 19 participants (age: 65.2 ± 7.4 years; disease duration: 9.8 ± 3.1 years). Preoperative motor assessment revealed an Movement Disorder Society-Unified Parkinson’s Disease Rating Scale part III (MDS-UPDRS III) score of 48.7 ± 12.4 in the Med-off state (≥12 h medication withdrawal), improving to 20.5 ± 8.0 in the Med-on state (1 h post-levodopa, 49.9% improvement). The mean freezing of gait questionnaire (FOGQ) score was 17.4 ± 4.2. Demographic and clinical characteristics are detailed in Table 1.Table 1Demographics of the subjectsIDAge/ SexDD (years)LEDD (mg)UPDRSIIIFOGQState3Moff1Mon2sub0172/M10675472810off/onsub0260/F7750472420offsub0352/F15105251921offsub0457/F5375492414offsub0566/F10513612221off/onsub0653/M121100792524offsub0770/M12688703717on/offsub0873/F91439512720off/onsub0967/F6500523022off/onsub1059/F9700462116on/offsub1178/M5550582418offsub1276/M81351411113off/onsub1366/F1566955813on/offsub1461/M71150371822on/offsub1567/M10913422016on/offsub1666/F15925392020off/onsub1767/F9100027515off/onsub1871/F111212361919on/offsub1958/M11126337189on/offDD disease duration, LEDD levodopa equivalent daily dose, FOGQ freezing of gait questionnaire. 1MDS-UPDRS III off-medication score. 2MDS-UPDRS III on-medication score. 3Medication state order in the study. off: Medication ‘off’ state; on: Medication ‘on’ state.
+
+### Turning performance and electrophysiological recording
+
+Two independent video raters (trained researchers) independently reviewed synchronized video recordings to classify freezing episodes during turning tasks, achieving an inter-rater reliability of 90.2% (consensus on 275 trials). In the Med-off state, the trials included 87 turns with freezing episodes (62.6%, total duration: 1214.9 s) and 52 turns with no freezing episodes (37.4%, total duration: 216.7 s). In the Med-on state, performance improved, with 15 turns with freezing (10.7%, total duration: 582.2 s) and 125 turns without freezing (89.3%, total duration: 216.7 s). Electrophysiological data were obtained from the bilateral STN in all participants, from the PMC in 18 patients, and from the M1 in 17 patients.
+
+### Phase-specific neural oscillations during turning
+
+In the Med-off state, the PSD analysis of the PMC, M1, and bilateral STN revealed phase-specific modulation of alpha and beta bands across five turning phases: Walk, TurnPre, TurnStart, TurnEnd, and TurnPost (Fig. 2A). All spectral values were normalized to the walking baseline within each condition, using the mean spectral power during the artifact-free straight-walking period of the same trial. This intra-trial normalization strategy helped minimize baseline variability across trials. Comparisons were conducted between each turning phase and the Walk phase within the same condition. During normal turning, a significant decrease in the alpha band power was observed in the STN during the TurnStart phase (p = 0.012). Additionally, there was a decrease in the alpha band power (p < 0.001) and an increase in the beta band power in the M1 (p = 0.013) during the TurnEnd phase (Fig. 2B). In the case of turning freeze, both the PMC and M1 showed significant suppression in the alpha band throughout the entire turning process, including the TurnPre (p = 0.0042 for PMC and p < 0.001 for M1), TurnStart (p = 0.027 for PMC and p = 0.048 for M1) and TurnEnd (p = 0.0072 for PMC and p = 0.0016 for M1) phases (Fig. 2C).Fig. 2Phase-Specific Neural Oscillations During Turning.A Normalized power spectral density (PSD) for the STN, PMC, and M1 regions during the Walk, TurnPre, TurnStart, TurnEnd, and TurnPost phases. B Relative alpha and beta power during normal turning, normalized to the Walk condition. A significant reduction in STN alpha power was observed during TurnStart, while M1 alpha power decreased and M1 beta power increased during TurnEnd. No significant differences in other regions or frequency bands were observed compared to Walk. C Relative alpha and beta power during turning freeze, normalized to the Walk condition. Alpha power significantly decreases in the PMC and M1 during the TurnPre, TurnStart, and TurnEnd phases, with recovery observed in the TurnPost phase. All data shown were recorded in the Med-off state.
+
+### Cortico-Subthalamic network dynamics during turning
+
+To assess cortico-subthalamic network changes during turning in the Med-off state, we compared alpha and beta coherence between the PMC and STN, as well as between the M1 and STN, across the walking and turning phases. During normal turning, significantly higher PMC-STN alpha coherence was observed in the TurnPre phase (p = 0.0045, Fig. 3A). In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B). In terms of beta coherence between the PMC-STN and M1-STN, no significant differences were found between the turning phases and walking in any of the regions analyzed.Fig. 3Phase-specific cortico-subthalamic network dynamics during turning.A Normal Turning: During the TurnPre phase, physiological motor preparation was characterized by a significant increase in PMC-STN alpha coherence. B Freezing of Turning: A delayed and exaggerated increase in PMC-STN alpha coherence and concurrent decoupling of M1-STN alpha coherence was observed during the TurnStart phase. All data shown were recorded in the Med-off state.
+
+### Electrophysiological predictors of freezing severity
+
+Building upon our previous findings of significant differences in local brain activity and inter-regional connectivity during turning freeze compared to walking, we sought to further investigate the relationship between electrophysiological changes and freezing behavior during turning in the Med-off state. We focused on indicators that showed significant changes during the TurnPre and TurnStart phases, specifically the alpha power in the PMC and M1, as well as the alpha coherence between the PMC-STN and M1-STN. For each trial, we calculated the percentage change of these electrophysiological indicators during the specific phase relative to the Walk phase. We then applied a linear mixed-effects model to determine whether these changes could predict the percentage of time spent freezing during the turning in that trial. Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial. In contrast, changes in the M1 alpha power and M1-STN alpha coherence in the TurnPre and TurnStart phase did not show significant predictive value (Fig. 4C, D), indicating a more localized role of PMC and its connectivity in freezing behavior.Fig. 4Electrophysiological predictors of freezing severity.A PMC alpha power reduction during the TurnPre phase (but not during the TurnStart phase) relative to walking positively correlated with freezing duration (β = 0.154, p = 0.035) B Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006). C M1 alpha power changes and D M1-STN coherence changes during the TurnPre or TurnStart phase relative to walking do not significantly correlate with freezing duration. All data shown were recorded in the Med-off state.
+
+### Medication effects on neural dynamics and behavior
+
+Medication significantly improved turning performance in patients, as evidenced by a substantial reduction in the percentage of time spent freezing (p = 0.0033) and a significant shortening of turning duration (p < 0.001, Fig. 5A). Due to the limited number of freezing trials under the Med-on condition, the analysis then focused solely on normal turning. Firstly, medication did not directly affect alpha power in the PMC and M1 during normal turning (Fig. 5B, Supplementary Fig. A), thereby reversing the abnormal electrophysiological indices observed under Med-off conditions. For PMC alpha, unlike in the Med-off condition during turn freezing, where significant reductions were observed in the TurnPre, TurnStart, and TurnEnd phases relative to walking (Fig. 2), no differences between the turning phases and walking were detected under Med-on conditions (Fig. 5C), mirroring the pattern seen in normal turning. With regard to PMC–STN alpha coherence, under Med-on conditions no significant differences between the turning phases and walking were found (Fig. 5D), whereas under Med-off conditions, increased coherence relative to walking was observed in some turning phases for both turn freezing and normal turning (Fig. 3). Additionally, under Med-on conditions, M1 alpha power showed a significant decrease during the TurnPre phase, and STN alpha power decreased during both the TurnPre and TurnStart phases (Supplementary Fig. C), while M1–STN alpha coherence did not differ significantly between the turning phases and walking (Supplementary Fig. B). These findings suggest that the pattern observed under Med-on conditions approximates that of normal turning under the Med-off state.Fig. 5Medication effects on neural dynamics and behavior.A Medication significantly reduces freezing time and turning duration. B No significant differences were observed in PMC alpha power across walking and turning phases under both the Med-on and Med-off conditions. Under the Med-on condition, C PMC alpha power and D PMC-STN alpha coherence during each turning phase did not differ from that observed during walking.
+
+## Discussion
+
+This is the first study to investigate multi-site electrophysiological activity in the cortico-subthalamic network in freely walking PD patients to explore the mechanisms underlying turning freeze. We found that turning freeze is characterized by phase-specific biomarkers, which include both local activity changes and alterations in inter-regional coherence. Specifically, during the turning freeze, alpha power in the PMC and M1 significantly decreased across the TurnPre, TurnStart, and TurnEnd phases, with the magnitude of PMC alpha reduction in the TurnPre phase being predictive of freezing duration. Moreover, in turning freeze, there was an increase in PMC-STN alpha coherence and a decoupling of M1-STN alpha coherence during the TurnStart phase. Importantly, increases in the PMC-STN alpha coherence during the TurnPre phase significantly predicted the freezing duration within the trial. Pharmacological intervention significantly improved turning performance, partially rectifying the local abnormalities in the PMC and M1 and restoring the altered coherence patterns between the PMC-STN and M1-STN, thereby highlighting these phase-specific features as potential targets for intervention.
+
+Turning is a complex motor task that requires precise spatiotemporal coordination and cognitive control, engaging distinct neural processes during its execution. One previous studies on turning have relied on fMRI, which necessitates the use of virtual reality simulations or stepping paradigms to mimic turning and walking23. These approaches are limited by the constraints of neuroimaging techniques in assessing naturalistic gait and by spatial resolution. In contrast, non-invasive EEG and fNIRS studies, though conducted during real walking, have typically analyzed turning as a single continuous segment, thereby hindering a comprehensive understanding of cortico-subthalamic interactions10,13,24. To our knowledge, the only previous investigation of phase-specific changes focused solely on freezing episodes22, and no study has specifically examined phase-specific dynamics in turning-induced freezing. By subdividing the turning maneuver into discrete phases (TurnPre, TurnStart, TurnEnd, and TurnPost), we were able to capture the dynamic evolution of neural activity and identify specific time windows in which abnormal electrophysiological patterns emerge. The TurnPre phase, in particular, may reflect anticipatory processes critical for movement planning. This segmentation not only enhances the sensitivity of our analyses to detect subtle abnormalities in both local cortical activity and cortico-subthalamic connectivity but also provides a structured framework to pinpoint the temporal onset of turning-induced FOG episodes. Ultimately, such a detailed temporal resolution is instrumental in designing targeted interventions aimed at mitigating freezing episodes.
+
+Our study identifies a significant reduction in alpha power in the PMC and M1 during the TurnPre, TurnStart, and TurnEnd phases in turning freeze, a phenomenon not observed in normal turning. Notably, the magnitude of alpha suppression in the PMC during the TurnPre phase predicted the duration of freezing episodes, suggesting its potential as a neurophysiological marker of FOG severity. Alpha and beta desynchronization, or event-related desynchronization (ERD), is classically associated with motor preparation and cortical disinhibition in transitions from rest to movement10,12,25,26. In PD, and particularly in patients with FOG, this process is often attenuated, delayed, or spatially disorganized17,18. While prior ERD studies typically used rest as baseline, our study analyzed spectral dynamics relative to steady-state walking. Though this limits direct comparison with rest-to-movement transitions, it enables the detection of dynamic neural adaptations when switching from automated gait to cognitively demanding turning. Our finding that alpha power decreases during TurnPre extends this framework, suggesting that freezing may result from impaired anticipatory motor control rather than solely execution failure. The altered activity observed in the PMC during turning in PD patients is consistent with findings from previous fMRI studies23,27. These results align with fNIRS-based studies, which also report altered PMC and M1 activity during tasks that provoke freezing, such as turning and passing through doorways. Such changes likely reflect compensatory cortical recruitment in response to impaired automaticity in motor preparation10,23,28. However, our study offers a novel contribution by demonstrating that alpha power reduction in both the PMC and M1 occurs not only during the motor execution phase (TurnStart) but also during the preparatory phase (TurnPre), prior to the onset of freezing. This reduction in alpha power during TurnPre suggests that it may serve as an early indicator of motor preparation dysfunction, providing a window into the pathophysiology of freezing. Importantly, we found that the extent of the PMC alpha reduction during TurnPre is predictive of the duration of freezing, highlighting its potential as a biomarker for early detection of freezing episodes. Taken together, these findings reinforce the idea that freezing of gait involves not only execution deficits but also dysfunctional motor preparation. Alpha suppression in the PMC, especially during the preparatory phase, may reflect impaired feedforward control, and its association with freezing duration highlights its potential as an early neural marker of freezing vulnerability.
+
+In addition to these local cortical changes, our findings reveal significant alterations in cortico-subthalamic network dynamics during freezing episodes. Specifically, we observed a decoupling of M1-STN alpha coherence during the TurnStart phase. These results suggest that the functional connectivity between cortical regions and the STN is disrupted during FOG, likely contributing to the motor deficits observed during turning. The STN, as a critical node in the cortico-basal ganglia-thalamo-cortical loop, is crucial for regulating movement execution, particularly during tasks involving high cognitive load or attention-demanding situations like turning22,29,30. We observed an increase in PMC-STN alpha coherence during TurnPre in normal turning, suggesting the role of PMC-STN connectivity in the initiation of the turning task. The increased coherence between the PMC and STN may reflect a compensatory mechanism to maintain motor control in the face of disrupted cortical signals; however, this abnormal coupling could also contribute to the rigidity and motor impairments characteristic of FOG31,32. On the other hand, the decoupling of M1-STN alpha coherence suggests that communication between the motor cortex and STN is impaired during freezing episodes, which might explain the transient loss of motor control seen in FOG22. This disruption in network connectivity is consistent with the notion that FOG is a multifactorial disorder involving both motor and cognitive dysfunctions10. Our findings also complement studies demonstrating that alterations in cortico-subthalamic communication, particularly in the beta band, are associated with FOG and other motor symptoms in PD33–35. Interestingly, while beta oscillations are often linked to motor inhibition and movement suppression, our study highlights that the alpha band may also play a crucial role in the modulation of cortico-subthalamic interactions during complex motor tasks such as turning.
+
+Our study demonstrates that dopaminergic medication is associated with a substantial reduction in freezing time and turning duration, as well as a normalization of the altered neural oscillatory patterns in the PMC and M1. Specifically, medication restored the abnormal PMC-STN and M1-STN alpha coherence patterns observed during turning freeze, suggesting that dopaminergic treatment may help to re-establish functional cortico-subthalamic connectivity during turning. These findings are consistent with a growing body of literature indicating that dopaminergic therapy modulates both cortical and subcortical oscillatory activity in PD patients, thereby improving motor performance12,36–38. Moreover, the restoration of normal cortico-subthalamic connectivity in response to medication aligns with previous studies showing that dopaminergic treatment can reduce pathological synchronization between cortical and subthalamic regions, leading to improved motor function39,40. However, although medication partially corrects the abnormal alpha activity during turning freeze-shifting it toward the patterns seen in normal turning under the Med-off condition-the neural patterns do not completely normalize. This observation mirrors our clinical findings that while dopaminergic therapy can mitigate freezing episodes, it does not fully resolve them6. Such results underscore the need for more targeted treatments, such as neuromodulation approaches, which address the complex neural mechanisms contributing to FOG beyond dopaminergic modulation alone. Overall, our findings highlight the dynamic nature of FOG in the context of dopaminergic therapy. While medication can ameliorate certain abnormalities in neural oscillations and improve turning performance, a comprehensive understanding of the phase-specific neural dysfunctions associated with FOG is essential for the development of more effective therapeutic strategies in the future.
+
+Several limitations of our study should be acknowledged. First, the sample size for comparisons between freezing and normal turning was relatively small, which may limit the generalization of our findings. Future studies with larger cohorts are needed to validate and extend these results. Second, variability in electrode coverage among patients may have influenced our ability to detect significant changes in certain brain regions or networks. Standardizing electrode placement or utilizing advanced neuroimaging techniques could enhance the consistency and reliability of data in future research. Third, we adopted a block-based segmentation strategy to define discrete turning phases. This design, consistent with prior work by Pozzi et al.22, allowed structured phase-wise comparisons but may have limited our ability to detect fine-grained transitions such as spectral shifts immediately preceding freezing onset. Lastly, our focus was limited to cortico-subthalamic dynamics. Other neuromodulatory systems, including the noradrenergic system and locus coeruleus, are known to contribute to freezing pathophysiology via arousal and cognitive control mechanisms41,42, which were beyond the scope of the current setup.
+
+Our study demonstrates that turning-induced freezing in PD is marked by phase-specific electrophysiological abnormalities. By segmenting the turning maneuver, we found a significant reduction in alpha power in the premotor cortex, with decreased alpha activity during the preparatory phase predicting freezing duration. Additionally, increased alpha coherence between the premotor cortex and subthalamic nucleus during this phase also predicted freezing duration. Although dopaminergic medication partially normalized these aberrant patterns, residual abnormalities remain, underscoring the need for targeted neuromodulation.
+
+## Methods
+
+### Participants and ethical approval
+
+Nineteen patients with advanced PD and clinically significant FOG were prospectively recruited from Beijing Tiantan Hospital prior to scheduled bilateral STN-DBS surgery. Inclusion criteria were detailed in our previous work12,19. The study protocol complied with the Declaration of Helsinki, received approval from the Institutional Review Board of Beijing Tiantan Hospital (KY 2018-008-01). This sub-study was conducted during the externalized recording period prior to randomization and intervention in the main registered clinical trial (ChiCTR1900026601, registered on October 15, 2019). All participants provided written informed consent.
+
+### Clinical and neuropsychological assessments
+
+Preoperative evaluations included comprehensive motor, cognitive, and neuroimaging assessments, as previously described12,19. Motor symptoms were quantified using the MDS-UPDRS III in both the Med-off (≥12 h withdrawal) and Med-on (1 h post-levodopa) states. Freezing severity was assessed using the FOGQ (score range: 0–24, with higher scores indicating more severe freezing) and video-annotated freezing episodes during TUG tasks.
+
+### Surgical procedures and electrophysiological setup
+
+Bilateral four-contact STN-DBS electrodes (L301, PINS Medical, Beijing, China) were implanted stereotactically, guided by intraoperative microelectrode recordings. An 8-contact subdural strip electrode (8 mm diameter, 80 mm exposure, 10 mm intercontact spacing) was placed through the DBS burr hole to cover the M1 and PMC. STN electrode localization was performed by co-registering postoperative CT (0.625 mm) with preoperative T1-weighted MRI, followed by normalization to MNI space using Lead-DBS43. Electrode trajectories were automatically reconstructed and manually refined. For subdural electrodes, cortical parcellation was conducted on preoperative T1-weighted MRI using the FreeSurfer software to delineate motor-related cortical regions44. Electrode positions were projected onto the cortical surface and assigned to the primary motor cortex (M1) or premotor cortex (PMC) according to their anatomical locations. Externalized electrode extensions enabled for the synchronized recording of STN local field potentials (LFPs) and electrocorticography (ECoG) from the M1 and PMC.
+
+### Experimental design and data acquisition
+
+Following surgical implantation, participants underwent experimental testing to assess neural and kinematic responses during turning tasks. All recordings were performed with DBS turned off to avoid stimulation-induced artifacts in STN-LFP signals. These experiments were conducted 3–5 days postoperatively in a gait laboratory. Participants performed 5-meter TUG tasks involving straight walking, 180°right turns, and return walking under both the Med-off and Med-on states, with task order randomization (except for sub02, sub03, sub04, sub06, and sub11, who only completed the Med-off condition). During these trials, participants walked at their natural pace or engaged in dual-task conditions, such as serial subtraction, object naming, or coin transfer from one hand to another. Kinematic data were captured at 200 Hz using a CODA optoelectronic system (Charnwood Dynamics Ltd, UK), which tracked the 3D joint trajectories of key body markers (Fig. 1A). Synchronized video recordings were used to annotate freezing episodes, with any inter-rater discrepancies being resolved through consensus.
+
+### Freezing quantification and phase-specific definitions during turning
+
+Freezing episodes were quantified using a validated freezing index (iFOG), which is defined as the power ratio of the 3–8 Hz (freezing band) to the 0–3 Hz (locomotion band) within 6-second sliding windows, with a step size of 0.1 seconds. A threshold iFOG value greater than 3 was used to identify freezing events, as detailed in our previous studies (Fig. 1B)12,19. The freezing percentage was calculated as the proportion of the freezing duration relative to the total duration of the turn. The turning process was segmented into four phases: TurnPre (1.5 seconds before turn initiation), TurnStart (the first 1.5 seconds of rotation), TurnEnd (the last 1.5 seconds of stabilization), and TurnPost (1.5 seconds after completing the turn) (Fig. 1C).
+
+### Electrophysiological signal acquisition and processing
+
+STN LFPs and ECoG signals were recorded at a sampling rate of 2000 Hz using a JE-212 amplifier (Nihon Kohden, Japan), synchronized with kinematic data via digital triggers. Preprocessing was performed offline using MNE-Python. Raw signals were bandpass filtered (1–80 Hz, Hamming-windowed FIR, transition bandwidth: 1 Hz) and notch filtered at 50 Hz (±1 Hz) to suppress line noise. Bipolar referencing between adjacent contacts was applied to reduce common-mode and volume-conducted artifacts. Data were segmented into 1.5-second non-overlapping windows corresponding to each turning phase (TurnPre, TurnStart, TurnEnd, and TurnPost) and straight-walking periods. Artifact screening was conducted by amplitude-based thresholding (±300 µV for ECoG, ±100 µV for STN-LFP) to detect transient movement or physiological artifacts. Electrode localization was performed using LeadDBS for STN contacts43 and FreeSurfer-based cortical parcellation for M1 and PMC electrodes44 (Fig. 1A). Turning phases were segmented based on 3D kinematic trajectories captured from body markers, which allowed precise identification of movement transitions across the TurnPre, TurnStart, TurnEnd, and TurnPost phases (Fig. 1C). A representative example of artifact-free M1, PMC, and STN signals during walking is presented in Supplementary Fig. S1.
+
+### Power spectrum density analysis
+
+To analyze local oscillatory dynamics during turning compared to walking, we employed the multitaper method to compute the power spectral density (PSD) with the psd_array_multitaper function from the MNE-Python library. PSD calculations focused on two key frequency bands: the alpha band (8–13 Hz) and the beta band (13–35 Hz), given their crucial roles in motor control and their particular relevance to PD. To emphasize frequency-specific modulations and minimize the global signal fluctuations, we normalized power by dividing the band-specific power by the total power within the 1–80 Hz range for each segment. For baseline normalization, only artifact-free, non-freezing straight-walking segments within each trial were used. These segments typically lasted at least 8 seconds, covering a minimum of 7 gait cycles. They were divided into non-overlapping 1.5-second windows, consistent with the segmentation used for turning phases. PSD and cortico-subthalamic coherence were computed for each window and then averaged across all walking windows within the trial to generate the baseline. This within-trial, multi-cycle approach reduced inter-trial variability and baseline drift, while minimizing the influence of gait-phase-specific fluctuations.
+
+### Cortico-subthalamic coherence analysis
+
+Functional connectivity between cortical regions (M1, PMC) and the bilateral STN was assessed by coherence analysis using the spectral_connectivity_time function from the MNE-Python connectivity package. Coherence was computed employing the continuous wavelet transform with Morlet wavelets. The frequencies of interest were specified, and the number of cycles for each frequency was set to n_cycles = freqs/2 to balance time and frequency resolution across the spectrum. For subsequent analysis, we focused on the real part of the coherence values to examine the magnitude of coupling between signals. The analyses specifically targeted phase-specific changes in the alpha and beta bands in comparison to walking.
+
+### Data normalization and comparison
+
+To isolate turn-related neural modulations, the PSD and cortico-subthalamic coherence values during the turning phases (TurnPre, TurnStart, TurnEnd, and TurnPost) were normalized to the walking baseline within each trial:1\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\mathrm{Normalized\; Value}\,( \% )=\frac{{\mathrm{Value}}_{\mathrm{Phase}}}{{\mathrm{Value}}_{\mathrm{Walk}}}\times 100$$\end{document}Normalized Value(%)=ValuePhaseValueWalk×100
+
+This intra-trial normalization minimized inter-trial and inter-subject variability, thereby enhancing the sensitivity to detect phase-specific neural dynamics.
+
+For condition-specific comparisons (turning freeze vs. normal turning; Med-off vs. Med-on), we analyzed the raw (non-normalized) values using paired tests. This approach preserved the absolute signal differences between conditions while controlling for inter-subject variability through within-participant contrasts.
+
+### Statistical analysis
+
+For data distributions that were non-normal, as determined by the Shapiro-Wilk test, we utilized nonparametric methods for analysis. Phase-specific differences relative to walking were assessed using Wilcoxon signed-rank tests, with Bonferroni correction for multiple comparisons (TurnPre, TurnStart, TurnEnd, and TurnPost vs. Walk). A linear mixed-effects model was employed to assess whether phase-specific changes in alpha power (M1, PMC) and alpha coherence (M1-STN, PMC-STN) predicted the duration of freezing. Fixed effects included normalized electrophysiological changes during TurnPre and TurnStart, while random intercepts accounted for inter-subject variability. The fixed effects were defined as the normalized electrophysiological changes, calculated by:2\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\mathrm{Percentage\; Change}\,( \% )=\frac{{\mathrm{Value}}_{\mathrm{Walk}}-{\mathrm{Value}}_{\mathrm{TurnPre\; or\; TurnStart}}}{{\mathrm{Value}}_{\mathrm{Walk}}}\times 100$$\end{document}Percentage Change(%)=ValueWalk−ValueTurnPre or TurnStartValueWalk×100
+
+Random intercepts at the participant level were included in the model to account for individual variability. To assess neural-behavioral relationships influenced by medication-induced (Med-off vs. Med-on), Pearson correlations analyses were conducted. A significance threshold of P < 0.05 (two-tailed) was applied for these analyses. All analyses were conducted using Python 3.
+
+## Supplementary information
+
+Supplementary Materials

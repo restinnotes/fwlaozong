@@ -1,0 +1,557 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:32634599; DOI:10.1016/j.brs.2020.06.018; uploaded version DOI:10.1101/19011858",
+    "title": "Neural closed-loop deep brain stimulation for freezing of gait",
+    "publication_status": "published",
+    "version_of_candidate": {
+      "version": "medRxiv preprint, version posted 2020-04-07",
+      "preprint_doi": "10.1101/19011858",
+      "published_version": "Brain Stimulation. 2020;13(5):1320-1322. DOI:10.1016/j.brs.2020.06.018",
+      "relationship": "high_confidence_same_study",
+      "basis": "Uploaded PDF identifies itself as a medRxiv preprint posted April 7, 2020. The published article has the same title and author list and reports the same single-participant closed-loop DBS experiment. PMID 32634599 identifies the published version. The uploaded document is the preprint version, not the final journal-formatted manuscript."
+    },
+    "study_id_candidate": "Petrucci_2020_NeuralClosedLoopDBS_FOG_single_case_candidate",
+    "cohort_id_candidate": "Stanford_ActivaPCplusS_bilateral_STN_FOG_single_participant_candidate",
+    "cohort_relation_basis": "正文明确报告一名男性PD伴FOG患者，年龄63.2岁，病程5.1年，akinetic-rigid subtype，植入Medtronic Activa PC+S及双侧Medtronic 3389 STN DBS leads。未提供患者编码、招募时间或可用于跨论文匹配的个体标识。文章引用Anidi et al. 2018作为既往STN beta研究，但没有明确说明两篇论文是否使用同一患者，因此与该研究的队列重叠关系为unknown，不应认定为独立队列或重复验证。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID32634599_E1_percent_time_freezing",
+      "design": "单病例、受试者内四条件神经刺激干预比较（single-participant within-subject experimental intervention）。比较OFF DBS、clinical open-loop DBS、voltage-matched open-loop DBS和neural closed-loop DBS。属于初步概念验证研究，不是随机对照临床试验。正文未说明四种刺激条件的随机化或平衡顺序。",
+      "population": "1名男性帕金森病伴FOG患者；年龄63.2岁；疾病病程5.1年；akinetic-rigid subtype；off-medication UPDRS-III为55；接受双侧STN DBS植入。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "n_enrolled：全文未报告筛查人数及正式入组人数，仅报告1名参与者参加研究。n_FOG_events：全文未报告冻结事件总数，图1仅以绿色竖线标记自动检测事件。n_trials：全文未报告每种刺激条件的重复试验次数。n_electrodes_contacts：明确报告双侧STN导线，共2根；具体记录触点、刺激触点编号及触点组合未在所提供PDF中报告。补充材料Table S1未包含在附件中。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。患者的疾病亚型为akinetic-rigid，但没有将FOG事件正式分为akinetic、trembling-in-place或其他FOG亚型。原文描述包括start hesitation、prolonged FOG、loss of force modulation及sequence effect。",
+      "medication_phenotype": "unknown。虽然实验在Med-Off状态进行，但没有报告患者临床FOG属于OFF-FOG、ONOFF-FOG或ON-FOG。",
+      "experimental_medication_state": "Med-Off。短效多巴胺能药物停药12小时；长效多巴胺能药物停药24/48小时。",
+      "DBS_state_and_parameters": "四种刺激条件：1）OFF：关闭DBS；2）c-olDBS：患者临床open-loop刺激参数；3）m-olDBS：使用与clDBS相同的单个触点，采用clDBS期间计算的平均电压进行固定刺激；4）clDBS：基于STN LFP beta功率的dual-threshold closed-loop DBS。双侧VMax：左STN 4.3 V，右STN 4.5 V；VMin为VMax的25%。上阈值为VMin时SIP任务测得的平均beta功率，下阈值为VMax时测得的平均beta功率。刺激电压上升速率0.1 V/0.4 s，下降速率0.1 V/0.8 s。具体频率、脉宽、各条件的实际刺激电压及触点编号在所提供PDF中未报告；原文引用Table S1。",
+      "task": "Stepping in place（SIP，原地重复踏步）任务，使用力板记录双足垂直地面反作用力。参与者在四种DBS条件下完成任务。属于替代性步态任务，不是自然直立行走中的FOG观察。图1显示每种条件下的力板时间序列。",
+      "recording_location": "双侧丘脑底核（bilateral STN）局部场电位（LFP）。设备为Medtronic Activa PC+S sensing neurostimulator，双侧Medtronic model 3389 STN DBS leads。具体记录触点对及STN内部解剖亚区未报告。",
+      "measure": "主要行为结局：percent time freezing（冻结时间占任务总时间的比例）。自动算法根据参与者双足未能离开力板检测冻结事件。STN LFP beta功率用于clDBS控制，但本文没有报告各冻结事件对应的beta功率数值或beta与冻结事件的事件级相关分析。",
+      "frequency_and_analysis_window": "控制信号的常规beta频段为13-30 Hz。实际用于SIP控制的movement band设定为两个STN各自15 Hz峰值的±3 Hz，即12-18 Hz。双阈值依据VMin和VMax下SIP期间平均beta功率确定。具体LFP功率估计时间窗、归一化方式、基线定义及伪迹处理方法在所提供PDF中未报告。冻结比例的具体计算时间窗未充分说明；图1图注对冻结比例及arrhythmicity的报告时间窗使用whole trial或up to the first freeze的表述。",
+      "finding": "在同一名患者的SIP任务中，四种刺激条件下percent time freezing分别为：OFF DBS 68.7%；c-olDBS 2.3%；m-olDBS 23.5%；clDBS 1.5%。clDBS条件下冻结时间比例最低，低于无刺激、临床固定刺激及电压匹配固定刺激。该结果说明以STN beta功率为控制变量的自适应刺激在这一患者的SIP任务中与较低冻结比例相关，但不能直接证明beta功率升高与FOG发生之间存在事件级因果或预测关系。",
+      "effect_estimate": "描述性结果：OFF 68.7%，c-olDBS 2.3%，m-olDBS 23.5%，clDBS 1.5%。clDBS相较OFF降低67.2个百分点；相较c-olDBS降低0.8个百分点；相较m-olDBS降低22.0个百分点。没有报告置信区间、P值或患者级效应量推断。",
+      "statistical_unit_and_method": "患者级样本量n=1。采用同一患者四种刺激条件下的描述性比较。冻结事件由自动算法检测，判定条件为双足未能离开力板。没有报告推断统计检验、置信区间、P值或多层重复测量模型。试次数及冻结事件总数未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域的定性适配（单病例、受试者内神经刺激干预研究；非正式、未经验证的完整ROBINS-I评级），并增加神经信号质量及重复测量检查。",
+        "domains": [
+          {
+            "domain": "样本选择（participant selection）",
+            "judgement": "high",
+            "reason": "仅纳入一名男性PD伴FOG患者，没有报告筛查、招募流程及未纳入患者情况。研究结果高度依赖单个患者的临床特征，无法支持患者群体层面的稳定推断。",
+            "source_locator": "p.2，Participants"
+          },
+          {
+            "domain": "混杂（confounding）",
+            "judgement": "some_concerns",
+            "reason": "实验均在Med-Off状态进行，控制了药物状态这一因素。但四种DBS条件的实施顺序是否随机或平衡未报告，可能存在任务时间、疲劳、学习及条件顺序效应。文中随机呈现的是用于阈值确定的五个电压水平，不等于四种最终DBS条件随机化。",
+            "source_locator": "p.3，Stimulation conditions and threshold calibration"
+          },
+          {
+            "domain": "干预分类（classification of interventions）",
+            "judgement": "some_concerns",
+            "reason": "四种刺激条件有明确名称和基本定义，但临床刺激参数、触点编号和详细参数表未包含在所提供PDF中，无法完整核查各条件实际刺激设置。",
+            "source_locator": "p.3，Stimulation conditions；Table S1未随附件提供"
+          },
+          {
+            "domain": "干预偏离（deviations from intended interventions）",
+            "judgement": "unclear",
+            "reason": "没有报告刺激条件之间的洗脱时间、实际执行偏离、条件间残留效应或干预依从性评估。",
+            "source_locator": "p.3-4，Experimental procedure and Results"
+          },
+          {
+            "domain": "缺失数据（missing data）",
+            "judgement": "unclear",
+            "reason": "未报告缺失试次、无效LFP片段、排除事件或数据完整性统计，无法判断是否存在选择性缺失。",
+            "source_locator": "p.3-4，Methods and Results"
+          },
+          {
+            "domain": "结局测量（measurement of outcomes）",
+            "judgement": "some_concerns",
+            "reason": "冻结通过力板自动算法检测，定义为双足未能离开力板。该方法具有客观运动学依据，但本研究没有报告视频或独立临床评审确认。SIP属于替代性任务，不能直接等同于自然行走FOG。",
+            "source_locator": "p.4，FOG assessment；p.5，Figure 1"
+          },
+          {
+            "domain": "神经信号质量与伪迹（signal quality and artifacts）",
+            "judgement": "unclear",
+            "reason": "报告使用双侧STN LFP beta功率驱动刺激，但所提供正文没有充分报告LFP信号质量、伪迹排除、刺激伪迹处理及信号有效性指标。",
+            "source_locator": "p.3，clDBS algorithm；补充材料未随附件提供"
+          },
+          {
+            "domain": "重复测量及伪重复（repeated measures and pseudoreplication）",
+            "judgement": "some_concerns",
+            "reason": "只有一名患者，试次数和事件数均未报告。无法判断是否存在将同一患者的多个事件或时间窗口当作独立样本进行推断的问题。正文未报告能够处理患者内相关性的统计模型。",
+            "source_locator": "p.3-5，Experimental procedure and Figure 1"
+          },
+          {
+            "domain": "多重比较（multiple comparisons）",
+            "judgement": "not_assessable",
+            "reason": "报告了四种刺激条件及多个步态指标，但没有报告正式推断统计检验或多重比较校正。由于没有推断统计结果，无法评价其多重检验控制情况。",
+            "source_locator": "p.4-5，Results and Figure 1"
+          },
+          {
+            "domain": "模型过拟合及外部验证（model overfitting and external validation）",
+            "judgement": "not_assessable",
+            "reason": "本研究不是患者级预测模型研究。dual-threshold控制参数根据该患者自身的电压滴定及SIP beta功率确定，未报告独立患者队列或外部验证。",
+            "source_locator": "p.3，Threshold calibration"
+          },
+          {
+            "domain": "选择性报告（selective reporting）",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案或预先指定的统计分析计划，无法判断所报告结局是否完整覆盖预设结局。",
+            "source_locator": "p.2-6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "最重要的限制是样本量仅1人，且使用SIP替代自然行走。冻结事件通过力板自动算法定义，而非视频或临床专家独立确认。没有报告beta功率在FOG发生前、冻结期间和恢复期间的事件级变化，也没有报告beta burst持续时间、占据率、熵或跨区耦合。因此不能将本研究解释为STN beta升高与FOG发生之间的直接相关性证据。结果只能支持beta驱动的自适应刺激在这一单病例SIP任务中改善冻结相关行为。详细刺激参数及补充方法未包含在上传PDF中。",
+      "quote": "The percent time freezing was 68.7% OFF DBS, 2.3% on c-olDBS, 23.5% during m-olDBS, and 1.5% during clDBS.",
+      "source_locator": {
+        "section": "Results",
+        "page": "4",
+        "figure_table": "Figure 1A-D, p.5",
+        "supplement": "Table S1 is referenced for stimulation parameters but was not included in the uploaded PDF."
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID32634599_E2_SIP_arrhythmicity_four_conditions",
+      "design": "单病例、受试者内四条件神经刺激干预比较。四种条件为OFF DBS、c-olDBS、m-olDBS和clDBS。该证据与E1来自同一患者及同一SIP实验，不构成独立队列或独立重复验证。",
+      "population": "1名男性PD伴FOG患者；63.2岁；疾病病程5.1年；akinetic-rigid subtype；off-medication UPDRS-III为55；双侧STN DBS。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "n_enrolled：全文未报告独立入组人数。n_FOG_events：全文未报告冻结事件总数。n_trials：全文未报告每条件试次数。n_electrodes_contacts：明确报告2根双侧STN导线，但具体记录及刺激触点组合未报告。上述缺失与E1属于同一研究层面的报告缺失。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported。原文描述start hesitation、prolonged FOG、loss of force modulation和sequence effect，但未进行正式FOG亚型分类。",
+      "medication_phenotype": "unknown。没有报告临床FOG的药物反应表型。",
+      "experimental_medication_state": "Med-Off；短效多巴胺能药物停药12小时，长效多巴胺能药物停药24/48小时。",
+      "DBS_state_and_parameters": "OFF DBS、c-olDBS、m-olDBS和clDBS四条件。clDBS使用双阈值STN beta控制算法；movement band为15±3 Hz；左STN VMax 4.3 V，右STN VMax 4.5 V；VMin为VMax的25%；上升速率0.1 V/0.4 s，下降速率0.1 V/0.8 s。具体频率、脉宽及触点参数未在上传PDF中报告。",
+      "task": "SIP原地踏步任务，使用力板测量垂直地面反作用力。比较四种DBS条件下的步态节律性。",
+      "recording_location": "双侧STN LFP，Medtronic Activa PC+S。具体记录触点及解剖亚区未报告。",
+      "measure": "SIP arrhythmicity，以stride time coefficient of variation（CV，步幅时间变异系数）表示。STN beta功率作为clDBS控制变量，但没有报告事件级beta功率与CV之间的统计关系。",
+      "frequency_and_analysis_window": "STN beta常规频段13-30 Hz；实际movement band为双侧15±3 Hz，即12-18 Hz。CV的具体计算窗口未充分说明。Figure 1图注指出arrhythmicity涉及whole trial或up to the first freeze；Figure 1E另外比较first 25 seconds与up to the first freeze或无冻结时的whole trial。具体beta信号分析窗口、基线归一化和伪迹处理未报告。",
+      "finding": "四种刺激条件下SIP arrhythmicity分别为：OFF DBS 54.9%；c-olDBS 18.2%；m-olDBS 27.4%；clDBS 5.2%。所有刺激条件均较OFF DBS降低arrhythmicity，其中clDBS数值最低。该结果是SIP行为节律性改善证据，不是STN beta与FOG事件发生之间的直接相关分析。",
+      "effect_estimate": "OFF 54.9%；c-olDBS 18.2%；m-olDBS 27.4%；clDBS 5.2%。clDBS相较OFF降低49.7个百分点；相较c-olDBS降低13.0个百分点；相较m-olDBS降低22.2个百分点。均为单患者描述性差值，无置信区间及P值。",
+      "statistical_unit_and_method": "患者级n=1。以stride time CV表示SIP arrhythmicity，采用四种刺激条件下的描述性比较。没有报告推断统计检验、置信区间、P值或患者内重复测量模型。Figure 1E显示不同时间窗口的arrhythmicity比较，但没有给出相应的正式统计推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域定性适配，针对单病例受试者内神经刺激研究；额外检查神经信号质量及重复测量，属于未经验证的适配评价。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "单一男性患者，缺少筛查和招募流程，不能代表PD-FOG总体。",
+            "source_locator": "p.2，Participants"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物状态固定为Med-Off，但DBS条件顺序是否随机或平衡未报告，可能存在时间、疲劳及条件顺序效应。",
+            "source_locator": "p.3，Stimulation conditions"
+          },
+          {
+            "domain": "干预分类",
+            "judgement": "some_concerns",
+            "reason": "刺激条件基本定义明确，但完整刺激参数表Table S1未包含在上传PDF中。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "干预偏离",
+            "judgement": "unclear",
+            "reason": "没有报告刺激条件间洗脱、残留效应和实际执行偏离。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告试次、信号片段及无效数据的排除情况。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "CV是客观计算指标，但具体分析窗口和事件关联不充分明确；SIP不等同于自然行走。",
+            "source_locator": "p.4-5，Methods and Figure 1"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "没有充分报告STN LFP伪迹排除、信号质量及预处理方法。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者数为1，试次数及事件数未报告，无法判断重复测量相关性处理。",
+            "source_locator": "p.3-5"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "not_assessable",
+            "reason": "没有正式推断统计及多重比较校正报告。",
+            "source_locator": "p.4-5"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型；控制阈值依据单患者数据校准，没有独立验证。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册或预设分析计划，无法判断结局报告是否完整。",
+            "source_locator": "p.2-6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "arrhythmicity是步态行为指标，不能直接作为STN beta异常的替代指标。作者没有报告beta功率与stride time CV的事件级相关系数，也没有报告beta burst持续时间、占据率或相位调制。图1E使用first 25 seconds和up to the first freeze等时间窗口，但没有报告完整的数值和统计检验。单患者设计及SIP任务限制了外推。",
+      "quote": "SIP arrhythmicity was lower in all stimulation conditions compared to OFF (54.9% OFF, 18.2% c-olDBS, 27.4% m-olDBS, 5.2% clDBS).",
+      "source_locator": {
+        "section": "Results",
+        "page": "4",
+        "figure_table": "Figure 1A-E, p.5",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID32634599_E3_time_dependent_arrhythmicity",
+      "design": "单病例、受试者内四条件神经刺激实验中的时间窗口分析。该证据为Figure 1E所展示的SIP arrhythmicity时间变化，不是独立患者队列或独立实验。",
+      "population": "1名男性PD伴FOG患者；63.2岁；病程5.1年；akinetic-rigid subtype；双侧STN DBS。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "入组数、每条件试次数及冻结事件总数未在全文报告。双侧导线共2根，但具体记录触点及触点组合未报告。该证据的时间窗口数不能替代患者数、试次数或冻结事件数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported。原文提及start hesitation、prolonged FOG及sequence effect，但没有正式FOG表型分型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；短效药物停药12小时，长效药物停药24/48小时。",
+      "DBS_state_and_parameters": "OFF DBS、c-olDBS、m-olDBS及clDBS。clDBS使用双阈值STN beta控制；movement band为15±3 Hz；VMax左侧4.3 V、右侧4.5 V；VMin为VMax的25%；电压上升0.1 V/0.4 s、下降0.1 V/0.8 s。其余实际刺激参数未在上传PDF中报告。",
+      "task": "SIP原地踏步，力板记录垂直地面反作用力。比较first 25 seconds与up to the first freeze；如果没有冻结事件，则使用whole trial。",
+      "recording_location": "双侧STN LFP。使用Medtronic Activa PC+S及双侧model 3389 STN DBS leads。具体记录触点和STN亚区未报告。",
+      "measure": "时间依赖性SIP arrhythmicity，以stride time CV表示。比较试验前25秒与之后直至首次冻结或无冻结时的全试验时间窗。STN beta功率用于自适应刺激，但没有提供对应时间窗内的beta数值。",
+      "frequency_and_analysis_window": "STN beta控制频段13-30 Hz；movement band为15±3 Hz，即12-18 Hz。行为分析窗口：first 25 seconds及up to the first freeze；若无冻结则whole trial。没有报告各时间窗口的具体CV数值、beta功率时间序列、beta基线归一化或事件锁定分析。",
+      "finding": "作者报告，在c-olDBS和m-olDBS条件下，试验开始25秒之后arrhythmicity增加；在clDBS条件下，踏步保持节律性。Figure 1E显示first 25 seconds与up to the first freeze或无冻结时whole trial之间的比较。该结果提示自适应刺激条件下步态节律性在任务过程中维持得更好，但没有证明特定beta变化先于或导致冻结。",
+      "effect_estimate": "定性方向性结果：c-olDBS和m-olDBS后续时间窗arrhythmicity增加；clDBS未出现同样的恶化。原文未提供Figure 1E各时间窗口的精确数值、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "患者级n=1。以同一患者不同刺激条件下的时间窗口CV进行描述性比较。未报告时间窗口间正式统计检验，也未报告基于事件的重复测量模型。对于发生冻结的条件，第二时间窗口截至首次冻结；因此不能将其简单解释为整个试验期间的平均步态状态。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域定性适配；单病例受试者内神经刺激研究，附加时间序列和重复测量检查；未经验证。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "只有一名患者，且未报告筛查和招募过程。",
+            "source_locator": "p.2"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "条件顺序和时间效应未充分说明，不能排除任务进行过程中疲劳或顺序因素的影响。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "干预分类",
+            "judgement": "some_concerns",
+            "reason": "四种刺激条件定义明确，但详细参数表未随附件提供。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "干预偏离",
+            "judgement": "unclear",
+            "reason": "没有报告刺激条件间残留效应或执行偏离。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告时间窗口及试次的数据完整性。",
+            "source_locator": "p.4-5"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "CV为客观指标，但时间窗口定义与首次冻结的关系使不同条件之间的观察时长可能不完全相同。",
+            "source_locator": "p.5，Figure 1E"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "没有报告时间依赖性beta信号的质量控制和伪迹处理。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "只有一名患者，时间窗口不是独立患者样本，未报告处理时间序列相关性的模型。",
+            "source_locator": "p.4-5"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "not_assessable",
+            "reason": "未报告正式检验及校正。",
+            "source_locator": "p.4-5"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有患者级预测模型，未进行外部验证。",
+            "source_locator": "p.3"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，无法判断是否完整报告所有时间窗口分析。",
+            "source_locator": "p.4-5"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这一证据最重要的限制是时间窗口并非完全相同的事件阶段。对于出现冻结的条件，第二窗口截至首次冻结；对于没有冻结的条件，则使用整个试验。不能将两种窗口简单视为相同长度或相同生理阶段。虽然作者报告开放环刺激后期arrhythmicity恶化，但没有提供对应的beta功率动态，也没有直接证明STN beta变化先于冻结事件。单病例和缺少统计检验进一步限制结论。",
+      "quote": "There was an increase in arrhythmicity after the first 25 seconds of the trial during both c-olDBS and m-olDBS, but during clDBS, stepping remained rhythmic.",
+      "source_locator": {
+        "section": "Results",
+        "page": "4-5",
+        "figure_table": "Figure 1E, p.5",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID32634599_E4_TEED_comparison",
+      "design": "单病例、受试者内四条件DBS干预实验中的刺激能量比较。该证据是治疗剂量指标，不是独立FOG结局或独立患者样本。",
+      "population": "1名男性PD伴FOG患者；63.2岁；病程5.1年；双侧STN DBS。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "全文未报告独立入组人数、冻结事件总数及每条件试次数。双侧STN导线数量为2，但具体触点组合未报告。TEED绝对数值在正文中未给出，Table S2未包含在上传PDF中。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_applicable_to_TEED；研究患者的FOG具体亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；短效药物停药12小时，长效药物停药24/48小时。",
+      "DBS_state_and_parameters": "比较m-olDBS、clDBS及c-olDBS。m-olDBS使用clDBS相同的单个触点及其平均电压；clDBS采用STN beta双阈值控制。VMax左4.3 V、右4.5 V，VMin为25% VMax。实际各条件TEED绝对数值未在上传PDF中报告。",
+      "task": "同一SIP任务的不同DBS条件。TEED作为各刺激条件的电能递送指标进行比较。",
+      "recording_location": "双侧STN，Medtronic Activa PC+S sensing neurostimulator。",
+      "measure": "Total electrical energy delivered（TEED），即总电能递送量。该指标用于比较自适应刺激和固定刺激的能量需求，不是FOG事件指标。",
+      "frequency_and_analysis_window": "TEED按不同刺激条件计算。具体TEED计算公式、时间归一化方式及各条件绝对值未在上传PDF正文中报告；原文引用Table S2。",
+      "finding": "m-olDBS与clDBS之间TEED没有差异；clDBS的平均TEED比c-olDBS高2%。该结果说明本实验中clDBS较低的冻结比例不能简单解释为其明显增加了相对于m-olDBS的总电能递送量。",
+      "effect_estimate": "m-olDBS vs clDBS：原文报告no difference。clDBS vs c-olDBS：clDBS平均TEED高2%。没有报告绝对TEED数值、置信区间或P值。",
+      "statistical_unit_and_method": "患者级n=1；按刺激条件进行描述性TEED比较。没有报告统计检验、置信区间或P值。Table S2未包含在上传PDF中。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域定性适配；单病例受试者内神经刺激研究，未经验证。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "仅有一名患者，不能推断其他患者的能量需求。",
+            "source_locator": "p.2"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "刺激条件顺序未报告是否随机化，且各条件刺激方式不同。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "干预分类",
+            "judgement": "some_concerns",
+            "reason": "各条件基本定义明确，但完整参数表及TEED计算细节缺失。",
+            "source_locator": "p.3-4；Table S1及S2未提供"
+          },
+          {
+            "domain": "干预偏离",
+            "judgement": "unclear",
+            "reason": "没有报告条件间洗脱和刺激执行偏离。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告TEED计算失败或缺失数据。",
+            "source_locator": "p.4"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "unclear",
+            "reason": "报告了TEED比较结果，但详细计算方法和绝对数值未包含在上传PDF中。",
+            "source_locator": "p.4；Table S2未提供"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "TEED属于刺激剂量指标，不直接依赖FOG事件标签；无法据此评价神经信号伪迹。",
+            "source_locator": "p.4"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "仅一名患者，条件级比较无法提供患者群体推断。",
+            "source_locator": "p.4"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "not_assessable",
+            "reason": "没有报告正式推断统计或多重比较校正。",
+            "source_locator": "p.4"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "不属于预测模型研究。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "补充表格未提供，无法完整核查所有能量相关结果。",
+            "source_locator": "p.4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "TEED比较有助于区分自适应控制效果与单纯增加刺激能量的解释，但没有绝对能量数值，也没有统计检验。单个患者的数据不能证明不同患者之间存在相同的能量-疗效关系。TEED不能替代神经信号与冻结事件的直接关联分析。",
+      "quote": "There was no difference in TEED between m-olDBS and clDBS, and the average TEED was 2% higher in clDBS vs. c-olDBS.",
+      "source_locator": {
+        "section": "Results",
+        "page": "4",
+        "figure_table": "Table S2 referenced in text but absent from uploaded PDF",
+        "supplement": "Supplemental methods and Table S2 were not included in the uploaded PDF."
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID32634599_E5_VTA_comparison",
+      "design": "单病例、受试者内不同DBS条件的刺激组织激活体积比较，属于刺激剂量和空间作用范围的描述性结果。",
+      "population": "1名男性PD伴FOG患者；63.2岁；病程5.1年；双侧STN DBS。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "全文未报告独立入组人数、冻结事件总数及每条件试次数。双侧STN导线共2根，但具体触点编号未报告。VTA绝对数值未在上传PDF正文中提供。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_applicable_to_VTA；FOG亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；短效药物停药12小时，长效药物停药24/48小时。",
+      "DBS_state_and_parameters": "比较c-olDBS、m-olDBS和clDBS。m-olDBS与clDBS使用相同单个刺激触点；clDBS为双阈值beta驱动刺激。VMax左4.3 V、右4.5 V；VMin为25% VMax。具体刺激触点、频率、脉宽及VTA绝对数值未在上传PDF中报告。",
+      "task": "同一SIP任务的四种刺激条件；VTA用于比较不同刺激设置下的组织激活范围。",
+      "recording_location": "双侧STN DBS leads；Medtronic model 3389。具体刺激触点及解剖亚区未报告。",
+      "measure": "Volume of tissue activated（VTA），即刺激导致的组织激活体积。该指标为刺激空间范围指标，不是神经活动指标，也不是FOG结局。",
+      "frequency_and_analysis_window": "VTA根据不同刺激条件的参数进行计算。具体计算模型、电导率假设、组织参数及绝对VTA值在所提供PDF中未报告；原文将具体方法置于supplemental methods。",
+      "finding": "作者报告，m-olDBS期间TEED和VTA相较c-olDBS有小幅增加；clDBS与m-olDBS的TEED和VTA则近似相同。尽管m-olDBS与clDBS的VTA近似，作者观察到clDBS下步态维持较好，而m-olDBS仍出现步态恶化。这是作者提出自适应刺激可能具有额外价值的重要剂量控制背景，但不能单独证明其神经机制。",
+      "effect_estimate": "m-olDBS相较c-olDBS：VTA有小幅增加；clDBS与m-olDBS：VTA近似相同。没有报告绝对VTA、百分比差值、置信区间或P值。",
+      "statistical_unit_and_method": "患者级n=1；不同刺激条件的VTA描述性比较。未报告统计检验及VTA绝对数值。具体VTA计算方法需查看未随附件提供的supplemental methods。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域定性适配；单病例受试者内神经刺激研究，未经验证。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "仅一名患者，缺乏患者群体层面的外部代表性。",
+            "source_locator": "p.2"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "刺激条件顺序及条件间残留效应未充分说明。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "干预分类",
+            "judgement": "some_concerns",
+            "reason": "基本刺激条件明确，但完整刺激参数及VTA计算方法未在附件中提供。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "干预偏离",
+            "judgement": "unclear",
+            "reason": "没有报告刺激执行偏离和条件间洗脱。",
+            "source_locator": "p.3-4"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告VTA计算失败或缺失情况。",
+            "source_locator": "p.4-6"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "unclear",
+            "reason": "VTA计算细节和绝对数值未提供，无法完整评价测量准确性。",
+            "source_locator": "p.4-6；Supplemental methods未提供"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "VTA属于刺激空间范围指标，不是神经信号测量。",
+            "source_locator": "p.5-6"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "只有一名患者，条件级数据无法支持患者群体推断。",
+            "source_locator": "p.4-6"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "not_assessable",
+            "reason": "未报告推断统计和多重比较校正。",
+            "source_locator": "p.4-6"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有患者级预测模型或外部验证。",
+            "source_locator": "p.3-6"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "缺少完整补充材料，不能核查全部VTA参数及预设分析。",
+            "source_locator": "p.4-6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "VTA结果仅提供定性描述，无法核查绝对体积、具体计算假设或条件间精确差值。VTA近似相同不等于神经调控效果相同，也不能排除刺激时序、网络状态及其他未测量因素的影响。该结果支持进一步检验自适应刺激与固定刺激之间的差异，但不能单独确定具体机制。",
+      "quote": "stepping behavior was maintained during clDBS even though the TEED and VTA were nearly identical to m-olDBS.",
+      "source_locator": {
+        "section": "Discussion",
+        "page": "6",
+        "figure_table": "Figure 1 stimulation VTA illustrations, p.5",
+        "supplement": "Supplemental methods referenced but not included in uploaded PDF."
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

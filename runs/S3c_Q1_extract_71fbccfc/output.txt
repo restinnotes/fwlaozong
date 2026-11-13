@@ -1,0 +1,639 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:37860957; DOI:10.1002/mds.29632; Movement Disorders. 2024;39(1):85-93. First published online: 2023-10-20. PubMed: https://pubmed.ncbi.nlm.nih.gov/37860957/",
+    "title": "Active and Passive Cycling Decrease Subthalamic β Oscillations in Parkinson's Disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:37860957（单篇原始研究候选）",
+    "cohort_id_candidate": "KU Leuven STN-DBS cycling cohort（PMID:37860957，待跨论文审计确认）",
+    "cohort_relation_basis": "研究来自KU Leuven相关研究团队，获得KU Leuven/UZ Leuven伦理批准（S58203）。纳入12例PD患者，均接受双侧STN DBS植入，使用Medtronic 3389电极及Percept PC神经刺激器，植入时间超过1年。论文引用Storzer et al. 2017作为既往研究，但没有报告两项研究是否存在患者重叠、共同招募时间或相同患者编号。因此，不能认定与Storzer研究属于同一队列，也不能认定为独立队列重复验证。当前cohort_id仅为本研究内部候选标识。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID37860957_E01",
+      "design": "观察性、组间比较、重复任务条件下的侵入性STN局部场电位研究。采用3-way ANOVA比较Freezer与Non-freezer患者在主动/被动骑车及不同踏频下的STN beta功率变化。",
+      "population": "12例帕金森病患者，6例Freezer、6例Non-freezer；平均年龄65.2±6.1岁，女性5例。所有患者均接受双侧STN DBS植入超过1年。FOG分组依据实验时填写的New Freezing of Gait Questionnaire（NFOG-Q）。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "患者数：全文明确报告12例，均有LFP分析。FOG患者数：明确报告6例。有效神经数据患者数：12例，结果部分报告分析了12例患者、24个半球的72条双极记录。FOG事件数：不适用，实验没有自然直立行走或事件级FOG记录，FOG仅用于患者分组。试次数：全文报告每位患者完成5个45秒骑车block，每个block一次，但没有以trial为单位报告总数，因此不将推算的block数作为作者报告的trial数。电极/触点数：未单独报告可作为独立分母的电极或触点数量；报告了12条双侧植入DBS lead、24个半球、72条双极记录及24条最终选定分析通道，这些分母不互相替代。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "Freezer vs Non-freezer，依据NFOG-Q分类。未报告akinetic、trembling-in-place、kinetic-without-trembling或mixed等具体FOG表现。未记录实际冻结事件。",
+      "medication_phenotype": "unknown。论文未说明患者临床FOG属于OFF-FOG、ONOFF-FOG、ON-FOG或biphasic。",
+      "experimental_medication_state": "所有患者在实验前停用多巴胺能药物超过6小时。作者明确说明没有采用完整12小时停药，而是选择中间状态，以减少药物影响并保证患者能够完成任务。精确末次服药时间及剂量未报告。",
+      "DBS_state_and_parameters": "双侧STN DBS植入，Medtronic model 3389电极，连接Percept PC神经刺激器。植入超过1年。实验前停刺激超过10分钟，测试期间为DBS-off状态。刺激频率、幅度、脉宽及实际刺激参数未报告；由于测试期间停止刺激，不应将记录条件描述为某一特定刺激参数下的结果。",
+      "task": "仰卧位、卧式自行车骑行。主动骑车条件包括20、60、90 rpm；被动骑车条件包括20、60 rpm，由电机维持固定踏频。FOG组间3-way ANOVA使用主动/被动及20/60 rpm条件。每个block持续45秒，每个条件仅进行一次；block间休息30秒。达到目标踏频后才开始分析，排除加速阶段。不是自然直立行走、转弯或步态启动任务。",
+      "recording_location": "双侧丘脑底核STN。每例患者记录6条双极LFP通道，每侧STN 3条。最初共72条双极记录、24个半球。最终每侧STN选择一条通道用于分析，选择标准为主动骑车60 rpm时13-30 Hz beta功率抑制最强；同一患者的选定通道用于全部骑车条件。",
+      "measure": "STN局部场电位（LFP）beta频段平均功率及其相对于静息基线的百分比变化。主要分析13-30 Hz beta功率，不是beta burst持续时间、burst占据率、熵、相位调制或皮层-STN coherence。该结果反映功率变化，不能直接解释为beta burst数量或同步程度变化。",
+      "frequency_and_analysis_window": "Beta：13-30 Hz。每个频率的功率除以骑车开始指令前30秒静息基线中该频率的平均功率，进行block内归一化。统计分析使用骑车开始后0-2秒的baseline-corrected power，并在13-30 Hz频段内平均，报告百分比信号变化。骑车时间频分析采用2000 ms、无重叠时间窗；静息数据采用500 ms时间窗。",
+      "finding": "在主动和被动骑车、20及60 rpm条件下，Freezer患者的STN beta功率抑制显著强于Non-freezer患者。3-way ANOVA显示FOG分组具有显著主效应。作者报告这一差异不依赖主动/被动骑车模式及踏频。该结果支持FOG表型与骑车期间较强STN beta抑制之间存在关联，但不代表实际FOG发生前或发生期间出现beta下降。",
+      "effect_estimate": "Freezer组平均beta功率变化：-26.28%；Non-freezer组：-11.86%。组间FOG主效应p=0.004。未在正文中给出该组间效应的具体数值置信区间或标准化效应量。",
+      "statistical_unit_and_method": "3-way ANOVA，因素为Cycling（Active/Passive）、Cadence（20/60 rpm）及Freezing（Yes/No）。统计分析使用选定的STN双极通道。数据涉及12名患者、24个STN半球。正文没有充分说明左右半球是否作为嵌套于患者的重复测量处理，也没有明确给出所有ANOVA的独立统计单位。因此不能直接把24个半球当作24名独立患者。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated；非经验证的正式风险偏倚量表）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本仅12例，全部为已接受双侧STN DBS的PD患者，FOG与Non-FOG各6例。未充分说明连续入组、筛选流程及拒绝参与情况，外推到未接受DBS的PD患者存在限制。",
+            "source_locator": "Methods—Patients，第5页；Table 1，第25页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用NFOG-Q进行Freezer/Non-freezer分类，但实验没有自然步行中的实际冻结事件，也未报告视频盲法评审或事件级临床裁定。因此标签适用于患者表型分组，不足以支持事件级FOG机制结论。",
+            "source_locator": "Methods—Patients，第5页；Results—Freezing of Gait，第10页。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用250 Hz采样、滤波、目视伪迹检查；仅3例使用多通道Wiener滤波去除心电伪迹。每个骑车条件仅45秒且只重复一次。作者明确指出低信噪比限制了beta动态分析。此外，按主动60 rpm时beta抑制最强选择通道，可能影响效应大小；其他通道选择方法得到方向相似但幅度较弱的结果。",
+            "source_locator": "Data Acquisition，第6页；Analysis，第6-7页；Channel Selection，第11页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "统一控制了实验药物及DBS状态，但停药仅超过6小时，并非完整12小时洗脱。患者病程、临床严重度等变量虽有部分描述，未见针对这些因素的充分调整分析。",
+            "source_locator": "Experimental Design and procedure，第5页；Table 1，第25页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "同一患者提供双侧STN数据，并在多个骑车条件下重复测量。作者报告72条记录和24个半球，但没有清楚说明统计模型如何处理患者内左右半球相关性及重复条件，存在无法判断独立统计单位的问题。",
+            "source_locator": "Statistics，第7页；Results，第8页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "实施了多组2-way、3-way和1-way ANOVA，并进一步分析低beta及高beta频段。作者报告对显著因素使用Tukey检验，但未清楚说明全部分析族的总体多重比较控制策略。",
+            "source_locator": "Statistics，第7页；Results，第9-10页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "研究没有建立FOG预测模型或机器学习分类器，因此模型过拟合和外部验证不适用于该研究设计。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "正文没有报告预注册或预先指定分析方案。通道选择敏感性分析部分结果标为data not shown，无法充分评估所有预设结果是否完整报告。",
+            "source_locator": "Statistics，第7页；Channel Selection，第11页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是患者FOG表型分组与骑车期间STN beta功率的关联证据，不是自然FOG事件的神经生理证据。实验任务为仰卧骑车，不能将其直接归类为自然步态冻结。样本量小，每组6例；每个条件仅一次45秒记录；低信噪比限制动态分析。通道按主动60 rpm时beta抑制最强选择。没有事件级冻结标签、FOG亚型或事件前后比较。作者在Discussion中提出beta可能下降到冻结阈值以下的假设，但明确表示无法确定STN beta与冻结是否存在固定阈值关系。",
+      "quote": "Freezers had stronger beta suppression (mean decrease = -26.28 %) compared to the non-freezers (mean decrease = -11.86 %).",
+      "source_locator": {
+        "section": "Results—Freezing of Gait",
+        "page": "10",
+        "figure_table": "Figure 4A",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E02",
+      "design": "观察性电生理研究；Freezer与Non-freezer患者在不同beta子频段的组间比较。",
+      "population": "12例PD患者，其中Freezer 6例、Non-freezer 6例。分组标准为NFOG-Q。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用：没有实际冻结事件记录。试次数及独立触点数未报告。12例患者均有STN LFP数据；共72条双极记录、24个半球，最终选取24条双极通道进行患者双侧STN分析。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "NFOG-Q定义的Freezer与Non-freezer；具体FOG运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时，未达到完整12小时停药；DBS停止超过10分钟后进行记录。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic model 3389，Percept PC；测试时DBS-off。具体刺激频率、幅度及脉宽未报告。",
+      "task": "主动/被动仰卧骑车，20及60 rpm；高beta组间比较来自包含Active/Passive、Cadence和Freezing因素的3-way ANOVA。不是自然步行或实际FOG任务。",
+      "recording_location": "双侧STN双极LFP，每侧选取一条通道进行分析。",
+      "measure": "STN局部场电位高beta频段平均功率变化。作者在Results正文中将高beta定义为20-30 Hz。",
+      "frequency_and_analysis_window": "Results正文定义高beta为20-30 Hz；采用相对于骑车前30秒静息基线的频率归一化功率，在骑车开始后0-2秒进行统计。需要注意，Figure 4图注将高beta写为13-30 Hz，与Results正文20-30 Hz的定义不一致。",
+      "finding": "Freezer患者较Non-freezer患者表现出显著更强的高beta功率抑制。作者指出总体beta组间差异主要局限于高beta频段。该结果为FOG表型与骑车期间高beta功率变化的关联，而不是实际冻结事件期间的高beta变化。",
+      "effect_estimate": "Freezer组平均变化-25.82%；Non-freezer组平均变化+0.91%；作者报告p=0.00。此处保留原文报告值，不将其解释为真实概率等于零。正文没有提供具体置信区间。",
+      "statistical_unit_and_method": "针对低beta及高beta分别实施3-way ANOVA，因素为Active/Passive、Cadence和Freezing。统计单位及患者内双侧半球相关性的处理方式未充分说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "12例DBS患者，FOG与Non-FOG各6例，招募流程未充分报告。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "仅以NFOG-Q进行表型分组，没有实际冻结事件或视频确认。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "250 Hz采样及伪迹处理已有报告，但单次短时记录和作者指出的低信噪比限制了动态分析；通道依据Active-60最大beta抑制选择。",
+            "source_locator": "Analysis，第6-7页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "统一停药超过6小时，但并非完整12小时；没有充分报告疾病严重程度等协变量调整。",
+            "source_locator": "Experimental Design，第5页；Table 1，第25页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "24个半球来自12例患者，ANOVA中是否考虑患者内相关性未明确。",
+            "source_locator": "Statistics，第7页；Results，第8页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "除总体beta外进一步分低、高beta进行ANOVA；虽报告Tukey校正，但未说明所有分析的整体校正范围。",
+            "source_locator": "Statistics，第7页；Results，第10页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型或外部验证队列。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划；高beta定义在Results正文与Figure 4图注之间存在频段不一致。",
+            "source_locator": "Results，第10页；Figure 4，第24页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "高beta频段定义存在原文内部不一致：Results正文为20-30 Hz，而Figure 4图注将高beta写为13-30 Hz。跨研究综合时应优先保留这一差异，不能直接将两种频段定义视为完全一致。该结果是患者表型分组比较，不是事件级冻结证据。作者未报告具体置信区间。",
+      "quote": "the significantly stronger beta suppression observed in freezers was limited to the high-beta band",
+      "source_locator": {
+        "section": "Results—Freezing of Gait",
+        "page": "10",
+        "figure_table": "Figure 4B",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E03",
+      "design": "观察性电生理研究；Freezer与Non-freezer患者低beta频段功率变化的组间比较。",
+      "population": "12例PD患者，Freezer 6例、Non-freezer 6例，依据NFOG-Q分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用，研究没有事件级FOG记录。总试次数及单独电极/触点数未报告。所有12例患者有神经记录。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "NFOG-Q分类的Freezer/Non-freezer；具体冻结表现亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时；DBS-off超过10分钟后开始记录。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic 3389电极及Percept PC；记录时DBS-off；刺激参数未报告。",
+      "task": "主动和被动仰卧骑车，20及60 rpm，使用3-way ANOVA比较Freezer与Non-freezer。无自然步行或实际冻结事件。",
+      "recording_location": "双侧STN局部场电位，双极记录，每侧选择一条分析通道。",
+      "measure": "STN LFP低beta频段平均功率变化。",
+      "frequency_and_analysis_window": "低beta定义为12-20 Hz。频率功率相对于骑车前30秒静息基线归一化；统计窗口为骑车开始后0-2秒。",
+      "finding": "Freezer和Non-freezer患者的低beta功率抑制程度相似，组间差异不显著。这与高beta频段观察到的显著组间差异不同，提示该研究中的FOG分组关联具有频段特异性。",
+      "effect_estimate": "Freezer组平均变化-27.49%；Non-freezer组平均变化-27.78%；p=0.95。未提供具体置信区间。",
+      "statistical_unit_and_method": "低beta频段独立3-way ANOVA，因素为Active/Passive、Cadence及Freezing。统计单位是否为患者级或半球级、患者内相关性如何处理，未明确说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本量12例，单中心相关研究团队，招募流程未充分描述。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用NFOG-Q分组，没有事件级冻结记录或视频确认。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者报告低信噪比和单次短时记录；通道选择依赖主动60 rpm下的beta抑制。",
+            "source_locator": "Analysis，第6-7页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "未完全停药12小时，且未报告充分的协变量调整。",
+            "source_locator": "Experimental Design，第5页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "双侧STN及多条件重复测量的患者内相关性处理不明确。",
+            "source_locator": "Statistics，第7页；Results，第8页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析多个频段及任务因素，整体多重比较控制范围不明确。",
+            "source_locator": "Statistics，第7页；Results，第10页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，不适用。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析方案信息；无法充分评估所有分析的预设与报告一致性。",
+            "source_locator": "Methods—Statistics，第7页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "低beta结果仅支持Freezer与Non-freezer在该任务中没有观察到显著组间差异，不能据此证明两组低beta活动完全相同。样本量较小，未报告置信区间或等效性检验。没有自然步行冻结事件，不能推断低beta在实际FOG发生期间的作用。",
+      "quote": "In the low-beta band, beta suppression was similar (p = 0.95, mean beta freezers = -27.49 % , mean beta non – freezers = - 27.78 %)",
+      "source_locator": {
+        "section": "Results—Freezing of Gait",
+        "page": "10",
+        "figure_table": "Figure 4B",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E04",
+      "design": "观察性电生理研究；被动骑车条件下Freezer与Non-freezer患者STN beta功率的组间比较。",
+      "population": "12例PD患者，其中Freezer 6例、Non-freezer 6例，依据NFOG-Q分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用：被动骑车不是自然步态冻结任务。试次数及独立触点数未报告。12例患者均纳入LFP分析。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "NFOG-Q定义的Freezer/Non-freezer；具体FOG亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时；DBS-off超过10分钟后开始记录。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic 3389电极，Percept PC；记录期间DBS-off。无刺激参数可供提取。",
+      "task": "仰卧位被动骑车，由电机提供固定踏频；20及60 rpm。患者不主动进行踏板运动，实验监测主动踩踏并在被动条件下发出警报。每个条件45秒，仅一次。",
+      "recording_location": "双侧STN双极LFP，每侧选取一条分析通道。",
+      "measure": "被动骑车期间STN beta频段（13-30 Hz）平均功率相对于静息基线的百分比变化。",
+      "frequency_and_analysis_window": "13-30 Hz；相对于骑车前30秒静息基线归一化；统计窗口为达到目标踏频并开始分析后的0-2秒。",
+      "finding": "在被动骑车条件下，Freezer患者的STN beta功率显著低于Non-freezer患者，即Freezer组表现出更强的beta抑制。该分析使用Freezing和Cadence两个因素。该结果是患者表型组间差异，不能等同于被动刺激实际预防或终止FOG。",
+      "effect_estimate": "Freezer组平均beta功率下降24.02%；Non-freezer组下降7.3%；p=0.02。未提供具体置信区间。",
+      "statistical_unit_and_method": "被动骑车条件下2-way ANOVA，因素为Freezing（Yes/No）和Cadence（20/60 rpm）。未报告完整患者内重复测量结构及左右半球相关性的处理细节。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "12例患者，Freezer与Non-freezer各6例，招募流程未详细报告。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "NFOG-Q表型分组，不存在被动骑车过程中实际FOG事件的行为确认。",
+            "source_locator": "Methods—Patients，第5页；Results，第10页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者指出单次45秒记录造成低信噪比，且选定通道依据主动60 rpm下的beta抑制。",
+            "source_locator": "Analysis，第6-7页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "停药超过6小时但未完全洗脱12小时；组间协变量调整未充分报告。",
+            "source_locator": "Experimental Design，第5页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者双侧STN及两个踏频的重复测量结构没有充分说明。",
+            "source_locator": "Statistics，第7页；Results，第8页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "被动条件结果来自多组任务与频段分析的一部分，整体多重比较控制范围不明确。",
+            "source_locator": "Statistics，第7页；Results，第10页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型或外部验证分析。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册方案，无法判断被动条件分析是否为预先指定的主要比较。",
+            "source_locator": "Methods—Statistics，第7页；Results，第10页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者指出FOG相关beta差异似乎在被动骑车时更明显，但本段仅报告被动条件的2-way ANOVA，没有提供足以证明Passive与Active之间FOG效应存在显著交互的完整统计结果。因此不能将其表述为已经证实被动刺激对Freezer具有更强的因果效应。任务不是实际步行，也没有实际FOG事件。",
+      "quote": "beta power was significantly (p = 0.02) lower in freezers (mean decrease = -24.02 %) compared to non-freezers (mean decrease = -7.3 %).",
+      "source_locator": {
+        "section": "Results—Freezing of Gait",
+        "page": "10",
+        "figure_table": "Figure 4A",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E05",
+      "design": "观察性电生理研究；静息状态下Freezer与Non-freezer患者STN beta功率的表型关联比较。",
+      "population": "12例PD患者，6例Freezer、6例Non-freezer，依据NFOG-Q分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用，分析的是骑车前静息基线，不存在实际冻结事件。试次数和独立触点数未报告。所有12例患者有神经记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "Freezer/Non-freezer依据NFOG-Q分类；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时；DBS-off超过10分钟。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic 3389及Percept PC；DBS-off状态记录。刺激参数未报告。",
+      "task": "骑车前静息基线记录30秒，患者保持手臂和腿部静止。不是自然步行或FOG诱发任务。",
+      "recording_location": "双侧STN双极LFP。",
+      "measure": "STN LFP beta频段静息功率；论文在Discussion中报告Freezer与Non-freezer静息区间beta活动没有显著差异。",
+      "frequency_and_analysis_window": "Beta主要分析频段13-30 Hz；基线记录30秒。作者没有在静息组间比较的具体描述中重新给出独立统计时间窗或详细频率处理方式。",
+      "finding": "作者在Discussion中回顾本研究静息区间结果，指出Freezer与Non-freezer患者在静息期间没有显著的STN beta频段差异。该结果与骑车期间Freezer组表现出更强beta抑制的发现形成对照，说明组间差异主要在任务状态下观察到。",
+      "effect_estimate": "未报告静息beta组间均值、效应量、p值或置信区间。仅报告无显著差异。",
+      "statistical_unit_and_method": "正文Discussion中报告该静息比较的阴性结果，但未在该处提供对应统计检验、独立统计单位及具体数值。不能自行推定其使用了何种检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅12例接受DBS的PD患者，招募过程未详细报告。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "静息比较基于NFOG-Q患者分组，不是实际冻结事件。",
+            "source_locator": "Methods—Patients，第5页；Discussion，第14页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者报告低信噪比及短时记录，静息比较的具体分析细节也不充分。",
+            "source_locator": "Analysis，第6-7页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "实验药物及刺激状态虽统一，但停药并非完整12小时，组间调整不充分。",
+            "source_locator": "Experimental Design，第5页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "双侧STN数据及患者内相关性处理方式未明确，静息比较的统计单位未单独说明。",
+            "source_locator": "Statistics，第7页；Discussion，第14页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "全文进行了多种任务及频段比较，静息阴性结果没有单独报告完整统计输出。",
+            "source_locator": "Statistics，第7页；Discussion，第14页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型，不适用。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "静息比较仅在Discussion中概述，没有给出完整统计输出，且未报告预注册信息。",
+            "source_locator": "Discussion，第14页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是静息状态下的表型关联阴性结果。作者没有给出均值、p值或置信区间，因此不能据此断言两组静息beta活动等效。该结果不能与实际FOG事件前、冻结期间或恢复期的神经活动比较，因为研究没有记录这些事件阶段。",
+      "quote": "we did not find significant differences in the beta or gamma band between patients with and without FOG during rest intervals.",
+      "source_locator": {
+        "section": "Discussion—Cycling and FOG-related beta activity",
+        "page": "14",
+        "figure_table": "未提供静息组间比较的独立图表",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E06",
+      "design": "观察性电生理研究；静息状态下Freezer与Non-freezer患者STN gamma功率的表型关联比较。",
+      "population": "12例PD患者，6例Freezer、6例Non-freezer，依据NFOG-Q分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用：静息状态比较，不包含自然冻结事件。试次数及独立触点数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "NFOG-Q定义的Freezer/Non-freezer；具体FOG运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时；DBS-off超过10分钟。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic 3389及Percept PC；实验记录期间DBS-off。",
+      "task": "骑车前30秒静息基线，患者保持手臂和腿部静止。",
+      "recording_location": "双侧STN双极LFP。",
+      "measure": "STN LFP gamma功率。论文在Discussion中报告静息期间Freezer与Non-freezer之间gamma频段无显著差异。需要区分：论文预先定义的high gamma分析频段为60-100 Hz，但静息阴性结果句没有单独重新注明该比较使用的具体gamma频段。",
+      "frequency_and_analysis_window": "静息基线30秒。主要高gamma分析频段在Methods中定义为60-100 Hz，但静息组间比较的具体频段及统计时间窗没有单独详细报告。",
+      "finding": "作者报告静息区间Freezer与Non-freezer患者的gamma频段活动没有显著差异。该结果不能被解释为实际FOG期间gamma活动不存在组间差异，因为研究没有采集实际冻结事件。",
+      "effect_estimate": "未报告具体均值、效应量、p值或置信区间；仅报告无显著差异。",
+      "statistical_unit_and_method": "Discussion仅概述阴性结果，没有报告该项静息gamma比较的具体统计检验、模型单位或患者内相关性处理。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本仅12例DBS患者，缺乏详细招募流程。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用NFOG-Q表型分组，没有事件级冻结记录。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者指出低信噪比和短时记录，且静息gamma比较的详细频段和处理信息不足。",
+            "source_locator": "Analysis，第6-7页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "未完整停药12小时，且未报告充分协变量调整。",
+            "source_locator": "Experimental Design，第5页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "统计单位及双侧STN患者内相关性处理未说明。",
+            "source_locator": "Statistics，第7页；Discussion，第14页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及多个频段与任务条件，静息比较没有提供完整统计输出。",
+            "source_locator": "Statistics，第7页；Discussion，第14页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，不适用。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "静息gamma比较没有完整效应统计输出，且未报告预注册方案。",
+            "source_locator": "Discussion，第14页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "静息gamma阴性结果的具体频段定义、效应量和统计检验没有充分报告。不能将其与60-100 Hz高gamma在主动/被动运动期间的结果直接合并，也不能推断FOG事件期间gamma活动的变化。",
+      "quote": "we did not find significant differences in the beta or gamma band between patients with and without FOG during rest intervals.",
+      "source_locator": {
+        "section": "Discussion—Cycling and FOG-related beta activity",
+        "page": "14",
+        "figure_table": "未提供静息组间比较的独立图表",
+        "supplement": "未报告相关补充材料"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37860957_E07",
+      "design": "观察性电生理研究；Freezer与Non-freezer患者骑车期间STN高gamma功率的组间比较。",
+      "population": "12例PD患者，Freezer 6例、Non-freezer 6例，依据NFOG-Q分类。",
+      "n_enrolled": 12,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": 12,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数不适用：研究比较患者表型组，不包含实际冻结事件。试次数和独立触点数未报告。所有12例患者有STN LFP数据。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "NFOG-Q定义的Freezer/Non-freezer；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off超过6小时；DBS-off超过10分钟。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic 3389及Percept PC；实验期间DBS-off。刺激频率、幅度和脉宽未报告。",
+      "task": "仰卧主动及被动骑车，涉及20及60 rpm。研究比较Freezer与Non-freezer患者在骑车任务期间的STN高gamma活动。",
+      "recording_location": "双侧STN双极LFP。",
+      "measure": "STN LFP broadband high-gamma平均功率，60-100 Hz。该结果为功率变化，不是STN高gamma burst或跨区gamma coherence。",
+      "frequency_and_analysis_window": "60-100 Hz。各频率功率相对于骑车前30秒静息基线归一化，统计窗口为骑车开始后0-2秒。",
+      "finding": "作者报告Freezing对高gamma频段没有显著影响，即未观察到Freezer与Non-freezer之间显著的高gamma功率组间差异。同一结果段还报告主动与被动骑车之间存在高gamma差异（p=0.04），但这是不同的比较，不能将其解释为FOG组间效应。",
+      "effect_estimate": "FOG分组对高gamma的效应：无显著差异；具体p值、组间均值和置信区间未报告。同一段报告Active与Passive条件间差异p=0.04，该数值不是FOG组间比较的p值。",
+      "statistical_unit_and_method": "作者报告高gamma没有显著Freezing效应，但未单独提供该比较的具体模型系数、p值或统计单位。研究总体采用ANOVA框架。",
+      "risk_of_bias": {
+        "tool_or_framework": "观察性电生理研究适配评估框架（adapted_not_validated）。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "12例已植入STN DBS的PD患者，样本量较小，招募流程未充分报告。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "Freezer/Non-freezer根据NFOG-Q分组，而非根据高gamma记录时的实际冻结事件。",
+            "source_locator": "Methods—Patients，第5页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "250 Hz采样适用于论文定义的高gamma分析范围，但作者报告低信噪比、单次短时记录和通道选择限制。",
+            "source_locator": "Data Acquisition，第6页；Limitations，第15页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "停药超过6小时而非完整12小时；没有充分报告组间协变量调整。",
+            "source_locator": "Experimental Design，第5页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "双侧STN及多个任务条件的重复测量相关性处理未明确。",
+            "source_locator": "Statistics，第7页；Results，第8页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析多个频段、任务和组别，整体多重比较控制范围不清楚。",
+            "source_locator": "Statistics，第7页；Results，第10页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，不适用。",
+            "source_locator": "Methods—Statistics，第7页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "高gamma的FOG组间阴性结果没有提供具体p值或组间效应量，且未报告预注册分析计划。",
+            "source_locator": "Results—Freezing of Gait，第10页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "高gamma的FOG组间阴性结果缺少具体p值、均值及置信区间，无法评估统计功效或排除具有临床意义的效应。不能将主动/被动条件之间的高gamma差异p=0.04误写成Freezer与Non-freezer之间的差异。研究没有实际FOG事件，也没有事件级高gamma变化分析。",
+      "quote": "There was no significant effect of freezing on the high gamma band",
+      "source_locator": {
+        "section": "Results—Freezing of Gait",
+        "page": "10",
+        "figure_table": "正文报告；相关高gamma数据未在Figure 4展示",
+        "supplement": "作者注明相关数据未展示（data not shown）"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

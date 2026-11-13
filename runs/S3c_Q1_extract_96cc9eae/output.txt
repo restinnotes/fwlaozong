@@ -1,0 +1,372 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40496972",
+    "title": "Predictive model for the therapeutic effect of bilateral subthalamic nucleus deep brain stimulation on the freezing of gait in Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID40496972_Xuanwu_STN_DBS_FOG_prediction_study",
+    "cohort_id_candidate": "Xuanwu_PD_FOG_bilateral_STN_DBS_2017-09_to_2022-06_n104",
+    "cohort_relation_basis": "Methods明确报告104名患者均来自宣武医院，招募时间为2017年9月至2022年6月。该队列按70%/30%划分为训练集（n=68）和验证集（n=36）。因此，两个分析集属于同一研究的同一母队列内拆分，而不是两个独立中心或独立招募队列。没有证据表明训练集与验证集存在患者重叠，但也没有其他论文的队列重叠信息可供确认。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID40496972_E1_training_leg_rigidity_group_comparison",
+      "design": "单中心回顾性观察性队列研究；预测模型开发阶段的患者级组间比较。",
+      "population": "原发性帕金森病患者，术前Med-off状态下MDS-UPDRS III第11项FOG评分≥1，接受双侧STN-DBS并完成术后1年随访。研究中心为Xuanwu Hospital。本文分析训练集中的68名患者，其中改进组58人、未改进组10人。",
+      "n_enrolled": 104,
+      "n_analyzed": 68,
+      "n_patients_with_FOG": 68,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "训练集68人均满足术前Med-off MDS-UPDRS III第11项评分≥1的FOG入组条件。研究没有采集或报告STN神经电生理数据，因此有效神经数据患者数和记录电极/触点数不适用。没有事件级FOG标注或步行试次记录，因此n_FOG_events和n_trials不适用。104为整个研究队列人数，68为本条分析人数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。入组依据为术前Med-off MDS-UPDRS III第11项评分≥1。未按akinetic、trembling-in-place、kinetic-no-trembling等运动学表现分类。Discussion仅称队列中包含较大比例的levodopa-responsive freezing，但未报告人数或操作性定义。",
+      "medication_phenotype": "unknown。仅能确认术前Med-off时存在FOG；不能据此确定患者属于临床OFF-FOG、ONOFF-FOG或其他药物反应亚型。Discussion提及large proportion of levodopa-responsive freezing，但没有具体人数和分类标准。",
+      "experimental_medication_state": "FOG入组评估为术前Med-off；术后1年结局评估为Stim-on/Med-off。左旋多巴停药时长、具体剂量以及其他基线预测变量的独立药物测试状态未报告。",
+      "DBS_state_and_parameters": "所有患者接受双侧STN-DBS。术后1年结局在Stim-on状态下评估。刺激频率、幅度/电压、脉宽、刺激触点、方向性配置及TEED均未报告。没有Stim-off对照条件。",
+      "task": "临床量表评估，使用MDS-UPDRS III第11项FOG评分。未报告标准化直行、转弯、步态启动、双任务或其他具体步行诱发任务，也未报告视频事件评审。",
+      "recording_location": "未报告STN-LFP、单单位、多单位或皮层-STN神经活动记录。STN仅作为DBS刺激靶点，不能将其视为神经信号记录位置。",
+      "measure": "比较术前腿部强直评分与术后1年FOG改善状态的关系。FOG改善状态依据术前Med-off和术后1年Stim-on/Med-off的MDS-UPDRS III第11项评分差值定义：差值≥1为改进，<1为未改进。原文没有在所提供文本中明确写出差值的减法方向。",
+      "frequency_and_analysis_window": "不适用。没有神经信号频段、功率、burst或分析窗口。临床结局观察窗口为术后1年。",
+      "finding": "训练集中，术后FOG未改善患者的术前腿部强直评分高于FOG改善患者。该结果属于术前临床表型与术后治疗反应之间的关联，而不是STN神经活动与FOG事件之间的关联。",
+      "effect_estimate": "未改善组n=10，腿部强直评分为2.5（IQR 2.375–3）；改善组n=58，评分为2（IQR 1.5–2.5）；组间差异p=0.025。未报告该组间比较的效应量置信区间。",
+      "statistical_unit_and_method": "患者级统计。比较改进组与未改进组；Methods说明非正态分布连续变量使用Mann–Whitney U检验。没有FOG事件级或试次级统计，也没有重复神经测量。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性临床预测研究偏倚域清单；不是经过验证的正式评分工具）",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "单中心回顾性研究，仅纳入术前Med-off有FOG、接受双侧STN-DBS并完成1年随访的患者；排除不能完成MDS-UPDRS III的患者。Discussion还承认部分缺失较多的临床指标被剔除，可能产生选择偏倚。",
+            "source_locator": "Materials and methods—Study population; Inclusion and exclusion criteria；Discussion—limitations"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "结局采用MDS-UPDRS III第11项量表评分及差值阈值，而不是事件级FOG标注。未描述视频确认、评估者盲法、评估者间一致性或具体FOG运动学亚型。因此可以支持临床FOG评分变化，但不能直接支持自然步行中具体冻结事件的发生。",
+            "source_locator": "Materials and methods—Inclusion and exclusion criteria; Groups"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "not_assessable",
+            "reason": "研究没有采集或分析STN-LFP、单/多单位或其他神经电生理信号，因此不存在可供评价的神经信号质量、伪迹剔除或信号有效性信息。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "所有患者接受双侧STN-DBS，没有未刺激或其他治疗对照组。药物剂量、停药时间及具体刺激参数未充分报告，无法排除药物状态、刺激设置和疾病进展等因素对术后FOG变化的影响。",
+            "source_locator": "Materials and methods—Study population; Groups；Discussion—limitations"
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "low",
+            "reason": "分析以患者为统计单位，未将多个FOG事件或试次当作独立样本。虽然使用术前和术后两次评分构造改善结局，但最终每名患者仅贡献一个二分类结局。",
+            "source_locator": "Materials and methods—Groups; Statistical analysis"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "研究收集30个影响因素，并进行组间比较、LASSO筛选及多变量回归。虽然采用5折交叉验证选择LASSO参数，但未在所提供文本中报告针对所有初始组间比较的多重检验校正或预先指定的主要预测变量。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis；Results—Comparison of clinical data between groups in the training set"
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "high",
+            "reason": "训练集仅68人，其中未改善者10人，而最终模型包含5个预测变量。验证集仅36人，其中未改善者5人。所谓外部验证实际上是同一单中心104人队列的随机拆分，并非独立中心或独立招募队列；验证AUC置信区间较宽。",
+            "source_locator": "Materials and methods—Groups; Statistical analysis；Results—Predictive model evaluation and comparison；Discussion—limitations"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "所提供全文没有提及预注册、公开研究方案或预先指定的统计分析计划，因此无法判断变量筛选和结局报告是否存在选择性。",
+            "source_locator": "Materials and methods—Statistical analysis；全文未见预注册或预设分析方案说明"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "该结果仅说明术前临床腿部强直评分与术后FOG量表改善之间存在关联。没有STN神经记录、自然步行事件级FOG数据或刺激参数，不能用于推断STN beta、gamma、burst或其他神经活动机制。训练集未改善组仅10人，统计稳定性有限。MDS-UPDRS III第11项差值的具体计算方向在提供文本中不明确。",
+      "quote": "A statistically significant difference in leg rigidity was observed between the two groups (p = 0.025 < 0.05).",
+      "source_locator": {
+        "section": "Results—Comparison of clinical data between groups in the training set",
+        "page": null,
+        "figure_table": "Table 1。正文报告腿部强直组间比较数值；所提供文本仅包含表格标题/占位符，未呈现完整表格主体。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40496972_E2_training_multivariable_clinical_predictors",
+      "design": "单中心回顾性观察性临床预测模型开发研究；训练集内LASSO变量筛选及多变量Logistic回归。",
+      "population": "原发性PD伴FOG患者，接受双侧STN-DBS。分析训练集68人，其中FOG改善58人、未改善10人。所有患者术前Med-off时MDS-UPDRS III第11项评分≥1。",
+      "n_enrolled": 104,
+      "n_analyzed": 68,
+      "n_patients_with_FOG": 68,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本条分析为训练集68人。未报告任何神经信号记录，因此n_patients_with_valid_neural_data和n_electrodes_contacts不适用；未进行事件级FOG记录或试次分析，因此n_FOG_events和n_trials不适用。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。术前Med-off MDS-UPDRS III第11项评分≥1；未区分akinetic、trembling-in-place、kinetic-no-trembling等表现。Discussion提及large proportion of levodopa-responsive freezing，但未给出具体人数或亚型标准。",
+      "medication_phenotype": "unknown。术前Med-off FOG为入组要求，但没有患者级OFF-FOG、ONOFF-FOG等分型。作者仅在Discussion指出队列中有较大比例的levodopa-responsive freezing。",
+      "experimental_medication_state": "术前FOG入组状态为Med-off；术后1年结局状态为Stim-on/Med-off。各预测变量具体测量时的药物状态、停药时间和药物剂量未逐项报告。",
+      "DBS_state_and_parameters": "双侧STN-DBS。结局在术后1年Stim-on/Med-off状态下测量。刺激频率、幅度、脉宽、触点及方向性参数未报告。",
+      "task": "临床量表预测模型。因变量为MDS-UPDRS III第11项FOG评分变化所定义的改善状态；自变量包括术前MDS-UPDRS II、MDS-UPDRS IV、leg rigidity、MoCA和MMSE。没有具体步行任务或事件级冻结范式。",
+      "recording_location": "无神经电生理记录。没有STN-LFP、单/多单位或皮层-STN coherence数据。STN仅作为DBS靶点。",
+      "measure": "患者级二分类FOG治疗改善结局。改进定义为术前Med-off与术后1年Stim-on/Med-off的MDS-UPDRS III第11项评分差值≥1。模型预测变量为术前MDS-UPDRS II、MDS-UPDRS IV、腿部强直、MoCA和MMSE。",
+      "frequency_and_analysis_window": "不适用；没有神经信号频段、功率或时间窗口。临床结局为术后1年评分变化。",
+      "finding": "LASSO筛选出5个临床预测变量并进入多变量Logistic模型。按照模型系数，MDS-UPDRS II、MDS-UPDRS IV、MoCA和MMSE与术后FOG改善概率呈正向关联，腿部强直与改善概率呈负向关联。正文明确报告MDS-UPDRS II为影响最强的因素（p=0.026），腿部强直为独立预测因素（p=0.028）。这些是临床预测变量，不是STN神经活动指标。",
+      "effect_estimate": "Logit(y) = −1.0043 + 0.159×MDS-UPDRS II + 0.030×MDS-UPDRS IV − 1.726×leg rigidity + 0.121×MoCA + 0.036×MMSE。MDS-UPDRS II：β=0.159，p=0.026；leg rigidity：β=−1.726，p=0.028。MDS-UPDRS IV、MoCA及MMSE的回归系数分别为0.030、0.121和0.036，但所提供结果正文未给出这三个变量各自的p值或置信区间。上述系数为Logit回归系数，不应直接当作OR。",
+      "statistical_unit_and_method": "患者级二分类Logistic回归。先使用LASSO binary logistic regression进行变量筛选，采用5-fold cross-validation，λ.min=0.05438572；随后进行多变量Logistic回归。没有事件级或试次级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性临床预测研究偏倚域清单；不是经过验证的正式评分工具）",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "单中心回顾性队列，仅纳入术前Med-off存在FOG且完成术后1年随访的患者；部分缺失较多的临床指标被排除，可能导致选择偏倚。",
+            "source_locator": "Materials and methods—Study population; Inclusion and exclusion criteria；Discussion—limitations"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "模型结局来自MDS-UPDRS III第11项评分差值，缺少事件级视频确认、评估者盲法及冻结表型分类信息，不能等同于自然步行中经确认的FOG事件。",
+            "source_locator": "Materials and methods—Groups"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "not_assessable",
+            "reason": "没有神经电生理信号采集或分析，无法评价神经信号质量和伪迹处理。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有非DBS对照组，药物及刺激参数报告不足。预测变量与改善结局之间的关联不能解释为刺激直接造成的因果效应。",
+            "source_locator": "Materials and methods—Study population; Groups；Discussion—limitations"
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "low",
+            "reason": "以患者为分析单位，每人贡献一个二分类结局；没有将重复FOG事件或步行试次作为独立观察值。",
+            "source_locator": "Materials and methods—Groups; Statistical analysis"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "30个初始临床因素经过筛选，使用LASSO和5折交叉验证，但未报告全部组间检验的多重比较校正或完整预先指定分析方案。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis；Results—LASSO-logistic regression analysis"
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "high",
+            "reason": "训练集仅10名未改善患者，最终模型纳入5个预测变量，存在较高过拟合可能。36人的验证集来自相同医院、相同招募期的随机拆分，不是独立外部队列。",
+            "source_locator": "Materials and methods—Groups；Results—Predictive model evaluation and comparison；Discussion—limitations"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有提供预注册方案或预先指定的预测变量分析计划，无法评价选择性报告风险。",
+            "source_locator": "Materials and methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "本研究没有直接测量STN神经活动，不能支持或否定STN beta功率、beta burst、gamma活动、相位调制或皮层-STN耦合与FOG之间的机制关系。回归系数反映临床变量与量表定义的治疗反应之间的预测关联，不代表神经生理因果效应。训练集仅68人，未改善者10人，模型过拟合风险较高。所提供文本中的Table 2仅显示标题，没有完整表格数据，因此不能补充未报告的变量p值、OR或置信区间。",
+      "quote": "The prediction model formula is as follows: Logit(y) = −1.0043 + 0.159 × UPDRS II + 0.030 × UPDRS IV − 1.726 × leg rigidity + 0.121 × MoCA + 0.036 × MMSE.",
+      "source_locator": {
+        "section": "Results—LASSO-logistic regression analysis screened the Most valuable variables; Construction of the predictive nomogram",
+        "page": null,
+        "figure_table": "Figure 1；Table 2。所提供文本中Table 2只有标题占位符，回归系数公式来自摘要及Results正文。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40496972_E3_training_model_discrimination",
+      "design": "单中心回顾性观察性临床预测模型研究；训练集模型区分能力评估。",
+      "population": "宣武医院双侧STN-DBS的PD伴FOG患者。训练集68人，其中FOG改善58人、未改善10人。术前Med-off MDS-UPDRS III第11项评分≥1。",
+      "n_enrolled": 104,
+      "n_analyzed": 68,
+      "n_patients_with_FOG": 68,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "训练集68人均符合术前FOG入组标准。无神经电生理数据，n_patients_with_valid_neural_data和n_electrodes_contacts不适用；无事件级冻结记录或任务试次，n_FOG_events和n_trials不适用。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。使用MDS-UPDRS III第11项评分定义临床FOG改善；未报告akinetic、trembling-in-place等运动学亚型。",
+      "medication_phenotype": "unknown。术前Med-off时存在FOG；没有患者级药物反应表型分类。",
+      "experimental_medication_state": "术前Med-off；术后1年Stim-on/Med-off。药物停药时间及具体剂量未报告。",
+      "DBS_state_and_parameters": "双侧STN-DBS；术后1年在Stim-on/Med-off状态评估。具体刺激频率、幅度、脉宽及触点配置未报告。",
+      "task": "使用5变量nomogram预测术后1年MDS-UPDRS III第11项FOG评分改善，并以训练集ROC曲线评价区分能力。没有实际步行事件级记录。",
+      "recording_location": "无神经记录。STN仅为DBS刺激靶点。",
+      "measure": "训练集患者级二分类结局：术后1年FOG改善与否。模型区分能力指标为ROC曲线下面积AUC。",
+      "frequency_and_analysis_window": "不适用；没有神经信号频段或分析窗口。预测结局时间为术后1年。",
+      "finding": "五变量预测模型在训练集区分术后FOG改善与未改善患者的AUC为0.869，95% CI为0.771–0.967。该指标反映临床预测模型的区分能力，不是神经信号与FOG的效应量。",
+      "effect_estimate": "Training-set AUC=0.869；95% CI=0.771–0.967。未报告训练集AUC对应的具体置信区间计算方法。",
+      "statistical_unit_and_method": "患者级ROC分析；以二分类术后FOG改善状态作为参考结局。模型使用LASSO筛选变量并进行多变量Logistic回归。未进行事件级神经信号统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性临床预测研究偏倚域清单；不是经过验证的正式评分工具）",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "单中心回顾性样本，限定术前FOG及术后1年随访，且部分缺失指标被排除。",
+            "source_locator": "Materials and methods—Study population; Inclusion and exclusion criteria"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "参考结局是MDS-UPDRS III第11项评分差值，而不是经视频或临床事件级确认的自然步行FOG。",
+            "source_locator": "Materials and methods—Groups"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "not_assessable",
+            "reason": "没有STN神经信号采集，无法评价信号质量和伪迹处理。",
+            "source_locator": "Materials and methods—Data collection"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有未刺激对照组，药物状态和DBS具体参数未充分报告。",
+            "source_locator": "Materials and methods—Study population; Groups"
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "low",
+            "reason": "ROC分析以患者为单位，没有把重复事件或试次视作独立样本。",
+            "source_locator": "Materials and methods—Statistical analysis"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "30个初始变量经过筛选，未报告全部比较的多重检验校正。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis"
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "high",
+            "reason": "训练集68人中只有10人未改善。训练集AUC是在模型开发样本上评估，不能视为独立外部验证结果。",
+            "source_locator": "Materials and methods—Groups；Results—Predictive model evaluation and comparison"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定的模型性能评价方案。",
+            "source_locator": "Materials and methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "训练集AUC是模型开发样本上的表现，可能受到变量筛选及模型拟合的乐观偏倚影响。该结果没有提供STN神经活动与实际FOG事件之间的关联，也没有提供事件级或信号级证据。训练集未改善者仅10人，AUC置信区间不能消除小样本和模型过拟合问题。",
+      "quote": "The AUC of the nomogram in the training set was 0.869 (95% confidence interval [CI]: 0.771–0.967).",
+      "source_locator": {
+        "section": "Results—Predictive model evaluation and comparison",
+        "page": null,
+        "figure_table": "Figure 4A",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40496972_E4_validation_model_discrimination",
+      "design": "单中心回顾性观察性临床预测模型研究；同一母队列随机拆分后的验证集区分能力评估。",
+      "population": "宣武医院双侧STN-DBS的PD伴FOG患者。验证集36人，其中FOG改善31人、未改善5人。所有患者均来自同一104人研究队列，术前Med-off MDS-UPDRS III第11项评分≥1。",
+      "n_enrolled": 104,
+      "n_analyzed": 36,
+      "n_patients_with_FOG": 36,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本条分析为验证集36人，均符合术前FOG入组标准。研究未采集神经电生理数据，因此n_patients_with_valid_neural_data和n_electrodes_contacts不适用；未报告事件级冻结次数或步行试次，因此n_FOG_events和n_trials不适用。验证集是104人队列中30%的拆分子集。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。没有按akinetic、trembling-in-place、kinetic-no-trembling等运动学表现分类。",
+      "medication_phenotype": "unknown。只能确认术前Med-off时存在FOG，未报告患者级ON/OFF药物反应分型。",
+      "experimental_medication_state": "术前Med-off；术后1年Stim-on/Med-off。具体药物剂量及停药时间未报告。",
+      "DBS_state_and_parameters": "双侧STN-DBS；术后1年在Stim-on/Med-off条件下评估。频率、幅度、脉宽、触点及方向性参数未报告。",
+      "task": "使用训练集建立的五变量nomogram，在验证集预测术后1年MDS-UPDRS III第11项FOG改善状态，并使用ROC曲线评价模型区分能力。没有报告实际步行任务或事件级FOG。",
+      "recording_location": "未采集STN-LFP、单/多单位或皮层-STN信号。STN仅作为DBS刺激靶点。",
+      "measure": "患者级二分类术后FOG改善状态。以验证集实际改善状态与模型预测结果计算ROC-AUC。",
+      "frequency_and_analysis_window": "不适用；无神经信号频段或时间窗口。结局观察时间为术后1年。",
+      "finding": "五变量临床预测模型在验证集区分术后FOG改善与未改善患者的AUC为0.845，95% CI为0.6526–1.000。虽然文章称该结果为external validation，但Methods明确说明验证集来自同一104人队列的30%拆分，因此不应视为独立外部队列验证。",
+      "effect_estimate": "Validation-set AUC=0.845；95% CI=0.6526–1.000。验证集n=36，其中改善31人、未改善5人。未报告AUC置信区间的具体计算方法。",
+      "statistical_unit_and_method": "患者级ROC分析；模型由训练集建立，在同一研究队列的独立拆分验证子集中评价。没有事件级或试次级统计。论文将其称为external validation，但根据Methods的样本划分方式，应归类为同中心内部留出验证。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性临床预测研究偏倚域清单；不是经过验证的正式评分工具）",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "high",
+            "reason": "验证集仅36人，来自同一单中心回顾性队列，且仅包括术前有FOG并完成术后1年随访的患者。",
+            "source_locator": "Materials and methods—Study population; Inclusion and exclusion criteria; Groups"
+          },
+          {
+            "domain": "behavioral_label_validity",
+            "judgement": "some_concerns",
+            "reason": "验证结局基于MDS-UPDRS III第11项评分差值，没有事件级视频确认或具体冻结表型分类。",
+            "source_locator": "Materials and methods—Groups"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "not_assessable",
+            "reason": "没有采集STN神经信号，无法评价神经信号质量或伪迹处理。",
+            "source_locator": "Materials and methods—Data collection"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有未刺激或其他治疗对照组；药物和刺激参数未充分报告，不能排除临床治疗因素对结局的影响。",
+            "source_locator": "Materials and methods—Study population; Groups；Discussion—limitations"
+          },
+          {
+            "domain": "repeated_measurement_and_pseudoreplication",
+            "judgement": "low",
+            "reason": "验证集ROC以患者为分析单位，没有将同一患者的多个冻结事件或试次当作独立样本。",
+            "source_locator": "Materials and methods—Statistical analysis"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "模型变量来自30个候选因素的筛选；未报告全部初始比较的多重检验校正。",
+            "source_locator": "Materials and methods—Data collection; Statistical analysis"
+          },
+          {
+            "domain": "model_overfitting_and_external_validation",
+            "judgement": "high",
+            "reason": "验证集仅36人，未改善者5人，AUC置信区间较宽。验证样本来自同一中心、同一研究时期的随机拆分，并非独立外部验证队列。",
+            "source_locator": "Materials and methods—Groups；Results—Predictive model evaluation and comparison；Discussion—limitations"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册或预先指定的验证分析计划，无法判断是否存在选择性报告。",
+            "source_locator": "Materials and methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "验证集只有36人，未改善者5人，置信区间较宽。文章使用external validation一词，但该验证集实际来自同一单中心104人队列的随机拆分，不是独立外部队列。该结果只支持临床量表预测模型的初步区分能力，不能提供STN神经活动与FOG事件之间的机制证据。研究也没有报告自然行走中的事件级FOG、神经信号或刺激参数。",
+      "quote": "Furthermore, we revealed an AUC of 0.845 (95% CI: 0.6526–1) in the validation set.",
+      "source_locator": {
+        "section": "Results—Predictive model evaluation and comparison",
+        "page": null,
+        "figure_table": "Figure 4B；Abstract—Predictive model performance",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

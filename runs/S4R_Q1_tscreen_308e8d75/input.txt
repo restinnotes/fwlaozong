@@ -1,0 +1,162 @@
+下面是检索得到的一批文献，只有题目、年份和文献类型。请做题目初筛：判断每篇是否**可能**和研究问题有关，值得再看摘要。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+规则：宁可多留，不要误删。只有题目明显和研究问题无关（例如完全不同的疾病、器官或技术领域，或者 FOG 指的不是冻结步态）才 drop；拿不准一律 keep。
+
+只输出一个 JSON：{"keep":["pid", ...]}，只列要保留的 pid（照抄），不列的就是 drop。
+
+【文献】
+PMID:11404425 | 2001 | Research Support, Non-U.S. Gov't; resear | Galpha(olf) levels are regulated by receptor usage and control dopamine and adenosine action in the striatum.
+PMID:11437237 | 2001 | Research Support, Non-U.S. Gov't; resear | The glycinergic inhibitory synapse.
+PMID:11458542 | 2001 | Comparative Study; Review; Journal Artic | Comparison of cocaine- and methamphetamine-evoked dopamine and glutamate overflow in somatodendritic and terminal field regions of the rat brain during acute, chronic, and early withdrawal conditions.
+PMID:11465631 | 2001 | Research Support, U.S. Gov't, P.H.S.; Jo | Substantia nigra pars reticulata is a highly potent site of action for the behavioral effects of the D1 antagonist SCH 23390 in the rat.
+PMID:11474425 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Ion channel diseases of the central nervous system.
+PMID:11514028 | 2001 | Research Support, Non-U.S. Gov't; Journa | Substance P and its transglutaminase-synthesized spermine derivative elicit yawning behavior via nitric oxide in rats.
+PMID:11517257 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Multiple amidated neuropeptides are required for normal circadian locomotor rhythms in Drosophila.
+PMID:11517332 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Induction of stereotypy in dopamine-deficient mice requires striatal D1 receptor activation.
+PMID:11534533 | 2001 | Overall; Conference Proceedings; abstrac | Abstracts of the Congress of the European Association of Nuclear Medicine. 25-29 August 2001, Napoli, Italy.
+PMID:11547801 | 2001 | Overall; Conference Proceedings; researc | Abstracts of the 7th International Congress on Amino Acids and Proteins. Vienna, Austria, August 6-10, 2001.
+PMID:11569624 | 2001 | Overall; Conference Proceedings; researc | EuroSpine 2001. Abstracts of the 3rd annual meeting of the Spine Society of Europe. September 2-8, 2001. Gothenburg, Sweden.
+PMID:11572967 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Glutamatergic modulation of hyperactivity in mice lacking the dopamine transporter.
+PMID:11577985 | 2001 | research-article; Review; Journal Articl | Transcription factor GATA3 and the human HDR syndrome.
+PMID:11601420 | 2001 | Letter; Case Reports | Response to botulinum toxin in a case of rigid spine syndrome.
+PMID:11601421 | 2001 | Letter; Case Reports | "Hot cross bun" sign in a patient with parkinsonism secondary to presumed vasculitis.
+PMID:11606653 | 2001 | Research Support, U.S. Gov't, P.H.S.; re | The circuitry mediating cocaine-induced reinstatement of drug-seeking behavior.
+PMID:11607043 | 2001 | research-article; Review; Journal Articl | Pharmacology of the atypical antipsychotic remoxipride, a dopamine D2 receptor antagonist.
+PMID:11687615 | 2001 | Research Support, Non-U.S. Gov't; resear | Altered psychomotor behaviors in mice lacking pituitary adenylate cyclase-activating polypeptide (PACAP).
+PMID:11695818 | 2001 | Research Support, Non-U.S. Gov't; Journa | Pharmacological actions of nerve growth factor-transferrin conjugate on the central nervous system.
+PMID:11707605 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Cholinergic dilation of cerebral blood vessels is abolished in M(5) muscarinic acetylcholine receptor knockout mice.
+PMID:11739252 | 2001 | Research Support, Non-U.S. Gov't; resear | Modulation of cardiac activity by tachykinins in the rat substantia nigra.
+PMID:11750790 | 2001 | Research Support, U.S. Gov't, P.H.S.; Re | Biochemical, behavioral, physiologic, and neurodevelopmental changes in mice deficient in monoamine oxidase A or B.
+PMID:11752469 | 2001 | Research Support, U.S. Gov't, P.H.S.; re | Hyperactivity, elevated dopaminergic transmission, and response to amphetamine in M1 muscarinic acetylcholine receptor-deficient mice.
+PMID:11756520 | 2002 | other; Research Support, Non-U.S. Gov't; | M5 muscarinic receptors are required for prolonged accumbal dopamine release after electrical stimulation of the pons in mice.
+PMID:11762205 | 2001 | other; Conference Proceedings | The 24th Annual Meeting of the Canadian College of Neuropsychopharmacology. Banff, Alberta, Canada, June 17-20, 2001.
+PMID:11774341 | 2002 | Research Support, U.S. Gov't, P.H.S.; re | Functional circuitry involved in the regulation of whisker movements.
+PMID:11783444 | 2001 | Overall; Conference Proceedings; researc | Abstracts of the 10th Annual Meeting of the Israel Society of Neurosciences. Eilat, Israel, December 16-18, 2001.
+PMID:11784818 | 2002 | research-article; Review; Journal Articl | Neuropsychiatry of the basal ganglia.
+PMID:11796765 | 2002 | Research Support, U.S. Gov't, P.H.S.; re | Psychoanatomical substrates of Bálint's syndrome.
+PMID:11797063 | 2001 | Research Support, Non-U.S. Gov't; resear | Hypolocomotor effects of acute and daily d-amphetamine in mice lacking the dopamine transporter.
+PMID:11822888 | 2002 | Research Support, Non-U.S. Gov't; Journa | Differential effects of a small, unilateral, 6-hydroxydopamine-induced nigral lesion on behavior in high and low responders to novelty.
+PMID:11835434 | 2002 | Journal Article | Neuroprotective effect of riluzole in a primate model of Parkinson's disease: behavioral and histological evidence.
+PMID:11850448 | 2002 | Research Support, U.S. Gov't, P.H.S.; Re | Distribution and pharmacology of alpha 6-containing nicotinic acetylcholine receptors analyzed with mutant mice.
+PMID:11860189 | 2001 | Research Support, Non-U.S. Gov't; resear | Correlation of increased grooming behavior and motor activity with alterations in nigrostriatal and mesolimbic catecholamines after alpha-melanotropin and neuropeptide glutamine-isoleucine injection in the rat ventral tegmental area.
+PMID:11880516 | 2002 | Research Support, Non-U.S. Gov't; resear | Signaling mechanisms of metabotropic glutamate receptor 5 subtype and its endogenous role in a locomotor network.
+PMID:11894863 | 2002 | Overall; Conference Proceedings; meeting | Abstracts of the British Pharmacological Society Meeting. 5-7 September 2001.
+PMID:11943831 | 2002 | Research Support, Non-U.S. Gov't; resear | Changes in extracellular dopamine induced by morphine and cocaine: crucial control by D2 receptors.
+PMID:11978809 | 2002 | other; Research Support, U.S. Gov't, P.H | Neuronal systems underlying behaviors related to nicotine addiction: neural circuits and molecular genetics.
+PMID:11978842 | 2002 | Research Support, U.S. Gov't, P.H.S.; re | Regional and cellular mapping of cAMP response element-mediated transcription during naltrexone-precipitated morphine withdrawal.
+PMID:12037206 | 2002 | Research Support, U.S. Gov't, P.H.S.; Jo | Effects of pedunculopontine nucleus (PPN) stimulation on caudal pontine reticular formation (PnC) neurons in vitro.
+PMID:12040055 | 2002 | Research Support, Non-U.S. Gov't; resear | Corticostriatopallidal neuroprotection by adenovirus-mediated ciliary neurotrophic factor gene transfer in a rat model of progressive striatal degeneration.
+PMID:12086986 | 2002 | Comparative Study; Research Support, Non | Central injections of nocistatin or its C-terminal hexapeptide exert anxiogenic-like effect on behaviour of mice in the plus-maze test.
+PMID:12097518 | 2002 | Research Support, Non-U.S. Gov't; resear | Chronic but not acute treatment with a metabotropic glutamate 5 receptor antagonist reverses the akinetic deficits in a rat model of parkinsonism.
+PMID:12113903 | 2002 | Research Support, Non-U.S. Gov't; Journa | Long-term potentiation and adenosine sensitivity are unchanged in the AS/AGU protein kinase Cgamma-deficient rat.
+PMID:12115699 | 2002 | Research Support, U.S. Gov't, P.H.S.; Jo | Cocaine- and amphetamine-regulated transcript peptide projections in the ventral midbrain: colocalization with gamma-aminobutyric acid, melanin-concentrating hormone, dynorphin, and synaptic interactions with dopamine neurons.
+PMID:12160124 | 2002 | article-commentary; Journal Article | Whose health? Who cares?
+PMID:12177222 | 2002 | Research Support, Non-U.S. Gov't; resear | Ciproxifan, a histamine H3-receptor antagonist/inverse agonist, potentiates neurochemical and behavioral effects of haloperidol in the rat.
+PMID:12196593 | 2002 | Research Support, Non-U.S. Gov't; resear | Anatomical, physiological, and pharmacological characteristics of histidine decarboxylase knock-out mice: evidence for the role of brain histamine in behavioral and sleep-wake control.
+PMID:12223567 | 2002 | Research Support, U.S. Gov't, P.H.S.; Re | Delta FosB regulates wheel running.
+PMID:12351746 | 2002 | Research Support, Non-U.S. Gov't; resear | Behavioral consequences of bicuculline injection in the subthalamic nucleus and the zona incerta in rat.
+PMID:12353059 | 2002 | research-article; Review; Journal Articl | Moclobemide: evolution, pharmacodynamic, and pharmacokinetic properties.
+PMID:12427846 | 2002 | Research Support, U.S. Gov't, P.H.S.; re | Rewarding effects of the cholinergic agents carbachol and neostigmine in the posterior ventral tegmental area.
+PMID:12438441 | 2002 | Research Support, Non-U.S. Gov't; resear | Misfolded proteinase K-resistant hyperphosphorylated alpha-synuclein in aged transgenic mice with locomotor deterioration and in human alpha-synucleinopathies.
+PMID:12442230 | 2002 | research-article; Review; Journal Articl | Rett syndrome and MeCP2: linking epigenetics and neuronal function.
+PMID:12451147 | 2002 | Research Support, U.S. Gov't, P.H.S.; re | Frequency of dopamine concentration transients increases in dorsal and ventral striatum of male rats during introduction of conspecifics.
+PMID:12486191 | 2002 | Comparative Study; Research Support, Non | Modulation by central and basolateral amygdalar nuclei of dopaminergic correlates of feeding to satiety in the rat nucleus accumbens and medial prefrontal cortex.
+PMID:12516548 | 2002 | Overall; Conference Proceedings; researc | Abstracts of the 11th Annual Meeting of the Israel Society for Neuroscience. Eilat, Israel, December 15-17, 2002.
+PMID:12533618 | 2003 | Research Support, Non-U.S. Gov't; resear | A novel skilled-reaching impairment in paw supination on the "good" side of the hemi-Parkinson rat improved with rehabilitation.
+PMID:12574402 | 2003 | brief-report; Research Support, U.S. Gov | Time-dependent increases in brain-derived neurotrophic factor protein levels within the mesolimbic dopamine system after withdrawal from cocaine: implications for incubation of cocaine craving.
+PMID:12595911 | 2003 | Comparative Study; research-article; Rev | JL 13, an atypical antipsychotic: a preclinical review.
+PMID:12598409 | 2003 | Comparative Study; Research Support, Non | Implication of nigral tachykinin NK3 receptors in the maintenance of hypertension in spontaneously hypertensive rats: a pharmacologic and autoradiographic study.
+PMID:12604788 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Dopamine controls the firing pattern of dopamine neurons via a network feedback mechanism.
+PMID:12610686 | 2003 | Comparative Study; Research Support, U.S | Impaired regulation of stride variability in Parkinson's disease subjects with freezing of gait.
+PMID:12642658 | 2003 | Research Support, U.S. Gov't, P.H.S.; re | Mitochondrial pathology and apoptotic muscle degeneration in Drosophila parkin mutants.
+PMID:12652040 | 2002 | Comparative Study; Research Support, Non | Exploration of the role of the upper brainstem in motor control.
+PMID:12657703 | 2003 | Research Support, Non-U.S. Gov't; resear | Bimodal locomotion elicited by electrical stimulation of the midbrain in the salamander Notophthalmus viridescens.
+PMID:12684441 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Cocaine abusers have an overexpression of alpha-synuclein in dopamine neurons.
+PMID:12684491 | 2003 | Research Support, U.S. Gov't, P.H.S.; re | Directional avoidance turns encoded by single interneurons and sustained by multifunctional serotonergic cells.
+PMID:12688262 | 2003 | Overall; Conference Proceedings; abstrac | Abstracts of the British Society of Gastroenterology annual meeting. 23-26 March 2003, Birmingham.
+PMID:12722161 | 2003 | Research Support, Non-U.S. Gov't; Journa | Effect of pulsatile administration of levodopa on dyskinesia induction in drug-naïve MPTP-treated common marmosets: effect of dose, frequency of administration, and brain exposure.
+PMID:12764095 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Inhibition of calpains prevents neuronal and behavioral deficits in an MPTP mouse model of Parkinson's disease.
+PMID:12764108 | 2003 | Research Support, Non-U.S. Gov't; resear | Location and size of dopaminergic and serotonergic cell populations are controlled by the position of the midbrain-hindbrain organizer.
+PMID:12764127 | 2003 | Research Support, Non-U.S. Gov't; resear | Variable dopamine release probability and short-term plasticity between functional domains of the primate striatum.
+PMID:12767258 | 2003 | Research Support, Non-U.S. Gov't; review | Physiological and pathological roles of Apaf1 and the apoptosome.
+PMID:12790157 | 2003 | review-article; Review; Journal Article | Cholecystokinin receptor subtypes: role in the modulation of anxiety-related and reward-related behaviours in animal models.
+PMID:12802017 | 2003 | Research Support, Non-U.S. Gov't; resear | Impairment of reward-related learning by cholinergic cell ablation in the striatum.
+PMID:12805310 | 2003 | Comparative Study; Research Support, Non | Evidence for enhanced neurobehavioral vulnerability to nicotine during periadolescence in rats.
+PMID:12832222 | 2003 | research-article; Review; Journal Articl | Is there a subtype of developmental Parkinson's disease?
+PMID:12847557 | 2003 | research-article; Review; Journal Articl | Xanomeline and the antipsychotic potential of muscarinic receptor subtype selective agonists.
+PMID:12851457 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Conditional calcineurin knockout mice exhibit multiple abnormal behaviors related to schizophrenia.
+PMID:12867510 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Altered anxiety-related responses in mutant mice lacking the beta4 subunit of the nicotinic receptor.
+PMID:12876231 | 2003 | research-article; Multicenter Study; Eva | Deep brain stimulation of the subthalamic nucleus in Parkinson's disease: evaluation of active electrode contacts.
+PMID:12902836 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Functional brain mapping in freely moving rats during treadmill walking.
+PMID:12914978 | 2003 | Research Support, U.S. Gov't, P.H.S.; Jo | High frequency stimulation of the subthalamic nucleus improves treadmill locomotion in unilateral 6-hydroxydopamine lesioned rats.
+PMID:12943217 | 2003 | review-article; Review; Journal Article | Neuronal nicotinic receptors: insights gained from gene knockout and knockin mutant mice.
+PMID:12944527 | 2003 | Research Support, Non-U.S. Gov't; resear | Diadenosine tetraphosphate protects against injuries induced by ischemia and 6-hydroxydopamine in rat brain.
+PMID:12958210 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Sustained elevation of extracellular dopamine causes motor dysfunction and selective degeneration of striatal GABAergic neurons.
+PMID:14505495 | 2003 | Research Support, Non-U.S. Gov't; resear | Increased brain histamine H3 receptor expression during hibernation in golden-mantled ground squirrels.
+PMID:14515342 | 2003 | Research Support, Non-U.S. Gov't; Journa | Rotenone increases glutamate-induced dopamine release but does not affect hydroxyl-free radical formation in rat striatum.
+PMID:14523066 | 2004 | Comparative Study; Research Support, U.S | Long-lasting activation of rhythmic neuronal activity by a novel mechanosensory system in the crustacean stomatogastric nervous system.
+PMID:14527968 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Development of REM sleep drive and clinical implications.
+PMID:14531049 | 2003 | Review; Journal Article | Dopamine transporter: basic science and human variation of a key molecule for dopaminergic function, locomotion, and parkinsonism.
+PMID:14534241 | 2003 | Research Support, Non-U.S. Gov't; resear | Conditional ablation of striatal neuronal types containing dopamine D2 receptor disturbs coordination of basal ganglia function.
+PMID:14567613 | 2003 | Research Support, Non-U.S. Gov't; Journa | Effect of ipsilateral subthalamic nucleus lesioning in a rat parkinsonian model: study of behavior correlated with neuronal activity in the pedunculopontine nucleus.
+PMID:14573545 | 2003 | Research Support, U.S. Gov't, P.H.S.; re | Ionic mechanisms of burst firing in dissociated Purkinje neurons.
+PMID:14586021 | 2003 | Research Support, Non-U.S. Gov't; resear | Correlated coding of motivation and outcome of decision by dopamine neurons.
+PMID:14595022 | 2003 | Research Support, Non-U.S. Gov't; resear | Cyclin-dependent kinase 5 is a mediator of dopaminergic neuron loss in a mouse model of Parkinson's disease.
+PMID:14599485 | 2003 | Comparative Study; Research Support, Non | Effect of glial cell line-derived neurotrophic factor (GDNF) co-transplantation with fetal ventral mesencephalic cells (VMC) on functional restoration in 6-hydroxydopamine (6-OHDA) lesioned rat model of Parkinson's disease: neurobehavioral, neurochemical and immunohistochemical studies.
+PMID:14614167 | 2003 | Research Support, Non-U.S. Gov't; Journa | Five-year follow-up of bilateral stimulation of the subthalamic nucleus in advanced Parkinson's disease.
+PMID:14637121 | 2003 | Research Support, Non-U.S. Gov't; Journa | Neuroprotective actions of the ginseng extract G115 in two rodent models of Parkinson's disease.
+PMID:14637123 | 2003 | Research Support, U.S. Gov't, P.H.S.; Re | Recombinant adeno-associated viral vector (rAAV) delivery of GDNF provides protection against 6-OHDA lesion in the common marmoset monkey (Callithrix jacchus).
+PMID:14647530 | 2003 | research-article; Review; Journal Articl | Neuropharmacological profile of an atypical antipsychotic, NRA0562.
+PMID:14657161 | 2003 | Research Support, U.S. Gov't, P.H.S.; re | The beta3 nicotinic receptor subunit: a component of alpha-conotoxin MII-binding nicotinic acetylcholine receptors that modulate dopamine release and related behaviors.
+PMID:14662736 | 2004 | Comparative Study; Research Support, Non | Evidence in locomotion test for the functional heterogeneity of ORL-1 receptors.
+PMID:14684868 | 2003 | Research Support, Non-U.S. Gov't; resear | Dopamine D4 receptor-induced postsynaptic inhibition of GABAergic currents in mouse globus pallidus neurons.
+PMID:14698760 | 2004 | Comparative Study; Research Support, Non | Altered neurotensin mrna expression in mice lacking the dopamine transporter.
+PMID:14703899 | 2003 | Comparative Study; Clinical Trial; Journ | Differences in the EMG pattern of leg muscle activation during locomotion in Parkinson's disease.
+PMID:14712829 | 2003 | Overall; Conference Proceedings; researc | Abstracts of the 12th Annual Meeting of the Israel Society for Neuroscience. Eliat, Israel, December 14-16, 2003.
+PMID:14724239 | 2004 | Research Support, Non-U.S. Gov't; resear | Attenuated response to stress and novelty and hypersensitivity to seizures in 5-HT4 receptor knock-out mice.
+PMID:14744212 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Hypocretin (orexin): role in normal behavior and neuropathology.
+PMID:14973246 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | A single infusion of brain-derived neurotrophic factor into the ventral tegmental area induces long-lasting potentiation of cocaine seeking after withdrawal.
+PMID:15014119 | 2004 | Research Support, Non-U.S. Gov't; resear | Oscillating Purkinje neuron activity causing involuntary eye movement in a mutant mouse deficient in the glutamate receptor delta2 subunit.
+PMID:15044694 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Lithium antagonizes dopamine-dependent behaviors mediated by an AKT/glycogen synthase kinase 3 signaling cascade.
+PMID:15069465 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Orphanin FQ/nociceptin suppresses motor activity through an action along the mesoaccumbens axis in rats.
+PMID:15090075 | 2004 | Research Support, Non-U.S. Gov't; resear | Parkin counteracts symptoms in a Drosophila model of Parkinson's disease.
+PMID:15095008 | 2004 | Research Support, Non-U.S. Gov't; review | Caffeine as a psychomotor stimulant: mechanism of action.
+PMID:15095014 | 2004 | research-article; Journal Article | Differential diurnal variations of anandamide and 2-arachidonoyl-glycerol levels in rat brain.
+PMID:15140200 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Alterations in ionotropic glutamate receptor subunits during binge cocaine self-administration and withdrawal in rats.
+PMID:15196972 | 2004 | Comparative Study; Research Support, U.S | High-frequency stimulation of the subthalamic nucleus reverses limb-use asymmetry in rats with unilateral 6-hydroxydopamine lesions.
+PMID:15199190 | 2004 | Comparative Study; Research Support, U.S | Knockin mice with Leu9'Ser alpha4-nicotinic receptors: substantia nigra dopaminergic neurons are hypersensitive to agonist and lost postnatally.
+PMID:15201328 | 2004 | Research Support, Non-U.S. Gov't; resear | Improvements in the signal-to-noise ratio of motor cortex cells distinguish early versus late phases of motor skill learning.
+PMID:15218106 | 2004 | Research Support, Non-U.S. Gov't; resear | Altered dopamine signaling and MPTP resistance in mice lacking the Parkinson's disease-associated GPR37/parkin-associated endothelin-like receptor.
+PMID:15269254 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | The ventral striatum in off-line processing: ensemble reactivation during sleep and modulation by hippocampal ripples.
+PMID:15272078 | 2004 | Research Support, Non-U.S. Gov't; resear | Simultaneous absence of dopamine D1 and D2 receptor-mediated signaling is lethal in mice.
+PMID:15280545 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Glucocorticoid receptor overexpression in forebrain: a mouse model of increased emotional lability.
+PMID:15282268 | 2004 | Research Support, Non-U.S. Gov't; resear | Blockade of nociceptin/orphanin FQ receptor signaling in rat substantia nigra pars reticulata stimulates nigrostriatal dopaminergic transmission and motor behavior.
+PMID:15293810 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Stem cells: cross-talk and developmental programs.
+PMID:15297618 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Goal-directed whisking increases phase-locking between vibrissa movement and electrical activity in primary sensory cortex in rat.
+PMID:15300651 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Falls and freezing of gait in Parkinson's disease: a review of two interconnected, episodic phenomena.
+PMID:15301599 | 2004 | Comparative Study; Research Support, U.S | Central amygdalar and dorsal striatal NMDA receptor involvement in instrumental learning and spontaneous behavior.
+PMID:15303307 | 2004 | Comparative Study; Research Support, Non | Experimental investigations on dopamine transmission can provide clues on the mechanism of the therapeutic effect of amphetamine and methylphenidate in ADHD.
+PMID:15303310 | 2004 | Research Support, Non-U.S. Gov't; resear | Involvement of norepinephrine in the control of activity and attentive processes in animal models of attention deficit hyperactivity disorder.
+PMID:15314110 | 2004 | Clinical Trial; Research Support, Non-U. | Subthalamic nucleus stimulation in advanced Parkinson's disease: blinded assessments at one year follow up.
+PMID:15317940 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Firing properties of dopamine neurons in freely moving dopamine-deficient mice: effects of dopamine receptor activation and anesthesia.
+PMID:15329403 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Repetitive behaviors in monkeys are linked to specific striatal activation patterns.
+PMID:15340144 | 2004 | article-commentary; Comment; Journal Art | Homeostatic regulation of dopaminergic neurons without dopamine.
+PMID:15364027 | 2004 | Comparative Study; Research Support, U.S | Intranigral antagonism of neurokinin 1 and 3 receptors reduces intrastriatal dopamine D1 receptor-stimulated locomotion in the rat.
+PMID:15377681 | 2004 | Clinical Trial; Research Support, Non-U. | Efficacy of deep brain stimulation of the subthalamic nucleus in Parkinson's disease 4 years after surgery: double blind and open label evaluation.
+PMID:15388533 | 2004 | review-article; Review; Journal Article | Endocannabinoids and exercise.
+PMID:15466448 | 2004 | Research Support, U.S. Gov't, P.H.S.; re | Acute wake-promoting actions of JNJ-5207852, a novel, diamine-based H3 antagonist.
+PMID:15490461 | 2005 | Research Support, Non-U.S. Gov't; Journa | Multiple small doses of levodopa plus entacapone produce continuous dopaminergic stimulation and reduce dyskinesia induction in MPTP-treated drug-naive primates.
+PMID:15492773 | 2004 | research-article; Review; Journal Articl | Dihydrexidine--the first full dopamine D1 receptor agonist.
+PMID:15499610 | 2005 | Comparative Study; Journal Article | Behavioral and anatomical effects of quinolinic acid in the striatum of the hemiparkinsonian rat.
+PMID:15509741 | 2004 | Research Support, U.S. Gov't, P.H.S.; Re | Dopamine modulates release from corticostriatal terminals.
+PMID:15523530 | 2004 | Research Support, U.S. Gov't, P.H.S.; Jo | Basal ganglia neural mechanisms of natural movement sequences.
+PMID:15548503 | 2004 | brief-report; Journal Article; Case Repo | Primary lateral sclerosis presenting parkinsonian symptoms without nigrostriatal involvement.
+PMID:15564589 | 2004 | research-article; Journal Article | Activation of the cGMP pathway in dopaminergic structures reduces cocaine-induced EGR-1 expression and locomotor activity.
+PMID:15569935 | 2004 | research-article; Journal Article | Neurochemical and behavioral consequences of widespread gene knockdown in the adult mouse brain by using nonviral RNA interference.
+PMID:15673672 | 2005 | research-article; Journal Article | Mesolimbic dopamine super-sensitivity in melanin-concentrating hormone-1 receptor-deficient mice.
+PMID:15684050 | 2005 | Research Support, Non-U.S. Gov't; resear | Parkin-deficient mice are not a robust model of parkinsonism.

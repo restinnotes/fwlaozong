@@ -1,0 +1,269 @@
+DOI:10.64898/2026.08.13.744293 | Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson’s disease (2026)
+
+Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson's disease
+Christopher A. Beaudoin1, Andrew B. O'Keeffe2,3, Bahman Abdi-Sargezeh4,5, Martin J. Gillies2,3, 
+Ashwini Oswal4,5*, Alexander L. Green2,3*
+1School of Medicine and Biomedical Sciences, University of Oxford, John Radcliffe Hospital, 
+Headington, Oxford, OX3 9DU, UK.
+2Nuffield Department of Surgical Sciences, University of Oxford, Oxford, OX3 7DQ, UK.
+3Oxford Functional Neurosurgery, John Radcliffe Hospital, Oxford, OX3 7DQ, UK.
+4MRC Centre of Research Excellence in Restorative Neural Dynamics, University of Oxford, UK
+5Nuffield Department of Clinical Neurosciences, University of Oxford, Oxford, OX3 7DQ, UK.
+*Co-corresponding authors: Alexander L. Green, alex.green@nds.ox.ac.uk; Ashwini Oswal, 
+ashwini.oswal@ndcn.ox.ac.uk
+Abstract
+Background: Freezing of gait (FOG) in Parkinson’s disease is associated with abnormal beta 
+activity in the subthalamic nucleus (STN), but the temporal structure of burst dynamics remains 
+poorly understood.
+Objectives: To determine whether temporal features of STN beta bursts distinguish pre-freeze from 
+stable gait and predict freezing onset.
+Methods: STN recordings during gait from four individuals were analyzed. Temporal features of 
+burst timing, including entropy and variability, were computed across behavioral states. Predictive 
+performance was assessed using leave-one-patient-out classifiers.
+Results: Entropy of inter-burst intervals was reduced prior to freezing (p < 0.01), with strong 
+predictive performance (AUC = 0.825; threshold AUC = 0.858). During freezing, variability 
+measures decreased and temporal structure increased, while entropy did not differ from pre-freeze. 
+Phase-amplitude coupling showed frequency-specific but heterogeneous effects across 
+comparisons.
+Conclusions: Reduced temporal variability of STN beta burst timing precedes and predicts freezing, 
+suggesting a transition to constrained neural dynamics.
+Keywords
+Parkinson’s disease; freezing of gait; subthalamic nucleus; beta bursts; entropy
+Introduction
+Freezing of gait (FOG) is a disabling symptom of Parkinson’s disease characterized by transient 
+episodes in which patients are unable to initiate or continue stepping(1). These events often occur 
+during turning, increasing fall risk and reducing quality of life(2). Increasing evidence suggests that 
+FOG reflects impaired coordination across distributed locomotor networks(3–5). Abnormal beta and 
+theta oscillatory activity in the subthalamic nucleus (STN), including prolonged beta bursts, has 
+been linked to FOG(6–11). Burst-based measures appear to capture motor impairment more 
+effectively than averaged beta power(12). However, most studies have focused on burst duration or 
+rate, leaving the broader temporal organization of burst timing largely unexplored(13). Although 
+entropy, a measure of the unpredictability of a signal, differs between individuals with and without 
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+FOG(14), it remains unclear whether such changes emerge within individuals prior to freezing 
+events.
+Here, temporal dynamics of STN beta bursts were analyzed during gait. Entropy-based measures 
+were used to quantify temporal complexity, alongside variability and cross-frequency coupling 
+metrics. Phase-amplitude coupling (PAC), a measure of cross-frequency coordination, has been 
+implicated in FOG, with abnormal coupling patterns observed in cortical recordings and modulated 
+by deep brain stimulation(15). Analyses were performed on STN recordings obtained by Thenaisie 
+et al.(16) during gait in four individuals with Parkinson’s disease, enabling detailed within-subject 
+comparisons across behavioral states, including FOG. The study addressed three questions: whether 
+burst dynamics distinguish pre-freeze from stable turning, how these dynamics change during 
+freezing, and whether these features can predict freezing onset.
+Methods
+STN local field potential recordings during gait were analyzed from four individuals with 
+Parkinson’s disease from a previously published dataset(16) (clinical details in Table S1). For each 
+session, a single STN contact was selected as the channel with the highest beta power, following the 
+approach of Thenaisie et al.(16). Beta bursts were defined from the Hilbert envelope of band-pass 
+filtered signals using a 75th percentile threshold and minimum duration criterion and assigned to 
+behavioral states based on burst midpoint timing. For each turn-freeze cluster, the turn preceding 
+the first freeze bout was defined as the pre-freeze turn, while turns not adjacent to freezing were 
+classified as stable (Table S2). Temporal features of burst timing were computed within each 
+behavioral bout, including variability and complexity measures derived from inter-burst intervals, 
+and Shannon entropy of burst timing computed from the distribution of burst midpoint times. 
+Predictive performance was assessed using leave-one-patient-out logistic regression and threshold 
+classifiers. Full methodological details are provided in the Supplementary Material.
+Results
+Reduced entropy precedes freezing and predicts freezing onset
+Most freezing episodes were preceded by turning (163/176, 92.6%), approaching 100% in three of 
+four patients. Accordingly, burst timing during turning episodes preceding freezing (pre-freeze 
+turns) was compared with turning not associated with freezing (stable turns) at the level of 
+individual turning episodes (clusters). Shannon entropy of burst timing was reduced during pre-
+freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; 
+Figure 1B). Entropy was lower in pre-freeze than stable turns (Δ = 0.611 ± 0.282). This effect 
+remained significant after adjusting for bout duration in a linear mixed-effects model (β = -0.529, p 
+= 0.0027), while bout duration was not associated with entropy (β = 0.047, p = 0.561). Lempel-Ziv 
+complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) 
+during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased 
+temporal structure (Figure 1C). No interaction was observed between condition and beta sub-band 
+for entropy (p = 0.693) or Lempel-Ziv complexity (p = 0.725). No statistical significance was found 
+for burst rate, time-in-burst, coefficient of variation (CV), median absolute deviation (MAD), 
+sample entropy, or permutation entropy.
+To assess predictive performance, a leave-one-patient-out logistic regression classifier was trained 
+to distinguish pre-freeze from stable turns. Using Shannon entropy alone, the model achieved strong 
+classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from 
+stable turns across patients (Figure 1D). Predicted probabilities were higher for pre-freeze turns 
+within each patient (Figure 1E). Band-specific models yielded similar performance (low beta: AUC 
+= 0.815; high beta: AUC = 0.817). Combining low and high beta entropy did not improve 
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+performance (AUC ≈ 0.75), indicating that the predictive signal is shared across bands. A simple 
+threshold-based classifier achieved comparable or higher performance (AUC = 0.858 for entropy), 
+with thresholds derived within each training fold. Threshold classifiers based on band-specific 
+entropy yielded similar results (AUC = 0.852 for low beta; 0.842 for high beta).
+Alternative features showed weaker performance (Figure S1A). Models based on inter-burst 
+variability (CV and MAD) achieved moderate-to-high performance (MAD AUC up to ≈ 0.82). 
+Combining entropy with MAD did not improve AUC (entropy + MAD: AUC = 0.821 vs 0.825 for 
+entropy alone), but increased accuracy (0.818 vs 0.773), showing improved threshold-level 
+separation without better overall discriminability.
+PAC showed modest and inconsistent differences across frequency bands. Alpha-low beta coupling 
+was higher during pre-freeze turns compared to stable turns. Alpha-low beta coupling increased in 
+pre-freeze vs stable turns (p ≈ 0.053), but this effect did not remain significant after correction for 
+multiple comparisons. Consistent with this, PAC-based classifiers showed moderate performance 
+(AUC ≈ 0.70-0.75) but did not outperform entropy. Combining entropy with PAC did not improve 
+performance (entropy + PAC: AUC = 0.808).
+Across models, entropy consistently provided the most robust and generalizable discrimination 
+between pre-freeze and stable turns, and additional features did not yield meaningful improvements 
+beyond this single measure.
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+Figure 1. Pre-freeze dynamics and prediction of freezing onset
+(A) Schematic of the behavioural structure used for analysis. Turns preceding freezing within turn-
+freeze clusters were defined as pre-freeze turns and compared with stable turns. (B) Shannon 
+entropy of burst timing is reduced during pre-freeze turns compared to stable turns in both low and 
+high β bands. Lines indicate within-patient values; orange markers show mean ± SEM. (C) Lempel-
+Ziv complexity is increased during pre-freeze turns, consistent with increased temporal structure. 
+One patient lacked sufficient pre-freeze data in the low beta band and was excluded from that 
+comparison. (D) ROC curve for leave-one-patient-out classification of pre-freeze vs stable turns 
+using entropy. (E) Predicted probabilities from the entropy-based classifier demonstrate separation 
+between stable and pre-freeze turns across patients.
+Freezing is associated with reduced variability and a rigid timing regime
+Burst dynamics during freezing were compared with turning within behavioral episodes (cluster-
+level comparisons) to isolate state-dependent effects (Figure 2A-C). Inter-burst intervals became 
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+more regular during freezing, reflected by a reduction in the coefficient of variation (CV) across 
+both bands (high beta: p = 3.7 x 10-6; low beta: p = 0.0016) and a reduction in MAD in high beta (p 
+= 0.023; low beta: p = 0.47). These effects were consistent at the episode level, with greater 
+variability across patients due to the limited sample size. In contrast, Shannon entropy did not differ 
+between freezing and turning (high beta: p = 0.56; low beta: p = 0.09), indicating that entropy 
+primarily reflects pre-freeze changes. Complementary measures revealed that this reduced 
+variability is accompanied by increased structure: permutation entropy was modestly reduced (high 
+beta: p = 0.030; low beta: p = 0.042), and Lempel-Ziv complexity increased in high beta (p = 
+0.0047; low beta trend: p = 0.057), consistent with increased temporal structure, while sample 
+entropy showed no significant effect. 
+To assess whether these features capture the frozen state, a leave-one-patient-out classifier was 
+trained to distinguish freezing from pre-freeze turns within the same episodes. Variability-based 
+measures provided the strongest discrimination, with inter-burst interval CV and MAD yielding the 
+highest performance (CV: AUC = 0.626; MAD: AUC = 0.617; combined CV + MAD: AUC = 
+0.629). In contrast to the pre-freeze comparison, Shannon entropy showed weaker performance 
+(AUC = 0.596), demonstrating limited sensitivity to the frozen state itself. Measures of temporal 
+structure, including permutation entropy (AUC = 0.585) and Lempel-Ziv complexity (AUC = 
+0.592), provided modest discrimination but did not exceed variability-based features. 
+PAC showed frequency-specific differences across state comparisons (Figure 2D). Alpha-low beta 
+coupling was reduced during freezing relative to pre-freeze turns, while theta-high beta coupling 
+was reduced during freezing relative to stable turns (p = 0.0528 for both). Decreased theta-high beta 
+coupling was observed between freezing and stable turns (p = 0.032). However, these effects did 
+not remain significant after correction for multiple comparisons, and no consistent differences were 
+observed between freezing and pre-freeze turns. PAC-based classifiers showed high apparent 
+performance (AUC ≈ 0.859), particularly for alpha-low beta coupling, though these results should 
+be interpreted cautiously given the smaller sample size (Figure S1B). Combining Lempel-Ziv 
+complexity with PAC (alpha-low beta) improved classification performance (AUC ≈ 0.86), 
+suggesting that temporal structure and cross-frequency coordination capture complementary aspects 
+of the freezing state.
+These findings indicate that freezing is characterized by reduced inter-burst variability, 
+accompanied by increased temporal structure and decreased coordinated cross-frequency activity, 
+distinct from entropy-based changes that precede freezing.
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+Figure 2. State-dependent changes during freezing
+Inter-burst interval CV (A) and MAD (B) are reduced and Lempel-Ziv complexity (C) is increased 
+during freezing compared to pre-freeze turning at the cluster level. (D) PAC differences (ΔMI) for 
+freezing relative to pre-freeze turns and stable turns across frequency bands. Points show mean 
+differences ± SEM.
+Discussion
+This study identifies reduced global variability of STN beta burst timing as a robust feature 
+preceding FOG. Shannon entropy distinguished pre-freeze from stable turning and provided strong 
+predictive performance. Reduced Shannon entropy reflects more constrained and predictable burst 
+timing, suggesting that STN activity explores a narrower range of temporal patterns before freezing.
+This suggests a reduction in the accessible temporal state space of STN activity. This complements 
+prior work linking prolonged beta bursts to freezing and showing improvement with adaptive deep 
+brain stimulation(8,17). Previous work using this dataset demonstrated that low beta power 
+increases during freezing and supports classification of locomotor states with moderate accuracy 
+(~50-75%)(16). However, these amplitude-based features did not distinguish between pre-freeze, 
+freeze, and stable states. Notably, burst timing entropy provided robust discrimination of pre-freeze 
+states. These results suggest pathological bursting emerges from a constrained temporal repertoire.
+During freezing, burst timing became more regular, reflected by reductions in CV and MAD and 
+accompanied by increased structure in coarse-grained representations (Lempel-Ziv complexity). In 
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+contrast to the pre-freeze condition, entropy did not reliably distinguish freezing from pre-freeze 
+turns, indicating that it primarily captures changes preceding freezing.
+PAC showed heterogeneous, frequency-specific and did not outperform burst-based features, 
+indicating that PAC reflects secondary rather than primary network changes underlying freezing. 
+Notably, reduction in PAC during freezing suggests diminished cross-frequency coordination within 
+STN activity, consistent with a breakdown of network integration. This aligns with prior work 
+showing that freezing is associated with disrupted cortical-subcortical communication(4) and 
+abnormal cortical PAC patterns(15). These findings suggest that cross-frequency coupling is 
+dynamically reconfigured across the transition into freezing rather than increasing monotonically.
+These data suggest a two-stage model: a reduction in global temporal variability precedes freezing, 
+followed by a shift to a more regular and structured regime during freezing. Within this framework, 
+the pre-freeze reduction in entropy may reflect a shift toward conditions that favour the emergence 
+of prolonged or pathological beta bursts. This interpretation suggests that freezing may arise when 
+temporally flexible encoding of gait-related activity in the STN becomes constrained, with entropy 
+providing a simple and robust predictor of its onset and a potential biomarker for identifying pre-
+freeze neural states.
+Acknowledgements
+The research was supported by the National Institute for Health Research (NIHR) Oxford 
+Biomedical Research Centre (BRC). The views expressed are those of the author(s) and not 
+necessarily those of the NHS, the NIHR or the Department of Health.
+Data availability
+All MATLAB and R analysis scripts relevan
+t to this study are available at 
+https://github.com/cabeaudoin/fog_entropy. Original data can be found at Thenasie et al. 
+(https://zenodo.org/records/6867624)(16).
+References
+1. Lewis S, Factor S, Giladi N, et al. Stepping up to meet the challenge of freezing of gait in 
+Parkinson’s disease. Transl Neurodegener 2022;11(1):23. https://doi.org/10.1186/s40035-022-
+00298-x
+2. Lord SR, Bindels H, Ketheeswaran M, et al. Freezing of Gait in People with Parkinson’s 
+Disease: Nature, Occurrence, and Risk Factors. J Park Dis 2020;10(2):631–640. 
+https://doi.org/10.3233/JPD-191813
+3. Singh A, Plate A, Kammermeier S, et al. Freezing of gait-related oscillatory activity in the 
+human subthalamic nucleus. Basal Ganglia 2013;3(1):25–32. 
+https://doi.org/10.1016/j.baga.2012.10.002
+4. Pozzi NG, Canessa A, Palmisano C, et al. Freezing of gait in Parkinson’s disease reflects a 
+sudden derangement of locomotor network dynamics. Brain 2019;142(7):2037–2050. 
+https://doi.org/10.1093/brain/awz141
+5. Weiss D, Schoellmann A, Fox MD, et al. Freezing of gait: understanding the complexity of an 
+enigmatic phenomenon. Brain 2020;143(1):14–30. https://doi.org/10.1093/brain/awz314
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 
+6. Georgiades MJ, Shine JM, Gilat M, et al. Hitting the brakes: pathological subthalamic nucleus 
+activity in Parkinson’s disease gait freezing. Brain 2019;142(12):3906–3916. 
+https://doi.org/10.1093/brain/awz325
+7. Chen C-C, Yeh C-H, Chan H-L, et al. Subthalamic nucleus oscillations correlate with 
+vulnerability to freezing of gait in patients with Parkinson’s disease. Neurobiol Dis 
+2019;132:104605. https://doi.org/10.1016/j.nbd.2019.104605
+8. Wilkins KB, Petrucci MN, Lambert EF, et al. Beta burst-driven adaptive deep brain 
+stimulation for gait impairment and freezing of gait in Parkinson’s disease. Brain Commun 
+2025;7(4):fcaf266. https://doi.org/10.1093/braincomms/fcaf266
+9. Karimi F, Niu J, Gouweleeuw K, Almeida Q, Jiang N. Movement-related EEG signatures 
+associated with freezing of gait in Parkinson’s disease: an integrative analysis. Brain Commun 
+2021;3(4):fcab277. https://doi.org/10.1093/braincomms/fcab277
+10. Shine JM, Handojoseno AMA, Nguyen TN, et al. Abnormal patterns of theta frequency 
+oscillations during the temporal evolution of freezing of gait in Parkinson’s disease. Clin 
+Neurophysiol 2014;125(3):569–576. https://doi.org/10.1016/j.clinph.2013.09.006
+11. Toledo JB, López-Azcárate J, Garcia-Garcia D, et al. High beta activity in the subthalamic 
+nucleus and freezing of gait in Parkinson’s disease. Neurobiol Dis 2014;64:60–65. 
+https://doi.org/10.1016/j.nbd.2013.12.005
+12. Lofredi R, Tan H, Neumann W-J, et al. Beta bursts during continuous movements accompany 
+the velocity decrement in Parkinson’s disease patients. Neurobiol Dis 2019;127:462–471. 
+https://doi.org/10.1016/j.nbd.2019.03.013
+13. Tian Y, Matar E, Berkovsky S, Lewis SJG. Aberrant Beta-Band Network Alteration Preceding 
+Freezing of Gait in Parkinson’s Disease. Mov Disord;n/a(n/a). 
+https://doi.org/10.1002/mds.70230
+14. Syrkin-Nikolau J, Koop MM, Prieto T, et al. Subthalamic neural entropy is a feature of 
+freezing of gait in freely moving people with Parkinson’s disease. Neurobiol Dis 
+2017;108:288–297. https://doi.org/10.1016/j.nbd.2017.09.002
+15. Yin Z, Zhu G, Liu Y, et al. Cortical phase-amplitude coupling is key to the occurrence and 
+treatment of freezing of gait. Brain 2022;145(7):2407–2421. 
+https://doi.org/10.1093/brain/awac121
+16. Thenaisie Y, Lee K, Moerman C, et al. Principles of gait encoding in the subthalamic nucleus 
+of people with Parkinson’s disease. Sci Transl Med 2022;14(661):eabo1800. 
+https://doi.org/10.1126/scitranslmed.abo1800
+17. Anidi C, O’Day JJ, Anderson RW, et al. Neuromodulation targets pathological not 
+physiological beta bursts during gait in Parkinson’s disease. Neurobiol Dis 2018;120:107–117. 
+https://doi.org/10.1016/j.nbd.2018.09.004
+.CC-BY 4.0 International licenseperpetuity. It is made available under a 
+preprint (which was not certified by peer review) is the author/funder, who has granted bioRxiv a license to display the preprint in 
+The copyright holder for thisthis version posted August 18, 2026. ; https://doi.org/10.64898/2026.08.13.744293doi: bioRxiv preprint 

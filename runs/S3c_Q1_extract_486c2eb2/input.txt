@@ -1,0 +1,240 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:39973491
+题目: Technology for measuring freezing of gait: Current state of the art and recommendations.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: This report summarizes the existing literature on the use of technology for the assessment of freezing of gait (FOG) as well as the use of technology to provide insights into the mechanisms of FOG in people with Parkinson's disease. Specifically, this work was carried out for the 3rd International Workshop on Freezing of Gait in Jerusalem in 2023. This review focuses on the most used technologies to quantitatively assess FOG in a laboratory environment and describes the technologies that hold promise for assessing FOG in daily life. Examples of implementation of machine learning algorithms are provided as well as algorithmic biases. Lastly, a standardized assessment using inertial measurement units during a clinical protocol is proposed and a 5-year outlook is discussed. We anticipate this review will help move the field forward in the coming years.
+
+---
+
+pid: PMID:39996352
+题目: Altered Visuomotor Network Dynamics Associated with Freezing of Gait in Parkinson's Disease.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: BackgroundFreezing of gait (FOG) is a common gait disorder that often accompanies Parkinson's disease (PD). The current understanding of brain functional organization in FOG was built on the assumption that the functional connectivity (FC) of networks is static, but FC changes dynamically over time. We aimed to characterize the dynamic functional connectivity (DFC) in patients with FOG based on high temporal-resolution functional MRI (fMRI).MethodsEighty-seven PD patients, including 29 with FOG and 58 without FOG, and 32 healthy controls underwent resting-state fMRI. Spatial independent component analysis and a sliding-window approach were used to estimate DFC.ResultsFour patterns of structured FC 'states' were identified: a frequent and sparsely connected network (State I), a less frequent but highly synchronized network (State IV), and two states with opposite connecting directions between the visual network and the sensorimotor network (positively connected in State II, negatively connected in State III). Compared with the non-FOG group, patients with FOG spent significantly less time in State II and more time in State III. The longer dwell time in State III was correlated with more severe FOG symptoms. The fractional window of State III tended to correlate to visual-spatial and executive dysfunction in FOG. Moreover, fewer transitions between brain states and lower variability in local efficiency were observed in FOG, suggesting a relatively 'rigid' brain.ConclusionsThis study highlights how visuomotor network dynamics are related to the presence and severity of FOG in PD patients, which provides new insights into understanding the pathophysiological mechanisms that underly FOG. © 2025 International Parkinson and Movement Disorder Society.
+
+---
+
+pid: PMID:40002449
+题目: The Place of Local Field Potentials in Deep Brain Stimulation Programming for Parkinson's Disease: A Review.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: Background/Objections: The pharmacological management of Parkinson's Disease (PD) is often supplemented by deep brain stimulation (DBS) to tackle problems of advanced disease such as motor fluctuation, dyskinesias or medication-resistant tremor. DBS uses high-frequency stimulation with spatially distributed electrodes to produce electrical fields that influence neuronal networks. The programming of such stimulation is complex and time-consuming. Recent technological advancements have enabled DBS systems to record local field potentials (LFPs). In conjunction with biomarker discovery, such as beta oscillations, this shows promise in streamlining the DBS programming process. This review aims to synthesize the current literature investigating LFP characteristics in PD in order to understand the place of LFPs in assisting with DBS programming.MethodsA comprehensive literature search was conducted using databases including OVID MEDLINE, Scopus, and Cochrane Library, resulting in 738 identified articles; 122 studies remained after screening and 87 studies were selected for detailed analysis.ResultsAnalyzing LFPs clearly has the potential to assist or streamline DBS programming in clinical practice, but there are knowledge gaps and challenges to overcome, especially in the utilization of intraoperative LFPs.ConclusionsMore research is required to compare different algorithms that utilize LFPs in DBS programming to identify a simple, practical and time-saving algorithm incorporating reliable LFP biomarkers that will enhance the DBS programming experience for both patients and clinicians.
+
+---
+
+pid: PMID:40037940
+题目: Closing the loop in DBS: A data-driven approach.
+年份: 2025  类型: research-article; Review; Journal Article
+摘要: Deep brain stimulation (DBS) has transformed the treatment of movement disorders like Parkinson's Disease (PD). Innovations in DBS technology and experimentation have fostered adaptive DBS (aDBS), which employs a closed-loop system that senses physiological biomarkers to inform precise neuromodulation and personalized therapy. This review analyzes several promising advances in aDBS, including biomarker detection, control policies, mechanisms of efficacy, and a data-driven approach using artificial intelligence to decode motor states from neural signals. Investigations into data-driven approaches have expanded biomarker detection beyond subcortical beta oscillations, leveraging other neural and kinematic signals. Future aDBS systems that accommodate multi-modal inputs have the potential to bolster therapeutic efficacy and address symptoms not addressed by beta-driven aDBS. Continuing investigation is necessary to address existing technical and computational challenges for further clinical translation.
+
+---
+
+pid: PMID:40068723
+题目: Microstructural and functional abnormalities of the locus coeruleus in freezing of gait in Parkinson's disease.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: ObjectiveThe loss of locus coeruleus (LC)-norepinephrine system may contribute to freezing of gait (FOG) in Parkinson's disease (PD), but free-water (FW) imaging has not been applied to investigate LC microstructural degeneration in FOG. This study was to investigate the role of the LC-norepinephrine system in FOG pathophysiology using FW imaging and resting-state functional magnetic resonance imaging.MethodsFW metrics of LC were analyzed in 52 healthy controls, 79 PD patients without FOG (Non-FOG), and 110 PD patients with FOG (48 "Off-period" FOG and 62 "Levodopa unresponsive" FOG). Correlation between LC FW metrics and clinical scales were assessed. Functional connectivity analysis with LC as the region of interest was performed across groups during medication withdrawal. Structural and functional differences in LC between FOG subgroups and the effects of dopaminergic medication were also explored.ResultsFOG patients had increased FW value, FW-corrected mean diffusivity, axial diffusivity, and radial diffusivity in LC, and decreased FW-corrected fractional anisotropy compared to Non-FOG patients and healthy controls. In FOG patients, FW value and FW-corrected mean axial diffusivity were positively correlated with the new FOG questionnaire scores. LC functional connectivity with occipital regions was reduced in FOG patients. No significant differences in LC microstructure or functional connectivity were observed between FOG subgroups during their "OFF" state. In contrast to "Levodopa-unresponsive" FOG patients, oral medication significantly improved LC functional connectivity with occipital regions in "Off-period" FOG patients.ConclusionsLC degeneration may disrupt motor and compensatory network integration, especially in visual-motor pathways, contributing to FOG.
+
+---
+
+pid: PMID:40092840
+题目: Gait and balance worsening after bilateral deep brain stimulation of the subthalamic nucleus (STN-DBS) for Parkinson's disease: a systematic review.
+年份: 2025  类型: research-article; Journal Article
+摘要: BackgroundDeep brain stimulation of the subthalamic nucleus (STN-DBS) is a widely applied therapy in Parkinson's disease (PD). Occasionally, postoperative worsening of gait or balance occurs, even in the face of a persistently gratifying appendicular symptom improvement. The characteristics vary considerably, and the risk factors for this postoperative gait or balance worsening are largely unknown. We systematically investigated the literature for all cases of gait or balance worsening after STN-DBS in PD and explored its characteristics and determinants. In consecutive populations with best medical treatment as the control group, we also explored its incidence.MethodsWe searched PubMed, Embase and Cochrane. We considered all cases occurring between 1 month after surgery (to exclude immediate postoperative complications as most likely cause) and 12 months after surgery (to exclude disease progression).ResultsFrom 2719 entries, we included 20 studies (n=1010 operated patients). Freezing of gait and falls were the most commonly reported symptoms. The first worsening of symptoms occurred between 3 and 6 months after surgery. Modulation of pedunculopontine afferents was more likely associated with worsening of gait and balance. In controlled trials with consecutive patients, 24 cases (15.9%) were reported, compared with 5.8% with best medical treatment (p=0.0013).ConclusionsGait or balance worsening after STN-DBS is a complex phenomenon that cannot readily be explained by mere disease progression. The multifactorial nature warrants further study in gait labs and through advanced imaging techniques. Future studies should also estimate the actual incidence, which we could not establish as we excluded cohorts without any reported cases.
+
+---
+
+pid: PMID:40100565
+题目: Reduced automaticity in freezing of gait is associated with elevated cortico-cerebellar connectivity.
+年份: 2025  类型: research-article; Journal Article
+摘要: Freezing of gait (FOG) in individuals with Parkinson's Disease is associated with a loss of gait automaticity. This loss of automaticity is demonstrated by worsening gait performance while dual tasking. Functional connectivity between the cerebellar vermis and cortex have previously been associated with spatiotemporal measures of gait in PD. The objective of this study was to determine whether this corticocerebellar connectivity is associated with gait automaticity as measured by dual task interference in PD FOG. 55 participants with PD were recruited (38 FOG, 17 non-FOG controls) to undergo a resting-state functional magnetic resonance imaging scan. Gait automaticity was quantified using spatiotemporal metrics from single and dual task time up and go trials. FOG participants demonstrated shorter step length and gait velocity compared to non-FOG PD controls. A trend toward greater dual task interference of step length in the FOG group was found. Using a seed-based connectivity approach we observed that FOG participants have greater vermis connectivity than non-FOG PD participants to several cortical regions including the superior parietal lobe, supplemental motor area, precentral gyrus and posterior cingulate (voxel threshold p < 0.01, cluster FWE corrected p < 0.05). Meanwhile, vermis connectivity to the occipital cortex was reduced in FOG participants relative to non-FOG controls. Dual task interference of step length among the FOG group correlated with the degree of vermis connectivity to the sensorimotor cortex and superior parietal cortex (voxel threshold p < 0.01, cluster FWE corrected p < 0.05). We conclude that increased corticocerebellar connectivity may be associated with loss of gait automaticity in individuals with PD FOG.
+
+---
+
+pid: PMID:40117663
+题目: Enhancement of gait improvement in Parkinson disease with anterior subthalamic nucleus deep brain stimulation.
+年份: 2025  类型: Journal Article
+摘要: ObjectiveSubthalamic nucleus (STN) deep brain stimulation (DBS) alleviates the motor symptoms of Parkinson disease (PD). However, a generalized targeting approach may lead to suboptimal outcomes for patients with diverse symptoms. Volume of tissue activation (VTA) modeling can be used to compute the spatial extent of stimulation relative to specific neural structures to assess clinical outcomes. Better outcomes for gait disturbances may be obtained by stimulating regions within or around the STN. This study aimed to determine the optimal stimulation region within or around the STN to improve gait disturbances in PD.MethodsForty PD patients who underwent bilateral STN DBS were analyzed retrospectively. The therapeutic VTA of 72 implants was calculated to quantify STN and external (non-STN) activation in different regions. Stepwise regression was used to evaluate associations between stimulation location and gait symptom improvement (based on the Movement Disorder Society-Unified Parkinson's Disease Rating Scale). Implants grouped by stimulation location were compared according to symptom improvement using the Kruskal-Wallis test. Electrode position (relative to the STN) was examined for comparison.ResultsSignificant positive associations between anterior STN activation and gait (p = 0.03) and total gait improvement (p = 0.01) were found. Significant differences in freezing of gait (FoG) (p = 0.03) and total gait (p = 0.02) were also found when the majority anterior and majority posterior STN activation groups were compared. For external activation, a significant positive association between anterior external activation and FoG (p = 0.02) was found. No significant relationship between electrode position and gait symptoms was found.ConclusionsMore anterior STN DBS may benefit patients whose primary symptoms include gait disturbances. This study demonstrates the utility of VTA modeling and highlights the importance of patient- and symptom-specific targeting.
+
+---
+
+pid: PMID:40186175
+题目: Abnormal activity in the brainstem affects gait in a neuromusculoskeletal model.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundThe ability to start and stop locomotion in response to different situations is an essential survival strategy in mammals. Mammalian locomotion is controlled by central pattern generators in the spinal cord, which are modulated by higher centers, particularly by the stimulation of the midbrain locomotor region. The midbrain locomotor region consists of the pedunculopontine nucleus and cuneiform nucleus, each having different roles in animals. Optogenetic activation of the cuneiform nucleus increases locomotion activities, whereas that of pedunculopontine nucleus decreases them. In neurological disorders such as Parkinson's disease, patients exhibit disturbed locomotion controls, including freezing of gait, which is defined as "a brief, episodic absence or marked reduction in the forward progression of the feet despite the intention to walk." However, the details and pathophysiological mechanisms of freezing of gait remain unclear.MethodsIn this study, we aimed to elucidate the mechanisms underlying freezing of gait using a two-dimensional neuromusculoskeletal model fixed on the sagittal plane. This model consisted of a body with seven links and 18 muscles as well as a neural system including the brainstem and spinal cord. We developed a normal condition model and then derived a model of abnormal brainstem activity by modifying the parameters of the pedunculopontine nucleus and cuneiform nucleus during the initial 3 s of walking.ResultsThe normal models walked successfully following internal parameter optimization using standard genetic algorithms. In an abnormal model, 156 freezing of gait events were detected among 40,000 parameter sets using a freezing of gait-identifying algorithm. Hierarchical cluster analysis identified four clusters of parameters, based on the intensities of the pedunculopontine nucleus and cuneiform nucleus activity, differentiated in physiological movement types during freezing of gait events that were similar to the clinical classification types of freezing of gait.ConclusionsOur results indicate that pedunculopontine nucleus and cuneiform nucleus activities could be linked with freezing of gait and that different modifications of those activities could generate observed freezing of gait subtypes. Our models can provide insights relevant for understanding the pathophysiological mechanisms of freezing of gait and are expected to assist in the classification of freezing of gait subtypes.
+
+---
+
+pid: PMID:40211348
+题目: Is physical therapy recommended for people with parkinson's disease treated with subthalamic deep brain stimulation? a delphi consensus study.
+年份: 2025  类型: research-article; Systematic Review; Consensus Statement; Journal Article
+摘要: BackgroundAlthough deep brain stimulation of the subthalamic nucleus (STN-DBS) induces motor benefits in people with Parkinson's disease (PwPD), its effect on motor axial symptoms (e.g., postural instability, trunk posture alterations) and gait impairments (e.g., freezing of gait) is still ambiguous. Physical therapy (PT) effectively complements pharmacological treatment to improve postural stability, gait performance, and other dopamine-resistant symptoms (e.g. freezing of gait) in the general population with PD. Despite the positive potential of combined PT and STN-DBS surgery, scientific results are still lacking. We therefore involved worldwide leading experts on DBS and motor rehabilitation in PwPD in a consensus Delphi panel to define the current level of PT recommendation following STN-DBS surgery.MethodsAfter summarizing the few available findings through a systematic scoping review, we identified clinically and academically experienced DBS clinicians (n = 21) to discuss the challenges related to PT following STN-DBS. A 5-point Likert scale questionnaire was used and based on the results of the systematic review, thirty-nine questions were designed and submitted to the panel-half related to general considerations on PT following STN-DBS, and half related to PT treatments.ResultsDespite the low-to-moderate quality of data, the few available rehabilitation studies suggested that PT could improve dynamic and static balance, gait performance and posture in the population with PD receiving STN-DBS. Similarly, the panellists strongly agreed that PT might help improve motor symptoms and quality of life, and it may be prescribed to maximize the effects of stimulation. The experts agreed that physical therapists could be part of the multidisciplinary team taking care of the patients. Also, they agreed that conventional PT, but not massage or manual therapy, should be prescribed because of the specificity of STN-DBS implantation.ConclusionsAlthough RCT evidence is lacking, upon Delphi panel, PT for PwPD receiving STN-DBS can be potentially useful to maximize clinical improvement. However, more research is needed, with RCTs and well-designed studies. The rehabilitation and DBS community should expand this area of research to create guidelines for PT following STN-DBS.
+
+---
+
+pid: PMID:40274625
+题目: Ventral STN stimulation is associated with improved axial motor outcomes in Parkinson's disease.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Subthalamic nucleus (STN) deep brain stimulation (DBS) is well-established for improving appendicular motor signs but its effect on axial motor signs is less clear. Additionally, the location of active electrode contact within the STN has been shown to differentially affect motor outcomes. We investigate the effect of STN DBS and the role of active electrode contact location on axial motor outcomes. Axial scores were assessed in 70 patients with advanced PD between 6 and 12 months after bilateral STN DBS. Repeated measures one-way ANOVA was performed to compare the mean axial motor scores between different medication and stimulation treatment conditions. Multiple linear regression was performed to determine the association between electrode contact location and axial motor score. The mean duration of follow-up was 7.37 ± 2.49 months. The mean total axial score was improved with STN DBS compared to the OFF MED-OFF STIM condition (6.36 ± 4.50 vs. 8.91 ± 5.49, p < 0.0001). A more dorsal electrode contact location on the right was associated with increased (worsened) total axial score (slope = 0.407, p = 0.0047). Total axial score was also lower (improved) in the anterior ventral STN region but not the posterior ventral STN region on the right. STN DBS improves total axial score and several axial subscores in patients with PD 6-12 months postoperatively. A more ventral electrode contact location on the right was associated with improved axial score. Additional research is warranted to determine if this is the optimal stimulation location to improve axial signs in other DBS cohorts.
+
+---
+
+pid: PMID:40288414
+题目: Evaluation of mobility parameters in individuals with Parkinson's disease with and without freezing of gait.
+年份: 2025  类型: research-article; Journal Article
+摘要: BackgroundIndividuals with Parkinson's disease (PD) often experience gait disturbances, and one of the most disabling is freezing of gait (FOG), which is characterized by the inability to initiate or continue walking. To identify its impact on the mobility of PD patients, it is necessary to objectively assess mobility and conduct systematic gait evaluations.ObjectiveTo evaluate mobility and gait parameters in individuals with PD with and without FOG.MethodsThe present cross-sectional study included a group of individuals with PD, divided into those with and without FOG, and a healthy control group. The Timed Up and Go (TUG) test was used to evaluate gait and mobility of the participants. Activities of daily living and motor performance in PD patients were assessed through parts II and III of the Movement Disorder Society Unified Parkinson Disease Rating Scale (MDS-UPDRS), while FOG was assessed through the New Freezing of Gait Questionnaire (NFOG-Q).ResultsA significant difference between the case and control groups was observed in the mean time it took to perform the TUG test, regardless of FOG, during the off-medication state. Unlike the group without FOG, there was a difference in the time it took to perform the tests between medication states in the group with FOG. Additionally, a correlation was found between TUG time and MDS-UPDRS scores in the FOG group.ConclusionMobility in PD is influenced by medication effect and the presence of FOG. The results highlight the importance of objective and systematic gait evaluations to identify mobility problems, develop effective rehabilitation strategies, and optimize pharmacological treatments, especially for individuals with FOG.
+
+---
+
+pid: PMID:40322896
+题目: Functional Connectivity and Volumetrics Improve Outcome Prediction for Deep Brain Stimulation in Parkinson's Disease.
+年份: 2025  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundDeep brain stimulation (DBS) targeting the subthalamic nucleus (STN) can effectively treat motor symptoms of Parkinson's disease (PD). However, optimal patient selection remains challenging due to the inadequacy of outcome predictors. Most clinicians rely on levodopa response to predict DBS motor outcomes, yet previous studies have identified other MRI-based predictors including resting-state functional connectivity (FC) and volumetric measures.ObjectivesTo compare the predictive value of functional and volumetric MRI data with levodopa response alone for motor outcomes in STN DBS for PD.MethodsWe analyzed 65 participants who underwent STN DBS for PD at Washington University in St. Louis. We used relaxed LASSO regression to select factors including clinical, volumetric, and FC measures to generate predictive models for relative changes in motor scores post-DBS and assessed cross-validated performance. We then compared the relative influence of the predictive factors with standardized regression coefficients.ResultsAddition of MRI predictors (FC and volumetric) improved model fit and cross-validated model performance over levodopa response alone (levodopa alone: R2 = 0.191, RMSE 13.6; MRI + levodopa: R2 = 0.31, RMSE 12.6). Within the optimized model, aggregated FC and levodopa response exhibited the highest influence on motor outcome prediction.ConclusionsIncluding MRI-based predictors significantly enhances the prediction of motor outcomes in STN DBS compared to levodopa response alone, with FC predictors demonstrating the greatest influence in the optimized model. External validation studies are necessary to confirm the clinical utility of these predictors in routine practice.
+
+---
+
+pid: PMID:40325060
+题目: Comparison of oscillatory activity in substantia nigra pars reticulata between Parkinson's disease and dystonia.
+年份: 2025  类型: research-article; Journal Article
+摘要: Parkinson's disease (PD) is associated with disrupted neural activity in the substantia nigra, but its electrophysiological changes remain underexplored. This study investigates the oscillatory patterns of substantia nigra pars reticulata (SNr) in PD, compared to dystonia (DT). Intraoperative recordings of the SNr were obtained from 20 PD and 16 DT patients during DBS surgery. Spectral power, neuronal firing rate, beta burst dynamics, and correlation analysis of the SNr signal were analyzed. PD patients exhibited increased alpha and beta power, elevated firing rates, and reduced aperiodic exponent values in SNr compared to DT. PD beta bursts showed prolonged durations and fewer short bursts. Beta power negatively correlated with motor symptom improvement rates in PD but not in DT patients. These findings highlight pathological beta power in SNr of PD, which indicates that SNr-DBS may offer a future therapeutic avenue for PD.
+
+---
+
+pid: PMID:40341797
+题目: An Exploratory Analysis of Rhythmic Auditory Stimulation's Impact on Brain Function in Parkinson's Disease Patients With Freezing of Gait.
+年份: 2025  类型: research-article; Journal Article
+摘要: IntroductionFreezing of gait (FOG) is a debilitating symptom in Parkinson's disease (PD) patients that severely impairs mobility. Rhythmic auditory stimulation (RAS) has demonstrated potential in improving gait, but the mechanisms underlying its efficacy remain unclear. This study explored the impact of RAS on brain function in PD patients with FOG using functional near-infrared spectroscopy (fNIRS) during an imagined walking task, with the aim of elucidating the underlying mechanisms involved.MethodsWe enrolled 45 PD patients, comprising 21 with FOG (PD+FOG), 24 without FOG (PD-FOG), and 10 healthy controls (HC). Using a 53-channel fNIRS system, we measured the oxygenated hemoglobin (oxy-Hb) content in brain regions as subjects performed an imagined walking task both with and without RAS. Dynamic functional connectivity and k-means clustering were employed to identify key brain connectivity states. Data processing was conducted using MATLAB R2014a, with one-way ANOVA to select channels of interest, followed by paired t-tests for comparative analysis.ResultsPD+FOG patients showed significantly lower activation in the supplementary motor area (SMA) and the left primary motor cortex of the lower limb (M1-LL) without RAS compared to PD-FOG patients and HC. RAS significantly increased activation in these areas and altered functional connectivity, characterized by an increased frequency of transitions between low-strength and medium-strength connectivity states in PD+FOG patients.ConclusionRAS may ameliorate gait in FOG patients by activating key motor areas (SMA and left M1-LL) and modulating the dynamic regulation of brain connectivity. This research provides valuable insights into the neural processes involved in the therapeutic effects of RAS.
+
+---
+
+pid: PMID:40347799
+题目: Resting-state functional MRI metrics to detect freezing of gait in Parkinson's disease: a machine learning approach.
+年份: 2025  类型: Journal Article
+摘要: Among the symptoms that can occur in Parkinson's disease (PD), Freezing of Gait (FOG) is a disabling phenomenon affecting a large proportion of patients, and it remains not fully understood. Accurate classification of FOG in PD is crucial for tailoring effective interventions and is necessary for a better understanding of its underlying mechanisms. In the present work, we applied four Machine Learning (ML) classifiers (Decision Tree - DT, Random Forest - RF, Multilayer Perceptron - MLP, Logistic Regression - LOG) to different four metrics derived from resting-state functional Magnetic Resonance Imaging (rs-fMRI) data processing to assess their accuracy in automatically classifying PD patients based on the presence or absence of Freezing of Gait (FOG). To validate our approach, we applied the same methodologies to distinguish PD patients from a group of Healthy Subject (HS). The performance of the four ML algorithms was validated by repeated k-fold cross-validation on randomly selected independent training and validation subsets. The results showed that when discriminating PD from HS, the best performance was achieved using RF applied to fractional Amplitude of Low-Frequency Fluctuations (fALFF) data (AUC 96.8 ± 2 %). Similarly, when discriminating PD-FOG from PD-nFOG, the RF algorithm was again the best performer on all four metrics, with AUCs above 90 %. Finally, trying to unbox how AI system black-box choices were made, we extracted features' importance scores for the best-performing method(s) and discussed them based on the results obtained to date in rs-fMRI studies on FOG in PD and, more generally, in PD. In summary, regions that were more frequently selected when differentiating both PD from HS and PD-FOG from PD-nFOG patients were mainly relevant to the extrapyramidal system, as well as visual and default mode networks. In addition, the salience network and the supplementary motor area played an additional major role in differentiating PD-FOG from PD-nFOG patients.
+
+---
+
+pid: PMID:40392578
+题目: Digital Biomarkers for Parkinson Disease: Bibliometric Analysis and a Scoping Review of Deep Learning for Freezing of Gait.
+年份: 2025  类型: Scoping Review; review-article; Journal Article
+摘要: BackgroundWith the rapid development of digital biomarkers in Parkinson disease (PD) research, it has become increasingly important to explore the current research trends and key areas of focus.ObjectiveThis study aimed to comprehensively evaluate the current status, hot spots, and future trends of global PD biomarker research, and provide a systematic review of deep learning models for freezing of gait (FOG) digital biomarkers.MethodsThis study used bibliometric analysis based on the Web of Science Core Collection database to conduct a comprehensive analysis of the multidimensional landscape of Parkinson digital biomarkers. After identifying research hot spots, the study also followed the PRISMA-ScR (Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Reviews) guidelines for a scoping review of deep learning models for FOG from 5 databases: Web of Science, PubMed, IEEE Xplore, Embase, and Google Scholar.ResultsA total of 750 studies were included in the bibliometric analysis, and 40 studies were included in the scoping review. The analysis revealed a growing number of related publications, with 3700 researchers contributing. Neurology had the highest average annual participation rate (12.46/19, 66%). The United States contributed the most research (192/1171, 16.4%), with 210 participating institutions, which was the highest among all countries. In the study of deep learning models for FOG, the average accuracy of the models was 0.92, sensitivity was 0.88, specificity was 0.90, and area under the curve was 0.91. In addition, 31 (78%) studies indicated that the best models were primarily convolutional neural networks or convolutional neural networks-based architectures.ConclusionsResearch on digital biomarkers for PD is currently at a stable stage of development, with widespread global interest from countries, institutions, and researchers. However, challenges remain, including insufficient interdisciplinary and interinstitutional collaboration, as well as a lack of corporate funding for related projects. Current research trends primarily focus on motor-related studies, particularly FOG monitoring. However, deep learning models for FOG still lack external validation and standardized performance reporting. Future research will likely progress toward deeper applications of artificial intelligence, enhanced interinstitutional collaboration, comprehensive analysis of different data types, and the exploration of digital biomarkers for a broader range of Parkinson symptoms.Trial registrationOpen Science Foundation (OSF Registries) OSF.IO/RG8Y3; https://doi.org/10.17605/OSF.IO/RG8Y3.
+
+---
+
+pid: PMID:40408848
+题目: Probabilistic mapping of gait changes after STN-DBS for Parkinson's disease.
+年份: 2025  类型: Journal Article
+摘要: IntroductionGait disturbances causing impaired mobility are common in Parkinson's disease after bilateral deep brain stimulation of the subthalamic nucleus. We describe subthalamic subregions where neurostimulation had a positive effect on gait or provoked gait disturbances.Methods98 patients were classified according to changes in MDS-UPDRS III gait items: gait improvement (≥1-point improvement in items 3.10 and/or 3.11), gait deterioration (≥1-point worsening, confirmed by repeated clinical documentation), or no change. We performed a segregation analysis for (1) and (3) by simulating volumes of tissue activated and comparing aggregated spatial data and calculated probability maps to forecast gait performance and the parkinsonism control.Results42 patients experienced improvement of presurgical gait problems after stimulation. Seven patients showed gait deteriorations one-year post-implantation. Active contacts were more ventrally located for gait deterioration versus gait improvement. Voxel-wise probabilistic mapping of gait changes in the subthalamic area were able to forecast patient specific gait performance based on individual stimulation volume (LOOCV R2 = 0.45; p 2 = 0.18; p DiscussionProbabilistic mapping showed a strong correlation with therapy outcomes, especially gait improvement, and provided predictive value at the individual level. While the concept of sweet- or sourspots was insufficient to explain individual variability, the heatmap-based approach allowed symptom-specific topographies to be identified. Our findings support the use of probabilistic mapping as a valuable tool to guide individualized reprogramming strategies for improving mobility in Parkinson's disease.
+
+---
+
+pid: PMID:40408878
+题目: Intraoperative neural firing correlates with motor and cognitive features in Parkinson's disease.
+年份: 2025  类型: research-article; Journal Article
+摘要: ObjectiveDuring deep brain stimulation (DBS) surgery for Parkinson's disease (PD), intraoperative microelectrode recordings (MERs) are frequently used to determine electrode positioning within the subthalamic nucleus (STN) and globus pallidus internus (GPi). Various patient characteristics might be associated with abnormal STN and GPi firing activity and thus influence electrode placement. In this study, the authors aimed to elucidate the relationship between preoperative dopamine responsiveness or changes in cognitive status and STN or GPi multiunit activity.MethodsThis retrospective cohort study included patients with PD undergoing awake STN (n = 74) or GPi (n = 63) DBS surgery with intraoperative MER at a single institution from 2013 to 2021. To control for the lead position, contralateral motor outcomes of each lead were graded using 1-year neurological follow-up notes. Multiunit neural firing activity for each lead was recorded from MER at the location corresponding to lead active contact at the 1-year follow-up assessment. Linear regression models, controlling for disease duration and age, were used to identify associations between multiunit neural firing rates and preoperative dopamine responsiveness, determined by the difference between preoperative motor scores when on medication minus preoperative motor scores when off medication, and between multiunit activity and the pre- to postoperative change in Mini-Mental State Examination scores.ResultsSeventy-four patients with 130 STN leads (mean age 61.2 ± 10.4 years) and 63 patients with 110 GPi leads (mean age 62.8 ± 8.6 years) were included. In STN leads with maximum contralateral motor improvement, increased dopamine responsiveness was associated with both the intraoperative firing rate (p = 0.01) and disease duration (p = 0.01). These relationships were not significant in the GPi leads or when looking at leads for which patients experienced suboptimal motor improvement (p > 0.05). In the GPi leads, an increased intraoperative firing rate in electrodes with maximum symptom improvement was associated with declining cognitive status (p = 0.045).ConclusionsThese findings suggest patient characteristics that correlate with neural firing rates and influence intraoperative MER, final electrode placement, and patient outcomes, while improving understanding of STN and GPi pathophysiologic mechanisms in PD. Future investigations into other characteristics that might affect STN and GPi intraoperative neurophysiology are warranted.
+
+---
+
+pid: PMID:40426705
+题目: The Effects of Deep Brain Stimulation on Balance in Parkinson's Disease as Measured Using Posturography-A Narrative Review.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: BackgroundPostural imbalance with falls affects 80% of patients with Parkinson's disease (PD) at 10 years. Standard PD therapies (e.g., levodopa and/or deep brain stimulation-DBS) are poor at improving postural imbalance. Additionally, the mechanistic complexity of interpreting postural control is a major barrier to improving our understanding of treatment effects. In this paper, we review the effects of DBS on balance as measured using posturography. We also critically appraise the quantitative measures and analyses used in these studies.MethodsA literature search was performed independently by 2 researchers using the PUBMED database. Thirty-eight studies are included in this review, with DBS at the subthalamic nucleus (STN-) (n = 25), globus pallidus internus (GPi-) (n = 6), ventral intermediate nucleus (VIM)/thalamus (n = 2), and pedunculopontine nucleus (PPN) (n = 5).ResultsSTN- and GPi-DBS reduce static sway in PD and mitigate the increased sway from levodopa. STN-DBS impairs automatic responses to perturbations, whilst GPi-DBS has a more neutral effect. STN-DBS may promote protective strategies following external perturbations but does not improve adaptation. The evidence regarding the effects on gait initiation is less clear. Insufficient evidence exists to make conclusions regarding VIM- and PPN-DBS.ConclusionsSTN- and GPi-DBS have differing effects on posturography, which suggests site-specific and possibly non-dopaminergic mechanisms. Posturography tests should be utilised to answer specific questions regarding the mechanisms of and effects on postural control following DBS. We recommend standardising posturography measures and test conditions by expert consensus and greater long-term data collection, utilising ongoing DBS registries.
+
+【格式适配】本次给了多篇论文（都只有摘要，basis 一律写 abstract）。请对每篇分别按上面的格式输出，publication.ref 照抄该篇的 pid，最外层写成 {"papers": [ {"publication": {...}, "evidence": [...]}, ... ]}。

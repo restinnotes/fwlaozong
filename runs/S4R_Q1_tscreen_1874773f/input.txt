@@ -1,0 +1,162 @@
+下面是检索得到的一批文献，只有题目、年份和文献类型。请做题目初筛：判断每篇是否**可能**和研究问题有关，值得再看摘要。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+规则：宁可多留，不要误删。只有题目明显和研究问题无关（例如完全不同的疾病、器官或技术领域，或者 FOG 指的不是冻结步态）才 drop；拿不准一律 keep。
+
+只输出一个 JSON：{"keep":["pid", ...]}，只列要保留的 pid（照抄），不列的就是 drop。
+
+【文献】
+PMID:23898966 | 2013 | Research Support, Non-U.S. Gov't; rapid- | AC-186, a selective nonsteroidal estrogen receptor β agonist, shows gender specific neuroprotection in a Parkinson's disease rat model.
+PMID:23902361 | 2013 | Research Support, Non-U.S. Gov't; resear | Dopamine receptor 3 might be an essential molecule in 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine-induced neurotoxicity.
+PMID:23908845 | 2012 | review-article; Journal Article | Aging, protein aggregation, chaperones, and neurodegenerative disorders: mechanisms of coupling and therapeutic opportunities.
+PMID:23916479 | 2013 | Research Support, Non-U.S. Gov't; resear | Iptakalim attenuates self-administration and acquired goal-tracking behavior controlled by nicotine.
+PMID:23918379 | 2013 | Research Support, Non-U.S. Gov't; resear | Forebrain dopamine neurons project down to a brainstem region controlling locomotion.
+PMID:23921686 | 2013 | review-article; Review; Journal Article | Contributions of microdialysis to new alternative therapeutics for hepatic encephalopathy.
+PMID:23921954 | 2013 | Research Support, N.I.H., Intramural; re | Kappa opioid receptors on dopaminergic neurons are necessary for kappa-mediated place aversion.
+PMID:23925954 | 2013 | Research Support, Non-U.S. Gov't; resear | Framework for understanding balance dysfunction in Parkinson's disease.
+PMID:23936522 | 2013 | research-article; Research Support, U.S. | Bidirectional modulation of substantia nigra activity by motivational state.
+PMID:23936729 | 2013 | research-article; Journal Article | Which Aspects of Postural Control Differentiate between Patients with Parkinson's Disease with and without Freezing of Gait?
+PMID:23938054 | 2013 | Research Support, Non-U.S. Gov't; resear | Chronic overload of SEPT4, a parkin substrate that aggregates in Parkinson's disease, causes behavioral alterations but not neurodegeneration in mice.
+PMID:23939306 | 2011 | Research Support, Non-U.S. Gov't; resear | The effects of medication on turning in people with Parkinson disease with and without freezing of gait.
+PMID:23939404 | 2012 | Research Support, Non-U.S. Gov't; resear | Motor imagery of gait tasks in individuals with Parkinson disease.
+PMID:23941889 | 2013 | Controlled Clinical Trial; research-arti | Deep brain stimulation improves movement amplitude but not hastening of repetitive finger movements.
+PMID:23943375 | 2013 | research-article; Journal Article | Geraniol ameliorates the motor behavior and neurotrophic factors inadequacy in MPTP-induced mice model of Parkinson's disease.
+PMID:23946301 | 2013 | Research Support, Non-U.S. Gov't; resear | Increased REM sleep without atonia in Parkinson disease with freezing of gait.
+PMID:23946910 | 2012 | research-article; Journal Article | Beyond Widespread Mecp2 Deletions to Model Rett Syndrome: Conditional Spatio-Temporal Knockout, Single-Point Mutations and Transgenic Rescue Mice.
+PMID:23949050 | 2013 | Journal Article | Effectiveness of an intensive rehabilitation treatment on different Parkinson's disease subtypes.
+PMID:23954847 | 2013 | review-article; Review; Journal Article; | Volatile solvents as drugs of abuse: focus on the cortico-mesolimbic circuitry.
+PMID:23959937 | 2013 | Research Support, Non-U.S. Gov't; resear | Restoration of dopamine signaling to the dorsal striatum is sufficient for aspects of active maternal behavior in female mice.
+PMID:23966687 | 2013 | research-article; Journal Article; Resea | Optogenetic evidence that pallidal projections, not nigral projections, from the nucleus accumbens core are necessary for reinstating cocaine seeking.
+PMID:23967330 | 2013 | research-article; Journal Article; Resea | A Tet-on system for DRD1-expressing cells.
+PMID:23968642 | 2013 | research-article; Review; Journal Articl | Mechanisms of dopamine transporter regulation in normal and disease states.
+PMID:23969614 | 2013 | Comparative Study; Journal Article | Behavioral effects of clozapine, pimavanserin, and quetiapine in rodent models of Parkinson's disease and Parkinson's disease psychosis: evaluation of therapeutic ratios.
+PMID:23971978 | 2014 | Research Support, Non-U.S. Gov't; review | Unveiling the role of melatonin MT2 receptors in sleep, anxiety and other neuropsychiatric diseases: a novel target in psychopharmacology.
+PMID:23973315 | 2014 | research-article; Review; Journal Articl | Dopamine D3 and 5-HT1B receptor dysregulation as a result of psychostimulant intake and forced abstinence: Implications for medications development.
+PMID:23974723 | 2013 | review-article; Journal Article | Global workspace dynamics: cortical "binding and propagation" enables conscious contents.
+PMID:23978383 | 2014 | Research Support, N.I.H., Intramural; Re | Decreased vesicular monoamine transporter 2 (VMAT2) and dopamine transporter (DAT) function in knockout mice affects aging of dopaminergic systems.
+PMID:23983787 | 2013 | research-article; Journal Article | Antiapoptotic Effects of EGb 761.
+PMID:23986662 | 2013 | review-article; Journal Article | The role of the dorsal raphé nucleus in reward-seeking behavior.
+PMID:23998987 | 2013 | Research Support, Non-U.S. Gov't; Journa | Therapeutic effects of repetitive transcranial magnetic stimulation in an animal model of Parkinson's disease.
+PMID:24007368 | 2013 | Review; Journal Article | Executive dysfunction in Parkinson's disease: a review.
+PMID:24011636 | 2013 | Review; Journal Article | New pharmacological options for treating advanced Parkinson's disease.
+PMID:24012795 | 2013 | research-article; Journal Article; Resea | The dopamine antagonist cis-flupenthixol blocks the expression of the conditioned positive but not the negative effects of cocaine in rats.
+PMID:24018704 | 2013 | Meta-Analysis; Research Support, Non-U.S | Physiotherapy versus placebo or no intervention in Parkinson's disease.
+PMID:24020503 | 2013 | Research Support, Non-U.S. Gov't; resear | Unfolded protein response in Gaucher disease: from human to Drosophila.
+PMID:24020974 | 2013 | research-article; Review; Journal Articl | Acute and chronic stress-induced disturbances of microglial plasticity, phenotype and function.
+PMID:24027269 | 2013 | Research Support, Non-U.S. Gov't; resear | Lhx3-Chx10 reticulospinal neurons in locomotor circuits.
+PMID:24027284 | 2013 | Research Support, Non-U.S. Gov't; resear | Inhibiting subthalamic D5 receptor constitutive activity alleviates abnormal electrical activity and reverses motor impairment in a rat model of Parkinson's disease.
+PMID:24027652 | 2013 | research-article; Journal Article | Upper extremity freezing and dyscoordination in Parkinson's disease: effects of amplitude and cadence manipulations.
+PMID:24035135 | 2013 | Research Support, Non-U.S. Gov't; review | Cytoplasmic dynein heavy chain: the servant of many masters.
+PMID:24035927 | 2014 | Research Support, Non-U.S. Gov't; resear | Screening for early detection of parkinsonism using a self-administered questionnaire: a cross-sectional epidemiologic study.
+PMID:24043825 | 2013 | Research Support, Non-U.S. Gov't; resear | Dendritic growth gated by a steroid hormone receptor underlies increases in activity in the developing Drosophila locomotor system.
+PMID:24057149 | 2013 | Research Support, Non-U.S. Gov't; Multic | Intravenous amantadine on freezing of gait in Parkinson's disease: a randomized controlled trial.
+PMID:24058333 | 2013 | research-article; Journal Article | A new in vivo model of pantothenate kinase-associated neurodegeneration reveals a surprising role for transcriptional regulation in pathogenesis.
+PMID:24058875 | 2013 | research-article; Journal Article | A microfluidic phenotype analysis system reveals function of sensory and dopaminergic neuron signaling in C. elegans electrotactic swimming behavior.
+PMID:24069062 | 2013 | research-article; Journal Article | Dangguijakyak-San Protects against 1-Methyl-4-phenyl-1,2,3,6,-tetrahydropyridine-Induced Neuronal Damage via Anti-Inflammatory Action.
+PMID:24070538 | 2014 | Research Support, Non-U.S. Gov't; resear | Risky driving and pedunculopontine nucleus-thalamic cholinergic denervation in Parkinson disease.
+PMID:24070637 | 2014 | Research Support, Non-U.S. Gov't; resear | Neuroprotective efficacy of a proneurogenic compound after traumatic brain injury.
+PMID:24070854 | 2014 | Research Support, Non-U.S. Gov't; resear | Modeling Parkinson's disease in monkeys for translational studies, a critical analysis.
+PMID:24085684 | 2013 | Overall; other; Conference Proceedings | Abstracts of the 2013 Annual Meeting of the American College of Rheumatology. October 25-30, 2013. San Diego, California, USA.
+PMID:24086120 | 2013 | Research Support, Non-U.S. Gov't; resear | Whisker movements reveal spatial attention: a unified computational model of active sensing control in the rat.
+PMID:24089397 | 2013 | Research Support, Non-U.S. Gov't; resear | Activity in mouse pedunculopontine tegmental nucleus reflects action and outcome in a decision-making task.
+PMID:24089628 | 2013 | Research Support, Non-U.S. Gov't; resear | Quinolinic acid: an endogenous neurotoxin with multiple targets.
+PMID:24090496 | 2014 | Comparative Study; Journal Article | Patients with advanced Parkinson's disease with and without freezing of gait: a comparative analysis of vascular lesions using brain MRI.
+PMID:24090949 | 2014 | research-article; Journal Article | Dopaminergic modulation of motor coordinaton in Parkinson's disease.
+PMID:24092286 | 2013 | research-article; Review; Journal Articl | Parkinsonian syndromes.
+PMID:24098148 | 2013 | Research Support, Non-U.S. Gov't; resear | Coordinate regulation of mature dopaminergic axon morphology by macroautophagy and the PTEN signaling pathway.
+PMID:24098732 | 2013 | Research Support, Non-U.S. Gov't; resear | The seed plant flora of the Mount Jinggangshan region, southeastern China.
+PMID:24099985 | 2013 | Clinical Trial; Research Support, Non-U. | Mitochondrial abnormality associates with type-specific neuronal loss and cell morphology changes in the pedunculopontine nucleus in Parkinson disease.
+PMID:24102345 | 2014 | research-article; Review; Journal Articl | The hypocretins/orexins: integrators of multiple physiological functions.
+PMID:24105074 | 2014 | Research Support, Non-U.S. Gov't; review | Moonlighting proteins and protein-protein interactions as neurotherapeutic targets in the G protein-coupled receptor field.
+PMID:24106462 | 2013 | Research Support, Non-U.S. Gov't; resear | Delta-mediated cross-frequency coupling organizes oscillatory activity across the rat cortico-basal ganglia network.
+PMID:24106463 | 2013 | research-article; Journal Article | Opposite modulation of brain stimulation reward by NMDA and AMPA receptors in the ventral tegmental area.
+PMID:24106642 | 2013 | review-article; Review; Journal Article | Neurobehavioral deficits and parkinsonism in occupations with manganese exposure: a review of methodological issues in the epidemiological literature.
+PMID:24107116 | 2013 | Research Support, Non-U.S. Gov't; resear | Home and health in people ageing with Parkinson's disease: study protocol for a prospective longitudinal cohort survey study.
+PMID:24107996 | 2013 | Research Support, Non-U.S. Gov't; resear | Feature detection and orientation tuning in the Drosophila central complex.
+PMID:24109438 | 2013 | research-article; Journal Article | The role of frontostriatal impairment in freezing of gait in Parkinson's disease.
+PMID:24111205 | 2013 | Research Support, Non-U.S. Gov't; Journa | Measurement of attention during movement: acquisition of ambulatory EEG and cognitive performance from healthy young adults.
+PMID:24112125 | 2013 | research-article; Journal Article; Resea | Extended-access, but not limited-access, methamphetamine self-administration induces behavioral and nucleus accumbens dopamine response changes in rats.
+PMID:24113586 | 2013 | Research Support, Non-U.S. Gov't; review | Disease animal models of TDP-43 proteinopathy and their pre-clinical applications.
+PMID:24114934 | 2014 | Research Support, Non-U.S. Gov't; resear | Differences in the morphology of spinal V2a neurons reflect their recruitment order during swimming in larval zebrafish.
+PMID:24116748 | 2013 | Clinical Trial; research-article; Journa | The effects of adapted tango on spatial cognition and disease severity in Parkinson's disease.
+PMID:24117347 | 2013 | Research Support, Non-U.S. Gov't; resear | AMPA receptor antagonist NBQX attenuates later-life epileptic seizures and autistic-like social deficits following neonatal seizures.
+PMID:24117438 | 2013 | Research Support, Non-U.S. Gov't; rapid- | Low dose bexarotene treatment rescues dopamine neurons and restores behavioral function in models of Parkinson's disease.
+PMID:24118121 | 2013 | Research Support, Non-U.S. Gov't; resear | Withdrawal from extended-access cocaine self-administration results in dysregulated functional activity and altered locomotor activity in rats.
+PMID:24121548 | 2014 | Research Support, Non-U.S. Gov't; resear | Novel mutation in MAPT exon 13 (p.N410H) causes corticobasal degeneration.
+PMID:24125564 | 2013 | research-article; Journal Article; Case  | Pure akinesia: a kinematic analysis in a case responsive to rotigotine.
+PMID:24129039 | 2014 | Research Support, Non-U.S. Gov't; resear | Three-dimensional rodent motion analysis and neurodegenerative disorders.
+PMID:24129513 | 2013 | Research Support, Non-U.S. Gov't; resear | Endonuclease G mediates α-synuclein cytotoxicity during Parkinson's disease.
+PMID:24129887 | 2014 | review-article; Review; Journal Article | Gene-based therapies in Parkinson's disease.
+PMID:24130517 | 2013 | Research Support, Non-U.S. Gov't; review | Dopamine signaling in reward-related behaviors.
+PMID:24132837 | 2013 | research-article; Review; Journal Articl | Imaging: What can it tell us about parkinsonian gait?
+PMID:24132838 | 2013 | Research Support, Non-U.S. Gov't; resear | Dynamic control of posture across locomotor tasks.
+PMID:24132840 | 2013 | research-article; Review; Journal Articl | Cognitive contributions to gait and falls: evidence and implications.
+PMID:24132842 | 2013 | Research Support, Non-U.S. Gov't; resear | Objective biomarkers of balance and gait for Parkinson's disease using body-worn sensors.
+PMID:24133257 | 2013 | Research Support, Non-U.S. Gov't; resear | Modeling fall propensity in Parkinson's disease: deficits in the attentional control of complex movements in rats with cortical-cholinergic and striatal-dopaminergic deafferentation.
+PMID:24133410 | 2013 | review-article; Review; Journal Article | Circadian adaptations to meal timing: neuroendocrine mechanisms.
+PMID:24133413 | 2013 | review-article; Review; Journal Article | Neuronal dark matter: the emerging role of microRNAs in neurodegeneration.
+PMID:24133478 | 2013 | review-article; Review; Journal Article | Virtual sensory feedback for gait improvement in neurological patients.
+PMID:24136458 | 2013 | Research Support, Non-U.S. Gov't; Review | Neuroimaging as a window into gait disturbances and freezing of gait in patients with Parkinson's disease.
+PMID:24141443 | 2013 | Comparative Study; Research Support, Non | Validation of the Brazilian version of the Clinical Gait and Balance Scale and comparison with the Berg Balance Scale.
+PMID:24142590 | 2014 | review-article; Review; Journal Article | Treatment of dystonia.
+PMID:24147633 | 2014 | Research Support, Non-U.S. Gov't; review | Neural circuit modulation during deep brain stimulation at the subthalamic nucleus for Parkinson's disease: what have we learned from neuroimaging studies?
+PMID:24151091 | 2014 | Research Support, Non-U.S. Gov't; Journa | Gray matter atrophy and freezing of gait in Parkinson's disease: Is the evidence black-on-white?
+PMID:24155314 | 2013 | Research Support, Non-U.S. Gov't; resear | Dopamine-dependent compensation maintains motor behavior in mice with developmental ablation of dopaminergic neurons.
+PMID:24158271 | 2014 | Research Support, Non-U.S. Gov't; resear | The cost-effectiveness of deep brain stimulation in combination with best medical therapy, versus best medical therapy alone, in advanced Parkinson's disease.
+PMID:24158912 | 2014 | Research Support, Non-U.S. Gov't; review | Animal models of Parkinson's disease: a gateway to therapeutics?
+PMID:24166564 | 2013 | Comparative Study; Research Support, Non | The incidence and risk factors of falls in Parkinson disease: prospective study.
+PMID:24167416 | 2013 | research-article; Journal Article | Beneficial Effect of Vitamin E in Rotenone Induced Model of PD: Behavioural, Neurochemical and Biochemical Study.
+PMID:24171120 | 2013 | research-article; Journal Article | Synthesis of alginate-curcumin nanocomposite and its protective role in transgenic Drosophila model of Parkinson's disease.
+PMID:24172185 | 2014 | Research Support, Non-U.S. Gov't; review | The influence of cannabinoids on generic traits of neurodegeneration.
+PMID:24174652 | 2014 | research-article; Journal Article; Resea | Nucleus accumbens responses differentiate execution and restraint in reward-directed behavior.
+PMID:24175026 | 2013 | research-article; Journal Article | Factors related to outcomes of subthalamic deep brain stimulation in Parkinson's disease.
+PMID:24179465 | 2013 | research-article; Journal Article | Nicotinic receptors in neurodegeneration.
+PMID:24179820 | 2013 | research-article; Journal Article | Multiparametric brainstem segmentation using a modified multivariate mixture of Gaussians.
+PMID:24184162 | 2014 | research-article; Journal Article; Resea | Dicer expression is essential for adult midbrain dopaminergic neuron maintenance and survival.
+PMID:24189111 | 2014 | Research Support, Non-U.S. Gov't; Journa | Postural inflexibility in PD: does it affect compensatory stepping?
+PMID:24189487 | 2014 | research-article; Review; Journal Articl | The biology of Nociceptin/Orphanin FQ (N/OFQ) related to obesity, stress, anxiety, mood, and drug dependence.
+PMID:24194349 | 2013 | research-article; Journal Article; Resea | The Role of skn-1 in methylmercury-induced latent dopaminergic neurodegeneration.
+PMID:24198187 | 2014 | review-article; Review; Journal Article | Surgical treatment of Parkinson's disease: patients, targets, devices, and approaches.
+PMID:24198322 | 2014 | research-article; Journal Article; Resea | Frequency dependence of behavioral modulation by hippocampal electrical stimulation.
+PMID:24202784 | 2014 | Research Support, Non-U.S. Gov't; resear | High-level gait and balance disorders in the elderly: a midbrain disease?
+PMID:24204389 | 2013 | research-article; Journal Article | Ampelopsis Radix Protects Dopaminergic Neurons against 1-Methyl-4-phenylpyridinium/1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine-Induced Toxicity in Parkinson's Disease Models In Vitro and In Vivo.
+PMID:24205018 | 2013 | Research Support, Non-U.S. Gov't; resear | Changes in sensitivity of reward and motor behavior to dopaminergic, glutamatergic, and cholinergic drugs in a mouse model of fragile X syndrome.
+PMID:24209433 | 2013 | Research Support, Non-U.S. Gov't; resear | Pantothenate kinase-associated neurodegeneration (PKAN) and PLA2G6-associated neurodegeneration (PLAN): review of two major neurodegeneration with brain iron accumulation (NBIA) phenotypes.
+PMID:24210997 | 2014 | Controlled Clinical Trial; Research Supp | Brain activity during complex imagined gait tasks in Parkinson disease.
+PMID:24217509 | 2013 | Research Support, Non-U.S. Gov't; resear | Brain repair after stroke--a novel neurological model.
+PMID:24218591 | 2013 | research-article; Journal Article; Resea | Fungal-derived semiochemical 1-octen-3-ol disrupts dopamine packaging and causes neurodegeneration.
+PMID:24220688 | 2014 | research-article; Journal Article; Resea | Self administration of oxycodone by adolescent and adult mice affects striatal neurotransmitter receptor gene expression.
+PMID:24232253 | 2013 | review-article; Review; Journal Article | Mesenchymal stem cells: environmentally responsive therapeutics for regenerative medicine.
+PMID:24235816 | 2013 | review-article; Review; Journal Article | New and emerging treatments for symptomatic tardive dyskinesia.
+PMID:24236988 | 2014 | Research Support, Non-U.S. Gov't; resear | Sex-dependent long-term effects of adolescent exposure to THC and/or MDMA on neuroinflammation and serotoninergic and cannabinoid systems in rats.
+PMID:24239560 | 2014 | research-article; Journal Article; Resea | The role of cannabinoid 1 receptor expressing interneurons in behavior.
+PMID:24245947 | 2013 | review-article; Journal Article | Deep brain stimulation in Parkinson's disease.
+PMID:24256442 | 2014 | Research Support, Non-U.S. Gov't; resear | Localization and behaviors in null mice suggest that ASIC1 and ASIC2 modulate responses to aversive stimuli.
+PMID:24259575 | 2013 | Research Support, Non-U.S. Gov't; resear | Control of basal ganglia output by direct and indirect pathway projection neurons.
+PMID:24273007 | 2014 | Research Support, Non-U.S. Gov't; resear | Mildronate improves cognition and reduces amyloid-β pathology in transgenic Alzheimer's disease mice.
+PMID:24278189 | 2013 | Research Support, Non-U.S. Gov't; resear | Corticomuscular transmission of tremor signals by propriospinal neurons in Parkinson's disease.
+PMID:24281662 | 2012 | review-article; Journal Article | Gene therapy for the treatment of Parkinson's disease: the nature of the biologics expands the future indications.
+PMID:24287905 | 2013 | Research Support, Non-U.S. Gov't; resear | An exploratory evaluation of tyrosine hydroxylase inhibition in planaria as a model for parkinsonism.
+PMID:24298202 | 2012 | review-article; Journal Article | Deep brain stimulation for the treatment of Parkinson's disease: efficacy and safety.
+PMID:24299455 | 2014 | Research Support, Non-U.S. Gov't; resear | Central nervous system delivery of helper-dependent canine adenovirus corrects neuropathology and behavior in mucopolysaccharidosis type VII mice.
+PMID:24299497 | 2013 | Clinical Trial, Phase II; Research Suppo | The ReSPonD trial--rivastigmine to stabilise gait in Parkinson's disease a phase II, randomised, double blind, placebo controlled trial to evaluate the effect of rivastigmine on gait in patients with Parkinson's disease who have fallen.
+PMID:24302984 | 2013 | research-article; Journal Article | Do basal Ganglia amplify willed action by stochastic resonance? A model.
+PMID:24303038 | 2013 | Research Support, Non-U.S. Gov't; resear | Mice with deficient BK channel function show impaired prepulse inhibition and spatial learning, but normal working and spatial reference memory.
+PMID:24305993 | 2014 | Research Support, Non-U.S. Gov't; Journa | Gait and upper limb variability in Parkinson's disease patients with and without freezing of gait.
+PMID:24309750 | 2014 | Research Support, Non-U.S. Gov't; resear | Gamma band activity in the RAS-intracellular mechanisms.
+PMID:24310604 | 2014 | review-article; Review; Research Support | Treatment of Parkinson's disease: what's in the non-dopaminergic pipeline?
+PMID:24312000 | 2013 | review-article; Review; Journal Article | RISC in PD: the impact of microRNAs in Parkinson's disease cellular and molecular pathogenesis.
+PMID:24312227 | 2013 | Research Support, Non-U.S. Gov't; resear | Mutation of Elfn1 in mice causes seizures and hyperactivity.
+PMID:24312945 | 2013 | Overall; Conference Proceedings; meeting | Abstracts of the American College of Neuropsychopharmacology (ACNP) 52nd Annual Meeting. December 8-12, 2013. Hollywood, Florida, USA.
+PMID:24313960 | 2013 | Research Support, Non-U.S. Gov't; resear | The mTOR signaling pathway regulates pain-related synaptic plasticity in rat entorhinal-hippocampal pathways.
+PMID:24319675 | 2013 | research-article; Journal Article | Slack, Slick and Sodium-Activated Potassium Channels.
+PMID:24323498 | 2015 | Research Support, Non-U.S. Gov't; resear | Auditory responses and stimulus-specific adaptation in rat auditory cortex are preserved across NREM and REM sleep.
+PMID:24324416 | 2013 | research-article; Journal Article | Rodent models of Parkinson's disease: beyond the motor symptomatology.
+PMID:24326400 | 2014 | Research Support, Non-U.S. Gov't; resear | Forebrain-specific CRF overproduction during development is sufficient to induce enduring anxiety and startle abnormalities in adult mice.
+PMID:24331796 | 2014 | research-article; Review; Journal Articl | Sensory aspects of movement disorders.
+PMID:24332984 | 2014 | research-article; Review; Journal Articl | Genetic targeting of the amphetamine and methylphenidate-sensitive dopamine transporter: on the path to an animal model of attention-deficit hyperactivity disorder.
+PMID:24333380 | 2014 | Research Support, Non-U.S. Gov't; resear | Dopamine is differentially involved in the locomotor hyperactivity produced by manipulations of opioid, GABA and glutamate receptors in the median raphe nucleus.

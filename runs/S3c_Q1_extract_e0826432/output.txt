@@ -1,0 +1,728 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:37701817",
+    "title": "Optimal subthalamic stimulation sites and related networks for freezing of gait in Parkinson's disease.",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:37701817",
+    "cohort_id_candidate": "Beijing Tiantan Hospital bilateral STN-DBS PD-FOG cohort, 2018-06 to 2021-06, n=76",
+    "cohort_relation_basis": "单中心回顾性研究。患者均来自北京天坛医院2018年6月至2021年6月接受双侧STN-DBS的PD患者。共筛查776人，最终纳入76名PD-FOG患者。活跃触点定位、VTA分析、结构连接分析和功能连接分析均基于这76名患者的同一临床队列，不构成独立重复验证。结构和功能规范连接组另使用PPMI数据库90名PD患者的影像数据，该90人属于外部规范连接组样本，不应与76名DBS患者合并计算队列分母。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID37701817_E01",
+      "design": "单中心回顾性观察性队列研究；术前与术后随访配对比较；post hoc分析。",
+      "population": "76名接受双侧高频STN-DBS的PD-FOG患者，来自北京天坛医院。776名筛查患者中最终纳入76名。37名女性，手术年龄62.40 ± 8.66岁，平均随访12.14 ± 7.03个月。49名使用PINS-L301设备，27名使用Medtronic-3389设备。排除ON-state FOG患者。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "n_patients_with_valid_neural_data：不适用，本研究未采集76名患者的STN LFP、单单位或多单位神经电生理数据。n_FOG_events：全文未报告冻结事件总数，但纳入标准要求每名患者至少有一次评估视频中可观察到的冻结事件。n_trials：不适用，没有任务试次级实验。n_electrodes_contacts：论文报告重建132个电极侧（132 sides），不是132个独立患者，也未报告全部活跃触点的总数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。纳入患者术前FOG-Q第3项评分≥1，且评估视频中至少观察到一次冻结事件，但未区分akinetic、trembling-in-place、kinetic-no-trembling或其他FOG亚型。",
+      "medication_phenotype": "unknown。研究明确排除ON-state FOG，但没有逐例明确标记OFF-FOG、ONOFF-FOG或其他临床表型。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估，目的是帮助患者回忆和回答问题。术后随访时患者处于最佳治疗性DBS设置。具体左旋多巴停药时间、药物剂量及洗脱时间未报告。",
+      "DBS_state_and_parameters": "所有患者接受双侧高频STN-DBS，纳入条件为刺激频率≥90 Hz。术后随访时使用最佳治疗性刺激设置。平均右侧频率131.34 ± 21.24 Hz，左侧130.88 ± 19.86 Hz；右侧脉宽67.63 ± 11.30 μs，左侧70.00 ± 11.43 μs；右侧幅度2.36 ± 0.56 V，左侧2.41 ± 0.52 V。49名使用PINS-L301，27名使用Medtronic-3389。没有随机化DBS ON/OFF比较，也没有系统报告方向性刺激参数。",
+      "task": "主要结局为FOG-Q问卷，评估患者最近1个月正常及最严重情况下的FOG。纳入时要求有评估视频且至少观察到一次冻结事件，但没有使用标准化直行、转弯、启动或双任务步态实验作为主要结局。",
+      "recording_location": "没有患者级STN神经电生理记录。研究通过术前MRI和术后CT重建双侧DBS电极、活跃触点和VTA，并进行解剖定位。",
+      "measure": "FOG-Q总评分及其术前至术后百分比变化。计算公式：%FOG-Q change = [(pre-operative FOG-Q score - post-operative FOG-Q score)/pre-operative FOG-Q] × 100%。",
+      "frequency_and_analysis_window": "不适用STN电生理频段或事件分析窗口。FOG-Q回顾最近1个月的症状；比较术前与术后随访结果，平均随访12.14 ± 7.03个月。",
+      "finding": "双侧高频STN-DBS后，队列平均FOG-Q评分显著下降，但患者间反应存在明显异质性。术前平均FOG-Q为16.89 ± 5.46，术后为10.05 ± 7.16。平均%FOG-Q change为37.93 ± 42.61%。42名患者归入FOG缓解组，22名归入轻微变化组，12名归入恶化组。42名缓解患者中有18名术后FOG-Q第3项评分变为0，被进一步归类为FOG-disappearance组。",
+      "effect_estimate": "FOG-Q：16.89 ± 5.46 vs 10.05 ± 7.16，P < 0.001。平均%FOG-Q change：37.93 ± 42.61%。缓解组42/76，轻微变化组22/76，恶化组12/76，FOG-disappearance组18/76。%FOG-Q change与随访时间的相关性：Spearman R=0.20，P=0.088。",
+      "statistical_unit_and_method": "患者级统计，n=76。研究统计方法部分规定，符合正态分布的临床变量采用配对t检验，否则采用Wilcoxon signed-rank检验。正文未明确指出FOG-Q前后比较实际采用了哪一种检验，因此不进一步推断。分组依据%FOG-Q change的0和30%阈值。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS临床结局研究的偏倚风险初评，不适用随机试验RoB 2。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心回顾性筛选，776名患者仅76名纳入；要求刺激频率≥90 Hz、存在视频、至少观察到一次FOG、MRI和术后CT可用，并排除ON-state FOG及影像质量不佳者，可能造成选择偏倚。",
+            "source_locator": "Materials and methods > Patients and clinical characteristics > Patient screening and clinical data；Discussion > Limitations"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-Q为主要结局，依赖患者回忆最近1个月症状。视频只用于纳入时确认冻结存在，而非对术后结局进行事件级盲法判读。作者明确承认FOG-Q不能区分不同身体、认知或情绪过程导致的冻结。",
+            "source_locator": "Materials and methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有STN LFP或单位活动数据，无法评估神经电生理信号质量、运动伪迹或电刺激伪迹。影像质量不佳者被排除，但没有提供完整影像质量量化指标。",
+            "source_locator": "Materials and methods > Imaging data collection；Image pre-processing and computational analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "非随机回顾性研究。部分后续模型调整了性别、病程、术前MoCA、HAM-A/HAM-D、LEDD减少及UPDRS-III变化，但不能排除未测量混杂。",
+            "source_locator": "Materials and methods > Statistical analysis；Structural connectivity analysis；Discussion > Limitations"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "unclear",
+            "reason": "FOG-Q为患者级术前术后配对测量，未使用试次级伪重复。但论文同时涉及76名患者和132个重建电极侧，不能从临床结局分析中推断所有电极侧均作为独立患者处理。",
+            "source_locator": "Results > Clinical characteristics；Fig. 1A"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "统计方法声明存在多重比较时采用Bonferroni校正，但无法从所提供全文确定所有临床和影像分析的完整校正范围。",
+            "source_locator": "Materials and methods > Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条为总体临床结局描述，不是预测模型；不适用模型过拟合判断。",
+            "source_locator": "Results > Clinical characteristics and stimulation settings of included patients"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "所提供全文未说明预注册或预先锁定的统计分析计划，无法判断是否存在选择性报告。",
+            "source_locator": "Materials and methods；Data availability"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究报告的是DBS治疗前后FOG-Q变化，而不是STN神经活动与自然冻结事件的时间关联。尽管纳入时有视频确认FOG，主要结局仍是回顾性问卷。不能据此判断beta功率、beta burst、相位调制或神经活动在FOG发生前、发生中和恢复期的变化。队列经过严格筛选，不能直接推广到ON-state FOG或低频刺激患者。",
+      "quote": "The average FOG-Q at baseline was 16.89 ± 5.46 and significantly decreased to 10.05 ± 7.16 at follow-up (P < 0.001).",
+      "source_locator": {
+        "section": "Results > Clinical characteristics and stimulation settings of included patients；Methods > Freezing of gait assessment and grouping",
+        "page": null,
+        "figure_table": "Fig. 2A-B；Table 1",
+        "supplement": "Supplementary Fig. 1；Supplementary Table 1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E02",
+      "design": "单中心回顾性观察性研究；双侧STN-DBS活跃触点解剖定位与FOG-Q结局的相关性分析。",
+      "population": "同一北京天坛医院76名PD-FOG双侧STN-DBS患者；坐标分析使用右侧STN活跃触点位置与患者级FOG-Q变化进行关联。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "患者级STN神经电生理数据不适用。总冻结事件数未报告。无任务试次。论文报告132个重建电极侧，但没有在正文提供所有活跃触点的独立总数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；没有区分akinetic、trembling-in-place或其他FOG亚型。",
+      "medication_phenotype": "unknown；ON-state FOG被排除，但没有逐例明确OFF-FOG表型。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后随访在最佳治疗性DBS设置下完成。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz；平均右侧131.34 ± 21.24 Hz、左侧130.88 ± 19.86 Hz。术后在最佳治疗性刺激设置下评估。坐标取自患者个体活跃触点，不涉及DBS ON/OFF随机交叉比较。",
+      "task": "无任务试次级冻结分析。使用活跃触点的MNI空间坐标与术前至术后%FOG-Q change进行关联。FOG-Q回顾最近1个月症状。",
+      "recording_location": "右侧STN活跃DBS触点；通过术前MRI与术后CT重建并转换至MNI空间。不是神经元放电或STN局部场电位记录。",
+      "measure": "活跃触点的MNI三维坐标，重点为x轴和z轴。论文图注指出x、y、z分别代表内外侧、前后和背腹方向。分析坐标与%FOG-Q change之间的Spearman相关，以及缓解组和恶化组之间的坐标比较。",
+      "frequency_and_analysis_window": "不适用电生理频段和时间窗。结局为术前至术后随访的FOG-Q百分比变化，平均随访12.14 ± 7.03个月。",
+      "finding": "右侧STN活跃触点较大的x和z坐标与更大的%FOG-Q change相关。组间比较显示，FOG缓解患者的右侧活跃触点较FOG恶化患者更偏外侧及背侧。研究报告的具体坐标差异分别为x坐标12.96 ± 1.31 vs 12.18 ± 1.22，以及z坐标-5.81 ± 1.72 vs -7.35 ± 2.02。",
+      "effect_estimate": "右侧x坐标与%FOG-Q change：Spearman R=0.27，P=0.020。右侧z坐标与%FOG-Q change：Spearman R=0.32，P=0.005。缓解组与恶化组x坐标：12.96 ± 1.31 vs 12.18 ± 1.22，P=0.045。z坐标：-5.81 ± 1.72 vs -7.35 ± 2.02，P=0.015；作者指出z坐标差异经过Bonferroni校正后仍显著。FOG-disappearance亚组分析报告相似结果，P=0.011。",
+      "statistical_unit_and_method": "患者级临床结局与右侧活跃触点坐标相关，整体样本n=76。缓解组n=42，恶化组n=12。采用Spearman相关；坐标组间差异报告P值，但结果段未明确指出该比较实际采用的具体检验方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS影像定位与临床关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心回顾性队列，76/776纳入；高频刺激、视频和影像可用性等限制可能造成选择偏倚。",
+            "source_locator": "Methods > Patient screening and clinical data；Discussion > Limitations"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "主要结局是FOG-Q变化，而非坐标与视频确认的事件级冻结之间的关联。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有神经电生理信号。电极定位经过MRI/CT配准及人工检查，但没有报告坐标重建误差的完整量化。",
+            "source_locator": "Methods > Electrode localization"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "活跃触点位置并非随机分配，患者解剖差异、刺激参数及临床选择可能共同影响结局。",
+            "source_locator": "Methods > Electrode localization；Results > Coordinate-level analysis；Discussion > Limitations"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "存在76名患者与132个电极侧的分母差异，坐标分析的双侧电极相关性处理细节未完全说明。",
+            "source_locator": "Fig. 1A；Results > Electrode localization"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时检验不同坐标轴、半球及临床分组；作者报告部分z坐标差异经过Bonferroni校正，但不能确认全部比较的校正范围。",
+            "source_locator": "Results > Coordinate-level analysis；Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为坐标相关性分析，不是独立的预测模型验证。",
+            "source_locator": "Results > Coordinate-level analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册方案可用于核查坐标分析的预设假设及全部分析结果。",
+            "source_locator": "Methods；Supplementary material"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该发现支持活跃刺激位置与问卷结局之间的解剖关联，但不能说明对应位置的神经元放电或beta活动具有何种变化。单个患者只有一套刺激设置，作者明确指出不能区分刺激靶点不对称、解剖不对称和半球优势效应。结果不能解释为自然冻结发生时右侧STN活动增强或减弱。",
+      "quote": "Larger x and z coordinates in the right-side hemisphere in the MNI space were shown to be significantly related to a greater %FOG-Q change.",
+      "source_locator": {
+        "section": "Results > Sweet and sour stimulation sites > Coordinate-level analysis",
+        "page": null,
+        "figure_table": "Fig. 3C-H",
+        "supplement": "Supplementary Table 4；Supplementary Fig. 2"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E03",
+      "design": "回顾性DBS影像学队列研究；患者特异性VTA与STN亚区重叠程度的相关性分析。",
+      "population": "同一76名PD-FOG双侧STN-DBS患者。利用患者特异性刺激参数和活跃触点计算VTA，并与右侧STN的limbic亚区进行重叠分析。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "没有患者级STN电生理记录。冻结事件总数和任务试次数未报告。132为重建电极侧数，不是独立患者数或触点数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未按akinetic、trembling-in-place等亚型分层。",
+      "medication_phenotype": "unknown；排除ON-state FOG，但未逐例明确OFF-FOG表型。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后DBS使用最佳治疗性设置。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz。VTA根据患者个体活跃触点、脉宽、频率及刺激幅度估算。平均频率约131 Hz，脉宽约68-70 μs，幅度约2.36-2.41 V。",
+      "task": "没有步态任务或事件级冻结分析。将VTA与STN亚区的空间重叠程度和术前至术后%FOG-Q change关联。",
+      "recording_location": "右侧STN limbic亚区及其与患者VTA的空间重叠。VTA基于有限元模型估计，不是实际记录的神经活动区域。",
+      "measure": "右侧VTA与limbic STN的重叠程度；同时考察左侧对应区域及VTA与whole STN、sensorimotor STN、associative STN的重叠。",
+      "frequency_and_analysis_window": "不适用电生理频段及事件时间窗。分析术前至术后FOG-Q百分比变化，问卷回顾最近1个月症状。",
+      "finding": "右侧VTA与limbic STN重叠程度越大，%FOG-Q change越低，代表FOG缓解较差或恶化倾向。作者报告这一关联在右侧半球存在，而左侧未观察到相应结果。VTA与whole STN、sensorimotor STN及associative STN的重叠没有预测%FOG-Q变化。",
+      "effect_estimate": "右侧VTA-limbic STN重叠：Spearman R=-0.27。Results正文报告P=0.003，并称Bonferroni校正后仍显著；Fig. 3B图注对同一相关报告P=0.011。两处P值存在不一致，应保留原文差异。左侧未报告显著关联。whole STN、sensorimotor STN、associative STN重叠均未预测结局，未提供具体P值。",
+      "statistical_unit_and_method": "患者级VTA重叠指标与患者级%FOG-Q change的Spearman相关，n=76。没有事件级或试次级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "76名患者来自776名筛查对象，存在高频刺激、影像可用性及临床表型限制。",
+            "source_locator": "Methods > Patient screening and clinical data"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-Q是主要结局，不能区分冻结的具体运动、认知及情绪机制，且没有事件级视频结局分析。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "VTA是计算估计的刺激体积，没有直接STN神经信号，不能评价电生理伪迹。",
+            "source_locator": "Methods > Activated contact coordinate extraction and volume of tissue activated estimation"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "VTA位置、刺激幅度及患者解剖结构并非随机分配，可能共同影响重叠程度与临床结局。",
+            "source_locator": "Methods > Volume of tissue activated estimation；Discussion > Limitations"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "涉及双侧电极及患者级结局，论文没有在该结果段充分说明双侧电极依赖性的处理。",
+            "source_locator": "Fig. 1A；Results > Volume of tissue activated-level analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "比较左右半球及多个STN亚区；右侧结果报告经过Bonferroni校正，但图注与正文P值不同。",
+            "source_locator": "Results > Volume of tissue activated-level analysis；Fig. 3B；Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项是VTA重叠相关性分析，没有独立的预测模型验证结果。",
+            "source_locator": "Results > Volume of tissue activated-level analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未见预注册分析计划，且图注与正文P值不一致，需要进一步核对原始补充数据。",
+            "source_locator": "Results > Volume of tissue activated-level analysis；Fig. 3B"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "VTA与解剖亚区的空间重叠属于刺激位置代理指标，不代表该区域神经元的实际放电、局部场电位或网络振荡。右侧limbic STN结果的正文和图注P值分别为0.003和0.011，应在后续审计中核对。不能将这一结果直接解释为limbic STN神经活动导致FOG。",
+      "quote": "Greater VTA and limbic STN overlap in the right hemisphere was shown to be significantly related to a worse deterioration of FOG symptom.",
+      "source_locator": {
+        "section": "Results > Sweet and sour stimulation sites > Volume of tissue activated-level analysis",
+        "page": null,
+        "figure_table": "Fig. 3B",
+        "supplement": "Supplementary Fig. 3A-D"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E04",
+      "design": "回顾性DBS影像学研究；患者特异性刺激映射（PSM）及留一交叉验证预测分析。",
+      "population": "同一76名PD-FOG双侧STN-DBS患者，利用双侧活跃触点和VTA建立patient-specific stimulation mapping。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "没有患者级STN神经电生理记录。总冻结事件数及任务试次数未报告。132为重建电极侧数；没有独立活跃触点总数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；FOG亚型未分类。",
+      "medication_phenotype": "unknown；排除ON-state FOG，但没有逐例确定OFF-FOG表型。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后DBS处于最佳治疗性设置。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz；患者特异性活跃触点和刺激参数用于估算VTA。没有独立刺激ON/OFF或不同频率交叉比较。",
+      "task": "使用刺激位置和VTA空间映射预测FOG-Q变化；不是自然行走或模拟冻结任务。",
+      "recording_location": "双侧STN及邻近结构的MNI空间体素。该映射来自刺激位置和VTA与临床结局之间的统计关系，不是STN电生理记录。",
+      "measure": "Patient-specific stimulation map（PSM）；体素级刺激位置与%FOG-Q change之间的相关性。正相关区域称sweet spots，负相关区域称sour spots。",
+      "frequency_and_analysis_window": "无电生理频段或神经事件时间窗。分析术前至术后FOG-Q百分比变化；LOOCV以患者为留出单位。",
+      "finding": "双侧STN背外侧三分之二区域的体素与较大的%FOG-Q change正相关。右侧STN腹内侧区域以及左侧中央STN周围内囊区域与较低的%FOG-Q change负相关。右侧sweet spot和sour spot质心分别为(13.7, -11.6, -4.7)和(11.7, -13.8, -8.9)；左侧分别为(-12.1, -12.6, -5.4)和(-12.7, -11.0, -5.9)。",
+      "effect_estimate": "体素映射值范围-2.94至2.30。Results正文报告LOOCV验证：n=76，Spearman R=0.29，P=0.002；调整协变量后R=0.25，P=0.009。Fig. 4F图注将LOOCV结果报告为R=0.25，P=0.009，与正文报告的未调整LOOCV结果不一致。调整协变量包括性别、病程、术前MoCA、术前HAM-A/HAM-D、LEDD减少及UPDRS-III百分比变化。",
+      "statistical_unit_and_method": "患者级结局和体素级刺激映射。使用LOOCV验证映射模型；采用Spearman相关评估预测值与临床结局的关系，并进一步使用包含协变量的模型分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS影像预测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "76名患者为严格筛选后的单中心高频STN-DBS队列，且影像质量及ON-state FOG排除标准限制外部适用性。",
+            "source_locator": "Methods > Patient screening and clinical data；Discussion > Limitations"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "映射预测的结局为FOG-Q变化，而不是事件级冻结；作者承认FOG-Q不能区分不同冻结机制。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "PSM使用VTA和影像解剖信息，没有患者STN电生理数据，无法评价神经信号伪迹。",
+            "source_locator": "Methods > Electrode localization；Activated contact coordinate extraction and volume of tissue activated estimation"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "模型纳入若干临床协变量，但刺激位置、解剖结构及其他未测量因素仍可能混杂。",
+            "source_locator": "Methods > Structural connectivity analysis；Results > Mapping-level analysis"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "映射涉及双侧电极和多个体素，但独立统计单位是患者；132个电极侧与76名患者之间的依赖结构需进一步核对。",
+            "source_locator": "Fig. 1A-B；Results > Electrode localization"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "进行双侧、多个体素和不同刺激区域映射，虽声明采用Bonferroni校正，但所有分析族的校正细节不完整。",
+            "source_locator": "Statistical analysis；Results > Mapping-level analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "some_concerns",
+            "reason": "使用LOOCV进行内部验证，但没有独立外部队列。正文和Fig. 4F对LOOCV相关系数及P值报告不一致。",
+            "source_locator": "Results > Mapping-level analysis；Fig. 4F"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未见预注册方案；正文与图注结果差异需要核对原始分析和补充材料。",
+            "source_locator": "Results > Mapping-level analysis；Supplementary material"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "PSM是基于刺激位置和临床结局生成的统计性空间映射，不能等同于神经元活动图谱或STN局部振荡分布图。LOOCV属于内部验证，不是独立外部验证。Fig. 4F与Results正文对LOOCV的相关系数及P值存在报告差异，不能未经核查选择其中一个作为唯一结果。",
+      "quote": "Voxels at the dorsolateral two-thirds of the bilateral STN were positively associated with the %FOG-Q change.",
+      "source_locator": {
+        "section": "Results > Sweet and sour stimulation sites > Mapping-level analysis",
+        "page": null,
+        "figure_table": "Fig. 4A-F",
+        "supplement": "Supplementary Fig. 4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E05",
+      "design": "回顾性观察性DBS影像研究；基于规范扩散MRI连接组的结构连接预测模型。",
+      "population": "76名北京天坛医院PD-FOG双侧STN-DBS患者。结构连接组使用PPMI数据库90名PD患者的规范扩散MRI数据，不是76名DBS患者的个体化扩散MRI。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "76名DBS患者没有报告患者级STN电生理数据。结构连接分析另使用PPMI规范扩散MRI样本90人，但这不是76名DBS患者的个体化神经数据，不能填入主队列的有效神经数据分母。冻结事件数和试次数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未根据冻结运动表现分类。",
+      "medication_phenotype": "unknown；ON-state FOG排除，FOG-Q在medication-off状态评估。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后刺激设置为最佳治疗性双侧高频STN-DBS。",
+      "DBS_state_and_parameters": "双侧STN-DBS，频率≥90 Hz；个体VTA用于连接组纤维筛选。平均频率约131 Hz，脉宽约68-70 μs，幅度约2.36-2.41 V。",
+      "task": "非步态任务。使用患者个体VTA与规范扩散MRI纤维连接关系，预测患者级FOG-Q变化。",
+      "recording_location": "VTA位于双侧STN及其邻近区域；纤维路径由PPMI数据库90名PD患者的规范扩散MRI连接组估计。不是患者自身STN神经活动或个体化扩散连接记录。",
+      "measure": "结构连接纤维筛选。每名受试者采样20,000条纤维；保留与至少20%纳入患者VTA连接的纤维。每条纤维分配Fibre-T-score，通过比较VTA连接与不连接患者的临床结局获得。正T-score表示在临床反应较好患者中优先受到刺激的纤维。正向纤维包括STN-VTA至SMA和pre-SMA的通路，部分延伸至MLR/PPN。",
+      "frequency_and_analysis_window": "不适用STN电生理频段和事件时间窗。结构连接来自扩散MRI，不是振荡频率测量。临床结局为术前至术后FOG-Q变化。",
+      "finding": "STN-VTA连接至SMA和pre-SMA的结构纤维与较大的%FOG-Q change正相关，即与FOG缓解相关。作者报告许多正向纤维延伸至中脑运动区，尤其是PPN。正向纤维在STN内主要经过背外侧三分之二区域。",
+      "effect_estimate": "结构连接模型LOOCV：n=76，Spearman R=0.29，P=0.003。调整协变量后R=0.25，P=0.007。全部正负纤维的T值范围为-5.75至4.81；未报告SMA/pre-SMA或PPN单条通路独立效应量、置信区间或单独P值。作者明确指出T-score用于识别预测模型，而不是计算显著性结果。",
+      "statistical_unit_and_method": "患者级FOG-Q变化，n=76；纤维级连接状态作为预测特征。Methods描述每条纤维采用two-sample t-test比较连接与不连接患者的结局，并通过LOOCV验证模型。Fig. 1C图注另提到linear mixed model，具体分析实现需要核对。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS结构连接预测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "76名患者经过单中心高频刺激和影像可用性筛选，不能代表全部PD-FOG患者。",
+            "source_locator": "Methods > Patient screening and clinical data；Discussion > Limitations"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "预测目标为FOG-Q变化而非实际冻结事件发生率或事件阶段；FOG-Q不能区分冻结的认知、情绪和运动来源。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有患者STN电生理数据。扩散连接来自外部规范MRI样本，不能评价DBS患者的LFP伪迹或个体神经信号质量。",
+            "source_locator": "Methods > Imaging data collection；Structural connectivity analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "调整部分临床协变量，但规范连接组无法反映每位患者的个体化白质结构变化，且刺激位置与临床选择可能存在混杂。",
+            "source_locator": "Methods > Structural connectivity analysis；Results > Structural connectivity outcomes"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "每位患者使用大量纤维特征，且双侧VTA对应患者级结局。纤维特征之间及患者内双侧刺激的依赖性需要考虑。",
+            "source_locator": "Methods > Structural connectivity analysis；Fig. 1C"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对大量纤维和多个脑区进行筛选，尽管存在T-score筛选及模型验证，但全部纤维筛选的多重比较控制细节有限。",
+            "source_locator": "Methods > Structural connectivity analysis；Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "some_concerns",
+            "reason": "LOOCV提供内部验证，但未使用独立临床队列进行外部验证；规范连接组样本不等同于独立的临床结局验证队列。",
+            "source_locator": "Methods > Structural connectivity analysis；Results > Structural connectivity outcomes；Discussion > Limitations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册方案，且Fig. 1C图注与Methods对纤维统计模型的描述存在差异。",
+            "source_locator": "Methods > Structural connectivity analysis；Fig. 1C"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是结构连接组学证据，不是STN神经活动证据。90名PPMI患者提供规范扩散MRI连接组，而非76名DBS患者的个体化连接数据。STN-SMA/pre-SMA-PPN通路与FOG缓解的关联不能直接证明该通路在冻结事件期间被抑制或激活。Fibre-T-score不是单条纤维的独立显著性检验结果。Methods与Fig. 1C对统计模型的描述需要核对。",
+      "quote": "The %FOG-Q changes were positively correlated with fibre tracts connecting the VTAs in the STN to the supplementary motor area and pre-SMA.",
+      "source_locator": {
+        "section": "Results > Structural connectivity outcomes；Methods > Structural connectivity analysis",
+        "page": null,
+        "figure_table": "Fig. 5A-F",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E06",
+      "design": "回顾性观察性DBS影像研究；基于规范扩散MRI连接组的负向结构连接预测分析。",
+      "population": "同一76名北京天坛医院PD-FOG双侧STN-DBS患者。结构连接组来自PPMI数据库90名PD患者的规范扩散MRI样本。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "没有76名DBS患者的STN电生理记录。90名PPMI患者为外部规范连接组来源，不属于主要DBS队列。冻结事件总数及任务试次数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未进行冻结运动学亚型分类。",
+      "medication_phenotype": "unknown；排除ON-state FOG，但没有明确逐例OFF-FOG表型。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后采用最佳治疗性刺激设置。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz；使用患者特异性VTA和规范结构连接组计算纤维路径。",
+      "task": "非步态任务。分析VTA相关纤维与患者级%FOG-Q change的关系。",
+      "recording_location": "负向结构连接包括从STN-VTA经过腹内侧STN或中央STN周围内囊区域的纤维，连接至medial prefrontal cortex和ventrolateral prefrontal cortex。连接组来自规范扩散MRI，不是患者级神经活动记录。",
+      "measure": "规范扩散MRI纤维连接；根据VTA连接和不连接患者的临床结局计算Fibre-T-score。负T-score代表在临床反应较差患者中优先受到刺激的纤维。",
+      "frequency_and_analysis_window": "无STN电生理频段或事件级时间窗。使用扩散MRI结构连接与术前至术后FOG-Q变化进行关联。",
+      "finding": "STN-VTA连接至medial prefrontal cortex和ventrolateral prefrontal cortex的纤维与较低的%FOG-Q change负相关，即与FOG恶化相关。负向纤维主要经过腹内侧STN及中央STN周围内囊区域。",
+      "effect_estimate": "结构连接整体模型LOOCV：Spearman R=0.29，P=0.003；协变量调整后R=0.25，P=0.007。全部正负纤维T值范围为-5.75至4.81。论文未提供mPFC或vlPFC通路独立效应量、置信区间或单独P值。",
+      "statistical_unit_and_method": "患者级FOG-Q变化，n=76；纤维级VTA连接状态作为预测特征。Methods描述two-sample t-test计算各纤维T-score；整体结构连接模型采用LOOCV。Fig. 1C另提及linear mixed model，需进一步核对。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS结构连接预测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心、严格筛选的76人高频STN-DBS队列，存在选择偏倚和外部适用性限制。",
+            "source_locator": "Methods > Patient screening and clinical data；Discussion > Limitations"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "结局是FOG-Q变化，没有事件级冻结标签，不能确定连接特征与实际冻结时刻的对应关系。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "研究没有患者STN电生理记录，无法评价LFP伪迹或神经信号质量。",
+            "source_locator": "Methods > Imaging data collection；Structural connectivity analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "部分临床变量纳入协变量调整，但刺激位置、解剖差异及其他未测量因素可能影响连接与结局的关系。",
+            "source_locator": "Methods > Structural connectivity analysis；Results > Structural connectivity outcomes"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "大量纤维特征与双侧VTA共同关联患者级结局，患者内及纤维间依赖性需要考虑。",
+            "source_locator": "Methods > Structural connectivity analysis；Fig. 1C"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及大量纤维筛选及多个脑区，Bonferroni校正声明未完全说明所有纤维筛选的校正范围。",
+            "source_locator": "Methods > Structural connectivity analysis；Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "some_concerns",
+            "reason": "仅有LOOCV内部验证，没有独立外部临床队列验证。",
+            "source_locator": "Results > Structural connectivity outcomes；Discussion > Limitations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，无法核查全部预设负向连接假设是否均被报告。",
+            "source_locator": "Methods > Structural connectivity analysis；Data availability"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "mPFC/vlPFC负向连接是结构连接与FOG-Q变化之间的统计关联，不是直接测量的前额叶神经活动或STN-prefrontal相干性。不能据此认定刺激前额叶连接必然增加认知负荷并导致冻结。该机制解释属于作者在Discussion提出的理论解释，未通过患者级任务态神经记录直接验证。",
+      "quote": "negatively correlated with fibre tracts to the medial and ventrolateral prefrontal cortices.",
+      "source_locator": {
+        "section": "Results > Structural connectivity outcomes；Discussion > A broad and complex brain network that includes the motor, affective and cognitive portions was modulated",
+        "page": null,
+        "figure_table": "Fig. 5A-E",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E07",
+      "design": "回顾性患者亚组比较；患者特异性结构连接模式比较；非随机观察性分析。",
+      "population": "同一76名PD-FOG患者中的两个极端结局亚组：FOG-disappearance组18名，FOG-deterioration组12名。",
+      "n_enrolled": 30,
+      "n_analyzed": 30,
+      "n_patients_with_FOG": 30,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "本项亚组比较仅包含30名患者，但电极侧数132为整个76人队列报告的重建数量，不代表这30人各自拥有的有效电生理数据。没有STN电生理记录。事件总数和试次数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；亚组依据FOG-Q结局分类，没有进一步区分akinetic或trembling-in-place。",
+      "medication_phenotype": "unknown；ON-state FOG被排除，具体临床OFF-FOG表型未逐例报告。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后刺激为最佳治疗性设置。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz。亚组患者使用其各自的治疗性刺激设置；没有亚组间刺激ON/OFF交叉实验。",
+      "task": "非任务态结构连接比较。FOG-disappearance依据缓解组中FOG-Q第3项术后变为0定义；FOG-deterioration依据FOG-Q恶化定义。",
+      "recording_location": "患者特异性VTA与规范结构连接组估计的STN-SMA/pre-SMA及STN-PFC纤维通路。不是患者级STN神经电生理记录。",
+      "measure": "FOG-disappearance与FOG-deterioration患者之间的结构连接模式差异，重点为STN-SMA/pre-SMA与STN-PFC纤维刺激连接。",
+      "frequency_and_analysis_window": "不适用电生理频段和冻结事件时间窗。按术后FOG-Q结局分组比较患者特异性连接模式。",
+      "finding": "Results正文报告，FOG-disappearance患者受到更多STN-SMA/pre-SMA纤维刺激，而FOG-deterioration患者受到更多STN-PFC纤维刺激。该结果与结构连接预测模型的方向一致。不过Fig. 6图注最后一句写为FOG-alleviated patients stimulated more STN-PFC fibres，与Results正文所述FOG-deterioration患者不一致，存在内部报告矛盾。",
+      "effect_estimate": "FOG-disappearance n=18；FOG-deterioration n=12。Methods报告采用independent samples t-test比较患者特异性结构连接模式，但Results未提供具体纤维效应量、t值、置信区间或P值。",
+      "statistical_unit_and_method": "患者级亚组比较，n=18 vs n=12。患者特异性结构连接模式采用独立样本t检验比较。不是冻结事件级或试次级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS亚组及结构连接比较研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅选择FOG-disappearance和FOG-deterioration两个极端亚组，排除了22名轻微变化患者及其他缓解患者，可能引入极端组选择偏倚。",
+            "source_locator": "Results > Structural connectivity outcomes；Fig. 6"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "亚组由FOG-Q变化及第3项评分定义，而非事件级视频确认的冻结频率或持续时间。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有患者级STN电生理信号，使用的是规范扩散MRI连接组。",
+            "source_locator": "Methods > Structural connectivity analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "亚组不是随机分配，刺激位置、患者解剖、病程及其他临床因素可能共同影响结局与连接模式。",
+            "source_locator": "Methods > Structural connectivity analysis；Results > Structural connectivity outcomes"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者特异性连接模式包含双侧VTA及大量纤维特征，患者内相关性及特征依赖需要考虑。",
+            "source_locator": "Fig. 1C；Fig. 6"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及多个纤维通路和脑区的组间比较，正文没有报告所有具体比较的校正范围。",
+            "source_locator": "Methods > Structural connectivity analysis；Statistical analysis"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为30名患者的亚组差异比较，并非独立预测模型外部验证。",
+            "source_locator": "Results > Structural connectivity outcomes；Fig. 6"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "Fig. 6图注与Results正文对STN-PFC纤维所属结局组的描述相反，影响结果方向的可核查性。",
+            "source_locator": "Results > Structural connectivity outcomes；Fig. 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是两个极端FOG-Q结局亚组之间的连接模式比较，不是独立重复验证，也不是事件级神经活动比较。Fig. 6图注与Results正文对STN-PFC纤维究竟更多见于FOG-deterioration还是FOG-alleviation患者存在直接矛盾。跨研究综合时应优先保留这一不一致，不能自行纠正图注。",
+      "quote": "more STN–SMA/pre-SMA tracts were stimulated in the FOG-disappearance patients, whereas more STN-PFC tracts were stimulated in FOG-deterioration patients.",
+      "source_locator": {
+        "section": "Results > Structural connectivity outcomes",
+        "page": null,
+        "figure_table": "Fig. 6",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37701817_E08",
+      "design": "回顾性观察性DBS影像研究；基于规范静息态fMRI连接组的功能连接关联与预测分析。",
+      "population": "76名北京天坛医院PD-FOG双侧STN-DBS患者。功能连接规范样本来自PPMI数据库90名PD患者的静息态fMRI数据，不是76名DBS患者的个体化静息态fMRI。",
+      "n_enrolled": 76,
+      "n_analyzed": 76,
+      "n_patients_with_FOG": 76,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 132,
+      "missing_reason": "没有76名DBS患者的STN LFP、单单位或多单位数据。功能连接分析使用独立PPMI规范静息态fMRI样本90人，该样本不应与76名DBS患者合并为患者级STN神经数据分母。总冻结事件数及任务试次数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未按akinetic、trembling-in-place或其他冻结表现分类。",
+      "medication_phenotype": "unknown；ON-state FOG排除，FOG-Q在medication-off状态评估。",
+      "experimental_medication_state": "FOG-Q在medication-off状态评估；术后DBS处于最佳治疗性设置。规范静息态fMRI样本的具体药物状态在本文所提供文本中未明确说明。",
+      "DBS_state_and_parameters": "双侧高频STN-DBS，频率≥90 Hz；采用患者特异性双侧VTA作为功能连接分析的种子区域。没有DBS ON/OFF或不同刺激参数的功能连接交叉比较。",
+      "task": "静息态fMRI规范连接分析，不是行走、转弯、启动、双任务或冻结诱发任务。将VTA与全脑体素功能连接模式和患者FOG-Q变化进行关联。",
+      "recording_location": "功能连接种子为患者双侧VTA，功能连接数据来自PPMI数据库90名PD患者的规范静息态fMRI。MRI参数包括TR/TE=2400/25 ms，212 volumes。该分析不是76名DBS患者自身的STN活动记录，也不是STN局部场电位测量。",
+      "measure": "VTA与全脑体素之间的静息态fMRI时间序列相关。对规范样本的连接结果进行平均并进行Fisher Z转换，随后在患者层面与%FOG-Q change相关，形成R-map。",
+      "frequency_and_analysis_window": "不报告STN LFP频段、beta频率边界或神经事件分析窗。规范静息态fMRI参数TR=2400 ms，TE=25 ms，212 volumes。临床结局为术前至术后FOG-Q变化。",
+      "finding": "功能连接与FOG缓解呈双向空间关联。与FOG缓解正相关的区域包括SMA/pre-SMA、运动皮层、基底节、MLR、dACC和枕叶区域；与FOG恶化相关的区域包括前额叶、 cerebellum和vACC。然而，功能连接预测模型在LOOCV中未通过验证。",
+      "effect_estimate": "LOOCV整体功能连接模型：Spearman R=0.15，P=0.098，不显著。调整协变量后R=0.14，P=0.114，不显著。区域级连接相关的独立效应量、置信区间和P值在正文中未提供。作者将区域关联描述为显著，但整体预测模型未通过LOOCV。",
+      "statistical_unit_and_method": "患者级%FOG-Q change与规范功能连接模式的体素级相关，主要DBS队列n=76。规范连接组来源为90名PPMI患者。采用voxel-wise correlation、Fisher Z转换和LOOCV；协变量包括性别、病程、术前MoCA、HAM-A/HAM-D、LEDD减少和UPDRS-III变化。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性DBS规范静息态fMRI功能连接预测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "DBS队列经过单中心严格筛选，规范fMRI数据另来自PPMI的90名患者；两个样本的来源及适用性不同。",
+            "source_locator": "Methods > Patient screening and clinical data；Imaging data collection"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "功能连接预测的是FOG-Q变化，而非实际步态冻结事件。没有事件级视频或任务态冻结验证。",
+            "source_locator": "Methods > Freezing of gait assessment and grouping；Discussion > Limitations"
+          },
+          {
+            "domain": "信号质量/伪迹",
+            "judgement": "not_assessable",
+            "reason": "功能连接来自外部规范静息态fMRI，不是患者STN电生理记录。未提供足以评估患者级LFP伪迹或功能影像运动伪迹影响的详细信息。",
+            "source_locator": "Methods > Imaging data collection；Functional connectivity analysis"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "纳入部分临床协变量，但规范连接组与患者个体实际连接差异可能造成未测量混杂；患者自身静息态网络变化没有被测量。",
+            "source_locator": "Methods > Functional connectivity analysis；Discussion > Limitations"
+          },
+          {
+            "domain": "重复测量/伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者级结局与全脑大量体素相关，涉及体素间空间依赖；规范样本和主要临床样本也需要保持分母独立。",
+            "source_locator": "Methods > Functional connectivity analysis；Fig. 1D"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "进行全脑体素级连接相关分析，存在高维多重比较问题。正文没有充分列明所有体素级分析的校正细节。",
+            "source_locator": "Methods > Functional connectivity analysis；Statistical analysis；Fig. 7"
+          },
+          {
+            "domain": "模型过拟合/外部验证",
+            "judgement": "some_concerns",
+            "reason": "LOOCV内部验证未达到统计显著，且没有独立外部队列验证。整体预测模型的结果不支持稳健预测能力。",
+            "source_locator": "Results > Functional connectivity outcomes；Supplementary Fig. 5"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，区域级显著连接与整体LOOCV失败的完整统计对应关系需要进一步核对。",
+            "source_locator": "Results > Functional connectivity outcomes；Supplementary Fig. 5"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是静息态fMRI规范功能连接分析，不是患者级STN神经电生理记录。90名PPMI患者的连接数据不能作为76名DBS患者的有效神经记录分母。区域级关联虽然被作者报告为显著，但整体模型LOOCV失败，不能把区域关联直接解释为具有可靠的患者级预测能力。该研究没有测量自然冻结发生前、发生中或恢复期的功能连接动态。",
+      "quote": "The functional connectivity to the SMA/pre-SMA, motor cortex, basal ganglia, MLR, dorsal anterior cingulate cortex (dACC) and occipital regions was significantly correlated to FOG alleviation.",
+      "source_locator": {
+        "section": "Results > Functional connectivity outcomes",
+        "page": null,
+        "figure_table": "Fig. 7",
+        "supplement": "Supplementary Fig. 5"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

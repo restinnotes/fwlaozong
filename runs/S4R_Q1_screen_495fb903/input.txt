@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:20976094
+题目: Evaluating the contributions of dynamic flow to freezing of gait in Parkinson's disease.
+年份: 2010  类型: other; Journal Article
+摘要: Although visual cues can improve gait in Parkinson's disease (PD), their underlying mechanism is poorly understood. Previous research suggests that cues contribute optical flow that is essential to elicit gait improvement. The present study manipulated how optic flow was provided, and how this might influence freezing of gait (FOG) in PD. Therefore, three groups; 15 PD FOG, 16 PD non-FOG, and 16 healthy controls were tested in 3 narrow doorway conditions; baseline (Narrow), ground lines (Ground), and laser (Laser). Step length indicated that the PD FOG group was only able to improve with ground lines, while the laser increased gait variability and double support time. These results suggest that optic flow in itself is not enough to elicit gait improvement in PD. When PD patients use visual cues, gait becomes less automatically controlled and hence preplanned conscious control may be an important factor contributing to gait improvement.
+
+---
+
+pid: PMID:21039949
+题目: Restoration of locomotive function in Parkinson's disease by spinal cord stimulation: mechanistic approach.
+年份: 2010  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Specific motor symptoms of Parkinson's disease (PD) can be treated effectively with direct electrical stimulation of deep nuclei in the brain. However, this is an invasive procedure, and the fraction of eligible patients is rather low according to currently used criteria. Spinal cord stimulation (SCS), a minimally invasive method, has more recently been proposed as a therapeutic approach to alleviate PD akinesia, in light of its proven ability to rescue locomotion in rodent models of PD. The mechanisms accounting for this effect are unknown but, from accumulated experience with the use of SCS in the management of chronic pain, it is known that the pathways most probably activated by SCS are the superficial fibers of the dorsal columns. We suggest that the prokinetic effect of SCS results from direct activation of ascending pathways reaching thalamic nuclei and the cerebral cortex. The afferent stimulation may, in addition, activate brainstem nuclei, contributing to the initiation of locomotion. On the basis of the striking change in the corticostriatal oscillatory mode of neuronal activity induced by SCS, we propose that, through activation of lemniscal and brainstem pathways, the locomotive increase is achieved by disruption of antikinetic low-frequency (<30 Hz) oscillatory synchronization in the corticobasal ganglia circuits.
+
+---
+
+pid: PMID:21076988
+题目: Postsynaptic nigrostriatal dopamine receptors and their role in movement regulation.
+年份: 2010  类型: review-article; Review; Journal Article
+摘要: The article presents the hypothesis that nigrostriatal dopamine may regulate movement by modulation of tone and contraction in skeletal muscles through a concentration-dependent influence on the postsynaptic D1 and D2 receptors on the follow manner: nigrostriatal axons innervate both receptor types within the striatal locus somatotopically responsible for motor control in agonist/antagonist muscle pair around a given joint. D1 receptors interact with lower and D2 receptors with higher dopamine concentrations. Synaptic dopamine concentration increases immediately before movement starts. We hypothesize that increasing dopamine concentrations stimulate first the D1 receptors and reduce muscle tone in the antagonist muscle and than stimulate D2 receptors and induce contraction in the agonist muscle. The preceded muscle tone reduction in the antagonist muscle eases the efficient contraction of the agonist. Our hypothesis is applicable for an explanation of physiological movement regulation, different forms of movement pathology and therapeutic drug effects. Further, this hypothesis provides a theoretical basis for experimental investigation of dopaminergic motor control and development of new strategies for treatment of movement disorders.
+
+---
+
+pid: PMID:21126990
+题目: Gait-related cerebral alterations in patients with Parkinson's disease with freezing of gait.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: Freezing of gait is a common, debilitating feature of Parkinson's disease. We have studied gait planning in patients with freezing of gait, using motor imagery of walking in combination with functional magnetic resonance imaging. This approach exploits the large neural overlap that exists between planning and imagining a movement. In addition, it avoids confounds introduced by brain responses to altered motor performance and somatosensory feedback during actual freezing episodes. We included 24 patients with Parkinson's disease: 12 patients with freezing of gait, 12 matched patients without freezing of gait and 21 matched healthy controls. Subjects performed two previously validated tasks--motor imagery of gait and a visual imagery control task. During functional magnetic resonance imaging scanning, we quantified imagery performance by measuring the time required to imagine walking on paths of different widths and lengths. In addition, we used voxel-based morphometry to test whether between-group differences in imagery-related activity were related to structural differences. Imagery times indicated that patients with freezing of gait, patients without freezing of gait and controls engaged in motor imagery of gait, with matched task performance. During motor imagery of gait, patients with freezing of gait showed more activity than patients without freezing of gait in the mesence
+
+---
+
+pid: PMID:21173838
+题目: Recent advances in the assessment and treatment of falls in Parkinson's disease.
+年份: 2010  类型: review-article; Journal Article
+摘要: Falls are among the most incapacitating features of Parkinson's disease. Prevention of falls requires a systematic assessment of all contributing factors (with emphasis on freezing of gait and frontal executive dysfunction), and a multidisciplinary treatment approach tailored to the specific pathophysiology of falls for each individual patient.
+
+---
+
+pid: PMID:21180627
+题目: Deep brain stimulation in Parkinson's disease.
+年份: 2009  类型: research-article; Journal Article
+摘要: During the last 15 years deep brain stimulation (DBS) has been established as a highly-effective therapy for advanced Parkinson's disease (PD). Patient selection, stereotactic implantation, postoperative stimulator programming and patient care requires a multi-disciplinary team including movement disorders specialists in neurology and functional neurosurgery. To treat medically refractory levodopa-induced motor complications or resistant tremor the preferred target for high-frequency DBS is the subthalamic nucleus (STN). STN-DBS results in significant reduction of dyskinesias and dopaminergic medication, improvement of all cardinal motor symptoms with sustained long-term benefits, and significant improvement of quality of life when compared with best medical treatment. These benefits have to be weighed against potential surgery-related adverse events, device-related complications, and stimulus-induced side effects. The mean disease duration before initiating DBS in PD is currently about 13 years. It is presently investigated whether the optimal timing for implantation may be at an earlier disease-stage to prevent psychosocial decline and to maintain quality of life for a longer period of time.
+
+---
+
+pid: PMID:21188437
+题目: Commentary: the pedunculopontine nucleus: clinical experience, basic questions and future directions.
+年份: 2011  类型: research-article; Journal Article
+摘要: This issue is dedicated to a potential new target for the treatment of movement disorders, the pedunculopontine tegmental nucleus (PPTg), or, more simply, the pedunculopontine nucleus, that some authors abbreviate as PPN. We provide an overview of the field as an introduction to the general reader, beginning with the clinical experience to date of Mazzone and co-workers in Rome, some basic questions that need to be addressed, and potential future directions required in order to ensure that the potential benefits of this work are realized.
+
+---
+
+pid: PMID:21370271
+题目: Modulation of gait coordination by subthalamic stimulation improves freezing of gait.
+年份: 2011  类型: Clinical Trial; Journal Article
+摘要: The effect of subthalamic deep brain stimulation on gait coordination and freezing of gait in patients with Parkinson's disease is incompletely understood. The purpose of this study was to investigate the extent to which modulation of symmetry and coordination between legs by subthalamic deep brain stimulation alters the frequency and duration of freezing of gait in patients with Parkinson's disease. We recruited 13 post-subthalamic deep brain stimulation patients with Parkinson's disease with off freezing of gait and evaluated them in the following 4 conditions: subthalamic deep brain stimulation on (ON) and stimulation off (OFF), 50% reduction of stimulation voltage for the leg with shorter step length (worse side reduction) and for the leg with longer step length (better side reduction). Gait analysis was performed on a treadmill and recorded by an optoelectronic analysis system. We measured frequency and duration of freezing of gait episodes. Bilateral coordination of gait was assessed by the Phase Coordination Index, quantifying the ability to generate antiphase stepping. From the OFF to the ON state, freezing of gait improved in frequency (2.0 ± 0.4 to 1.4 ± 0.5 episodes) and duration (12.2 ± 2.6 to 2.6 ± 0.8 seconds; P = .005). Compared with the ON state, only better side reduction further reduced freezing of gait frequency (0.2 ± 0.2) and duration of episodes (0.2 ± 0.2
+
+---
+
+pid: PMID:21382449
+题目: Walking patterns in Parkinson's disease with and without freezing of gait.
+年份: 2011  类型: Comparative Study; Research Support, Non-U.S. Gov't; Journal Article
+摘要: The pathophysiology underlying freezing of gait (FOG) in Parkinson's disease remains incompletely understood. Patients with FOG ("freezers") have a higher temporal variability and asymmetry of strides compared to patients without FOG ("non-freezers"). We aimed to extend this view, by assessing spatial variability and asymmetry of steps and interlimb coordination between the upper and lower limbs during gait. Twelve freezers, 15 non-freezers, and 15 age-matched controls were instructed to walk overground and on a treadmill. Kinematic data were recorded with a motion analysis system. Both freezers and non-freezers showed an increased spatial variability of leg movements compared to controls. In addition, both patient groups had a deficit in interlimb coordination, not only between ipsilateral arms and legs, but also between diagonally positioned limbs. The only difference between freezers and non-freezers was a decreased step length during treadmill walking. We conclude that parkinsonian gait-regardless of FOG-is irregular, not only in the legs, but also with respect to interlimb coordination between the arms and legs. FOG is reflected by abnormal treadmill walking, presumably because this provides a greater challenge to the defective supraspinal control than overground walking, hampering the ability of freezers to increase their stride length when necessary.
+
+---
+
+pid: PMID:21395868
+题目: Independent neural coding of reward and movement by pedunculopontine tegmental nucleus neurons in freely navigating rats.
+年份: 2011  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Phasic firing of dopamine (DA) neurons in the ventral tegmental area (VTA) and substantia nigra (SN) is likely to be crucial for reward processing that guides learning. One of the key structures implicated in the regulation of this DA burst firing is the pedunculopontine tegmental nucleus (PPTg), which projects to both the VTA and SN. Different literatures suggest that the PPTg serves as a sensory-gating area for DA cells or it regulates voluntary movement. This study recorded PPTg single-unit activity as rats perform a spatial navigation task to examine the potential for both reward and movement contributions. PPTg cells showed significant changes in firing relative to reward acquisition, the velocity of movement across the maze and turning behaviors of the rats. Reward, but not movement, correlates were impacted by changes in context, and neither correlate type was affected by reward manipulations (e.g. changing the expected location of a reward). This suggests that the PPTg conjunctively codes both reward and behavioral information, and that the reward information is processed in a context-dependent manner. The distinct anatomical distribution of reward and movement cells emphasizes different models of synaptic control by PPTg of DA burst firing in the VTA and SN. Relevant to both VTA and SN learning systems, however, PPTg appears to serve as a sensory gating mechanism to fa
+
+---
+
+pid: PMID:21397548
+题目: Acute induction of levodopa-resistant freezing of gait upon subthalamic nucleus electrode implantation.
+年份: 2011  类型: Letter; Case Reports
+摘要: （无摘要）
+
+---
+
+pid: PMID:21436393
+题目: Effect of step training and rhythmic auditory stimulation on functional performance in Parkinson patients.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; Randomized Controlled Trial; Journal Article
+摘要: BackgroundRhythmic auditory stimulation (RAS) can influence movement during straight line walking and direction transition in individuals with Parkinson disease (PD).ObjectiveThe authors studied whether multidirectional step training with RAS would generalize to functional gait conditions used in daily activities and balance.MethodsIn a matched-pairs design, 8 patients practiced externally paced (EP) stepping (RAS group), and 8 patients practiced internally paced (IP) stepping (no RAS group) for 6 weeks. Participants were evaluated on the first and last days of practice, and 1 week, 4 weeks, and 8 weeks after practice termination. Evaluations included a primary measurement--the Dynamic Gait Index (DGI)--and secondary measurements--the Unified Parkinson's Disease Rating Scale (UPDRS), Tinetti-gait and balance tests, Timed-Up-and-Go (TUG), and Freezing of Gait Questionnaire (FOGQ).ResultsThe RAS group significantly improved performance on the DGI and several secondary measures, and they maintained improvements for the DGI, Tinetti, FOGQ, and balance and gait items of the UPDRS above pretraining values at least 4 weeks after practice termination. The no RAS group revealed several improvements with training but could not maintain these improvements for as long as the other group.ConclusionsIndividuals with PD can generalize motor improvements achieved during multidirectional step t
+
+---
+
+pid: PMID:21441994
+题目: The arbitration-extension hypothesis: a hierarchical interpretation of the functional organization of the Basal Ganglia.
+年份: 2011  类型: research-article; Journal Article
+摘要: Based on known anatomy and physiology, we present a hypothesis where the basal ganglia motor loop is hierarchically organized in two main subsystems: the arbitration system and the extension system. The arbitration system, comprised of the subthalamic nucleus, globus pallidus, and pedunculopontine nucleus, serves the role of selecting one out of several candidate actions as they are ascending from various brain stem motor regions and aggregated in the centromedian thalamus or descending from the extension system or from the cerebral cortex. This system is an action-input/action-output system whose winner-take-all mechanism finds the strongest response among several candidates to execute. This decision is communicated back to the brain stem by facilitating the desired action via cholinergic/glutamatergic projections and suppressing conflicting alternatives via GABAergic connections. The extension system, comprised of the striatum and, again, globus pallidus, can extend the repertoire of responses by learning to associate novel complex states to certain actions. This system is a state-input/action-output system, whose organization enables it to encode arbitrarily complex Boolean logic rules using striatal neurons that only fire given specific constellations of inputs (Boolean AND) and pallidal neurons that are silenced by any striatal input (Boolean OR). We demonstrate the capabi
+
+---
+
+pid: PMID:21448675
+题目: Pedunculopontine stimulation from primate to patient.
+年份: 2011  类型: Historical Article; Research Support, Non-U.S. Gov't; Review; Journal Article
+摘要: Deep brain stimulation (DBS) of the pedunculopontine nucleus (PPN) is a novel neurosurgical therapy developed to address symptoms of gait freezing and postural instability in Parkinson's disease and related disorders. Here we summarise our non-human primate investigations of relevance to our surgical targeting of the PPN and relate the primate research to initial clinical experience of PPN DBS.
+
+---
+
+pid: PMID:21464430
+题目: Methylphenidate for gait impairment in Parkinson disease: a randomized clinical trial.
+年份: 2011  类型: Controlled Clinical Trial; Comparative Study; Research Support, Non-U.S. Gov't; research-article; Randomized Controlled Trial; Journal Article
+摘要: BackgroundThere is a paucity of therapies for gait impairment in Parkinson disease (PD). Open-label studies have suggested improved gait after treatment with methylphenidate (MPD).ObjectiveTo evaluate the efficacy of MPD for the treatment of gait impairment in PD.MethodsTwenty-seven subjects with PD and moderate gait impairment were screened for this 6-month placebo-controlled, double-blind study. Subjects were randomly assigned to MPD (maximum, up to 80 mg/day) or placebo for 12 weeks and crossed over after a 3-week washout. The primary outcome measure was change in a gait composite score (stride length + velocity) between groups at 4 and 12 weeks. Secondary outcome measures included changes in motor function, as measured by the Unified Parkinson's Disease Rating Scale (UPDRS), Freezing of Gait Questionnaire (FOGQ), number of gait-diary freezing episodes, and measures of depression, sleepiness, and quality of life. Three-factor repeated-measures analysis of variance was used to measure changes between groups.ResultsTwenty-three eligible subjects with PD were randomized and 17 completed the trial. There was no change in the gait composite score or treatment or time effect for any of the variables. Treatment effect was not modified by state or study visit. Although there was a trend for reduced frequency of freezing and shuffling per diary, the FOGQ and UPDRS scores worsened in 
+
+---
+
+pid: PMID:21468092
+题目: Brain energization in response to deep brain stimulation of subthalamic nuclei in Parkinson's disease.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Deep brain stimulation (DBS) of the subthalamic nucleus (STN) is an effective treatment in a subgroup of medically refractory patients with Parkinson's disease (PD). Here, we compared resting-state (18)F-fluorodeoxyglucose (FDG) positron emission tomography images in the stimulator off (DBS_OFF) and on (DBS_ON) conditions in eight PD patients in an unmedicated state, on average 2 years after bilateral electrode implantation. Global standardized uptake value (SUV) significantly increased by ∼11% in response to STN-DBS. To avoid any bias in the voxel-based analysis comparing DBS_ON and DBS_OFF conditions, individual scan intensity was scaled to a region where FDG-SUV did not differ significantly between conditions. The resulting FDG-SUV ratio (FDG-SUVR) was found to increase in many regions in response to STN-DBS including the target area of surgery, caudate nuclei, primary sensorimotor, and associative cortices. Contrary to previous studies, we could not find any regional decrease in FDG-SUVR. These findings were indirectly supported by comparing the extent of areas with depressed FDG-SUVR in DBS_OFF and DBS_ON relatively to 10 normal controls. Altogether, these novel results support the prediction that the effect of STN-DBS on brain activity in PD is unidirectional and consists in an increase in many subcortical and cortical regions.
+
+---
+
+pid: PMID:21469212
+题目: Internal pallidum and substantia nigra control different parts of the mesopontine reticular formation in primate.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: The locomotor area has recently emerged as a target for deep brain stimulation to lessen gait disturbances in advanced parkinsonian patients. An important step in choosing this target is to define anatomical limits of its 2 components, the pedunculopontine nucleus and the cuneiform nucleus, their connections with the basal ganglia, and their output descending pathway. Based on the hypothesis that pedunculopontine nucleus controls locomotion whereas cuneiform nucleus controls axial posture, we analyzed whether both nuclei receive inputs from the internal pallidum and substantia nigra using anterograde and retrograde tract tracing in monkeys. We also examined whether these nuclei convey descending projections to the reticulospinal pathway. Pallidal terminals were densely distributed and restricted to the pedunculopontine nucleus, whereas nigral terminals were diffusely observed in the whole extent of both the pedunculopontine nucleus and the cuneiform nucleus. Moreover, nigral terminals formed symmetric synapses with pedunculopontine nucleus and cuneiform nucleus dendrites. Retrograde tracing experiments confirmed these results because labeled cell bodies were observed in both the internal pallidum and substantia nigra after pedunculopontine nucleus injection, but only in the substantia nigra after cuneiform nucleus injection. Furthermore, anterograde tracing experiments revealed
+
+---
+
+pid: PMID:21477305
+题目: Aggravated stuttering following subthalamic deep brain stimulation in Parkinson's disease--two cases.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Case Reports
+摘要: Stuttering is a speech disorder with disruption of verbal fluency which is occasionally present in patients with Parkinson's disease (PD). Long-term medical management of PD is frequently complicated by fluctuating motor functions and dyskinesias. High-frequency deep brain stimulation (DBS) of the subthalamic nucleus (STN) is an effective treatment of motor fluctuations and is the most common surgical procedure in PD. Here we report the re-occurrence and aggravation of stuttering following STN-DBS in two male patients treated for advanced PD. In both patients the speech fluency improved considerably when the neurostimulator was turned off, indicating that stuttering aggravation was related to neurostimulation of the STN itself, its afferent or efferent projections and/or to structures localized in the immediate proximity. This report supports previous studies demonstrating that lesions of the basal ganglia-thalamocortical motor circuit, including the STN, is involved in the development of stuttering. In advanced PD STN-DBS is generally an effective and safe treatment. However, patients with PD and stuttering should be informed about the risk of aggravated symptoms following surgical therapy.
+
+---
+
+pid: PMID:21503154
+题目: Topographical organization of the pedunculopontine nucleus.
+年份: 2011  类型: review-article; Journal Article
+摘要: Neurons in the pedunculopontine nucleus (PPN) exhibit a wide heterogeneity in terms of their neurochemical nature, their discharge properties, and their connectivity. Such characteristics are reflected in their functional properties and the behaviors in which they are involved, ranging from motor to cognitive functions, and the regulation of brain states. A clue to understand this functional versatility arises from the internal organization of the PPN. Thus, two main areas of the PPN have been described, the rostral and the caudal, which display remarkable differences in terms of the distribution of neurons with similar phenotype and the projections that originate from them. Here we review these differences with the premise that in order to understand the function of the PPN it is necessary to understand its intricate connectivity. We support the case that the PPN should not be considered as a homogeneous structure and conclude that the differences between rostral and caudal PPN, along with their intrinsic connectivity, may underlie the basis of its complexity.
+
+---
+
+pid: PMID:21508235
+题目: Power fluctuations in beta and gamma frequencies in rat globus pallidus: association with specific phases of slow oscillations and differential modulation by dopamine D1 and D2 receptors.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Modulation of oscillatory activity through basal ganglia-cortical loops in specific frequency bands is thought to reflect specific functional states of neural networks. A specific negative correlation between beta and gamma sub-bands has been demonstrated in human basal ganglia and may be key for normal basal ganglia function. However, these studies were limited to Parkinson's disease patients. To confirm that this interaction is a feature of normal basal ganglia, we recorded local field potential (LFP) from electrodes in globus pallidus (GP) of intact rats. We found significant negative correlation between specific frequencies within gamma (≈ 60 Hz) and beta (≈ 14 Hz) bands. Furthermore, we show that fluctuations in power at these frequencies are differentially nested within slow (≈ 3 Hz) oscillations in the delta band, showing maximum power at distinct and different phases of delta. These results suggest a hierarchical organization of LFP frequencies in the rat GP, in which a low-frequency signal in the basal ganglia can predict the timing and interaction of power fluctuations across higher frequencies. Finally, we found that dopamine D(1) and D(2) receptor antagonists differentially affected power in gamma and beta bands and also had different effects on correlation between them and the nesting within delta, indicating an important role for endogenous dopamine acting on dire
+
+---
+
+pid: PMID:21534957
+题目: Microdialysis and mass spectrometric monitoring of dopamine and enkephalins in the globus pallidus reveal reciprocal interactions that regulate movement.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Pallidal dopamine, GABA and the endogenous opioid peptides enkephalins have independently been shown to be important controllers of sensorimotor processes. Using in vivo microdialysis coupled to liquid chromatography-mass spectrometry and a behavioral assay, we explored the interaction between these three neurotransmitters in the rat globus pallidus. Amphetamine (3 mg/kg i.p.) evoked an increase in dopamine, GABA and methionine/leucine enkephalin. Local perfusion of the dopamine D(1) receptor antagonist SCH 23390 (100 μM) fully prevented amphetamine stimulated enkephalin and GABA release in the globus pallidus and greatly suppressed hyperlocomotion. In contrast, the dopamine D(2) receptor antagonist raclopride (100 μM) had only minimal effects suggesting a greater role for pallidal D(1) over D(2) receptors in the regulation of movement. Under basal conditions, opioid receptor blockade by naloxone perfusion (10 μM) in the globus pallidus stimulated GABA and inhibited dopamine release. Amphetamine-stimulated dopamine release and locomotor activation were attenuated by naloxone perfusion with no effect on GABA. These findings demonstrate a functional relationship between pallidal dopamine, GABA and enkephalin systems in the control of locomotor behavior under basal and stimulated conditions. Moreover, these findings demonstrate the usefulness of liquid chromatography-mass spectrom
+
+---
+
+pid: PMID:21559878
+题目: Parkinson's disease mouse models in translational research.
+年份: 2011  类型: review-article; Review; Journal Article
+摘要: Animal models with high predictive power are a prerequisite for translational research. The closer the similarity of a model to Parkinson's disease (PD), the higher is the predictive value for clinical trials. An ideal PD model should present behavioral signs and pathology that resemble the human disease. The increasing understanding of PD stratification and etiology, however, complicates the choice of adequate animal models for preclinical studies. An ultimate mouse model, relevant to address all PD-related questions, is yet to be developed. However, many of the existing models are useful in answering specific questions. An appropriate model should be chosen after considering both the context of the research and the model properties. This review addresses the validity, strengths, and limitations of current PD mouse models for translational research.
+
+---
+
+pid: PMID:21577106
+题目: New insights into atypical parkinsonism.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article
+摘要: Purpose of reviewAtypical parkinsonian disorders (APDs) comprise a heterogenous group of disorders including multiple system atrophy (MSA), dementia with Lewy bodies (DLB), progressive supranuclear palsy (PSP) and corticobasal degeneration (CBD). Based on literature published in 2010, we here review recent advances in the APD field.Recent findingsGenome-wide association studies have provided robust evidence of increased disease risk conferred by synuclein and tau gene variants in MSA and PSP. Furthermore, advanced imaging tools have been established in the differential diagnosis and as surrogate markers of disease activity in patients with APDs. Finally, although therapeutic options are still disappointing, translational research into disease-modifying strategies has accelerated with the increasing availability of transgenic animal models, particularly for MSA.SummaryRemarkable progress has been achieved in the field of APDs, and advances in the genetics, molecular biology and neuroimaging of these disorders will continue to facilitate intensified clinical trial activity.
+
+---
+
+pid: PMID:21597312
+题目: Deep brain stimulation of the pedunculopontine nucleus in a patient with freezing of gait.
+年份: 2011  类型: Journal Article; Case Reports
+摘要: Case presentationA 54-year-old male patient presenting probable multiple system atrophy with predominant parkinsonism who underwent bilateral deep brain stimulation (DBS) of the pedunculopontine nucleus (PPN) is presented. The patient had dominant freezing of gait (FOG), levodopa-resistant bradykinesia, and autonomic disturbances, but with a good cognitive condition.MethodsThe patient underwent bilateral DBS of the PPN, which ended with modest benefits.Results and conclusionAlthough he had a short postoperative follow-up (6 months), his neurological status remained stable and PPN DBS provided modest improvements in the gait disorder and freezing episodes. This unusual case suggests that the mesencephalic pedunculopontine region may have a role in locomotor symptoms and the potential to provide a limited improvement in FOG.
+
+---
+
+pid: PMID:21603182
+题目: Optimizing a rodent model of Parkinson's disease for exploring the effects and mechanisms of deep brain stimulation.
+年份: 2011  类型: review-article; Journal Article
+摘要: Deep brain stimulation (DBS) has become a treatment for a growing number of neurological and psychiatric disorders, especially for therapy-refractory Parkinson's disease (PD). However, not all of the symptoms of PD are sufficiently improved in all patients, and side effects may occur. Further progress depends on a deeper insight into the mechanisms of action of DBS in the context of disturbed brain circuits. For this, optimized animal models have to be developed. We review not only charge transfer mechanisms at the electrode/tissue interface and strategies to increase the stimulation's energy-efficiency but also the electrochemical, electrophysiological, biochemical and functional effects of DBS. We introduce a hemi-Parkinsonian rat model for long-term experiments with chronically instrumented rats carrying a backpack stimulator and implanted platinum/iridium electrodes. This model is suitable for (1) elucidating the electrochemical processes at the electrode/tissue interface, (2) analyzing the molecular, cellular and behavioral stimulation effects, (3) testing new target regions for DBS, (4) screening for potential neuroprotective DBS effects, and (5) improving the efficacy and safety of the method. An outlook is given on further developments of experimental DBS, including the use of transgenic animals and the testing of closed-loop systems for the direct on-demand application
+
+---
+
+pid: PMID:21603199
+题目: Effects of a flexibility and relaxation programme, walking, and nordic walking on Parkinson's disease.
+年份: 2011  类型: research-article; Journal Article
+摘要: Symptoms of Parkinson's disease (PD) progress despite optimized medical treatment. The present study investigated the effects of a flexibility and relaxation programme, walking, and Nordic walking (NW) on walking speed, stride length, stride length variability, Parkinson-specific disability (UPDRS), and health-related quality of life (PDQ 39). 90 PD patients were randomly allocated to the 3 treatment groups. Patients participated in a 6-month study with 3 exercise sessions per week, each lasting 70 min. Assessment after completion of the training showed that pain was reduced in all groups, and balance and health-related quality of life were improved. Furthermore, walking, and Nordic walking improved stride length, gait variability, maximal walking speed, exercise capacity at submaximal level, and PD disease-specific disability on the UPDRS in addition. Nordic walking was superior to the flexibility and relaxation programme and walking in improving postural stability, stride length, gait pattern and gait variability. No significant injuries occurred during the training. All patients of the Nordic walking group continued Nordic walking after completing the study.
+
+---
+
+pid: PMID:21606879
+题目: Simple change in initial standing position enhances the initiation of gait.
+年份: 2011  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: PurposeOlder adults and individuals with Parkinson's disease exhibit impaired gait initiation performance with less effective anticipatory postural adjustments (APA) and less dynamic stepping characteristics. These observations may reflect impaired interactions between the postural and locomotor components of this task. The purpose of this study was to evaluate the effectiveness of altering the stance position of the initial swing limb on improving APA characteristics and stepping performance.MethodsThree groups (healthy young adults, individuals with Parkinson's disease, and age-matched older adults) of 12 participants initiated gait from three initial stance conditions: normal, backward displaced swing limb, and forward displaced swing limb. Ground reaction forces and whole body kinematics were recorded to characterize the APA and step parameters.ResultsInitiating gait from the back condition produced more forceful weight shifting (P ConclusionsTranslating the swing limb 0.5-ft-length backward seems to enhance the interaction between posture and locomotion, which may have therapeutic potential for improving gait initiation performance.
+
+---
+
+pid: PMID:21607020
+题目: Available and emerging treatments for Parkinson's disease: a review.
+年份: 2011  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease is a commonly encountered neurodegenerative disorder primarily found in aged populations. A number of medications are available to control symptoms, although these are less effective in advanced disease. Deep brain stimulation provides a practicable alternative at this stage, although a minority of patients meet the strict criteria for surgery. Novel medications that provide enhanced symptomatic control remain in developmental demand. Both gene and cell-based therapies have shown promise in early clinical studies. A major unmet need is a treatment that slows or stops disease progression.
+
+---
+
+pid: PMID:21614433
+题目: Physical inactivity in Parkinson's disease.
+年份: 2011  类型: research-article; Journal Article
+摘要: Patients with Parkinson's disease (PD) are likely to become physically inactive, because of their motor, mental, and emotional symptoms. However, specific studies on physical activity in PD are scarce, and results are conflicting. Here, we quantified daily physical activities in a large cohort of PD patients and another large cohort of matched controls. Moreover, we investigated the influence of disease-related factors on daily physical activities in PD patients. Daily physical activity data of PD patients (n = 699) were collected in the ParkinsonNet trial and of controls (n = 1,959) in the Longitudinal Aging Study Amsterdam (LASA); data were determined using the LAPAQ, a validated physical activity questionnaire. In addition, variables that may affect daily physical activities in PD were recorded, including motor symptoms, depression, disability in daily life, and comorbidity. Patients were physically less active; a reduction of 29% compared to controls (95% CI, 10-44%). Multivariate regression analyses demonstrated that greater disease severity, gait impairment, and greater disability in daily living were associated with less daily physical activity in PD (R (2) = 24%). In this large study, we show that PD patients are about one-third less active compared to controls. While disease severity, gait, and disability in daily living predicted part of the inactivity, a portion of t
+
+---
+
+pid: PMID:21615738
+题目: Tracking extranigral degeneration in animal models of Parkinson's disease: quest for effective therapeutic strategies.
+年份: 2011  类型: research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Sporadic Parkinson's disease (PD) is now interpreted as a complex nervous system disorder in which the projection neurons are predominantly damaged. Such an interpretation is based on mapping of Lewy body and Lewy neurite pathology. Symptoms of the human disease are much widespread, which span from pre-clinical non-motor symptoms and clinical motor symptoms to cognitive discrepancies often seen in advanced stages. Existing symptomatic treatments further complicate with overt drug-irresponsive symptoms. PD is better understood by assimilation of extranigral degenerative pathways with nigrostriatal degenerative mechanisms. The term 'extranigral' appeared first in the 1990s to more rigorously define the nigral pathology by process of elimination. However, as clinicians progressively identified PD symptoms unresponsive to the gold standard drug l-DOPA, definitions of PD symptoms were redefined. Non-motor symptoms prodromal to motor symptoms just as pre-clinical to clinical, and conjointly emerged the concept of nigral versus extranigral degeneration in PD. While nigrostriatal degeneration is responsible for the neurobiological substrates of extrapyramydal motor features, extranigral degeneration corroborates a vast majority of other changes in discrete central, peripheral, and enteric nervous system nuclei, which together account for global symptoms of the human disease. As an extr

@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:40593607
+题目: A multicenter longitudinal study of cholinergic subgroups in Parkinson disease.
+年份: 2025  类型: research-article; Multicenter Study; Journal Article
+摘要: Parkinson disease (PD) is a heterogeneous syndrome. There is a need for biology-driven subtyping to inform specific therapeutic strategies. In a two-center study with de novo and established PD cohorts, we use vesicular acetylcholine transporter ligand [18F]FEOBV brain PET to assess cholinergic systems changes in early to moderate PD. Principal component analysis (PCA) is applied to data from 245 PD subjects to define cholinergic subgroups at baseline. Three PD subgroups are identified: hypercholinergic (regional upregulation; 29%), mixed (regional upregulation and regional deficits; 40.8%) and hypocholinergic (regional deficits only; 30.2%). Evidence of upregulation is observed in the subcortical-anterior cortical regions, whereas cholinergic downregulation is found in posterior cortical regions. Cholinergic upregulation and downregulation exhibit distinct associations with clinical symptoms. Longitudinal analysis (2-3 year interval) in 128 PD subjects reveals differential progressions by subgroup. This subtyping approach expands understanding of cholinergic progression in PD and may inform identification of new therapeutic targets.
+
+---
+
+pid: PMID:40593705
+题目: Parkinsonism disrupts cortical function by dysregulating oscillatory, network and synaptic activity of parvalbumin positive interneurons.
+年份: 2025  类型: research-article; Journal Article
+摘要: Identifying novel and accessible therapeutic targets for Parkinson's Disease (PD) remains a pressing goal. Growing evidence implicates cortical dysfunctions in PD-related symptoms, yet the mechanisms-especially those involving parvalbumin-positive interneurons (PV-INs), key regulators of brain oscillations and plasticity-are not fully understood. In this study, we investigate how PD alters PV-IN network and cortical oscillatory dynamics using the 6-hydroxydopamine (6-OHDA) mouse model. Through an integrated approach combining electrophysiological recordings, wide-field calcium imaging, and histological analysis, we reveal a profound cascade of cortical changes. These include pathological hyperactivity above 100 Hz during movement and severe disruptions in PV-IN connectivity across the motor cortex. Synaptic imbalances and microglial activation further point to a multifaceted cortical response to dopaminergic degeneration, revealing inhibitory dysfunction, oscillatory instability, structural remodeling, and neuroinflammation. Our results link PD to cortical instability and highlight cortical plasticity as a promising target for therapeutic intervention.
+
+---
+
+pid: PMID:40593919
+题目: Postsynaptic adaptations in direct pathway muscarinic M4-receptor signaling follow the temporal and regional pattern of dopaminergic degeneration.
+年份: 2025  类型: research-article; Journal Article
+摘要: In Parkinson's disease (PD), imbalances in dorsal striatum pathways are thought to lead to motor dysfunction due to loss of dopamine (DA) and the disruption of coordinated modulation with acetylcholine (ACh). Here, we examined changes in cholinergic modulation of striatal direct pathway medium spiny neurons (dMSNs) in mice that were partially or completely depleted of DA, to model early and advanced stages of PD. We found a reduction in muscarinic M4 receptor signaling in the dorsolateral striatum (DLS) following partial DA loss of DA, which was not evident in the dorsomedial region (DMS) until DA loss was nearly complete. This decrease resulted from reduced postsynaptic M4 receptor function, as ACh release or clearance was unaffected, and could not be rescued by L-DOPA. These findings reveal how changes in cholinergic modulation follow the temporal and regional pattern of dopaminergic degeneration, which is critical for understanding their shared role in PD progression.
+
+---
+
+pid: PMID:40594670
+题目: Cell-type specific sensory and motor activity in the cuneiform nucleus and pedunculopontine nucleus in mice.
+年份: 2025  类型: research-article; Journal Article
+摘要: The activity of neurotransmitter-based cell types in the cuneiform and pedunculopontine nuclei during locomotion, non-locomotor behaviors, and following sensory stimulation is not fully understood. Using fiber photometry in mice, we found cell-type specific responses to sensory stimuli. Glutamatergic and GABAergic cells responded to sound, visual looming, and air puffs, except for pedunculopontine GABAergic cells, which did not respond to visual looming. Cholinergic cells responded to air puffs. Air puffs triggered high-speed locomotion, whereas visual looming and sound stimuli evoked low-speed locomotion. During air puff-evoked locomotion, cuneiform glutamatergic neuron activity was higher than in trials without locomotion. In contrast, during locomotion evoked by visual looming or sound, activity in pedunculopontine glutamatergic neurons was higher than when no locomotion occurred. In the open-field arena, mice exhibited spontaneous low-speed locomotion during which activity increased in pedunculopontine glutamatergic cells. Activity also increased in a cell type-specific manner during grooming or rearing. Our study shows cell type-specific activity in the cuneiform or pedunculopontine nuclei during locomotion, non-locomotor behaviors, and following sensory stimulation. Sensory responsiveness likely has relevance in Parkinson's disease, where sensory circuits are increasingly
+
+---
+
+pid: PMID:40595773
+题目: Machine learning for Parkinson's disease: a comprehensive review of datasets, algorithms, and challenges.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is a devastating neurological ailment affecting both mobility and cognitive function, posing considerable problems to the health of the elderly across the world. The absence of a conclusive treatment underscores the requirement to investigate cutting-edge diagnostic techniques to improve patient outcomes. Machine learning (ML) has the potential to revolutionize PD detection by applying large repositories of structured data to enhance diagnostic accuracy. 133 papers published between 2021 and April 2024 were reviewed using a systematic literature review (SLR) methodology, and subsequently classified into five categories: acoustic data, biomarkers, medical imaging, movement data, and multimodal datasets. This comprehensive analysis offers valuable insights into the applications of ML in PD diagnosis. Our SLR identifies the datasets and ML algorithms used for PD diagnosis, as well as their merits, limitations, and evaluation factors. We also discuss challenges, future directions, and outstanding issues.
+
+---
+
+pid: PMID:40595956
+题目: Influence of wearable rhythmic auditory stimulation on Parkinson's disease, multiple sclerosis, and stroke: a systematic review and meta-analysis.
+年份: 2025  类型: Meta-Analysis; research-article; Systematic Review; Journal Article
+摘要: Movement therapy using Rhythmic Auditory Stimulation (RAS) has been proven beneficial in Parkinson's disease (PD). However, research regarding RAS-therapy using wearable devices in all neurological disorders is needed. The aim of this study is to investigate the effectiveness of RAS-therapy using wearable devices on movement in individuals with neurological disorders. Systematic review and meta-analysis. Data sources June 27, 2024. PubMed, Web of Science, Medline, PEDro and ScienceDirect were searched. Following PRISMA-guidelines 2020. Inclusion criteria: all neurological disorders, Rhythmic auditory stimulation, wearable devices, movement parameters, studies written in Dutch or English. Exclusion criteria: non-neurological disorders, children, animals, healthy individuals, other interventions, EMG and EEG outcome parameters, patient reported outcome parameters, systematic reviews, meta-analyses, and other languages besides Dutch or English. Risk of bias was assessed using the QualSyst tool. 7993 articles after double-blind screening; thirty studies were included in the review and fifteen in the meta-analysis. Results showed improvements in stride length, step length, gait velocity, double support time, arm swing peak velocity and arm swing ROM. The meta-analysis confirmed significant improvements in gait velocity and stride length within a longitudinal design as well as when c
+
+---
+
+pid: PMID:40602403
+题目: Spontaneous movements and their relationship to neural activity fluctuate with latent engagement states.
+年份: 2025  类型: research-article; Journal Article
+摘要: Switching between cognitive states is a natural tendency, even for trained experts. To test how cognitive states impact neural activity and behavior, we measured cortex-wide neural activity during decision-making in mice. During disengagement, neural activity was more variable across trials and could be better explained by a linear encoding model. This increase in explained variance during disengagement was associated with two changes: modestly stronger neural encoding of movements generally and an increase in task-independent movements specifically. Surprisingly, behavioral videos showed similar motion energy in both cognitive states. But while the overall amount of movements remained similar, movement alignment changed: as animals slipped into disengagement, their movements became less stereotyped. These idiosyncratic movements were a strong predictor of task performance and engagement. Taken together, our results suggest that the temporal structure of movement patterns constitutes an embodied signature of the cognitive state with a profound relationship to neural activity.
+
+---
+
+pid: PMID:40605978
+题目: Effects of On- and Off-Medication Periods on Walking Performance in Parkinson's Disease: Insights from Movement Synergies.
+年份: 2025  类型: research-article; Journal Article
+摘要: IntroductionImpaired walking performance significantly impacts the quality of life in individuals with Parkinson's disease (PD). This study aimed to examine the effects of medication "on" and "off" periods on walking performance, focusing on an alternative aspect of traditional gait analysis by assessing movement components or synergies (i.e., principal movements, PMs).MethodsPrincipal component analysis was used to decompose kinematic marker data from 22 PD patients (64.1 ± 10.5 years) during self-selected speed overground walking into a set of PMs that cooperatively contribute to the locomotion task. Gait adaptation between medication periods was assessed using two PM-based variables: relative explained variance (rVAR) of the PM's position, reflecting movement structure, and root mean square (RMS) of the PM's acceleration, indicating movement acceleration magnitude and reflecting changes in force or speed.ResultsThe on-medication condition increased the contribution (greater rVAR) of PM2, representing the swing-phase movement component (p = 0.001), and enhanced movement acceleration magnitudes (greater RMS) in PM4, characterizing the single-leg support phase coupled with trunk rotation (p = 0.026).ConclusionAlthough medication enhances propulsion by increasing the contribution of swing-phase movement components, thereby improving forward movement and walking efficiency, it ma
+
+---
+
+pid: PMID:40606136
+题目: Personalized auditory cues improve gait in patients with early Parkinson's disease.
+年份: 2025  类型: research-article; Journal Article
+摘要: IntroductionParkinson's disease (PD) patients experience a wide variety of gait and posture problems that significantly impair their functional mobility and quality of life. Auditory cue-based training has been shown to improve gait performance in PD patients. However, most of the current methods target gains in bilateral spatiotemporal variables, whereas in the early-stages of PD, symptoms are usually unilateral.MethodsTo address the effects of unilateral onset and heterogeneity of early-stage PD on patients' gait performance, we propose a personalized training method based on auditory cues to reduce gait asymmetry between patients' right and left feet. The method targets patients' gait performance through personalized music (auditory cues) and dynamically adjusts the music based on real-time gait data to ensure synchronization with the patient's walking rhythm. Specifically, gait data are acquired in real time via Inertial Measurement Units (IMUs) attached to the ankles of the patient's right and left feet, which are used to calculate the gait cycles of the patient's right and left feet. Personalized music is then generated based on the patient's gait cycle. During the training process, the music is dynamically updated by continuously assessing the synchronization between the patient's gait cycle and the music beats.ResultsFifteen early-stage PD patients(H&Y ≤ 2.5) were initi
+
+---
+
+pid: PMID:40606522
+题目: Soft Robotics for Parkinson's Disease Supported by Functional Materials and Artificial Intelligence.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: Progressive neurodegenerative disease known as Parkinson's disease (PD) is characterized by both motor and nonmotor symptoms that severely reduce the quality of life. Recent developments in soft robotics provide customizable, cozy, and less intrusive assistive devices, which provide promising answers to these problems. To develop an enhanced support system for people with PD, this article explores the potential of next-generation soft robotics, specifically hydrogel materials, integrated with artificial intelligence (AI) and augmented reality (AR) to provide an innovative solution for PD management. The integration of an AI copilot allows for remote monitoring and real-time adjustments, ensuring optimal performance and personalized care. The use of AR enhances human-computer interactions, offering an intuitive and immersive experience for both patients and healthcare providers. By leveraging these advanced technologies, our approach aims to substantially improve motor function, reduce symptoms, and enhance the overall quality of life for PD patients. This review outlines the key components, benefits, and potential impact of this novel approach, highlighting the transformative potential of combining wearable robotics, AI, and AR in the treatment of PD. The potential for creating novel healthcare solutions by combining soft robotics, functional materials, the Internet-of-Things (
+
+---
+
+pid: PMID:40607187
+题目: Relationship between executive function and dual-task walking in people with Parkinson's disease.
+年份: 2025  类型: research-article; Journal Article
+摘要: BackgroundCognitive impairment may present early in people with Parkinson's disease (PwPD), with deficits in executive function potentially impacting gait performance. Previous studies have investigated the association between dual-task walking and executive function in PwPD; however, the results were inconsistent, and the correlation between dual-task walking and subdomains of executive function has not been explored. This study aims to examine the correlation between dual-task walking and subdomains of executive function in PD and assess the predictive power of different subdomains of executive function on dual-task walking performance.MethodsThis cross-sectional study included 30 PwPD. Gait was assessed under single-task walking, cognitive dual-task walking, and motor dual-task walking conditions. Executive function was evaluated using the Trail Making Test (TMT), Stroop Color and Word Test (SCWT), and Digit Span Test (DST). Correlation analyses (Pearson or Spearman, as appropriate) and linear regression analyses were used to examine the contribution of executive function subdomains to gait variables that showed significant correlations.ResultsWalking speeds under both dual-task conditions were moderately correlated with performance on the TMT Part A and the SCWT. In contrast, stride length during dual-task walking showed broader associations, demonstrating significant corre
+
+---
+
+pid: PMID:40613373
+题目: EEG-Based Classification of Parkinson's Disease With Freezing of Gait Using Midfrontal Beta Oscillations.
+年份: 2025  类型: Journal Article
+摘要: BackgroundFreezing of gait (FOG) is a debilitating motor symptom of Parkinson's disease (PD) that significantly affects patient mobility and quality of life. Identifying reliable biomarkers to distinguish between PD patients with freezing of gait (PDFOG+) and those without FOG (PDFOG-) is essential for early intervention and treatment planning. This study investigates the potential of electroencephalographic (EEG) signals, focusing on well-studied midfrontal beta oscillatory feature, to classify PDFOG+ and PDFOG- using machine learning (ML) and deep learning (DL) approaches.MethodsResting-state EEG data were collected from the midfrontal 'Cz' and nearby channels (Cz-cluster) from 41 PDFOG+ and 41 PDFOG- subjects. A range of ML and DL models, including logistic regression (LR), random forest (RF), extreme gradient boosting (XGBoost), categorical boosting (CatBoost), and long short-term memory (LSTM) models were evaluated using leave-one-subject-out (LOSO), 10-fold, and stratified cross-validation (CV).ResultsOutcomes demonstrate that while LR achieved an area under the receiver-operating characteristic (AUC-ROC) score of 0.63, LSTM outperformed all models, achieving an AUC-ROC of 0.68 and accuracy of 0.63, particularly with the Cz-cluster configuration.ConclusionsThese findings support the potential of midfrontal beta oscillations, particularly in combination with LSTM temporal 
+
+---
+
+pid: PMID:40620297
+题目: The molecular clock drives motivated locomotion and time-of-day-dependent firing patterns in mouse dopaminergic neurons.
+年份: 2025  类型: research-article; Journal Article
+摘要: Though circadian locomotor rhythms are primarily driven by the suprachiasmatic nucleus, voluntary motor behavior also requires dopaminergic neuron (DAN) activity. However, it is unknown whether DAN molecular and electrophysiological properties and rhythmic motor behaviors are dependent on a molecular clock. Here, we show substantia nigra pars compacta (SNc) and ventral tegmental area (VTA) DANs rhythmically express clock genes, and conditional deletion of Bmal1 in DANs reduces motivated locomotion without robust cell loss or gross motor impairment. Further, DAN Bmal1 conditional deletion disrupts 24-h rhythms in spike rate, revealing ultradian rhythms (~4-8 h). Lastly, SNc DAN bursting varies across time of day and increased early night bursting is dependent on the molecular clock and L-type calcium channel activation. Collectively, we provide evidence of a cell-intrinsic dopaminergic clock which regulates key behaviors and physiology. Future studies should consider the contribution of disrupted DAN molecular clocks in age-related motor diseases like Parkinson's Disease.
+
+---
+
+pid: PMID:40620776
+题目: High-frequency repetitive transcranial magnetic stimulation protects against 6-OHDA-induced Parkinson's disease symptoms by modulating the proNGF-p75NTR-sortilin pathway.
+年份: 2025  类型: research-article; Journal Article
+摘要: BackgroundHigh-frequency repetitive transcranial magnetic stimulation (HF rTMS) is a promising non-invasive treatment for Parkinson's disease (PD) in clinical settings. However, the precise mechanisms are incompletely understood. The proNGF-p75NTR-sortilin signaling pathway is closely associated with nigrostriatal dopaminergic (DA) neuron degeneration, a hallmark feature of PD. This study aimed to evaluate the neuroprotective efficacy of HF rTMS on the proNGF-p75NTR-sortilin pathway in PD.MethodsUsing a PD rat model induced by 6-hydroxydopamine (6-OHDA), the rats were randomly divided into two groups: sham rTMS group and HF rTMS group. After a 4 w intervention, the rats' motor function was assessed using a rotarod test. Additionally, immunofluorescence technology was used to analyze the DA neurons in the midbrain of PD rats, and immunohistochemistry and Western blot analysis were employed to evaluate the expression levels and effects of proNGF-p75NTR-sortilin in the midbrain following HF rTMS.ResultsOur research revealed a significant increase of proNGF expression in reactive astrocytes and upregulated sortilin and p75NTR in DA neurons in the substantia nigra of the hemisphere ipsilateral to the induced lesion, correlated with the degeneration of DA neurons and impaired motor functions. A four-week regimen of HF rTMS, as opposed to sham rTMS, significantly improved the above pa
+
+---
+
+pid: PMID:40623478
+题目: Inhibition of PTPRS function does not affect the survival or regeneration of dopaminergic neurons but alters synaptic function in the nigrostriatal pathway.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Parkinson's Disease (PD) is characterized by midbrain dopaminergic (mDA) neuron degeneration in the ventral midbrain, contributing to debilitating motor symptoms. This study investigated whether Protein Tyrosine Phosphatase Receptor Sigma (PTPRS), a known inhibitor of axonal growth through chondroitin sulfate proteoglycan (CSPG) interaction, plays a role in mDA neuron survival, function, and regeneration in PD. Our data show that inhibition of PTPRS using intracellular sigma peptide (ISP) enhances human mDA neuron neurite outgrowth in vitro, suggesting an inhibitory role of this receptor in the differentiation of human embryonic stem cell (hESC)-derived mDA neurons in vitro. However, genetic deletion and pharmacological inhibition of PTPRS does not affect mDA neuron survival, axon density, or motor behavior in 6-OHDA unilateral partially lesioned mice. Similarly, mDA-specific deletion of Ptprs does not affect the basal behavioral measurement in cKO mice, including general locomotion and motor learning. Interestingly, however, Ptprs deletion led to a reduced response in the behavior sensitization to repeated methamphetamine (METH) exposure in cKO mice, suggesting a dampened response in synaptic function in cKO mice under these conditions. Ex vivo voltammetry recording in the striatum indeed shows altered parameters of dopamine (DA) release upon stimulation. These findings indica
+
+---
+
+pid: PMID:40626896
+题目: Bridging Clinical Expertise and Digital Innovation: Toward a Modern Phenomenology of Parkinsonism.
+年份: 2025  类型: other; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:40642968
+题目: Acquisition of auditory discrimination mediated by different processes through two distinct circuits linked to the lateral striatum.
+年份: 2025  类型: research-article; Journal Article
+摘要: The striatum, the central hub of cortico-basal ganglia loops, contains functionally heterogeneous subregions distinguished by the topographic patterns of structural connectivity. These subregions mediate various processes of procedural learning. However, it remains unclear when and how striatal subregions engage in the acquisition of sensory stimulus-based decision-making. A neuroimaging of regional brain activity shows that the anterior dorsolateral striatum (aDLS) and posterior ventrolateral striatum (pVLS) in rats are activated in a different temporal pattern during the acquisition phase of auditory discrimination. Chronic and transient pharmacologic manipulations show that the aDLS promotes the behavioral strategy driven by the stimulus-response association while suppressing that by the response-outcome association, and that the pVLS contributes to forming and maintaining the stimulus-response strategy. Electrophysiological recording indicates that subpopulations of aDLS neurons predominantly represent the outcome of specific behaviors at the initial period of discrimination learning, and that pVLS subpopulations encode the beginning and ending of each behavior according to the progress of learning. In addition, other subpopulations of striatal neurons indicate sustained activation after obtaining reward with distinct patterns reflecting the stimulus-response associations. 
+
+---
+
+pid: PMID:40645862
+题目: Should old acquaintance be forgot: A call for recognition and inclusion of advanced Parkinson's disease patients &amp; care partners in evolving research models.
+年份: 2025  类型: research-article; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:40648326
+题目: Determining Falls Risk in People with Parkinson's Disease Using Wearable Sensors: A Systematic Review.
+年份: 2025  类型: Systematic Review; review-article; Journal Article
+摘要: A prior history of falls remains the strongest predictor of future falls in individuals with Parkinson's disease (PD). There are limited biomarkers available to identify falls risk before falls begin to occur. The aim of this review is to investigate if features associated with falls risk may be detected by wearable sensors in patients with PD. A systematic search of the MEDLINE, EMBASE, Cochrane, and Cinahl databases was performed. Key quality criteria include sample size adequacy, data collection procedures, and the clarity of statistical analyses. The data from each included study were extracted into defined data extraction spreadsheets. Results were synthesized in a narrative manner. Twenty-four articles met the inclusion criteria. Of these, twelve measured falls prospectively, while the remaining relied on retrospective history. The definition of a "faller" varied across studies. Most assessments were conducted in a clinical setting (18/24). There was considerable variability in sensor placement and mobility tasks assessed. The most common sensor-derived measures that significantly differentiated "fallers" from "non-fallers" in Parkinson's disease included gait variability, stride variability, trunk motion, walking speed, and stride length.
+
+---
+
+pid: PMID:40650193
+题目: Parkinson Disease Signaling Pathways, Molecular Mechanisms, and Potential Therapeutic Strategies: A Comprehensive Review.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is considered the second most common neurodegenerative disease worldwide; treating this disease remains quite challenging. Environmental and genetic factors may play a role in the pathophysiology of PD. α-synuclein aggregation, oxidative stress, ferroptosis, mitochondrial failure, neuroinflammation, and gut dysbiosis are among the known risk factors of PD. The pathophysiology of Parkinson's disease is complicated by the interconnections between these molecular pathways, which also present significant obstacles to treatment development. However, due to its complex mechanism and long latency, PD is difficult to diagnose and detect, which presents a barrier to treatment. In addition, the need to develop new treatments for PD is increased by the fact that the majority of traditional therapeutic methods have major side effects and limited effects. Therefore, a deeper understanding of the fundamental mechanisms underlying PD is required. This review provides a comprehensive analysis of the current landscape of PD pathophysiology, paying particular attention to the molecular processes of PD, as well as the traditional research models, clinical diagnostic standards, documented medication therapeutic approaches, and recently disclosed drug candidates in clinical trials. We also highlighted the herbal-derived components that have recently been identified for thei
+
+---
+
+pid: PMID:40651960
+题目: Regional-specific structural and functional changes of posterior cerebellar vermis across different stages of Parkinson's disease with gait dysfunction.
+年份: 2025  类型: research-article; Journal Article
+摘要: Stage-specific roles of posterior cerebellar vermis (PV) subdivisions, the posterior superior vermis (PSV) and posterior inferior vermis (PIV), in Parkinson's disease postural instability/gait difficulty (PD-PIGD) remain unclear. This retrospective, cross-sectional study investigated their volumetric and functional connectivity (FC) changes and clinical correlates across PD-PIGD stages. We analyzed 94 PD-PIGD patients (Hoehn & Yahr, HY1-4) and 46 healthy controls (HCs). Patient data were from outpatients and baseline assessments in two clinical trials (ClinicalTrials.gov: NCT02969941, reg. 2016-06-01; NCT05192759, reg. 2021-11-22). Compared with HCs, early-stage (HY1) patients showed enhanced PSV-left paracentral lobule (L_PCL) FC, alongside a trend toward increased PSV volume. This PSV-L_PCL FC correlated with better cognition function and gait performance, an association partly cognition-mediated. Our findings reveal a PSV-specific nonlinear pattern of structural and functional changes in PD-PIGD, distinct from PIV or other cerebellar subregions, potentially reflecting early compensatory mechanisms transitioning to later network dysfunction.
+
+---
+
+pid: PMID:40657531
+题目: On-Demand Cueing Sensitive to Step Variability: Understanding Its Impact on Gait of Individuals With Parkinson's Disease.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Parkinson's disease (PD) is characterized by gait disturbances with freezing of gait (FoG) being one of the most disabling symptoms. The FoG episode is often preceded by an increase in variability in Step Time. As the disease progresses, such gait impairment may become resistant to pharmacotherapy. Use of external cues is an alternative. Existing solutions deliver external cues in a continuous manner that might cause habituation effects, thereby emphasizing the need for on-demand cueing. Manual on-demand cueing upon freezing has been shown to be powerful in bringing an individual out of a freezing state. This can be achieved if one's proneness to freeze before entering into freezing state can be sensed, and in-turn triggering an external cue on-demand. Motivated by this, we have developed a wearable device ([Formula: see text]) that can sense such proneness based on variability in Step Time to offer a visual cue on-demand. We conducted a study involving 20 age-matched healthy individuals and those with PD who walked overground while wearing SmartWalkVC operated in three modes with regard to offering visual cue, namely (a) On-demand cueing, (b) Continuous cueing and (c) No cueing. The results of our study showed that with on-demand cueing, those with PD had minimum variability of Step Time among all the three modes unlike healthy individuals whose gait remained majorly unaffecte
+
+---
+
+pid: PMID:40659652
+题目: REM density in Parkinson's disease: association with motor, cognitive, autonomic function, and dopaminergic medication.
+年份: 2025  类型: research-article; Journal Article
+摘要: Recent work has shown that REM density, defined as the number of rapid eye movements per REM sleep minute, is decreased in people with Parkinson's disease (PD) and is associated with greater bradykinesia, suggesting a motor component. This study explored the association of REM density with gait, cognitive function, and heart rate variability (HRV). Seventy-seven PD patients underwent overnight polysomnography. Gait was evaluated using wearable technology during preferred-speed walking and while walking with a cognitive task (dual tasking). Lower REM density was associated with poorer gait and mobility, particularly during dual-tasking and turning, but not with HRV. Patients taking evening slow-release dopaminergic medication showed higher REM density compared to drug-naïve patients or those on daytime medication. These findings highlight the role of motor and cognitive functions in the generation of rapid eye movements in PD. Administration of evening medications appears to improve REM density, likely by alleviating motor control deficits.
+
+---
+
+pid: PMID:40660084
+题目: A personalised, gait training telerehabilitation programme for people with Parkinson's Disease: A long-term pilot study.
+年份: 2025  类型: research-article; Multicenter Study; Clinical Study; Journal Article
+摘要: ObjectiveTo assess the feasibility and, preliminarily, the effectiveness of long-term, personalized gait training using a digital wearable system (Gait Tutor) that provides real-time audio biofeedback to correct or reinforce gait behaviour.DesignOpen-label and non-controlled, with assessments before and after intervention.SettingReal-world.ParticipantsTwenty persons with Parkinson's disease.InterventionParticipants performed home-based gait training in their ON medication state for 30 minutes, 3 times per week, for 9 months using a Gait Tutor.Main measuresWe evaluated adherence (% of expected sessions), usability, and, preliminarily, efficacy by assessing the motor performance of the participants before and after the intervention.ResultsSeventeen participants (85%) completed the study, performing an average of 83 sessions. Adherence was higher for persons with an intermediate disease stage (80.5% of expected training sessions), compared to those with a more advanced disease stage (46.2%). All participants reported extremely positive scores on the questionnaire about ease of use and effectiveness (4.37 ± 0.42). The Movement Disorders Unified Parkinson's Disease Rating Scale motor scores remained stable after the training (mean 9 months). In people with an intermediate disease stage, clinical scores and physical capacity tended to improve.ConclusionsFor the first time, this study
+
+---
+
+pid: PMID:40664997
+题目: Objective monitoring of motor symptom severity and their progression in Parkinson's disease using a digital gait device.
+年份: 2025  类型: research-article; Journal Article
+摘要: Digital technologies for monitoring motor symptoms of Parkinson's Disease (PD) underwent a strong evolution during the past years. Although it has been shown for several devices that derived digital gait features can reliably discriminate between healthy controls and people with PD, the specific gait tasks best suited for monitoring motor symptoms and especially their progression, remain unclear. Furthermore, the potential benefit as endpoint in a clinical trial context has not been investigated so far. In this study we employed a digital gait device manufactured by Portabiles HCT, which has been used by 339 patients within the LuxPark cohort (n = 161, Luxembourg) as well as within routine clinical care visits at the University Medical Center Erlangen (n = 178, Erlangen, Germany). Linear (mixed) models were used to assess the association of task-specific digital gait features with disease progression and motor symptom severity measured by several clinical scores. Furthermore, we employed machine learning to evaluate whether digital gait assessments were prognostic for patient-level motor symptom progression. Overall, digital gait features derived from Portabiles digital gait device were found to effectively monitor motor symptoms and their longitudinal progression. At the same time the prognostic performance of digital gait features was limited. However, we could show a strong 
+
+---
+
+pid: PMID:40671088
+题目: The regulation of rhythmic locomotion by motor cortical and dopaminergic inputs in the mouse striatum.
+年份: 2025  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: The striatum is a critical component of the basal ganglia and plays a central role in regulating motor initiation and action selection. How cortical and subcortical inputs converging at the striatum regulate locomotion remains unclear. By examining gait changes in head-fixed mice running on a treadmill, we found that mice were capable of performing forward, but not backward, rhythmic locomotion using their forelimbs when the striatum and motor cortex were inactivated. The striatal activity is critical for adjusting initially disorganized gait to efficient rhythmic locomotion during forward running training, as well as for increasing the stride width during forward locomotion. The inputs from the motor cortex to striatum are important for the rhythmic locomotion, but not for changes of stride length and width during forward running training. In addition, D1 and D2 dopamine receptor activity in striatum are both important for efficient rhythmic locomotion, while exerting opposite effects on the stride width. Together, these results reveal multifactorial control of efficient and rhythmic gait by motor cortical and dopaminergic inputs converging at the striatum.
+
+---
+
+pid: PMID:40678542
+题目: Distinct roles of two thalamostriatal systems in visually triggered decision-making in common marmosets.
+年份: 2025  类型: research-article; Journal Article
+摘要: The cortico-basal ganglia circuitry plays important roles in the control of various higher-order functions, such as motor control, cognition, and emotion. The thalamostriatal system is involved in learning and switching of behaviors and recovery from cognitive and motor deficits in rodents. Here, we applied selective neural pathway targeting to investigate roles of two representative thalamostriatal pathways arising from the parafascicular nucleus (Pf) and centre médian nucleus (CM) in common marmosets. Targeting of the Pf projecting to the caudate (Cd) resulted in impaired reversal of learned responses in a visual discrimination task, showing increased perseverative errors during the reversal phase. Targeting the CM innervating the putamen (Pu) disturbed acquisition of the visual discrimination. In contrast, elimination of the Pf-Cd or CM-Pu pathway did not alter performance of motor skill learning. Our results indicate that these two thalamostriatal pathways have distinct roles in learning processes of sensory cue-dependent decision-making in nonhuman primates.
+
+---
+
+pid: PMID:40687115
+题目: Gait and balance dysfunction are associated with cognitive performance only in men with Parkinson's disease.
+年份: 2025  类型: research-article; Journal Article
+摘要: IntroductionParkinson's disease (PD) can cause locomotor dysfunction and cognitive impairment and these symptoms are often associated. This study assesses relationships between comprehensive cognitive performance and locomotor function domains: gait, balance, and mobility, in men and women with PD.MethodsSixty PD participants, Hoehn and Yahr 1-3, age ≥ 45, and Montreal Cognitive Assessment score ≥ 18, underwent locomotor function assessments and a comprehensive neurocognitive battery. Primary outcomes included Timed Up and Go (TUG), maximum walking speed (MWS), Mini Balance Evaluation Systems Test (Mini-BESTest), and cognitive composite score (CCS). Spearman correlations determined associations between cognition and locomotor function for the total sample and separately for men and women.ResultsCCS correlated with all primary locomotor outcomes for the overall group and men only. Specifically, positive relationships were observed between the CCS and Mini-BEST Test (balance) for the overall group (p = 0.009) and men (p = 0.001), as well as MWS (gait) for the overall group (p = 0.006) and men (p ConclusionIn PD, balance, gait, and mobility correlated with global cognition. Correlations between motor function and cognitive performance were evident only in men. This study enhances understanding of the complex interplay between cognition and motor function in PD, especially among me
+
+---
+
+pid: PMID:40689324
+题目: Frontiers in neuro-rehabilitation: neural basis of cognitive contributions to movement across neurological populations.
+年份: 2025  类型: review-article; Review; Journal Article
+摘要: Cognitive-motor integration is essential for adaptive human behavior, involving reciprocal interactions between cognition and motor actions mediated by dynamic neural networks. The Active Predictive Coding (APC) framework highlights the bidirectional coupling of sensory inputs and motor actions, while the frontoparietal network, particularly the dorsolateral prefrontal cortex (DLPFC), plays a pivotal role in cognitive-motor tasks under high cognitive demands. Disturbances in this process have been observed in a variety of neurological conditions, resulting in inefficient neural adaptations and in-creased cognitive load. Rehabilitation strategies that integrate dual-task training, robotic devices and virtual reality (VR) have been shown to enhance neuroplasticity and recovery. To improve outcomes, neuro-rehabilitation must shift toward an interdisciplinary, personalized model that leverages neuroscientific and technological advancements to enhance recovery and quality of life.
+
+---
+
+pid: PMID:40690754
+题目: Evaluating the Utility of Wearable Sensors for the Early Diagnosis of Parkinson Disease: Systematic Review.
+年份: 2025  类型: Systematic Review; review-article; Journal Article
+摘要: BackgroundEarly diagnosis is crucial for ensuring that patients with Parkinson disease (PD) receive timely treatment, which can improve their quality of life and prolong lifespan. Wearable sensors have emerged as promising tools for early PD diagnosis, offering noninvasive, continuous symptom monitoring.ObjectiveThis review aimed to evaluate how wearable sensors have been applied in early diagnosis of PD over the past decade, focusing on sensor types, methods, findings, and limitations.MethodsThe systematic review was conducted following the PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) guidelines. Studies were sourced from PubMed, IEEE Xplore, Scopus, and Web of Science and screened based on predefined criteria. The inclusion criteria were as follows: (1) the study was observational or experimental, (2) wearable sensors were applied for the early diagnosis of PD, (3) participants were diagnosed with early-stage or prodromal PD, (4) the study included at least 10 participants with PD, and (5) the article was published between 2013 and 2023. Studies were excluded if they focused solely on treatment, rehabilitation, symptom monitoring, or nonwearable devices; lacked diagnostic clarity; were not published in English; or were not primary research articles. All the selected studies were assessed for quality using the Quality Assessment of Diagnostic Acc

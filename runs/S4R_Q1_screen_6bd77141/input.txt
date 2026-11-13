@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:33838547
+题目: Brain activity of the emotional circuit in Parkinson's disease patients with freezing of gait.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: ObjectiveEmotional processes might influence freezing of gait (FoG) in Parkinson's disease (PD) patients. We assessed brain functional MRI (fMRI) activity during a "FoG-observation-task" in PD-FoG patients relative to healthy controls.MethodsTwenty-four PD-FoG patients and 18 age- and sex-matched healthy controls performed clinical and neuropsychological evaluations, and fMRI experiments including: i) "FoG-observation-task" consisting of watching a patient experiencing FoG during a walking task (usually evoking FoG); ii) "gait-observation-task" consisting of watching a healthy subject performing similar walking tasks without experiencing FoG.ResultsDuring both tasks, PD-FoG patients showed reduced activity of the fronto-parietal mirror neuron system (MNS) relative to controls. In the "FoG-observation-task" relative to the "gait-observation-task", PD-FoG patients revealed an increased recruitment of the anterior medial prefrontal cortex and a reduced recruitment of the dorsomedial prefrontal cortex and hippocampus relative to controls. Healthy controls in the "FoG-observation-task" relative to the "gait-observation-task" showed increased recruitment of cognitive empathy areas and decreased activity of the fronto-parietal MNS.ConclusionOur results suggest that when PD-FoG patients observe a subject experiencing FoG, there is an increased activity of brain areas involved in self-r
+
+---
+
+pid: PMID:33843696
+题目: Falls Predict Acute Hospitalization in Parkinson's Disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: BackgroundThere is a need for identifying risk factors for hospitalization in Parkinson's disease (PD) and also interventions to reduce acute hospital admission.ObjectiveTo analyze the frequency, causes, and predictors of acute hospitalization (AH) in PD patients from a Spanish cohort.MethodsPD patients recruited from 35 centers of Spain from the COPPADIS-2015 (COhort of Patients with PArkinson's DIsease in Spain, 2015) cohort from January 2016 to November 2017, were included in the study. In order to identify predictors of AH, Kaplan-Meier estimates of factors considered as potential predictors were obtained and Cox regression performed on time to hospital encounter 1-year after the baseline visit.ResultsThirty-five out of 605 (5.8%) PD patients (62.5±8.9 years old; 59.8% males) presented an AH during the 1-year follow-up after the baseline visit. Traumatic falls represented the most frequent cause of admission, being 23.7% of all acute hospitalizations. To suffer from motor fluctuations (HR [hazard ratio] 2.461; 95% CI, 1.065-5.678; p = 0.035), a very severe non-motor symptoms burden (HR [hazard ratio] 2.828; 95% CI, 1.319-6.063; p = 0.008), falls (HR 3.966; 95% CI 1.757-8.470; p = 0.001), and dysphagia (HR 2.356; 95% CI 1.124-4.941; p = 0.023) was associated with AH after adjustment to age, gender, disease duration, levodopa equivalent daily dose, total number of non-antipar
+
+---
+
+pid: PMID:33884040
+题目: Mild Gait Impairment and Its Potential Diagnostic Value in Patients with Early-Stage Parkinson's Disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: Methods32 patients with early-stage PD and 30 healthy control subjects (HC) were enrolled. All participants completed the instrumented stand and walk test, and gait data was collected using wearable sensors.ResultsWe observed increased variability of stride length (SL) (P P = 0.004), and swing phase time (SwPT) (P = 0.011) in PD. There were decreased heel strike (HS) (P = 0.001), range of motion of knee (P = 0.036), and hip joints (P P P = 0.007), SL variability (AUC = 0.769, P P = 0.004), and SwPT variability (AUC = 0.688, P = 0.011) had potential diagnostic value. When these five gait parameters were combined, the predictive power was found to increase, with the highest AUC of 0.802 (P ConclusionsPatients with early-stage PD presented increased variability but still symmetrical gait pattern. Some specific gait parameters can be applied to diagnose early-stage PD which may increase diagnosis accuracy. Our findings are helpful to improve patient's quality of life.
+
+---
+
+pid: PMID:33889086
+题目: Coordinated Reset Vibrotactile Stimulation Induces Sustained Cumulative Benefits in Parkinson's Disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: BackgroundAbnormal synchronization of neuronal activity in dopaminergic circuits is related to motor impairment in Parkinson's disease (PD). Vibrotactile coordinated reset (vCR) fingertip stimulation aims to counteract excessive synchronization and induce sustained unlearning of pathologic synaptic connectivity and neuronal synchrony. Here, we report two clinical feasibility studies that examine the effect of regular and noisy vCR stimulation on PD motor symptoms. Additionally, in one clinical study (study 1), we examine cortical beta band power changes in the sensorimotor cortex. Lastly, we compare these clinical results in relation to our computational findings.MethodsStudy 1 examines six PD patients receiving noisy vCR stimulation and their cortical beta power changes after 3 months of daily therapy. Motor evaluations and at-rest electroencephalographic (EEG) recordings were assessed off medication pre- and post-noisy vCR. Study 2 follows three patients for 6+ months, two of whom received daily regular vCR and one patient from study 1 who received daily noisy vCR. Motor evaluations were taken at baseline, and follow-up visits were done approximately every 3 months. Computationally, in a network of leaky integrate-and-fire (LIF) neurons with spike timing-dependent plasticity, we study the differences between regular and noisy vCR by using a stimulus model that reproduces expe
+
+---
+
+pid: PMID:33897379
+题目: Freely Behaving Mice Can Brake and Turn During Optogenetic Stimulation of the Mesencephalic Locomotor Region.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: A key function of the mesencephalic locomotor region (MLR) is to control the speed of forward symmetrical locomotor movements. However, the ability of freely moving mammals to integrate environmental cues to brake and turn during MLR stimulation is poorly documented. Here, we investigated whether freely behaving mice could brake or turn, based on environmental cues during MLR stimulation. We photostimulated the cuneiform nucleus (part of the MLR) in mice expressing channelrhodopsin in Vglut2-positive neurons in a Cre-dependent manner (Vglut2-ChR2-EYFP) using optogenetics. We detected locomotor movements using deep learning. We used patch-clamp recordings to validate the functional expression of channelrhodopsin and neuroanatomy to visualize the stimulation sites. In the linear corridor, gait diagram and limb kinematics were similar during spontaneous and optogenetic-evoked locomotion. In the open-field arena, optogenetic stimulation of the MLR evoked locomotion, and increasing laser power increased locomotor speed. Mice could brake and make sharp turns (~90°) when approaching a corner during MLR stimulation in the open-field arena. The speed during the turn was scaled with the speed before the turn, and with the turn angle. Patch-clamp recordings in Vglut2-ChR2-EYFP mice show that blue light evoked short-latency spiking in MLR neurons. Our results strengthen the idea that diffe
+
+---
+
+pid: PMID:33904475
+题目: Interleaved Stimulation for Freezing of Gait in Advanced Parkinson's Disease.
+年份: 2021  类型: Journal Article
+摘要: BackgroundFreezing of gait (FOG) is a disabling and refractory symptom of advanced Parkinson's disease (PD). Interleaved stimulation (ILS) is a novel paradigm which may benefit axial symptoms of PD.ObjectivesTo assess the effect of ILS on FOG in patients unresponsive to conventional subthalamic nucleus (STN) stimulation.Methods19 PD patients receiving subthalamic stimulation and experiencing FOG at both conventional (130-150Hz) and low frequency (60Hz) stimulation were given ILS.The primary outcome measure was the UPDRS part III gait score (item 29) at 3 months after ILS. A subset of patients was tested with the stand-walk-sit (SWS) test, 30 min after ILS.ResultsThe mean UPDRS part III gait score (baseline: 1.8 ± 0.6) improved at 30 min (1.1 ± 0.8, P = 0.017) and remained improved at 3 months (1.2 ± 0.8, P = 0.048). FOG episodes reduced during SWS test (P = 0.041).ConclusionsILS of STN through two adjacent contacts provided significant short-term beneficial effects on FOG.
+
+---
+
+pid: PMID:33906091
+题目: Functional limits of stability and standing balance in people with Parkinson's disease with and without freezing of gait using wearable sensors.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundPeople with from Parkinson's disease (PD) and freezing of gait (FoG) have more frequent falls compared to those who do not freeze but there is no consensus on which, specific objective measures of postural instability are worse in freezers (PD + FoG) than non-freezers (PD-FoG).Research questionAre functional limits of stability (fLoS) or postural sway during stance measured with wearable inertial sensors different between PD + FoG versus PD-FoG, as well as between PD versus healthy control subjects (HC)?MethodsSixty-four PD subjects with FoG (MDS-UPDRS Part III: 45.9 ± 12.5) and 80 PD subjects without FoG (MDS-UPDRS Part III: 36.2 ± 10.9) were tested Off medication and compared with 79 HC. Balance was quantified with inertial sensors worn on the lumbar spine while performing the following balance tasks: 1) fLoS as defined by the maximum displacement in the forward and backward directions and 2) postural sway area while standing with eyes open on a firm and foam surface. An ANOVA, controlling for disease duration, compared postural control between groups.ResultsPD + FoG had significantly smaller fLoS compared to PD-FoG (p =  0.004) and to healthy controls (p SignificancePeople with PD and FoG showed task-specific, postural impairments with smaller fLoS compared to non-freezers, even when controlling for disease duration. However, individuals with PD with or without FoG
+
+---
+
+pid: PMID:33907603
+题目: Cross-sectional associations between cognition and mobility in Parkinson's disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: Cross-sectional studies show an association of decline in mental flexibility and inhibitory control with reduced gait speed and falls, as well as divided attention deficit and difficulty in initiating gait.ObjectiveTo investigate the relationships between cognitive function and gait performance in patients with Parkinson's disease (PD) who participated in a hospital neurorehabilitation program.MethodsA total of 107 patients (79 males, 28 females; mean age 61.00±8.2 years; mean schooling 11.7±4.1 years) with idiopathic PD (mean disease duration 5.5±4.1 years) were recruited for this study. Among them, 78.50% were in stages I and II of the Hoehn & Yahr Scale. Cognitive functions were evaluated through the Digit Span test, Trail Making Test, and Addenbrooke's Cognitive Examination III. Motor function was assessed with the 10-Meter Walk Test, the short version of the Balance Evaluation Systems Test (Mini-BESTest), and the Timed Up and Go Test.ResultsBalance skills were significantly correlated with global cognition and specific domains, including divided attention, verbal fluency, and visuospatial function. Functional mobility showed a significant association with all cognitive tests, except for the number of errors on TMT-A. Gait speed presented a significant correlation with global cognition scores, memory, and attention, including divided attention.ConclusionsThese findings migh
+
+---
+
+pid: PMID:33915675
+题目: Dancing Feet Dyskinesia in a Patient with GBA-PD.
+年份: 2022  类型: letter; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:33920070
+题目: Gait Parameters Measured from Wearable Sensors Reliably Detect Freezing of Gait in a Stepping in Place Task.
+年份: 2021  类型: research-article; Journal Article
+摘要: Freezing of gait (FOG), a debilitating symptom of Parkinson's disease (PD), can be safely studied using the stepping in place (SIP) task. However, clinical, visual identification of FOG during SIP is subjective and time consuming, and automatic FOG detection during SIP currently requires measuring the center of pressure on dual force plates. This study examines whether FOG elicited during SIP in 10 individuals with PD could be reliably detected using kinematic data measured from wearable inertial measurement unit sensors (IMUs). A general, logistic regression model (area under the curve = 0.81) determined that three gait parameters together were overall the most robust predictors of FOG during SIP: arrhythmicity, swing time coefficient of variation, and swing angular range. Participant-specific models revealed varying sets of gait parameters that best predicted FOG for each participant, highlighting variable FOG behaviors, and demonstrated equal or better performance for 6 out of the 10 participants, suggesting the opportunity for model personalization. The results of this study demonstrated that gait parameters measured from wearable IMUs reliably detected FOG during SIP, and the general and participant-specific gait parameters allude to variable FOG behaviors that could inform more personalized approaches for treatment of FOG and gait impairment in PD.
+
+---
+
+pid: PMID:33920757
+题目: Recurrent Implication of Striatal Cholinergic Interneurons in a Range of Neurodevelopmental, Neurodegenerative, and Neuropsychiatric Disorders.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Cholinergic interneurons are "gatekeepers" for striatal circuitry and play pivotal roles in attention, goal-directed actions, habit formation, and behavioral flexibility. Accordingly, perturbations to striatal cholinergic interneurons have been associated with many neurodevelopmental, neurodegenerative, and neuropsychiatric disorders. The role of acetylcholine in many of these disorders is well known, but the use of drugs targeting cholinergic systems fell out of favor due to adverse side effects and the introduction of other broadly acting compounds. However, in response to recent findings, re-examining the mechanisms of cholinergic interneuron dysfunction may reveal key insights into underlying pathogeneses. Here, we provide an update on striatal cholinergic interneuron function, connectivity, and their putative involvement in several disorders. In doing so, we aim to spotlight recurring physiological themes, circuits, and mechanisms that can be investigated in future studies using new tools and approaches.
+
+---
+
+pid: PMID:33923809
+题目: The Smart-Insole Dataset: Gait Analysis Using Wearable Sensors with a Focus on Elderly and Parkinson's Patients.
+年份: 2021  类型: research-article; Journal Article
+摘要: Gait analysis is crucial for the detection and management of various neurological and musculoskeletal disorders. The identification of gait events is valuable for enhancing gait analysis, developing accurate monitoring systems, and evaluating treatments for pathological gait. The aim of this work is to introduce the Smart-Insole Dataset to be used for the development and evaluation of computational methods focusing on gait analysis. Towards this objective, temporal and spatial characteristics of gait have been estimated as the first insight of pathology. The Smart-Insole dataset includes data derived from pressure sensor insoles, while 29 participants (healthy adults, elderly, Parkinson's disease patients) performed two different sets of tests: The Walk Straight and Turn test, and a modified version of the Timed Up and Go test. A neurologist specialized in movement disorders evaluated the performance of the participants by rating four items of the MDS-Unified Parkinson's Disease Rating Scale. The annotation of the dataset was performed by a team of experienced computer scientists, manually and using a gait event detection algorithm. The results evidence the discrimination between the different groups, and the verification of established assumptions regarding gait characteristics of the elderly and patients suffering from Parkinson's disease.
+
+---
+
+pid: PMID:33935106
+题目: Quantitative Gait Analysis Using a Pose-Estimation Algorithm with a Single 2D-Video of Parkinson's Disease Patients.
+年份: 2021  类型: Journal Article
+摘要: BackgroundClinician-based rating scales or questionnaires for gait in Parkinson's disease (PD) are subjective and sensor-based analysis is limited in accessibility.ObjectiveTo develop an easily accessible and objective tool to evaluate gait in PD patients, we analyzed gait from a single 2-dimensional (2D) video.MethodsWe prospectively recorded 2D videos of PD patients (n = 16) and healthy controls (n = 15) performing the timed up and go test (TUG). The gait was simultaneously evaluated with a pressure-sensor (GAITRite). We estimated the 3D position of toes and heels with a deep-learning based pose-estimation algorithm and calculated gait parameters including step length, step length variability, gait velocity and step cadence which was validated with the result from the GAITRite. We further calculated the time and steps required for turning. Then, we applied the algorithm to previously recorded and archived videos of PD patients (n = 32) performing the TUG.ResultsFrom the validation experiment, gait parameters derived from video tracking were in excellent agreement with the parameters obtained with the GAITRite. (Intraclass correlation coefficient > 0.9). From the analysis with the archived videos, step length, gait velocity, number of steps, and the time required for turning were significantly correlated (Absolute R > 0.4, p Conclusion2D video-based tracking could objectively 
+
+---
+
+pid: PMID:33935931
+题目: Integrating Structural and Functional Interhemispheric Brain Connectivity of Gait Freezing in Parkinson's Disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: Freezing of gait (FOG) has devastating consequences for patients with Parkinson's disease (PD), but the underlying pathophysiological mechanism is unclear. This was investigated in the present study by integrated structural and functional connectivity analyses of PD patients with or without FOG (PD FOG+ and PD FOG-, respectively) and healthy control (HC) subjects. We performed resting-state functional magnetic resonance imaging (fMRI) and diffusion tensor imaging of 24 PD FOG+ patients, 37 PD FOG- patients, and 24 HCs. Tract-based spatial statistics was applied to identify white matter (WM) abnormalities across the whole brain. Fractional anisotropy (FA) and mean diffusivity (MD) of abnormal WM areas were compared among groups, and correlations between these parameters and clinical severity as determined by FOG Questionnaire (FOGQ) score were analyzed. Voxel-mirrored homotopic connectivity (VMHC) was calculated to identify brain regions with abnormal interhemispheric connectivity. Structural and functional measures were integrated by calculating correlations between VMHC and FOGQ score and between FA, MD, and VMHC. The results showed that PD FOG+ and PD FOG- patients had decreased FA in the corpus callosum (CC), cingulum (hippocampus), and superior longitudinal fasciculus and increased MD in the CC, internal capsule, corona radiata, superior longitudinal fasciculus, and thalamu
+
+---
+
+pid: PMID:33936392
+题目: Towards motor evaluation of Parkinson's Disease Patients using wearable inertial sensors.
+年份: 2020  类型: research-article; Journal Article
+摘要: Parkinson's disease (PD) patients require frequent office visits where they are assessed for health state changes using Unified Parkinson's Disease Rating Scale (UPDRS). Inertial wearable sensor devices present a unique opportunity to supplement these assessments with continuous monitoring. In this work, we analyze kinematic features from sensor devices located on feet, wrists, lumbar and sternum for 35 PD subjects as they performed walk trials in two clinical visits, one for each of their self-reported ON and OFF motor states. Our results show that a few features related to subject's whole-body turns and pronation-supination motor events can accurately infer cardinal features of PD like bradykinesia and posture instability and gait disorder (PIGD). In addition, these features can be measured from only two sensors, one located on the affected wrist and one on the lumbar region, thus potentially reducing patient burden of wearing sensors while supporting continuous monitoring in out of office settings.
+
+---
+
+pid: PMID:33953663
+题目: Proceedings of the Eighth Annual Deep Brain Stimulation Think Tank: Advances in Optogenetics, Ethical Issues Affecting DBS Research, Neuromodulatory Approaches for Depression, Adaptive Neurostimulation, and Emerging DBS Technologies.
+年份: 2021  类型: research-article; Journal Article
+摘要: We estimate that 208,000 deep brain stimulation (DBS) devices have been implanted to address neurological and neuropsychiatric disorders worldwide. DBS Think Tank presenters pooled data and determined that DBS expanded in its scope and has been applied to multiple brain disorders in an effort to modulate neural circuitry. The DBS Think Tank was founded in 2012 providing a space where clinicians, engineers, researchers from industry and academia discuss current and emerging DBS technologies and logistical and ethical issues facing the field. The emphasis is on cutting edge research and collaboration aimed to advance the DBS field. The Eighth Annual DBS Think Tank was held virtually on September 1 and 2, 2020 (Zoom Video Communications) due to restrictions related to the COVID-19 pandemic. The meeting focused on advances in: (1) optogenetics as a tool for comprehending neurobiology of diseases and on optogenetically-inspired DBS, (2) cutting edge of emerging DBS technologies, (3) ethical issues affecting DBS research and access to care, (4) neuromodulatory approaches for depression, (5) advancing novel hardware, software and imaging methodologies, (6) use of neurophysiological signals in adaptive neurostimulation, and (7) use of more advanced technologies to improve DBS clinical outcomes. There were 178 attendees who participated in a DBS Think Tank survey, which revealed the exp
+
+---
+
+pid: PMID:33969461
+题目: Vibrotactile biofeedback devices in Parkinson's disease: a narrative review.
+年份: 2021  类型: Review; Journal Article
+摘要: Parkinson's disease (PD) is often associated with a vast list of gait-associated disabilities, for which there is still a limited pharmacological/surgical treatment efficacy. Therefore, alternative approaches have emerged as vibrotactile biofeedback systems (VBS). This review aims to focus on the technologies supporting VBS and identify their effects on improving gait-associated disabilities by verifying how VBS were applied and validated with end-users. It is expected to furnish guidance to researchers looking to enhance the effectiveness of future vibrotactile cueing systems. The use of vibrotactile cues has proved to be relevant and attractive, as positive results have been obtained in patients' gait performance, suitability in any environment, and easy adherence. There seems to be a preference in developing VBS to mitigate freezing of gait, to improve balance, to overcome the risk of fall, and a prevalent use to apply miniaturized wearable actuators and sensors. Most studies implemented a biofeedback loop able to provide rescue strategies during or after the detection of a gait-associated disability. However, there is a need of more clinical evidence and inclusion of experimental sessions to evaluate if the biofeedback was effectively integrated into the patients' motor system.
+
+---
+
+pid: PMID:33971928
+题目: Improvement of freezing of gait in patients with Parkinson's disease by music exercise therapy: a study protocol for a randomized controlled trial.
+年份: 2021  类型: Clinical Trial Protocol; research-article; Journal Article
+摘要: BackgroundProgression of freezing of gait, a common pathological gait in Parkinson's disease, is an important risk factor for diagnosing the disease and has been shown to predispose patients to easy falls, loss of independent living ability, and reduced quality of life. Treating Parkinson's disease with freezing of gait is very difficult, while the use of medicine and operation has been ineffective. Music exercise therapy, which entails listening to music as you exercise, has been proposed as a treatment technology that can change patients' behavior, emotions, and physiological activity. In recent years, music exercise therapy has been widely used in treatment of motor disorders and neurological diseases and achieved remarkable results. Results from our earlier pilot study revealed that music exercise therapy can improve the freezing of gait of Parkinson's patients and improve their quality of life. Therefore, we aim to validate clinical efficacy of this therapy on freezing of gait of Parkinson's patients using a larger sample size.Methods/designThis three-arm randomized controlled trial will evaluate clinical efficacy of music exercise therapy in improving the freezing of gait in Parkinson's patients. We will recruit a total of 81 inpatients with Parkinson's disease, who meet the trial criteria. The patients will randomly receive music exercise with and without music as well a
+
+---
+
+pid: PMID:33981207
+题目: Safety and Tolerability of Burst-Cycling Deep Brain Stimulation for Freezing of Gait in Parkinson's Disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: Background: Freezing of gait (FOG) is a common symptom in Parkinson's disease (PD) and can be difficult to treat with dopaminergic medications or with deep brain stimulation (DBS). Novel stimulation paradigms have been proposed to address suboptimal responses to conventional DBS programming methods. Burst-cycling deep brain stimulation (BCDBS) delivers current in various frequencies of bursts (e.g., 4, 10, or 15 Hz), while maintaining an intra-burst frequency identical to conventional DBS. Objective: To evaluate the safety and tolerability of BCDBS in PD patients with FOG. Methods: Ten PD subjects with STN or GPi DBS and complaints of FOG were recruited for this single center, single blinded within-subject crossover study. For each subject, we compared 4, 10, and 15 Hz BCDBS to conventional DBS during the PD medication-OFF state. Results: There were no serious adverse events with BCDBS. It was feasible and straightforward to program BCDBS in the clinic setting. The benefit was comparable to conventional DBS in measures of FOG, functional mobility and in PD motor symptoms. BCDBS had lower battery consumption when compared to conventional DBS. Conclusions: BCDBS was feasible, safe and well tolerated and it has potential to be a viable future DBS programming strategy.
+
+---
+
+pid: PMID:33981792
+题目: Apraxia of Lid Opening in Subthalamic Nucleus Deep Brain Stimulation for Parkinson's Disease-Frequency, Risk Factors and Response to Treatment.
+年份: 2021  类型: research-article; Journal Article
+摘要: BackgroundNew-onset apraxia of lid opening (ALO) is reported to occur in Parkinson's disease (PD) patients following Deep Brain Stimulation (DBS). There are only few systematic studies on this uncommon disorder of eyelid movements.ObjectivesWe aimed to examine the frequency, temporal evolution, predisposing factors and response to treatment, of new-onset ALO in PD patients who underwent bilateral subthalamic nucleus (STN) DBS.MethodsWe retrospectively reviewed the data of patients who underwent STN DBS at our centre between 1999 and 2017, with a minimum of 2 years of follow up after surgery.ResultsNew-onset ALO was seen in 17 (9.1%) of the 187 patients after an average of 16.9 months (Range - 6-36 months). Comparison of the groups with and without ALO revealed that ALO occurred more often in older patients, both at the onset of PD symptoms and at surgery and in those with non-tremor dominant subtypes of PD and freezing of gait at baseline. The extent of levodopa dose reduction after surgery and the pre-operative severity of motor symptoms were not risk factors. Response to adjustments of dopaminergic medications and stimulation parameters was ill-sustained or nil. Botulinum toxin therapy resulted in satisfactory improvement in the majority.ConclusionsNew-onset ALO is an uncommon phenomenon that manifests months after STN DBS. Development of ALO is likely to be due to the effect
+
+---
+
+pid: PMID:33995237
+题目: A Multimodal Imaging Approach Demonstrates Reduced Midbrain Functional Network Connectivity Is Associated With Freezing of Gait in Parkinson's Disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: Background: The pathophysiological mechanisms underlying freezing of gait (FOG) are poorly defined. MRI studies in FOG showed a distinct pattern of cortical atrophy and decreased functional connectivity (FC) within motor and cognitive networks. Furthermore, reduced rs-FC within midbrain, frontal, and temporal areas has been also described. This study investigated the patterns of whole-brain FC alterations within midbrain inter-connected regions in PD-FOG patients, and whether these patterns are linked to midbrain structural damage using a multi-modal imaging approach, combing structural and functional imaging techniques. Methods: Thirty three PD patients (16 PD-FOG, 17 PD noFOG), and 21 sex- and age-matched healthy controls (HCs) were prospectively enrolled. All subjects underwent MRI scan at 1.5T, whereas only PD patients underwent clinical and cognitive assessment. Grey matter (GM) integrity was measured using voxel-based morphometry (VBM). VBM findings served as basis to localize midbrain damage, and were further used as a seed region for investigating whole-brain FC alterations using rs-fMRI. Results: In rs-fMRI, patients with PD and FOG demonstrated significant decrease of midbrain-cortical FC levels in the R PCG, right postcentral, and supramarginal gyri compared to controls and the middle cingulate compared to noFOG group. Based on the regression analysis, MOCA, UPDRS-II
+
+---
+
+pid: PMID:33995929
+题目: Clinimetrics of the Freezing of Gait Questionnaire for Parkinson Disease During the "off" State.
+年份: 2021  类型: research-article; Journal Article
+摘要: IntroductionFreezing of gait, a common PD motor symptom, could increase the risk of falling. This study aimed to investigate the clinimetric attributes of the Freezing of Gait Questionnaire (FOGQ) for people with Parkinson disease in the "off" state.MethodsA total of 115 patients with Parkinson disease (PD; mean age, 60.25 years) were included. Acceptability, internal consistency (by the Cronbach alpha, and test-retest by Intraclass Correlation [ICC]), and reliability of the Persian-translated version of the FOGQ were examined. Dimensionality was estimated by Exploratory Factor Analysis (EFA). Fall efficacy scale-international, unified Parkinson disease rating scale-II, Berg balance scale, functional reach test, and Parkinson disease questionnaire-39 were applied to determine the convergent validity. Diagnostic accuracy for obtaining optimal cutoff point, separating faller and non-faller groups, was analyzed by Receiver Operating Characteristics (ROC) curve analysis and Area Under the Curve (AUC). All tests were carried out in an "off" state.ResultsThe Cronbach alpha was high (α=0.92). The test-retest showed high reliability (ICC=0.89). The FOGQ was unidimensional according to the EFA and had acceptable convergent validity with moderate to high correlation with other clinical scales. The optimal cutoff point to discriminate fallers from non-fallers during the "off" state was 9/
+
+---
+
+pid: PMID:34001630
+题目: Elimination of the Cortico-Subthalamic Hyperdirect Pathway Induces Motor Hyperactivity in Mice.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: The substantia nigra pars reticulata (SNr) is the output station of the basal ganglia and receives cortical inputs by way of the following three basal ganglia pathways: the cortico-subthalamo (STN)-SNr hyperdirect, the cortico-striato-SNr direct, and the cortico-striato-external pallido-STN-SNr indirect pathways. Compared with the classical direct and indirect pathways via the striatum, the functions of the hyperdirect pathway remain to be fully elucidated. Here we used a photodynamic technique to selectively eliminate the cortico-STN projection in male mice and observed neuronal activity and motor behaviors in awake conditions. After cortico-STN elimination, cortically evoked early excitation in the SNr was diminished, while the cortically evoked inhibition and late excitation, which are delivered through the direct and indirect pathways, respectively, were unchanged. In addition, locomotor activity was significantly increased after bilateral cortico-STN elimination, and apomorphine-induced ipsilateral rotations were observed after unilateral cortico-STN elimination, suggesting that cortical activity was increased. These results are compatible with the notion that the cortico-STN-SNr hyperdirect pathway quickly conveys cortical excitation to the output station of the basal ganglia, resets or suppresses the cortical activity related to ongoing movements, and prepares for the fo
+
+---
+
+pid: PMID:34015693
+题目: Prediction of the effect of deep brain stimulation on gait freezing of Parkinson's disease.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: ObjectiveThe response of freezing of gait (FOG) to deep brain stimulation of the subthalamic nucleus (STN-DBS) is controversial and depends on many poorly controlled factors. On the other hand, a clinical predictor for the individual patient is needed to counsel the patient regarding this symptom.MethodsA cohort of 124 patients undergoing STN-DBS was evaluated based on the video-documented Levodopa test at baseline in the OFF- and ON-drug condition and postoperatively in the best condition (ON-drug/ON-stim) and the worst condition (OFF-drug/ON-stim). We compared the freezing item of the Unified Parkinson's disease rating scale (#14), the UPDRS III total score, and FOG severity rated during four provoking situations with regard to its predictive value.ResultsWe found 'FOG during the turning task' to be the best predictor with an ROC-value of 0.857 compared to 0.603 for the UPDRS Item 14 and 0.583 for the total UPDRS III. An improvement of 1 or 2 grades of the turning item during the preoperative levodopa test predicts an improvement during the worst condition postoperatively of 1 grade or more with an 80% probability.ConclusionThis FOG prediction test is simple and clinically useful. The test needs to be studied in a prospective study.
+
+---
+
+pid: PMID:34023405
+题目: Disrupted functional brain network topology in Parkinson's disease patients with freezing of gait.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: BackgroundFreezing of gait (FOG) is a common and debilitating gait disturbance in patients with Parkinson's disease (PD), but the potential mechanisms are still unclear. This study aimed to explore alterations in the topological organization of whole-brain functional networks in PD patients with FOG.MethodsWe recruited 75 patients with PD, 37 patients with FOG and 38 patients without FOG, to undergo resting-state functional magnetic resonance imaging (fMRI). The whole-brain functional networks were constructed, and the topological properties at three (global, nodal, and connectional) levels were analyzed using graph theory approaches.ResultsCompared with patients without FOG, patients with FOG exhibited altered global topological properties (a significant decrease in the normalized clustering coefficient and small-worldness), implying a shift toward randomization in their functional brain networks. At the node and connectional levels, patients with FOG showed increased nodal centralities and functional connectivity in the sensorimotor network, frontoparietal network, visual network, subcortical and limbic regions, and decreased nodal centralities in the frontoparietal network and the cerebellum. Furthermore, the altered nodal centralities in the right hippocampus (HIP) were positively correlated with FOG severity.ConclusionsThis study suggests that FOG in PD is associated with 
+
+---
+
+pid: PMID:34023957
+题目: Music to move persons with Parkinson's disease: a personalized approach.
+年份: 2022  类型: research-article; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:34043678
+题目: Abnormal center of mass feedback responses during balance: A potential biomarker of falls in Parkinson's disease.
+年份: 2021  类型: Research Support, Non-U.S. Gov't; research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: Although Parkinson disease (PD) causes profound balance impairments, we know very little about how PD impacts the sensorimotor networks we rely on for automatically maintaining balance control. In young healthy people and animals, muscles are activated in a precise temporal and spatial organization when the center of body mass (CoM) is unexpectedly moved that is largely automatic and determined by feedback of CoM motion. Here, we show that PD alters the sensitivity of the sensorimotor feedback transformation. Importantly, sensorimotor feedback transformations for balance in PD remain temporally precise, but become spatially diffuse by recruiting additional muscle activity in antagonist muscles during balance responses. The abnormal antagonist muscle activity remains precisely time-locked to sensorimotor feedback signals encoding undesirable motion of the body in space. Further, among people with PD, the sensitivity of abnormal antagonist muscle activity to CoM motion varies directly with the number of recent falls. Our work shows that in people with PD, sensorimotor feedback transformations for balance are intact but disinhibited in antagonist muscles, likely contributing to balance deficits and falls.
+
+---
+
+pid: PMID:34045464
+题目: Non-invasive vagus nerve stimulation improves clinical and molecular biomarkers of Parkinson's disease in patients with freezing of gait.
+年份: 2021  类型: Retracted Publication; research-article; Journal Article
+摘要: Non-invasive vagus nerve stimulation (nVNS) is an established neurostimulation therapy used in the treatment of epilepsy, migraine and cluster headache. In this randomized, double-blind, sham-controlled crossover trial we explored the role of nVNS in the treatment of gait and other motor symptoms in Parkinson's disease (PD) patients. In a subgroup of patients, we measured selected neurotrophin levels and markers of inflammation and oxidative stress in serum, before and after the experimental intervention. Thirty-three PD patients with associated freezing of gait were randomised to either nVNS or sham. After baseline assessments, patients were instructed to deliver 6 two-minute stimulations (total 12 min/day) of the nVNS/sham device (electroCore, Inc. USA) for one month at home. Patients were then re-assessed. After a washout period of one month, the same patients were allocated to the alternate treatment arm and the same process was followed. Significant improvements in key gait parameters were observed with nVNS, including walking speed, stance time and step length, compared to sham. Similarly, overall motor function (MDS-UPDRS III) also improved significantly following nVNS stimulation. Serum Tumor Necrosis Factor (TNF)-α and glutathione levels decreased and brain-derived neurotrophic factor (BDNF) levels increased significantly (p < 0.05) after treatment with nVNS. Here we p
+
+---
+
+pid: PMID:34045471
+题目: Balance response to levodopa predicts balance improvement after bilateral subthalamic nucleus deep brain stimulation in Parkinson's disease.
+年份: 2021  类型: research-article; Journal Article
+摘要: The effect of subthalamic nucleus deep brain stimulation (STN-DBS) on balance function in patients with Parkinson's disease (PD) and the potential outcome predictive factors remains unclear. We retrospectively included 261 PD patients who underwent STN-DBS and finished the 1-month follow-up (M1) assessment in the explorative set for identifying postoperative balance change predictors, and 111 patients who finished both the M1 and 12-month follow-up (M12) assessment in the validation set for verifying the identified factors. Motor and balance improvement were evaluated through the UPDRS-III and the Berg balance scale (BBS) and pull test (PT), respectively. Candidate predictors of balance improvement included age, disease duration, motor subtypes, baseline severity of PD, cognitive status, motor and balance response to levodopa, and stimulation parameters. In the off-medication condition, STN-DBS significantly improved BBS and PT performance in both the M1 and M12, in both datasets. While in the on-medication condition, no significant balance improvement was observed. Higher preoperative BBS response to levodopa was significantly associated with larger postoperative off-medication, but not on-medication, BBS (p < 0.001) and PT (p < 0.001) improvement in both the M1 and M12. BBS subitems 8, 9, 11, 13, and 14 were the major contributors to the prediction of balance improvement afte
+
+---
+
+pid: PMID:34046795
+题目: Remote smartphone gait monitoring and fall prediction in Parkinson's disease during the COVID-19 lockdown.
+年份: 2021  类型: brief-report; Journal Article
+摘要: BackgroundFalls could be serious events in Parkinson's disease (PD). Patient remote monitoring strategies are on the raise and may be an additional aid in identifying patients who are at risk of falling. The aim of the study was to evaluate if balance and timed-up-and-go data obtained by a smartphone application during COVID-19 lockdown were able to predict falls in PD patients.MethodsA cohort of PD patients were monitored for 4 weeks during the COVID-19 lockdown with an application measuring static balance and timed-up-and-go test. The main outcome was the occurrence of falls (UPDRS-II item 13) during the observation period.ResultsThirty-three patients completed the study, and 4 (12%) reported falls in the observation period. The rate of falls was reduced with respect to patient previous falls history (24%). The stand-up time and the mediolateral sway, acquired through the application, differed between "fallers" and "non-fallers" and related to the occurrence of new falls (OR 1.7 and 1.6 respectively, p ConclusionsOur study provides new data on falls in Parkinson's disease during the lockdown. The reduction of falling events and the relationship with the stand-up time might suggest that a different quality of falls occurs when patient is forced to stay home - hence, clinicians should point their attention also on monitoring patients' sit-to-stand body transition other than mor

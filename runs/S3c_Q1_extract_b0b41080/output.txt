@@ -1,0 +1,496 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:37429355; PMCID:PMC12673813; DOI:10.1016/j.brs.2023.07.003",
+    "title": "Kinematic adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID37429355_KaDBS_single_participant_case_2023",
+    "cohort_id_candidate": "Stanford_KaDBS_single_participant_P1; possible_overlap_with_PMID41867218_PID03",
+    "cohort_relation_basis": "本研究为Stanford团队2023年发表的单患者KaDBS研究。另发现2026年medRxiv预印本PMID:41867218（DOI:10.64898/2026.02.23.26346487）明确将本研究列为先前的单患者KaDBS研究（其参考文献33）。该预印本报告的PID03为女性，年龄71–75岁，病程19年；本研究患者为女性，年龄71.7岁，病程17.4年。研究中心、作者团队、设备及技术路线相同，患者特征相近，存在队列重叠可能，但没有明确的患者ID对应声明，故仅标记possible_overlap，不认定为同一患者或同一队列。2026年预印本属于后续扩大样本的临床研究，不认定为本论文的版本更新。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID37429355_E01",
+      "design": "单患者、受试者盲法、部分随机化的重复条件自身对照可行性研究；比较OFF DBS、ON open-loop DBS、ON random intermittent DBS和ON kinematic adaptive DBS。ON DBS条件随机排序，未报告正式统计推断。",
+      "population": "1名女性PD患者，71.7岁，病程17.4年，akinetic-rigid subtype，存在gait impairment及FOG；术前OFF-medication MDS-UPDRS-III评分42；植入双侧STN DBS电极。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 8,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "未报告STN LFP、单单位或多单位神经活动记录及有效神经数据，无法确定是否曾采集但未分析，因此n_patients_with_valid_neural_data为null。n_electrodes_contacts=2表示双侧STN DBS导线数量，具体接触点数量未报告。四个条件各有一次约90秒的任务运行，未报告每个条件的独立重复次数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；原文报告患者为akinetic-rigid PD subtype，但没有进一步区分FOG的akinetic、trembling-in-place、kinetic-no-trembling或mixed表型。",
+      "medication_phenotype": "unknown；未明确患者属于OFF-FOG、ONOFF-FOG、ON-FOG或biphasic FOG。",
+      "experimental_medication_state": "测试前至少12小时停用短效PD药物；未服用长效PD药物。实际测试处于practically defined OFF-medication状态。具体末次给药时间及药物剂量未报告。",
+      "DBS_state_and_parameters": "双侧STN DBS。比较OFF DBS、ON olDBS、ON iolDBS及ON KaDBS。所有主动刺激条件均为140 Hz。KaDBS根据shank IMU实时计算的gait arrhythmicity调节刺激强度，并限制在个体治疗窗口内。olDBS强度根据KaDBS校准期间的平均刺激强度确定；iolDBS使用从KaDBS校准输出中随机化的刺激强度模式。KaDBS的TEED略高于其他ON DBS条件。脉宽、具体电流幅度、各侧精确刺激触点及方向性参数未在主文报告。",
+      "task": "约90秒的harnessed stepping in place（SIP）任务，在双力板上完成；四种刺激条件分别测试。该任务属于原地踏步替代任务，不是自然直立前行或转弯行走。",
+      "recording_location": "没有报告STN神经活动记录。双侧STN为DBS刺激靶点；运动学反馈来自小腿（shank）IMU，另使用双力板记录垂直地面反作用力。",
+      "measure": "Post-hoc percent time freezing（冻结时间百分比）。冻结事件由自动算法检测，图1F–I展示垂直地面反作用力及算法识别的freezing events。主文没有详细说明冻结分类算法的具体阈值及其独立视频/临床验证情况。",
+      "frequency_and_analysis_window": "无STN神经频段分析。主动DBS刺激频率140 Hz。每个SIP条件约90秒。percent time freezing在任务结束后计算；具体时间窗划分、事件边界算法及百分比计算的精确分母未在主文说明。",
+      "finding": "四种刺激条件下的percent time freezing分别为：OFF DBS 76.1%；ON olDBS 7.4%；ON iolDBS 14.9%；ON KaDBS 0%。在该单患者的SIP任务中，KaDBS条件下未检测到冻结事件，冻结时间百分比最低。",
+      "effect_estimate": "OFF: 76.1%；olDBS: 7.4%；iolDBS: 14.9%；KaDBS: 0%。均为单患者描述性数值，无置信区间、P值或患者群体效应量。KaDBS相对OFF的绝对差为-76.1个百分点；该差值仅为单患者描述性计算，不是群体治疗效应估计。",
+      "statistical_unit_and_method": "患者级、条件级描述性比较，n=1。percent time freezing为post-hoc计算。未报告组水平推断统计、置信区间或正式重复测量模型。四种条件的结果不能视为独立患者样本。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者、部分随机化的重复条件可行性研究进行适应性评估；不是正式验证过的RoB 2评级。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "作者报告ON DBS条件随机化，但没有说明随机序列生成、分配隐藏及OFF条件的排序方式。",
+            "source_locator": "Dear Editor，methods段落：The ON DBS conditions were randomized."
+          },
+          {
+            "domain": "时间效应、条件携带效应及刺激剂量不平衡",
+            "judgement": "some_concerns",
+            "reason": "作者报告arrhythmicity在试验过程中随时间恶化，同时KaDBS的TEED高于其他ON DBS条件。因而KaDBS的优势不能完全归因于自适应控制策略本身，也可能受到刺激总能量和试验时间顺序影响。",
+            "source_locator": "Results段落及末段Discussion：TEED was slightly higher during the KaDBS trial."
+          },
+          {
+            "domain": "干预偏离",
+            "judgement": "unclear",
+            "reason": "参与者对刺激设置设盲，控制器按照预定运动学输入调节刺激，但主文没有完整报告干预执行偏离、洗脱时间及条件间残留效应。",
+            "source_locator": "Dear Editor，methods段落。"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "unclear",
+            "reason": "单患者四条件结果均有报告，但没有详细的传感器数据缺失、技术故障或结局数据完整性报告。",
+            "source_locator": "Dear Editor，methods及Results段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "冻结事件由自动算法检测，主文未报告独立视频或临床评审确认。SIP是替代性任务，不等同于自然行走中临床确认的FOG。",
+            "source_locator": "Fig. 1图注及Results段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文没有提供预注册方案或完整统计分析计划，无法判断所有预设结局是否均已报告。",
+            "source_locator": "全文；未见明确预注册或统计分析计划说明。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "只有1名患者、4个条件运行，事件数不能替代独立患者数。论文没有进行群体推断，但研究无法提供患者间重复验证。",
+            "source_locator": "Methods及Results；单患者实验设计。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_applicable",
+            "reason": "本研究没有报告STN神经信号分析，不能评价STN LFP质量、刺激伪迹或神经信号有效性。IMU和力板信号的试验级伪迹指标也未在主文报告。",
+            "source_locator": "Dear Editor，methods段落及Fig. 1图注。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是单患者结果，不能推断群体效应。SIP属于替代任务，不能直接外推至自然行走FOG。自动检测事件没有报告视频或临床确认。KaDBS的TEED略高，可能影响冻结改善幅度。最重要的是，本研究没有报告STN LFP、神经元放电或皮层-STN耦合数据。STN仅作为刺激靶点，KaDBS控制输入是外周运动学指标。因此该结果不能作为STN神经活动与FOG相关性的直接证据。",
+      "quote": "The percent time freezing was 76.1% for OFF, 7.4% for olDBS, 14.9% for iolDBS, and 0% for KaDBS.",
+      "source_locator": {
+        "section": "Dear Editor，methods段落及Results段落",
+        "page": "1099–1101（文章页码范围；具体句所在页未单独核定）",
+        "figure_table": "Fig. 1K",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37429355_E02",
+      "design": "单患者、部分随机化的重复条件自身对照可行性研究；四种DBS刺激条件下的自动检测冻结事件数量比较。",
+      "population": "同一名71.7岁女性PD患者，akinetic-rigid subtype，存在GI&FOG；双侧STN DBS植入。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 8,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "8次冻结事件根据主文各条件明确报告的事件数求和：OFF 1次、olDBS 3次、iolDBS 4次、KaDBS 0次。STN神经数据未报告；双侧导线的具体接触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；未报告akinetic、trembling-in-place、kinetic-no-trembling或mixed FOG分类。患者的akinetic-rigid PD亚型不能等同于akinetic FOG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "短效PD药物停用至少12小时，无长效PD药物；测试处于practically OFF-medication状态。",
+      "DBS_state_and_parameters": "双侧STN DBS；OFF、olDBS、iolDBS、KaDBS四种测试条件；主动刺激频率140 Hz。KaDBS强度根据shank IMU实时gait arrhythmicity调节。KaDBS的TEED略高于其他ON条件。脉宽、具体幅度和精确触点未报告。",
+      "task": "Harnessed stepping in place（SIP），双力板，约90秒；四种刺激条件。",
+      "recording_location": "没有报告STN神经记录；双侧STN刺激导线；小腿IMU和双力板用于运动学/动力学监测。",
+      "measure": "各条件中由自动算法检测的freezing event数量；不等同于经视频或临床专家确认的自然行走FOG事件。",
+      "frequency_and_analysis_window": "主动DBS 140 Hz；每个SIP条件约90秒；事件计数按各条件整个任务运行统计。没有报告STN神经频段或神经分析时间窗。",
+      "finding": "OFF DBS检测到1次FE；olDBS检测到3次FE；iolDBS检测到4次FE；KaDBS未检测到FE。四个条件合计8次自动检测事件。",
+      "effect_estimate": "FE数量：OFF=1；olDBS=3；iolDBS=4；KaDBS=0。描述性事件计数，没有事件发生率置信区间或统计检验。",
+      "statistical_unit_and_method": "单患者条件级事件计数；n=1患者，4次条件运行。事件数是重复事件，不是独立患者数；未报告正式统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者部分随机化重复条件研究适应性评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "ON DBS条件随机化，但随机序列生成和OFF条件排序不清楚。",
+            "source_locator": "Dear Editor，methods段落。"
+          },
+          {
+            "domain": "时间效应及刺激能量不平衡",
+            "judgement": "some_concerns",
+            "reason": "KaDBS的TEED较高，且作者观察到步态arrhythmicity随试验过程恶化，可能影响条件比较。",
+            "source_locator": "Results及Discussion段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "自动算法检测FE，但没有报告独立视频或临床确认；任务是SIP替代任务。",
+            "source_locator": "Fig. 1图注及Results段落。"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "未详细报告事件检测失败、数据丢失或传感器异常。",
+            "source_locator": "Methods及Results段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有可核对的预注册结局及统计分析计划。",
+            "source_locator": "全文；未报告预注册信息。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "8次事件来自同一患者的4个条件运行，不能视为8个独立观察对象。",
+            "source_locator": "Results段落，四种条件的FE计数。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "事件由自动算法识别，未报告独立临床或视频确认。8次事件来自单患者，不能作为独立样本进行群体推断。SIP不属于自然行走。没有事件级STN神经活动数据，不能据此判断STN活动在FOG发生前或发生期间的变化。",
+      "quote": "KaDBS was the only condition, during which there were no FEs.",
+      "source_locator": {
+        "section": "Dear Editor，Results段落中各条件冻结事件描述",
+        "page": "1099–1101（具体句所在页未单独核定）",
+        "figure_table": "Fig. 1F–I",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37429355_E03",
+      "design": "单患者、部分随机化的重复条件自身对照可行性研究；比较四种刺激条件下自动检测冻结事件的持续时间。",
+      "population": "1名71.7岁女性PD患者，akinetic-rigid subtype，具有GI&FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 8,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "事件持续时间的详细分布未报告。olDBS和iolDBS仅报告事件持续时间范围或上限。STN神经活动未报告；双侧STN导线的接触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；未报告具体FOG运动表型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "短效PD药物停用至少12小时，无长效PD药物；practically OFF-medication。",
+      "DBS_state_and_parameters": "双侧STN DBS；OFF、olDBS、iolDBS、KaDBS；主动刺激频率140 Hz。KaDBS根据IMU计算的步态arrhythmicity调节刺激强度。KaDBS的TEED略高于其他ON DBS条件。",
+      "task": "Harnessed stepping in place，双力板，约90秒/条件。",
+      "recording_location": "未报告STN神经活动记录；STN为刺激靶点；运动学监测来自小腿IMU及双力板。",
+      "measure": "自动检测FE的单次事件持续时间及各条件事件持续时间范围。",
+      "frequency_and_analysis_window": "主动DBS 140 Hz；SIP每条件约90秒；报告冻结事件持续时间，但未报告事件边界检测的具体时间窗和算法参数。",
+      "finding": "OFF条件下，患者在开始踏步后18秒内出现一次FE，该事件持续72.4秒。olDBS条件检测到3次FE，每次持续时间均小于1.1秒。iolDBS条件检测到4次FE，最短小于1秒，最长3.1秒。KaDBS条件没有检测到FE。",
+      "effect_estimate": "OFF：72.4秒；olDBS：3次，每次<1.1秒；iolDBS：4次，最短<1秒、最长3.1秒；KaDBS：无检测到的FE。未报告均值、标准差或置信区间。",
+      "statistical_unit_and_method": "单患者事件级描述性分析；事件嵌套于四个条件运行中。没有正式统计检验，也没有独立患者级重复。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者部分随机化重复条件研究适应性评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "ON DBS条件随机化，但随机序列及OFF条件排序未充分报告。",
+            "source_locator": "Methods段落。"
+          },
+          {
+            "domain": "时间效应及刺激剂量不平衡",
+            "judgement": "some_concerns",
+            "reason": "KaDBS的TEED较高，且试验过程中步态arrhythmicity恶化，可能影响事件持续时间比较。",
+            "source_locator": "Results及Discussion段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "事件由自动算法检测，未报告视频/临床确认，且使用SIP替代任务。",
+            "source_locator": "Fig. 1图注及Results段落。"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告事件检测失败或传感器数据缺失情况。",
+            "source_locator": "Methods及Results段落。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "多个事件来自同一患者，事件持续时间不能作为独立患者级证据。",
+            "source_locator": "Results段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有公开预设的事件持续时间分析方案。",
+            "source_locator": "全文；未见预注册分析方案。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "事件持续时间仅来自一个患者，且不同条件的报告精度不一致。不能根据单个患者的事件持续时间推断群体治疗效应。SIP任务的冻结不应直接等同于自然行走中的FOG。本研究没有报告STN神经信号，也没有分析冻结发生前的神经变化。",
+      "quote": "The FE lasted 72.4 seconds.",
+      "source_locator": {
+        "section": "Dear Editor，Results段落中OFF条件及其他条件的FE持续时间描述",
+        "page": "1099–1101（具体句所在页未单独核定）",
+        "figure_table": "Fig. 1F–H",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37429355_E04",
+      "design": "单患者、部分随机化的重复条件自身对照可行性研究；比较不同刺激条件下步态arrhythmicity。",
+      "population": "1名71.7岁女性PD患者，病程17.4年，akinetic-rigid subtype，具有GI&FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "该结局为整段任务的步态变异性指标，不以冻结事件数作为分析分母。主文另报告全研究8次自动检测FE。STN神经活动记录及有效神经数据未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；未区分具体FOG运动表现。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "短效PD药物停用至少12小时，无长效PD药物；practically OFF-medication。",
+      "DBS_state_and_parameters": "双侧STN DBS；OFF、olDBS、iolDBS、KaDBS；主动刺激频率140 Hz。KaDBS根据实时步态arrhythmicity调节刺激强度。olDBS采用KaDBS校准平均强度；iolDBS使用随机化的强度模式。KaDBS的TEED略高于其他ON DBS条件。",
+      "task": "Harnessed stepping in place（SIP），双力板，约90秒/条件。shank IMU实时采集小腿运动学数据，供KaDBS控制器计算步态arrhythmicity。",
+      "recording_location": "无STN神经记录报告；小腿shank IMU用于运动学测量；双侧STN DBS导线仅作为刺激靶点。",
+      "measure": "Gait arrhythmicity，即步态stride time的变异系数：100 × standard deviation / mean。由shank IMU运动学数据计算，作为KaDBS实时控制变量，并在各条件结束后计算平均值。该指标属于外周运动学信号，不是STN beta活动。",
+      "frequency_and_analysis_window": "无神经频段分析。主动DBS频率140 Hz。SIP约90秒/条件。arrhythmicity实时计算并进行条件级平均；主文没有报告平均值计算的具体时间窗、分段长度或事件对齐方式。",
+      "finding": "四种条件下平均arrhythmicity分别为：OFF 227.4%；olDBS 42.9%；iolDBS 43.2%；KaDBS 23.4%。所有ON DBS条件均低于OFF，KaDBS条件最低。",
+      "effect_estimate": "OFF=227.4%；olDBS=42.9%；iolDBS=43.2%；KaDBS=23.4%。KaDBS相对OFF的描述性绝对差为-204.0个百分点。没有置信区间、P值或群体效应量。",
+      "statistical_unit_and_method": "单患者、条件级平均值描述性比较；arrhythmicity定义为stride time coefficient of variation。没有患者群体推断统计或事件级混合效应模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者部分随机化重复条件研究适应性评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "ON DBS条件随机化，但随机序列生成及OFF条件排序未充分说明。",
+            "source_locator": "Dear Editor，methods段落。"
+          },
+          {
+            "domain": "时间效应及刺激剂量不平衡",
+            "judgement": "some_concerns",
+            "reason": "作者明确报告arrhythmicity随试验过程恶化，同时KaDBS的TEED较高，可能影响不同条件的平均arrhythmicity比较。",
+            "source_locator": "Results及Discussion段落。"
+          },
+          {
+            "domain": "运动学信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "说明使用shank IMU实时计算arrhythmicity，但没有报告本次实验的具体信号质量、运动伪迹剔除比例或有效数据比例。",
+            "source_locator": "Dear Editor，methods段落及Fig. 1A、C。"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "未详细报告IMU数据缺失、步态分割失败或无效时间窗处理。",
+            "source_locator": "Methods及Results段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "arrhythmicity是步态运动学指标，不是神经活动指标；平均值未按FOG事件、非冻结步态或冻结前阶段分别报告。",
+            "source_locator": "Dear Editor，methods及Results段落。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "仅1名患者，条件级均值不能提供患者间重复验证。",
+            "source_locator": "Methods及Results段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未见预注册统计分析计划，无法确认所有预设运动学指标均已报告。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是运动学步态指标，不是STN LFP beta power、beta burst duration或神经元放电。条件级平均值不能区分FOG期间、FOG前及非冻结步态期间的变化。没有事件对齐的神经分析，也没有患者级统计推断。作者还报告arrhythmicity随试验过程恶化，且KaDBS的TEED较高，可能影响条件间比较。",
+      "quote": "Arrhythmicity was 227.4% for OFF, 42.9% for olDBS, 43.2% for iolDBS, and 23.4% for KaDBS.",
+      "source_locator": {
+        "section": "Dear Editor，methods段落中arrhythmicity定义；Results段落中四条件数值",
+        "page": "1099–1101（具体句所在页未单独核定）",
+        "figure_table": "Fig. 1J",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37429355_E05",
+      "design": "单患者、受试者盲法的重复条件自身对照可行性研究；主观问卷比较四种刺激条件下患者感知的症状变化。",
+      "population": "1名71.7岁女性PD患者，病程17.4年，akinetic-rigid subtype，具有GI&FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "问卷没有事件级冻结记录，不以FOG事件数作为分析分母。主文未报告问卷具体量表、项目、评分及问卷完成时间。STN神经活动数据未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；没有具体FOG运动表型分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "短效PD药物停用至少12小时，无长效PD药物；practically OFF-medication。",
+      "DBS_state_and_parameters": "双侧STN DBS；OFF、olDBS、iolDBS、KaDBS；主动刺激频率140 Hz。KaDBS根据shank IMU运动学反馈调节刺激强度。KaDBS的TEED略高于其他ON DBS条件。",
+      "task": "四种刺激条件下完成SIP任务；随后采用participant-blinded questionnaire评价症状改善。问卷具体施测时间及完整程序未在主文报告。",
+      "recording_location": "没有STN神经记录报告；双侧STN导线用于刺激；本结局来自患者主观问卷。",
+      "measure": "患者对震颤、僵硬、平衡及FOG改善的主观感知；participant-blinded questionnaire。",
+      "frequency_and_analysis_window": "无神经频段或事件分析窗。主动DBS刺激频率140 Hz。问卷的具体评分时间、量表及计算方法未在主文报告。",
+      "finding": "只有KaDBS条件下，患者主观报告震颤、僵硬和平衡改善，并且患者认为FOG改善程度最大。其他条件没有获得相同程度的主观改善报告。",
+      "effect_estimate": "定性结果：KaDBS为唯一报告震颤、僵硬和平衡改善的条件，并被患者评价为FOG改善最大。没有报告量表分数、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "单患者主观问卷结果，n=1；没有群体统计分析，也没有事件级FOG记录。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者部分随机化重复条件研究适应性评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "ON DBS条件随机化，但随机序列及OFF条件顺序没有充分报告。",
+            "source_locator": "Dear Editor，methods段落。"
+          },
+          {
+            "domain": "受试者设盲与干预偏离",
+            "judgement": "some_concerns",
+            "reason": "参与者对刺激设置设盲，但没有报告问卷实施者是否设盲，以及不同条件下问卷评价的具体程序。",
+            "source_locator": "Dear Editor，methods及Results段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "问卷为单患者主观评价，主文没有提供量表名称、评分细节或具体数值。",
+            "source_locator": "Results段落；Supplementary Materials引用。"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有报告问卷各项目是否全部完成或是否存在缺失回答。",
+            "source_locator": "Results段落及补充材料引用。"
+          },
+          {
+            "domain": "时间效应及刺激剂量不平衡",
+            "judgement": "some_concerns",
+            "reason": "KaDBS的TEED略高于其他ON条件，可能影响主观症状改善的归因。",
+            "source_locator": "Results及Discussion段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文没有完整问卷、预设评价项目或预注册方案，无法判断是否存在选择性报告。",
+            "source_locator": "Results段落及Supplementary Materials引用。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "问卷结果只有一个患者，属于主观症状感知，不能替代视频确认或事件级FOG。主文没有提供问卷量表名称和具体评分，无法量化改善幅度。该结果不能说明STN神经活动与FOG之间的关系。KaDBS的TEED较高也是潜在混杂因素。",
+      "quote": "KaDBS was the only condition during which the participant perceived that her tremor, rigidity, and imbalance improved, and resulted in the greatest improvement in her FOG in a participant-blinded questionnaire.",
+      "source_locator": {
+        "section": "Dear Editor，Results段落最后部分",
+        "page": "1099–1101（具体句所在页未单独核定）",
+        "figure_table": null,
+        "supplement": "Supplementary Materials：问卷细节由主文引用，但本次未独立核查补充材料中的完整问卷及评分。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID37429355_E06",
+      "design": "单患者、部分随机化的重复条件自身对照可行性研究；对不同刺激条件下维持节律步进的时间进行描述性观察。",
+      "population": "1名71.7岁女性PD患者，病程17.4年，akinetic-rigid subtype，具有GI&FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 4,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "主文仅报告KaDBS下维持较规则步进超过70秒，没有给出其他刺激条件对应的精确持续时间。该观察不以冻结事件数作为统计分母。STN神经数据未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported；未报告具体FOG运动表型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "短效PD药物停用至少12小时，无长效PD药物；practically OFF-medication。",
+      "DBS_state_and_parameters": "双侧STN DBS；四种测试条件为OFF、olDBS、iolDBS及KaDBS；主动刺激频率140 Hz。KaDBS刺激强度根据实时shank IMU步态arrhythmicity调节；其TEED略高于其他ON DBS条件。",
+      "task": "Harnessed stepping in place，双力板，约90秒/条件。",
+      "recording_location": "无STN神经活动记录报告；小腿shank IMU用于实时步态运动学测量；双力板用于地面反作用力测量。",
+      "measure": "持续节律步进的观察性持续时间；不是STN神经振荡或FOG事件前神经变化指标。",
+      "frequency_and_analysis_window": "主动DBS频率140 Hz；KaDBS任务约90秒；作者报告超过70秒的节律步进观察，但未说明节律步进的定量判定阈值和时间窗。",
+      "finding": "作者观察到KaDBS条件下患者维持较规则步进超过70秒，且相较其他条件能够更长时间维持节律步进。其他条件的具体持续时间没有报告。",
+      "effect_estimate": "KaDBS：节律步进超过70秒；其他条件：仅报告相对较短，未给出具体秒数。无统计检验。",
+      "statistical_unit_and_method": "单患者、单条件运行的定性观察；没有正式统计检验、置信区间或患者级重复验证。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2-informed，针对单患者部分随机化重复条件研究适应性评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "ON DBS条件随机化，但OFF条件顺序及随机序列生成未充分报告。",
+            "source_locator": "Methods段落。"
+          },
+          {
+            "domain": "时间效应及刺激剂量不平衡",
+            "judgement": "some_concerns",
+            "reason": "试验过程中步态arrhythmicity恶化，且KaDBS的TEED较高。",
+            "source_locator": "Results及Discussion段落。"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "维持节律步进的时间为定性观察，未报告明确的节律判定标准和其他条件的对应持续时间。",
+            "source_locator": "Results段落。"
+          },
+          {
+            "domain": "缺失数据",
+            "judgement": "unclear",
+            "reason": "没有详细报告每个条件的有效步进数据比例或传感器数据缺失。",
+            "source_locator": "Methods及Results段落。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册方案或完整的节律维持时间分析计划。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "单患者观察无法提供独立患者重复，且其他条件的比较持续时间未定量报告。",
+            "source_locator": "Results段落。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "超过70秒的观察来自单患者SIP任务，其他条件没有提供可直接比较的持续时间数值。没有明确定义节律步进的量化阈值。该观察不能直接证明FOG前的STN神经活动变化，也不能外推至自然行走中的冻结事件。",
+      "quote": "Stepping was observed to be more rhythmic on KaDBS for over 70 seconds.",
+      "source_locator": {
+        "section": "Dear Editor，Results段落中KaDBS步态表现描述",
+        "page": "1099–1101（具体句所在页未单独核定）",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

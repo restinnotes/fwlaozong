@@ -1,0 +1,169 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:31275238
+题目: New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+年份: 2019
+全文：
+# New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease
+
+## Abstract
+Freezing of gait (FoG) is commonly observed in advanced Parkinson's disease (PD) and it is associated with reduced mobility, recurrent falls, injuries, and loss of independence. This phenomenon typically occurs as the effect of dopaminergic medications wears off (“off” FoG) but on rare occasions, it can also be observed during peak medication effect (“on” FoG). In this report, we present the case of a 65-year-old female with a 13-year history of akinetic-rigid idiopathic PD who developed recurrent episodes of “on” FoG after bilateral subthalamic nucleus deep brain stimulation (STN-DBS). She underwent STN-DBS for management of motor fluctuations, which resulted in a marked improvement in her motor symptoms. Within the next 6 months and after several programming sessions, the patient reported “on” FoG occurring regularly 1 h after taking levodopa and lasting a few hours. Accordingly, a repeated levodopa challenge showed that FoG resolved with either levodopa administration or STN stimulation alone, but the combination of both therapies induced recurrence of FoG in our patient. Subsequent management was complex requiring adjustments in levodopa dose and formulation along with advanced DBS programming.
+
+## Introduction
+
+Freezing of gait (FoG) is a common and disabling symptom in Parkinson's disease (PD) in which patients are unable to initiate or continue locomotion (1). It is defined as “brief, episodic absence or marked reduction of forward progression of the feet despite the intention to walk” (2). It appears at the initiation of gait or during locomotion resulting in the inability to lift the feet from the floor and trembling of the legs (3). This complex motor phenomenon can occur at any point in the course of the disease, but it is more commonly observed in advanced PD (1, 4). FoG is frequently observed at the end of dose or “off” medication state, as the dopaminergic medication effect is wearing off. Less frequently, FoG might occur during peak medication effect or “on” medication state (5–7).
+
+Subthalamic nucleus deep brain stimulation (STN-DBS) is a well-established therapy for motor fluctuations and PD symptoms including akinesia, rigidity, and tremor. However, the efficacy of STN-DBS on axial symptoms such as FoG, postural instability, and gait impairment has been inconsistent with conflicting reports (8, 9). Although STN-DBS frequently improves levodopa-responsive symptoms including FoG (10), there are reported cases of persistent or even worsening FoG after DBS surgery (8, 11). Additionally, acute FoG can be induced by STN-DBS, possibly related to the disruption of afferent fibers from the pedunculopontine nucleus (PPN) to STN (12).
+
+There is limited information regarding the occurrence of FoG due to the simultaneous use of levodopa and STN-DBS. We describe a case in which levodopa and STN-stimulation independently resolved “off” FoG, however, the combined effect of both therapies consistently induced “on” FoG that required further medication adjustments and advanced DBS programming. Lastly, we also discuss the potential neuroanatomic mechanisms responsible for this unique interaction.
+
+## Case Presentation
+
+A 65-year-old female with a 13-year history of akinetic-rigid idiopathic PD presented with worsening parkinsonism, motor fluctuations, and “off” FoG. Early in the disease course, treatment with levodopa and selegiline resulted in excellent therapeutic benefit. Eight years after the diagnosis, unpredictable motor fluctuations, “off” dystonia, lower extremities peak-dose dyskinesia, and “off” FoG became increasingly difficult to manage with medical therapy. In preparation for DBS, after an overnight withdrawal of dopaminergic medications, a levodopa challenge test with 400 mg levodopa (13) showed a 72% improvement in her total Movement Disorder Society Unified Parkinson's Disease Rating Scale (MDS-UPDRS; 14) motor score from (55 points in the off-medication (off-med) state to 15 points in the on-medication (on-med) state). Importantly, the item 3.11 of MDS-UPDRS (FoG score) improved from 4 to 0.
+
+After a multidisciplinary assessment, the patient underwent bilateral placement of STN-DBS leads (3389, Medtronic, Minneapolis, Minnesota USA; Figure 1A). This provided an excellent clinical response with adequate thresholds for side effects, corticospinal side effects around 3–4V in all contacts. Dyskinesia of the left foot was noted with the programming of left contacts 0 and 1, and generalized dyskinesia with right contact 9. Three months after surgery, motor symptoms continued to be improved with stable stimulation parameters: amplitude 3.0 V, pulse width 60 μs, frequency 130 Hz in monopolar mode bilaterally with left STN (C+;2-) and right STN (C+;10-) (Figure 1B). The motor MDS-UPDRS score decreased to 37 points in the off-medication and on-stimulation (off-med/on-stim) condition (33% improvement). Subsequently, within 6 months after surgery, the patient reported a consistent appearance of “on” FoG, after taking medications and lasting several hours. It should be noted that preoperatively, the patient had only “off” FoG. Multiple programming sessions and attempts of double monopolar stimulation using different amplitudes (Figure 1C) provided transient benefit in her FoG.
+
+[fig F1] (A) Bilateral STN lead location, the STN (orange), globus pallidus internus (light green), globus pallidus externus (light blue), and red nucleus (red) are shown for reference; (B) Volume of tissue activated (VTA) in the initial programming setting (red), L-STN (C+;2-), R-STN (C+;10-), 60 us pulse width, 130 Hz frequency, and 3.0 V; (C) VTA in the second programming setting (dark blue): L-STN (C+;1-;3-), R-STN (C+;9-;11-), 90 us pulse width, 130 Hz frequency, and 2.0V; (D) VTA in the final programming setting (green): L-STN (C+;2-), R-STN (C+;10-), 90 us pulse width, 60 Hz frequency, and 4.5 V.
+
+In order to determine whether FoG was caused by neurostimulation or dopaminergic medications, the levodopa challenge test with a same dosage as pre-operation was repeated in the on-stimulation (on-stim) and off-stimulation (off-stim) conditions. Patient's MDS-UPDRS FoG score was 2 in the off-med/on-stim state and 4 in the off-med/off-stim state. Once stimulation was turned off, the patient developed a recurrence of FoG which gradually improved after levodopa (FoG score improved from 4 to 1), along with other axial symptoms (Figure 2). The FoG was reproducibly improved either by levodopa (on-med/off stim) or neurostimulation (off-med/on-stim). In the on-med/on-stim state, the patient developed persistent, severe FoG and gait difficulties for several hours after levodopa intake [FoG score increased from 2 to 4 with the axial score from 22 to 27] (Figure 2).
+
+[fig F2] MDS-UPDRS sub-scores of levodopa challenge test. (A) FoG and axial scores of levodopa challenge test in the off-stimulation state. (B) FoG and axial scores of levodopa challenge test in the on-stimulation state. FoG score: MDS-UPDRS item 3.11; Axial score: the sum of MDS-UPDRS item 3.1 (speech), 3.2 (facial expression), 3.3 (neck), 3.9 (arising from chair), 3.10 (gait), 3.11 (FoG), 3.12 (posture stability), 3.13 (posture), and 3.14 (body bradykinesia); Total score: MDS-UPDRS part III total score. Stimulation parameters: L-STN (C+;1-;3-), R-STN (C+;9-;11-), 90 us pulse width, 130 Hz frequency, and 2.0 V. MDS-UPDRS, Movement Disorder Society Sponsored Revision of the Unified Parkinson's Disease Rating Scale; FoG, freezing of gait.
+
+We determined that the summative effect of electrical stimulation and dopaminergic stimulation induced “on” FoG, similar to previously reported FoG induced by supratherapeutic levodopa doses (7). Initial management strategies included reduction of levodopa dose and the use of extended-release preparations with partial improvement in FoG. We then adjusted the stimulation and applied low-frequency settings as follows: Left STN (C+;2-), Right STN (C+;10-), amplitude 4.5 V, pulse width 90 μs, and frequency 60 Hz (Figure 1D). At 1-year post-operation follow-up, her FoG scores were significantly improved in both the medication on and off states (FoG score improved from 4 to 1).
+
+In order to localize the specific anatomical electrode positioning and determined the volume of tissue activated (VTA), patient's pre-operative T1-weighted magnetization prepared rapid gradient echo (MP-RAGE) images were co-registered to her post-operative high-resolution CT scan prior to normalization to the Montreal Neurological Institute (MNI) template space using the Lead-DBS software package (14). The STN was localized by means of the DBS Intrinsic Template Atlas (DISTAL) (15). Lead-DBS was utilized to simulate VTAs for all presented DBS programming settings using a tissue-specific conductivity model (14), which were used as seed volumes for deterministic tractography in DSI Studio (http://dsi-studio.labsolver.org/). A group-averaged diffusion dataset concatenated from 1,065 normative datasets in the Human Connectome Project database (https://db.humanconnectome.org) was utilized for fiber tracking. A total of 5,000 tracts were generated from each VTA and fiber counts were measured to target regions in the Automated Anatomical Labeling (AAL) atlas (16) and the cerebellar spatially unbiased atlas template (SUIT) (17).
+
+The fiber tracking generated from the different VTAs of the three programming settings revealed overall greater connectivity between the left VTAs to the medial frontal gyrus, supplementary motor area (SMA), and multiple regions of the cerebellum when compared to the right VTA. Notably, there was a decrease in the connectivity of the left VTA and these regions during the improvement of “on” FoG (Figure 3). According to these findings, we hypothesize that the changes in the neuro-connectivity affecting the prefrontal cortex (PFC) and cerebellum in the setting of the combination of neurostimulation and levodopa lead to the occurrence of “on” FoG.
+
+[fig F3] Fiber tracking from different VTAs of three programming settings. VTA, volumes of tissue activated; Frontal Sup, superior frontal gyrus; Frontal_Sup_Med, medial frontal gyrus; SMA, supplementary motor area. The initial, second, and final programming settings are referred to Figure 1.
+
+## Discussion
+
+We present a case of unanticipated, acute, reproducible “on” FoG caused by the combined effect of levodopa and STN-DBS. FoG might occur following STN-DBS or be related to disease progression (4), but to the best of our knowledge, there are no reports of “on” FoG caused by the combination of medications and DBS. Most commonly, “on” FoG is observed as a consequence of disease progression, limited management of parkinsonism and suboptimal placed leads (18). Several cases of acute “on” FoG after DBS have been reported, which may be related to the DBS electrode passing through the fields of Forel and subsequently damaging the afferent fibers from the PPN to STN (12).
+
+There are additional reports of lateralized stimulation-induced freezing and hesitant gait following bilateral STN placement. Specifically, FoG increased significantly with either left or bilateral stimulation, while FoG decreased with right STN stimulation alone or when bilateral stimulation was turned off. It was revealed that anteromedial placement of the left electrode compared to the planned target, possibly affecting the projections from the globus pallidus to PPN increasing FoG (19). High-frequency stimulation in the STN area (i.e., a region encompassing the STN, the ZI, and the fields of Forel) can selectively worsen on-med akinesia and gait while simultaneously improving rigidity and tremor (20). For this patient, no differences were seen with individual left or right DBS programming changes. Based on postoperative MRI, the left lead was slightly anterior compared to the right lead (Figure 1A). This supports prior reports suggesting that stimulation-induced akinesia and worsening gait were associated with stimulation in the most dorsal and anterior STN (21).
+
+Based on our fiber tracking assessment, decreasing connectivity of the left VTA with the SMA, PFC, and cerebellum corresponded to improvement in the “on” FoG. We hypothesize that the PFC and cerebellum are the key areas that are involved in triggering “on” FoG in the setting of levodopa intake and high-frequency STN neurostimulation. The PFC is highly sensitive to a high dopaminergic environment given a large number of dopamine receptors that are present (22). Excessive dopaminergic stimulation can also cause deleterious effects on PFC function because of its inverted-U-shaped action (22, 23) as the threshold for FoG is not a linear phenomenon like dyskinesia (24, 25). Furthermore, long-term supratherapeutic levodopa is capable of influencing the frontal area function. It has been postulated that negative effects of levodopa on frontal executive functions can contribute to the occurrence of levodopa-induced FoG, although relatively uncommon, has been well-documented in selected cases (26, 27). Thus, it may be helpful to reduce the effects of dopamine on the PFC as seen in our patient by smoothing out the drug regimen, reducing dose-related peaks, and potentially reducing the overall daily levodopa dose.
+
+Another study revealed that patients with “on” FoG had less activation of the posterior parietal cortex and less deactivation of the dorsolateral PFC and thalamus, and increase activation in the supplementary motor area (28). The supplementary motor area has direct projections to the STN responsible for strong inhibition of a planned action (29, 30) and is strongly activated during real FoG episodes (31). Several studies have shown that STN-DBS can improve the levodopa-responsive FoG, but has limited effect on “on” FoG (25). Moreover, degeneration of the prefrontal and frontal cortex may explain the levodopa-resistance symptoms and worsening of gait and FoG caused by stimulation of descending connections to the PPN.
+
+Our study provides additional information by suggesting an important role of the cerebellum. Recent work has emphasized the tight interplay between the cerebellum and the basal ganglia (32, 33). Cerebellar activity is increased in PD patients, and hyperactivation in the cerebellum may be a compensatory mechanism for defective basal ganglia input (34–36). Based on these findings, medial cerebellum and its connections might be critical for balance and gait control in PD (37, 38). Experimental evidence point to the importance of the cerebellum locomotion region (CLR) in gait control, a region which exists in the midline of the cerebellum (39). Functional reorganization within the locomotor network which contains the SMA, the mesencephalic and the cerebellar locomotor regions has also been described in PD-FoG (40). More recently, Fasano et al. mapped lesions causing FoG using a common brain atlas, they observed that lesions to multiple different brain areas causing FoG were part of a common functional network connected to a focal area in the dorsal medial cerebellum, corresponding to the CLR (41). They suggested that lesion-induced FoG which is likely the “resistant” or “unresponsive” subtype (42), may be more likely to occur when lesions disrupt the medial cerebellum connections. In addition to the CLR, the mesencephalic locomotor region (MLR) is clearly important for gait, and its PPN component plays a part role in gait and postural control in patients with PD (23). Although we were unable to assess other subcortical connectivity in our case, future studies are necessary to delineate the relationship between “on” FoG and brain connectivity.
+
+## Conclusions
+
+According to our findings, we conclude that the interaction of impulsive dopaminergic stimulation and high-frequency STN stimulation could induce “on” FoG. The PFC and cerebellum might be the key areas that the combination of medication and STN-DBS effect to trigger this motor phenomenon. Nevertheless, few cases have been reported describing this association and assessing the mechanism of “on” FoG and further studies are required to confirm potential brain network connectivity patterns.
+
+## Data Availability
+
+The datasets generated for this study are available on request to the corresponding author.
+
+## Ethics Statement
+
+All procedures were approved by the Ethics Committee of Xuanwu Hospital of Capital Medical University. The subject gave written informed consent in accordance with the Declaration of Helsinki. And she gave written informed consent for publication of this report as well.
+
+## Author Contributions
+
+SM and AR-Z were the major contributors in writing the manuscript. PC, YZ, JL, and SM contributed to the diagnosis and treatment of the patient. EM contributed to the image analysis. LA, WH, AR-Z, and PC contributed to checking the manuscript. All authors read and approved the final manuscript.
+
+### Conflict of Interest Statement
+
+The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.

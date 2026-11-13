@@ -1,0 +1,69 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "DOI:10.1101/2023.02.27.529710",
+      "design": "计算建模研究；引言同时转述既往临床研究[8–10]，但本文未开展新的临床试验。",
+      "population": "引言所述既往帕金森病患者；本文未提供这些既往研究的具体患者分组、FOG诊断标准或样本构成。",
+      "n": "本文未报告引言所引用临床研究的样本量。",
+      "condition": "既往研究中同时STN+SNr DBS与标准STN DBS的比较。本文没有在该处具体说明药物状态、刺激参数、刺激持续时间、步态任务或FOG患者分层标准。",
+      "measure": "FOG症状改善；本文未说明具体临床量表或步态测量指标。",
+      "finding": "作者在引言中明确指出，既往研究显示同时刺激STN和SNr在改善FOG症状方面优于标准STN DBS。这是本文对既往临床证据的概括，不是本文直接获得的患者临床结果。",
+      "effect": "定性结果：STN+SNr DBS优于单独STN DBS；本文没有提供效应量、置信区间或统计检验结果。",
+      "limitations": "属于对既往研究的二手概述，不能替代原始临床研究数据。本文未交代相关研究的患者样本量、药物状态、FOG分型、刺激参数及任务范式，因此无法判断不同研究条件是否影响这一比较结果。作者同时指出，SNr刺激可能伴随运动不能加重及情绪方面的不良反应。",
+      "quote": "simultaneous deep brain stimulation of STN and SNr (STN+SNr DBS) outperforms standard STN DBS in improving FoG symptoms.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2023.02.27.529710",
+      "design": "计算建模研究；基于有向带符号皮层-皮层下网络和确定性三状态SER（susceptible-excited-refractory）模型。",
+      "population": "非临床患者研究；构建包含基底节、皮层、丘脑和脑干区域的FOG网络模型，STN作为其中一个独立脑区节点。",
+      "n": "12个脑区节点；每个节点有S、E、R三种状态，共穷举3^12=531441种初始状态。不是患者样本量。",
+      "condition": "比较健康网络与PD网络。PD状态通过将所有源自黑质致密部（SNc）的连接权重设为0模拟，代表多巴胺能输入丧失。此项比较没有施加DBS，也没有模拟具体药物状态或步态任务。",
+      "measure": "网络图论指标，包括节点介数中心性、平均聚类系数、平均介数中心性、最大介数中心性、平均最短路径长度、介数中心性的标准差，以及Leiden社区划分。",
+      "finding": "PD网络与健康网络相比，SNc和SNr的介数中心性分别下降，PPN和皮层的介数中心性上升。PD网络的平均聚类系数、平均介数中心性和平均最短路径长度降低，而最大介数中心性和介数中心性标准差升高。社区数量由健康状态的2个增加到PD状态的3个。作者认为PD网络拓扑可能促进同步化，同时表现出网络结构碎片化。这是FOG相关网络层面的结果，并非STN神经元放电的直接测量。",
+      "effect": "健康→PD：SNc介数中心性下降0.04，SNr下降0.02；PPN上升0.01，皮层上升0.02。社区数量2→3。平均聚类系数、平均介数中心性及平均最短路径长度下降；最大介数中心性及其标准差上升。",
+      "limitations": "作者指出网络拓扑是SER模型中影响动力学结果的最重要参数，初始网络拓扑的选择会显著影响模拟结果。网络连接依据解剖学文献和Allen小鼠脑连接图谱构建，连接权重采用二值化的+1或-1。PD通过完全切断SNc的所有输出连接模拟，不能代表患者实际的多巴胺耗竭程度或复杂神经活动。模型没有患者数据、FOG发作记录或STN电生理记录，不能直接建立STN神经活动与FOG发作的患者层面相关性。论文为尚未经过同行评审的bioRxiv预印本。",
+      "quote": "Thus, the PD FoG network topology appears to promote synchronized dynamics while having a more disconnected structure.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2023.02.27.529710",
+      "design": "计算建模研究；确定性SER网络动力学模型，穷举不同网络状态下的全部初始条件。",
+      "population": "非临床患者研究；12脑区节点的PD-FOG网络模型，包含STN、SNr、GPi、GPe、纹状体、皮层、丘脑及脑干区域。",
+      "n": "12个节点，531441种初始状态；PD和STN DBS配置分别进行全初始状态动力学分析。",
+      "condition": "先建立PD网络，再将所有源自STN的连接权重设为0，模拟单独STN DBS。作者采用virtual lesion假说，将高频DBS对局部神经元的抑制作用等效为刺激靶点输出连接的断开。未模拟实际刺激频率、幅度、药物状态或运动任务。",
+      "measure": "SER模型的吸引子动力学，包括固定点（fixed points）、周期为3的极限环（period-3 limit cycles）、吸引域大小及最大吸引子的占比；同时考察基底节节点活动之间的相关性。",
+      "finding": "STN DBS使网络的动力学景观发生改变。PD状态下，固定点占全部初始条件的70%，周期3极限环占30%；STN DBS状态下，固定点增加至90%，周期3极限环减少至10%。但在所有极限环构成的空间内，最大吸引子的占比仅从PD状态的35%下降到31%。作者认为，这可能反映STN DBS通过entrainment（牵引或同步化）使基底节放电模式趋于规律，而不是完全消除异常同步。作者还指出，STN DBS状态下最大吸引子中的基底节核团活动高度相关。",
+      "effect": "PD→STN DBS：固定点比例70%→90%；周期3极限环比例30%→10%；极限环空间中最大吸引子的占比35%→31%。极限环总数量由158367减少至54882，独特极限环数量由56减少至8。",
+      "limitations": "作者明确承认SER模型较为简化，并非用于模拟真实神经元放电模式，生物学真实性是否足够仍是开放问题。STN DBS被简化为STN所有输出连接断开，不能代表真实高频刺激对神经元、轴突及网络振荡的复杂影响。最大吸引子占比的变化没有提供统计显著性检验。模型中的活动相关性不能直接等同于患者STN局部场电位或单神经元放电同步性，也没有测量刺激前后的实际FOG严重程度。",
+      "quote": "During the STN DBS, the amount of limit cycle space taken up by the attractor with the largest basin of attraction does not fall significantly (31%).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2023.02.27.529710",
+      "design": "计算建模研究；比较STN DBS与STN+SNr DBS对PD-FOG网络吸引子空间和功能连接模式的影响。",
+      "population": "非临床患者研究；同一12脑区节点的皮层-皮层下FOG网络模型。",
+      "n": "12个脑区节点；每种网络配置穷举531441种初始状态。",
+      "condition": "在PD网络基础上分别建立两种刺激配置：单独STN DBS将所有源自STN的连接权重设为0；STN+SNr DBS将所有源自STN和SNr的连接权重均设为0。两种配置均采用虚拟损毁假说模拟DBS。",
+      "measure": "比较不同配置下固定点、周期3极限环、独特极限环数量、最大吸引子占比，以及网络共激活矩阵（coactivation matrix）与健康网络的1-范数距离。",
+      "finding": "STN+SNr DBS与单独STN DBS产生不同的网络动力学结果。STN+SNr DBS状态下周期3极限环占全部初始条件的46%，明显高于单独STN DBS的10%；但最大极限环在极限环空间中的占比为15%，低于单独STN DBS的31%。STN+SNr DBS还产生36个新的极限环，占其全部极限环的66%。在功能连接方面，STN+SNr DBS的共激活矩阵比PD状态更接近健康状态，而单独STN DBS没有表现出同样的变化。作者认为，联合刺激更多地将网络引导到新的动力学状态，而非简单恢复正常网络活动。",
+      "effect": "STN+SNr DBS与STN DBS比较：固定点比例54% vs 90%；周期3极限环比例46% vs 10%；独特极限环数量53 vs 8；最大极限环占极限环空间的比例15% vs 31%。STN+SNr DBS产生36个新极限环，占其极限环总数的66%。联合刺激的共激活矩阵与健康状态更加相似。",
+      "limitations": "上述结果全部来自计算模拟，不能证明联合刺激在患者中产生相同的神经活动变化或临床疗效。作者指出，DBS状态的动力学景观并不等同于健康状态的完全恢复，而可能形成新的平衡状态。模型将刺激解释为靶点输出连接断开，没有纳入实际刺激参数、药物状态、步态任务和患者间差异。共激活矩阵反映模型节点E状态的同时出现，不能直接等同于实测功能连接。",
+      "quote": "Indeed, the STN+SNr DBS coactivation matrix is more similar to the healthy state coactivation matrix relative to the PD configuration. On the other hand, the STN DBS coactivation matrix does not exhibit this behavior.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "DOI:10.1101/2023.02.27.529710",
+      "design": "计算建模研究；基于SER模型的投射特异性神经活动传播分析。",
+      "population": "非临床患者研究；包含STN、SNr、基底节、皮层及脑干结构的12节点PD-FOG网络模型。",
+      "n": "12个脑区节点；比较健康、PD、STN DBS和STN+SNr DBS四种网络配置。",
+      "condition": "在PD网络上分别模拟单独STN DBS和STN+SNr DBS。使用刺激前后的网络投射活动与健康状态进行比较。兴奋性投射采用将靶区活动向后移动一个时间步的共激活矩阵；抑制性投射采用排除瞬态阶段后的同步共激活矩阵。",
+      "measure": "基于不同脑区投射的共激活矩阵计算1-范数距离，判断DBS状态下的活动传播模式更接近健康状态还是PD状态。重点考察脑干投射及其活动传播。",
+      "finding": "两种DBS配置均表现出整体神经活动传播的部分正常化。但是，在兴奋性脑干投射的正常化方面，STN+SNr DBS具有单独STN DBS不具备的优势，具体涉及LC→PRF、PRF→LC、PRF→PPN和LC→皮层投射。与此同时，STN DBS对其他一些特定投射表现出更有利的效果。作者据此认为，联合刺激的优势可能与脑干输出和MLR相关活动传播的正常化有关，而不只是基底节内部活动的改变。",
+      "effect": "STN+SNr DBS独有的兴奋性投射正常化：LC-PRF、PRF-LC、PRF-PPN、LC-Ctx。两种刺激均能改善部分投射的活动传播，但具体投射的改善方向并不完全相同。STN DBS对部分其他投射更有利，提示不同刺激靶点可能具有投射特异性的网络效应。",
+      "limitations": "作者的传播分析基于SER模型节点状态及其时间关系，而不是患者的实测神经电生理信号。兴奋性投射和抑制性投射采用不同的共激活矩阵处理方法，结果依赖模型设定和既定网络连接拓扑。研究没有直接记录MLR、STN或脑干区域的神经放电，也没有在真实FOG发作期间检验这些投射变化。因此，不能据此确定脑干投射正常化是否为临床FOG改善的必要或充分条件。作者承认模型不旨在产生真实神经元放电模式，且初始网络拓扑选择会影响模拟结果。",
+      "quote": "for the normalization of excitatory propagation along the brainstem projections, the STN+SNr DBS is exclusively effective (purple squares for the LC-PRF, PRF-LC, PRF-PPN, LC-Ctx projections).",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

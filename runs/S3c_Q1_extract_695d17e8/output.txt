@@ -1,0 +1,194 @@
+<escape>{
+  "publication": {
+    "ref": "DOI:10.64898/2026.08.13.744293",
+    "title": "Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson's disease",
+    "publication_status": "preprint",
+    "version_of_candidate": null,
+    "study_id_candidate": "Beaudoin_2026_STN_beta_burst_entropy_reanalysis",
+    "cohort_id_candidate": "possible_overlap_Thenaisie_2022_STN_gait_dataset",
+    "cohort_relation_basis": "本文Methods明确说明，分析的是Thenaisie et al. 2022（DOI:10.1126/scitranslmed.abo1800）此前发表的数据集中的4名帕金森病患者STN记录；Data availability再次指明原始数据来自Thenaisie et al.。因此，数据集层面的队列重叠有明确依据，但本研究与原始研究属于不同的分析工作，不能视为独立患者队列或独立重复验证。原文未提供逐患者对应关系。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "E01_prefreeze_stable_shannon_entropy",
+      "design": "基于既有患者STN-LFP步态记录的观察性、受试者内重复测量再分析。比较与随后FOG事件相关的转弯和非冻结相关稳定转弯。",
+      "population": "4名帕金森病患者；使用Thenaisie et al. 2022已发表数据集。具体年龄、性别、病程及临床特征在本文引用的Table S1中，但该补充材料未包含在所提供PDF中。",
+      "n_enrolled": null,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 176,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：本文为既有数据再分析，未报告本分析重新招募人数或原始队列招募分母；n_patients_with_FOG：未明确报告4人中各自实际发生FOG的人数；n_trials：未报告；n_electrodes_contacts：仅报告每个session选取一个STN contact，但未报告session总数，因此无法计算总触点数。176为FOG事件数，不是患者数、试次数或转弯数。",
+      "endpoint_class": "unclear",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "Freezing of gait (FOG)；未报告akinetic、trembling-in-place、kinetic-no-trembling等具体亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；主文未报告本次记录时Med-On/Med-Off状态、药物剂量及给药时间。",
+      "DBS_state_and_parameters": "unknown；未报告临床DBS状态、测试刺激开关状态、频率、幅度、脉宽、触点配置或方向性参数。",
+      "task": "步态中的转弯。Pre-freeze turn定义为每个turn-freeze cluster中第一个freeze bout之前的转弯；stable turn定义为与冻结事件不相邻的转弯。",
+      "recording_location": "STN local field potential (LFP)。每个session选择beta power最高的单个STN contact作为分析通道；具体左右侧、STN亚区及session数量未报告。",
+      "measure": "STN beta burst timing的Shannon entropy。依据每个行为bout内beta burst midpoint times的分布计算。低beta和高beta分别分析。",
+      "frequency_and_analysis_window": "Low beta和high beta；具体Hz频段边界未在所提供主文中报告。Beta burst通过带通滤波信号的Hilbert envelope及75th percentile阈值识别，并采用最小持续时间标准；最小持续时间数值未报告。根据burst midpoint确定行为状态，熵在单个行为bout内计算。分析窗口为pre-freeze turn或stable turn对应的bout。",
+      "finding": "与stable turns相比，pre-freeze turns中的Shannon entropy在高、低beta频段均降低。高beta：p=0.00186；低beta：p=0.000567。报告的熵差为Δ=0.611±0.282。调整bout duration后，差异仍显著（线性混合效应模型β=-0.529，p=0.0027）；bout duration本身与entropy无显著关联（β=0.047，p=0.561）。Condition与beta sub-band之间无显著交互作用（p=0.693）。Figure 1说明，一名患者因pre-freeze低beta数据不足，被排除在该低beta比较之外。",
+      "effect_estimate": "高beta：p=0.00186；低beta：p=0.000567；Δ=0.611±0.282（原文未在主文明确说明±代表SD还是SEM）；调整bout duration后的β=-0.529，p=0.0027；bout duration β=0.047，p=0.561。未报告置信区间。",
+      "statistical_unit_and_method": "以individual turning episodes/clusters进行比较；采用线性混合效应模型调整bout duration；图中同时显示患者内数值。患者数为4，具体转弯bout及cluster数量未报告。不能将176个FOG事件直接当作独立统计样本数。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅分析既有数据集中的4名患者；主文未充分说明这4人的选择标准及其相对于原始队列的代表性。",
+            "source_locator": "Methods，第2页；Table S1未包含在所提供PDF中。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "unclear",
+            "reason": "定义了turn-freeze clusters及pre-freeze turns，但主文未明确说明FOG事件由视频、临床评审还是独立运动学系统确认，不能据此确认行为标签验证方式。",
+            "source_locator": "Methods，第2页；Results，第2页。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "unclear",
+            "reason": "报告了75th percentile burst阈值及Hilbert envelope，但主文没有充分说明运动伪迹剔除、信号质量控制及伪迹敏感性分析。",
+            "source_locator": "Methods，第2页；补充方法未随PDF提供。"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "药物状态、DBS测试刺激状态及其他临床混杂因素未在主文报告。该分析对bout duration进行了调整，但不能据此认为其他混杂因素已得到控制。",
+            "source_locator": "Methods，第2页；Results，第2页。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者内存在多个转弯episode和cluster，样本仅4名患者。熵分析采用混合效应模型，但主文未提供全部模型结构及各患者episode数量，不能充分评估所有重复测量处理。",
+            "source_locator": "Methods，第2页；Results，第2页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析两个beta子频段及多种burst指标。主文明确说明PAC分析进行了多重比较校正，但未充分交代本熵比较对应的完整校正策略。",
+            "source_locator": "Results，第2至3页。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条为状态间熵差异分析，不是预测模型性能结果；不适用于本条关联效应的直接判断。",
+            "source_locator": "Results，第2页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供可供核对的预注册分析方案；补充方法和补充结果未包含在所提供PDF中，无法完整核查分析方案与报告结果的一致性。",
+            "source_locator": "Methods，第2页；Data availability，第7页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "仅4名患者；一名患者未进入pre-freeze低beta比较；具体beta频段边界、bout数量及补充分析方法缺失。FOG行为标签的确认方式未在主文明确说明，因此不能确定属于视频或临床确认的自然冻结事件。Pre-freeze turn是与随后冻结事件在同一cluster中关联的转弯，不等同于具有固定提前时间窗的前瞻性预测。该分析复用了Thenaisie et al. 2022数据，不构成独立队列验证。",
+      "quote": "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands",
+      "source_locator": {
+        "section": "Results - Reduced entropy precedes freezing and predicts freezing onset；Methods",
+        "page": "2",
+        "figure_table": "Figure 1B，第4页",
+        "supplement": "正文提及Supplementary Material，但所提供PDF不包含补充材料。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E02_prefreeze_stable_lempel_ziv_complexity",
+      "design": "基于既有患者STN-LFP步态记录的观察性、受试者内重复测量再分析；比较pre-freeze turns与stable turns。",
+      "population": "4名帕金森病患者；Thenaisie et al. 2022既有数据集的再分析。",
+      "n_enrolled": null,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 176,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：既有数据再分析，未报告原始招募分母；n_patients_with_FOG：未明确报告患者级FOG人数；n_trials：未报告；n_electrodes_contacts：每session选一个contact，但session数量未知。低beta分析另有一名患者因pre-freeze数据不足而被排除。",
+      "endpoint_class": "unclear",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "FOG；未报告具体临床冻结亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；未报告Med-On/Med-Off及剂量、给药时间。",
+      "DBS_state_and_parameters": "unknown；未报告临床DBS状态及测试刺激参数。",
+      "task": "步态中的转弯；比较同一turn-freeze cluster中第一个freeze bout之前的pre-freeze turn与不邻近冻结的stable turn。",
+      "recording_location": "STN LFP；每session选择beta power最高的单个STN contact。",
+      "measure": "Lempel-Ziv complexity；对inter-burst intervals进行二值化后计算时间序列复杂度。低beta和高beta分别分析。",
+      "frequency_and_analysis_window": "Low beta和high beta，具体Hz边界未报告。Beta bursts通过Hilbert envelope、75th percentile阈值及最小持续时间标准识别；Lempel-Ziv复杂度从每个行为bout内二值化的inter-burst interval序列计算。具体二值化规则及窗口长度未在主文报告。",
+      "finding": "与stable turns相比，pre-freeze turns的Lempel-Ziv complexity增加。原文报告增加值为0.222±0.087；高beta p=0.000621，低beta p=0.00723。Condition与beta sub-band之间无显著交互作用（p=0.725）。该结果与Shannon entropy降低同时出现，但两者属于不同的时间结构指标，不能合并解释为同一个entropy变化。",
+      "effect_estimate": "报告值0.222±0.087（主文未明确说明±的统计含义）；高beta p=0.000621；低beta p=0.00723；condition×sub-band交互作用p=0.725。未报告置信区间。",
+      "statistical_unit_and_method": "individual turning episodes/clusters；患者内比较。具体每位患者的episode数量、Lempel-Ziv比较所用统计检验及完整模型结构未在主文报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理研究领域级偏倚评估清单",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅4名患者，且为既有数据集的选择性再分析；选择标准未在主文完整交代。",
+            "source_locator": "Methods，第2页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "unclear",
+            "reason": "pre-freeze定义依赖turn-freeze cluster，但主文没有明确报告冻结事件的独立确认及行为标注验证方式。",
+            "source_locator": "Methods，第2页；Results，第2页。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "unclear",
+            "reason": "主文报告burst检测阈值，但未充分报告运动伪迹处理、信号质量及二值化前的数据质量控制。",
+            "source_locator": "Methods，第2页。"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "药物、DBS刺激状态和其他临床因素未报告；无法判断Lempel-Ziv差异是否受这些因素影响。",
+            "source_locator": "Methods，第2页。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多个行为bout嵌套于4名患者；主文未提供该指标的完整统计模型及患者内相关性处理细节。",
+            "source_locator": "Methods，第2页；Results，第2页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时检验低、高beta及多个时间结构指标，主文未充分说明该指标对应的多重比较校正策略。",
+            "source_locator": "Results，第2页。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条报告复杂度的状态比较，而非该指标的独立预测模型结果。",
+            "source_locator": "Results，第2页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "缺少预注册方案及补充方法，无法核对所有复杂度分析是否均已完整报告。",
+            "source_locator": "Methods，第2页；Data availability，第7页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "4名患者，低beta比较有一名患者因数据不足被排除；Lempel-Ziv二值化规则和具体参数未在主文报告。该指标增加与Shannon entropy降低同时发生，提示两个指标对时间结构的表征不同，但本研究不能单凭这两个指标确定具体神经机制。",
+      "quote": "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased during pre-freeze turns",
+      "source_locator": {
+        "section": "Results - Reduced entropy precedes freezing and predicts freezing onset",
+        "page": "2",
+        "figure_table": "Figure 1C，第4页",
+        "supplement": "Supplementary Material未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

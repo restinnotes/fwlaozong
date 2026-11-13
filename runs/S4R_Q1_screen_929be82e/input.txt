@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: DOI:10.21203/rs.3.rs-6862985/v1
+题目: Kinematics during turning differs in Parkinson’s disease patients with and those without freezing of gait
+年份: 2025  类型: Preprint
+摘要: Abstract  Turning exacerbates gait difficulties and can trigger freezing of gait (FOG) in Parkinson’s disease (PD), yet its underlying mechanisms remain poorly understood. We investigated spatiotemporal gait parameters during turning in 10 healthy elderly controls, 10 PD patients without FOG (PD-P), and 10 PD patients with FOG (FOG-P), analyzing turns at 90°, 180°, and 360° using a Bayesian generalized linear model. PD-P patients showed decreased stride width in the internal leg and increased width in the external leg, while FOG-P patients exhibited reduced step and stride lengths bilaterally. Both PD groups predominantly used a step-out or mixed-turning strategy and required more time and steps to complete larger amplitude turns. Notably, PD-P struggled with mediolateral adjustments, whereas FOG-P faced challenges with anteroposterior adaptations. These findings enhance our understanding of turning-related gait impairments in PD and FOG, with implications for personalized rehabilitation and future study designs.
+
+---
+
+pid: DOI:10.21203/rs.3.rs-7814436/v1
+题目: Identifying Neural Tipping Points of Freezing of Gait in Parkinson’s Disease: An EEG-Based Early Warning and Closed-Loop Stimulation Study
+年份: 2025  类型: Preprint
+摘要: Abstract    Objective:  To investigate whether scalp electroencephalographic (EEG) early-warning markers can predict freezing of gait (FoG) in Parkinson’s disease (PD) and to evaluate the therapeutic effects of a non-invasive closed-loop neuromodulation approach.  Methods:  We retrospectively reviewed 100 PD patients with clinically confirmed FoG. Patients with prior deep brain stimulation (DBS) were excluded. Based on treatment records, patients were allocated to a closed-loop group (n=50) receiving EEG-informed transcranial alternating current stimulation (tACS) or a control group (n=50) receiving optimized medical therapy and physiotherapy. EEG variance, lag-1 autocorrelation, beta-band synchronization, and network entropy were extracted as early-warning signals. Outcomes included FoG frequency and duration, gait velocity, stride variability, UPDRS-III gait item, and FoG-Q, assessed at baseline, 2, 4, 8 weeks, and 3 months.  Results:  Compared with controls, patients receiving closed-loop tACS showed significant improvements from Week 4 onward, including fewer and shorter FoG episodes, faster gait, and reduced stride variability (all p Conclusion:  Non-invasive closed-loop tACS guided by EEG early-warning markers significantly alleviates FoG and improves gait stability in PD patients. These findings highlight variance, lag-1 autocorrelation, and beta synchrony as practical b
+
+---
+
+pid: DOI:10.21203/rs.3.rs-9914946/v1
+题目: Neural manifolds in spinal networks that orchestrate walking and stopping
+年份: 2026  类型: Preprint
+摘要: Abstract  Walking, stopping, and postural control are fundamental motor behaviors whose dynamical underpinnings remain poorly understood despite extensive characterization of the underlying circuitry. Here, we investigate neural activity behind locomotion and stopping by recording neuronal population activity with Neuropixels probes in the lumbar spinal cord of freely moving rats where walk-to-stop transitions are controlled by brainstem optogenetic stimulation. During walking, the population activity occupies a ring-shaped manifold with limit cycle attractor properties on which a single phase coordinate captures the kinematic variables, hence a "locomotor" manifold. Prior to stopping, the neural state undergoes a bifurcation onto a distinct region composed of non-trivial fixed point attractors whose structure encodes body posture, i.e. a "postural" manifold. Mechanical perturbations confirm the stability of both regimes. Finally, we show that a previously proposed linear network model with Mexican-hat recurrent connectivity accurately predicts both attractor regimes and their transitions. These findings demonstrate both how the spinal cord can operate as an autonomous dynamical system, and how descending controls and change between states of this system.
+
+---
+
+pid: DOI:10.64898/2025.12.05.692581
+题目: Electroconvulsive Therapy Induces Dopaminergic Axon Regeneration, Corticostriatal Remodeling, and Restoration of Motor Function in Parkinsonian Mice
+年份: 2025  类型: Preprint
+摘要: ABSTRACT  Parkinson’s disease (PD) is characterized by the progressive degeneration of midbrain dopaminergic neurons with loss of axonal dopamine neurotransmission in the dorsal striatum, leading to striatal circuit dysfunction and debilitating motor symptoms. Current therapies provide symptomatic relief but do not restore lost neuronal function. Decades of clinical observations have reported the unexpected observation that electroconvulsive therapy (ECT), a standard treatment for refractory neuropsychiatric disorders, can incidentally alleviate motor symptoms in PD patients, yet the underlying mechanisms remain unknown. Here, we report that in the unilateral 6-hydroxydopamine (6-OHDA) mouse model of PD, two weeks of repeated ECT produced robust and sustained motor recovery, with improvements in locomotion and sensorimotor asymmetry persisting for at least 30 days post-treatment. Remarkably, ECT induced dopaminergic axonal sprouting from surviving dopaminergic neurons with cell bodies located at the substantia nigra-ventral tegmental border, leading to a partial recovery of striatal dopaminergic axonal reinnervation. In striatal direct pathway spiny projection neurons (dSPNs), which exhibit pathological hyperexcitability and spine loss following dopamine depletion, ECT normalized both corticostriatal synaptic responses and spine density. Consistently, ECT upregulated gene trans
+
+---
+
+pid: DOI:10.64898/2026.02.23.26346487
+题目: Real-Time Kinematic Adaptive Deep Brain Stimulation Safely Reduces Gait Impairment and Freezing of Gait in Parkinson’s Disease
+年份: 2026  类型: Preprint
+摘要: Gait impairment (GI) and freezing of gait (FOG) affect 80% of patients with advanced Parkinson’s disease. Continuous deep brain stimulation (cDBS) provides limited adaptability to address the episodic nature of FOG due to fixed parameters. Neural biomarkers for adaptive DBS are limited by signal artifacts and poor FOG classification. Wearable inertial measurement units (IMUs) offer a promising alternative by directly measuring signatures of GI&FOG. We developed Kinematic adaptive DBS (KaDBS), the first intelligent system to dynamically modulate stimulation in response to real-time gait metrics. KaDBS integrates bilateral shank-mounted IMUs with an investigational neurostimulator through a wireless architecture enabling step-detection, arrhythmicity calculation, and probabilistic FOG classification. Two control algorithms were implemented: an arrhythmicity model based on stride variability, and a P(FOG) classifier implementing tri-state control based on stepwise freezing probabilities. In the largest KaDBS cohort to date (n=8), we compared OFF, cDBS, KaDBS, and intermittent DBS during harnessed stepping and free walking. KaDBS was safe and well tolerated with no serious adverse events; symptom-free reports were 87.5% and 71.4% for arrhythmicity and P(FOG) models respectively, compared to 50.0% for cDBS. All symptoms were mild, transient, and resolved without intervention. KaDBS 
+
+---
+
+pid: PMID:10634253
+题目: Bilateral subthalamic nucleus stimulation in a parkinsonian patient with preoperative deficits in speech and cognition: persistent improvement in mobility but increased dependency: a case study.
+年份: 2000  类型: Journal Article; Case Reports
+摘要: We report a patient with advanced Parkinson's disease, including severe and frequent off periods with freezing of gait, moderate dysphonia, and some cognitive impairment, who underwent bilateral subthalamic nucleus (STN) stimulation. The patient was followed for 1 year after surgery, showing persistent good mobility without off periods and without freezing, which reverted completely when stopping the stimulation. There was deterioration of cognition as well as increased aphonia and drooling, all of which remained when the stimulation was turned off. The striking improvement in motor symptoms following STN stimulation was not paralleled by improvement in disability, probably as a result of a cognitive decline, suggesting a diagnosis of Parkinson's disease with dementia. We conclude that chronic STN stimulation is efficient in alleviating akinetic motor symptoms including gait freezing; this surgery should be offered before patients start to exhibit speech or cognitive disturbances.
+
+---
+
+pid: PMID:10648876
+题目: kappa-Opioid receptors in the substantia nigra pars reticulata mediate the U-50,488-induced locomotor activity of preweanling rats.
+年份: 2000  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: The purpose of the present study was to determine the neuroanatomical location where kappa-opioid receptor stimulation induces locomotor activity in the preweanling rat. To confirm that the U-50,488-induced locomotor activity of preweanling rats is mediated by kappa-opioid receptors, 18-day-old rats were initially injected with vehicle or the kappa-opioid receptor agonist U-50,488 (5 mg/kg, s.c.) followed, 15 min later, by an injection of the kappa-opioid receptor antagonist nor-binaltorphimine (nor-BNI; 0, 2, 4, 8, or 12 mg/kg, s.c.). In subsequent experiments, 18-day-old rats were injected with vehicle or U-50,488 (5 mg/kg, s.c.) 15 min prior to bilateral administration (0.25 or 0.5 microl per side) of nor-BNI (0, 5, 10, or 20 microg) into the substantia nigra pars reticulata (SNR) or medial dorsal striatum (MDS). In the final experiment, 18-day-old rats received bilateral administration (0.25 microl per side) of vehicle or U-50,488 (0.0, 0.8, 1.6, or 3.2 microg) into the SNR. Results showed that systemically administered nor-BNI (0-12 mg/kg, s.c.) produced a dose-dependent reduction in the U-50, 488-induced locomotor activity of preweanling rats. The site of action for U-50,488's locomotor-activating effects appeared to be the SNR, because (a) bilateral administration of nor-BNI (5, 10, or 20 microg) into the SNR caused a complete attenuation of U-50, 488-induced locomotion,
+
+---
+
+pid: PMID:10766889
+题目: Axial parkinsonian symptoms can be improved: the role of levodopa and bilateral subthalamic stimulation.
+年份: 2000  类型: Clinical Trial; research-article; Journal Article
+摘要: ObjectiveTo assess the effects of high frequency stimulation of the subthalamic nucleus (STN) on axial symptoms occurring in advanced stages of Parkinson's disease (PD).MethodsThe efficacy of STN stimulation on total motor disability score (unified Parkinson's disease rating scale (UPDRS) part III) were evaluated in 10 patients with severe Parkinson's disease. The subscores were then studied separately for limb akinesia, rigidity, and tremor, which are known to respond to levodopa, and axial signs, including speech, neck rigidity, rising from a chair, posture, gait, and postural stability, which are known to respond less well to levodopa. Patients were clinically assessed in the "off" and "on" drug condition during a levodopa challenge test performed before surgical implantation of stimulation electrodes and repeated 6 months after surgery under continuous STN stimulation. A complementary score for axial symptoms from the "activities of daily living" (ADL)-that is, speech, swallowing, turning in bed, falling, walking, and freezing-was obtained from each patient's questionnaire (UPDRS, part II).ResultsImprovements in total motor disability score (62%), limb signs (62%), and axial signs (72%) obtained with STN stimulation were statistically comparable with those obtained with levodopa during the preoperative challenge (68%, 69%, and 59%, respectively). When levodopa and STN stimu
+
+---
+
+pid: PMID:10877836
+题目: Enhanced levels of endogenous cannabinoids in the globus pallidus are associated with a reduction in movement in an animal model of Parkinson's disease.
+年份: 2000  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: In recent years, cannabinoid receptors and their endogenous ligands (endocannabinoids) have been identified within the brain. The high density of CB1 cannabinoid receptors within the basal ganglia suggests a potential role for endocannabinoids in the control of voluntary movement and in basal ganglia-related movement disorders such as Parkinson's disease. However, whether endocannabinoids play a role in regulating motor behavior in health and disease is unknown. Here we report the presence in two regions of the basal ganglia, the globus pallidus and substantia nigra, of the endocannabinoids 2-arachidonoylglycerol (2AG) and anandamide. The levels of the latter compound are approximately threefold higher than those previously reported in any other brain region. In the reserpine-treated rat, an animal model of Parkinson's disease, suppression of locomotion is accompanied by a sevenfold increase in the levels of the 2AG in the globus pallidus, but not in the other five brain regions analyzed. Stimulation of locomotion in the reserpine-treated rat by either of the two selective agonists of D2 and D1 dopamine receptors, quinpirole and R-(+/-)-3-allyl-6-chloro-7, 8-dihydroxy-1-phenyl-2,3,4,5-tetrahydro-1H-3-benzazepine hydrobromide (Cl-APB), respectively, results in the reduction of both anandamide and 2AG levels in the globus pallidus. Finally, full restoration of locomotion in the r
+
+---
+
+pid: PMID:10964979
+题目: Postural and anticonvulsant effects of inhibition of the rat subthalamic nucleus.
+年份: 2000  类型: Research Support, U.S. Gov't, P.H.S.; research-article; Journal Article
+摘要: The subthalamic nucleus (STN) plays a crucial role as a regulator of basal ganglia outflow by providing excitatory glutamatergic input into the two output nuclei of the basal ganglia, substantia nigra pars reticulata (SNpr), and entopeduncular nucleus. This study examined the effects of suppressing activity in the STN of the awake, behaving rat. Specifically, we evaluated the effects of unilateral and bilateral focal inhibition of STN on posture, locomotion, and susceptibility to limbic motor seizures. Unilateral microinjection of a GABA(A) receptor agonist (muscimol, 200 pmol) into STN produced a site-dependent contralaterally directed postural asymmetry without locomotor activation. This effect differed from responses produced by the same dose of muscimol placed into SNpr, which included locomotor activation in addition to contralaterally directed postural asymmetry. Locomotor activation and postural asymmetry were obtained also after blockade of glutamate transmission in SNpr by the unilateral application of kynurenate (100 nmol). Our observation that STN inhibition did not induce the locomotor activation characteristic of SNpr inhibition suggests that there are glutamatergic inputs to SNpr, other than those from STN, that are responsible for controlling locomotion. Bilateral, but not unilateral, injection of muscimol (200 pmol) into STN protected against limbic motor seizur
+
+---
+
+pid: PMID:11287079
+题目: Motor behavioural changes after intracerebroventricular injection of 6-hydroxydopamine in the rat: an animal model of Parkinson's disease.
+年份: 2001  类型: Journal Article
+摘要: At the beginning of the 1970s, different studies reported behavioural disturbances after the intracerebroventricular (icv) administration of 6-hydroxydopamine (6-OHDA) in the rat. Despite the fact that this neurotoxic agent degenerates brain dopaminergic (DA-) cells, its potential utility to produce a rat model of Parkinson's disease (PD) was never systematically studied because the aphagia and adipsia were often observed. In the present study, a procedure that induces a marked DA-cell degeneration that bypasses these and other undesirable complications of icv injection of 6-OHDA is reported. Lesioned animals (50-500 microg of 6-OHDA) showed a persistent motor syndrome composed of hypokinesia, purposeless chewing and catalepsy. The intensity of motor signs was dose-dependent, and recovered partially after administration of DA-receptor agonists, exposure to sensorial stimuli and stress, three procedures that reduce motor dysfunctions in Parkinson's disease (PD). Lesioned animals showed bilateral and symmetrical midbrain DA-cell degeneration with the highest cell-loss in A9 group (substantia nigra), followed by A8 (retrorubral field) and A10 (ventral tegmental area) groups. The similarity between the behavioural syndrome and the topographical profile of cell-loss after icv injection of 6-OHDA in rats and the clinical and neuropathological features of PD indicates that this may be
+
+---
+
+pid: PMID:11306634
+题目: Regulation of limbic information outflow by the subthalamic nucleus: excitatory amino acid projections to the ventral pallidum.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: The subthalamic nucleus (STN), a component of the basal ganglia motor system, sends an excitatory amino acid (EAA)-containing projection to the ventral pallidum (VP), a major limbic system output region. The VP contains both NMDA and AMPA subtypes of EAA receptors. To characterize the physiology of the subthalamic pathway to the VP, and to determine the influence of EAA receptor subtypes, in vivo intracellular recordings, and in vivo extracellular recordings combined with microiontophoresis, were made from VP neurons in anesthetized rats. Of the intracellularly recorded neurons, 86% responded to STN stimulation, and these displayed EPSPs with an onset of 8.7 msec, consistent with a monosynaptic input. The EPSPs evoked in spontaneously firing neurons were nearly twice the amplitude of those in nonfiring cells (13.1 vs 6.8 mV, respectively). As neurons were depolarized by current injection, the latency for spiking decreased from 24.2 to 14.2 msec, although EPSP latency was unaffected. Eighty-seven percent of the extracellularly recorded VP neurons responded to STN stimulation with a rapid and robust enhancement of spiking; the response onset, like the EPSP onset, equaled 8.7 msec. Firing rate was enhanced by NMDA in 94% of the STN-excited cells, and AMPA increased firing in 94% as well. The NMDA-selective antagonist AP-5 attenuated 67% of the STN-evoked excitatory responses, and 
+
+---
+
+pid: PMID:11404425
+题目: Galpha(olf) levels are regulated by receptor usage and control dopamine and adenosine action in the striatum.
+年份: 2001  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: In the striatum, dopamine D(1) and adenosine A(2A) receptors stimulate the production of cAMP, which is involved in neuromodulation and long-lasting changes in gene expression and synaptic function. Positive coupling of receptors to adenylyl cyclase can be mediated through the ubiquitous GTP-binding protein Galpha(S) subunit or through the olfactory isoform, Galpha(olf), which predominates in the striatum. In this study, using double in situ hybridization, we show that virtually all striatal efferent neurons, identified by the expression of preproenkephalin A, substance P, or D(1) receptor mRNA, contained high amounts of Galpha(olf) mRNA and undetectable levels of Galpha(s) mRNA. In contrast, the large cholinergic interneurons contained both Galpha(olf) and Galpha(s) transcripts. To assess the functional relationship between dopamine or adenosine receptors and G-proteins, we examined G-protein levels in the striatum of D(1) and A(2A) receptor knock-out mice. A selective increase in Galpha(olf) protein was observed in these animals, without change in mRNA levels. Conversely, Galpha(olf) levels were decreased in animals lacking a functional dopamine transporter. These results indicate that Galpha(olf) protein levels are regulated through D(1) and A(2A) receptor usage. To determine the functional consequences of changes in Galpha(olf) levels, we used heterozygous Galpha(olf) knock
+
+---
+
+pid: PMID:11465631
+题目: Substantia nigra pars reticulata is a highly potent site of action for the behavioral effects of the D1 antagonist SCH 23390 in the rat.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; Journal Article
+摘要: RationaleConsiderable evidence indicates that dopaminergic drugs, including drugs that act on D1 receptors, exert their effects by actions on forebrain dopamine terminal regions. Nevertheless, anatomical studies also have demonstrated that there is a high concentration of D1 receptors in the substantia nigra pars reticulata (SNr). The D1 receptors in SNr are located largely on the terminals of gamma-aminobutyric acid (GABA)-ergic striatonigral neurons. The present studies were undertaken to determine whether the D1 antagonist SCH 23390 was effective if locally injected into SNr and to compare the results of SNr injections with those obtained from other brain sites. Fixed ratio 5 (FR5) lever pressing and open-field locomotion were used as the behavioral tests because these tasks are sensitive to systemic SCH 23390.MethodsRats received bilateral implantations of guide cannulae into either nucleus accumbens, neostriatum, SNr, or control sites in the cortex or brainstem. Rats in the FR5 study were trained prior to surgery. All rats received one of the following local injections (0.5 microl per side): vehicle, 0.25, 0.5, 1.0, or 2.0 microg SCH 23390.ResultsIn the FR5 study, the SNr was by far the most potent site for suppression of lever pressing, with an ED50 (dose that produces half maximal response) of 0.33 microg per side. Nucleus accumbens and neostriatum injections were less p
+
+---
+
+pid: PMID:11517332
+题目: Induction of stereotypy in dopamine-deficient mice requires striatal D1 receptor activation.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; Research Support, Non-U.S. Gov't; research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article
+摘要: Motor stereotypies are abnormally repetitive behaviors that can develop with excessive dopaminergic stimulation and are features of some neurologic disorders. To investigate the mechanisms required for the induction of stereotypy, we examined the responses of dopamine-deficient (DD) mice to increasing doses of the dopamine precursor L-DOPA. DD mice lack the ability to synthesize dopamine (DA) specifically in dopaminergic neurons yet exhibit robust hyperlocomotion relative to wild-type (WT) mice when treated with L-DOPA, which restores striatal DA tissue content to approximately 10% of WT levels. To further elevate brain DA content in DD mice, we administered the peripheral L-amino acid decarboxylase inhibitor carbidopa along with L-DOPA (C/l-DOPA). When striatal DA levels reached >50% of WT levels, a transition from hyperlocomotion to intense, focused stereotypy was observed that was correlated with an induction of c-fos mRNA in the ventrolateral and central striatum as well as the somatosensory cortex. WT mice were unaffected by C/L-DOPA treatments. A D1, but not a D2, receptor antagonist attenuated both the C/L-DOPA-induced stereotypy and the c-fos induction. Consistent with these results, stereotypy could be induced in DD mice by a D1, but not by a D2, receptor agonist, with neither agonist inducing stereotypy in WT mice. Intrastriatal injection of a D1 receptor antagonist a
+
+---
+
+pid: PMID:11534533
+题目: Abstracts of the Congress of the European Association of Nuclear Medicine. 25-29 August 2001, Napoli, Italy.
+年份: 2001  类型: Overall; Conference Proceedings; abstract
+摘要: （无摘要）
+
+---
+
+pid: PMID:11547801
+题目: Abstracts of the 7th International Congress on Amino Acids and Proteins. Vienna, Austria, August 6-10, 2001.
+年份: 2001  类型: Overall; Conference Proceedings; research-article
+摘要: （无摘要）
+
+---
+
+pid: PMID:11572967
+题目: Glutamatergic modulation of hyperactivity in mice lacking the dopamine transporter.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: In the brain, dopamine exerts an important modulatory influence over behaviors such as emotion, cognition, and affect as well as mechanisms of reward and the control of locomotion. The dopamine transporter (DAT), which reuptakes the released neurotransmitter into presynaptic terminals, is a major determinant of the intensity and duration of the dopaminergic signal. Knockout mice lacking the dopamine transporter (DAT-KO mice) display marked changes in dopamine homeostasis that result in elevated dopaminergic tone and pronounced locomotor hyperactivity. A feature of DAT-KO mice is that their hyperactivity can be inhibited by psychostimulants and serotonergic drugs. The pharmacological effect of these drugs occurs without any observable changes in dopaminergic parameters, suggesting that other neurotransmitter systems in addition to dopamine might contribute to the control of locomotion in these mice. We report here that the hyperactivity of DAT-KO mice can be markedly further enhanced when N-methyl-d-aspartate receptor-mediated glutamatergic transmission is blocked. Conversely, drugs that enhance glutamatergic transmission, such as positive modulators of l-alpha-amino-3-hydroxy-5-methylisoxazole-4-propionate glutamate receptors, suppress the hyperactivity of DAT-KO mice. Interestingly, blockade of N- methyl-d-aspartate receptors prevented the inhibitory effects of both psychostim
+
+---
+
+pid: PMID:11601421
+题目: "Hot cross bun" sign in a patient with parkinsonism secondary to presumed vasculitis.
+年份: 2001  类型: Letter; Case Reports
+摘要: （无摘要）
+
+---
+
+pid: PMID:11687615
+题目: Altered psychomotor behaviors in mice lacking pituitary adenylate cyclase-activating polypeptide (PACAP).
+年份: 2001  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Pituitary adenylate cyclase-activating polypeptide (PACAP) has been conserved remarkably during evolution and is widely expressed in the mammalian brain. In Drosophila, mutation of the PACAP homologue results in behavioral defects, including impaired olfaction-associated learning and changes in ethanol sensitivity. Here, we report the generation of mice lacking the PACAP gene (PACAP(-/-)). PACAP(-/-) mice were born in the expected Mendelian ratios but had a high early-mortality rate. The surviving adult PACAP(-/-) mice displayed remarkable behavioral changes; they exhibited hyperactive and explosive jumping behaviors in an open field, increased exploratory behavior, and less anxiety in the elevated plus maze, emergence, and novel-object tests. Analysis of PACAP(-/-) mice brains revealed that the serotonin metabolite 5-hydroxyindoleacetic acid was slightly decreased in the cortex and striatum compared with wild-type mice. The present study provides evidence that PACAP plays a previously uncharacterized role in the regulation of psychomotor behaviors.
+
+---
+
+pid: PMID:11750790
+题目: Biochemical, behavioral, physiologic, and neurodevelopmental changes in mice deficient in monoamine oxidase A or B.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; Research Support, Non-U.S. Gov't; research-article; Review; Journal Article
+摘要: The availability of mutant mice that lack either MAO A or MAO B has created unique profiles in the central and peripheral availability of serotonin, norepinephrine, dopamine, and phenylethylamine. This paper summarizes some of the current known phenotypic findings in MAO A knock-out mice and contrast these with those of MAO B knock-out mice. Differences are discussed in relation to the biochemical, behavioral, and physiologic changes investigated to date, as well as the role played by redundancy mechanisms, adaptational responses, and alterations in neurodevelopment.
+
+---
+
+pid: PMID:11752469
+题目: Hyperactivity, elevated dopaminergic transmission, and response to amphetamine in M1 muscarinic acetylcholine receptor-deficient mice.
+年份: 2001  类型: Research Support, U.S. Gov't, P.H.S.; research-article; Journal Article
+摘要: Acetylcholine serves an important modulatory role in the central nervous system. Pharmacological evidence has suggested that cholinergic activity can modulate central dopaminergic transmission; however, the nature of this interaction and the receptors involved remain undefined. In this study we have generated mice lacking the M1 muscarinic acetylcholine receptor and examined the effects of M1 deletion on dopaminergic transmission and locomotor behavior. We report that M1 deficiency leads to elevated dopaminergic transmission in the striatum and significantly increased locomotor activity. M1-deficient mice also have an increased response to the stimulatory effects of amphetamine. Our results provide direct evidence for regulation of dopaminergic transmission by the M1 receptor and are consistent with the idea that M1 dysfunction could be a contributing factor in psychiatric disorders in which altered dopaminergic transmission has been implicated.
+
+---
+
+pid: PMID:11756520
+题目: M5 muscarinic receptors are required for prolonged accumbal dopamine release after electrical stimulation of the pons in mice.
+年份: 2002  类型: other; Research Support, Non-U.S. Gov't; Journal Article
+摘要: Midbrain dopamine neurons are activated directly by cholinergic agonists or by stimulation of the cholinergic neurons in the laterodorsal tegmental nucleus (LDT) of the pons in rats. In urethane-anesthetized mice, electrical stimulation of the LDT resulted in a rapid, stimulus-time-locked increase in dopamine release in the nucleus accumbens (NAc), followed several minutes later by a prolonged increase in dopamine release. In mutant mice with truncated M5 receptors, the prolonged phase of dopamine release was absent, but the initial, rapid phase of dopamine release was fully observed. We conclude that M5 muscarinic receptors on midbrain dopamine neurons mediate a prolonged facilitation of dopamine release in the NAc. These results imply that M5 muscarinic receptors play an important role in motivational behaviors driven by dopamine activity in the accumbens.
+
+---
+
+pid: PMID:11762205
+题目: The 24th Annual Meeting of the Canadian College of Neuropsychopharmacology. Banff, Alberta, Canada, June 17-20, 2001.
+年份: 2001  类型: other; Conference Proceedings
+摘要: （无摘要）
+
+---
+
+pid: PMID:11783444
+题目: Abstracts of the 10th Annual Meeting of the Israel Society of Neurosciences. Eilat, Israel, December 16-18, 2001.
+年份: 2001  类型: Overall; Conference Proceedings; research-article
+摘要: （无摘要）
+
+---
+
+pid: PMID:11784818
+题目: Neuropsychiatry of the basal ganglia.
+年份: 2002  类型: research-article; Review; Journal Article
+摘要: This review aims to relate recent findings describing the role and neural connectivity of the basal ganglia to the clinical neuropsychiatry of basal ganglia movement disorders and to the role of basal ganglia disturbances in "psychiatric"' states. Articles relating to the relevant topics were initially collected through MEDLINE and papers relating to the clinical conditions discussed were also reviewed. The anatomy and connections of the basal ganglia indicate that these structures are important links between parts of the brain that have classically been considered to be related to emotional functioning and brain regions previously considered to have largely motor functions. The basal ganglia have a role in the development and integration of psychomotor behaviours, involving motor functions, memory and attentional mechanisms, and reward processes.
+
+---
+
+pid: PMID:11797063
+题目: Hypolocomotor effects of acute and daily d-amphetamine in mice lacking the dopamine transporter.
+年份: 2001  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: RationaleMice lacking the dopamine transporter (DAT(-/-)) exhibit high extracellular dopamine levels and marked hyperactivity. This hyperlocomotion is paradoxically decreased by acute administration of amphetamine-like psychostimulants, an effect that has been previously related to the activation of serotonergic neurotransmission.ObjectivesThe goal of the present study was to investigate the effects of acute and daily administration of d-amphetamine on the locomotor activity of DAT(-/-) mice and examine the development of behavioral sensitization. In addition, we tested the implication of the serotonin system in the observed effects.MethodsDAT(+/+), DAT(+/-), and DAT(-/-) mice were injected with acute amphetamine (0, 0.3, 1, 3, or 10 mg/kg, SC), repeated amphetamine (1 mg/kg for 8 days, SC), or with the serotonin reuptake inhibitor fluoxetine (0, 5, 10, or 20 mg/kg, SC) and their locomotor activity was evaluated. Moreover, the expression of the serotonin transporter and 5-HT(1A) receptors in the brain of DAT(-/-) mice was studied using autoradiography.ResultsAcute and repeated d-amphetamine injection (1 mg/kg) induced an hypolocomotor response in DAT(-/-) and DAT(+/-) mice, but only DAT(+/-) mice developed locomotor sensitization to the drug. Acute treatment with fluoxetine decreased locomotion in DAT(-/-) mice in a dose-dependent manner. The common hypolocomotor effect induced
+
+---
+
+pid: PMID:11822888
+题目: Differential effects of a small, unilateral, 6-hydroxydopamine-induced nigral lesion on behavior in high and low responders to novelty.
+年份: 2002  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: The goal of this study was to develop an animal model that evaluates striatal-specific behavior after partial, unilateral destruction of nigrostriatal neurons. 6-OHDA (1 microg) was injected intranigrally (day 0) to reduce dopaminergic innervation of the dorsal striatum (DS); 6-OHDA (5 microg) was injected to reduce innervation of DS and nucleus accumbens (ACC). We analyzed changes in (a) behavior regulated by dopamine (DA) release in the DS (hindpaw preference from day 5 to day 19, every other day) and the ACC (novelty-induced locomotion on day 16) and (b) apomorphine-induced rotation (on day 21). We used two types of rat that show differences in structure and function of the dopaminergic neurons, namely high (HR) and low (LR) responders to novelty. 6-OHDA (1 microg) significantly decreased TH immunoreactivity (TH-ir) in the DS and increased preference for the hindpaw controlled by the nonlesioned side in HRs and LRs in time. Only in LRs was the significant increase of novelty-induced locomotion accompanied by a significant increase in TH-ir density in the ACC: this suggests a lesion-induced shift in nigrostriatal/mesolimbic balance toward a dominance of the mesolimbic system. The higher 6-OHDA dose significantly decreased TH-ir in the DS and the ACC and increased preference for the hindpaw controlled by the nonlesioned side in HRs and LRs in time. However, this increase occur
+
+---
+
+pid: PMID:11835434
+题目: Neuroprotective effect of riluzole in a primate model of Parkinson's disease: behavioral and histological evidence.
+年份: 2002  类型: Journal Article
+摘要: Our study aimed to determine whether riluzole, which has shown efficacy as a disease-modifying agent in amyotrophic lateral sclerosis (ALS), is neuroprotective in a marmoset model of Parkinson's disease (PD). Reduction of energy demand by riluzole could be a rational neuroprotective strategy with good tolerability. The efficacy of riluzole was evaluated in marmosets by testing its ability to reduce MPTP-induced behavioral deficits and loss of dopaminergic nigral neurons. Marmosets were divided into two groups of four animals each: animals in Group 1 were injected twice with MPTP (2 mg/kg subcutaneous) and treated with riluzole (10 mg/kg per os b.i.d.), animals in Group 2 (controls) were injected with MPTP and with the vehicle of riluzole. A third group of marmosets which did not receive MPTP or riluzole drug was introduced for neurohistopathological studies (normal animals). Marmosets treated with riluzole preserved a better motor function and neurological performance through the 26 days of assessment when compared with the controls. Histologically, there was sparing of TH- and Nissl-stained nigral neurons and of TH-stained terminals in the striatum and the putamen in the group treated with riluzole compared to the controls. We conclude that riluzole protects dopaminergic neurons and reduces behavioral deficits in a marmoset model of PD.
+
+---
+
+pid: PMID:11860189
+题目: Correlation of increased grooming behavior and motor activity with alterations in nigrostriatal and mesolimbic catecholamines after alpha-melanotropin and neuropeptide glutamine-isoleucine injection in the rat ventral tegmental area.
+年份: 2001  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: 1. We wished to further study the behavioral effects of alpha-melanotropin (alpha-MSH), melanin-concentrating hormone (MCH), and neuropeptide glutamine-isoleucine (NEI). 2. To this effect we administered alpha-MSH, MCH, and NEI in the ventral tegmental area of the rat, a structure where these neuropeptides are highly concentrated. To further elucidate the biochemical mechanisms of the behavioral effect of these neuropeptides, we determined the degree of grooming behavior and the levels of catecholamines. after neuropeptide administration. 3. We preselected those animals responding to the central injection of alpha-MSH with excessive grooming behavior. We administered the neuropeptides at the dose of 1 microg/0.5 microL, in each side of the ventral tegmental area, bilaterally. We studied grooming behavior, locomotor activity, and total behavior scores, 30 and 65 min after administration of the peptides. 4. Three groups of animals were decapitated immediately after the injection of the neuropeptides, and 30 or 65 min after injection. We measured dopamine (DA), noradrenaline (NA), and the dopac/dopamine ratio (DOPAC/DA) to determine steady state levels of catecholamines and an indirect measure of DA release and metabolism, respectively. 5. Injections of alpha-MSH produced significant elevations in grooming behavior, locomotor activity, and total behavior scores, both 30 and 65 min

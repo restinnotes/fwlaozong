@@ -1,0 +1,56 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:40648292",
+      "design": "单病例实验性可行性研究（pilot case study）",
+      "population": "65岁男性，帕金森病病程6年，有冻结步态（FOG）病史，双侧STN-DBS术后约8个月，近6个月有2次跌倒。",
+      "n": "1",
+      "condition": "off medication–Off DBS状态。停用抗帕金森药物至少12小时。采用虚拟现实CC-VHE平台的Physical、Anxiety和Cognitive三个模块诱发FOG。比较视频确认的FOG epochs与无FOG直线单任务行走Walk epochs。Walk epochs来自Reference模块及各评估模块刺激引入前的行走阶段。",
+      "measure": "双侧STN-LFP，Medtronic Percept PC连续记录，采样率250 Hz。每侧从12个双极通道中选择Reference模块off medication–Off DBS状态下beta功率最大的通道进行后续分析。采用Welch方法计算PSD，以2秒窗口、0.5秒步长分段，比较8–35 Hz范围内各1 Hz频带的功率，采用10000次Monte Carlo permutation test及FDR校正。",
+      "finding": "FOG期间STN-LFP功率谱总体高于Walk。FOG与Walk比较中，LSTN有26个显著升高的1 Hz频带，RSTN有6个。LSTN的显著变化主要出现在Anxiety模块（15个频带）和Cognitive模块（11个频带），频率集中在8–20 Hz的alpha及低beta范围。",
+      "effect": "FOG相对于Walk表现为STN-LFP功率升高，且左侧STN的显著频带数量多于右侧（26比6）。该结果体现频带数量和变化方向，未报告标准化效应量或绝对功率差值。",
+      "limitations": "作者明确指出这是单病例研究，不能据此进行群体层面的推广。所有主要神经数据比较均在DBS关闭状态下进行，缺乏DBS开启状态的同步神经记录。每侧仅选择一个基于Reference模块最大beta功率确定的通道，可能遗漏其他STN区域或通道的活动。Walk与FOG并非完全相同任务情境下的配对状态，任务负荷和环境差异可能影响比较。论文将PSD功率升高解释为神经同步增强，但本研究直接测量的是功率谱，而非STN内部或皮层-STN之间的功能连接。",
+      "quote": "Compared to Walk epochs, power in the LSTN was elevated across more frequencies than the RSTN during FOG (26 versus 6 significantly elevated 1 Hz bands, respectively).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40648292",
+      "design": "单病例实验性可行性研究（pilot case study），同一受试者的触发条件分层比较。",
+      "population": "65岁男性，帕金森病病程6年，有FOG病史，双侧STN-DBS术后约8个月。",
+      "n": "1",
+      "condition": "off medication–Off DBS状态下，分别比较Physical、Anxiety和Cognitive三个模块中FOG与Walk epochs的STN-LFP活动。Physical模块包括窄门、窄走廊、地面图案变化及90度转弯；Anxiety模块包括8米高处的狭窄悬空步道；Cognitive模块为120秒认知-运动双任务。",
+      "measure": "双侧STN-LFP的Welch功率谱密度，分析8–35 Hz范围内的1 Hz频带，采用Monte Carlo permutation test及FDR校正。",
+      "finding": "三个模块的FOG epochs在图形上均表现出比Walk epochs更高的STN-LFP功率，但统计显著性具有明显的触发条件差异。Physical模块没有发现显著的FOG-Walk功率变化。Anxiety模块具有最多的显著升高频带及最大的频率范围。Anxiety模块是唯一出现20 Hz以上高beta频段显著变化的模块，而且该变化仅出现在LSTN。Cognitive模块则主要表现为LSTN的8–20 Hz频带功率升高。",
+      "effect": "STN活动与FOG的关系表现出触发条件依赖性：Anxiety和Cognitive条件下出现显著的左侧STN低频活动增强；Anxiety条件下还出现左侧STN高beta活动增强；Physical条件下未发现显著差异。图形趋势与统计显著性并不完全一致。",
+      "limitations": "各模块诱发的FOG事件数量不相同：off–Off状态下Physical为4次、Anxiety为2次、Cognitive为4次；不同模块的持续时间也不相同，Physical和Anxiety模块的时长取决于行走速度。单病例且事件数量有限，Physical模块未达到统计显著不能直接解释为该条件不存在STN神经变化。论文将Physical、Anxiety、Cognitive模块分别用于操作化阈值模型（运动缺陷累积导致运动崩溃）、干扰模型（运动、认知和边缘系统回路异常串扰导致基底节信息处理过载）及认知模型（执行功能和反应冲突处理失败）。据此可形成可检验的竞争预测：阈值机制应重点考察物理障碍条件，认知机制应重点考察双任务条件，干扰机制应重点考察焦虑及认知相关条件下的神经变化。这些是基于论文模型与实验设计的检验方向，并非本文已经验证的因果机制。论文明确指出这些理论模型尚未通过基底节神经数据得到系统验证。",
+      "quote": "The Anxiety module was the only module where high beta frequencies (>20 Hz) were significantly different during FOG compared to Walk, and only for the LSTN.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40648292",
+      "design": "单病例重复条件比较（同一受试者药物状态比较）。",
+      "population": "65岁男性，帕金森病病程6年，有FOG病史，双侧STN-DBS术后约8个月。",
+      "n": "1",
+      "condition": "同一天完成off medication–Off DBS和on medication–Off DBS两种测试状态，DBS均关闭。比较Cognitive模块120秒试验期间的STN beta功率（13–35 Hz），同时比较不同药物状态下三个模块中的FOG发作数量和持续时间。",
+      "measure": "双侧STN-LFP beta频段平均功率（13–35 Hz）；FOG发作次数和累计持续时间。药物状态下的STN beta功率采用整个120秒Cognitive试验计算，而非仅比较FOG与Walk片段。",
+      "finding": "off medication–Off DBS状态下的STN beta功率高于on medication–Off DBS状态，LSTN高48%，RSTN高40%。同时，药物治疗使三个模块中的FOG发作数量和持续时间均减少约60%。off medication–Off DBS状态下共发生10次FOG，总持续时间约80秒，其中Cognitive模块4次、累计40.1秒，为Physical或Anxiety模块FOG持续时间的约两倍。",
+      "effect": "药物状态改善与双侧STN beta功率下降及FOG发作数量、持续时间下降同时出现。LSTN和RSTN beta功率分别下降约48%和40%（以off medication状态为较高参考值）。这提示药物状态是解释STN活动与FOG关系的重要实验条件，但并未建立事件级别的直接相关关系。",
+      "limitations": "样本量仅1例。beta功率比较基于整个120秒Cognitive模块，而不是分别计算FOG和Walk期间的功率，因此不能确定beta下降是否直接由FOG减少造成。论文未报告上述百分比变化的置信区间或独立统计显著性检验。两个测试状态均为DBS关闭，不能推断刺激开启时的关系。on medication状态的具体服药后时间未在文中明确报告。药物状态同时影响FOG和STN beta功率，可能构成跨研究比较时的重要混杂因素。",
+      "quote": "The STN beta power was greater in the off–Off condition than on–Off by 48% and 40% for the LSTN and RSTN, respectively.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40648292",
+      "design": "讨论部分对既往研究的定性文献概述，非系统综述或Meta-analysis。",
+      "population": "既往帕金森病及冻结步态研究中的患者；本文未提供所引STN-LFP研究的具体人群特征。",
+      "n": "未报告；涉及多项既往STN-LFP研究。",
+      "condition": "既往研究比较FOG期间与正常行走期间的STN神经活动。本文没有进一步报告这些研究各自的药物状态、DBS刺激状态、FOG诱发范式或任务条件。",
+      "measure": "STN局部场电位（STN-LFP），重点关注beta频段活动。",
+      "finding": "作者指出，既往有关FOG的皮层和STN神经活动研究总体结果并不一致，但多个STN-LFP研究中较突出的发现是FOG期间STN beta活动高于正常行走期间。作者引用了文献[44–46]支持这一观点。",
+      "effect": "定性方向为FOG期间STN beta活动升高。本文没有提供既往研究的合并效应量、具体功率变化幅度或显著性统计汇总。",
+      "limitations": "这是讨论部分的叙述性文献总结，不是系统综述。本文未提供被引研究的样本量、药物状态、DBS状态、任务范式、记录通道或频带分析方法，因此无法判断既往研究之间是否存在由实验条件造成的异质性，也不能据此进行定量比较。本文当前病例的结果与这一既往研究方向总体一致，但其显著频带和左右侧分布具有触发条件依赖性。",
+      "quote": "The prominent finding across several STN-LFP studies is an increase in beta activity in the STN during FOG compared to walking.",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

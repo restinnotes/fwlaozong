@@ -1,0 +1,824 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P7_C1",
+      "text": "在DOPAOFF步态启动（GI）阶段，后续发生FOG的试次已经表现出与步态推进能力相关的posterior STN high-beta异常：21–35 Hz high-beta功率与pace评分（RPC1）的负向关联显著强于未发生FOG的试次。该神经活动出现在实际冻结之前，FOG首次发生时间中位数为GI后8步。因此，posterior STN high-beta与步态推进受损之间存在FOG前兆性关联，但不能将其解释为冻结发生时的神经活动。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度中等。采用同一患者内阳性与阴性试次比较，具有较好的个体内控制，但仅涉及12名FOG-OBS患者、99个FOG阳性试次。试次并非独立患者样本，且没有直接测量冻结发生时的LFP。属于时间先行的观察性关联，不是因果证据。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_6",
+          "relation": "supports",
+          "note": "直接报告后续FOG阳性试次具有更强的posterior STN high-beta与pace负向关联，且该差异在posterior STN达到显著性。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_7",
+          "relation": "qualifies",
+          "note": "显示high-beta还与rhythm维度存在不同方向的关联，说明不能将high-beta与所有步态维度之间的关系概括为统一的负向作用。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C2",
+      "text": "FOG前兆性STN活动还涉及步态节律，而不只是步态推进能力。后续发生FOG的GI试次中，步态rhythm评分（RPC2）显著低于未发生FOG的试次（估计差−0.243，SE=0.102，p=0.035）。同时，posterior STN的high-beta及theta活动与rhythm评分出现正向关联，而这种关系在未发生FOG的试次中不存在或方向相反。提示FOG前兆期间，STN节律活动与步态节律之间的耦合模式发生改变。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度中等偏低。具有试次层面的同一患者比较，但样本仅12人，阳性试次99个。high-beta和theta的关联不能据此认定为同一神经振荡机制，且LFP记录发生在冻结之前。尚不能确定异常节律关联是冻结的原因、代偿反应还是共同病理状态的表现。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_7",
+          "relation": "supports",
+          "note": "直接报告FOG阳性试次中posterior STN high-beta/theta与rhythm评分的正向关联，以及GI节律评分下降。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_6",
+          "relation": "qualifies",
+          "note": "补充了high-beta与pace负向关联，说明FOG前兆涉及多个步态维度，其神经关联方向具有维度特异性。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C3",
+      "text": "STN活动与GI balance评分之间不存在稳定、统一的频段方向关系，而呈现明显的时间、解剖位置和频率依赖性。第一，在FOG-OBS患者未发生冻结的GI试次中，GI开始前已经出现beta活动与balance评分的正向关联，且posterior STN强于其他区域。第二，在随后发生FOG的试次中，central STN的high-beta功率与balance呈更强负向关联，而posterior STN的gamma功率与balance呈正向关联。第三，其他GI阶段分析还报告low-beta与balance之间的负向关联。上述发现说明，不能简单使用beta升高或降低作为FOG相关balance障碍的统一指标。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度中等偏低。不同发现来自不同GI时间窗口、不同试次类型和不同频段，不能视为同一变量的直接重复测量。特别是前GI结果来自FOG-OBS患者的未冻结试次，且原始宽泛beta表述没有明确区分low-beta与high-beta。central和posterior区域的关联差异也不能直接证明两个区域之间存在功能解耦。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_5",
+          "relation": "supports",
+          "note": "支持GI开始前posterior STN beta-balance正向关联及其区域优势，同时提示其与GI后low-beta-balance负向关系存在时间差异。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_8",
+          "relation": "supports",
+          "note": "直接报告FOG阳性试次中central STN high-beta-balance负向关联和posterior STN gamma-balance正向关联。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_9",
+          "relation": "qualifies",
+          "note": "显示low-beta与balance的负向关联可以受到左旋多巴调节，进一步说明该关系依赖治疗状态。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C4",
+      "text": "多巴胺能药物状态是STN-GI神经活动与步态关系的重要调节因素。在FOG-OBS患者中，左旋多巴使low-beta与pace之间的关联从DOPAOFF时的负向转为正向，使low-beta与rhythm、balance之间原有的负向关联减弱，整体趋近FOG-NOBS患者的模式。但行为改善并不一致：pace和rhythm改善的同时，balance评分反而恶化，且FOG-OBS患者的balance恶化更明显。另一项转弯研究显示左旋多巴减少冻结时间比例和转弯持续时间，但其Med-on神经活动分析仅包含正常转弯，不能证明冻结状态下的STN异常已经恢复。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度中等。药物OFF/ON重复测量支持药物状态对神经关联模式的调节，但DOPAON时FOG几乎完全消失，无法继续比较FOG阳性与阴性试次。转弯研究的Med-on电生理数据不包含足够的冻结事件。balance恶化的具体机制未被直接测量。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_9",
+          "relation": "supports",
+          "note": "直接比较DOPAOFF与DOPAON下low-beta和pace、rhythm、balance的关联变化，并报告balance行为恶化。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_9",
+          "relation": "supports",
+          "note": "显示左旋多巴显著降低转弯冻结时间比例和转弯持续时间，证明药物状态会改变FOG行为表现。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_10",
+          "relation": "qualifies",
+          "note": "Med-on时正常转弯出现STN alpha功率变化，但神经分析没有纳入足够的冻结转弯，不能将其解释为FOG特异性神经活动恢复。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C5",
+      "text": "STN局部alpha功率变化本身尚未被证明是FOG特异性电生理标志。在正常转弯中，TurnStart阶段STN alpha功率相对于直线行走基线显著下降。相比之下，冻结转弯研究报告的显著alpha功率下降主要出现在PMC和M1，没有报告STN局部alpha功率的显著FOG相关变化。Med-on正常转弯中也观察到STN alpha功率在TurnPre和TurnStart阶段下降。因此，STN alpha变化可能参与一般转弯运动准备或执行，但现有证据不能确认其直接标记冻结。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据强度低。主要依据19人观察性研究中的正常转弯与行走比较。没有直接证实冻结与非冻结转弯之间存在STN局部alpha功率差异。Med-on分析仅涉及正常转弯，不能用于证明药物对FOG特异性alpha活动的作用。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_1",
+          "relation": "supports",
+          "note": "报告正常转弯TurnStart阶段STN alpha功率下降，但没有报告冻结转弯中相应的STN局部显著变化。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_10",
+          "relation": "qualifies",
+          "note": "Med-on正常转弯中同样存在STN alpha功率变化，但由于没有足够的冻结转弯，不能据此确定其FOG特异性。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C6",
+      "text": "转弯诱发FOG伴随相位特异性的皮层-STN alpha连接变化。在正常转弯中，PMC-STN alpha coherence在转弯开始前的TurnPre阶段相对于直线行走显著增加（p=0.0045）。在冻结转弯中，PMC-STN alpha coherence则在TurnStart阶段增加（p=0.048），同时M1-STN alpha coherence在TurnStart阶段下降（p=0.043）。这一组合提示不同皮层区域与STN之间的alpha耦合在冻结过程中可能呈现不同方向的变化。正常转弯与冻结转弯的结果看似存在耦合时相差异，但目前主要是各阶段分别相对于Walk基线的比较，并非直接验证了两种转弯之间的相位迁移。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度中等偏低。19人研究中冻结转弯87次、正常转弯52次。PMC-STN冻结转弯结果p=0.048，M1-STN结果p=0.043，统计证据较弱。不能仅凭不同阶段分别相对于Walk的显著性结果认定两种转弯之间存在显著相位差异。Coherence不能确定信息传递方向或因果关系。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_2",
+          "relation": "supports",
+          "note": "报告正常转弯TurnPre阶段PMC-STN alpha coherence增加。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_3",
+          "relation": "supports",
+          "note": "报告冻结转弯TurnStart阶段PMC-STN alpha coherence增加。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_4",
+          "relation": "supports",
+          "note": "报告冻结转弯TurnStart阶段M1-STN alpha coherence下降。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_11",
+          "relation": "qualifies",
+          "note": "作者明确提出PMC-STN增强可能是代偿性活动，也可能是病理性耦合，尚未通过因果实验区分。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C7",
+      "text": "PMC-STN alpha coherence增强至少存在两种竞争性解释。机制假说A：增强是代偿性耦合，用于在其他运动控制通路受损时维持运动执行。机制假说B：增强本身属于病理性过度耦合，可能参与冻结期间的僵硬和运动障碍。与此同时，M1-STN alpha coherence下降可能代表运动皮层与STN之间的通信受损。现有结果尚不能判断PMC-STN增强究竟有益还是有害，也不能确定M1-STN下降是FOG的起因还是伴随现象。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "机制证据弱。两种PMC-STN解释均为作者根据观察性coherence结果提出的竞争性假说，没有通过选择性调节PMC-STN连接进行验证。缺少信息传递方向分析及干预实验。该结论是待检验的机制框架，不是已经证实的因果结论。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_3",
+          "relation": "supports",
+          "note": "提供冻结转弯中PMC-STN alpha coherence增加的观察基础，但不区分其功能性质。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_4",
+          "relation": "supports",
+          "note": "提供同一阶段M1-STN alpha coherence下降的观察基础。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_11",
+          "relation": "supports",
+          "note": "明确提出代偿性与病理性PMC-STN耦合两种竞争解释，以及M1-STN通信受损的可能机制。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_7",
+          "relation": "qualifies",
+          "note": "虽然M1-STN coherence在冻结期间发生变化，但没有显著预测冻结持续时间，说明阶段性关联不等于严重程度决定因素。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C8",
+      "text": "PMC-STN alpha连接与冻结严重程度之间存在潜在关联，但其方向和稳定性尚不确定。TurnPre阶段PMC-STN alpha coherence变化能够预测冻结持续时间（β=0.205，p=0.006），TurnStart阶段则没有显著预测价值。PMC局部alpha功率下降也与冻结持续时间正相关（β=0.154，p=0.035）。相比之下，M1 alpha功率及M1-STN alpha coherence在TurnPre和TurnStart阶段均没有显示显著的冻结持续时间预测价值。尤其需要注意，PMC-STN预测模型的正文和图注对关联方向存在内部不一致。",
+      "level": "finding",
+      "status": "contested",
+      "uncertainty": "证据强度低。TurnPre PMC-STN预测结果存在论文内部方向报告矛盾，且没有置信区间。PMC alpha局部功率结果p=0.035。样本量仅19人，M1记录仅17人。观察性预测不能证明这些活动引起冻结，且不能将局部PMC活动直接等同于STN活动。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_5",
+          "relation": "supports",
+          "note": "报告TurnPre PMC-STN coherence变化能够预测冻结持续时间，但正文和图注对预测方向表述不一致。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_6",
+          "relation": "supports",
+          "note": "报告TurnPre PMC alpha功率下降与冻结持续时间之间的显著正向关联。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_7",
+          "relation": "qualifies",
+          "note": "M1 alpha及M1-STN coherence均未显著预测冻结持续时间，说明不同皮层-STN指标的严重程度预测能力并不一致。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C9",
+      "text": "转弯诱发FOG研究没有发现PMC-STN或M1-STN beta频段（13–35 Hz）coherence在各转弯阶段相对于直线行走基线出现显著变化。这与GI研究中posterior STN局部high-beta功率和步态参数存在关联的结果并不构成直接矛盾，因为前者测量的是皮层-STN连接，后者测量的是STN局部功率；两者的任务、时间窗口和神经指标不同。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "阴性结果来自19人观察性研究，受样本量、皮层电极覆盖及分析方法限制。不能据此排除STN局部beta功率与FOG的关系，也不能推广到GI、其他冻结类型或其他beta分析指标。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_8",
+          "relation": "supports",
+          "note": "直接报告PMC-STN和M1-STN beta coherence在各转弯阶段均无显著差异。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_6",
+          "relation": "qualifies",
+          "note": "GI阶段局部posterior STN high-beta功率与pace存在FOG前兆性关联，说明局部功率与跨区域连接不能混为同一指标。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C10",
+      "text": "2026年预印本提供了较直接的STN局部低beta活动与转弯冻结关系证据。FOG-Turn相对于站立状态表现为整个转弯过程中低beta（13–20 Hz）运动相关去同步化（ERD）缺失，而alpha和high-beta去同步化仍然保留。直接比较FOG-Turn与等时长Regular Turn时，FOG-Turn表现出更高的低beta活动，差异集中在12–15 Hz（p=0.0274）。Regular Turn和Regular Walking则均表现出低beta ERD。这支持冻结期间存在STN低beta活动调节失败，而非所有频段同步升高。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度中等偏低。直接冻结与正常转弯比较仅涉及11名患者，整体队列13人。结果来自MedOFF/StimOFF条件，所有患者均有FOG并接受STN-DBS，不能直接推广至未植入DBS的PD人群或药物ON状态。12–15 Hz结果不能解释为整个beta频段均升高。预印本证据仍需独立重复。",
+      "evidence": [
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_1",
+          "relation": "supports",
+          "note": "报告FOG-Turn期间STN低beta ERD缺失，而alpha及high-beta ERD仍保留。"
+        },
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_2",
+          "relation": "supports",
+          "note": "通过FOG-Turn与等时长Regular Turn直接比较，发现12–15 Hz低beta活动升高。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C11",
+      "text": "STN低beta去同步化异常可能在转弯诱发冻结之前已经出现。转弯前3秒的Pre FoG-Turn相对于站立基线已经表现出低beta ERD缺失，而alpha和high-beta去同步化仍然保留。该时期同时出现步幅缩短、步速降低和步频增加的步态序列效应。但Pre FoG-Turn与Pre Reg-Turn之间的直接低beta频谱比较未达到统计学显著性，因此目前只能认为低beta调节异常与冻结前的运动学改变同时出现，尚不能确认其独立预测FOG的能力。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据强度低。样本量13人，且冻结前低beta ERD异常主要是相对于站立基线的结果，直接冻结前与正常转弯前的频谱比较未显著。步态运动学变化与低beta异常的个体水平因果关系没有验证，也没有同步皮层记录确定信号来源。",
+      "evidence": [
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_3",
+          "relation": "supports",
+          "note": "报告Pre FoG-Turn的低beta ERD缺失及步幅、步速、步频变化。"
+        },
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_3",
+          "relation": "qualifies",
+          "note": "同一证据同时指出Pre FoG-Turn与Pre Reg-Turn之间的直接低beta频谱比较未达到统计学显著性。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C12",
+      "text": "多巴胺能状态显著影响转弯诱发FOG的行为表现，但其对FOG特异性STN电生理活动的影响尚未被充分确定。Med-on状态下转弯冻结时间比例及转弯持续时间显著下降。与此同时，Med-on正常转弯中STN alpha功率在TurnPre和TurnStart阶段下降，PMC-STN及M1-STN alpha coherence未出现显著相位差异。由于Med-on冻结转弯数量不足，这些神经活动结果不能证明药物已经恢复冻结状态下的STN网络活动。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度中等。行为层面的药物效应具有统计学支持，但Med-on冻结转弯仅15次，部分患者未完成两种药物状态实验。电生理比较仅涉及正常转弯，不能直接解释为FOG特异性神经变化。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_9",
+          "relation": "supports",
+          "note": "直接报告Med-on状态下转弯冻结时间比例和转弯持续时间下降。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_10",
+          "relation": "supports",
+          "note": "报告Med-on正常转弯中的STN alpha功率变化和皮层-STN coherence结果。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_10",
+          "relation": "qualifies",
+          "note": "Med-on电生理分析没有足够的冻结事件，不能确定药物对FOG特异性STN活动的影响。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C13",
+      "text": "FOG还与包含STN在内的PPN相关结构通路异常有关。DTI研究发现，FOG患者相较健康对照，PPN至双侧STN相关通路的tract volume降低，MD、AD和RD升高，提示结构完整性异常。DD+FOG与DD−FOG亚组之间没有显著差异。这为STN参与FOG相关脑干-基底节结构网络提供了间接证据，但并不证明STN局部神经活动异常。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据强度低。FOG组仅16人，DD+和DD−亚组分别10人和6人。DTI反映结构通路特征，不是神经元放电、LFP或振荡活动。缺少结构指标与FOG严重程度及STN电生理活动之间的直接关联。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41261259_1",
+          "relation": "supports",
+          "note": "报告FOG组PPN至双侧STN相关通路的tract volume降低及扩散指标升高。"
+        },
+        {
+          "eid": "S2_E_PMID_41261259_1",
+          "relation": "qualifies",
+          "note": "DD+与DD−FOG患者之间没有显著差异，不能将所观察到的结构改变简单归因于多巴胺能变性状态。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C14",
+      "text": "PD及PIGD相关研究显示STN功能连接异常具有明显的靶点和网络边特异性，而不是STN整体连接统一增强或降低。PIGD研究报告STN-壳核和STN-脑桥连接降低；PD-TD和PD-PIGD研究则报告STN-感觉运动皮质及视觉皮质连接增强。其他PD研究报告STN与外侧运动前皮质、M1连接增强，STN-DBS在PIGD患者中还与M1活动增强相关。另有多中心PD与健康对照比较报告双侧STN与多个颞叶、顶叶及额叶区域连接降低。不同结果涉及不同连接边、疾病亚型、静息态或刺激状态，不应简单视为相互矛盾，也不能直接认定为FOG特异性STN异常。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度低至中等。部分结论来自叙述性综述，原始研究样本量、药物状态、刺激状态和FOG分组不完整。不同研究的连接靶点与测量条件不一致，且PIGD不能等同于独立定义的FOG。静息态FC和远端M1活动不能直接等同于STN局部电生理活动。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41594737_1",
+          "relation": "supports",
+          "note": "报告PIGD中STN-壳核和STN-脑桥功能连接减弱。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_2",
+          "relation": "supports",
+          "note": "报告PD-TD和PD-PIGD中STN与感觉运动皮质及视觉皮质连接增强。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_3",
+          "relation": "supports",
+          "note": "报告PD总体人群中STN与外侧运动前皮质和M1连接增强。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_9",
+          "relation": "supports",
+          "note": "报告STN-DBS与PIGD患者M1活动增强相关，而GPi-DBS对应M1活动降低。"
+        },
+        {
+          "eid": "S2_E_PMID_41415889_1",
+          "relation": "qualifies",
+          "note": "多中心研究报告PD总体患者双侧STN与多个皮质区域连接降低，但没有FOG分组，不能与FOG特异性结果直接比较。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C15",
+      "text": "FOG相关网络异常可能超出STN本身，涉及中脑运动区、PPN和皮质运动准备网络。FOG综述报告中脑结构损伤及中脑-皮质连接下降，并指出PPN与皮质-脑桥-小脑通路存在异常功能连接。另有综述报告背侧中缝核与SMA、额上回及中扣带回连接下降。独立的步态启动fNIRS研究发现FOG患者SMA激活低于非FOG患者，且认知-运动冲突条件下差异更加明显。这些结果提示皮质及脑干网络可能共同参与FOG，但不能直接证明这些异常通过STN介导。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度低至中等。部分发现来自综述，原始研究样本量和条件未逐项报告。fNIRS研究没有记录STN活动，脑干连接结果也没有证明与STN局部活动存在直接耦合。不能据此确定网络异常的因果方向。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41594737_4",
+          "relation": "supports",
+          "note": "报告FOG患者中脑结构损伤和中脑-皮质连接下降。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_5",
+          "relation": "supports",
+          "note": "报告FOG相关PPN与皮质-脑桥-小脑通路功能连接异常。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_6",
+          "relation": "supports",
+          "note": "报告背侧中缝核与多个运动及执行相关皮质区域连接降低。"
+        },
+        {
+          "eid": "S2_E_PMID_41420410_1",
+          "relation": "supports",
+          "note": "报告FOG患者SMA激活降低，尤其在认知-运动冲突条件下。"
+        },
+        {
+          "eid": "S2_E_PMID_41420410_1",
+          "relation": "qualifies",
+          "note": "研究没有测量STN神经活动，不能将SMA异常直接解释为STN异常的结果。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C16",
+      "text": "DBS对FOG的临床作用可能取决于刺激体积所涉及的远距离白质网络，而不仅仅取决于局部STN位置。连接组综述报告，刺激体积与运动区、前额叶皮质及GPi存在结构连接时，与FOG改善相关；豆状核束受到刺激则可能与FOG恶化相关。这提示不同邻近纤维通路的激活可能产生不同方向的步态效应，但目前不能将这些结果直接归因于STN局部神经活动增强或抑制。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度低。属于综述转述的DBS连接组关联，未明确证明所有结果均来自STN-DBS。原始研究样本量、刺激靶点、VTA建模及FOG评估条件不完整。结构连接与临床疗效的关联不能证明特定纤维通路是因果中介。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41594737_7",
+          "relation": "supports",
+          "note": "报告刺激体积连接至运动区、前额叶和GPi与FOG改善相关。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_8",
+          "relation": "supports",
+          "note": "报告豆状核束刺激可能与FOG恶化相关。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C17",
+      "text": "STN+SNr双靶刺激相对于STN单靶刺激的FOG额外获益存在研究间冲突。一项多中心前瞻性随机交叉研究中，20名完成随访的患者接受不同阶段刺激，STN+SNr相较STN单靶使FOG-Q额外改善4.7分（95% CI 2.1–7.3，p=0.001）。但另一项10人的随机双盲受试者内研究中，STN119+SNr71相较StimOFF显著改善FoG-AC，却没有相较STN119单靶显示显著额外优势；STN119+SNr119也未显示显著优势。个体最佳方案存在明显差异，且SNr30与STN119联合时7米步行时间反而显著延长。这些结果不支持双靶刺激在所有患者和所有频率下都具有稳定的额外获益。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度中等但存在实质性异质性。可能的冲突来源包括：研究样本量分别为20和10人；一项评价持续6个月的临床疗效，另一项主要评价短时间即时反应；结局分别使用FOG-Q、FoG-AC和7米步行时间；SNr刺激频率不同；患者选择及电极位置不同；TEED恒定计算依赖阻抗稳定假设。第一项研究还存在退出和交叉阶段残留效应控制不充分的问题。不能简单以其中一项研究的结果否定另一项。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40760816_1",
+          "relation": "supports",
+          "note": "随机交叉临床研究报告STN+SNr相较STN单靶的FOG-Q额外改善4.7分。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_2",
+          "relation": "supports",
+          "note": "支持STN119相较StimOFF能够改善持续性FOG，但没有涉及SNr额外刺激的独立获益。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_3",
+          "relation": "contradicts",
+          "note": "STN119+SNr71改善FOG，但相较STN119没有显著额外优势。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_4",
+          "relation": "contradicts",
+          "note": "不同主动刺激条件之间没有显著总体差异，个体最佳方案分布显示明显异质性。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_5",
+          "relation": "qualifies",
+          "note": "SNr30联合刺激使7米步行时间显著延长，说明SNr刺激的临床作用具有频率和结局指标依赖性。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C18",
+      "text": "STN-DBS对FOG的临床改善存在阳性小样本研究与阴性合并证据之间的冲突。一项随机双盲研究显示STN119相较StimOFF能够显著改善FoG-AC。但一项纳入10项FOG-Q研究、比较11种DBS模式的网络Meta分析没有发现任何模式获得统计学显著的FOG-Q改善，所有95% CI均跨越零，且网络异质性很高（I²=88.3%），存在显著网络不一致和潜在发表偏倚。另一方面，该Meta分析转述的既往Meta分析报告了medication-off、stimulation-on状态下STN-DBS改善FOG，以及既往低频刺激研究可能有益的结论。因此，现有证据尚不足以确立STN-DBS在不同FOG患者中的稳定抗冻结效果。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度中等偏低。即时FoG-AC研究仅10人，FOG-Q网络Meta分析虽整合多项RCT，但异质性高、研究设计间不一致显著，且Egger检验提示发表偏倚或小样本效应。既往Meta分析仅被讨论部分转述，缺少具体样本量和效应量。可能的差异来源包括患者FOG表型、药物状态、刺激参数、评估时间、主客观结局及随访时长。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40926219_2",
+          "relation": "supports",
+          "note": "STN119相较StimOFF使FoG-AC显著下降，提供STN单靶刺激即时改善FOG的直接临床证据。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_1",
+          "relation": "contradicts",
+          "note": "网络Meta分析没有发现任何DBS模式对FOG-Q的统计学显著改善，并报告I²=88.3%及显著网络不一致。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_4",
+          "relation": "supports",
+          "note": "转述既往Meta分析在medication-off、stimulation-on状态下发现STN-DBS改善FOG。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_5",
+          "relation": "qualifies",
+          "note": "转述既往约60 Hz低频STN刺激可能改善FOG的研究观点，但本篇网络Meta分析没有证实其FOG-Q显著获益。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C19",
+      "text": "连续步行能力及总体运动症状的改善不能直接等同于FOG发作改善。网络Meta分析正文显示常规STN-DBS可以显著提高步速，但60 Hz-STN-DBS的步速改善未达到显著性；同一分析中常规STN、60 Hz和80 Hz刺激均能改善MDS-UPDRS III总体运动评分，而FOG-Q网络分析却没有发现显著的冻结改善。步速效应量还存在摘要与正文数值不一致。该结果支持连续运动能力与发作性冻结可能具有部分分离的治疗反应。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度中等。步速和总体运动评分不是FOG专属指标，不能据此推断冻结发作减少。步速网络异质性为I²=65.5%，MDS-UPDRS III网络异质性为I²=68.7%，且存在直接与间接证据不一致。STN-DBS步速效应量在摘要和正文分别报告为17.58和11.2475，定量解释应谨慎。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41659700_1",
+          "relation": "supports",
+          "note": "报告FOG-Q网络中不同DBS模式均未达到统计学显著改善。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_2",
+          "relation": "supports",
+          "note": "报告常规STN-DBS能够改善连续步速，而60 Hz刺激未达到显著性，并指出摘要与正文存在效应量不一致。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_3",
+          "relation": "supports",
+          "note": "报告STN相关刺激改善MDS-UPDRS III总体运动评分，但该指标并非FOG专属指标。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_6",
+          "relation": "supports",
+          "note": "作者提出连续运动改善与发作性FOG改善可能分离，并指出PPN和中脑运动区等其他环路可能参与冻结。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_5",
+          "relation": "qualifies",
+          "note": "显示SNr30联合刺激虽属于主动DBS方案，但7米步行时间反而变长，提示步行表现也依赖具体刺激组合。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C20",
+      "text": "FOG临床改善与部分步态运动学指标相关，但这种关系并不适用于所有步态参数。在个体最佳刺激方案相较StimOFF时，FoG-AC改善与步幅长度改善高度正相关（ρ=0.878）；双侧平均及患侧摆动期改善也与FOG改善相关（ρ=0.805和0.830）；小腿ROM改善同样呈高度正相关（ρ=0.805–0.878）。相比之下，步态速度、步频、步态周期时间和摆动时间不对称性没有达到显著相关。这说明FOG改善可能与特定运动学维度关系更密切，而非所有连续步行参数同步变化。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据强度低。相关分析仅8人，属于探索性分析。StimBEST根据同一批刺激条件下的个体反应选择，存在选择最佳条件的限制。结果是运动学与临床FOG改善之间的相关性，并没有直接测量STN活动，不能据此建立STN神经活动到运动学再到FOG的因果链。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40926219_6",
+          "relation": "supports",
+          "note": "报告步幅长度改善与FoG-AC改善高度正相关，ρ=0.878。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_7",
+          "relation": "supports",
+          "note": "报告双侧平均和患侧摆动期改善与FOG改善显著相关，但非患侧未达到显著性。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_8",
+          "relation": "supports",
+          "note": "报告小腿ROM改善与FOG改善显著正相关。"
+        },
+        {
+          "eid": "S2_E_PMID_40926219_9",
+          "relation": "qualifies",
+          "note": "步态速度、步频、步态周期时间和摆动时间不对称性未发现显著相关，说明不同运动学指标并不具有相同的预测价值。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C21",
+      "text": "STN-DBS刺激频率与FOG之间的关系具有明显个体差异，现有病例证据不支持简单的高频致FOG、低频必然改善FOG的普遍规律。一例难治性新发FOG患者在高频刺激最高达到180 Hz时没有明确FOG变化，而降至55 Hz后仅获得持续数周的部分改善，之后效果减弱。另一既往病例报告130 Hz激活后立即出现FOG，降低至60 Hz后冻结消失。这些病例呈现相反或不一致的频率反应。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度很低，主要是病例报告及文献转述。患者电极位置、药物状态、刺激幅度、其他程控参数及FOG量化方法不统一。低频改善发生时间较晚且不持久，高频无效也不能排除其他参数或疾病状态的影响，不能建立可靠的频率剂量反应关系。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40918851_3",
+          "relation": "contradicts",
+          "note": "同一病例中高频刺激最高180 Hz未明确改变FOG，不能支持高频刺激必然诱发冻结。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_4",
+          "relation": "supports",
+          "note": "55 Hz刺激曾使FOG获得数周持续改善，但效果随后减弱。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_7",
+          "relation": "supports",
+          "note": "既往病例报告130 Hz激活后新发FOG、降至60 Hz后FOG消失。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C22",
+      "text": "STN-DBS相关FOG至少存在刺激依赖性、刺激残留性和植入损伤相关的竞争性解释。一例患者在触点从腹外侧调整至背外侧后约2天出现严重FOG，但重新切回原触点没有明显改善，且短时间关闭DBS也没有改善。相反，既往病例报告有患者在停止刺激后FOG消失，并在手术修正偏离计划轨迹的电极后获得改善。另有病例在刺激激活前的围手术期已经出现FOG，且对停止刺激和参数调整缺乏反应，提示电极插入损伤相关步态通路也是可能解释。因此，刺激开启与FOG的时间关联不能单独证明STN局部神经活动导致冻结。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度低。主要来自病例报告，缺少随机触点交叉、标准化步态指标和充分洗脱。当前病例停刺激时间仅数小时，受到疼痛性肌张力障碍限制，不能排除刺激负面效应持续存在。其他病例的电极定位和神经通路损伤也没有完整的直接证据。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40918851_1",
+          "relation": "supports",
+          "note": "触点调整后新发FOG，但切回原触点后没有明显改善，说明单纯位置解释并不充分。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_2",
+          "relation": "qualifies",
+          "note": "停刺激试验时间不足，不能据此排除刺激残留效应或延迟性改善。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_8",
+          "relation": "supports",
+          "note": "既往病例中停止刺激和手术修正偏离计划位置的电极后FOG改善，支持刺激位置相关解释。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_9",
+          "relation": "supports",
+          "note": "既往病例在刺激激活前出现FOG，且对停刺激不敏感，支持结构性损伤作为替代解释。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_10",
+          "relation": "qualifies",
+          "note": "作者提出刺激过度、邻近通路影响、机械性或反应性组织损伤及疾病进展等多种尚未验证的解释。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C23",
+      "text": "多巴胺能治疗与STN-DBS之间可能存在FOG相关交互作用，但现有病例证据方向不一致。一些既往病例在较高剂量多巴胺能药物与STN-DBS联合使用时出现on-medication FOG，降低药物剂量或单独使用其中一种治疗后有所改善。相反，当前难治性病例没有观察到FOG与服药时间或Rytary/Sinemet剂量之间的明确关系，剂量调整也未改善FOG，但起病前实际药物剂量记录不可靠。GI研究还显示左旋多巴会改变low-beta与步态参数的关联模式。因此，药物状态可能是STN活动与FOG关系的重要效应修饰因素，但不能确定统一的多巴胺剂量方向。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度低。病例之间的FOG表型、刺激参数和药物方案不同，既往病例缺乏完整量化数据。当前病例服药记录不准确，药物调整也不是受控实验。GI电生理研究显示药物改变神经关联，但不能证明药物与DBS交互导致FOG。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40918851_5",
+          "relation": "contradicts",
+          "note": "当前病例没有发现明确的服药时间或剂量依赖性FOG，但起病前实际剂量不确定。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_6",
+          "relation": "supports",
+          "note": "既往病例报告联合高剂量多巴胺能治疗和STN-DBS时出现on-medication FOG，降低药物剂量或单独治疗后改善。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_9",
+          "relation": "supports",
+          "note": "直接报告左旋多巴改变STN low-beta与GI步态参数的关联模式。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_9",
+          "relation": "supports",
+          "note": "报告左旋多巴显著改善转弯冻结行为，说明药物状态本身能够影响FOG。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C24",
+      "text": "刺激诱发的STN神经活动抑制和20 Hz刺激对反应抑制的影响，为理解STN频率依赖性调节提供了间接线索，但不能直接作为STN活动与FOG关系的证据。既往人体研究报告STN活动在刺激频率超过20 Hz后开始受到抑制，100 Hz时完全受到抑制；SNr活动的抑制阈值更低。另有20 Hz STN刺激实验显示自动反应抑制任务表现发生改变，但没有测量实际步态或FOG事件。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据强度低。STN和SNr抑制阈值来自本文引述的既往研究，缺少样本量和FOG临床数据。20 Hz研究测量的是外部刺激操纵对神经心理任务的影响，不是内源性STN beta活动，也没有直接测试FOG。不能将反应抑制任务改善等同于冻结减少。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40926219_1",
+          "relation": "supports",
+          "note": "提供STN和SNr刺激诱发神经活动抑制阈值不同的既往人体神经生理结果。"
+        },
+        {
+          "eid": "S2_E_PMID_41383649_1",
+          "relation": "qualifies",
+          "note": "20 Hz STN刺激能够影响自动反应抑制，但研究没有测量步态或FOG，因此只能作为间接机制线索。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C25",
+      "text": "竞争性机制假说A：STN beta状态转换失败机制。该模型认为，正常GI和转弯需要STN低beta活动适当去同步化，而FOG患者在冻结前或冻结期间不能充分完成这一状态转换，导致运动推进及节律控制受损。可检验预测是：在同一患者内，低beta ERD缺失应先于冻结出现，并且在FOG阳性试次中比匹配的非冻结试次更明显；如果干预恢复低beta去同步化，FOG发生率应同步下降。该模型强调特定时间窗口和低beta频段，而不是笼统认为所有beta活动升高都会导致FOG。当前证据支持这一模型的关联基础，但没有验证因果链。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是基于本部分证据提出的可检验机制假说，而非直接研究结论。GI high-beta与pace/rhythm的关联和转弯低beta ERD缺失可能涉及不同频率成分、不同运动阶段，二者是否属于同一机制尚不明确。尤其是冻结前低beta直接组间比较未达到显著性。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_6",
+          "relation": "supports",
+          "note": "提供FOG发生前posterior STN high-beta与步态推进能力负向关联的证据。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_7",
+          "relation": "supports",
+          "note": "提供FOG前posterior STN high-beta/theta与步态节律关系改变的证据。"
+        },
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_1",
+          "relation": "supports",
+          "note": "提供冻结转弯期间STN低beta ERD缺失的直接电生理证据。"
+        },
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_2",
+          "relation": "supports",
+          "note": "提供FOG-Turn相较Regular Turn具有更高12–15 Hz低beta活动的直接比较证据。"
+        },
+        {
+          "eid": "S2_E_DOI_10.21203_rs.3.rs-9617843_v1_3",
+          "relation": "qualifies",
+          "note": "支持冻结前低beta调节异常的可能性，但Pre FoG-Turn与Pre Reg-Turn直接频谱比较未达到显著性。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C26",
+      "text": "竞争性机制假说B：皮层-STN alpha网络时相异常机制。该模型认为，正常转弯需要PMC-STN在转弯准备阶段形成适当的alpha耦合，而FOG可能伴随耦合增强时相改变及M1-STN连接下降。该模型存在两个可区分的子假说：增强的PMC-STN耦合是代偿性反应，还是参与冻结的病理性过度耦合。可通过直接比较正常转弯和冻结转弯的TurnPre、TurnStart阶段，并结合选择性调节PMC-STN连接，检验耦合增强是否先于冻结、是否与冻结严重程度一致变化，以及抑制或增强该连接是否改善FOG。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是机制推断而非因果证据。现有正常转弯与冻结转弯结果主要分别相对于Walk基线比较，没有完成严格的阶段间直接检验。TurnPre预测结果还存在方向报告不一致。Coherence不能识别信息传递方向。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41131028_2",
+          "relation": "supports",
+          "note": "提供正常转弯TurnPre阶段PMC-STN alpha coherence增强的观察依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_3",
+          "relation": "supports",
+          "note": "提供冻结转弯TurnStart阶段PMC-STN alpha coherence增强的观察依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_4",
+          "relation": "supports",
+          "note": "提供冻结转弯TurnStart阶段M1-STN alpha coherence下降的观察依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_5",
+          "relation": "qualifies",
+          "note": "TurnPre PMC-STN连接变化具有预测关联，但其方向解释存在内部不一致。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_11",
+          "relation": "supports",
+          "note": "明确提出PMC-STN耦合增强的补偿性与病理性两种竞争性机制。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C27",
+      "text": "竞争性机制假说C：STN内部运动相关区与联合相关区的功能协调异常。该模型认为，posterior sensorimotor STN与central associative STN可能在GI阶段分别承担不同的步态控制作用；FOG前兆表现为posterior区域high-beta与pace/rhythm的异常关联、central区域high-beta与balance的负向关联，以及posterior区域gamma与balance的正向关联。可检验预测是：采用多触点或分区LFP记录，并分别刺激posterior与central STN时，应观察到不同的步态维度效应。如果仅改变某一区域活动即可选择性改善某个步态维度，则支持区域特异性机制。现有结果不能证明两个区域之间真的存在直接功能解耦。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "机制证据低。不同区域关联结果来自同一小样本研究的不同试次和分析模型，没有直接测量posterior-central STN之间的功能连接，也没有区域特异性刺激实验。不能将相关模式直接解释为两个区域之间的竞争或相互抑制。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_5",
+          "relation": "supports",
+          "note": "提供posterior STN在GI前beta-balance关联中的区域优势。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_6",
+          "relation": "supports",
+          "note": "提供posterior STN high-beta与pace之间的FOG前兆性负向关联。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_7",
+          "relation": "supports",
+          "note": "提供posterior STN high-beta/theta与rhythm之间的FOG前兆性关联。"
+        },
+        {
+          "eid": "S2_E_PMID_40709562_8",
+          "relation": "supports",
+          "note": "提供central STN high-beta-balance负向关联和posterior STN gamma-balance正向关联。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C28",
+      "text": "竞争性机制假说D：多巴胺状态依赖的STN-步态调节机制。该模型认为，同一STN振荡活动与步态参数之间的关系会随多巴胺能状态改变，因此不同研究如果没有严格控制DOPAOFF、DOPAON条件，可能观察到不同甚至相反的关联方向。进一步需要区分普通多巴胺能不足、药物改善步态控制，以及高剂量多巴胺能治疗与STN刺激联合产生的on-medication FOG。可检验预测是通过随机、重复的药物OFF/ON交叉设计，同时记录STN-LFP和FOG事件，并按FOG药物反应表型分层。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "证据支持药物状态是重要调节变量，但不能确认具体交互机制。现有DOPAON时FOG事件不足，病例药物剂量记录存在不确定性，既往药物-刺激交互病例也缺乏完整定量资料。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40709562_9",
+          "relation": "supports",
+          "note": "提供左旋多巴改变STN low-beta与GI步态关联模式的直接证据。"
+        },
+        {
+          "eid": "S2_E_PMID_41131028_9",
+          "relation": "supports",
+          "note": "提供药物状态影响转弯冻结行为的证据。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_5",
+          "relation": "qualifies",
+          "note": "当前病例药物调整没有明确改善FOG，且药物剂量记录不完整。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_6",
+          "relation": "supports",
+          "note": "既往病例提出高剂量多巴胺能治疗与STN刺激联合可能诱发on-medication FOG。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C29",
+      "text": "竞争性机制假说E：刺激扩散至STN邻近步态通路或电极植入造成结构性损伤，而非STN局部神经活动异常本身导致FOG。该模型认为，刺激位置、刺激组织激活体积、PPN及中脑运动区相关通路可能影响冻结。另一种子假说是电极插入引起机械性或反应性组织改变，产生持续性、对刺激开关不敏感的FOG。可检验预测是结合电极空间重建、VTA建模、充分停刺激洗脱、结构影像及STN和脑干网络记录：如果FOG主要由刺激扩散引起，应与特定刺激范围及参数具有可重复关系；如果主要由结构损伤引起，则可能在刺激启动前出现并持续存在于充分停刺激之后。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "证据主要来自病例报告和间接结构连接研究。没有直接证实PPN、MLR或STN邻近通路受到损伤，也没有通过充分洗脱排除刺激残留效应。DTI和VTA连接关联不能证明具体致病路径。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_40918851_1",
+          "relation": "supports",
+          "note": "提供触点调整后新发FOG与刺激位置变化的时间关联，但切回原触点未能逆转症状。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_8",
+          "relation": "supports",
+          "note": "既往病例中电极位置异常、停止刺激和手术修正与FOG改善相关。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_9",
+          "relation": "supports",
+          "note": "提供刺激激活前出现且对停刺激不敏感的FOG病例，支持结构性替代解释。"
+        },
+        {
+          "eid": "S2_E_PMID_40918851_10",
+          "relation": "supports",
+          "note": "提出刺激扩散、组织损伤、水肿、胶质增生和疾病进展等竞争性病因。"
+        },
+        {
+          "eid": "S2_E_PMID_41261259_1",
+          "relation": "supports",
+          "note": "提供包含STN的PPN相关结构通路异常证据。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_7",
+          "relation": "supports",
+          "note": "提供DBS刺激体积远距离结构连接可能影响FOG疗效的依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_8",
+          "relation": "supports",
+          "note": "提供不同白质通路刺激可能产生相反FOG效应的依据。"
+        }
+      ]
+    },
+    {
+      "cid": "P7_C30",
+      "text": "竞争性机制假说F：FOG是涉及STN以外脑干运动网络的多环路、发作性障碍，STN调节可能改善连续步行能力，却不足以消除冻结发作。该模型认为，STN相关基底节运动控制改善与PPN、中脑运动区及皮质-脑桥-小脑网络的发作性控制异常可以同时存在。可检验预测是同步记录STN与脑干运动网络活动，分别分析连续步行、步态启动、转弯和实际冻结事件，并比较STN单独调节与多环路联合调节对不同结局的影响。如果只有连续步速改善而FOG事件不减少，则支持结局分离模型；如果脑干网络活动能够独立预测或调节冻结，则进一步支持多环路机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "该模型是跨研究综合提出的解释，不是已经验证的因果机制。现有证据包括FOG-Q与连续步速改善不一致、PPN相关结构及功能连接异常，但没有同步测量STN和PPN/MLR活动，也没有直接比较单环路与多环路因果干预效果。",
+      "evidence": [
+        {
+          "eid": "S2_E_PMID_41659700_1",
+          "relation": "supports",
+          "note": "提供DBS模式未能稳定改善FOG-Q的合并证据。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_2",
+          "relation": "supports",
+          "note": "提供STN-DBS改善连续步速但不能直接证明冻结改善的证据。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_6",
+          "relation": "supports",
+          "note": "作者明确提出PPN及中脑运动区等黑质纹状体系统以外环路可能参与发作性FOG。"
+        },
+        {
+          "eid": "S2_E_PMID_41261259_1",
+          "relation": "supports",
+          "note": "提供PPN至STN相关结构通路异常的影像学依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_4",
+          "relation": "supports",
+          "note": "提供FOG相关中脑结构及中脑-皮质连接异常的依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41594737_5",
+          "relation": "supports",
+          "note": "提供PPN与皮质-脑桥-小脑通路异常连接的依据。"
+        },
+        {
+          "eid": "S2_E_PMID_41659700_3",
+          "relation": "qualifies",
+          "note": "虽然STN相关刺激能够改善总体运动评分，但总体运动评分不能替代FOG专属结局。"
+        }
+      ]
+    }
+  ]
+}</escape>

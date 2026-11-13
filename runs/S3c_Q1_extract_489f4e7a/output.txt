@@ -1,0 +1,1351 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40504072; DOI:10.1002/mdc3.70170",
+    "title": "Differential Effects of Levodopa and Stimulation on Post-Surgery Freezing of Gait in Subthalamic Nucleus Deep Brain Stimulation Parkinson's Disease Patients: A Clinical and Kinematic Analysis.",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID40504072_STNDBS_FOG_2025",
+    "cohort_id_candidate": "STNDBS17_Lisbon_2025; IMU_model20_independent_candidate",
+    "cohort_relation_basis": "论文包含两个需要区分的样本：主要临床研究队列为17名双侧STN-DBS患者；FOG自动识别模型使用另一个独立的20名PD患者队列，其中13人用于训练、7人用于测试。论文明确称20人队列为independent group，因此不应与主要17人队列合并。与作者团队此前其他STN-DBS长期随访研究是否存在患者重叠，本文没有提供足够的招募时间、患者级信息或明确声明，跨研究队列关系为unknown，需进一步审计。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "40504072_E01",
+      "design": "横断面、非盲法、受试者内重复测量研究；比较药物和STN-DBS不同治疗状态。",
+      "population": "17名PD患者，均接受双侧STN-DBS。入组要求为MedON/StimON状态下MDS-UPDRS III item 3.11≥2。平均年龄69.56±7.54岁，DBS术后评估时间7.7±4.6年。FOG平均在术后24.1±21.1个月出现。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：全文仅报告各条件下每位患者的FOG事件数均值±SD，未报告全部患者的事件总数。n_trials：未报告各条件实际完成的SWS试次数。n_patients_with_valid_neural_data：全文未报告STN神经电生理记录。n_electrodes_contacts：未报告用于神经记录的电极或触点数量；DBS刺激参数另见Table S2，但不能将刺激触点等同于记录触点。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；采用MDS-UPDRS III item 3.11定义FOG入组，但未进一步区分akinetic、trembling-in-place、kinetic-no-trembling或mixed phenotype。",
+      "medication_phenotype": "unknown；所有患者在MedON/StimON时均有FOG，但该入组条件不能单独证明其为药物诱发型ON-FOG。",
+      "experimental_medication_state": "MedOFF/StimOFF与MedON/StimON比较。药物ON状态的具体给药至测试时间和洗脱时间未在主文中充分报告。Table 1报告研究纳入时LD challenge test剂量为433.1±137.5 mg，不应自动等同于所有测试条件的实际给药剂量。",
+      "DBS_state_and_parameters": "慢性双侧STN-DBS。比较MedOFF/StimOFF与MedON/StimON、130 Hz高频刺激条件。130 Hz为HFS。主文未给出本比较的具体电压、脉宽、活动触点及方向性配置；相关参数见Table S2。Figure S1报告11/17患者完成电极重建，重建结果显示电极位于STN区域，但电极定位不等于神经活动记录。",
+      "task": "Stand-Walk-Sit Test（SWS）：从椅子站起，步行7 m，半转身，再步行7 m并坐下。论文描述为3×14-m SWS测试。受试者进行实际直立行走，而非虚拟或仰卧模拟任务。",
+      "recording_location": "临床观察及7个IMU传感器，分别位于骨盆、左右大腿和腿部、足部。未报告STN内LFP、单单位、多单位或皮层-STN神经信号记录。",
+      "measure": "临床专家观察并计数SWS测试期间实际发生的FOG episodes（#FOG）。这是临床事件计数，不是STN神经活动指标。",
+      "frequency_and_analysis_window": "不适用：该结局为SWS任务期间的临床FOG事件计数，没有STN神经频段、功率、burst持续时间或相位分析窗口。",
+      "finding": "与MedOFF/StimOFF相比，MedON/StimON、130 Hz条件下SWS测试中的FOG事件数显著减少。说明该队列的FOG在最佳治疗状态仍然存在，但联合治疗可以部分降低实际冻结事件数。",
+      "effect_estimate": "MedON/StimON：6.3±7.9次；MedOFF/StimOFF：17.4±15.7次；P<0.001。效应量和置信区间未在主文报告。",
+      "statistical_unit_and_method": "患者级、受试者内治疗条件比较；FOG事件数按患者和测试条件汇总。n=17。具体统计检验及重复测量模型细节需查Supplementary Methods。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性、非随机、重复测量临床及IMU研究的适应性偏倚评估，不是经验证的正式RoB工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入17名MedON/StimON时已有FOG的患者，缺乏非冻结患者对照，存在选择偏倚和外部效度限制。",
+            "source_locator": "Methods，PDF p.2；Results，PDF p.2。"
+          },
+          {
+            "domain": "行为标签及结局测量",
+            "judgement": "some_concerns",
+            "reason": "FOG由单名运动障碍专家评估；作者明确承认评估未盲法且只有一名评估者，未报告独立视频裁定。",
+            "source_locator": "Methods，PDF p.2；Discussion limitations，PDF pp.10–11。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "报告了7个IMU的位置，但主文没有充分说明运动伪迹排除、信号质量控制及缺失信号处理。",
+            "source_locator": "Methods，PDF p.2；Figure 4，PDF p.7；Data S1。"
+          },
+          {
+            "domain": "混杂及干预分配",
+            "judgement": "some_concerns",
+            "reason": "研究为横断面、非随机和非盲法设计；作者承认刺激条件改变后可能存在carryover effect，尽管采用30分钟间隔。",
+            "source_locator": "Methods，PDF p.2；Discussion limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "同一患者接受多个条件测试；部分IMU分析使用1秒时间片。主文没有完整展示所有分析的患者级、事件级及窗口级统计单位和聚类处理。",
+            "source_locator": "Methods，PDF p.2；Figure 4，PDF p.7；Data S1。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "探索性分析涉及30个预先指定的运动学变量、多个治疗条件及PCA；主文未充分展示全部多重比较校正细节。",
+            "source_locator": "Results，PDF p.5；Figure 4，PDF p.7；Tables S5–S6。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "独立CNN数据集仅20人，训练13人、测试7人；主文未报告额外独立外部验证。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文说明预先指定了主要和次要结局，但详细统计方案位于未完整提供的Supplementary Methods，无法充分判断全部探索性分析是否完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是实际行走中的临床FOG事件证据，但不是自由生活自然场景研究。患者预先按MedON/StimON时存在FOG筛选，不能代表所有STN-DBS患者。研究没有记录STN神经活动，因此不能据此判断beta功率、beta burst、gamma活动或皮层-STN耦合与FOG的关系。",
+      "quote": "The number of FOG episodes was significantly reduced in the MedON/StimON condition when compared with the MedOFF/StimOFF.",
+      "source_locator": {
+        "section": "Results—FOG Assessment in MedOFF/StimOFF versus MedON/StimON",
+        "page": "PDF p.3",
+        "figure_table": "Figure 1B",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E02",
+      "design": "横断面、受试者内重复测量研究；单独比较刺激治疗与治疗OFF状态。",
+      "population": "主要STN-DBS队列中的17名PD患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "总FOG事件数、各条件实际SWS试次数、STN有效神经记录患者数及记录触点数均未报告。各条件仅提供FOG事件数的均值±SD。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedOFF；与MedOFF/StimOFF基线比较。",
+      "DBS_state_and_parameters": "MedOFF/StimON为刺激单独开启条件，比较MedOFF/StimOFF。该条件的具体频率、幅度、脉宽及活动触点未在主文详细报告；Table S2被引用。",
+      "task": "实际直立行走SWS测试，包括站立、直行、半转身、返回和坐下。",
+      "recording_location": "临床专家观察及7个IMU传感器；未报告STN神经记录。",
+      "measure": "SWS测试期间临床观察到的FOG episode数量。",
+      "frequency_and_analysis_window": "临床事件计数；无STN神经频段或神经分析窗口。",
+      "finding": "单独开启STN刺激、保持MedOFF时，FOG事件数低于MedOFF/StimOFF状态。Figure 2B对刺激单独与OFF基线的比较标示统计学显著性。",
+      "effect_estimate": "MedOFF/StimON：11.235±13.022次；MedOFF/StimOFF：17.395±15.710次。Figure 2B标示P<0.05；主文报告三个条件总体比较P=0.0164，但未在正文给出该单独两两比较的精确P值。",
+      "statistical_unit_and_method": "患者级、受试者内比较；n=17。主文报告三条件总体分析P=0.0164，Figure 2B显示两两比较显著性标记；精确统计检验见Supplementary Methods。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "17名患者均按MedON/StimON时FOG筛选，无非冻结对照。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "单名评估者进行未盲法临床FOG评估。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU信号质量和伪迹处理细节未在主文完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "刺激条件非随机，可能存在carryover effect。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者接受多条件重复测试，主文未完整展示统计聚类细节。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个治疗条件和运动学指标同时分析。",
+            "source_locator": "Results，PDF pp.3–5。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "相关IMU模型的独立测试集仅7人。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "详细统计方法位于未完整提供的Data S1。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "此结果支持刺激单独开启时临床FOG事件可能减少，但不能证明刺激直接改变某种STN神经振荡。刺激参数及具体触点信息未在主文充分呈现。",
+      "quote": "Either stimulation or LD significantly reduced total MDS-UPDRS III score.",
+      "source_locator": {
+        "section": "Results—Assessing Individual Effect of Stimulation and LD on FOG",
+        "page": "PDF p.3",
+        "figure_table": "Figure 2A–B",
+        "supplement": "Table S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E03",
+      "design": "横断面、受试者内重复测量研究；单独比较药物治疗与治疗OFF状态。",
+      "population": "主要STN-DBS队列中的17名PD患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "总FOG事件数、各条件SWS试次数、STN有效神经记录患者数及记录触点数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON/StimOFF；与MedOFF/StimOFF基线比较。研究纳入时LD challenge test剂量为433.1±137.5 mg，但主文没有充分说明每次测试的具体给药至评估时间。",
+      "DBS_state_and_parameters": "MedON/StimOFF，刺激关闭。患者仍为慢性双侧STN-DBS术后患者。",
+      "task": "实际直立行走SWS测试，包括站立、7 m直行、半转身、返回7 m和坐下。",
+      "recording_location": "临床专家观察及7个IMU传感器；无STN神经记录报告。",
+      "measure": "SWS测试期间临床专家计数的实际FOG episodes。",
+      "frequency_and_analysis_window": "临床事件计数，无神经频域指标。",
+      "finding": "单独使用LD、保持STN刺激关闭时，FOG事件数低于MedOFF/StimOFF状态。",
+      "effect_estimate": "MedON/StimOFF：9.279±7.506次；MedOFF/StimOFF：17.395±15.710次。Figure 2B标示OFF与medication-only比较P<0.05；主文三个条件总体比较P=0.0164，未给出该单独两两比较的精确P值。",
+      "statistical_unit_and_method": "患者级、受试者内比较；n=17。FOG事件数按每位患者每个条件汇总。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入MedON/StimON状态已有FOG的17名患者。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由单名未盲法临床评估者观察。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU伪迹及信号质量控制细节未在主文完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "非随机、非盲法设计；药物剂量和测试时序可能影响结果。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF pp.10–11。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "多条件重复测试的统计单位和聚类处理未在主文完整展示。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个临床结局及探索性运动学指标同时分析。",
+            "source_locator": "Results，PDF pp.3–5。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "独立IMU模型测试集仅7人。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "详细统计方法需查Supplementary Methods。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是药物单独治疗条件下的行为学证据，不是药物对STN神经活动的直接测量。不能仅凭组平均数推断所有患者都存在LD响应。",
+      "quote": "MedON/StimOFF: 9.279 ± 7.506, P = 0.0164.",
+      "source_locator": {
+        "section": "Results—Assessing Individual Effect of Stimulation and LD on FOG",
+        "page": "PDF p.3",
+        "figure_table": "Figure 2B",
+        "supplement": "Table S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E04",
+      "design": "主要研究中的患者亚组分析；受试者内治疗条件比较。",
+      "population": "17人主要队列中5名作者定义为FOG worsened with medication、improved with stimulation的患者，占29.4%。",
+      "n_enrolled": 17,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "亚组患者数为5；总FOG事件数、试次数和STN有效神经记录患者数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；未报告akinetic或trembling等亚型。",
+      "medication_phenotype": "unknown；作者定义为worsened with medication亚组，但没有按标准化ON-FOG/OFF-FOG表型进行独立分类。",
+      "experimental_medication_state": "比较MedOFF/StimON与MedON/StimOFF。作者报告该亚组在MedON/StimOFF时FOG较重，而在MedOFF/StimON时FOG较轻。添加LD至有效刺激后，FOG事件数有增加趋势，但该趋势未报告显著性。",
+      "DBS_state_and_parameters": "MedOFF/StimON与MedON/StimOFF比较；刺激具体频率、幅度、脉宽和触点未在主文列出。",
+      "task": "实际直立行走SWS测试。",
+      "recording_location": "临床专家观察；7个IMU传感器记录步态。未报告STN神经活动记录。",
+      "measure": "临床计数的SWS期间FOG episode数量。",
+      "frequency_and_analysis_window": "临床事件计数，无神经频段或神经分析窗口。",
+      "finding": "在5名药物恶化、刺激改善的患者中，MedOFF/StimON条件下FOG事件数显著低于MedON/StimOFF条件。该比较同时改变药物和刺激状态，不能把两条件差异简单解释为LD单独的因果效应。",
+      "effect_estimate": "MedOFF/StimON：1.8±2.4次；MedON/StimOFF：15.8±6.8次；P=0.003。n=5。",
+      "statistical_unit_and_method": "患者亚组级、患者内条件比较；n=5。FOG事件数按患者和SWS测试汇总。精确统计检验未在主文报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "仅5名患者构成亚组，且亚组根据观察到的治疗反应事后划分，存在小样本和选择偏倚。",
+            "source_locator": "Results，PDF p.3；Figure 2J。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由单名未盲法临床评估者计数。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "主文未完整报告IMU伪迹处理和信号质量控制。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "MedOFF/StimON与MedON/StimOFF同时改变两个干预因素，不能完全分离药物和刺激效应。",
+            "source_locator": "Results，PDF p.3；Figure S2A。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "亚组仅5人，主文未充分展示事件级与患者级统计模型。",
+            "source_locator": "Results，PDF p.3；Supplementary Methods。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个亚组、治疗条件和运动结局同时比较。",
+            "source_locator": "Figures 2 and S2–S3。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为临床亚组比较，不是预测模型结果。",
+            "source_locator": "Figure S2A。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "亚组分析详细预设情况和完整统计方案未在主文充分说明。",
+            "source_locator": "Results，PDF p.3；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "亚组仅5人。MedOFF/StimON与MedON/StimOFF并非只改变一个因素，因此不能将差异解释为严格隔离的LD药理效应或刺激效应。未进行STN神经记录，不能据此确定药物恶化型FOG对应的神经活动机制。",
+      "quote": "In these 5 patients presenting with an LD-worsened FOG, the #FOG episodes were significantly improved in the MedOFF/StimON compared to the MedON/StimOFF condition.",
+      "source_locator": {
+        "section": "Results—Assessing Individual Effect of Stimulation and LD on FOG",
+        "page": "PDF p.3",
+        "figure_table": "Figure S2A; Figure S3A",
+        "supplement": "Figures S2A and S3A"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E05",
+      "design": "主要研究中的患者亚组分析；受试者内重复条件比较。",
+      "population": "17人主要队列中3名作者定义为FOG improved with medication but worsened with stimulation的患者，占17.7%。",
+      "n_enrolled": 17,
+      "n_analyzed": 3,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "亚组患者数为3；未报告总事件数、试次数及STN有效神经记录患者数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown；作者将其归为medication-improved、stimulation-worsened亚组，但未给出标准化药物相关FOG表型分类。",
+      "experimental_medication_state": "比较MedOFF/StimOFF、MedON/StimOFF和MedOFF/StimON三个条件。",
+      "DBS_state_and_parameters": "MedOFF/StimON为刺激单独开启；MedON/StimOFF为药物单独开启。具体刺激频率、幅度、脉宽及触点未在主文报告。",
+      "task": "实际直立行走SWS测试。",
+      "recording_location": "临床专家观察及7个IMU传感器；没有STN神经记录报告。",
+      "measure": "SWS测试期间临床观察到的FOG episode数量。",
+      "frequency_and_analysis_window": "临床FOG事件计数，无神经频段或神经分析窗口。",
+      "finding": "在刺激恶化亚组中，MedOFF/StimON条件下的FOG事件数高于MedON/StimOFF条件。作者将该模式描述为stimulation-induced FOG。添加LD至刺激条件后，作者报告这种刺激不良反应可被完全避免，但该后续比较的具体统计结果需另行查看Figure S3。",
+      "effect_estimate": "MedOFF/StimOFF：13.61±6.73次；MedON/StimOFF：4.55±2.86次；MedOFF/StimON：26.00±11.53次；三条件比较P=0.0278。n=3。",
+      "statistical_unit_and_method": "患者级亚组比较；n=3。各条件FOG事件数以均值±SD表示。精确统计检验未在主文说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "high",
+            "reason": "仅3名患者，且亚组根据观察到的治疗反应划分。",
+            "source_locator": "Results，PDF p.3；Figure S2B。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床FOG评估为单名评估者、非盲法。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU信号伪迹控制细节未在主文充分报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "刺激单独与药物单独条件并非同时控制其他因素的随机比较。",
+            "source_locator": "Results，PDF p.3；Figure S2B。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "亚组仅3人，事件级与患者级分析细节不充分。",
+            "source_locator": "Results，PDF p.3；Supplementary Methods。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个治疗条件和亚组结局同时比较。",
+            "source_locator": "Figures 2 and S2–S3。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为临床亚组比较，不是预测模型结果。",
+            "source_locator": "Figure S2B。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "完整亚组统计计划未在主文充分展示。",
+            "source_locator": "Results，PDF p.3；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "亚组仅3人，估计不稳定。该结果提示部分患者可能存在刺激相关FOG，但没有电极位置与神经信号的事件级对应分析。作者提出邻近纤维电流扩散等机制属于Discussion中的解释性假设，而不是本研究直接测量的神经机制。",
+      "quote": "On the Stim-worsened subgroup, stimulation induced an increase in the #FOG episodes when compared to medication.",
+      "source_locator": {
+        "section": "Results—Assessing Individual Effect of Stimulation and LD on FOG",
+        "page": "PDF p.3",
+        "figure_table": "Figure S2B; Figure S3",
+        "supplement": "Figures S2B and S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E06",
+      "design": "主要队列内受试者重复测量；高频与低频STN-DBS比较。",
+      "population": "17名PD双侧STN-DBS患者，均为MedON/StimON状态仍有FOG的患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数、SWS总试次数、有效STN神经记录患者数及记录触点数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "两个条件均为MedON。",
+      "DBS_state_and_parameters": "MedON/StimON 130 Hz HFS与MedON/StimON 60 Hz LFS比较。60 Hz条件调整电压以维持等效总能量输出。刺激参数改变之间保留30分钟间隔。主文未给出各患者的完整幅度、脉宽及触点配置。",
+      "task": "SWS实际行走测试。",
+      "recording_location": "临床专家观察及7个IMU传感器；无STN神经活动记录。",
+      "measure": "SWS测试期间临床计数的FOG episodes。",
+      "frequency_and_analysis_window": "刺激频率为130 Hz与60 Hz；FOG结局为整个SWS测试期间事件数，不涉及神经频域分析。",
+      "finding": "全队列中，130 Hz和60 Hz刺激条件的FOG事件数没有统计学显著差异。",
+      "effect_estimate": "130 Hz HFS：6.32±7.91次；60 Hz LFS：5.08±8.26次；P=0.410。",
+      "statistical_unit_and_method": "患者级、受试者内频率条件比较；n=17。报告均值±SD和P值；详细统计方法需查Supplementary Methods。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "17人均为MedON/StimON时有FOG的选择性队列。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "单名未盲法评估者进行临床FOG计数。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU质量控制和伪迹处理细节未在主文完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "频率条件未随机化，且作者承认可能存在carryover effect。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "相同患者进行两个频率条件的重复比较，统计聚类细节未在主文充分展示。",
+            "source_locator": "Methods，PDF p.2；Figure 3。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "FOG事件数、SWS时间、轴向和非轴向评分及多个运动学变量同时分析。",
+            "source_locator": "Results，PDF p.4；Figures 3 and S5。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为刺激频率临床比较，不是预测模型结果。",
+            "source_locator": "Figure 3A。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "完整统计分析方案未在主文展示。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是组水平的阴性结果，不代表所有个体均无频率响应。样本量小、非盲法及可能的carryover effect均可能影响频率差异的检出能力。没有测量STN神经振荡，不能解释60 Hz与130 Hz之间是否存在神经活动差异。",
+      "quote": "Globally, the #FOG episodes (HFS: 6.32 ± 7.91; LFS: 5.08 ± 8.26, P = 0.410).",
+      "source_locator": {
+        "section": "Results—The Role of HFS and LFS in FOG",
+        "page": "PDF p.4",
+        "figure_table": "Figure 3A",
+        "supplement": "Table S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E07",
+      "design": "患者级频率响应分层分析；描述性亚组分布。",
+      "population": "17名STN-DBS患者；比较MedON/StimON 60 Hz和130 Hz时个体FOG响应。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "论文报告患者响应比例，但未提供可独立核查的完整患者级事件总数；没有STN有效神经数据。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "两个频率条件均为MedON。",
+      "DBS_state_and_parameters": "60 Hz LFS与130 Hz HFS；电压调整以保持等效总能量。",
+      "task": "SWS实际行走测试。",
+      "recording_location": "临床观察及IMU步态传感器；没有STN神经记录。",
+      "measure": "患者级FOG事件数在60 Hz与130 Hz条件之间的个体响应方向。",
+      "frequency_and_analysis_window": "刺激频率130 Hz与60 Hz；以SWS期间临床FOG事件数判断个体改善方向。",
+      "finding": "存在明显个体差异。Results部分报告58.8%的患者在LFS下FOG改善优于HFS；25.5%的患者在HFS下FOG响应更好，但作者指出这一方向的改善未达到统计学显著性。需要注意，Abstract和Discussion均报告LFS优于HFS的患者为9人，与Results的58.8%存在内部不一致。",
+      "effect_estimate": "Results：LFS优于HFS为58.8%；HFS优于LFS为25.5%。Abstract和Discussion：LFS优于HFS为9名患者。n=17时58.8%与9/17并不一致。未自行推算或修正原始人数。",
+      "statistical_unit_and_method": "患者级响应分类；n=17。未报告响应比例的置信区间或独立统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "患者均由MedON/StimON时存在FOG的条件筛选。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "单名未盲法评估者计数FOG。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU质量控制细节未完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "频率条件非随机，可能存在carryover effect。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "个体响应比例基于重复条件比较，详细统计方法未在主文完整呈现。",
+            "source_locator": "Results，PDF p.4；Figure 3F–G。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "不同频率、FOG事件数及多个运动结局均进行了比较。",
+            "source_locator": "Figure 3，PDF p.4。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为患者响应分层，不是预测模型结果。",
+            "source_locator": "Figure 3F–G。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "Abstract、Results及Discussion对LFS响应人数和比例的报告存在不一致。",
+            "source_locator": "Abstract；Results PDF p.4；Discussion PDF p.9。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果体现个体异质性，但58.8%与9名患者的报告不一致，不能自行决定哪个数字正确。组水平无显著差异与部分患者存在明显个体改善可以同时成立。该分析未将个体差异与STN神经活动、触点位置或神经网络招募进行直接关联。",
+      "quote": "in 58.8% of the patients, LFS was superior to HFS in reducing the #FOG episodes.",
+      "source_locator": {
+        "section": "Results—The Role of HFS and LFS in FOG",
+        "page": "PDF p.4",
+        "figure_table": "Figure 3F–G",
+        "supplement": "Figure S4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E08",
+      "design": "独立患者队列中的监督式机器学习模型开发和患者级留出测试。",
+      "population": "独立的20名PD患者队列。13名患者用于模型建立，7名患者用于未见数据测试。论文没有充分报告这20人的STN-DBS状态及FOG患者人数。",
+      "n_enrolled": 20,
+      "n_analyzed": 20,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "训练和测试患者人数已报告，但FOG阳性患者数、FOG事件总数、阳性及阴性1秒窗口数量未报告。该模型使用IMU，不是STN神经记录。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；模型使用FOG和non-FOG二分类标签，未细分临床亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "独立模型队列的药物状态未报告。",
+      "DBS_state_and_parameters": "独立模型队列的STN-DBS植入情况及刺激参数未报告，不能假定这20人均为STN-DBS患者。",
+      "task": "直线行走（straight gait）；使用7个可穿戴IMU设备采集连续惯性信号。",
+      "recording_location": "7个身体可穿戴传感器；主要研究的IMU位置为骨盆、双侧大腿、腿部及足部。没有STN神经记录。",
+      "measure": "卷积神经网络（CNN）对IMU多变量时间序列进行FOG与non-FOG二分类。",
+      "frequency_and_analysis_window": "连续IMU信号被划分为1秒时间片，每个1秒时间片作为一个分类样本。没有STN神经频段分析。",
+      "finding": "作者报告该CNN模型在独立患者数据中具有较好的FOG检测性能。训练和测试按照患者划分，而非仅将同一患者的时间窗口随机拆分。",
+      "effect_estimate": "独立模型队列n=20；训练13人，留出测试7人。Figure 4E报告敏感度0.778、特异度0.885、AUC 0.832、F1 0.762。置信区间及FOG阳性窗口总数未报告。",
+      "statistical_unit_and_method": "模型以1秒IMU窗口为分类单位，患者级划分训练集和测试集。性能指标为敏感度、特异度、AUC和F1；测试集患者数为7。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：预测模型及观察性传感器研究的适应性偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "总样本20人，测试集仅7人；FOG阳性患者数量和招募方式未在主文充分报告。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "模型性能与临床评估比较，但主文未充分说明所有训练标签的独立视频裁定和评估者一致性。",
+            "source_locator": "Results—Identification of FOG，PDF p.5；Figure 4E。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "报告7个可穿戴设备及1秒切片，但主文未完整呈现伪迹剔除和信号质量阈值。",
+            "source_locator": "Figure 4A–D，PDF p.7；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "unclear",
+            "reason": "独立模型队列的药物状态、疾病严重度及任务条件未充分报告。",
+            "source_locator": "Results，PDF p.5；Figure 4。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "模型以1秒窗口作为样本，窗口嵌套于患者；虽然训练和测试按患者分组，但事件及窗口级统计依赖性细节未充分报告。",
+            "source_locator": "Figure 4B–D，PDF p.7。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "主文未充分说明模型超参数选择、阈值选择及所有模型比较过程。",
+            "source_locator": "Figure 4D–E；Data S1。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "仅7名患者作为留出测试集，未报告另一个独立外部验证队列。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "模型开发及性能评估细节部分位于Supplementary Methods，不能完整判断所有模型选择过程。",
+            "source_locator": "Data S1；Figure 4E。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是IMU行为学分类模型，不是STN神经活动预测模型。7名测试患者的样本规模有限。模型的敏感度和特异度不能直接解释为STN神经信号对FOG的预测能力。该20人队列与主要17人队列应保持分离。",
+      "quote": "The model was built in 13 patients, and 7 were used to test the model on unseen data.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.7",
+        "figure_table": "Figure 4D–E",
+        "supplement": "Data S1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E09",
+      "design": "主要队列内IMU自动FOG识别模型的重复条件比较。",
+      "population": "主要STN-DBS队列17名PD患者；使用独立20人队列训练和测试的CNN模型进行FOG百分比量化。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文报告%FOG均值及SD，但未报告全部患者的FOG事件总数、模型识别的阳性窗口总数及各条件有效时间窗口总数。没有STN神经记录。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedOFF/StimOFF与MedON/StimON。该数值比较的正文没有明确说明ON/ON数值对应130 Hz还是60 Hz，故不自行指定频率。",
+      "DBS_state_and_parameters": "基线MedOFF/StimOFF与联合治疗MedON/StimON；频率具体对应关系在该数值比较中未明确说明。",
+      "task": "直线步行期间的自动FOG量化；主文称模型量化straight gait期间的FOG百分比。",
+      "recording_location": "7个IMU可穿戴设备，记录躯干、下肢及足部惯性运动；未记录STN神经信号。",
+      "measure": "CNN根据IMU数据自动识别的FOG时间比例（%FOG）。",
+      "frequency_and_analysis_window": "IMU连续信号被处理为1秒时间片；%FOG表示直线行走中被模型判定为FOG的时间百分比。没有神经频段或STN分析窗口。",
+      "finding": "IMU自动识别的FOG时间百分比从MedOFF/StimOFF到MedON/StimON显著下降，与临床专家观察到的治疗调节方向一致。",
+      "effect_estimate": "MedOFF/StimOFF：61.51%±9.99；MedON/StimON：24.43%±24.43；P=0.0128。",
+      "statistical_unit_and_method": "患者及治疗条件级%FOG均值比较；n=17。精确统计模型和置信区间未在主文给出。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性传感器预测及重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "主队列17人均为MedON/StimON状态存在FOG的选择性样本。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "模型通过临床评估进行性能验证，但主队列每个自动识别事件是否经过独立视频裁定未报告。",
+            "source_locator": "Results，PDF p.5；Figure 4E。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "1秒IMU时间片已报告，但伪迹剔除和质量控制细节不充分。",
+            "source_locator": "Figure 4，PDF p.7；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物和刺激条件未随机化，可能存在顺序及carryover影响。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者在多个条件下产生大量1秒窗口，主文未充分展示患者级聚类及窗口级依赖性处理。",
+            "source_locator": "Figure 4B–F，PDF p.7。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个条件下同时比较自动FOG指标及其他临床运动学指标。",
+            "source_locator": "Figure 4F–I。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "模型测试集为7名独立患者，主文未报告进一步外部验证。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "详细模型及统计分析方案位于Supplementary Methods。",
+            "source_locator": "Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "自动识别的%FOG是IMU算法输出，并非逐事件由独立视频专家确认的冻结事件。该结果支持行为学指标对治疗状态敏感，但不能证明某种STN神经活动导致FOG变化。",
+      "quote": "The %FOG significantly decreased from MedOFF/StimOFF to MedON/StimON condition.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.5",
+        "figure_table": "Figure 4F",
+        "supplement": "Data S1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E10",
+      "design": "主要队列内IMU自动FOG指标与临床FOG事件计数的相关性分析。",
+      "population": "17名PD双侧STN-DBS患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Table S4提供相关性分析的详细结果，但主文未报告具体相关系数、置信区间及总FOG事件数；STN神经记录未报告。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "跨MedOFF/StimOFF、MedOFF/StimON、MedON/StimOFF和MedON/StimON条件进行相关分析。",
+      "DBS_state_and_parameters": "包含刺激OFF和ON条件；频率相关细节依各实验条件，具体活动触点及幅度未在主文报告。",
+      "task": "SWS及直线步行IMU分析；临床#FOG与自动识别%FOG进行跨条件关联。",
+      "recording_location": "7个IMU传感器；无STN神经记录。",
+      "measure": "临床专家计数的#FOG与IMU自动检测的%FOG之间的相关性。",
+      "frequency_and_analysis_window": "IMU算法使用1秒时间片；相关性跨治疗条件分析。不是神经频段分析。",
+      "finding": "作者报告临床FOG事件数与IMU自动识别的FOG时间百分比在不同治疗条件下显著相关。",
+      "effect_estimate": "显著相关；主文未提供具体r或rho、P值和置信区间，详细结果指向Table S4。不能自行估计相关系数。",
+      "statistical_unit_and_method": "相关性分析；患者和治疗条件的统计单位、相关系数类型及重复测量校正细节未在主文充分报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性传感器预测及重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "主队列为17名预先筛选的ON/ON冻结患者。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床FOG计数由单名未盲法评估者完成。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU信号处理和伪迹控制细节未在主文完整报告。",
+            "source_locator": "Figure 4；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "多个药物和刺激状态未随机分配，存在条件和顺序相关混杂。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "同一患者跨多个条件进行关联分析，主文未充分说明患者内相关性校正。",
+            "source_locator": "Figure 4F；Table S4。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个条件和多个运动学指标均参与关联分析。",
+            "source_locator": "Figure 4F–I；Tables S4–S6。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "自动检测模型独立测试患者仅7人，未报告额外外部验证。",
+            "source_locator": "Figure 4D–E。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "具体相关系数需查补充表格，主文仅报告显著性。",
+            "source_locator": "Table S4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果说明临床FOG事件计数与IMU自动检测具有一致性，但不能区分FOG发生前、冻结期间及恢复期的神经机制。主文未提供精确相关系数。",
+      "quote": "The #FOG episodes and the SWS time significantly correlated with the %FOG detected by inertial measurement units (IMU) across conditions.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.5",
+        "figure_table": "Figure 4F",
+        "supplement": "Table S4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E11",
+      "design": "主要队列内IMU自动FOG指标与SWS步行完成时间的相关性分析。",
+      "population": "17名PD双侧STN-DBS患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "主文未提供具体相关系数、置信区间、各条件的有效时间窗口数及总试次数；STN神经数据未报告。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "跨多个MedOFF/MedON及StimOFF/StimON条件。",
+      "DBS_state_and_parameters": "包含刺激OFF及ON条件；具体触点、幅度和脉宽未在主文提供。",
+      "task": "实际直立行走SWS测试。",
+      "recording_location": "7个IMU传感器，记录骨盆、下肢及足部运动；没有STN神经记录。",
+      "measure": "SWS完成时间与IMU自动检测FOG时间百分比（%FOG）之间的相关性。",
+      "frequency_and_analysis_window": "IMU使用1秒时间片识别FOG；SWS时间是整项测试的完成时间，不是神经频域指标。",
+      "finding": "作者报告SWS完成时间与自动检测的%FOG在不同治疗条件下显著相关。",
+      "effect_estimate": "显著相关；主文未报告具体相关系数和P值，详细结果见Table S4。",
+      "statistical_unit_and_method": "患者及治疗条件级相关性分析；精确相关方法和重复测量校正方式未在主文充分说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性传感器预测及重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "主要队列为17名ON/ON状态仍有FOG的患者。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG临床标签由单名未盲法评估者提供。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU伪迹处理细节未在主文完整报告。",
+            "source_locator": "Figure 4；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "治疗条件未随机化，可能存在顺序和carryover影响。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者在不同治疗条件下重复测量，主文未充分说明统计聚类。",
+            "source_locator": "Figure 4F；Table S4。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "不同治疗状态及多个临床和运动学指标同时分析。",
+            "source_locator": "Figure 4F–I。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "FOG识别模型的独立测试集只有7名患者。",
+            "source_locator": "Figure 4D–E。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "具体相关系数未在主文展示。",
+            "source_locator": "Table S4。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "SWS时间可能反映整体步态受损程度，不能等同于冻结事件本身。该相关性不能判断步态减慢是否发生在FOG之前，也不能支持STN神经活动的因果机制。",
+      "quote": "The #FOG episodes and the SWS time significantly correlated with the %FOG detected by inertial measurement units (IMU) across conditions.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.5",
+        "figure_table": "Figure 4F",
+        "supplement": "Table S4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E12",
+      "design": "探索性运动学相关性分析；对30个预先指定的步态变量进行跨条件分析。",
+      "population": "主要研究队列17名PD双侧STN-DBS患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "主文未提供全部变量的相关系数、置信区间、有效事件总数和试次数；详细结果见Table S5。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "在MedOFF/StimOFF、MedOFF/StimON、MedON/StimOFF和MedON/StimON等条件下分析。",
+      "DBS_state_and_parameters": "包括刺激OFF及ON状态；部分MedON/StimON条件涉及130 Hz和60 Hz。具体幅度、脉宽及触点未在主文报告。",
+      "task": "实际步行期间的IMU运动学分析，结合直线步行的自动%FOG指标。",
+      "recording_location": "7个IMU传感器；骨盆、双侧大腿、腿部及足部。没有STN神经记录。",
+      "measure": "30个预先指定的步态运动学变量与CNN自动检测%FOG之间的相关性，涉及步态变异性、非对称性及非线性指标。",
+      "frequency_and_analysis_window": "非神经频域分析。自动FOG模型使用1秒IMU时间片；各步态运动学变量的具体计算窗口及事件对齐方式未在主文充分报告。",
+      "finding": "与FOG关系最强的运动学维度包括步态变异性、非对称性和非线性指标。作者报告步态变异性相关指标具有最强的FOG相关性，并且这种关系在多个治疗条件下存在。",
+      "effect_estimate": "仅报告定性关联强度排序；具体相关系数、P值和置信区间未在主文列出，需查看Table S5。",
+      "statistical_unit_and_method": "对30个预先指定的运动学变量与%FOG进行跨条件相关性分析；患者级和条件级的精确统计单位及多重比较校正细节未在主文充分报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性运动学及预测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅17名MedON/StimON时有FOG的患者，无非冻结对照。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床FOG评估由单名未盲法评估者完成，自动标签独立视频验证情况未报告。",
+            "source_locator": "Methods，PDF p.2；Figure 4E。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "IMU信号处理和伪迹剔除细节在主文中不充分。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "不同药物和刺激条件未随机化，可能存在治疗状态及顺序混杂。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "30个变量在多个治疗条件下重复分析，主文未完整说明患者内相关性处理。",
+            "source_locator": "Figure 4G；Table S5。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时检验30个预先指定的运动学变量及多个治疗条件，存在多重比较风险。",
+            "source_locator": "Results，PDF p.5；Table S5。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "自动检测模型训练13人、测试7人，未报告额外外部验证。",
+            "source_locator": "Figure 4D–E。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文只概括最强相关维度，完整系数需要查看补充表。",
+            "source_locator": "Table S5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "运动学相关性不能证明步态变异性导致FOG。主文没有把运动学变量按pre-FOG、during-FOG和offset-recovery阶段进行事件级区分，因此不能将其解释为冻结前神经或运动学先兆。",
+      "quote": "metrics related to gait variability having the strongest correlations with FOG.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.5",
+        "figure_table": "Figure 4G–H",
+        "supplement": "Table S5"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E13",
+      "design": "探索性主成分分析（PCA）及其与FOG临床和自动检测指标的相关性分析。",
+      "population": "主要研究队列17名PD双侧STN-DBS患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "主文报告PC1解释的方差比例，但没有报告完整相关系数、置信区间及FOG事件总数；Table S6提供详细相关性。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "跨多个药物和刺激治疗条件进行分析。",
+      "DBS_state_and_parameters": "包括MedOFF/StimOFF、MedOFF/StimON、MedON/StimOFF及MedON/StimON条件；部分条件涉及130 Hz和60 Hz。",
+      "task": "实际行走期间采集三维步态运动学变量，并分析PC1与FOG临床指标的关系。",
+      "recording_location": "7个IMU传感器，记录骨盆、双侧大腿、腿部和足部运动；无STN神经记录。",
+      "measure": "对30个预先指定的步态变量进行PCA，提取PC1，并分析PC1与#FOG、SWS时间及%FOG的相关性。",
+      "frequency_and_analysis_window": "PCA分析30个预先指定的运动学变量。PC1解释75%的步态变异性；没有神经频域分析或STN信号窗口。",
+      "finding": "PC1解释数据集中75%的步态变异性，并主要富集步态变异性和非对称性维度。作者报告PC1与多个FOG指标在不同治疗条件下存在相关性。",
+      "effect_estimate": "PC1解释75%的步态变异性。PC1与#FOG、SWS时间及%FOG的具体相关系数和P值未在主文列出，需查看Table S6。",
+      "statistical_unit_and_method": "PCA降维；PC1与多个FOG指标进行跨治疗条件相关性分析。患者级与条件级统计单位的具体处理未在主文充分报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性运动学预测及探索性降维分析。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅17名ON/ON时有FOG的患者，无非冻结对照。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床FOG评估未盲法且由单名评估者完成。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "unclear",
+            "reason": "运动学信号的伪迹处理细节未在主文充分报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "多个治疗条件未随机化，可能存在条件顺序和carryover影响。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "多个治疗条件的运动学数据被共同纳入降维和关联分析，患者内相关性处理细节不足。",
+            "source_locator": "Figure 4H–I；Table S6。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "30个运动学变量经过PCA并与多个临床和自动FOG指标关联。",
+            "source_locator": "Results，PDF p.5；Figures 4H–I and S4。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "相关自动FOG检测模型仅有7名独立测试患者。",
+            "source_locator": "Figure 4D–E。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "主文只报告PC1解释方差比例和定性关联，完整相关性见补充表。",
+            "source_locator": "Table S6。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "PC1是运动学综合维度，不是神经信号。其与FOG指标相关不能证明其为FOG发生前的预测因子，因为主文未进行事件锁定的pre-FOG分析，也没有STN神经活动记录。",
+      "quote": "The first principal component (PC1) was able to explain 75% of the gait variability.",
+      "source_locator": {
+        "section": "Identification of FOG and Kinematic Features Related with FOG",
+        "page": "PDF p.5",
+        "figure_table": "Figure 4H–I; Figure S4B",
+        "supplement": "Table S6; Figure S4"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E14",
+      "design": "受试者内高频与低频刺激条件下的临床轴向运动症状比较。",
+      "population": "17名PD双侧STN-DBS患者。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "未报告STN神经记录及总FOG事件数；本结局为临床量表评分，不适用事件总数统计。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "两个条件均为MedON。",
+      "DBS_state_and_parameters": "MedON/StimON 130 Hz HFS与MedON/StimON 60 Hz LFS比较；60 Hz电压调整以保持等效能量。",
+      "task": "临床MDS-UPDRS III运动评估。",
+      "recording_location": "临床评估；无STN神经记录。",
+      "measure": "MDS-UPDRS III axial subscore，包含items 3.9–3.12。该复合轴向评分不是独立的FOG事件数。",
+      "frequency_and_analysis_window": "临床量表评分；无神经频段或神经分析窗口。",
+      "finding": "60 Hz LFS条件下的MDS-UPDRS III轴向评分显著优于130 Hz HFS，但同一研究中两频率的实际FOG事件数没有显著差异。这表明复合轴向量表改善不能自动等同于实际FOG事件减少。",
+      "effect_estimate": "HFS 130 Hz：7.2±3.7；LFS 60 Hz：5.59±2.57；P=0.0322。",
+      "statistical_unit_and_method": "患者级、受试者内频率条件比较；n=17。具体检验方法未在主文充分报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性临床及IMU重复测量研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入MedON/StimON时仍有FOG的17名患者。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床运动评估未盲法，且FOG由单名评估者观察。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "本结局为临床量表评分，不直接依赖神经电生理信号。",
+            "source_locator": "Results，PDF p.4；Figure 3D。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "频率条件非随机，且可能存在carryover effect。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者在两个频率条件下重复评估，详细统计方法未在主文充分呈现。",
+            "source_locator": "Figure 3C–D。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时比较轴向、非轴向、FOG及其他临床结局。",
+            "source_locator": "Results，PDF p.4；Figure 3。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本项为临床量表比较，不是预测模型。",
+            "source_locator": "Figure 3D。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "完整统计方案需查Supplementary Methods。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "MDS-UPDRS axial subscore包含多个轴向运动症状，不能将其直接视为FOG事件终点。该结果与130 Hz和60 Hz实际FOG事件数无显著差异的结果应分别保存，不应合并为一个FOG改善结论。",
+      "quote": "axial scores were significantly better with LFS (HFS: 7.2 ± 3.7; LFS: 5.59 ± 2.57, P = 0.0322).",
+      "source_locator": {
+        "section": "Results—The Role of HFS and LFS in FOG",
+        "page": "PDF p.4",
+        "figure_table": "Figure 3D",
+        "supplement": "Table S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40504072_E15",
+      "design": "原始临床研究全文的测量范围与信号采集方法核查；非独立疗效实验。",
+      "population": "主要研究队列17名PD双侧STN-DBS患者；另有独立20人IMU模型开发队列。",
+      "n_enrolled": 17,
+      "n_analyzed": 17,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文没有报告STN LFP、单单位、多单位或皮层-STN coherence等神经记录。因此有效STN神经数据患者数和记录触点数不能确定。这里的null表示全文未报告，而不是确认存在0名有效记录患者。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "主队列涉及MedOFF/StimOFF、MedOFF/StimON、MedON/StimOFF、MedON/StimON 130 Hz和MedON/StimON 60 Hz。",
+      "DBS_state_and_parameters": "STN是双侧DBS刺激靶点；研究操纵刺激开启/关闭及130 Hz和60 Hz频率。Figure S1报告11/17患者完成DBS电极重建。全文没有报告使用植入电极进行STN神经活动采集。",
+      "task": "SWS实际行走任务及直线步行IMU分析；五种药物/刺激条件。",
+      "recording_location": "报告的采集设备为骨盆、双侧大腿、腿部及足部的7个IMU传感器；没有报告STN内部LFP或神经元放电记录位置。",
+      "measure": "临床MDS-UPDRS、实际FOG事件计数、IMU惯性信号、步态运动学变量和CNN自动FOG检测。未报告STN局部场电位、单/多单位活动、beta/gamma功率、burst占据率、burst持续时间、神经相位调制或跨区相干性。",
+      "frequency_and_analysis_window": "没有STN神经频段边界或神经分析窗口。IMU模型采用1秒时间片；这属于运动传感器分类窗口，不是神经振荡分析窗口。",
+      "finding": "该论文提供的是STN-DBS治疗状态与临床FOG、IMU运动学及FOG自动检测之间的行为学证据。全文没有报告STN神经活动与FOG发生前、冻结期间或恢复期间的事件锁定关联。因此不能作为STN神经活动-FOG直接电生理证据，也不能作为某个神经频段或burst异常的独立重复验证。",
+      "effect_estimate": "不适用。没有STN神经活动效应量。",
+      "statistical_unit_and_method": "不适用。该项为全文测量内容核查，不是独立统计比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性研究测量范围核查；不对未测量的神经指标进行疗效偏倚评级。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "主要队列按MedON/StimON状态存在FOG筛选。",
+            "source_locator": "Methods，PDF p.2。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG临床评估由单名未盲法评估者完成。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "未报告STN神经电生理采集，不能评价神经信号质量或神经伪迹。",
+            "source_locator": "Methods，PDF p.2；Results，PDF pp.3–7。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "非随机、非盲法及可能的carryover effect限制治疗效应解释。",
+            "source_locator": "Methods，PDF p.2；Limitations，PDF p.10。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "unclear",
+            "reason": "患者在多个条件下重复测试，详细统计单位及聚类处理未在主文完整报告。",
+            "source_locator": "Methods，PDF p.2；Data S1。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及多个治疗条件和30个运动学变量。",
+            "source_locator": "Results，PDF p.5；Figure 4。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "独立IMU模型测试集仅7人，未报告进一步外部验证。",
+            "source_locator": "Figure 4D–E，PDF p.7。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告神经电生理指标；不能判断是否存在未报告的神经数据，但全文没有相应测量或分析内容。",
+            "source_locator": "Methods，PDF pp.2–3；Results，PDF pp.3–7。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "本研究不能用于支持或反驳STN beta、gamma、theta、burst、相位调制或皮层-STN coherence与FOG之间的直接关系。作者在Discussion中提出疾病进展、非多巴胺能通路、刺激诱发步态障碍、邻近纤维电流扩散及电极位置等可能解释，但这些属于机制假设或对既往研究的讨论，不是本研究采集的神经活动证据。本文适合纳入STN-DBS治疗操纵与FOG临床/运动学响应的证据层，而不应纳入STN神经活动直接关联证据层。",
+      "quote": "We used both clinical and inertial-sensor-based tools to test FOG response to stimulation and medication.",
+      "source_locator": {
+        "section": "Patients and Methods；Results；全文测量范围核查",
+        "page": "PDF pp.2–7",
+        "figure_table": "Figure 1–4；Figure S1",
+        "supplement": "Data S1；Table S2"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

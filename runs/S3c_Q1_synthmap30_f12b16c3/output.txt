@@ -1,0 +1,540 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P30_C1",
+      "text": "直接STN-LFP研究提示，转弯冻结期间STN theta功率与认知和情绪特征存在状态相关性。在13名PD患者中，冻结转弯期间STN theta功率与焦虑严重程度正相关，而有效转弯期间未观察到相同的焦虑关联；冻结转弯期间theta功率还与MoCA评分负相关，即认知表现较差者具有较高theta功率。这是目前本部分证据中较直接的STN神经活动与FOG关系证据，但仅支持相关性，不能确定theta升高是冻结的原因、结果还是共同病理状态的表现。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "样本仅13人；theta频段边界、相关系数、效应量和P值均未报告。药物ON/OFF及DBS刺激状态不明确，冻结事件确认方法也未充分说明。焦虑和MoCA属于不同性质的临床变量，不能直接将其相关关系解释为同一神经机制。尚不能判断theta变化发生在冻结之前、期间还是之后，也不能推断其对其他FOG表型或直行冻结同样适用。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42236313_1",
+          "relation": "supports",
+          "note": "13名患者的患者内比较显示，转弯冻结期间STN theta功率与焦虑严重程度正相关；有效转弯时未观察到相同关联。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_2",
+          "relation": "supports",
+          "note": "冻结转弯期间STN theta功率与MoCA评分负相关，提示认知表现较差者具有较高theta功率。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C2",
+      "text": "STN-LFP包含可用于FOG状态检测的信息，但目前仅有小样本、虚拟步行环境中的初步可行性证据。5名双侧STN-DBS患者在OFF-medication和OFF-DBS状态下完成虚拟现实与全向跑台结合的步行任务。多特征深度学习模型在8个留出试次的30次测试集冻结事件中检测到24次，事件级检测比例为80%，转移学习后的weighted F1为0.67。该研究直接证明了特定实验条件下STN-LFP对FOG状态具有一定分类信息，但没有证明任何单一频段是稳定的FOG神经标志，也没有证明其能够预测自然环境中的冻结。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "仅5名患者，且属于高偏倚风险的机器学习可行性研究。采用leave-one-trial-out而非leave-one-subject-out验证，并利用同一留出试次前40秒数据进行转移学习，不能视为完全独立患者的外部预测。测试环境是VR模拟步行而非自然直立行走。摘要报告24/29，而Results报告24/30；specificity也存在不同汇总口径。没有置信区间和独立外部验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_1",
+          "relation": "supports",
+          "note": "直接同步采集STN-LFP与FOG行为，报告24/30次测试事件被检测，支持LFP辅助识别模拟步行中的冻结。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_2",
+          "relation": "qualifies",
+          "note": "后续SHAP分析显示个体间特征贡献方向不同，提示检测性能不能直接解释为存在统一方向的神经生理标志。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C3",
+      "text": "STN-FOG相关神经特征可能存在显著个体异质性，不能预设所有患者具有相同的频段变化方向。在同一Cognitive虚拟步行任务中，两名患者的SHAP分析显示相反关系：Subject 1的特征值增加对应模型预测FOG概率增加，而Subject 3的特征值增加对应模型预测FOG概率降低。这与建立单一、普遍适用的STN频段阈值的思路不一致，更支持考虑个体化神经特征或患者亚型。不过，该发现仅为探索性模型归因结果，尚不能证明真实神经生理关系也具有相同的个体差异。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "仅涉及两名患者，且没有患者级统计检验、相关系数、回归斜率或显著性检验。每名患者的105至132个窗口不能视为独立患者或独立事件。SHAP反映模型使用特征的方式，不等于神经活动的生理因果效应。两名患者不足以估计群体异质性的分布。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_2",
+          "relation": "supports",
+          "note": "两名患者在相同Cognitive任务中的SHAP特征关联方向相反，直接提示模型特征解释存在个体差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_1",
+          "relation": "qualifies",
+          "note": "模型采用个体化custom频段和多种滚动统计特征，说明FOG检测并非建立在一个已经验证的统一频段指标上。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C4",
+      "text": "本部分证据不足以确立beta功率升高或alpha-beta burst延长为普遍适用的STN-FOG神经标志。STN-LFP检测模型虽然使用beta功率、个体化alpha-beta频段及burst duration等特征，但报告的是多特征模型整体性能，并没有证明beta或burst指标具有独立、稳定的患者级效应。其SHAP结果还显示个体间特征关联方向相反。相比之下，另一项直接STN-LFP研究报告的是转弯冻结期间theta功率与焦虑和认知指标的关联。因此，当前证据更适合认为STN存在多频段、任务及个体依赖的FOG相关活动，而不是已经确定某一个主导频段。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "两项直接STN-LFP研究的样本、任务、终点和分析方法不同。没有跨研究重复验证同一频段、burst定义及时间窗口，也没有充分的频段间直接比较。theta相关性与beta模型特征并非同一研究中的直接对照，不能据此断定theta优于beta。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_1",
+          "relation": "qualifies",
+          "note": "模型整合delta、theta、alpha、beta、gamma、个体化频段功率和alpha-beta burst duration，没有提供某个频段的独立生理效应。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_2",
+          "relation": "qualifies",
+          "note": "SHAP聚合多个频段及滚动指标，且两名患者的特征方向相反，不能支持统一的beta方向性标志。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_1",
+          "relation": "supports",
+          "note": "提供另一种直接STN神经活动关联，即冻结转弯期间theta功率与焦虑相关。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_2",
+          "relation": "supports",
+          "note": "报告theta功率与认知表现的关联，进一步表明FOG相关STN活动不能仅以beta指标概括。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C5",
+      "text": "STN刺激频率操控与FOG改善之间存在临床证据，但低频与高频刺激孰优尚有冲突。Moreau和Ramdhani研究的二级转述均报告低频刺激相对于高频或常规刺激改善FOG；然而，2026年更新的系统综述和Meta分析认为高频STN刺激的临床获益更为一致。两类结果不应简单通过研究数量决定方向，因为前者涉及特定严重步态障碍患者的短期刺激参数调整，后者是跨研究、跨条件的综合结果。Jia研究的原始文献身份不确定，Xie 2017可识别文献为mini-review，均不能直接作为新的独立临床队列。尤其需要区分DBS脉冲刺激频率与STN内源性神经振荡频段：60 Hz刺激不等于theta或beta神经活动。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "低频改善的研究主要由二级综述转述，没有精确刺激参数、患者分母、药物状态及定量效应量。高频获益较一致的结论来自靶点和条件混合的Meta分析，并非与低频研究同一患者群体的严格头对头比较。Jia 2017来源身份不确定，Xie 2017是综述，不能重复计数。不能由刺激频率的临床效果推断对应的STN内源性神经频率机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_3",
+          "relation": "supports",
+          "note": "Moreau 2008的二级转述报告低频STN刺激相对于高频刺激改善FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_7",
+          "relation": "supports",
+          "note": "Ramdhani 2015的病例系列兼综述报告早期使用低频刺激改善FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_8",
+          "relation": "qualifies",
+          "note": "Jia 2017原始文献身份存在歧义，可能涉及可变频率刺激VFS，不能直接认定为独立低频刺激试验。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_9",
+          "relation": "qualifies",
+          "note": "Xie 2017可识别来源是mini-review，不构成独立患者干预队列。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_1",
+          "relation": "qualifies",
+          "note": "更新Meta分析认为高频STN刺激的FOG获益更一致，但总体合并结果涉及不同靶点和条件，不能直接否定特定严重FOG患者的低频刺激获益。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C6",
+      "text": "STN-DBS术后出现或加重的FOG至少包含不同的临床现象，不能统一解释为刺激开启引起的神经振荡异常。第一类是刺激激活相关的急性FOG，已有病例报告显示可通过调整DBS逆转。第二类是电极植入后出现的levodopa-resistant FOG，且被报告为独立于刺激激活，可能涉及植入过程本身。第三类是Mei等人2019年的新发ON-medication FOG，正式更正明确将其归为刺激与药物状态相关的病例报告，而非普通的急性刺激诱发步态恶化。这些现象可能具有不同的病理机制。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "主要依据病例报告及2026年综述的二级转述，缺乏发生率、患者级分母、神经活动记录和统一的事件确认方法。Mei研究必须采用更正后的作者、设计和主要发现。Levodopa-resistant FOG不能直接等同于OFF-FOG。尚不能确定植入相关、刺激相关和药物交互相关FOG之间是否存在共同机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_2",
+          "relation": "supports",
+          "note": "Tommasi 2007的二级转述报告急性刺激相关FOG，并可通过DBS调整逆转；原始文献摘要为单病例。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_5",
+          "relation": "supports",
+          "note": "Adams 2011报告电极植入后出现levodopa-resistant FOG，且独立于刺激激活，提示植入相关现象需要单独考虑。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_11",
+          "relation": "supports",
+          "note": "Mei 2019经正式更正后为Case report，主要发现是STN-DBS后新发ON-medication FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_12",
+          "relation": "qualifies",
+          "note": "综述提出刺激传播和邻近纤维束募集可能解释部分急性刺激相关步态恶化，但不能解释所有植入后或ON-medication FOG。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C7",
+      "text": "药物状态是影响STN-DBS与FOG临床关系的重要调节因素，也是跨研究结果冲突的重要潜在来源。Ferraye研究报告DBS与levodopa对FOG存在非加和效应。Vercruysse研究报告DBS相对于最佳药物治疗降低FOG频率和严重程度，但相当部分改善由术后药物减少介导。Kim长期随访研究报告长期获益主要出现在Med-Off，而Med-On未观察到相同获益。2026年Meta分析中，Med-Off条件下Stim-ON相对于Stim-OFF的FOG-Q改善为MD=-5.88（95% CI -9.28至-2.47），Med-On条件下为MD=-2.65（95% CI -4.99至-0.32）。此外，Mei病例报告新发ON-medication FOG。整体支持药物状态影响DBS相关FOG结局，但不能据此推断药物ON时STN神经活动必然朝某一方向改变。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "Meta分析的药物状态分层涉及不同研究和刺激靶点，不能直接视为STN特异性效应。Med-On与Med-Off亚组效应大小不同不自动等于存在统计学显著交互。Med-On/Stim-OFF与Med-Off/Stim-ON的跨状态比较MD=-0.70，95% CI为-3.88至2.48；无统计学显著性不能证明两种条件等效。具体药物剂量、洗脱时间、ON-FOG表型和刺激参数普遍报告不足。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_4",
+          "relation": "supports",
+          "note": "Ferraye 2008报告DBS与levodopa对FOG存在非加和效应，支持刺激与药物之间存在交互。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_6",
+          "relation": "supports",
+          "note": "Vercruysse 2014报告术后药物减少在DBS相关FOG改善中发挥中介作用。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_10",
+          "relation": "supports",
+          "note": "Kim 2019长期随访显示Med-Off存在长期FOG获益，而Med-On未见相同获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_11",
+          "relation": "supports",
+          "note": "Mei 2019更正后的病例报告提供新发ON-medication FOG的临床证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_5",
+          "relation": "qualifies",
+          "note": "植入后levodopa-resistant FOG不能直接归类为OFF-FOG，提醒区分药物反应性表型。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_2",
+          "relation": "supports",
+          "note": "Med-Off条件下Stim-ON相较Stim-OFF的FOG-Q改善MD=-5.88。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_3",
+          "relation": "supports",
+          "note": "Med-On条件下Stim-ON相较Stim-OFF仍有改善，但效应较小，MD=-2.65。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_4",
+          "relation": "qualifies",
+          "note": "Med-On/Stim-Off与Med-Off/Stim-On之间差异不显著，但宽置信区间不支持等效性结论。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C8",
+      "text": "跨研究Meta分析总体支持DBS可以改善FOG临床评分，但这一总体效果不能直接归因于STN或某一神经活动频段。2026年更新Meta分析纳入31项研究、905名患者，其中21项研究提供FOG-Q数据，合并均值差为MD=-2.99，95% CI为-5.69至-0.29，提示FOG-Q小幅下降。作者单中心队列也报告FOG-Q显著改善，但仅提供P=0.034，未报告样本人数和效应量。该总体获益与个别患者出现急性刺激诱发FOG并不矛盾，因为总体临床量表变化与个体刺激相关不良事件是不同层级的结局。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "Meta分析合并不同DBS靶点、刺激参数、药物状态和随访时间，且存在较高异质性。总体MD不是STN单独效应。FOG-Q是患者级临床量表，不能直接反映冻结事件发生前、期间和恢复期的神经活动。单中心队列的样本数、比较条件和具体效应量均不明确，且与Meta分析纳入队列的重叠情况未知。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42098512_1",
+          "relation": "supports",
+          "note": "31项研究、905名患者的Meta分析报告总体FOG-Q改善，MD=-2.99，95% CI -5.69至-0.29。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_2",
+          "relation": "supports",
+          "note": "Med-Off分层分析报告DBS开启后的FOG-Q改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_3",
+          "relation": "supports",
+          "note": "Med-On分层分析也报告FOG-Q改善，但效应较小。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_5",
+          "relation": "supports",
+          "note": "作者单中心临床经验队列报告FOG-Q显著改善，P=0.034，但缺乏效应量和样本量。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_2",
+          "relation": "qualifies",
+          "note": "个别病例存在可逆的急性刺激诱发FOG，说明群体平均获益不意味着所有患者均获益。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C9",
+      "text": "刺激电流向背侧STN及邻近纤维束扩散、募集非目标通路，是解释部分刺激诱发FOG的候选机制。2026年综述提出，背侧STN及邻近的pallidofugal通路、zona incerta等结构可能参与刺激相关步态恶化。该解释强调刺激场的空间传播和网络通路募集，而不是STN局部beta或theta振荡异常。刺激调整后FOG可逆与该假说具有一定相容性，但目前没有直接的组织激活体积、纤维束募集阈值或同步神经记录证明这一机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "主要为综述层面的解剖学和网络传播推断，相关原始研究不能通过当前机制段落逐一唯一映射。缺少个体化电场模型、方向性触点比较、纤维束重建、神经记录和FOG事件时间锁定分析。综述也明确不支持适用于所有患者的统一上触点或下触点规则。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_12",
+          "relation": "supports",
+          "note": "综述直接提出背侧STN及邻近pallidofugal、zona incerta等纤维通路募集可能干扰步态网络。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_2",
+          "relation": "qualifies",
+          "note": "刺激相关FOG可通过调整逆转，支持刺激位置或参数具有临床影响，但没有直接证明邻近纤维束募集机制。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C10",
+      "text": "丘脑束旁核Pf相关投射通路的微结构异常可能与PD患者FOG易感性及严重程度有关。横断面影像研究发现，Pf至背侧壳核、STN和伏隔核的结构通路指标能够区分PIGD-FOG与PIGD-nFOG患者；PIGD-FOG组的Pf相关通路微结构损害还与更严重的FOG、较差认知表现及更差的运动相关日常生活活动能力相关。这提示FOG可能涉及Pf-STN相关网络的结构性易感因素，但不能将结构异常等同于STN局部神经活动异常。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究为横断面影像学观察，PIGD-FOG组仅21人，PIGD-nFOG组13人。摘要没有报告具体AUC、相关系数、效应量和多变量校正情况。结构微观指标不能反映FOG发生时STN神经活动的时间动态，也不能确定结构改变是FOG的原因还是疾病严重程度的伴随表现。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42183045_1",
+          "relation": "supports",
+          "note": "Pf至Dpu、STN和Nac相关通路的DTI/NODDI指标能够区分PIGD-FOG与PIGD-nFOG亚组。"
+        },
+        {
+          "eid": "S3c_E_PMID_42183045_2",
+          "relation": "supports",
+          "note": "Pf相关通路微结构损害与更严重FOG、认知损害和运动相关日常生活活动能力下降相关。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C11",
+      "text": "术前临床、结构影像及STN电极定位信息可能有助于预测STN-DBS术后FOG恶化，但这类预测结果不能证明STN神经活动是FOG恶化的直接原因。134名接受双侧STN-DBS的患者中，多模态LightGBM模型预测术后FOG-Q恶化的AUC达到0.917，输入包括临床特征、结构MRI、Lead-DBS电极定位及影像组学特征。该研究支持患者级FOG风险分层的可能性，也提示电极位置和结构背景可能具有临床预测价值。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "采用5折嵌套交叉验证，但没有外部独立验证。未报告95% CI、灵敏度、特异度、具体特征贡献及药物状态。FOG-Q恶化是患者级量表结局，不是事件级自然行走FOG。Lead-DBS电极定位不等于直接记录STN神经活动，AUC较高也不能解释为神经机制已经确定。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42211297_1",
+          "relation": "supports",
+          "note": "134例双侧STN-DBS患者的多模态模型预测术后FOG-Q恶化，LightGBM AUC=0.917。"
+        },
+        {
+          "eid": "S3c_E_PMID_42183045_1",
+          "relation": "qualifies",
+          "note": "Pf相关结构通路指标也具有FOG亚组区分能力，提示结构背景可能参与患者风险差异，但不是STN电生理证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42183045_2",
+          "relation": "qualifies",
+          "note": "结构通路损害与FOG严重程度相关，为术前结构易感性解释提供补充，但不能确定因果方向。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C12",
+      "text": "FOG还涉及STN以外的皮层感觉运动和认知网络变化，这些网络可能构成STN-FOG关系的重要上游或下游背景。fNIRS研究报告PD+FOG患者在冻结期间步速降低、步幅缩短、内外侧姿势摆动增加；与健康对照相比，PD+FOG患者S1、PMC和PFC激活降低，同时部分皮层功能连接升高。节律性听觉提示增强颞叶皮层与PMC之间的功能连接，音乐治疗改善PFC内部功能连接，而内部节律想象可能不利于感觉运动整合。这些结果提示皮层网络活动和外部节律提示可能参与FOG相关步态调节，但没有直接证明其通过STN发挥作用。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "样本为28名PD+FOG患者和28名健康对照。fNIRS反映皮层血氧变化，不是STN局部电活动。没有充分报告冻结事件确认方法、药物状态、事件级时间窗和具体效应量。节律提示和音乐条件下的功能连接改变不能直接等同于实际FOG事件减少；内部节律想象的损害性解释仍属于推测。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42211308_1",
+          "relation": "supports",
+          "note": "报告PD+FOG患者冻结期间步速、步幅和内外侧姿势摆动异常，为FOG行为表型提供证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_2",
+          "relation": "supports",
+          "note": "报告PD+FOG患者S1、PMC和PFC激活降低，同时部分间接皮质脊髓通路相关功能连接升高。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_3",
+          "relation": "supports",
+          "note": "节律性听觉提示增强颞叶皮层与运动前区之间的功能连接。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_4",
+          "relation": "supports",
+          "note": "音乐治疗条件下报告PFC内部功能连接改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_5",
+          "relation": "qualifies",
+          "note": "内部节律想象可能损害感觉运动整合，但原研究采用解释性措辞，没有证明实际FOG因果性恶化。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C13",
+      "text": "一般步态改善和神经信号驱动步态追踪不能直接作为STN神经活动与FOG关系的证据。2026年DBS步态Meta分析报告主动刺激条件下部分时空步态参数改善，但没有明确的FOG事件级分析或Freezer与Non-freezer分组。N2GCF研究则证明跨受试者神经特征校准可以改善一般步态追踪性能，但摘要没有说明神经信号来自STN，也没有FOG标签。因此，两类结果可以说明DBS影响步态以及神经信号可能用于步态追踪，却不能用于证明STN特定频段与FOG之间存在关联。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "DBS步态Meta分析纳入STN、GPi和PPN等不同靶点，且各研究药物状态、刺激状态和评估时间不同。N2GCF摘要未报告样本人数、信号解剖来源、FOG事件标签和具体神经频段。两项研究均不能提供STN-FOG特异性效应。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42207737_1",
+          "relation": "qualifies",
+          "note": "19项DBS研究的Meta分析报告一般时空步态参数改善，但没有明确FOG事件分析或STN神经电生理指标。"
+        },
+        {
+          "eid": "S3c_E_PMID_42151559_1",
+          "relation": "qualifies",
+          "note": "N2GCF显示跨受试者神经到步态映射可以通过校准改善，但没有确认STN信号来源，也没有FOG预测终点。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C14",
+      "text": "FOG行为测量方法和跨中心可重复性可能是解释不同研究结果冲突的重要方法学来源。多中心IMU深度学习研究中，本地队列与专家视频标注的一致性ICC为0.886，而六个外部队列下降至0.562±0.141；利用50分钟外部队列数据微调后提高至0.732±0.138。这表明即使研究使用相似的FOG自动检测框架，不同队列之间仍可能存在行为标签、任务协议、患者特征或采集条件差异。未来比较STN-LFP与FOG关系时，需要统一冻结事件确认、任务条件和时间窗口，否则神经信号差异可能部分反映行为终点测量不一致。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "该研究直接评价的是IMU模型与专家视频标注的一致性，而不是STN神经信号。外部一致性下降不能确定具体由哪一种因素造成，也不能直接证明其他STN研究存在相同程度的行为测量偏差。摘要没有充分报告各队列的具体任务类型、冻结表型和药物状态。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42230618_1",
+          "relation": "supports",
+          "note": "本地与外部队列ICC存在明显差异，微调后有所改善，直接显示跨队列FOG测量一致性可能受到数据集差异影响。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_1",
+          "relation": "qualifies",
+          "note": "STN-LFP检测研究采用VR和跑台模拟任务，不能直接与自然行走中的FOG行为终点等同。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_1",
+          "relation": "qualifies",
+          "note": "转弯冻结研究没有在摘要中充分说明事件确认方法，限制与其他FOG任务研究的直接比较。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C15",
+      "text": "竞争性机制假说H1：事件相关的STN局部振荡状态参与转弯冻结，theta活动可能是认知和情绪负荷影响步态控制的神经表征，或参与冻结发生过程。该假说可以解释转弯冻结期间theta功率与焦虑、认知表现的关联，也与多特征STN-LFP模型能够检测模拟冻结的结果相容。可检验预测是：在同步视频、IMU和STN-LFP记录中，theta功率或其他特定振荡特征应在同一患者冻结前、冻结期间和恢复期呈现可重复的阶段性变化，并在控制药物状态、焦虑、认知水平和转弯任务难度后仍能预测冻结。如果变化只在冻结发生后出现，或者调整相关因素后关联消失，则更支持其为伴随标志而非致病机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是基于观察性关联和检测模型提出的机制假说，不是已被证实的因果解释。现有theta研究没有充分区分冻结前、冻结中和恢复期；LFP检测模型也没有证明单一频段变化具有独立预测价值。需要事件级同步记录、患者内重复验证以及干预性验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42236313_1",
+          "relation": "supports",
+          "note": "冻结转弯期间theta功率与焦虑相关，为认知情绪调节STN活动提供关联依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_2",
+          "relation": "supports",
+          "note": "冻结转弯期间theta功率与MoCA评分负相关，为认知相关神经状态假说提供依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_1",
+          "relation": "qualifies",
+          "note": "多特征STN-LFP模型能够检测模拟冻结，但尚未确定theta是否具有独立贡献。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_2",
+          "relation": "qualifies",
+          "note": "不同患者的模型特征方向相反，提示该机制可能具有个体依赖性，不能假定统一方向。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C16",
+      "text": "竞争性机制假说H2：刺激相关FOG主要由电流扩散至背侧STN及邻近纤维束、募集非目标网络所致，而不是由STN局部振荡异常直接引起。该假说预测，个体化电场模型和纤维束重建应能够预测刺激诱发FOG的触点、方向和幅度阈值；在控制STN局部LFP活动后，邻近通路募集程度仍应与步态恶化相关。如果调整刺激方向或限制邻近纤维束募集能够改善FOG，而STN内源性振荡变化并不随之改变，则更支持该解释。该假说主要针对刺激诱发型FOG，不应自动推广到植入后独立于刺激的FOG。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "当前只有综述层面的解剖学解释及个别刺激相关临床现象，没有直接的组织激活体积、纤维束募集阈值、同步LFP记录或电场与冻结事件的时间对应关系。植入相关FOG可能涉及不同机制，不能作为刺激电流扩散机制的直接证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_12",
+          "relation": "supports",
+          "note": "提出背侧STN及pallidofugal、zona incerta等邻近通路募集可能造成轴性症状和FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_2",
+          "relation": "qualifies",
+          "note": "刺激相关FOG可以通过调整DBS逆转，但尚未确定具体涉及的解剖结构。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_5",
+          "relation": "qualifies",
+          "note": "植入后独立于刺激激活的levodopa-resistant FOG提醒该假说不能解释所有术后FOG。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C17",
+      "text": "竞争性机制假说H3：多巴胺状态与认知情绪状态共同调节STN网络对步态任务的响应，使同一刺激参数在不同患者或不同药物状态下产生不同FOG结果。该机制可以同时解释DBS与levodopa的非加和效应、Med-Off和Med-On条件下获益差异、新发ON-medication FOG，以及冻结转弯时theta功率与焦虑和认知表现的关系。可通过患者内药物ON/OFF×刺激ON/OFF析因实验检验，并同步记录STN-LFP、焦虑和认知指标。如果STN振荡与FOG之间的关联随药物和认知情绪状态显著改变，则支持状态门控机制；如果关联在所有状态下稳定，则更支持相对独立的局部神经标志。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "临床研究支持药物与刺激存在交互，但没有直接证明该交互通过STN theta或其他特定振荡实现。焦虑和认知研究没有充分报告药物及DBS状态。现有Meta分析药物分层也不能替代同一患者内的严格析因实验。该机制仍然是可检验的整合性解释。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42058451_4",
+          "relation": "supports",
+          "note": "DBS与levodopa对FOG存在非加和效应，支持刺激效果受到药物状态调节。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_6",
+          "relation": "supports",
+          "note": "术后药物减少介导部分FOG改善，支持药物变化参与长期临床结局。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_10",
+          "relation": "supports",
+          "note": "长期获益主要出现在Med-Off状态，提示药物状态影响DBS效果。"
+        },
+        {
+          "eid": "S3c_E_PMID_42058451_11",
+          "relation": "supports",
+          "note": "新发ON-medication FOG提供药物与刺激状态相关的病例级现象。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_2",
+          "relation": "supports",
+          "note": "Med-Off条件下刺激开启的FOG-Q改善幅度较大。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_3",
+          "relation": "supports",
+          "note": "Med-On条件下仍有改善，但幅度较小，提示药物状态可能影响治疗效应。"
+        },
+        {
+          "eid": "S3c_E_PMID_42098512_4",
+          "relation": "qualifies",
+          "note": "跨药物和刺激状态比较没有统计学显著差异，不能把亚组效应差异直接解释为已证实的交互机制。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_1",
+          "relation": "supports",
+          "note": "STN theta功率与冻结期间焦虑程度相关，为认知情绪状态参与神经活动调节提供关联依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42236313_2",
+          "relation": "supports",
+          "note": "STN theta功率与冻结期间认知表现相关，为认知状态参与网络门控提供关联依据。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C18",
+      "text": "竞争性机制假说H4：Pf-STN相关结构通路损害形成基础性的网络易感性，使部分PD患者更容易在转弯、认知负荷或DBS刺激条件下发生FOG。该假说预测，术前Pf-STN通路微结构指标能够预测术后FOG风险，并且可能调节刺激位置、STN-LFP特征与冻结事件之间的关系。如果结构易感性能够解释患者间差异，而事件相关STN振荡在结构指标校正后不再具有独立预测价值，则更支持结构网络脆弱性解释；反之，若STN活动仍具有独立的事件级预测能力，则支持结构与局部活动共同作用。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "现有Pf通路证据为横断面结构影像相关性，未提供纵向预测或DBS刺激交互分析。术后FOG预测模型虽然包含电极定位和结构影像，但没有证明Pf-STN通路指标是主要预测因子，也没有STN-LFP数据。因此该机制尚不能与局部振荡机制区分。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42183045_1",
+          "relation": "supports",
+          "note": "Pf相关投射通路微结构指标能够区分PIGD-FOG与PIGD-nFOG患者。"
+        },
+        {
+          "eid": "S3c_E_PMID_42183045_2",
+          "relation": "supports",
+          "note": "Pf相关通路损害与FOG严重程度、认知及运动相关日常生活活动能力相关。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211297_1",
+          "relation": "qualifies",
+          "note": "多模态模型显示临床、结构影像及电极定位信息可用于预测术后FOG-Q恶化，但没有证明特定Pf-STN通路的因果作用。"
+        }
+      ]
+    },
+    {
+      "cid": "P30_C19",
+      "text": "竞争性机制假说H5：部分FOG可能与皮层感觉运动网络补偿不足有关，外部节律提示通过募集颞叶-运动前区及前额叶网络改善感觉运动整合，而非直接改变STN局部振荡。该假说预测，节律提示对FOG的改善应与皮层网络连接变化相关，并可能在控制STN-LFP变化后仍然存在；如果内部节律想象与外部听觉提示产生相反的网络和行为效应，则进一步支持外部感觉线索具有独立的网络补偿作用。当前证据仅显示皮层功能连接变化，尚不能确认实际FOG改善或该作用是否经过STN。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "fNIRS研究没有提供STN记录，也没有充分报告节律提示和音乐治疗条件下实际冻结事件的减少幅度。功能连接增强不等于临床FOG改善，内部节律想象可能损害感觉运动整合也尚未得到因果验证。需要同步皮层成像、STN-LFP及事件级FOG记录进行验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42211308_2",
+          "relation": "supports",
+          "note": "PD+FOG患者存在S1、PMC和PFC激活降低及部分皮层功能连接异常。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_3",
+          "relation": "supports",
+          "note": "节律性听觉提示增强TLC-PMC功能连接，符合外部感觉提示募集皮层网络的解释。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_4",
+          "relation": "supports",
+          "note": "音乐治疗条件下PFC内部功能连接改善，提示前额叶网络可能参与提示相关的感觉运动调节。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_5",
+          "relation": "qualifies",
+          "note": "内部节律想象可能损害感觉运动整合，提示外部节律提示与内部节律生成可能涉及不同网络过程，但尚未证明其对实际FOG的因果作用。"
+        },
+        {
+          "eid": "S3c_E_PMID_42211308_1",
+          "relation": "qualifies",
+          "note": "冻结期间的步态运动学异常提供行为背景，但没有直接证明皮层连接变化导致这些异常。"
+        }
+      ]
+    }
+  ]
+}</escape>

@@ -1,0 +1,1440 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40709562",
+    "title": "Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease.",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:40709562_GB-MOV_MAGIC_combined_analysis",
+    "cohort_id_candidate": "GB-MOV_n29_plus_MAGIC_n9_combined_cohort_candidate",
+    "cohort_relation_basis": "作者明确报告38名PD患者来自两个临床试验：GB-MOV（n=29）和MAGIC（n=9），招募时间为2013年2月至2021年9月，招募中心为Pitié-Salpêtrière和Rouen University Hospitals。本论文为两个试验样本的合并分析。作者引用既往研究文献[2]和[26]介绍试验及手术方法，但当前提供文本没有给出这些文献的完整书目信息，也没有提供患者级标识或跨论文队列重叠分析。因此，不能确认与既往发表研究是否存在患者重叠；外部cohort关系为unknown。两个临床试验内部的样本构成有明确报告。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "40709562_E01",
+      "design": "多中心、前瞻性仪器化步态与术后STN-LFP观察性电生理研究；包含DOPAOFF和DOPAON重复测量；FOG事件通过运动学识别。",
+      "population": "38名接受双侧STN-DBS手术的PD患者，平均年龄57.6±9.2岁，男性27名、女性11名。35/38名患者报告日常生活中存在FOG。DOPAOFF记录中，12名患者出现实际FOG事件（FOG-OBS），其余26名未观察到事件（FOG-NOBS）。另有24名健康对照，但不属于本条PD患者FOG事件分母。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 263,
+      "n_trials": 99,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "99为发生FOG的DOPAOFF步行试次数，263为其中识别出的FOG事件数，二者不等同。另有212个FOG-OBS患者无FOG步行试次，以及918个FOG-NOBS患者试次。DOPAOFF总有效GI试次数为1229。267为全队列STN内保留的双极记录dipoles数量，不是患者数或单个电极触点数。未报告每名患者的事件数分布。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported。原文操作性定义为walking arrest with failure to initiate or continue stepping；没有进一步区分akinetic、trembling-in-place或kinetic-no-trembling。",
+      "medication_phenotype": "unknown。35名患者报告日常生活FOG，但未将全部患者系统分类为OFF-FOG、ONOFF-FOG或ON-FOG。",
+      "experimental_medication_state": "DOPAOFF：停用抗帕金森药物12小时后。FOG事件计数来自DOPAOFF记录。DOPAON时除一名患者外，FOG均完全消失；该患者少数FOG试次被排除。",
+      "DBS_state_and_parameters": "双侧STN电极植入后1–4天，通过外置延长线记录LFP；记录发生在神经刺激器植入之前，因此没有治疗性DBS刺激。刺激频率、幅度、脉宽及治疗触点不适用。",
+      "task": "受试者在测力平台上站立，接受视觉提示后启动步行，直行6–8米、完成180度转弯并返回。FOG在直行或转弯过程中识别。GI发生于FOG之前。",
+      "recording_location": "双侧STN内双极LFP记录。FOG事件识别来自全身运动捕捉运动学，而不是FOG发生期间的STN频段分析。",
+      "measure": "运动捕捉系统记录步态运动学；FOG定义为行走中断并无法启动或继续迈步。事件在线标记，离线由两名独立评审者核查。未使用视频进行最终事件确认。",
+      "frequency_and_analysis_window": "本条为行为事件识别，不涉及特定LFP频段。GI至FOG发生的步数间隔被统计。",
+      "finding": "12/38名PD患者在DOPAOFF步行记录中实际出现FOG。共99个FOG阳性步行试次，识别出263次FOG事件。首次FOG发生于GI之后的中位8步，IQR为6–11.5步。35/38名患者报告日常生活FOG，但只有12名在本次实验记录中出现FOG。",
+      "effect_estimate": "描述性结果：12名患者；99个FOG阳性试次；263个FOG事件；首次FOG距GI中位数8步，IQR 6–11.5。未报告置信区间。",
+      "statistical_unit_and_method": "患者级FOG-OBS/FOG-NOBS分类；试次级FOG阳性分类；事件级263次FOG事件计数。首次FOG时间以GI后的步数描述，未报告推断统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单，非正式验证工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入符合STN-DBS手术指征的患者；MAGIC试验还要求DOPAOFF时存在FOG，可能影响样本代表性。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "运动捕捉识别并由两名评审者复核，但未使用视频；作者明确将缺少视频验证列为局限。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events；Study Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有滤波、伪迹阈值排除及至少两名评审者检查，但移动步行条件下仍可能存在残余运动或电缆伪迹。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS和FOG-NOBS为观察性分组，FOG-OBS患者轴性症状和GABS评分更严重，不能排除步态严重程度对FOG及相关神经活动的混杂。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "研究包含患者、dipole、试次和时间点的重复测量；LMM纳入嵌套于患者的dipole随机截距，但未明确说明所有试次及时间点相关结构是否得到充分处理。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "报告FDR校正，时频图采用p<0.001阈值，但涉及多个频段、时间点、脑区和GI指标。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条是事件识别和描述性分析，不包含可评价的预测模型；未报告外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "报告了临床试验注册号，但当前文本没有提供完整预注册分析计划，无法核查全部结局是否按预设报告。",
+            "source_locator": "Materials and Methods—Participants；Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "FOG通过运动学而非视频确认，不能将该终点等同于视频或临床专家确认的FOG。研究环境为实验室仪器化步行。263为事件数而非独立患者数。该结果提供FOG发生和时间定位信息，不直接证明FOG期间的特定STN神经机制。",
+      "quote": "In FOG-OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition, with a median onset of 8 steps",
+      "source_locator": {
+        "section": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence",
+        "page": null,
+        "figure_table": "Fig. 1E–G",
+        "supplement": "Supplementary Fig. S1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E02",
+      "design": "观察性、患者内重复试次的GI行为分析；比较同一FOG-OBS患者中随后发生FOG与未发生FOG的GI试次。",
+      "population": "38名PD患者中的12名FOG-OBS患者。35/38名患者报告日常生活FOG。FOG-OBS患者中，99个DOPAOFF步行试次随后出现FOG，212个试次未出现FOG。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "311为FOG-OBS患者99个FOG阳性试次和212个FOG阴性试次之和。263为阳性试次中的FOG事件数。该行为比较没有单独报告有效神经记录触点数；全队列LFP记录共有267个STN内dipoles，但不能直接视为本条行为比较使用的触点数。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported。原文FOG定义为walking arrest with failure to initiate or continue stepping，未区分具体临床亚型。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "双侧STN电极植入后1–4天外置电缆记录，神经刺激器尚未植入，无治疗性DBS刺激。",
+      "task": "视觉提示后的GI，随后直行6–8米并完成180度转弯。比较GI之后在同一自然步行试次中发生FOG与未发生FOG的情况。",
+      "recording_location": "本条为GI行为学结局分析；同一研究队列另有双侧STN-LFP记录，但本条结局是步态参数而非STN频谱。",
+      "measure": "RPC2节律评分，来自17项GI参数的PCA及varimax旋转。RPC2主要反映步时和步频。",
+      "frequency_and_analysis_window": "不适用：本条为GI运动学指标。GI后实际步行期间发生FOG，FOG阳性试次首次事件中位发生于GI后8步。",
+      "finding": "在FOG-OBS患者中，随后发生FOG的试次（FOG-OBS+）在GI阶段的节律RPC2评分显著低于未发生FOG的试次（FOG-OBS−）。作者未发现这两类试次之间pace或balance评分的显著差异。",
+      "effect_estimate": "RPC2估计差异（FOG-OBS+相对FOG-OBS−）=-0.243，SE=0.102，p=0.035。RPC1估计=-0.102，SE=0.089，p=0.246；RPC5估计=-0.099，SE=0.179，p=0.585，后二者不显著。",
+      "statistical_unit_and_method": "GI试次级RPC评分；作者报告估计值、SE和p值。总体RPC组别与治疗分析采用双因素ANOVA及事后配对t检验，但该段落未单独明确FOG-OBS+与FOG-OBS−对比所用的具体检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单，非正式验证工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入符合STN-DBS手术指征的患者；MAGIC试验额外要求DOPAOFF时存在FOG。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "运动捕捉识别FOG并由两名评审者核查，但没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events；Study Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "该行为终点本身不依赖LFP信号；但患者在移动步行时记录，研究未报告所有试次的完整伪迹保留率。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "同一患者内试次比较减少患者间混杂，但步态状态、转弯过程及其他瞬时行为因素仍可能影响FOG发生。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者提供多个试次；不能将311个试次理解为311个独立患者。该具体比较的试次相关结构未单独说明。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时检验pace、rhythm和balance多个RPC，全文采用FDR校正，但该具体对比的校正细节没有单独列出。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立可评估的预测模型或报告独立外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设分析计划，不能确定所有行为终点是否均按预设报告。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是同一患者不同试次之间的事件关联，不是患者级独立重复验证。GI发生在FOG之前，但不能仅凭节律评分差异推断节律改变是FOG的因果触发因素。FOG没有视频确认。",
+      "quote": "we found significantly lower scores for rhythm when an FOG event will occurred (FOG-OBS+ trials compared to FOG-OBS− trials)",
+      "source_locator": {
+        "section": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence",
+        "page": null,
+        "figure_table": "Fig. 2D",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E03",
+      "design": "观察性STN-LFP与GI关联研究；FOG易感性比较；DOPAOFF非冻结GI试次。",
+      "population": "38名PD患者。FOG-OBS组12名，FOG-NOBS组26名。35/38名患者报告日常生活FOG。LFP分析全队列保留267个STN内双极dipoles，其中后部139个、中央128个。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": 891,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "Fig. 4图注报告FOG-NOBS 658个试次和FOG-OBS阴性试次233个试次，共891个。结果正文另报告946条LFP traces，其中725条来自FOG-NOBS、221条来自FOG-OBS。traces不是试次数，二者不能互换。该分析仅包括没有发生FOG的试次。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported。FOG-OBS表示记录期间其他试次观察到FOG，并不表示本条分析试次发生冻结。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。仅分析没有FOG的GI试次。",
+      "DBS_state_and_parameters": "术后1–4天外置双极LFP记录，神经刺激器尚未植入，无治疗性DBS刺激；刺激参数不适用。",
+      "task": "视觉提示后的GI，随后自然直行6–8米并转弯。分析FOG-OBS患者的FOG阴性试次与FOG-NOBS患者试次。",
+      "recording_location": "双侧STN内双极LFP；本结果报告整体STN频谱关联，没有在该具体结果中限定后部或中央亚区。",
+      "measure": "STN-LFP归一化频谱功率与RPC1 pace评分之间的时频关联。RPC1主要反映摆动速度、向前推进及步行活力。该指标是功率与行为评分的关联斜率，不是单纯平均beta功率。",
+      "frequency_and_analysis_window": "Theta/alpha 4–12 Hz；500 ms多窗谱估计窗口，30 ms步进，3个正交tapers；功率相对于800 ms试次前基线归一化并转换为dB。LFP从提示前2秒截取至第二次摆动结束。作者报告GI期间出现短暂关联。",
+      "finding": "与FOG-NOBS患者相比，FOG-OBS患者在没有实际FOG发生的GI试次中，theta/alpha功率与pace评分之间的正向关联较弱。该结果支持FOG易感患者存在不同的GI神经行为关联，而不是证明当前试次即将发生FOG。",
+      "effect_estimate": "方向为FOG-OBS组正向关联减弱。正文未提供该特定比较的回归斜率、SE、95% CI或具体p值；不能从图形轮廓推算数值。",
+      "statistical_unit_and_method": "LFP时频功率与RPC1的关联；LMM以spectral power为因变量，包含组别、脑区、治疗状态、RPC评分及交互项，dipole嵌套于患者的随机截距；另采用时间分辨回归。FDR校正，时频图显著性阈值p<0.001。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单，非正式验证工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本均为STN-DBS手术候选患者，且MAGIC试验要求DOPAOFF存在FOG；限制外部代表性。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分类依据运动捕捉识别的其他试次事件，无视频确认；本条试次本身没有FOG。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用滤波、基线归一化、异常功率阈值排除和双评审者伪迹检查，但步行时电缆与运动伪迹仍不能完全排除。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS组存在更严重的轴性和步态平衡障碍，可能同时影响GI行为及STN活动；观察性分组无法确定因果方向。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "LMM包含dipole嵌套于患者的随机截距，但试次和时间点的全部相关结构是否充分处理不明确。",
+            "source_locator": "Materials and Methods—Correlation Between GI Performance and STN LFP Activity"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用FDR及严格时频图阈值，但仍涉及多个RPC、频段、时间点和脑区。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测分类器；没有外部验证数据。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有可用于核查所有时频分析是否预先指定的完整分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是患者易感性比较，不是同一试次即将发生FOG的事件前证据。该研究报告的是theta/alpha与pace的关联减弱，而非theta/alpha平均功率必然降低。未报告该具体比较的数值效应量。",
+      "quote": "FOG-OBS patients exhibited weaker positive associations between theta/alpha and gamma band powers and pace (RPC1) scores",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 4A–C",
+        "supplement": "Supplementary Fig. S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E04",
+      "design": "观察性STN-LFP与GI关联研究；FOG易感性比较；DOPAOFF非冻结GI试次。",
+      "population": "38名PD患者，其中12名FOG-OBS、26名FOG-NOBS；35名报告日常生活FOG。全队列267个STN内dipoles。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": 891,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "试次数依据Fig. 4图注：FOG-NOBS 658，FOG-OBS阴性233。结果正文另报告946条LFP traces；该数字不是试次数。实际参与该特定gamma频段模型的有效试次数未单独报告。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；FOG-OBS为其他试次出现运动学FOG的患者分组。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后；分析没有FOG的GI试次。",
+      "DBS_state_and_parameters": "术后1–4天外置STN电极记录，刺激器尚未植入，无治疗性刺激。",
+      "task": "视觉提示后GI，随后自然步行及180度转弯；比较FOG-OBS阴性试次和FOG-NOBS试次。",
+      "recording_location": "双侧STN内LFP，整体STN分析；该结果未指定特定亚区。",
+      "measure": "STN-LFP gamma频段归一化功率与RPC1 pace评分的时频关联。",
+      "frequency_and_analysis_window": "Gamma >35 Hz；500 ms多窗分析窗口，30 ms步进，3个tapers；800 ms试次前基线归一化；分析GI前后至第二摆动结束。",
+      "finding": "FOG-OBS患者在非冻结GI试次中，gamma功率与pace评分的正向关联较FOG-NOBS患者弱。该发现与theta/alpha频段的pace关联减弱是两个不同频段结果。",
+      "effect_estimate": "方向为正向关联减弱；正文没有提供gamma特异的回归斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "时间分辨LFP功率与RPC1的回归；LMM包含组别、STN区域、药物状态、RPC评分和交互项，并以dipole嵌套于患者的随机截距处理层级结构；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入STN-DBS手术候选患者，MAGIC试验还要求DOPAOFF时存在FOG。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG易感性分组来自运动捕捉识别的其他试次FOG，没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在明确伪迹排除和人工核查，但移动记录残余伪迹仍可能影响高频gamma结果。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS患者的轴性及步态平衡障碍更严重，可能影响神经行为关联。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "LMM处理dipole与患者层级，但试次和时间点的相关结构未完全说明。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "FDR校正和p<0.001阈值有帮助，但频段、时间点和RPC比较数量较多。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有报告gamma预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设时频分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "结果是功率与行为评分的关联，不是gamma功率的绝对升高或降低。正文没有提供该频段具体效应量。由于高频信号可能受运动伪迹影响，需谨慎解释。",
+      "quote": "weaker positive associations between theta/alpha and gamma band powers and pace (RPC1) scores",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 4A–C",
+        "supplement": "Supplementary Fig. S3"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E05",
+      "design": "观察性STN-LFP与GI关联研究；后部STN亚区分析；FOG易感性比较。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名；35名报告日常生活FOG。全队列后部STN共有139个保留dipoles，中央STN有128个。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Fig. 5没有单独报告该后部STN模型的有效试次数及FOG-OBS/FOG-NOBS组各自使用的dipole数。全队列后部STN共有139个dipoles，但不能将其视为该特定模型实际使用的分组记录数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；FOG-OBS组患者在其他试次发生FOG，本条所分析GI试次本身没有FOG。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后；分析FOG-OBS阴性试次和FOG-NOBS试次。",
+      "DBS_state_and_parameters": "术后1–4天外置STN-LFP记录，刺激器植入前，无治疗性DBS刺激。",
+      "task": "视觉提示后的GI及随后自然行走；分析没有FOG的GI试次。",
+      "recording_location": "后部感觉运动STN（posterior-sensorimotor STN）。",
+      "measure": "后部STN双极LFP低beta功率与GI pace RPC1评分之间的关联。",
+      "frequency_and_analysis_window": "低beta 13–20 Hz；500 ms多窗窗口、30 ms步进；800 ms试次前基线归一化；GI期间时间分辨分析。该分析为非冻结GI试次。",
+      "finding": "FOG-OBS患者在后部STN中表现出更强的低beta功率与pace评分负向关联，区别于FOG-NOBS患者。作者将其解释为FOG易感患者GI推进能力与后部STN低beta调制之间的异常关联。",
+      "effect_estimate": "关联方向为负，FOG-OBS组较强；正文没有提供该亚区具体斜率、SE、置信区间或数值p值。",
+      "statistical_unit_and_method": "STN dipole层级LFP功率与GI RPC1关联；LMM及分区内单独LMM，随机截距嵌套于患者；时间分辨回归和FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "DBS手术候选患者样本，MAGIC额外要求DOPAOFF时有FOG。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分组依赖运动捕捉识别的其他试次FOG，未使用视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events；Study Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有滤波、异常功率排除和人工复核，但运动与电缆伪迹可能残留。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS组存在较严重的轴性和步态平衡障碍，可能影响低beta与pace的关系。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "dipole嵌套患者的随机截距已纳入，但试次及时间点相关性是否完整处理不明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个脑区、频段、RPC和时间点比较，虽使用FDR校正仍有探索性分析风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立并验证后部STN低beta预测分类器。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预设的分区及频段分析计划可供核查。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是FOG易感性标志，而不是同一试次即将出现FOG的预测标志。该结果反映低beta与pace评分的负相关，不等同于后部STN低beta平均功率升高。亚区特异有效样本数和定量效应量未报告。",
+      "quote": "stronger negative associations between low-beta power and pace (RPC1) score in the posterior STN",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 5A–C",
+        "supplement": "Supplementary Fig. S5"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E06",
+      "design": "观察性STN-LFP与GI关联研究；FOG易感性比较；后部与中央STN分区分析。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名；35名报告日常生活FOG。全队列267个STN内dipoles。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "Fig. 5未分别报告后部和中央STN模型的有效试次数。267为全队列保留dipoles总数，后部139、中央128；没有给出该RPC2分析实际使用的分组dipole数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；分析试次均未发生FOG。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置STN-LFP记录，刺激器植入前，无治疗性刺激。",
+      "task": "视觉提示后的GI和自然行走；FOG-OBS患者的FOG阴性试次与FOG-NOBS患者试次比较。",
+      "recording_location": "后部感觉运动STN和中央联合区STN（central-associative STN）。",
+      "measure": "低beta功率与GI节律RPC2评分的空间分布关联。",
+      "frequency_and_analysis_window": "低beta 13–20 Hz；500 ms多窗、30 ms步进；800 ms试次前基线归一化；时间分辨GI分析。",
+      "finding": "FOG-OBS患者中，低beta功率与节律RPC2在后部和中央STN均表现为负向关联。中央STN中的方向与FOG-NOBS患者的正向关联相反。作者报告该差异扩展到两个STN亚区。",
+      "effect_estimate": "FOG-OBS组后部及中央STN均为负向关联；FOG-NOBS组中央STN为正向关联。没有报告分区特异回归斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "LFP功率与RPC2的时间分辨回归；LMM包含组别、STN区域、治疗条件及RPC评分，另进行分区内模型；dipole嵌套于患者的随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入STN-DBS手术候选患者，且两个试验的FOG纳入要求不同。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分类由运动捕捉识别，未使用视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有多步骤伪迹筛查，但移动状态下的残余伪迹不能排除。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS组步态和轴性障碍更严重，可能影响节律及低beta关联。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用dipole嵌套患者随机截距，但试次及时间点相关结构的完整性未明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析多个脑区、频段、时间点及RPC，虽使用FDR仍存在探索性多重比较风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有报告独立的预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预设分析计划可核对所有区域与频段比较。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "结果支持中央STN低beta-节律关联的方向性差异，但不证明中央STN活动直接导致冻结。该证据来自非事件关联试次，不能标记为pre-FOG事件预测。分区特异效应量未在正文给出。",
+      "quote": "negative associations between low-beta power and rhythm (RPC2) score in both the posterior and central STN subregions",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 5D–F",
+        "supplement": "Supplementary Fig. S5"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E07",
+      "design": "观察性STN-LFP与GI关联研究；FOG易感性比较；后部和中央STN空间分布分析。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名；35名报告日常生活FOG。全队列267个STN内dipoles。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "该RPC5分区分析未单独报告有效试次数或每组dipole数。全队列后部139个、中央128个dipoles为总数，不代表具体模型的分组有效数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；分析中的GI试次没有实际FOG。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置双极LFP记录，神经刺激器尚未植入，无治疗性DBS。",
+      "task": "视觉提示后的GI及自然步行；比较FOG-OBS阴性试次与FOG-NOBS试次。",
+      "recording_location": "后部感觉运动STN及中央联合区STN。",
+      "measure": "STN低beta归一化功率与GI balance RPC5评分的关联；RPC5主要代表步宽和侧向CoM速度。",
+      "frequency_and_analysis_window": "低beta 13–20 Hz；500 ms多窗、30 ms步进；800 ms试次前基线归一化；GI前后时间分辨分析。",
+      "finding": "FOG-OBS患者在后部和中央STN中均表现出低beta功率与balance RPC5的负向关联，且后部STN效应更强。FOG-NOBS患者则表现为正向关联，形成方向性差异。",
+      "effect_estimate": "FOG-OBS组负向关联，后部STN强于中央STN；FOG-NOBS组为正向关联。正文未给出具体斜率、SE、置信区间或数值p值。",
+      "statistical_unit_and_method": "LMM和时间分辨回归；随机截距按患者内dipole嵌套；组别、脑区、治疗状态及RPC评分交互；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "DBS手术候选患者样本，MAGIC试验额外要求DOPAOFF存在FOG。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG分组使用运动捕捉事件标签，但没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用多步骤伪迹筛查，但不能完全排除步行时运动及电缆伪迹。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS组的步态和平衡障碍更严重，可能影响RPC5与低beta关联。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用dipole嵌套患者随机截距，但所有试次级相关性是否充分建模不明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多频段、多区域和多时间点比较；使用FDR但仍有探索性分析风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未报告可评价的预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设的RPC5及区域分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "balance RPC5是PCA得到的运动学复合评分，不能直接等同于临床平衡功能的改善或恶化。低beta与RPC5之间的负相关不意味着低beta平均功率升高。结果属于FOG易感性，而非事件级FOG前预测。",
+      "quote": "negative associations between low-beta power and balance (RPC5) scores in both STN subregions, with stronger effects in the posterior STN",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 5G–I",
+        "supplement": "Supplementary Fig. S5"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E08",
+      "design": "观察性STN-LFP时频关联研究；FOG易感性比较；GI开始之前的神经行为关联。",
+      "population": "38名PD患者，其中12名FOG-OBS、26名FOG-NOBS；35名报告日常生活FOG。全队列267个STN内dipoles。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "正文未单独报告该GI前beta-balance关联的有效试次数及分组dipole数。全队列总dipoles为267；该特定时间窗的有效记录数未知。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；分析属于无FOG试次中的患者易感性比较。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置电极LFP记录，无治疗性DBS刺激。",
+      "task": "视觉提示后的GI；分析GI开始之前的STN活动与GI balance评分之间的关系。",
+      "recording_location": "后部和中央STN；作者报告该正向关联在后部STN更明显。",
+      "measure": "STN beta功率与GI balance RPC5评分的时间分辨关联。",
+      "frequency_and_analysis_window": "Beta频段；本段结果没有进一步明确low-beta与high-beta各自的贡献，不将其擅自指定为13–20 Hz或21–35 Hz。时间窗口位于GI之前，精确时间长度未报告。",
+      "finding": "FOG-OBS患者出现明显的beta功率与balance RPC5评分正向关联，该关联在GI开始前已经出现，并且在后部STN显著大于其他区域。该结果与GI后低beta-balance负向关联具有不同时间位置和方向。",
+      "effect_estimate": "方向为正向，后部STN更强；正文没有提供具体斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "LFP时频功率与RPC5时间分辨回归；LMM及分区内比较，dipole嵌套患者随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本为接受STN-DBS的手术候选患者，且MAGIC组存在FOG入选要求。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分类基于运动捕捉事件，未使用视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "高时间分辨移动状态LFP可能受运动及电缆伪迹影响，虽进行了伪迹筛查但未报告该时间窗的残余伪迹验证。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS患者具有更严重的轴性及步态平衡障碍，可能影响beta-balance关联。",
+            "source_locator": "Results—Gait Initiation Performance Relates to FOG Predisposition and Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "LMM考虑dipole与患者层级，但时间点和试次相关结构仍不完全清楚。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个时频窗口、区域和RPC评分被分析，虽采用FDR校正。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立可评价的预测模型，也没有独立验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整的预设时间窗和频段分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果说明beta-balance关联在GI前已经出现，但没有提供具体beta子频段边界和时间窗口。不能将其与GI后低beta负向关联合并成一个统一的beta异常，也不能推断该关联代表FOG即将发生。",
+      "quote": "a pronounced positive correlation between beta band activity and balance (RPC5) score starting before GI",
+      "source_locator": {
+        "section": "Results—Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed",
+        "page": null,
+        "figure_table": "Fig. 5G–I",
+        "supplement": "Supplementary Fig. S5"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E09",
+      "design": "观察性事件相关STN-LFP研究；同一FOG-OBS患者内比较随后发生FOG与未发生FOG的步行试次。",
+      "population": "FOG-OBS患者12名，来自38名PD患者队列。35名患者报告日常生活FOG。FOG-OBS患者在DOPAOFF时有99个FOG阳性试次和212个FOG阴性试次。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG-OBS子组的有效神经记录独立患者数及后部STN具体dipole数未单独报告。311为99个阳性试次与212个阴性试次的行为试次总数；实际进入LFP模型的有效试次数可能受到伪迹排除影响，未单独报告。全队列共有267个STN内dipoles。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported；FOG由自然行走中步态停止且无法继续迈步的运动学现象定义。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置双极LFP记录，无治疗性刺激；刺激参数不适用。",
+      "task": "视觉提示后的GI，随后自然直行及180度转弯。比较FOG-OBS患者中FOG阳性试次与FOG阴性试次的GI阶段STN活动。",
+      "recording_location": "后部感觉运动STN。",
+      "measure": "高beta功率与GI pace RPC1评分之间的时间分辨关联。",
+      "frequency_and_analysis_window": "高beta 21–35 Hz；500 ms多窗窗口，30 ms步进；800 ms试次前基线归一化；GI阶段时频回归。实际FOG发生于GI之后，首次事件中位延迟8步。",
+      "finding": "FOG阳性试次中，后部STN高beta功率与GI pace RPC1评分的负向关联较FOG阴性试次更强。该差异在后部STN显著，而不是报告为全STN一致现象。",
+      "effect_estimate": "方向为FOG阳性试次高beta-pace负向关联增强，且仅后部STN显著。正文未提供具体回归斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "同一FOG-OBS患者内试次级比较；STN-LFP功率与RPC1时间分辨回归；LMM及区域分析，dipole嵌套患者随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有12名记录中实际出现FOG的DBS手术候选患者进入该事件比较，样本量较小。",
+            "source_locator": "Materials and Methods—Participants；Results—Gait Initiation Performance"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG通过运动捕捉标记及两名评审者复核，但无视频验证。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events；Study Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有严格伪迹筛查，但步行条件下的残余运动及电缆伪迹仍可能影响高beta功率。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "患者内比较减少患者间混杂，但FOG阳性与阴性试次的行为状态及GI表现不同，不能确认高beta变化为独立因果因素。",
+            "source_locator": "Results—Predictive Patterns of FOG Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "12名患者提供多个试次，263个事件嵌套于99个阳性试次；不能将事件当成独立患者。LMM处理dipole嵌套，但试次级依赖结构不完全明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "比较多个频段、区域、RPC和时间点，使用FDR但仍有探索性分析风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "作者将结果描述为预测性标志，但未训练或验证独立预测算法，也未进行外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预设的时频和区域分析计划可供核对。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是GI发生时与随后真实FOG事件关联的信号，不是FOG发生期间的直接神经记录。FOG事件距GI中位8步，不能把所有GI前活动解释为紧邻冻结起始。LFP有效试次数和FOG-OBS子组有效dipole数未单独给出。",
+      "quote": "stronger negative associations between high-beta band power and pace (RPC1) score in FOG-OBS-positive versus FOG-OBS-negative trials, significant only in the posterior STN",
+      "source_locator": {
+        "section": "Results—Predictive Patterns of FOG Occurrence",
+        "page": null,
+        "figure_table": "Fig. 6A–C",
+        "supplement": "Supplementary Fig. S6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E10",
+      "design": "观察性事件相关STN-LFP研究；FOG-OBS患者内FOG阳性与阴性试次比较。",
+      "population": "12名FOG-OBS患者；FOG阳性99个试次、阴性212个试次；263次FOG事件发生于阳性试次中。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG-OBS组具体有效LFP患者数和后部STN有效dipole数未报告。311为行为试次总数，未明确说明所有试次均通过LFP伪迹筛查。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported；运动学定义为行走中断且无法启动或继续迈步。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置LFP记录，无治疗性刺激。",
+      "task": "GI后自然步行及转弯；比较随后发生FOG和没有FOG的同一患者试次。",
+      "recording_location": "后部感觉运动STN。",
+      "measure": "高beta功率与GI节律RPC2评分的时间分辨关联。",
+      "frequency_and_analysis_window": "高beta 21–35 Hz；500 ms窗口，30 ms步进；800 ms试次前基线归一化；GI阶段分析。",
+      "finding": "FOG阳性试次中，后部STN高beta活动与节律RPC2评分出现正向关联，而该关联在FOG阴性试次中不存在或方向相反。",
+      "effect_estimate": "方向为FOG阳性试次高beta-RPC2正向关联出现；正文未报告斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "患者内试次比较；时间分辨LFP功率与RPC2回归；LMM、分区分析和FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "事件分析仅涉及12名FOG-OBS患者，且样本均为DBS手术候选患者。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "运动捕捉及两名评审者复核，但没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用多步骤伪迹排除，但高beta移动状态记录仍有残余伪迹可能。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "患者内比较减少患者间混杂，但试次间行为状态、节律和转弯等因素可能共同影响高beta活动。",
+            "source_locator": "Results—Predictive Patterns of FOG Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多试次嵌套于少数患者，事件数不能代替患者数；LMM未明确完整试次级相关结构。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "频段、脑区、RPC和时间点比较较多，虽然采用FDR。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "该结果被作为潜在预测信号，但没有独立预测算法或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预设分析计划可用于核查所有频段及时间窗结果。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "节律RPC2的正向关联不代表高beta功率本身升高，也不意味着节律改善。需要保留RPC分数的原始定义和方向。该结果只在后部STN报告，不能推广为整个STN一致效应。",
+      "quote": "positive association between rhythm (RPC2) and both high-beta and theta band activity emerged in the posterior STN",
+      "source_locator": {
+        "section": "Results—Predictive Patterns of FOG Occurrence",
+        "page": null,
+        "figure_table": "Fig. 6D–F",
+        "supplement": "Supplementary Fig. S6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E11",
+      "design": "观察性事件相关STN-LFP研究；FOG-OBS患者内事件关联分析。",
+      "population": "12名FOG-OBS患者；99个FOG阳性试次和212个FOG阴性试次，阳性试次包含263次FOG事件。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "该theta分析的有效LFP试次数、独立有效患者数和后部STN具体dipole数未单独报告。311为行为试次数，不保证全部进入有效LFP模型。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported；原文未对FOG事件进行震颤型或无震颤型亚型分类。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置电极记录，无治疗性刺激。",
+      "task": "GI后自然行走，FOG在随后步行或转弯中发生；比较阳性与阴性试次。",
+      "recording_location": "后部感觉运动STN。",
+      "measure": "Theta频段LFP功率与GI节律RPC2评分的关联。",
+      "frequency_and_analysis_window": "Theta频段；该具体结果没有给出独立theta边界，不将其擅自等同于4–12 Hz整体theta/alpha复合频段。500 ms窗口、30 ms步进，800 ms基线归一化。",
+      "finding": "FOG阳性试次中，后部STN theta活动与GI节律RPC2评分的正向关联出现；该关联在FOG阴性试次中缺失或方向相反。",
+      "effect_estimate": "方向为FOG阳性试次theta-RPC2正向关联出现；正文未报告独立theta回归斜率、SE、置信区间或数值p值。",
+      "statistical_unit_and_method": "患者内试次级时间分辨回归；LMM与分区分析，随机截距嵌套dipole和患者；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "FOG事件比较仅包含12名FOG-OBS患者，且均为STN-DBS手术候选患者。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "运动捕捉识别并由两名评审者复核，没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有伪迹筛查，但移动状态下残余运动伪迹仍可能影响低频theta结果。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "试次间GI节律及步态状态可能同时影响theta活动和FOG发生，不能证明因果关系。",
+            "source_locator": "Results—Predictive Patterns of FOG Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多试次和多个事件嵌套于12名患者，患者数远小于试次及事件数。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时分析多个频段、时间点和脑区，虽采用FDR校正。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "未进行独立预测模型训练或外部验证，预测性解释仍属探索性。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预注册频段及时间窗分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果与高beta-RPC2是两个不同频段的发现，不能合并为笼统的beta异常。theta具体频率边界没有在该结果中明确报告，故不应自行设定频段边界。",
+      "quote": "positive association between rhythm (RPC2) and both high-beta and theta band activity emerged in the posterior STN",
+      "source_locator": {
+        "section": "Results—Predictive Patterns of FOG Occurrence",
+        "page": null,
+        "figure_table": "Fig. 6D–F",
+        "supplement": "Supplementary Fig. S6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E12",
+      "design": "观察性事件相关STN-LFP研究；FOG-OBS患者内阳性与阴性步行试次比较。",
+      "population": "12名FOG-OBS患者；FOG阳性99个试次，阴性212个试次；阳性试次共有263次FOG事件。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "中央STN在FOG-OBS组的实际有效dipole数及有效LFP试次数未单独报告。311为行为试次总数，而不是经过LFP伪迹筛查后的明确有效试次数。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported；无亚型分类。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置电极LFP记录，无治疗性DBS。",
+      "task": "GI后自然步行及转弯，比较随后发生FOG和未发生FOG的试次。",
+      "recording_location": "中央联合区STN（central-associative STN）。",
+      "measure": "中央STN高beta功率与GI balance RPC5评分之间的关联。",
+      "frequency_and_analysis_window": "高beta 21–35 Hz；500 ms多窗、30 ms步进；800 ms试次前基线归一化；GI阶段时间分辨分析。",
+      "finding": "FOG阳性试次中，中央STN高beta功率与balance RPC5评分之间的负向关联较FOG阴性试次更强。",
+      "effect_estimate": "方向为FOG阳性试次中央STN高beta-balance负向关联增强；没有报告定量斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "患者内试次比较；LMM及时间分辨回归；dipole嵌套患者随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅12名FOG-OBS患者参与该事件比较，且全部为DBS手术候选患者。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG使用运动捕捉标签，缺少视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events；Study Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "高beta移动状态LFP可能受到运动或电缆伪迹影响，虽然进行了人工和阈值筛查。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "步态和平衡行为变化可能同时影响中央STN高beta活动与FOG发生。",
+            "source_locator": "Results—Predictive Patterns of FOG Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多次试次和事件嵌套于12名患者，不能视为独立患者重复验证。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个频段、区域、时间点和RPC指标同时比较，FDR虽有应用但仍有探索性风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "潜在预测标志尚未在独立患者队列或外部数据集验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设的中央STN高beta分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "中央STN高beta-balance负向关联是GI时的事件关联标志，不是FOG期间神经活动的直接测量。不能将其与后部STN高beta-pace或gamma-balance结果合并。",
+      "quote": "a stronger negative association between high-beta band power in the central STN",
+      "source_locator": {
+        "section": "Results—Predictive Patterns of FOG Occurrence",
+        "page": null,
+        "figure_table": "Fig. 6G–I",
+        "supplement": "Supplementary Fig. S6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E13",
+      "design": "观察性事件相关STN-LFP研究；FOG-OBS患者内FOG阳性与阴性试次比较。",
+      "population": "12名FOG-OBS患者；99个FOG阳性试次、212个FOG阴性试次，阳性试次中263次FOG事件。",
+      "n_enrolled": 38,
+      "n_analyzed": 12,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": 263,
+      "n_trials": 311,
+      "n_electrodes_contacts": null,
+      "missing_reason": "后部STN gamma分析的有效患者数、dipole数及LFP有效试次数未单独报告。311为行为试次数量，不应等同于有效LFP记录数。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "not_reported；未区分FOG临床亚型。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAOFF，停药12小时后。",
+      "DBS_state_and_parameters": "术后1–4天外置STN电极记录，刺激器植入前，无治疗性DBS。",
+      "task": "GI后自然步行及180度转弯，比较FOG阳性与阴性试次。",
+      "recording_location": "后部感觉运动STN。",
+      "measure": "后部STN gamma功率与GI balance RPC5评分之间的关联。",
+      "frequency_and_analysis_window": "Gamma >35 Hz；500 ms多窗、30 ms步进；800 ms试次前基线归一化；GI阶段时频分析。",
+      "finding": "FOG阳性试次中，后部STN gamma功率与balance RPC5评分之间出现正向关联，相比FOG阴性试次更明显。",
+      "effect_estimate": "方向为FOG阳性试次后部STN gamma-balance正向关联增强；正文没有报告数值回归系数、SE、95% CI或p值。",
+      "statistical_unit_and_method": "患者内试次比较；LMM与时间分辨回归，dipole嵌套患者随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有12名FOG-OBS患者进入事件比较，且均为手术候选患者。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG使用运动捕捉识别并由两名评审者复核，但没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "移动状态下gamma信号可能受到电缆和运动伪迹影响，虽进行了伪迹筛查。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "GI平衡行为与gamma活动可能同时受疾病严重程度及瞬时任务状态影响。",
+            "source_locator": "Results—Predictive Patterns of FOG Occurrence"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "多个试次及事件嵌套于少量患者，试次依赖结构未完全说明。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个频段、区域和时间点比较，虽有FDR校正。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "some_concerns",
+            "reason": "该信号尚未在独立预测模型和外部队列中验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有完整预设的gamma分析计划可供核查。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "gamma与balance的正向关联不能直接解释为gamma平均功率升高，也不能据此推断后部STN具有保护性或致病性作用。结果只涉及GI阶段。",
+      "quote": "positive association with gamma band power in the posterior STN for FOG-OBS-positive trials",
+      "source_locator": {
+        "section": "Results—Predictive Patterns of FOG Occurrence",
+        "page": null,
+        "figure_table": "Fig. 6G–I",
+        "supplement": "Supplementary Fig. S6"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E14",
+      "design": "观察性患者内DOPAOFF/DOPAON重复测量STN-LFP研究；FOG易感性分组的药物状态比较。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名。35名患者报告日常生活FOG。DOPAON分析报告875条LFP traces，其中FOG-NOBS 633条、FOG-OBS 242条。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "DOPAON总有效GI试次数为1251，但特定低beta-pace LFP模型的有效试次数未单独报告。875为LFP traces，不是试次数。全队列共有267个STN内dipoles，未报告DOPAON模型实际使用的独立dipole数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；FOG-OBS分类依据DOPAOFF记录中其他试次出现FOG。DOPAON残余FOG试次被排除。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAON：服用患者日常晨间左旋多巴剂量加50 mg；比较条件为DOPAOFF，停药12小时。DOPAON仅一名患者仍有少数FOG试次，该患者相关试次被排除。",
+      "DBS_state_and_parameters": "术后1–4天外置STN电极LFP记录，神经刺激器植入前，无治疗性DBS刺激。",
+      "task": "视觉提示后的GI及随后自然步行和转弯；比较DOPAOFF与DOPAON下FOG-OBS和FOG-NOBS患者的GI-LFP关联。",
+      "recording_location": "双侧STN；涉及后部感觉运动和中央联合区STN。",
+      "measure": "低beta LFP功率与GI pace RPC1评分的关联。",
+      "frequency_and_analysis_window": "低beta 13–20 Hz；500 ms多窗窗口，30 ms步进；800 ms试次前基线归一化；GI期间时频回归。",
+      "finding": "FOG-NOBS患者的低beta功率与pace正向关联，在DOPAOFF与DOPAON之间变化较小。FOG-OBS患者则从DOPAOFF时负向关联转变为DOPAON时正向关联，更接近FOG-NOBS患者模式。",
+      "effect_estimate": "方向：FOG-OBS组低beta-pace关联由负转正；FOG-NOBS组保持正向且变化较小。正文未报告该特定交互的数值斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "患者、dipole和试次层级的LFP功率与RPC1关联；LMM包含治疗状态、组别、STN区域和RPC评分及交互；随机截距嵌套dipole于患者；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "DBS手术候选患者，两个试验FOG入选标准不同。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分组依据运动捕捉事件，没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有严格伪迹筛查，但运动状态残余伪迹仍可能影响低beta结果。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "DOPAOFF和DOPAON为药物状态比较而非随机化刺激试验；治疗状态和时间顺序可能与其他因素共同变化。",
+            "source_locator": "Materials and Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用嵌套随机截距，但试次和时间点依赖结构仍不完全明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个频段、脑区、治疗状态及RPC指标比较，使用FDR但仍有探索性风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未报告独立预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设的药物状态及频段分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究的药物比较不是随机化刺激试验。DOPAON时残余FOG试次被排除，因此本条是药物对GI神经行为关联的影响，不是药物对实际FOG事件期间神经活动的影响。不能将低beta与pace关联的方向改变等同于平均低beta功率反转。",
+      "quote": "In FOG-OBS patients with PD, dopamine treatment shifted associations between low-beta band power and pace from negative (DOPAOFF) toward positive",
+      "source_locator": {
+        "section": "Results—Dopaminergic Medication Improves Gait Disability and Reestablishes STN Activity",
+        "page": null,
+        "figure_table": "Fig. 7A–D",
+        "supplement": "Supplementary Fig. S7"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E15",
+      "design": "观察性患者内DOPAOFF/DOPAON重复测量STN-LFP研究；FOG易感性组别比较。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名。DOPAON共报告875条LFP traces，其中633条来自FOG-NOBS，242条来自FOG-OBS。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "具体beta-节律关联模型的有效试次数未报告。DOPAON总有效GI试次数1251，875为LFP traces，不能互相替代。具体参与该模型的dipole数未单独报告。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；FOG-OBS依据DOPAOFF其他试次发生FOG定义。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAON，晨间常规左旋多巴剂量加50 mg；对照为DOPAOFF停药12小时。",
+      "DBS_state_and_parameters": "术后1–4天外置STN-LFP记录，刺激器尚未植入，无治疗性刺激。",
+      "task": "视觉提示后的GI及自然步行；比较不同药物状态下FOG-OBS患者的GI节律与STN-LFP关系。",
+      "recording_location": "STN；正文未在该药物效应结果中进一步指定单独脑区。",
+      "measure": "beta功率与GI节律RPC2评分的关联。",
+      "frequency_and_analysis_window": "Beta 13–35 Hz为论文总体定义；该药物效应结果未进一步说明低beta或高beta各自贡献。500 ms多窗窗口，30 ms步进，800 ms试次前基线归一化。",
+      "finding": "FOG-OBS患者在DOPAOFF时观察到的beta功率与节律RPC2负向关联，在DOPAON后减弱。该结果说明药物状态改变了beta-节律关联，但正文未明确将该效应限定在13–20 Hz或21–35 Hz。",
+      "effect_estimate": "方向为DOPAON后负向beta-RPC2关联减弱；没有报告具体回归斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "LFP功率与RPC2关联；LMM包含组别、区域、治疗状态、RPC及交互；dipole嵌套患者随机截距；时间分辨回归及FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本来自STN-DBS手术候选患者，MAGIC试验额外要求DOPAOFF存在FOG。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG分组依据运动捕捉事件，没有视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采取伪迹排除和人工检查，但不能完全排除移动状态残余伪迹。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物状态为患者内比较，但非随机化或盲法药物干预；残余时间和状态混杂无法完全排除。",
+            "source_locator": "Materials and Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "使用dipole嵌套患者随机截距，但试次与时间点的依赖结构仍不完全明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及多个频段、区域、RPC和药物状态，使用FDR但仍有探索性分析风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有独立预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "缺乏完整的预设药物状态和频段分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "原文仅使用beta band表述，没有在该具体药物效应中报告低beta和高beta的独立结果。跨研究综合时不能把此结果直接编码为低beta或高beta特异效应。",
+      "quote": "the negative association with beta band power observed in FOG-OBS patients was reduced with dopamine treatment",
+      "source_locator": {
+        "section": "Results—Dopaminergic Medication Improves Gait Disability and Reestablishes STN Activity",
+        "page": null,
+        "figure_table": "Fig. 7C–D",
+        "supplement": "Supplementary Fig. S7"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40709562_E16",
+      "design": "观察性患者内DOPAOFF/DOPAON重复测量STN-LFP研究；FOG易感性分组的药物状态比较。",
+      "population": "38名PD患者，FOG-OBS 12名、FOG-NOBS 26名；35名报告日常生活FOG。DOPAON共875条LFP traces，其中FOG-OBS 242条。",
+      "n_enrolled": 38,
+      "n_analyzed": 38,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": 38,
+      "n_FOG_events": 0,
+      "n_trials": null,
+      "n_electrodes_contacts": 267,
+      "missing_reason": "DOPAON总有效GI试次数1251，但该低beta-balance LFP模型的有效试次数和模型使用的独立dipole数没有单独报告。875为LFP traces，不能替代试次数。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "not_reported；FOG-OBS患者是在DOPAOFF其他试次中出现FOG，本条分析不包括DOPAON残余FOG试次。",
+      "medication_phenotype": "unknown。",
+      "experimental_medication_state": "DOPAON：常规晨间左旋多巴剂量加50 mg；比较DOPAOFF停药12小时。",
+      "DBS_state_and_parameters": "术后1–4天外置双极STN-LFP记录，神经刺激器植入前，无治疗性DBS刺激。",
+      "task": "视觉提示后的GI及自然行走；比较DOPAOFF与DOPAON状态下GI balance评分和STN低beta关联。",
+      "recording_location": "后部感觉运动STN及中央联合区STN。",
+      "measure": "低beta功率与GI balance RPC5评分之间的关联。",
+      "frequency_and_analysis_window": "低beta 13–20 Hz；500 ms多窗窗口、30 ms步进；800 ms试次前基线归一化；GI时间分辨分析。",
+      "finding": "FOG-OBS患者在DOPAOFF时观察到的低beta功率与balance RPC5负向关联，在多巴胺治疗后减弱，关联模式更接近FOG-NOBS患者。",
+      "effect_estimate": "方向为DOPAON缓解FOG-OBS患者的低beta-balance负向关联；正文未报告具体斜率、SE、95% CI或数值p值。",
+      "statistical_unit_and_method": "LMM和时间分辨回归；模型包括药物状态、组别、区域、RPC及交互项；dipole嵌套于患者的随机截距；FDR校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理/预测研究领域偏倚风险评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅纳入接受STN-DBS手术的患者，且MAGIC组有DOPAOFF FOG入选要求。",
+            "source_locator": "Materials and Methods—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG-OBS分类由运动捕捉识别事件，缺少视频确认。",
+            "source_locator": "Materials and Methods—Gait Initiation Parameters and FOG Events"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了伪迹阈值排除和人工核查，但移动状态残余伪迹仍可能影响LFP。",
+            "source_locator": "Materials and Methods—Electrophysiological Data Processing"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "DOPAOFF/DOPAON为非随机化药物状态比较，不能排除治疗顺序和其他时间相关因素。",
+            "source_locator": "Materials and Methods—Experimental Protocol"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用患者内dipole嵌套随机截距，但试次级及时间点相关结构不完全明确。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "涉及多频段、脑区、RPC及药物状态比较，使用FDR但仍存在探索性多重比较风险。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未报告独立预测模型或外部验证。",
+            "source_locator": "Discussion—Gait Pattern and STN Neuronal Modulations"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供完整预设药物状态及RPC分析计划。",
+            "source_locator": "Materials and Methods—Statistical Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是低beta功率与balance评分关联在药物状态间的变化，不等同于低beta绝对功率降低。DOPAON时大多数FOG事件消失，残余FOG试次被排除，因此不能据此声称该神经标志直接预测或阻止了FOG事件。",
+      "quote": "dopaminergic treatment mitigated the negative association between low-beta power observed in the DOPAOFF condition in FOG-OBS patients",
+      "source_locator": {
+        "section": "Results—Dopaminergic Medication Improves Gait Disability and Reestablishes STN Activity",
+        "page": null,
+        "figure_table": "Fig. 7A–D",
+        "supplement": "Supplementary Fig. S7"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

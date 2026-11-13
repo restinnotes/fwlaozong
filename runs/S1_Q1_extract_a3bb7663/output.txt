@@ -1,0 +1,56 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:32634599",
+      "design": "单病例探索性干预研究；同一受试者在不同刺激条件下进行自身对照比较。",
+      "population": "1名男性帕金森病伴冻结步态（FOG）患者，63.2岁，病程5.1年，运动不能-强直型（akinetic-rigid subtype），off-medication UPDRS-III评分55；植入双侧STN DBS电极及Medtronic Activa PC+S神经信号采集刺激器。",
+      "n": "1",
+      "condition": "受试者处于停药状态：短效多巴胺能药物停用12小时，长效药物停用24或48小时。执行原地踏步任务（stepping in place，SIP）。研究通过5个随机排列的刺激电压水平（0至100% VMax）进行滴定，分析双侧STN运动期间的beta频段LFP功率。",
+      "measure": "双侧STN局部场电位（LFP）beta频段功率（13–30 Hz）；运动期间beta功率升高的峰值频率及其频带范围。",
+      "finding": "研究在SIP期间观察到双侧STN升高的beta频段功率，峰值频率均为15 Hz。研究者将峰值频率上下各3 Hz定义为movement band，用于后续闭环刺激控制，即以STN beta功率作为神经反馈信号。",
+      "effect": "双侧STN运动期间beta功率峰值频率均为15 Hz；控制频带设定为峰值±3 Hz。论文未报告beta功率升高幅度，也未提供冻结与非冻结时段之间的beta功率差异或相关系数。",
+      "limitations": "这是单病例研究，不能确定该beta活动特征在其他PD伴FOG患者中的普遍性。研究虽然确定了运动期间STN beta功率峰值，但没有直接比较FOG发生与未发生时的STN beta功率，也没有报告beta功率变化领先于冻结事件的时间关系。因此，该研究支持STN beta活动可作为闭环刺激控制信号，但不能单独证明15 Hz beta活动是FOG的特异性神经标志物，亦不能确定beta活动与FOG之间的直接因果关系。",
+      "quote": "The “movement band” was set to ±3 Hz around the peak frequency of elevated beta band power during SIP (15 Hz for both STNs).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:32634599",
+      "design": "单病例探索性干预研究；同一受试者在四种DBS条件下进行自身对照比较。",
+      "population": "1名男性帕金森病伴FOG患者，63.2岁，病程5.1年，akinetic-rigid亚型，off-medication UPDRS-III评分55；接受双侧STN DBS。",
+      "n": "1",
+      "condition": "所有测试均在停药状态下进行，采用SIP任务。比较四种刺激条件：关闭刺激（OFF）、临床常规开环刺激（c-olDBS）、电压匹配开环刺激（m-olDBS）和基于双阈值STN beta功率算法的闭环刺激（clDBS）。m-olDBS使用与clDBS相同的单个刺激触点，电压设为clDBS期间的平均电压。",
+      "measure": "通过力板记录足部垂直地面反作用力，采用自动算法识别足部未能抬离力板的冻结事件；主要指标为冻结时间百分比（percent time freezing）。",
+      "finding": "不同刺激条件下冻结时间百分比分别为：OFF 68.7%，c-olDBS 2.3%，m-olDBS 23.5%，clDBS 1.5%。基于STN beta功率的闭环刺激条件下冻结时间百分比最低。研究显示，闭环刺激与开环刺激对FOG的改善程度不同，尤其相较于电压匹配开环刺激，闭环刺激表现出更明显的改善。",
+      "effect": "冻结时间百分比：OFF 68.7%；c-olDBS 2.3%；m-olDBS 23.5%；clDBS 1.5%。clDBS低于三种其他条件，但与临床开环刺激的差异仅为0.8个百分点。论文没有报告这些条件之间的统计显著性检验结果。",
+      "limitations": "样本量仅1例，无法进行可靠的群体推断。测试仅在停药状态下进行，采用SIP任务，不能直接推广到药物开启状态或实际行走中的FOG。临床开环刺激与闭环刺激的冻结时间百分比非常接近（2.3%与1.5%），因此不能仅凭该结果认为闭环刺激在所有情况下均明显优于临床开环刺激。此外，研究没有提供STN beta功率与冻结时间百分比之间的直接相关分析，无法区分改善是否由beta活动变化本身、刺激动态调节或其他刺激参数差异造成。该研究发表于尚未经过同行评审的medRxiv预印本。",
+      "quote": "The percent time freezing was 68.7% OFF DBS, 2.3% on c-olDBS, 23.5% during m-olDBS, and 1.5% during clDBS.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:32634599",
+      "design": "单病例探索性干预研究；同一受试者在不同刺激条件下进行自身对照比较。",
+      "population": "1名男性帕金森病伴FOG患者，63.2岁，病程5.1年，akinetic-rigid亚型，off-medication UPDRS-III评分55。",
+      "n": "1",
+      "condition": "停药状态下进行SIP任务，比较OFF、临床开环刺激（c-olDBS）、电压匹配开环刺激（m-olDBS）和STN beta功率驱动的闭环刺激（clDBS）。重点观察任务开始后的步态节律变化，尤其是前25秒之后的表现。",
+      "measure": "步幅时间变异系数（coefficient of variation of stride time，CV），作为步态节律紊乱（arrhythmicity）的指标；同时记录冻结事件。",
+      "finding": "所有刺激条件下的步态节律紊乱均低于OFF状态。arrhythmicity分别为OFF 54.9%、c-olDBS 18.2%、m-olDBS 27.4%、clDBS 5.2%。在临床开环刺激和电压匹配开环刺激条件下，任务开始25秒后arrhythmicity增加；而在闭环刺激条件下，踏步节律得以维持。作者认为，闭环刺激可能通过适应STN活动变化，使运动系统维持或重新获得运动控制。",
+      "effect": "步态节律紊乱：OFF 54.9%；c-olDBS 18.2%；m-olDBS 27.4%；clDBS 5.2%。闭环刺激条件下观察到最低的步态节律紊乱，且未出现开环刺激条件下任务后期的节律恶化。",
+      "limitations": "样本量仅1例，且仅使用SIP任务。CV是步态运动学表现指标，并非STN神经活动的直接测量结果。论文没有报告任务后期STN beta功率变化与arrhythmicity变化之间的逐时相关分析，也没有提供beta活动变化是否先于步态节律恶化的证据。因此，作者提出的适应性刺激维持运动控制的解释仍属于机制假设，不能据此确定STN beta变化与FOG之间的具体时间关系及因果方向。",
+      "quote": "There was an increase in arrhythmicity after the first 25 seconds of the trial during both c-olDBS and m-olDBS, but during clDBS, stepping remained rhythmic.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:32634599",
+      "design": "单病例探索性干预研究；同一受试者在电压匹配开环刺激和神经反馈闭环刺激条件下进行自身对照比较。",
+      "population": "1名男性帕金森病伴FOG患者，63.2岁，病程5.1年，akinetic-rigid亚型，off-medication UPDRS-III评分55。",
+      "n": "1",
+      "condition": "停药状态下执行SIP任务。比较基于STN beta功率调节的clDBS与m-olDBS。m-olDBS采用与clDBS相同的单个刺激触点，并将电压固定为clDBS期间的平均电压，以比较动态调节与固定刺激的效果。",
+      "measure": "总电能消耗（total electrical energy delivered，TEED）、激活组织体积（volume of tissue activated，VTA）、冻结时间百分比及步态节律。",
+      "finding": "m-olDBS与clDBS之间的TEED没有差异，且两种条件下VTA几乎相同。然而，clDBS期间踏步节律得以维持，冻结时间百分比和arrhythmicity均低于m-olDBS。clDBS的平均TEED仅比临床开环刺激高2%。作者据此提出，刺激根据波动的STN活动进行动态适应，可能比持续固定刺激更有利于维持运动控制，减少与sequence effect有关的步态紊乱和FOG。",
+      "effect": "m-olDBS与clDBS的TEED无差异，VTA近似相同；clDBS的平均TEED比c-olDBS高2%。在TEED和VTA近似相同的情况下，clDBS表现出更低的冻结时间百分比（1.5% vs 23.5%）和arrhythmicity（5.2% vs 27.4%）。",
+      "limitations": "电能消耗和组织激活体积的匹配仅在1名患者中实现，不能证明动态调节是临床效果差异的唯一原因。虽然m-olDBS与clDBS使用相同触点和匹配平均电压，但两种刺激模式的时间变化特征不同，仍无法完全排除其他刺激参数及其交互作用。研究没有直接验证STN beta功率波动、刺激调整、运动控制恢复和FOG改善之间的完整因果链。作者也指出，需要进一步研究维持治疗效果所需的刺激适应程度及其能量需求。",
+      "quote": "These findings suggest that allowing the stimulation to adapt during the trial may allow the motor system to sustain or regain movement control, whereas continuous stimulation (with a similar or same amount of TEED and VTA) cannot prevent the “sequence effect” that contributes to arrhythmic gait and FOG.",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

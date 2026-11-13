@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:37685514
+题目: Noninvasive Neuromodulation in Parkinson's Disease: Insights from Animal Models.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: The mainstay treatments for Parkinson's Disease (PD) have been limited to pharmacotherapy and deep brain stimulation. While these interventions are helpful, a new wave of research is investigating noninvasive neuromodulation methods as potential treatments. Some promising avenues have included transcranial magnetic stimulation (TMS), transcranial direct current stimulation (tDCS), electroconvulsive therapy (ECT), and focused ultrasound (FUS). While these methods are being tested in PD patients, investigations in animal models of PD have sought to elucidate their therapeutic mechanisms. In this rapid review, we assess the available animal literature on these noninvasive techniques and discuss the possible mechanisms mediating their therapeutic effects based on these findings.
+
+---
+
+pid: PMID:37701070
+题目: Supplementary Motor Area Activity Differs in Parkinson's Disease with and without Freezing of Gait.
+年份: 2023  类型: research-article; Journal Article
+摘要: The study aimed to investigate the neural changes that differentiate Parkinson's disease patients with freezing of gait and age-matched controls, using ambulatory electroencephalography event-related features. Compared to controls, definite freezers exhibited significantly less alpha desynchronization at the motor cortex about 300 ms before and after the start of overground walking and decreased low-beta desynchronization about 300 ms before and about 300 and 700 ms after walking onset. The late slope of motor potentials also differed in the sensory and motor areas between groups of controls, definite, and probable freezers. This difference was found both in preparation and during the execution of normal walking. The average frontal peak of motor potential was also found to be largely reduced in the definite freezers compared with the probable freezers and controls. These findings provide valuable insights into the underlying structures that are affected in patients with freezing of gait, which could be used to tailor drug development and personalize drug care for disease subtypes. In addition, the study's findings can help in the evaluation and validation of nonpharmacological therapies for patients with Parkinson's disease.
+
+---
+
+pid: PMID:37701817
+题目: Optimal subthalamic stimulation sites and related networks for freezing of gait in Parkinson's disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: Freezing of gait is a common and debilitating symptom in Parkinson's disease. Although high-frequency subthalamic deep brain stimulation is an effective treatment for Parkinson's disease, post-operative freezing of gait severity has been reported to alleviate, deteriorate or remain constant. We conducted this study to explore the optimal stimulation sites and related connectivity networks for high-frequency subthalamic deep brain stimulation treating freezing of gait in Parkinson's disease. A total of 76 Parkinson's disease patients with freezing of gait who underwent bilateral high-frequency subthalamic stimulation were retrospectively included. The volumes of tissue activated were estimated based on individual electrode reconstruction. The optimal and sour stimulation sites were calculated at coordinate/voxel/mapping level and mapped to anatomical space based on patient-specific images and stimulation settings. The structural and functional predictive connectivity networks for the change of the post-operative Freezing of Gait-Questionnaire were also identified based on normative connectomes derived from the Parkinson's Progression Marker Initiative database. Leave-one-out cross-validation model validated the above results, and the model remained significant after including covariates. The dorsolateral two-thirds of the subthalamic nucleus was identified as the optimal stimula
+
+---
+
+pid: PMID:37842127
+题目: Differential spatiotemporal gait effects with frequency and dopaminergic modulation in STN-DBS.
+年份: 2023  类型: research-article; Journal Article
+摘要: ObjectiveThe spatiotemporal gait changes in advanced Parkinson's disease (PD) remain a treatment challenge and have variable responses to L-dopa and subthalamic deep brain stimulation (STN-DBS). The purpose of this study was to determine whether low-frequency STN-DBS (LFS; 60 Hz) elicits a differential response to high-frequency STN-DBS (HFS; 180 Hz) in spatiotemporal gait kinematics.MethodsAdvanced PD subjects with chronic STN-DBS were evaluated in both the OFF and ON medication states with LFS and HFS stimulation. Randomization of electrode contact pairs and frequency conditions was conducted. Instrumented Stand and Walk assessments were carried out for every stimulation/medication condition. LM-ANOVA was employed for analysis.ResultsTwenty-two PD subjects participated in the study, with a mean age (SD) of 63.9 years. Significant interactions between frequency (both LFS and HFS) and electrode contact pairs (particularly ventrally located contacts) were observed for both spatial (foot elevation, toe-off angle, stride length) and temporal (foot speed, stance, single limb support (SLS) and foot swing) gait parameters. A synergistic effect was also demonstrated with L-dopa and both HFS and LFS for right SLS, left stance, left foot swing, right toe-off angle, and left arm range of motion. HFS produced significant improvement in trunk and lumbar range of motion compared to LFS.Conc
+
+---
+
+pid: PMID:37860957
+题目: Active and Passive Cycling Decrease Subthalamic β Oscillations in Parkinson's Disease.
+年份: 2024  类型: Journal Article
+摘要: BackgroundPreserved cycling capabilities in patients with Parkinson's disease, especially in those with freezing of gait are still poorly understood. Previous research with invasive local field potential recordings in the subthalamic nucleus has shown that cycling causes a stronger suppression of β oscillations compared to walking, which facilitates motor continuation.MethodsWe recorded local field potentials from 12 patients with Parkinson's disease (six without freezing of gait, six with freezing of gait) who were bilaterally implanted with deep brain stimulation electrodes in the subthalamic nucleus. We investigated β (13-30 Hz) and high γ (60-100 Hz) power during both active and passive cycling with different cadences and compared patients with and without freezing of gait. The passive cycling experiment, where a motor provided a fixed cadence, allowed us to study the effect of isolated sensory inputs without physical exercise.ResultsWe found similarly strong suppression of pathological β activity for both active and passive cycling. In contrast, there was stronger high γ band activity for active cycling. Notably, the effects of active and passive cycling were all independent of cadence. Finally, β suppression was stronger for patients with freezing of gait, especially during passive cycling.ConclusionsOur results provide evidence for a link between proprioceptive input dur
+
+---
+
+pid: PMID:37888906
+题目: Paradoxical Modulation of STN β-Band Activity with Medication Compared to Deep Brain Stimulation.
+年份: 2024  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundExcessive subthalamic nucleus (STN) β-band (13-35 Hz) synchronized oscillations has garnered interest as a biomarker for characterizing disease state and developing adaptive stimulation systems for Parkinson's disease (PD).ObjectivesTo report on a patient with abnormal treatment-responsive modulation in the β-band.MethodsWe examined STN local field potentials from an externalized deep brain stimulation (DBS) lead while assessing PD motor signs in four conditions (OFF, MEDS, DBS, and MEDS+DBS).ResultsThe patient presented here exhibited a paradoxical increase in β power following administration of levodopa and pramipexole (MEDS), but an attenuation in β power during DBS and MEDS+DBS despite clinical improvement of 50% or greater under all three therapeutic conditions.ConclusionsThis case highlights the need for further study on the role of β oscillations in the pathophysiology of PD and the importance of personalized approaches to the development of β or other biomarker-based DBS closed loop algorithms. © 2023 The Authors. Movement Disorders published by Wiley Periodicals LLC on behalf of International Parkinson and Movement Disorder Society.
+
+---
+
+pid: PMID:37932548
+题目: A spinal cord neuroprosthesis for locomotor deficits due to Parkinson's disease.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; Journal Article; Case Reports
+摘要: People with late-stage Parkinson's disease (PD) often suffer from debilitating locomotor deficits that are resistant to currently available therapies. To alleviate these deficits, we developed a neuroprosthesis operating in closed loop that targets the dorsal root entry zones innervating lumbosacral segments to reproduce the natural spatiotemporal activation of the lumbosacral spinal cord during walking. We first developed this neuroprosthesis in a non-human primate model that replicates locomotor deficits due to PD. This neuroprosthesis not only alleviated locomotor deficits but also restored skilled walking in this model. We then implanted the neuroprosthesis in a 62-year-old male with a 30-year history of PD who presented with severe gait impairments and frequent falls that were medically refractory to currently available therapies. We found that the neuroprosthesis interacted synergistically with deep brain stimulation of the subthalamic nucleus and dopaminergic replacement therapies to alleviate asymmetry and promote longer steps, improve balance and reduce freezing of gait. This neuroprosthesis opens new perspectives to reduce the severity of locomotor deficits in people with PD.
+
+---
+
+pid: PMID:37970305
+题目: Voice Worsening in Post Deep Brain Stimulation Parkinson's Patients - Is Deep Brain Stimulation (DBS-STN) the Culprit?
+年份: 2023  类型: Editorial
+摘要: （无摘要）
+
+---
+
+pid: PMID:37970309
+题目: Subjective Assessments of Voice in Parkinson's Disease Subjects with and without STN-DBS Therapy.
+年份: 2023  类型: research-article; Journal Article
+摘要: IntroductionThe causal relation between STN-DBS and speech problems and the associated clinical features are in the incipient stages of being investigated.MethodsAll the Parkinson's disease (PD) subjects with and without STN-DBS who applied to our movement disorders outpatient clinics between January 2022 and June 2022 and agreed to participate in the study were enrolled. The demographic data and clinical features were noted. Besides, the MDS-UPDRS was administered during the medication off-state in all subjects. All the participants completed the voice handicap index (VHI). Besides, the Freezing of Gait Questionnaire (FOGQ) and the quality of life (QoL) scales including the Parkinson's Disease Questionnaire (PDQ-39) and the Schwab and England Activities of Daily Living (ADL) scale were also administered to all the individuals.ResultsWe have included 66 patients with PD (F/M = 23/43). Thirty-five patients were those with DBS therapy whereas 31 patients were without. The results of the comparative analyses between the patients with and without DBS therapy revealed that the DBS group had a higher disease duration (P = 0.006) and FOGQ scores (P = 0.008). The VHI scores did not differ between groups (P = 0.577), and the correlation analyses did not reveal an association between the VHI scores and the duration of DBS therapy. However, the VHI scores correlated with the disease durat
+
+---
+
+pid: PMID:37970314
+题目: Changes in Optimal Stimulation Frequency with Time for Gait Disturbances in Patients with PD after STN-DBS-A Longitudinal Study.
+年份: 2023  类型: research-article; Journal Article
+摘要: AimTo assess the changes in frequency parameters of STN-DBS stimulation over 6 months required to optimize gait in PD patients.MethodsIt's a single center, open label longitudinal study of PD patients after STN-DBS with gait disorders. Gait assessment using stand-walk-sit (SWS) test and freezing of gait (FOG) scores were done at baseline and after 6 months. Gait was assessed in five frequencies settings, that is, 60 Hz, 90 Hz, 130 Hz, 180 Hz and stimulation "OFF" during medication ON state. Voltage was maintained.ResultsFifteen post-deep brain stimulation (DBS) patients were included. Mean duration after surgery was 3.73 ± 2.82 years. In SWS and FOG at baseline, five patients have good response at 180 Hz frequency, five at 130 Hz, one at 90 Hz, two patients at 60 Hz, one both 60 and 90 Hz, and one at both 90 and 180 HZ. And after 6 months out of the 13 patients who were able to perform the test, four patients had good response at 180 Hz frequency, four at 130 Hz, two at 90 Hz, one each for 60 Hz and battery OFF state, and one for both 130 Hz and 180 Hz. At 6 months, four patients had good response at the same frequency as baseline, while 11 patients have change in frequency from baseline.ConclusionOptimal frequency for gait varies in patients-both low and high frequency may be useful. Optimal frequency for improving gait changes over period of time. Regular assessment and chang
+
+---
+
+pid: PMID:38037124
+题目: Neuronal and synaptic adaptations underlying the benefits of deep brain stimulation for Parkinson's disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: Deep brain stimulation (DBS) is a well-established and effective treatment for patients with advanced Parkinson's disease (PD), yet its underlying mechanisms remain enigmatic. Optogenetics, primarily conducted in animal models, provides a unique approach that allows cell type- and projection-specific modulation that mirrors the frequency-dependent stimulus effects of DBS. Opto-DBS research in animal models plays a pivotal role in unraveling the neuronal and synaptic adaptations that contribute to the efficacy of DBS in PD treatment. DBS-induced neuronal responses rely on a complex interplay between the distributions of presynaptic inputs, frequency-dependent synaptic depression, and the intrinsic excitability of postsynaptic neurons. This orchestration leads to conversion of firing patterns, enabling both antidromic and orthodromic modulation of neural circuits. Understanding these mechanisms is vital for decoding position- and programming-dependent effects of DBS. Furthermore, patterned stimulation is emerging as a promising strategy yielding long-lasting therapeutic benefits. Research on the neuronal and synaptic adaptations to DBS may pave the way for the development of more enduring and precise modulation patterns. Advanced technologies, such as adaptive DBS or directional electrodes, can also be integrated for circuit-specific neuromodulation. These insights hold the poten
+
+---
+
+pid: PMID:38075949
+题目: Subthalamic nucleus shows opposite functional connectivity pattern in Huntington's and Parkinson's disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: Huntington's and Parkinson's disease are two movement disorders representing mainly opposite states of the basal ganglia inhibitory function. Despite being an integral part of the cortico-subcortico-cortical circuitry, the subthalamic nucleus function has been studied at the level of detail required to isolate its signal only through invasive studies in Huntington's and Parkinson's disease. Here, we tested whether the subthalamic nucleus exhibited opposite functional signatures in early Huntington's and Parkinson's disease. We included both movement disorders in the same whole-brain imaging study, and leveraged ultra-high-field 7T MRI to achieve the very fine resolution needed to investigate the smallest of the basal ganglia nuclei. Eleven of the 12 Huntington's disease carriers were recruited at a premanifest stage, while 16 of the 18 Parkinson's disease patients only exhibited unilateral motor symptoms (15 were at Stage I of Hoehn and Yahr off medication). Our group comparison interaction analyses, including 24 healthy controls, revealed a differential effect of Huntington's and Parkinson's disease on the functional connectivity at rest of the subthalamic nucleus within the sensorimotor network, i.e. an opposite effect compared with their respective age-matched healthy control groups. This differential impact in the subthalamic nucleus included an area precisely corresponding
+
+---
+
+pid: PMID:38094147
+题目: Unraveling the complexities of programming neural adaptive deep brain stimulation in Parkinson's disease.
+年份: 2023  类型: brief-report; Journal Article
+摘要: Over the past three decades, deep brain stimulation (DBS) for Parkinson's disease (PD) has been applied in a continuous open loop fashion, unresponsive to changes in a given patient's state or symptoms over the course of a day. Advances in recent neurostimulator technology enable the possibility for closed loop adaptive DBS (aDBS) for PD as a treatment option in the near future in which stimulation adjusts in a demand-based manner. Although aDBS offers great clinical potential for treatment of motor symptoms, it also brings with it the need for better understanding how to implement it in order to maximize its benefits. In this perspective, we outline considerations for programing several key parameters for aDBS based on our experience across several aDBS-capable research neurostimulators. At its core, aDBS hinges on successful identification of relevant biomarkers that can be measured reliably in real-time working in cohesion with a control policy that governs stimulation adaption. However, auxiliary parameters such as the window in which stimulation is allowed to adapt, as well as the rate it changes, can be just as impactful on performance and vary depending on the control policy and patient. A standardize protocol for programming aDBS will be crucial to ensuring its effective application in clinical practice.
+
+---
+
+pid: PMID:38101024
+题目: Subthalamic functional connectivity associated with freezing of gait dopa-response.
+年份: 2024  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: IntroductionFreezing of gait (FOG) is a prevalent and debilitating feature of Parkinson's Disease (PD). The subthalamic nucleus (STN) is a center for controlled locomotion and a common DBS target. The objective of this study was to identify STN circuitry associated with FOG response to dopaminergic medication. In this study, we compare BOLD functional connectivity of the subthalamic nucleus (STN) in participants with and without dopa-responsive FOG.Methods55 PD participants either with FOG (n = 38) or without FOG (n = 17) were recruited. Among FOG participants 22 were dopa-responsive and 16 were dopa-unresponsive. STN whole-brain connectivity was performed using CONN toolbox. The relationship between the degree of self-reported FOG dopa-response and STN connectivity was evaluated using partial correlations corrected for age, disease duration, and levodopa equivalent daily dose.ResultsRight STN connectivity with the cerebellar locomotor region and the temporal/occipital cortex was greater in the dopa-responsive FOG group (voxel threshold p DiscussionWe demonstrate that dopa-unresponsive FOG is associated with changes in BOLD functional connectivity between the STN and locomotor as well as sensory processing regions. This finding supports the conceptual framework that effective treatment for freezing of gait likely requires the engagement of both locomotor and sensory brain regio
+
+---
+
+pid: PMID:38135193
+题目: Subthalamic and pallidal neurons are modulated during externally cued movements in Parkinson's disease.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: External sensory cues can reduce freezing of gait in people with Parkinson's disease (PD), yet the role of the basal ganglia in these movements is unclear. We used microelectrode recordings to examine modulations in single unit (SU) and oscillatory local field potentials (LFP) during auditory-cued rhythmic pedaling movements of the feet. We tested five blocks of increasing cue frequencies (1 Hz, 1.5 Hz, 2 Hz, 2.5 Hz, and 3 Hz) in 24 people with PD undergoing deep brain stimulation surgery of the subthalamic nucleus (STN) or globus pallidus internus (GPi). Single unit firing and beta band LFPs (13-30 Hz) in response to movement onsets or cue onsets were examined. We found that the timing accuracy of foot pedaling decreased with faster cue frequencies. Increasing cue frequencies also attenuated firing rates in both STN and GPi neurons. Peak beta power in the GPi and STN showed different responses to the task. GPi beta power showed persistent suppression with fast cues and phasic modulation with slow cues. STN beta power showed enhanced beta synchronization following movement. STN beta power also correlated with rate of pedaling. Overall, we showed task-related responses in the GPi and STN during auditory-cued movements with differential roles in sensory and motor control. The results suggest a role for both input and output basal ganglia nuclei in auditory rhythmic pacing of gait
+
+---
+
+pid: PMID:38189764
+题目: The Use of Image Guided Programming to Improve Deep Brain Stimulation Workflows with Directional Leads in Parkinson's Disease.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundDeep brain stimulation (DBS) of the subthalamic nucleus (STN) is a preferred treatment for parkinsonian patients with severe motor fluctuations. Proper targeting of the STN sensorimotor segment appears to be a crucial factor for success of the procedure. The recent introduction of directional leads theoretically increases stimulation specificity in this challenging area but also requires more precise stimulation parameters.ObjectiveWe investigated whether commercially available software for image guided programming (IGP) could maximize the benefits of DBS by informing the clinical standard care (CSC) and improving programming workflows.MethodsWe prospectively analyzed 32 consecutive parkinsonian patients implanted with bilateral directional leads in the STN. Double blind stimulation parameters determined by CSC and IGP were assessed and compared at three months post-surgery. IGP was used to adjust stimulation parameters if further clinical refinement was required. Overall clinical efficacy was evaluated one-year post-surgery.ResultsWe observed 78% concordance between the two electrode levels selected by the blinded IGP prediction and CSC assessments. In 64% of cases requiring refinement, IGP improved clinical efficacy or reduced mild side effects, predominantly by facilitating the use of directional stimulation (93% of refinements).ConclusionsThe use of image guided p
+
+---
+
+pid: PMID:38242691
+题目: High-Gamma Activity Is Coupled to Low-Gamma Oscillations in Precentral Cortices and Modulates with Movement and Speech.
+年份: 2024  类型: research-article; Journal Article
+摘要: Planning and executing motor behaviors requires coordinated neural activity among multiple cortical and subcortical regions of the brain. Phase-amplitude coupling between the high-gamma band amplitude and the phase of low frequency oscillations (theta, alpha, beta) has been proposed to reflect neural communication, as has synchronization of low-gamma oscillations. However, coupling between low-gamma and high-gamma bands has not been investigated. Here, we measured phase-amplitude coupling between low- and high-gamma in monkeys performing a reaching task and in humans either performing finger-flexion or word-reading tasks. We found significant coupling between low-gamma phase and high-gamma amplitude in multiple sensorimotor and premotor cortices of both species during all tasks. This coupling modulated with the onset of movement. These findings suggest that interactions between the low and high gamma bands are markers of network dynamics related to movement and speech generation.
+
+---
+
+pid: PMID:38251064
+题目: Another Step Forward for Freezing of Gait in Parkinson's Disease.
+年份: 2024  类型: article-commentary; Research Support, Non-U.S. Gov't; Journal Article
+摘要: The study "A spinal cord neuroprosthesis for locomotor deficits due to Parkinson's disease" by Milekovic et al. introduces a novel neuroprosthesis for treating locomotor deficits in late-stage Parkinson's disease (PD). This approach employs an epidural spinal array targeting dorsal roots and electromyography to create a spatiotemporal map of muscle activation, aiming to restore natural gait patterns. Significant improvements in gait freezing and balance were observed in both non-human primate models and a human patient, resulting in improved mobility and quality of life. This innovative method, integrating real-time feedback and non-invasive motor intention decoding, marks a significant advancement in PD treatment.
+
+---
+
+pid: PMID:38280901
+题目: Image-guided programming deep brain stimulation improves clinical outcomes in patients with Parkinson's disease.
+年份: 2024  类型: research-article; Journal Article
+摘要: Deep brain stimulation (DBS) is an effective treatment for patients with Parkinson's disease (PD). However, some patients may not respond optimally to clinical programming adjustments. Advances in DBS technology have led to more complex and time-consuming programming. Image-guided programming (IGP) could optimize and improve programming leading to better clinical outcomes in patients for whom DBS programming is not ideal due to sub-optimal response. We conducted a prospective single-center study including 31 PD patients with subthalamic nucleus (STN) DBS and suboptimal responses refractory to clinical programming. Programming settings were adjusted according to the volumetric reconstruction of the stimulation field using commercial postoperative imaging software. Clinical outcomes were assessed at baseline and at 3-month follow-up after IGP, using motor and quality of life (QoL) scales. Additionally, between these two assessment points, follow-up visits for fine-tuning amplitude intensity and medication were conducted at weeks 2, 4, 6, and 9. After IGP, twenty-six patients (83.9%) experienced motor and QoL improvements, with 25.8% feeling much better and 38.7% feeling moderately better according to the patient global impression scale. Five patients (16.1%) had no clinical or QoL changes after IGP. The MDS-UPDRS III motor scale showed a 21.9% improvement and the DBS-IS global sc
+
+---
+
+pid: PMID:38363617
+题目: Kinematic Effects of Combined Subthalamic and Dorsolateral Nigral Deep Brain Stimulation in Parkinson's Disease.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundAdditional stimulation of the substantia nigra (SNr) has been proposed to target axial symptoms and gait impairment in patients with Parkinson's disease (PD).ObjectiveThis study aimed to characterize effects of combined deep brain stimulation (DBS) of the subthalamic nucleus (STN) and SNr on gait performance in PD and to map stimulation sites within the SNr.MethodsIn a double-blinded crossover design, 10 patients with PD and gait impairment underwent clinical examination and kinematic assessment with STN DBS, combined STN+SNr DBS and OFF DBS 30 minutes after reprogramming. To confirm stimulation within the SNr, electrodes, active contacts, and stimulation volumes were modeled in a common space and overlap with atlases of SNr was computed.ResultsOverlap of stimulation volumes with dorsolateral SNr was confirmed for all patients. UPDRS III, scoring of freezing during turning and transitioning, stride length, stride velocity, and range of motion of shank, knee, arm, and trunk as well as peak velocities during turning and transitions and turn duration were improved with STN DBS compared to OFF. On cohort level, no further improvement was observed with combined STN+SNr DBS but additive improvement of spatiotemporal gait parameters was observed in individual subjects.ConclusionsCombined high frequency DBS of the STN and dorsolateral SNr did not consistently result in additi
+
+---
+
+pid: PMID:38389787
+题目: Grid cells: the missing link in understanding Parkinson's disease?
+年份: 2024  类型: research-article; Journal Article
+摘要: The mechanisms underlying Parkinson's disease (PD) are complex and not fully understood, and the box-and-arrow model among other current models present significant challenges. This paper explores the potential role of the allocentric brain and especially its grid cells in several PD motor symptoms, including bradykinesia, kinesia paradoxa, freezing of gait, the bottleneck phenomenon, and their dependency on cueing. It is argued that central hubs, like the locus coeruleus and the pedunculopontine nucleus, often narrowly interpreted in the context of PD, play an equally important role in governing the allocentric brain as the basal ganglia. Consequently, the motor and secondary motor (e.g., spatially related) symptoms of PD linked with dopamine depletion may be more closely tied to erroneous computation by grid cells than to the basal ganglia alone. Because grid cells and their associated central hubs introduce both spatial and temporal information to the brain influencing velocity perception they may cause bradykinesia or hyperkinesia as well. In summary, PD motor symptoms may primarily be an allocentric disturbance resulting from virtual faulty computation by grid cells revealed by dopamine depletion in PD.
+
+---
+
+pid: PMID:38391752
+题目: Mesencephalic Locomotor Region and Presynaptic Inhibition during Anticipatory Postural Adjustments in People with Parkinson's Disease.
+年份: 2024  类型: research-article; Journal Article
+摘要: Individuals with Parkinson's disease (PD) and freezing of gait (FOG) have a loss of presynaptic inhibition (PSI) during anticipatory postural adjustments (APAs) for step initiation. The mesencephalic locomotor region (MLR) has connections to the reticulospinal tract that mediates inhibitory interneurons responsible for modulating PSI and APAs. Here, we hypothesized that MLR activity during step initiation would explain the loss of PSI during APAs for step initiation in FOG (freezers). Freezers (n = 34) were assessed in the ON-medication state. We assessed the beta of blood oxygenation level-dependent signal change of areas known to initiate and pace gait (e.g., MLR) during a functional magnetic resonance imaging protocol of an APA task. In addition, we assessed the PSI of the soleus muscle during APA for step initiation, and clinical (e.g., disease duration) and behavioral (e.g., FOG severity and APA amplitude for step initiation) variables. A linear multiple regression model showed that MLR activity (R2 = 0.32, p = 0.0006) and APA amplitude (R2 = 0.13, p = 0.0097) explained together 45% of the loss of PSI during step initiation in freezers. Decreased MLR activity during a simulated APA task is related to a higher loss of PSI during APA for step initiation. Deficits in central and spinal inhibitions during APA may be related to FOG pathophysiology.
+
+---
+
+pid: PMID:38443402
+题目: Oscillatory and non-oscillatory features of the magnetoencephalic sensorimotor rhythm in Parkinson's disease.
+年份: 2024  类型: research-article; Journal Article
+摘要: Parkinson's disease (PD) is associated with changes in neural activity in the sensorimotor alpha and beta bands. Using magnetoencephalography (MEG), we investigated the role of spontaneous neuronal activity within the somatosensory cortex in a large cohort of early- to mid-stage PD patients (N = 78) on Parkinsonian medication and age- and sex-matched healthy controls (N = 60) using source reconstructed resting-state MEG. We quantified features of the time series data in terms of oscillatory alpha power and central alpha frequency, beta power and central beta frequency, and 1/f broadband characteristics using power spectral density. Furthermore, we characterised transient oscillatory burst events in the mu-beta band time-domain signals. We examined the relationship between these signal features and the patients' disease state, symptom severity, age, sex, and cortical thickness. PD patients and healthy controls differed on PSD broadband characteristics, with PD patients showing a steeper 1/f exponential slope and higher 1/f offset. PD patients further showed a steeper age-related decrease in the burst rate. Out of all the signal features of the sensorimotor activity, the burst rate was associated with increased severity of bradykinesia, whereas the burst duration was associated with axial symptoms. Our study shows that general non-oscillatory features (broadband 1/f exponent and 
+
+---
+
+pid: PMID:38450221
+题目: Proceedings of the 11th Annual Deep Brain Stimulation Think Tank: pushing the forefront of neuromodulation with functional network mapping, biomarkers for adaptive DBS, bioethical dilemmas, AI-guided neuromodulation, and translational advancements.
+年份: 2024  类型: brief-report; Journal Article
+摘要: The Deep Brain Stimulation (DBS) Think Tank XI was held on August 9-11, 2023 in Gainesville, Florida with the theme of "Pushing the Forefront of Neuromodulation". The keynote speaker was Dr. Nico Dosenbach from Washington University in St. Louis, Missouri. He presented his research recently published in Nature inn a collaboration with Dr. Evan Gordon to identify and characterize the somato-cognitive action network (SCAN), which has redefined the motor homunculus and has led to new hypotheses about the integrative networks underpinning therapeutic DBS. The DBS Think Tank was founded in 2012 and provides an open platform where clinicians, engineers, and researchers (from industry and academia) can freely discuss current and emerging DBS technologies, as well as logistical and ethical issues facing the field. The group estimated that globally more than 263,000 DBS devices have been implanted for neurological and neuropsychiatric disorders. This year's meeting was focused on advances in the following areas: cutting-edge translational neuromodulation, cutting-edge physiology, advances in neuromodulation from Europe and Asia, neuroethical dilemmas, artificial intelligence and computational modeling, time scales in DBS for mood disorders, and advances in future neuromodulation devices.
+
+---
+
+pid: PMID:38471785
+题目: Individual Structural Covariance Network Predicts Long-Term Motor Improvement in Parkinson Disease with Subthalamic Nucleus Deep Brain Stimulation.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Background and purposeThe efficacy of long-term chronic subthalamic nucleus deep brain stimulation (STN-DBS) in treating Parkinson disease (PD) exhibits substantial variability among individuals. The preoperative identification of suitable deep brain stimulation (DBS) candidates through predictive means becomes crucial. Our study aims to investigate the predictive value of characterizing individualized structural covariance networks for long-term efficacy of DBS, offering patients a precise and cost-effective preoperative screening tool.Materials and methodsWe included 138 patients with PD and 40 healthy controls. We developed individualized structural covariance networks from T1-weighted images utilizing network template perturbation, and computed the networks' topological characteristics. Patients were categorized according to their long-term motor improvement following STN-DBS. Intergroup analyses were conducted on individual network edges and topological indices, alongside correlation analyses with long-term outcomes for the entire patient cohort. Finally, machine learning algorithms were employed for regression and classification to predict post-DBS motor improvement.ResultsAmong the patients with PD, 6 edges (left middle frontal and left caudate nucleus, right olfactory and right insula, left superior medial frontal gyrus and right insula, right middle frontal and left pa
+
+---
+
+pid: PMID:38509158
+题目: Gait-related beta-gamma phase amplitude coupling in the subthalamic nucleus of parkinsonian patients.
+年份: 2024  类型: research-article; Journal Article
+摘要: Analysis of coupling between the phases and amplitudes of neural oscillations has gained increasing attention as an important mechanism for large-scale brain network dynamics. In Parkinson's disease (PD), preliminary evidence indicates abnormal beta-phase coupling to gamma-amplitude in different brain areas, including the subthalamic nucleus (STN). We analyzed bilateral STN local field potentials (LFPs) in eight subjects with PD chronically implanted with deep brain stimulation electrodes during upright quiet standing and unperturbed walking. Phase-amplitude coupling (PAC) was computed using the Kullback-Liebler method, based on the modulation index. Neurophysiological recordings were correlated with clinical and kinematic measurements and individual molecular brain imaging studies ([123I]FP-CIT and single-photon emission computed tomography). We showed a dopamine-related increase in subthalamic beta-gamma PAC from standing to walking. Patients with poor PAC modulation and low PAC during walking spent significantly more time in the stance and double support phase of the gait cycle. Our results provide new insights into the subthalamic contribution to human gait and suggest cross-frequency coupling as a gateway mechanism to convey patient-specific information of motor control for human locomotion.
+
+---
+
+pid: PMID:38516614
+题目: Biophysical modulation and robustness of itinerant complexity in neuronal networks.
+年份: 2024  类型: research-article; Journal Article
+摘要: Transient synchronization of bursting activity in neuronal networks, which occurs in patterns of metastable itinerant phase relationships between neurons, is a notable feature of network dynamics observed in vivo. However, the mechanisms that contribute to this dynamical complexity in neuronal circuits are not well understood. Local circuits in cortical regions consist of populations of neurons with diverse intrinsic oscillatory features. In this study, we numerically show that the phenomenon of transient synchronization, also referred to as metastability, can emerge in an inhibitory neuronal population when the neurons' intrinsic fast-spiking dynamics are appropriately modulated by slower inputs from an excitatory neuronal population. Using a compact model of a mesoscopic-scale network consisting of excitatory pyramidal and inhibitory fast-spiking neurons, our work demonstrates a relationship between the frequency of pyramidal population oscillations and the features of emergent metastability in the inhibitory population. In addition, we introduce a method to characterize collective transitions in metastable networks. Finally, we discuss potential applications of this study in mechanistically understanding cortical network dynamics.
+
+---
+
+pid: PMID:38534824
+题目: Simulated Dopamine Modulation of a Neurorobotic Model of the Basal Ganglia.
+年份: 2024  类型: research-article; Journal Article
+摘要: The vertebrate basal ganglia play an important role in action selection-the resolution of conflicts between alternative motor programs. The effective operation of basal ganglia circuitry is also known to rely on appropriate levels of the neurotransmitter dopamine. We investigated reducing or increasing the tonic level of simulated dopamine in a prior model of the basal ganglia integrated into a robot control architecture engaged in a foraging task inspired by animal behaviour. The main findings were that progressive reductions in the levels of simulated dopamine caused slowed behaviour and, at low levels, an inability to initiate movement. These states were partially relieved by increased salience levels (stronger sensory/motivational input). Conversely, increased simulated dopamine caused distortion of the robot's motor acts through partially expressed motor activity relating to losing actions. This could also lead to an increased frequency of behaviour switching. Levels of simulated dopamine that were either significantly lower or higher than baseline could cause a loss of behavioural integration, sometimes leaving the robot in a 'behavioral trap'. That some analogous traits are observed in animals and humans affected by dopamine dysregulation suggests that robotic models could prove useful in understanding the role of dopamine neurotransmission in basal ganglia function and 
+
+---
+
+pid: PMID:38541715
+题目: Beta-Gamma Phase-Amplitude Coupling as a Non-Invasive Biomarker for Parkinson's Disease: Insights from Electroencephalography Studies.
+年份: 2024  类型: review-article; Review; Journal Article
+摘要: Phase-amplitude coupling (PAC) describes the interaction of two separate frequencies in which the lower frequency phase acts as a carrier frequency of the higher frequency amplitude. It is a means of carrying integrated streams of information between micro- and macroscale systems in the brain, allowing for coordinated activity of separate brain regions. A beta-gamma PAC increase over the sensorimotor cortex has been observed consistently in people with Parkinson's disease (PD). Its cause is attributed to neural entrainment in the basal ganglia, caused by pathological degeneration characteristic of PD. Disruptions in this phenomenon in PD patients have been observed in the resting state as well as during movement recordings and have reliably distinguished patients from healthy participants. The changes can be detected non-invasively with the electroencephalogram (EEG). They correspond to the severity of the motor symptoms and the medication status of people with PD. Furthermore, a medication-induced decrease in PAC in PD correlates with the alleviation of motor symptoms measured by assessment scales. A beta-gamma PAC increase has, therefore, been explored as a possible means of quantifying motor pathology in PD. The application of this parameter to closed-loop deep brain stimulation could serve as a self-adaptation measure of such treatment, responding to fluctuations of motor s
+
+---
+
+pid: PMID:38579454
+题目: Unraveling the threads of stability: A review of the neurophysiology of postural control in Parkinson's disease.
+年份: 2024  类型: review-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Postural instability is a detrimental and often treatment-refractory symptom of Parkinson's disease. While many existing studies quantify the biomechanical deficits among various postural domains (static, anticipatory, and reactive) in this population, less is known regarding the neural network dysfunctions underlying these phenomena. This review will summarize current studies on the cortical and subcortical neural activities during postural responses in healthy subjects and those with Parkinson's disease. We will also review the effects of current therapies, including neuromodulation and feedback-based wearable devices, on postural instability symptoms. With recent advances in implantable devices that allow chronic, ambulatory neural data collection from patients with Parkinson's disease, combined with sensors that can quantify biomechanical measurements of postural responses, future work using these devices will enable better understanding of the neural mechanisms of postural control. Bridging this knowledge gap will be the critical first step towards developing novel neuromodulatory interventions to enhance the treatment of postural instability in Parkinson's disease.

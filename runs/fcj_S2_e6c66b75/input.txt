@@ -1,0 +1,15 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文判断指控是否成立。
+
+论文：PMID:36070366 Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease. (2022)
+报告的说法：将该文献记录的来源描述为尚未经过同行评审的 medRxiv 预印本。
+指控者认为原文的说法：PMID:36070366 实际对应一篇已正式发表于 Science Translational Medicine 的同行评审研究。报告未明确区分 medRxiv 预印本版本与正式发表版本，来源版本标注存在问题。
+
+判定：
+- report_correct：全文支持报告的说法，指控不成立；
+- judge_correct：全文支持指控者的说法，报告确实读错；
+- both_partly：两者各对一部分；
+- cannot_tell：全文里找不到足够信息。
+
+必须引用全文中的原句（英文原文）作为依据。
+
+只输出一个 JSON：{"verdict":"","quotes":[""],"why":""}

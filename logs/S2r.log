@@ -1,0 +1,31 @@
+写报告输入改为附件： 写报告输入超长 417473 字（结论 21 条、证据 538 条），不静默截断
+[S2r_Q1_report_85c00415] gpt3 gpt-6-thinking 完成 561s 30891 字
+附录：文献 150，证据 538，结论 21，假说 13
+S2r 报告 30891 字
+[S2r_Q1_abs_g6_fe572c37] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 536s
+[S2r_Q1_open_g56_802113d0] gpt4 gpt-5-6-thinking 完成 629s 8138 字
+[S2r_Q1_abs_g6_fe572c37] gpt3 gpt-6-thinking 完成 502s 7477 字
+[S2r_Q1_open_g6_802113d0] gpt3 gpt-6-thinking 完成 1639s 9221 字
+S2r open_g6: major 1，moderate 0
+    1 major 文献覆盖没有可审计的检索过程，报告实际上不能证明自己完成了主动、系统的证据搜寻。
+S2r open_g56: major 1，moderate 0
+    1 major 研究覆盖的前提不成立：报告实际上是对预先提供的证据库进行二次综合，而不是主动、系统地寻找现有证据。
+S2r 绝对验收: severe 0，moderate 7，minor 4； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'met'), (4, 'met'), (5, 'partly'), (6, 'met'), (7, 'not_testable')]
+   抽查 {'consistent': 7, 'overstated': 1}
+[blind_S2_vs_S2r_aX_g56_8bfb32f0] gpt4 gpt-5-6-thinking 完成 231s 2649 字
+[blind_S2_vs_S2r_aX_g6_8bfb32f0] gpt3 gpt-6-thinking 完成 248s 1929 字
+[blind_S2_vs_S2r_bX_g6_e3293a5f] gpt3 gpt-6-thinking 完成 302s 2280 字
+[blind_S2_vs_S2r_bX_g56_e3293a5f] gpt4 gpt-5-6-thinking 完成 400s 2168 字
+g6 aX 总体: S2r 分项: {'coverage': 'S2r', 'evidence': 'tie', 'synthesis': 'S2r', 'structure': 'S2r', 'rigor': 'S2'}
+g56 aX 总体: S2r 分项: {'coverage': 'S2r', 'evidence': 'S2r', 'synthesis': 'S2r', 'structure': 'S2r', 'rigor': 'S2r'}
+g6 bX 总体: S2 分项: {'coverage': 'S2', 'evidence': 'tie', 'synthesis': 'S2', 'structure': 'S2r', 'rigor': 'S2'}
+g56 bX 总体: S2 分项: {'coverage': 'tie', 'evidence': 'S2', 'synthesis': 'S2', 'structure': 'S2r', 'rigor': 'S2'}
+S2r 正文引用 48 个 {'in_kb': 47, 'not_in_kb_not_found': 1} ；疑似挂错编号 7 处
+   not_in_kb_not_found DOI:10.21203/rs.3.rs-9617843/v1` | 
+  疑似挂错：PMID:42098512（相似 0.321）更像 DOI:10.1101/2024.06.26.24309418（0.536）| …但该分析涉及不同DBS靶点，不能将总体效应全部归因于STN
+  疑似挂错：PMID:25540305（相似 0.29）更像 PMID:31647540（0.613）| …另一项7人随机交叉研究也报告60 Hz低频刺激可以改善持续性FOG
+  疑似挂错：PMID:26887333（相似 0.158）更像 PMID:40504072（0.632）| …这说明部分刺激相关FOG恶化可能来自STN邻近结构募集，而非STN内部神经活动本身
+  疑似挂错：PMID:28890315（相似 0.188）更像 PMID:41659700（0.5）| …第二个结果的统计效应为F(1,51)=14.45，p小于0.001
+  疑似挂错：PMID:40709562（相似 0.167）更像 PMID:36185822（0.296）| …目前该假说得到2025年步态启动研究及定向刺激研究的初步支持，但尚缺少区域选择性刺激与事件级电生理相结合的因果验证
+  疑似挂错：PMID:19811797（相似 0.071）更像 PMID:30262859（0.452）| …目前动物PPN entrainment结果和人类低频刺激的临床获益尚不能组成完整的人体因果链
+  疑似挂错：PMID:28529730（相似 0.262）更像 PMID:30262859（0.452）| …目前动物PPN entrainment结果和人类低频刺激的临床获益尚不能组成完整的人体因果链

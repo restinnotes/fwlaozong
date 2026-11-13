@@ -1,0 +1,510 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P17_C1",
+      "text": "Freezer与non-freezer之间存在STN beta活动的表型层面差异：既往研究的二次转述报告，freezer即使处于非冻结步态阶段，也表现出比non-freezer更显著的STN beta band activity。这提示STN beta活动可能与FOG易感性或患者持续性病理状态有关，而不一定只在冻结事件发生时出现。该发现属于患者间表型关联，不是冻结事件发生前的时间序列证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "证据来自Negi等论文对Anidi et al. 2018和O'Day et al. 2020的二次转述，不是当前研究的新患者数据。未提供原始研究样本数、效应量、beta频段定义、具体测量指标及药物和刺激状态。无法确定所称beta activity具体对应平均功率、burst duration还是其他指标，也无法排除原始研究队列重叠。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_1",
+          "relation": "supports",
+          "note": "明确报告freezer在non-freezing gait期间具有更显著的STN beta activity，直接支持表型层面的beta差异，但属于二次转述。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C2",
+      "text": "既往研究报告实际FOG发作期间的STN beta burst duration长于非冻结步行期间。这是本批证据中较接近事件级神经活动关联的发现，提示beta burst持续时间可能随冻结状态变化。它与freezer在非冻结阶段也具有较高beta活动的表型发现并不矛盾：前者描述冻结事件内部的动态变化，后者描述患者间的持续性差异。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "该结果来自对Anidi et al. 2018的二次转述。原始样本分母、FOG事件数量、beta频段边界、burst阈值、分析窗口、效应量和统计方法均未提供。虽然描述的是during_FOG与non-freezing walking的比较，但不能据此确定burst延长发生在冻结开始之前、冻结过程中还是冻结之后，也不能证明其具有预测能力或致病作用。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_2",
+          "relation": "supports",
+          "note": "报告FOG期间STN beta burst duration长于非冻结步行期间，是事件阶段关联的直接方向性描述，但由二次文献转述。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_1",
+          "relation": "qualifies",
+          "note": "该证据描述freezer在非冻结阶段的beta差异，提示患者间易感性差异与事件级变化应当分开分析，不能混为同一种效应。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C3",
+      "text": "既往研究的二次转述同时报告，低频连续STN-DBS能够缩短STN pathological beta burst duration，并改善FOG症状。这构成了STN beta burst可能参与低频刺激治疗效应的初步依据：刺激改变神经指标，同时报告了临床症状改善。但两个结果同时出现，并不能证明beta burst缩短是FOG改善的中介机制。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "两条证据均转述自Anidi et al. 2018，不能视为两项独立重复验证。当前论文没有提供原始样本、刺激参数、FOG测量方法、神经指标与行为指标的相关分析或中介分析。FOG改善是否对应自然行走中的实际冻结事件也不明确。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_3",
+          "relation": "supports",
+          "note": "报告低频连续STN-DBS缩短pathological beta burst duration，支持刺激可以调节该神经指标。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_4",
+          "relation": "supports",
+          "note": "报告低频连续STN-DBS改善FOG症状，支持相应的临床行为学治疗效应，但没有提供神经变化与症状改善之间的机制联系。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C4",
+      "text": "60 Hz连续STN-DBS能够通过增加刺激幅度缩短STN beta burst duration，提供了beta burst具有刺激敏感性和剂量相关性的原始人体电生理证据。在6名能够耐受60 Hz刺激并完成神经分析的患者中，刺激幅度增加与burst duration缩短显著相关（β=-0.005，95% CI [-0.007,-0.003]，p<0.001，partial η²=0.19）。这证明了刺激参数能够改变STN beta burst，但不证明该变化对应FOG事件减少。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "样本仅6人，且是8名入组者中能够耐受60 Hz刺激的选择性亚组。分析采用患者特异性beta频率和burst阈值，不能直接与其他研究的平均beta功率或不同burst定义比较。β系数的具体单位未明确。该分析不是FOG事件锁定分析，也没有比较同一患者冻结前、中、后的burst变化；不能推断临床FOG改善由burst缩短介导。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_5",
+          "relation": "supports",
+          "note": "原始人体LFP研究报告刺激幅度与STN beta burst duration显著负相关，使用患者及STN侧作为随机效应处理重复测量，支持刺激敏感性。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_3",
+          "relation": "supports",
+          "note": "既往研究二次转述的低频刺激缩短beta burst结果与本研究方向一致，但不是本研究队列的独立重复验证。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C5",
+      "text": "目前没有充分证据证明60 Hz beta-burst-driven adaptive DBS能够在患者总体层面显著减少FOG。在Negi等研究中，6名完成随机测试的患者接受OFF DBS、60 Hz aDBS和60 Hz cDBS三条件比较，percent time freezing总体差异不显著（F(2,8.8)=1.45，p=0.286，partial η²=0.25）。因此，不能将少数患者的改善描述为整个研究队列的明确治疗效果。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "样本量很小，统计效能有限；FOG在SIP替代任务中测量，不等同于自然直立行走中的实际冻结。问卷定义的freezer与实验中实际出现冻结的患者并不完全一致。统计不显著不能证明刺激无效或两种刺激等效，也不能排除特定亚组存在治疗获益。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_12",
+          "relation": "supports",
+          "note": "全体6名患者三条件percent time freezing总体比较不显著，是判断总体FOG治疗效果时最重要的原始统计结果。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_6",
+          "relation": "qualifies",
+          "note": "3名基线SIP冻结患者在aDBS下均表现出冻结时间下降方向，说明总体阴性结果可能掩盖患者亚组差异，但该结果没有独立统计检验。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_7",
+          "relation": "qualifies",
+          "note": "同一3人亚组在cDBS下也呈冻结时间下降方向，说明不能把描述性改善特异归因于adaptive beta-burst控制。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C6",
+      "text": "低频STN刺激对FOG的患者级反应存在明显异质性。在OFF DBS时已经出现SIP冻结的P3、P4、P5三名患者，在60 Hz aDBS和cDBS条件下均呈percent time freezing下降方向；相反，P6在OFF DBS基线SIP中未出现冻结，却在aDBS和cDBS条件下均出现冻结。由此可见，刺激反应不能用单一的平均改善方向描述，且beta-burst控制策略并未显示出对所有患者一致的保护作用。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "患者级分析仅涉及3名基线冻结者和1名在刺激条件下新出现冻结的患者，均为描述性观察，没有独立亚组推断统计。P6的OFF DBS仅进行一次SIP测试，不能认定刺激导致其FOG。患者问卷分类与实验实际冻结表现存在不一致。所有结果均来自同一小型研究队列，不能作为多项独立研究重复验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_6",
+          "relation": "supports",
+          "note": "P3、P4、P5在aDBS下percent time freezing均下降，支持部分基线冻结患者存在改善方向。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_7",
+          "relation": "supports",
+          "note": "相同患者在cDBS下也呈改善方向，提示改善未必是adaptive控制特异性作用。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_13",
+          "relation": "supports",
+          "note": "P6在OFF DBS基线未冻结、aDBS条件下出现冻结，提供相反方向的个体观察，但不能证明刺激致冻。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_14",
+          "relation": "supports",
+          "note": "P6在cDBS条件下也出现冻结，并伴随gait arrhythmicity增加，进一步显示个体间反应差异。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_12",
+          "relation": "supports",
+          "note": "全体患者FOG总体差异不显著，且P6在刺激条件下出现冻结，与亚组改善并存，支持反应异质性的解释。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C7",
+      "text": "Negi等研究中的部分次要步态运动学指标呈现改善方向，但没有形成稳定的总体统计学证据。基线冻结者的gait arrhythmicity在aDBS和cDBS下均呈下降方向，peak shank angular velocity在两种刺激下均呈增加方向；然而，全体6人的gait arrhythmicity三条件比较不显著（p=0.712），peak shank angular velocity总体比较也未达到显著性（p=0.072）。因此，这些结果只能说明部分患者可能出现运动学改善，不能等同于FOG事件减少。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "亚组结果没有独立统计检验。P5缺少OFF DBS条件下的arrhythmicity数据，完整配对分母不确定。全体患者分析样本仅6人，无法排除真实但未被检出的治疗效应。所有指标均来自小腿IMU，属于运动学结局，不是STN神经活动或冻结事件与神经活动的同步关联。相关证据均属于同一Negi研究队列，不能当作独立重复研究。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_8",
+          "relation": "supports",
+          "note": "基线冻结者在aDBS下gait arrhythmicity呈下降方向，但P5缺少OFF条件数据，配对比较不完整。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_9",
+          "relation": "supports",
+          "note": "基线冻结者在cDBS下gait arrhythmicity也呈下降方向，同样存在P5基线数据缺失。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_10",
+          "relation": "supports",
+          "note": "3名基线冻结患者在aDBS下peak shank angular velocity增加，属于描述性运动学改善。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_11",
+          "relation": "supports",
+          "note": "同一亚组在cDBS下peak shank angular velocity也增加，提示该指标改善不一定依赖adaptive控制。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_15",
+          "relation": "contradicts",
+          "note": "全体6人gait arrhythmicity总体比较不显著，与将亚组改善推广为普遍治疗效果的解释不一致。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_16",
+          "relation": "qualifies",
+          "note": "全体6人peak shank angular velocity比较p=0.072，未达到预设显著性标准，尽管partial η²为0.41。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C8",
+      "text": "步态sequence effect是另一条与FOG相关的行为学证据链。PD患者在原地踏步任务中表现出小腿摆动角速度和摆动范围随步序下降的sequence effect，而健康对照未出现相同现象；sequence effect程度与患者off-therapy期间冻结时间显著相关。受试者内DBS ON/OFF比较还报告STN-DBS减轻sequence effect。这提示步态序列性衰减可能与FOG易感性有关，并且具有刺激可调节性，但不能证明sequence effect是FOG的直接原因。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "研究使用原地踏步替代任务，并非自然直立行走中的实际冻结事件。相关分析没有提供相关系数、置信区间、P值或混杂校正细节。DBS ON/OFF结果没有报告具体效应量和统计模型。最重要的是，该研究没有记录STN LFP，不能把运动学sequence effect直接解释为STN beta活动变化。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_1",
+          "relation": "supports",
+          "note": "PD患者存在而健康对照未见明显sequence effect，支持其作为PD步态异常表型的观察。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_2",
+          "relation": "supports",
+          "note": "sequence effect程度与off-therapy冻结时间显著相关，支持其与FOG负担之间的关联。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_3",
+          "relation": "supports",
+          "note": "受试者内比较报告DBS ON减轻sequence effect，支持该行为学异常具有刺激可调节性，但不证明其介导FOG改善。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C9",
+      "text": "自然直立行走中的随机交叉研究提供了STN刺激配置影响实际FOG行为的证据。对于术前存在严重OFF-DOPA FOG的患者，central STN directional DBS相较posterior STN directional DBS降低每次步行试验至少发生一次FOG的概率；central STN刺激相较OFF DBS也报告了较低的FOG发生概率。ring-mode STN-DBS相较posterior directional DBS同样降低FOG发生概率。但central与ring-mode之间没有观察到FOG发生概率的统计学显著差异。这表明STN刺激的空间配置可能影响实际FOG，但不能据此确定某一亚区的内源性神经活动是FOG的原因。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "研究仅10名完成随机阶段的患者，FOG事件总数、部分比较的精确效应量和置信区间未报告。FOG判定标准及重复试验相关结构报告不充分。ring-mode刺激的VTA和TEED均大于方向性刺激，因此空间位置、刺激体积和能量剂量存在混杂。研究没有记录STN LFP、beta burst或其他神经指标，不能直接用于神经活动机制推断。四条证据来自同一项随机交叉试验，不是四项独立重复验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_39475137_1",
+          "relation": "supports",
+          "note": "central STN-dDBS相较posterior STN-dDBS显著降低自然步行试验中FOG发生概率，摘要报告p<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_2",
+          "relation": "supports",
+          "note": "central STN-dDBS相较OFF DBS降低FOG发生概率，提供刺激开启相对于关闭的行为学证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_3",
+          "relation": "supports",
+          "note": "ring-mode相较posterior directional DBS降低FOG发生概率，但ring-mode具有更大的VTA和更高TEED，不能单独归因于刺激位置。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_4",
+          "relation": "qualifies",
+          "note": "central与ring-mode之间FOG发生概率没有显著差异，不支持central刺激具有明确的FOG特异性优势，也不能据此证明两者等效。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C10",
+      "text": "步态启动阶段的异常可能构成FOG易感性的行为学标志。随机交叉研究发现，posterior STN-dDBS条件下步态启动主成分相对于健康对照的整体偏离程度大于central STN-dDBS，p=0.027。这提示刺激空间配置可能影响与FOG易感性有关的步态启动控制，但该指标不是实际FOG事件，也不是冻结发生前的STN神经活动变化。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "步态启动试验没有逐试次确认随后是否发生FOG，不能认定为pre-FOG事件关联。结果使用健康对照作为参考，且患者样本仅10人。1188是试验数，不是独立患者数。研究没有记录STN神经活动，因此不能从行为学主成分推断beta、gamma或其他神经信号的作用。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_39475137_5",
+          "relation": "supports",
+          "note": "posterior相较central刺激导致更大的步态启动异常偏离，支持刺激配置影响步态启动控制，但不是实际FOG事件证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_1",
+          "relation": "qualifies",
+          "note": "该研究另有自然步行FOG结局，但步态启动PC结果与实际FOG概率不是同一个结局，不能将两者直接建立因果关系。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C11",
+      "text": "人类自然FOG期间存在重要的阴性电生理观察：一名PD患者在OFF-FOG自然步行过程中没有表现出明确的Hjorth complexity、Hjorth mobility、beta amplitude或gamma amplitude调制。但该患者右侧电极所有接触点均位于STN外侧，因此不能将其解释为真正的STN生理阴性结果，也不能据此否定其他研究报告的STN beta与FOG关联。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "人类整体研究队列只有2例，当前证据条目具体报告Subject 1。没有提供各指标的独立效应量、P值或置信区间。电极解剖位置偏离STN是重大信号定位问题，且信号伪迹、患者异质性和混杂风险较高。该阴性结果只能说明该患者现有记录未观察到明确调制，不能证明STN活动在FOG期间没有变化。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.04.22.650006_10",
+          "relation": "supports",
+          "note": "报告实际自然FOG期间无明确神经特征调制，是人类事件级阴性观察。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.04.22.650006_10",
+          "relation": "qualifies",
+          "note": "同一证据明确显示右侧电极接触点全部位于STN外侧，显著限制阴性结果对STN生理活动的解释。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C12",
+      "text": "STN神经动态具有一般运动活动解码能力，并已被用于支持活动依赖性自适应DBS。相关研究报告STN神经信号能够区分不同日常运动活动，并且基于STN神经解码的活动依赖性刺激能够改善日常生活活动中的运动障碍。但一般运动活动解码不能等同于FOG特异性解码，也不能证明所解码的神经特征参与了冻结的发生。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "摘要未报告患者人数、FOG分层、冻结事件数量、解码准确率、灵敏度、特异度或事件级时间分辨率。没有明确报告自然FOG期间的神经变化、冻结前预测性能或FOG作为独立治疗结局。两条证据来自同一研究的预印本版本，不能视为独立验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.08.20.25333478_1",
+          "relation": "supports",
+          "note": "报告STN神经动态能够解码不同运动活动，并支持实时活动依赖性刺激。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.08.20.25333478_2",
+          "relation": "supports",
+          "note": "报告神经解码驱动的自适应DBS改善日常活动中的运动障碍，但没有将FOG作为独立结局。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C13",
+      "text": "动物模型提供了beta活动与步态改善并非必然同步的间接证据。在6-OHDA小鼠模型中，puerarin改善了步态周期紊乱，但没有改变STN和纹状体中已经减弱的beta LFP。这提示某些步态改善可以在未观察到STN beta功率恢复的情况下发生，因而不支持将STN beta功率变化视为所有步态改善的必要条件。但该结果不能直接反驳临床FOG事件中的beta burst机制。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究是动物药理干预实验，研究终点为步态周期紊乱，不是临床FOG。动物STN beta本身已经减弱，与临床freezer中报告的beta活动增加或FOG期间burst延长不具有直接可比性。摘要未提供具体效应量、频段定义和统计模型。平均beta LFP功率与beta burst duration也不是同一指标。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_39466340_1",
+          "relation": "supports",
+          "note": "报告puerarin改善动物步态周期紊乱而STN beta LFP没有变化，支持行为改善与beta功率变化可以分离。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_1",
+          "relation": "qualifies",
+          "note": "临床freezer与non-freezer之间的beta差异属于不同物种和不同表型条件，不能用动物非FOG步态结果直接否定。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C14",
+      "text": "6-OHDA动物研究还报告SNc-STN之间存在delta-wave coherence，为研究STN与其他基底节网络之间的低频协调活动提供了线索。但现有证据没有报告该相干性与实际FOG、冻结易感性或步态冻结事件之间的关系，因此不能把它作为STN-delta参与FOG机制的直接证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "摘要没有提供delta频段边界、相干性数值、方向、组间效应量或统计显著性，也没有说明该结果与哪一行为状态或药物处理条件对应。研究为动物模型且没有FOG事件记录。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_39466340_2",
+          "relation": "supports",
+          "note": "报告6-OHDA动物中存在SNc-STN delta-wave coherence。"
+        },
+        {
+          "eid": "S3c_E_PMID_39466340_2",
+          "relation": "qualifies",
+          "note": "同一证据没有报告相干性与FOG或冻结易感性的关联，限制其在本研究问题中的解释价值。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C15",
+      "text": "本批研究中STN beta与FOG关系看似存在冲突，但多数结果并非对同一个科学问题进行直接重复检验，不能简单归纳为多数研究支持或反对beta机制。至少存在五种重要的研究间差异：第一，freezer与non-freezer比较测量的是患者间表型差异，而during-FOG与non-freezing walking比较测量的是患者内事件状态变化；第二，平均beta activity、beta amplitude、beta burst duration和Hjorth复杂度不是相同指标；第三，实际自然行走FOG、SIP诱发冻结和一般步态周期紊乱不是等价行为终点；第四，人类电极解剖定位偏离STN可能造成假阴性；第五，患者间FOG反应存在明显异质性。药物状态、刺激状态、刺激参数、样本规模以及二次转述缺乏原始方法细节，也可能造成结果差异。因此，目前更合理的结论是STN beta与FOG之间存在值得进一步验证的关联线索，但其时间特异性、指标特异性和患者适用范围尚未确定。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "上述差异能够解释为什么研究结果不宜直接合并，但本批证据没有通过统一实验设计系统检验每一种差异是否真正造成结果冲突。尤其是原始Anidi研究的具体方法、不同研究的患者队列重叠情况及部分电生理指标定义尚不清楚。不能把可能的解释因素当成已经证实的偏倚来源。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_1",
+          "relation": "supports",
+          "note": "freezer与non-freezer的比较属于非冻结阶段的患者间表型比较。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_2",
+          "relation": "supports",
+          "note": "FOG期间与非冻结步行期间的burst duration比较属于事件阶段比较，与表型比较的分析层级不同。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_5",
+          "relation": "qualifies",
+          "note": "测量的是刺激幅度相关的beta burst duration变化，而不是FOG事件本身的神经变化。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.04.22.650006_10",
+          "relation": "qualifies",
+          "note": "实际自然FOG期间未见明确调制，但电极偏离STN，使其不能作为可靠的STN生理阴性对照。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_12",
+          "relation": "qualifies",
+          "note": "全体患者FOG结果不显著，而个别患者改善或新出现冻结，说明样本构成和患者间异质性可能影响组水平结果。"
+        },
+        {
+          "eid": "S3c_E_PMID_39466340_1",
+          "relation": "qualifies",
+          "note": "动物步态周期改善与STN beta功率变化分离，但其非FOG终点和物种差异限制了与临床事件级证据的比较。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_1",
+          "relation": "qualifies",
+          "note": "SIP中的sequence effect属于替代行为任务，不能与自然行走中的实际冻结事件直接等同。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C16",
+      "text": "竞争性机制假说一：事件状态依赖的STN beta burst机制。该假说认为，FOG发生时或发生前，STN beta burst持续时间异常延长，可能暂时增强病理性基底节输出或限制运动转换；低频刺激缩短burst后可能改善冻结。该模型预测，同一患者在自然步行中出现FOG时，应观察到可重复的事件锁定beta burst延长，且变化应在冻结开始前或早期出现；如果采用能够选择性缩短burst的闭环刺激，burst变化应先于FOG风险下降，并且神经变化应在统计上解释部分治疗效应。这是待检验的机制模型，不是现有研究已经证明的因果结论。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "支持该假说的事件级证据目前主要来自Anidi研究的二次转述。Negi研究证明刺激可以缩短burst，但全体患者FOG总体比较不显著，也没有事件锁定LFP或中介分析。P6在刺激条件下出现冻结，进一步提示缩短burst不一定对所有患者都有保护作用。需要自然步行、真实FOG事件、连续STN LFP和充分的患者级统计同时验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_2",
+          "relation": "supports",
+          "note": "报告during-FOG期间beta burst duration较长，为事件状态依赖假说提供方向性依据。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_3",
+          "relation": "supports",
+          "note": "报告低频刺激缩短pathological beta burst duration，支持该神经指标具有刺激可调节性。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_5",
+          "relation": "supports",
+          "note": "原始研究显示60 Hz刺激幅度增加与burst duration缩短相关。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_12",
+          "relation": "qualifies",
+          "note": "全体患者FOG没有显著改善，不支持将burst缩短直接视为普遍有效的FOG治疗机制。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_13",
+          "relation": "qualifies",
+          "note": "P6在aDBS期间出现冻结，说明刺激对神经指标的调节不能直接等同于临床保护作用。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C17",
+      "text": "竞争性机制假说二：持续性STN beta活动是FOG易感性标志，而不一定是每次冻结事件的即时触发因素。该假说认为，freezer在非冻结步态期间已经存在较高beta活动，反映一种持续性病理背景；实际FOG则可能需要额外的运动任务、姿势转换或网络状态变化才能发生。该模型预测，患者间的非冻结阶段STN beta水平能够预测未来FOG负担，但同一患者每次FOG发生时不一定出现明显的beta瞬时上升。应将患者间基线差异与患者内事件变化分别建模，避免混合分析造成生态学偏倚。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "目前freezer与non-freezer之间的beta差异来自二次转述，缺少原始数据和具体beta指标定义。没有研究在足够样本中同时测量长期非冻结阶段的beta基线、自然FOG事件频率和患者内事件锁定变化。因此，持续性beta易感性模型与事件性burst模型尚不能区分，也可能同时成立。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_1",
+          "relation": "supports",
+          "note": "freezer在非冻结步态期间也具有更明显的STN beta activity，为持续性易感性标志提供依据。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_2",
+          "relation": "qualifies",
+          "note": "事件期间burst duration较长也可能存在，说明持续性易感性与事件级调制需要在同一患者内共同检验。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_2",
+          "relation": "qualifies",
+          "note": "sequence effect与冻结时间相关，提示患者的持续性步态异常也可能参与易感性，但该研究没有STN神经记录。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C18",
+      "text": "竞争性机制假说三：FOG主要或部分由beta以外的运动控制和分布式网络机制驱动。可能的解释包括步态序列效应逐渐累积、步态启动和姿势控制异常、STN与其他基底节节点之间的低频协调变化，或者多频段神经动态共同参与。该模型认为beta burst可以是相关标志，但未必是必要或充分的致冻机制。其可检验预测是，在控制患者间beta基线后，步态sequence effect、启动阶段异常或其他网络特征仍能独立预测FOG；在部分患者中，即使beta burst没有明显变化，也可能通过其他网络或运动控制通路改变冻结风险。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "该模型综合了行为学、动物电生理和一般神经解码结果，尚无直接证据证明sequence effect、delta coherence或非beta活动导致临床FOG。动物步态周期紊乱不能代替人类FOG，SNc-STN delta coherence也没有与冻结事件建立关联。需要同时记录多脑区或多频段神经信号、运动学及实际冻结事件，才能检验这些替代机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_1",
+          "relation": "supports",
+          "note": "PD患者存在步态sequence effect，为运动序列控制异常提供行为学依据。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_2",
+          "relation": "supports",
+          "note": "sequence effect与冻结时间相关，支持该行为学异常与FOG负担之间的联系，但不证明因果。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.05.08.25327015_3",
+          "relation": "supports",
+          "note": "DBS ON能够减轻sequence effect，提示运动序列异常具有刺激可调节性。"
+        },
+        {
+          "eid": "S3c_E_PMID_39466340_1",
+          "relation": "supports",
+          "note": "动物步态改善与STN beta LFP变化不同步，提示beta功率并非所有步态改善的必要伴随指标。"
+        },
+        {
+          "eid": "S3c_E_PMID_39466340_2",
+          "relation": "supports",
+          "note": "报告SNc-STN delta coherence，为研究beta以外的网络动态提供候选线索，但未建立FOG关联。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.08.20.25333478_1",
+          "relation": "supports",
+          "note": "STN神经动态包含一般运动活动信息，提示其可能编码多维运动状态，而不只是单一beta指标。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2025.08.20.25333478_2",
+          "relation": "qualifies",
+          "note": "一般运动功能改善没有明确的FOG独立结局，不能作为非beta机制已经参与FOG的证明。"
+        }
+      ]
+    },
+    {
+      "cid": "P17_C19",
+      "text": "竞争性机制假说四：FOG治疗反应主要取决于刺激空间分布、有效组织体积和患者临床表型，而不完全取决于beta burst是否缩短。该模型认为，central、posterior及ring-mode刺激可能招募不同的STN及邻近网络；不同患者对同一刺激模式的反应也可能不同。其可检验预测是，在控制TEED和VTA后，刺激空间位置仍能独立预测自然FOG结局；同时，患者基线FOG表型和事件级神经特征可能调节治疗反应。如果空间配置和临床表型的解释力超过beta burst变化，则单一beta控制模型不足以解释FOG治疗效应。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "随机交叉研究观察到刺激配置与自然FOG风险之间存在差异，但ring-mode与directional DBS的VTA和TEED不同，不能确定空间位置的独立作用。Negi研究显示患者级反应异质性，但患者数过少。现有研究没有在同一实验中同时控制刺激场分布、测量STN beta burst并记录自然FOG，因此无法比较空间招募与beta变化的相对解释力。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_39475137_1",
+          "relation": "supports",
+          "note": "central与posterior方向性刺激之间的自然FOG发生概率不同，支持刺激空间配置可能影响临床效果。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_3",
+          "relation": "supports",
+          "note": "ring-mode与posterior刺激之间FOG概率存在差异，但同时存在VTA和TEED差异，不能单独确认空间位置机制。"
+        },
+        {
+          "eid": "S3c_E_PMID_39475137_4",
+          "relation": "qualifies",
+          "note": "central与ring-mode之间FOG概率没有显著差异，限制了对某一特定刺激位置具有独特优势的推断。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_12",
+          "relation": "supports",
+          "note": "全体患者平均治疗效果不显著且个体反应不一致，支持患者表型和个体差异可能影响刺激反应。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_13",
+          "relation": "supports",
+          "note": "P6在aDBS条件下出现冻结，提供刺激反应可能具有患者特异性的观察。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_14",
+          "relation": "supports",
+          "note": "P6在cDBS条件下也出现冻结，进一步支持个体临床反应不能仅由单一beta控制模式解释。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.64898_2025.12.17.25342333_5",
+          "relation": "qualifies",
+          "note": "刺激幅度确实可以改变beta burst duration，但该神经效应尚未与自然FOG治疗反应建立直接联系。"
+        }
+      ]
+    }
+  ]
+}</escape>

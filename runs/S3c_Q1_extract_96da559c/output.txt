@@ -1,0 +1,461 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:36070366; DOI:10.1126/scitranslmed.abo1800; medRxiv DOI:10.1101/2022.02.08.22270370",
+    "title": "Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": "possible_match: 附件为2022-02-15发布的medRxiv预印本（DOI:10.1101/2022.02.08.22270370），目标论文为2022-09-07发表于Science Translational Medicine的正式论文（14(661):eabo1800；PMID:36070366）。标题、作者及摘要一致，支持二者属于同一研究的不同版本；未对正式发表版全文进行逐段版本比对。",
+    "study_id_candidate": "Thenaisie_2022_STN_gait_encoding",
+    "cohort_id_candidate": "Thenaisie_2022_PD_bilateral_STN_DBS_gait_cohort",
+    "cohort_relation_basis": "原文Methods报告20名患者入组，12名完成步态实验；Results报告其中4名患者出现频繁FOG。FOG分析属于同一研究的步态实验子集，而非独立患者队列。患者招募中心、DBS设备及整体研究方案相同。不能据此推断该队列与其他论文队列不存在重叠。另有患者编号不一致：Results正文称P3，Figure 8C标记P4。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID36070366_FOG_E01",
+      "design": "前瞻性观察性STN局部场电位记录研究；自然步行过程中的患者内状态比较（freezing、walking、standing）。FOG信号分析属于原始患者数据分析，而非二次文献转述。",
+      "population": "帕金森病患者。研究Methods报告20人入组，12人完成步态实验。FOG分析涉及4名出现频繁FOG的患者，FOG主要发生于转弯过程中。正文描述的表型包括E2和P3的complete akinesia、E3的leg trembling with little effective forward motion、P1的shuffling steps with minimal forward movement。Figure 8C将第三位相应患者标记为P4，编号存在不一致。",
+      "n_enrolled": 20,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 173,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled=20来自Methods；n_analyzed=4指FOG专门分析的患者，而不是整个步态研究样本。n_FOG_events=173是Figure 8C所列四名患者事件数72+49+31+21的合计，并非正文另行报告的总数。n_trials：摘要和全文均未报告FOG分析所用步行试次总数。n_electrodes_contacts：全文未报告FOG四名患者各自纳入分析的具体触点数量。Table S1虽被引用，但不包含在所提供的17页PDF中。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "mixed，保留原文术语：complete akinesia（E2、正文所称P3）；leg trembling with little effective forward motion（E3）；shuffling steps with minimal forward movement（P1）。Figure 8C将31次事件的患者标为P4，与正文P3不一致。不能将这些表现默认视为同一FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "研究整体以OFF-medication为主，定义为停药超过12小时；部分患者根据病情严重程度仍保留部分dopamine agonist medication。FOG四名患者各自的具体药物状态、药物剂量和测试时间未在所提供全文中明确对应。",
+      "DBS_state_and_parameters": "所有患者植入双侧STN DBS电极（Medtronic 3389）。研究总体包括术后外置导线记录患者和使用Percept PC sensing功能记录的患者。所有记录均在OFF-stimulation条件下完成。Percept PC的Brainsense Survey模式使用0 mA。记录开始及结束时使用短暂同步刺激（130 Hz、60 μs、1 mA）。FOG四名患者各自的设备类型、记录触点及具体刺激参数未报告；没有FOG状态下持续治疗性DBS ON的比较。",
+      "task": "自然直立步行，包括连续行走及U-turn转弯。FOG主要发生于转弯期间。比较状态为standing、walking和freezing。FOG事件首先由神经科运动障碍专家根据视频确定，再利用鞋部惯性传感器识别双足同时静止的精确时间段。",
+      "recording_location": "双侧STN bipolar LFP。Figure 8A展示右侧STN LFP的示例频谱。具体FOG患者的触点编号、背腹方向及每位患者的解剖坐标未报告。",
+      "measure": "STN局部场电位（LFP）的低beta频段功率及功率谱密度（PSD）。Figure 8C展示各行为状态的PSD曲线及低beta功率箱线图。比较指标是FOG期间相对于walking和standing期间的低beta功率。",
+      "frequency_and_analysis_window": "采用患者个体化频段识别方法。Methods将13–20 Hz范围内识别的周期性成分标记为low-beta，20–35 Hz标记为high-beta；但FOG四名患者各自的精确频段边界未逐一报告。FOG分析中，将每种状态的所有出现时段拼接，使用Welch方法计算PSD，滑动窗1 s、50%重叠。Figure 8C进一步量化各状态的median low-beta power。FOG比较没有报告相对于静息基线的归一化方法。",
+      "finding": "FOG期间STN低beta功率高于walking和standing期间。作者报告低beta信号在FOG时占优势。Figure 8C展示了四名患者各状态的PSD及低beta功率分布。图中E3、E2和图示P4的低beta箱线图带有显著性标记（分别为**、**和*）；P1未显示相应显著性标记。正文没有提供这些标记对应的精确P值或统计检验方法。",
+      "effect_estimate": "方向：FOG期间low-beta power增加。效应量、均值差、标准化效应量、95% CI和精确P值均未在正文中报告。Figure 8C显示各患者的低beta功率箱线图及显著性标记，但没有提供可直接提取的精确数值。不能将这一发现解释为所有PD患者均存在相同程度的低beta升高。",
+      "statistical_unit_and_method": "患者级、状态级PSD分析。每位患者分别将standing、walking、freezing出现时段拼接后计算Welch PSD；Figure 8C展示患者内状态功率分布。FOG比较的统计检验方法、显著性标记的精确P值以及是否进行多重比较校正，未在正文和所提供Methods中明确说明。不是以患者为独立样本的四组间效应估计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性神经电生理研究及预测研究领域级偏倚评估清单；不是经验证的正式RoB工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "FOG分析仅涉及4名出现频繁冻结的患者，且整体研究招募的是接受双侧STN DBS手术、具有严重运动波动的PD患者。不能代表全部PD患者或低频FOG患者。",
+            "source_locator": "Methods—Study design，PDF第10–11页；Results—Decoding of freezing of gait，PDF第8页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由一名运动障碍专家根据视频确认，随后利用鞋部加速度计进行事件时间定位。这比单纯Freezer分组更接近真实事件，但没有报告多名评估者一致性、盲法或标签可靠性验证。",
+            "source_locator": "Methods—Definition of time-periods of freezing of gait，PDF第15页；Figure 8A，PDF第9页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者对运动伪迹进行筛查，并排除了部分受污染通道。研究总体有6名患者至少存在一个伪迹通道，另有1名患者因全部通道受污染而被排除。但未明确列出FOG四名患者各自的伪迹状况及剩余有效触点数量。",
+            "source_locator": "Methods—Identification of artefacted LFP channels during gait，PDF第13页；Methods—Decoder of gait freezing，PDF第14页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "研究整体以OFF-medication超过12小时为主，但部分患者保留多巴胺受体激动剂。FOG亚组没有逐患者报告药物状态及药物反应表型。所有记录均OFF-stimulation，但不能据此排除药物相关混杂。",
+            "source_locator": "Methods—Study design，PDF第10页；Methods—LFP recordings，PDF第11页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "每位患者包含多次FOG事件，PSD分析将同一状态的所有出现时段拼接，并使用50%重叠的Welch窗口。没有报告基于事件和患者层级的混合效应模型或独立事件级推断，因此不能将重叠时间窗视为独立患者观察。",
+            "source_locator": "Methods—Computation of PSD and band-power during freezing episodes，PDF第15页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "Figure 8C展示低beta功率箱线图及显著性标记，但FOG比较的具体统计检验、多重比较数量及校正方式没有明确报告。",
+            "source_locator": "Figure 8C，PDF第9页；Methods—Statistics，PDF第15页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "本研究FOG信号比较涉及4名患者，没有独立外部队列验证。虽然使用交叉验证，但FOG专门分析的训练测试划分细节未充分报告。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页；Methods—Decoder of gait freezing，PDF第14页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "所提供全文没有明确报告FOG分析的预注册方案或预先指定的统计分析计划。补充材料Table S1未随附件提供，无法核查全部临床变量。",
+            "source_locator": "PDF第10–17页；Supplementary Materials列表，PDF第15页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "直接自然FOG事件证据，但样本仅4人，且主要为转弯相关FOG。低beta频段具有患者个体差异。没有报告FOG相对于walking/standing的精确功率效应量和完整统计检验。患者P3/P4编号不一致。该结果说明事件期间的相关性，不能单独证明低beta同步是FOG的原因，也不能证明其为FOG特异性生物标志物。",
+      "quote": "Analysis of spectral components showed increased low-beta power during freezing periods compared to walking or standing.",
+      "source_locator": {
+        "section": "Results—Decoding of freezing of gait",
+        "page": "8",
+        "figure_table": "Figure 8C",
+        "supplement": "Table S1被正文引用，但未包含在提供的PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID36070366_FOG_E02",
+      "design": "观察性自然步行同步神经电生理与肌电记录；FOG事件内STN LFP和双侧膝伸肌EMG的时间对应分析。",
+      "population": "同一研究中的4名频繁FOG患者。FOG主要发生于转弯。包括complete akinesia、leg trembling with little effective forward motion及shuffling steps with minimal forward movement等不同表型。正文P3与Figure 8C的P4编号不一致。",
+      "n_enrolled": 20,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 173,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数173为Figure 8C四患者事件数之和。EMG与神经信号分析涉及的具体试次数、电极触点数量和每位患者有效事件数量未完整报告。不能将事件数作为独立患者数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "mixed。原文术语：complete akinesia（E2、正文P3）；leg trembling with little effective forward motion（E3）；shuffling steps with minimal forward movement（P1）。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "整体以OFF-medication（>12 h）为主；部分患者保留多巴胺受体激动剂。FOG四名患者各自测试时的具体药物状态不明。",
+      "DBS_state_and_parameters": "双侧STN DBS导线（Medtronic 3389）；记录期间OFF-stimulation。研究总体包括术后外置导线记录及Percept PC sensing记录。FOG四名患者具体设备和触点配置未报告。同步用短暂130 Hz、60 μs、1 mA刺激脉冲。",
+      "task": "自然步行过程中出现的真实FOG，主要发生在U-turn转弯期间。视频确认冻结时间，并结合鞋部惯性传感器识别双足静止阶段。同步记录双侧STN LFP及膝伸肌EMG。",
+      "recording_location": "双侧STN bipolar LFP；双侧膝伸肌EMG。Figure 8A展示右侧STN频谱及双侧膝伸肌EMG示例。",
+      "measure": "双侧STN低beta同步活动与双侧膝伸肌部分共同激活（partial co-activation）的同步观察。EMG用于描述冻结期间双腿肌肉活动模式，而非单纯以LFP功率推断冻结。",
+      "frequency_and_analysis_window": "低beta按照患者个体化频段识别方法确定，Methods将13–20 Hz范围的周期性成分标记为low-beta。Figure 8A展示原始STN LFP频谱与EMG时间序列。步态原始频谱一般使用multitaper方法、5–125 Hz、1 s窗口、50 ms重叠；FOG示例的独立参数未另外报告。没有报告EMG与LFP之间的定量相位分析。",
+      "finding": "在真实FOG时段，双侧STN LFP出现明显的低beta优势信号，同时双侧膝伸肌出现部分共同激活。作者将这一EMG模式解释为患者无法有效地将体重从一条腿转移到另一条腿。该证据描述的是神经活动与异常双腿肌肉活动的共同出现。",
+      "effect_estimate": "方向：FOG期间出现predominant low-beta signatures，并伴随partial co-activation of knee extensor muscles。没有报告膝伸肌共同激活的百分比、EMG振幅差、标准化效应量或置信区间。",
+      "statistical_unit_and_method": "主要是事件示例及定性时间序列观察（Figure 8A）。没有报告4名患者间的共同激活统计量、事件级回归模型、EMG效应量或正式显著性检验。不能将示例图等同于经过患者级统计验证的群体效应。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性神经电生理研究及预测研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅4名频繁FOG患者，来自接受STN DBS手术的PD患者队列，存在临床选择偏倚。",
+            "source_locator": "Methods—Study design，PDF第10页；Results—Decoding of freezing of gait，PDF第8页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "视频由一名运动障碍专家评定，并结合鞋部惯性传感器确认双足静止超过0.5 s。没有报告独立评估者一致性。",
+            "source_locator": "Methods—Definition of time-periods of freezing of gait，PDF第15页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "步态相关伪迹通过频谱和人工检查筛查；但未单独提供FOG患者的EMG和LFP信号质量指标及有效通道数量。",
+            "source_locator": "Methods—Identification of artefacted LFP channels during gait，PDF第13页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "患者药物状态不完全统一，且缺乏FOG亚组逐患者的药物反应表型和临床严重程度数据。",
+            "source_locator": "Methods—Study design，PDF第10页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者内存在多个FOG事件，但共同激活的统计单位和事件间独立性没有明确报告。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "没有报告FOG期间EMG共同激活的正式检验或多重比较处理。",
+            "source_locator": "Figure 8A，PDF第9页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条为神经信号与EMG共同出现的描述性观察，不是预测模型的独立验证结果。",
+            "source_locator": "Figure 8A，PDF第9页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告FOG期间EMG共同激活的预先指定统计终点及完整分析计划。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是STN LFP与EMG在实际冻结期间共同出现的直接观察，但没有证明低beta同步导致膝伸肌共同激活，也没有证明膝伸肌共同激活导致低beta同步。共同激活的定量程度及其与FOG亚型的关系没有报告。不能将其解释为所有FOG表型都存在相同的肌肉活动机制。",
+      "quote": "These periods correlated with the emergence of predominant low-beta signatures in bilateral STN LFP, along with partial co-activation of knee extensor muscles.",
+      "source_locator": {
+        "section": "Results—Decoding of freezing of gait",
+        "page": "8–9",
+        "figure_table": "Figure 8A",
+        "supplement": "未提供FOG四名患者的逐患者EMG统计补充表。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID36070366_FOG_E03",
+      "design": "观察性事件时间序列分析；自然FOG事件终止时，STN低beta同步与双侧肌肉活动交替模式的时间关系。",
+      "population": "同一研究的4名频繁FOG患者。该发现来自FOG事件的时间序列观察，未提供独立的恢复期患者样本。",
+      "n_enrolled": 20,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 173,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数根据Figure 8C求和。恢复期事件数量、每次恢复持续时间、有效恢复期试次数及各患者恢复期有效触点数量均未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "offset_recovery",
+      "freezing_phenotype": "mixed；原文描述包括complete akinesia、leg trembling with little effective forward motion、shuffling steps with minimal forward movement。没有分别报告各亚型的恢复机制。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "研究整体以OFF-medication（>12 h）为主，部分患者可能保留多巴胺受体激动剂；FOG亚组个体状态不明。",
+      "DBS_state_and_parameters": "双侧STN DBS导线；所有记录OFF-stimulation。FOG亚组具体记录设备及触点配置不明。",
+      "task": "自然步行转弯期间发生FOG，以及FOG终止后恢复交替步态肌肉活动的过程。",
+      "recording_location": "双侧STN LFP，结合双侧下肢肌肉活动记录。Figure 8A展示STN频谱及双侧膝伸肌EMG。",
+      "measure": "STN低beta同步活动消退与右、左腿肌肉激活交替模式恢复之间的时间关系。主要是LFP频谱与EMG模式的同步观察。",
+      "frequency_and_analysis_window": "低beta为患者个体化频段，Methods将13–20 Hz周期性成分标记为low-beta。没有单独报告低beta同步消退的阈值、事件终止时间窗、恢复延迟或相位分析参数。",
+      "finding": "作者报告，当低beta同步消失后，右腿与左腿交替的肌肉激活模式随即恢复。该发现指向低beta同步消退与FOG后步态恢复之间的时间联系。",
+      "effect_estimate": "方向：low-beta synchronization消失后，alternations of right and left muscle activation patterns恢复。没有报告同步消退至交替活动恢复的时间间隔、相关系数、恢复概率或置信区间。",
+      "statistical_unit_and_method": "定性时间序列观察。没有报告患者级恢复统计、FOG终止后的平均恢复时间或事件级生存分析。不能将原文的as soon as解释为已经测得的毫秒级因果先后关系。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性神经电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "FOG恢复观察来自4名频繁冻结患者，且患者为STN DBS手术人群。",
+            "source_locator": "Methods—Study design，PDF第10页；Results—Decoding of freezing of gait，PDF第8页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由专家视频评定，双足静止时间由惯性传感器识别；没有单独报告FOG终止和恢复的盲法评定及重复评定可靠性。",
+            "source_locator": "Methods—Definition of time-periods of freezing of gait，PDF第15页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "研究对步态伪迹进行筛查，但没有给出FOG恢复期专门的信号质量分析及触点保留情况。",
+            "source_locator": "Methods—Identification of artefacted LFP channels during gait，PDF第13页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "FOG患者药物状态和个体临床特征未完整报告，无法评估药物对恢复期低beta消退及步态恢复的影响。",
+            "source_locator": "Methods—Study design，PDF第10页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者可能有多次冻结及恢复事件，但没有报告事件级恢复统计和患者内相关性处理。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "没有报告恢复期专门的统计检验及多重比较校正。",
+            "source_locator": "Figure 8A，PDF第9页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条是定性时间关系，不涉及独立预测模型验证。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有报告预先指定的FOG恢复期终点或恢复时间分析计划。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是时间相关性观察，不能证明低beta同步是维持FOG的必要条件，也不能证明低beta消失直接引起步态恢复。没有报告FOG终止后的独立恢复时间窗、时间延迟、事件数量或统计检验。尤其不能将这一结果外推为所有FOG亚型均具有相同的恢复机制。",
+      "quote": "Alternations of right and left muscle activation patterns resumed as soon as low-beta synchronization vanished.",
+      "source_locator": {
+        "section": "Results—Decoding of freezing of gait",
+        "page": "8",
+        "figure_table": "Figure 8A",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID36070366_FOG_E04",
+      "design": "观察性患者级描述性比较；比较不同FOG患者的低beta信号优势程度与FOG事件频率、持续时间之间的对应关系。",
+      "population": "4名出现频繁FOG的PD患者。正文将FOG亚型分为complete akinesia、leg trembling with little effective forward motion和shuffling steps with minimal forward movement。Figure 8C提供每名患者的事件数量、事件持续时间及低beta功率分布。",
+      "n_enrolled": 20,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 173,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Figure 8C分别报告E3 72次、E2 49次、P4 31次、P1 21次事件，总计173次。没有报告FOG患者的步行试次总数、独立事件间相关性或每名患者有效记录触点数量。正文称P3而图示称P4，患者编号无法仅凭该附件完全核实。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "mixed；E2和正文P3为complete akinesia；E3为leg trembling with little effective forward motion；P1为shuffling steps with minimal forward movement。Figure 8C将31次事件患者标记为P4。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "研究整体以OFF-medication（>12 h）为主，部分患者保留多巴胺受体激动剂；FOG患者个体状态未知。",
+      "DBS_state_and_parameters": "双侧STN DBS导线；所有记录OFF-stimulation。外置导线或Percept PC的患者构成及FOG患者具体对应关系未报告。",
+      "task": "自然步行和转弯期间发生的实际FOG。将冻结期间的STN低beta功率与每名患者的FOG事件数量及图示持续时间进行描述性对应。",
+      "recording_location": "双侧STN bipolar LFP。Figure 8C分别展示每名患者的功率谱和low-beta功率箱线图。",
+      "measure": "患者个体低beta功率谱及median low-beta power，与FOG事件数量、图示持续时间之间的描述性对应关系。不是FOG发生前的预测性分析，也不是易感性分组分析。",
+      "frequency_and_analysis_window": "患者个体化low-beta频段；Methods将13–20 Hz范围内的周期性成分标记为low-beta。各状态的PSD采用Welch方法，1 s滑动窗、50%重叠，并将相同状态的出现时段拼接。没有报告低beta功率与事件频率、持续时间之间的专门回归窗口或标准化方法。",
+      "finding": "作者报告，不同患者低beta信号的优势程度反映其FOG严重程度，并与事件频率和持续时间相对应。Figure 8C提供具体事件数据：E3为72次、dur=1.92 s；E2为49次、dur=750 ms；图示P4为31次、dur=1.87 s；P1为21次、dur=1.03 s。作者没有报告患者级相关系数或正式的严重程度预测模型。",
+      "effect_estimate": "描述性数据：E3，72 events，dur=1.92 s；E2，49 events，dur=750 ms；P4（正文编号不一致），31 events，dur=1.87 s；P1，21 events，dur=1.03 s。低beta信号优势与冻结严重程度的关系由作者定性描述。没有报告相关系数、回归系数、P值、置信区间或趋势检验。dur为图中原始标注，不额外推断其统计定义。",
+      "statistical_unit_and_method": "患者级描述性比较，n=4。事件数量及持续时间以患者为单位报告；低beta PSD按每名患者、每种状态计算。没有报告患者间相关分析或事件频率与低beta功率的正式回归模型。不能将四名患者之间的描述性对应关系当作已验证的剂量-反应关系。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性神经电生理研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅分析4名出现频繁FOG的患者，不能代表冻结频率低或无冻结的患者。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由视频专家评定，并利用惯性传感器确定双足静止时间，但没有报告独立的持续时间评估可靠性。",
+            "source_locator": "Methods—Definition of time-periods of freezing of gait，PDF第15页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "作者采用伪迹排除程序，但没有报告四名FOG患者各自的有效通道及信噪比。",
+            "source_locator": "Methods—Identification of artefacted LFP channels during gait，PDF第13页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物状态、冻结亚型、临床严重程度及DBS设备类型可能在患者之间不同，但没有报告这些因素的调整模型。",
+            "source_locator": "Methods—Study design，PDF第10–11页；Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "每名患者具有21–72次事件，事件间依赖性和重复测量处理没有报告。患者级样本数仍然只有4。",
+            "source_locator": "Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "低beta箱线图显示显著性标记，但患者级严重程度关系没有明确的统计检验及多重比较校正说明。",
+            "source_locator": "Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "本条为患者级描述性对应关系，并未报告专门的严重程度预测模型。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预先指定的FOG严重程度分析计划、患者级临床评分与低beta功率的完整对应表。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8–9页；Supplementary Materials，PDF第15页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者所称的严重程度对应关系是四名患者之间的描述性观察。事件数量和持续时间不同，并不自动构成患者级相关性或剂量-反应证据。没有报告FOG临床严重程度评分、相关系数及统计检验。Figure 8C中P4与正文P3编号不一致。患者样本极小，不能据此确定低beta功率可定量预测FOG严重程度。",
+      "quote": "the predominance of these signatures mirrored the severity of freezing events in each participant, and the frequency and duration of events.",
+      "source_locator": {
+        "section": "Results—Decoding of freezing of gait",
+        "page": "8–9",
+        "figure_table": "Figure 8C",
+        "supplement": "Table S1被引用但未包含在附件中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID36070366_FOG_E05",
+      "design": "患者特异性机器学习预测研究；使用STN LFP训练分类器，区分standing、walking和freezing三种状态，并以交叉验证评估分类表现。属于原始患者数据的探索性预测分析。",
+      "population": "4名频繁FOG患者，分别建立患者特异性分类器。FOG主要发生于转弯。四名患者的事件数量及分类准确率见Figure 8C。研究整体步态样本为12人，FOG预测分析为其中4人的子集。",
+      "n_enrolled": 20,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 4,
+      "n_FOG_events": 173,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Figure 8C提供每位患者的FOG事件数量，合计173。FOG分类器训练和测试使用的具体步行试次数、每类样本总数、每折独立事件数量及患者有效电极触点数量未报告。Figure 8C中患者编号P4与Results正文P3存在不一致。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "mixed；complete akinesia、leg trembling with little effective forward motion、shuffling steps with minimal forward movement。各患者分类表现并未按照FOG亚型进行单独的正式统计比较。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "研究整体主要为OFF-medication（>12 h），部分患者保留多巴胺受体激动剂。FOG四名患者个体测试状态未明确报告。",
+      "DBS_state_and_parameters": "双侧STN DBS导线；所有记录OFF-stimulation。FOG分类器使用的电极触点和训练参数与步态状态分类器相同。具体FOG患者设备类型、触点配置及解剖位置未报告。",
+      "task": "自然步行，包括转弯过程中实际发生的FOG。分类器将时间点分为standing、walking和freezing。freezing标签依据临床视频确认的冻结时段及鞋部惯性传感器检测的双足静止时间确定。",
+      "recording_location": "双侧STN LFP，使用非伪迹污染的记录触点。FOG分类器沿用步态状态分类器的触点配置和训练参数。",
+      "measure": "机器学习三分类器的分类准确率及sample-based confusion matrix。输入为STN LFP的频谱信息，输出为standing、walking、freezing三种行为状态的分类。",
+      "frequency_and_analysis_window": "FOG分类器的触点和训练参数与步态状态分类器相同。步态状态分类器仅使用非伪迹污染触点，频率范围为10–125 Hz，采用相对于分类状态起始时间的1 s分析区间。FOG起始时间依据双足glued to the ground的运动学定义。FOG分类器专门的交叉验证折数、训练测试分割单位及独立事件划分未明确报告。Methods中对FOG PSD的Welch 1 s、50%重叠设置不能直接替代分类器的分析窗。",
+      "finding": "STN LFP能够用于患者特异性FOG三分类预测，但分类准确率在患者间存在明显差异。Figure 8C报告：E3为76%，E2为59.1%，图示P4为51.8%，P1为51.8%。Results正文概括为：冻结事件较多的患者准确率约60–75%，冻结事件较少的患者准确率约50%。作者指出分类性能随可用于训练的冻结事件数量而变化。",
+      "effect_estimate": "Figure 8C准确率：E3 76%（72 events，dur=1.92 s）；E2 59.1%（49 events，dur=750 ms）；P4 51.8%（31 events，dur=1.87 s）；P1 51.8%（21 events，dur=1.03 s）。正文概括为较多冻结事件患者约60–75%，较少冻结事件患者约50%。没有报告准确率95% CI、独立测试集表现或FOG类别单独的敏感度、特异度、阳性预测值。",
+      "statistical_unit_and_method": "患者特异性分类器，4名患者分别建模。使用交叉验证，并报告每位患者的sample-based confusion matrix和整体分类准确率。三分类任务的准确率不是FOG单独的敏感度，也不是事件级预测成功率。Methods仅说明FOG分类器与步态状态分类器使用相同触点和训练参数，没有完整说明FOG专门的交叉验证划分策略。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性神经电生理及机器学习预测研究领域级偏倚评估清单。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅有4名频繁FOG患者；患者来自接受STN DBS手术的临床队列。低频FOG患者的数据不足，限制预测模型的代表性。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页；Methods—Study design，PDF第10页。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "标签采用专家视频评定结合双足静止的运动学标准，具有实际事件依据；但没有报告多评估者一致性和标签独立验证。",
+            "source_locator": "Methods—Definition of time-periods of freezing of gait，PDF第15页。"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "模型使用排除运动伪迹后的通道，但没有报告四名FOG患者每人的最终通道数、信噪比及不同设备之间的输入一致性。",
+            "source_locator": "Methods—Identification of artefacted LFP channels during gait，PDF第13页；Methods—Decoder of gait freezing，PDF第14页。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物状态、FOG亚型、事件持续时间及患者间临床严重程度不同。分类性能可能受到事件频率和数据量影响，研究未报告充分的混杂调整。",
+            "source_locator": "Methods—Study design，PDF第10页；Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "模型输入包含连续时间样本，同一事件内样本具有时间依赖性。FOG分类器的交叉验证是否按独立事件或完整试次分组没有明确报告，因此无法排除相邻样本同时进入训练集和测试集造成的性能高估。",
+            "source_locator": "Methods—Decoder of gait freezing，PDF第14页；Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "报告四名患者的准确率，但没有说明是否进行预先指定的模型比较、超参数选择校正或多重性能指标校正。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页；Figure 8C，PDF第9页。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "some_concerns",
+            "reason": "使用交叉验证但仅有4名患者，没有独立外部队列验证。低事件数患者表现约50%，显示模型性能依赖可用冻结事件数量。未报告模型跨患者迁移能力。",
+            "source_locator": "Results—Decoding of freezing of gait，PDF第8页；Methods—Decoder of gait freezing，PDF第14页。"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有报告预注册的模型性能主要终点、超参数搜索范围及完整模型比较计划。未提供足够信息判断是否存在选择性报告。",
+            "source_locator": "Methods—Decoder of gait freezing，PDF第14页；Results—Decoding of freezing of gait，PDF第8页。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究证明的是患者特异性三分类器具有一定的区分能力，而不是建立了具有临床泛化能力的FOG预测工具。准确率受事件数量影响明显。四名患者样本量很小，未进行外部验证。报告的是三分类整体准确率，不是FOG事件敏感度或特异度。没有证明STN低beta是模型唯一或主要的判别特征，也没有证明分类器可在FOG发生前预测冻结。患者P3/P4编号不一致。",
+      "quote": "Cross-validation performance reached accuracies (between 60 and 75%) for participants exhibiting a large number of freezing episodes.",
+      "source_locator": {
+        "section": "Results—Decoding of freezing of gait；Methods—Decoder of gait freezing",
+        "page": "8、14",
+        "figure_table": "Figure 8B–C",
+        "supplement": "Figure 8C及其混淆矩阵包含患者级分类结果；补充材料未随附件提供。"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

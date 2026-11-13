@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:30245616
+题目: Totally Implantable Bidirectional Neural Prostheses: A Flexible Platform for Innovation in Neuromodulation.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: Implantable neural prostheses are in widespread use for treating a variety of brain disorders. Until recently, most implantable brain devices have been unidirectional, either delivering neurostimulation without brain sensing, or sensing brain activity to drive external effectors without a stimulation component. Further, many neural interfaces that incorporate a sensing function have relied on hardwired connections, such that subjects are tethered to external computers and cannot move freely. A new generation of neural prostheses has become available, that are both bidirectional (stimulate as well as record brain activity) and totally implantable (no externalized connections). These devices provide an opportunity for discovering the circuit basis for neuropsychiatric disorders, and to prototype personalized neuromodulation therapies that selectively interrupt neural activity underlying specific signs and symptoms.
+
+---
+
+pid: PMID:30245949
+题目: The Effect of Physical Activity in Parkinson's Disease: A Mini-Review.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: This article will discuss the effects of physical activity in patients with Parkinson's disease. Presently, the motor and non-motor symptoms are difficult to treat with the current treatment of Parkinson's; therefore, as an adjuvant to the current treatment physical activity, has been recommended. Physical activity has been known to improve many symptoms in patients with Parkinson's disease. Some of these symptoms include the physical capacities, physical and cognitive functional capacities. Physical activity also slows the disease process, decreases the pain associated with Parkinson`s disease, prolongs the independent mobility (gait, balance, strength) and improves sleep, mood, memory hence improving the overall quality of life. Furthermore, physical activity has the potential to improve the non-motor symptoms (depression, apathy, fatigue, constipation) and the secondary complications of immobility (cardiovascular, osteoporosis) in Parkinson's disease.
+
+---
+
+pid: PMID:30254564
+题目: Effects of Galvanic Vestibular Stimulation on Upper and Lower Extremities Motor Symptoms in Parkinson's Disease.
+年份: 2018  类型: research-article; Journal Article
+摘要: As a neurodegenerative movement disorder, Parkinson's disease (PD) is commonly characterized by motor symptoms such as resting tremor, rigidity, bradykinesia, and balance and postural impairments. While the main cause of PD is still not clear, it is shown that the basal ganglia loop, which has a role in adjusting a planned movement execution through fine motor control, is altered during this disease and contributes toward the manifested motor symptoms. Galvanic vestibular stimulation (GVS) is a non-invasive technique to influence the vestibular system and stimulate the motor system. This study explores how the motor symptoms of upper and lower extremities in PD are instantly affected by vestibular stimulation. In this regard, direct current GVS was applied to 11 individuals with PD on medication while they were performing two sets of experiments: (1) Instrumented Timed Up and Go (iTUG) test and (2) finger tapping task. The performance of participants was recorded with accelerometers and cameras for offline processing of data. Several outcome measures including coefficient of variation of the step duration, gait phase, phase coordination index, tapping score, and the number and duration of manual motor blocks (MMBs) were considered for objective quantifying of performance. Results showed that almost all of considered outcome measures were improved with the application of GVS and
+
+---
+
+pid: PMID:30254580
+题目: Optimizing Clinical Assessments in Parkinson's Disease Through the Use of Wearable Sensors and Data Driven Modeling.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: The emergence of motion sensors as a tool that provides objective motor performance data on individuals afflicted with Parkinson's disease offers an opportunity to expand the horizon of clinical care for this neurodegenerative condition. Subjective clinical scales and patient based motor diaries have limited clinometric properties and produce a glimpse rather than continuous real time perspective into motor disability. Furthermore, the expansion of machine learn algorithms is yielding novel classification and probabilistic clinical models that stand to change existing treatment paradigms, refine the application of advance therapeutics, and may facilitate the development and testing of disease modifying agents for this disease. We review the use of inertial sensors and machine learning algorithms in Parkinson's disease.
+
+---
+
+pid: PMID:30265211
+题目: Exercise Guidelines for Gait Function in Parkinson's Disease: A Systematic Review and Meta-analysis.
+年份: 2018  类型: Meta-Analysis; Systematic Review; Journal Article
+摘要: This systematic review and meta-analysis is to provide comprehensive evidence-based exercise recommendations targeting walking function for adults with Parkinson's disease.MethodsFixed- or random-effect meta-analyses estimated standardized effect sizes (Hedge's g), comparing treatment effects from exercise with nonexercise and another form of exercise (non-EXE control and EXE control). Cuing and exercise duration were used as moderators for subanalyses.ResultsThe 40 included randomized controlled trials comprised 1656 patients. The exercise group showed significantly superior performance in timed up-and-go ( g = -0.458; g = -0.390) compared with non-EXE control and EXE control; significantly greater improvement in comfortable walking speed ( g = 0.449), fast walking speed ( g = 0.430), and stride or step length ( g = 0.379) compared with non-EXE control; and significantly greater cadence ( g = 0.282) compared with EXE controls. No significant differences between intervention and control groups were observed for double-leg support time (DLST), dynamic gait index (DGI), 6-minute walk test, or freezing of gait questionnaire (FOG-Q). Notably, treatment effect from the exercise of interest compared with a standard exercise was greater than for nonexercise for cadence and FOG-Q. Moreover, EXE control was favored for DLST and DGI. Cuing had a significantly positive effect on stride le
+
+---
+
+pid: PMID:30274340
+题目: A Validation Study of Freezing of Gait (FoG) Detection and Machine-Learning-Based FoG Prediction Using Estimated Gait Characteristics with a Wearable Accelerometer.
+年份: 2018  类型: research-article; Validation Study; Journal Article
+摘要: One of the most common symptoms observed among most of the Parkinson's disease patients that affects movement pattern and is also related to the risk of fall, is usually termed as "freezing of gait (FoG)". To allow systematic assessment of FoG, objective quantification of gait parameters and automatic detection of FoG are needed. This will help in personalizing the treatment. In this paper, the objectives of the study are (1) quantification of gait parameters in an objective manner by using the data collected from wearable accelerometers; (2) comparison of five estimated gait parameters from the proposed algorithm with their counterparts obtained from the 3D motion capture system in terms of mean error rate and Pearson's correlation coefficient (PCC); (3) automatic discrimination of FoG patients from no FoG patients using machine learning techniques. It was found that the five gait parameters have a high level of agreement with PCC ranging from 0.961 to 0.984. The mean error rate between the estimated gait parameters from accelerometer-based approach and 3D motion capture system was found to be less than 10%. The performances of the classifiers are compared on the basis of accuracy. The best result was accomplished with the SVM classifier with an accuracy of approximately 88%. The proposed approach shows enough evidence that makes it applicable in a real-life scenario where the
+
+---
+
+pid: PMID:30280416
+题目: Imaging of Motor Cortex Physiology in Parkinson's Disease.
+年份: 2018  类型: review-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: There is abundant evidence that the pathophysiology of Parkinson's disease (PD) is not confined to the nigrostriatal dopaminergic pathway but propagates along the cortico-basal ganglia-thalamo-cortical neural network. A critical node in this functional circuit impacted by PD is the primary motor cortex (M1), which plays a key role in generating neural impulses that regulate movements. The past several decades have lay witness to numerous in vivo neuroimaging techniques that provide a window into the function and structure of M1. A consistent observation from numerous studies is that during voluntary movement, but also at rest, the functional activity of M1 is altered in PD relative to healthy individuals, and it relates to many of the motor signs. Although this abnormal functional activity can be partially restored with acute dopaminergic medication, it continues to deteriorate with disease progression and may predate structural degeneration of M1. The current review discusses the evidence that M1 is fundamental to the pathophysiology of PD, as measured by neuroimaging techniques such as positron emission tomography, single-photon emission computed tomography, electroencephalography, magnetoencephalography, and functional and structural MRI. Although novel treatments that target the cortex will not cure PD, they could significantly slow down and alter the progressive course of 
+
+---
+
+pid: PMID:30295606
+题目: Motor thalamus supports striatum-driven reinforcement.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Reinforcement has long been thought to require striatal synaptic plasticity. Indeed, direct striatal manipulations such as self-stimulation of direct-pathway projection neurons (dMSNs) are sufficient to induce reinforcement within minutes. However, it's unclear what role, if any, is played by downstream circuitry. Here, we used dMSN self-stimulation in mice as a model for striatum-driven reinforcement and mapped the underlying circuitry across multiple basal ganglia nuclei and output targets. We found that mimicking the effects of dMSN activation on downstream circuitry, through optogenetic suppression of basal ganglia output nucleus substantia nigra reticulata (SNr) or activation of SNr targets in the brainstem or thalamus, was also sufficient to drive rapid reinforcement. Remarkably, silencing motor thalamus-but not other selected targets of SNr-was the only manipulation that reduced dMSN-driven reinforcement. Together, these results point to an unexpected role for basal ganglia output to motor thalamus in striatum-driven reinforcement.
+
+---
+
+pid: PMID:30300636
+题目: A competitive model for striatal action selection.
+年份: 2019  类型: Research Support, N.I.H., Intramural; Research Support, Non-U.S. Gov't; research-article; Review; Journal Article
+摘要: The direct and indirect pathway striatal medium spiny neurons (dMSNs and iMSNs) have long been linked to action selection, but the precise roles of these neurons in this process remain unclear. Here, we review different models of striatal pathway function, focusing on the classic "go/no-go" model which posits that dMSNs facilitate movement while iMSNs inhibit movement, and the "complementary" model, which argues that dMSNs facilitate the selection of specific actions while iMSNs inhibit potentially conflicting actions. We discuss the merits and shortcomings of these models and propose a "competitive" model to explain the contribution of these two pathways to behavior. The "competitive" model argues that rather than inhibiting conflicting actions, iMSNs are tuned to the same actions that dMSNs facilitate, and the two populations "compete" to determine the animal's behavioral response. This model provides a theoretical explanation for how these pathways work together to select actions. In addition, it provides a link between action selection and behavioral reinforcement, via modulating synaptic strength at inputs onto dMSNs and iMSNs. Finally, this model makes predictions about how imbalances in the activity of these pathways may underlie behavioral traits associated with psychiatric disorders. Understanding the roles of these striatal pathways in action selection may help to cla
+
+---
+
+pid: PMID:30306629
+题目: Impaired step-length setting prior to turning in Parkinson's disease patients with freezing of gait.
+年份: 2018  类型: Letter; Research Support, Non-U.S. Gov't; research-article; Research Support, N.I.H., Extramural
+摘要: （无摘要）
+
+---
+
+pid: PMID:30308171
+题目: A Head-Mounted Camera System Integrates Detailed Behavioral Monitoring with Multichannel Electrophysiology in Freely Moving Mice.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Breakthroughs in understanding the neural basis of natural behavior require neural recording and intervention to be paired with high-fidelity multimodal behavioral monitoring. An extensive genetic toolkit for neural circuit dissection, and well-developed neural recording technology, make the mouse a powerful model organism for systems neuroscience. However, most methods for high-bandwidth acquisition of behavioral data in mice rely upon fixed-position cameras and other off-animal devices, complicating the monitoring of animals freely engaged in natural behaviors. Here, we report the development of a lightweight head-mounted camera system combined with head-movement sensors to simultaneously monitor eye position, pupil dilation, whisking, and pinna movements along with head motion in unrestrained, freely behaving mice. The power of the combined technology is demonstrated by observations linking eye position to head orientation; whisking to non-tactile stimulation; and, in electrophysiological experiments, visual cortical activity to volitional head movements.
+
+---
+
+pid: PMID:30314597
+题目: Molecular Imaging of the Cholinergic System in Parkinson's Disease.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Review; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: One of the first identified neurotransmitters in the brain, acetylcholine, is an important modulator that drives changes in neuronal and glial activity. For more than two decades, the main focus of molecular imaging of the cholinergic system in Parkinson's disease (PD) has been on cognitive changes. Imaging studies have confirmed that degeneration of the cholinergic system is a major determinant of dementia in PD. Within the last decade, the focus is expanding to studying cholinergic correlates of mobility impairments, dyskinesias, olfaction, sleep, visual hallucinations and risk taking behavior in this disorder. These studies increasingly recognize that the regional topography of cholinergic brain areas associates with specific functions. In parallel with this trend, more recent molecular cholinergic imaging approaches are investigating cholinergic modulatory functions and contributions to large-scale brain network functions. A novel area of research is imaging cholinergic innervation functions of peripheral autonomic organs that may have the potential of future prodromal diagnosis of PD. Finally, emerging evidence of hypercholinergic activity in prodromal and symptomatic leucine-rich repeat kinase 2 PD may reflect neuronal cholinergic compensation versus a response to neuro-inflammation. Molecular imaging of the cholinergic system has led to many new insights in the etiology 
+
+---
+
+pid: PMID:30315142
+题目: Cerebral Metabolic Changes Related to Freezing of Gait in Parkinson Disease.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: Freezing of gait (FOG) in Parkinson disease (PD) often occurs during steering of gait (i.e., complex gait), which is thought to arise from executive dysfunction. Our aim was to test whether cognitive corticobasal ganglia-thalamocortical circuitry is impaired and whether alternate neural circuits are used for complex gait in PD with FOG. Methods: Eighteen individuals with idiopathic PD in the off-medication state, 9 with FOG (aged 68 ± 6 y) and 9 without FOG (aged 65 ± 5 y), were included. PET was used to measure cerebral glucose metabolism during 2 gait tasks, steering and straight walking, performed during the radiotracer uptake period. Results: During steering, there was a reduced change in cerebral glucose metabolism within the cognitive corticothalamic circuit. More specifically, those with FOG had less activation of the posterior parietal cortex, less deactivation of the dorsolateral prefrontal cortex and thalamus, and increased activation in the supplementary motor area. Interestingly, activity in the dorsolateral prefrontal cortex correlated with gait impairment (i.e., reduced stride length) in the FOG group. Conclusion: These results demonstrate decreased parietal control and an alternate control mechanism mediated by prefrontal and supplementary motor areas in PD with FOG.
+
+---
+
+pid: PMID:30317396
+题目: Finding Parameters around the Abdomen for a Vibrotactile System: Healthy and Patients with Parkinson's Disease.
+年份: 2018  类型: Journal Article
+摘要: Freezing of Gait (FOG) is one of the most disabling gait disorders in Parkinson's Disease (PD), for which the efficacy of the medication is reduced, highlighting the use of non-pharmacological solutions. In particular, patients present less difficulties in overcoming FOG when using feedback and especially with Biofeedback Systems. In this study it is intended to detect the frequency threshold and the minimum interval of perception of the vibrotactile feedback, through a proposed wearable system, a waistband. Experimental tests were carried out that considered a temporal, spatial and spatiotemporal context, for which 15 healthy and 15 PD patients participated. It was detected as threshold frequency 180 Hz and for minimum interval of vibration perception 250 ms. The identification of this threshold frequency and this interval will allow us to select the frequency and the minimum interval of vibration to be used in a Vibrotactile Biofeedback Device for patients with PD, in order to help them to overcome FOG.
+
+---
+
+pid: PMID:30319535
+题目: Beyond Dopamine: GABA, Glutamate, and the Axial Symptoms of Parkinson Disease.
+年份: 2018  类型: research-article; Journal Article
+摘要: Introduction: The axial symptoms of Parkinson disease (PD) include difficulties with balance, posture, speech, swallowing, and locomotion with freezing of gait, as well as axial rigidity. These axial symptoms impact negatively on quality of life for many patients, yet remain poorly understood. Dopaminergic treatments typically have little effect on the axial symptoms of PD, suggesting that disruptions in other neurotransmitter systems beyond the dopamine system may underlie these symptoms. The purpose of the present study was to examine the relationship between the axial symptoms of PD and GABA and glutamate levels quantified with magnetic resonance spectroscopy. Methods: The participant group included 20 patients with PD and 17 healthy control participants. Water-scaled GABA and Glx (glutamate + glutamine) concentrations were derived from GABA-edited MEGA-PRESS spectra acquired from the left basal ganglia and prefrontal cortex, and additional water-scaled Glx concentrations were acquired from standard PRESS spectra acquired from the pons. Spectra were analyzed with LCModel. The axial symptoms of PD were evaluated from subscales of the Unified Parkinson's Disease rating scale (MDS-UPDRS). Results: PD patients demonstrated significantly higher GABA levels in the basal ganglia, which correlated with the degree of gait disturbance. Basal ganglia Glx levels and prefrontal GABA and 
+
+---
+
+pid: PMID:30322477
+题目: PET Imaging in Movement Disorders.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Positron emission tomography (PET) has revealed key insights into the pathophysiology of movement disorders. This paper will focus on how PET investigations of pathophysiology are particularly relevant to Parkinson disease, a neurodegenerative condition usually starting later in life marked by a varying combination of motor and nonmotor deficits. Various molecular imaging modalities help to determine what changes in brain herald the onset of pathology; can these changes be used to identify presymptomatic individuals who may be appropriate for to-be-developed treatments that may forestall onset of symptoms or slow disease progression; can PET act as a biomarker of disease progression; can molecular imaging help enrich homogenous cohorts for clinical studies; and what other pathophysiologic mechanisms relate to nonmotor manifestations. PET methods include measurements of regional cerebral glucose metabolism and blood flow, selected receptors, specific neurotransmitter systems, postsynaptic signal transducers, and abnormal protein deposition. We will review each of these methodologies and how they are relevant to important clinical issues pertaining to Parkinson disease.
+
+---
+
+pid: PMID:30341367
+题目: Internal cueing improves gait more than external cueing in healthy adults and people with Parkinson disease.
+年份: 2018  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Walking can be challenging for aging individuals and people with neurological disorders such as Parkinson disease (PD). Gait impairment characterized by reduced speed and higher variability destabilizes gait and increases the risk of falls. External auditory cueing provides an effective strategy to improve gait, as matching footfalls to rhythms typically increases gait speed and elicits larger steps, but the need to synchronize to an outside source often has a detrimental effect on gait variability. Internal cueing in the form of singing may provide an alternative to conventional gait therapy. In the present study, we compare the effects of internal and external cueing techniques on forward and backward walking for both people with PD and healthy controls. Results indicate that internal cueing was associated with improvements in gait velocity, cadence, and stride length in the backward direction, and reduced variability in both forward and backward walking. In comparison, external cueing was associated with minimal improvement in gait characteristics and a decline in gait stability. People with gait impairment due to aging or neurological decline may benefit more from internal cueing techniques such as singing as compared to external cueing techniques.
+
+---
+
+pid: PMID:30347656
+题目: Novelty Detection using Deep Normative Modeling for IMU-Based Abnormal Movement Monitoring in Parkinson's Disease and Autism Spectrum Disorders.
+年份: 2018  类型: research-article; Journal Article
+摘要: Detecting and monitoring of abnormal movement behaviors in patients with Parkinson's Disease (PD) and individuals with Autism Spectrum Disorders (ASD) are beneficial for adjusting care and medical treatment in order to improve the patient's quality of life. Supervised methods commonly used in the literature need annotation of data, which is a time-consuming and costly process. In this paper, we propose deep normative modeling as a probabilistic novelty detection method, in which we model the distribution of normal human movements recorded by wearable sensors and try to detect abnormal movements in patients with PD and ASD in a novelty detection framework. In the proposed deep normative model, a movement disorder behavior is treated as an extreme of the normal range or, equivalently, as a deviation from the normal movements. Our experiments on three benchmark datasets indicate the effectiveness of the proposed method, which outperforms one-class SVM and the reconstruction-based novelty detection approaches. Our contribution opens the door toward modeling normal human movements during daily activities using wearable sensors and eventually real-time abnormal movement detection in neuro-developmental and neuro-degenerative disorders.
+
+---
+
+pid: PMID:30347753
+题目: Gait Study of Parkinson's Disease Subjects Using Haptic Cues with A Motorized Walker.
+年份: 2018  类型: research-article; Journal Article
+摘要: Gait abnormalities are one of the distinguishing symptoms of patients with Parkinson's disease (PD) that contribute to fall risk. Our study compares the gait parameters of people with PD when they walk through a predefined course under different haptic speed cue conditions (1) without assistance, (2) pushing a conventional rolling walker, and (3) holding onto a self-navigating motorized walker under different speed cues. Six people with PD were recruited at the New York Institute of Technology College of Osteopathic Medicine to participate in this study. Spatial posture and gait data of the test subjects were collected via a VICON motion capture system. We developed a framework to process and extract gait features and applied statistical analysis on these features to examine the significance of the findings. The results showed that the motorized walker providing a robust haptic cue significantly improved gait symmetry of PD subjects. Specifically, the asymmetry index of the gait cycle time was reduced from 6.7% when walking without assistance to 0.56% and below when using a walker. Furthermore, the double support time of a gait cycle was reduced by 4.88% compared to walking without assistance.
+
+---
+
+pid: PMID:30357911
+题目: An update on adaptive deep brain stimulation in Parkinson's disease.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: Advancing conventional open-loop DBS as a therapy for PD is crucial for overcoming important issues such as the delicate balance between beneficial and adverse effects and limited battery longevity that are currently associated with treatment. Closed-loop or adaptive DBS aims to overcome these limitations by real-time adjustment of stimulation parameters based on continuous feedback input signals that are representative of the patient's clinical state. The focus of this update is to discuss the most recent developments regarding potential input signals and possible stimulation parameter modulation for adaptive DBS in PD. Potential input signals for adaptive DBS include basal ganglia local field potentials, cortical recordings (electrocorticography), wearable sensors, and eHealth and mHealth devices. Furthermore, adaptive DBS can be applied with different approaches of stimulation parameter modulation, the feasibility of which can be adapted depending on specific PD phenotypes. Implementation of technological developments like machine learning show potential in the design of such approaches; however, energy consumption deserves further attention. Furthermore, we discuss future considerations regarding the clinical implementation of adaptive DBS in PD. © 2018 The Authors. Movement Disorders published by Wiley Periodicals, Inc. on behalf of International Parkinson and Movement Dis
+
+---
+
+pid: PMID:30363375
+题目: Challenges in PD Patient Management After DBS: A Pragmatic Review.
+年份: 2018  类型: review-article; Review; Journal Article
+摘要: BackgroundDeep brain stimulation (DBS) of the subthalamic nucleus (STN) or internal globus pallidus (GPi) represents an effective and universally applied therapy for Parkinson's disease (PD) motor complications. However, certain procedure-related problems and unrealistic patient expectations may detract specialists from indicating DBS more widely despite significant clinical effects.MethodsThis review provides a pragmatic educational summary of the most conflicting postoperative management issues in patients undergoing DBS for PD.ResultsDBS in PD has been associated with certain complications and post-procedural management issues, which can complicate surgical outcome interpretation. Many PD patients consider DBS outcomes negative due to unfulfilled expectations, even when significant motor symptom improvement is achieved. Speech, gait, postural stability, and cognition may worsen after DBS and body weight may increase. Although DBS may induce impulse control disorders in some cases, in others, it may actually improve them when dopamine agonist dosage is reduced after surgery. However, apathy may also arise, especially when dopaminergic medication tapering is rapid. Gradual loss of response with time suggests disease progression, rather than the wearing off of DBS effects. Furthermore, implantable pulse generator expiration is considered a movement disorder emergency, as it may
+
+---
+
+pid: PMID:30363397
+题目: Physiotherapy for Parkinson's Disease in Sweden: Provision, Expertise, and Multi-professional Collaborations.
+年份: 2017  类型: research-article; Journal Article
+摘要: BackgroundEvidence for the positive effects of physiotherapy for persons with Parkinson's disease (PwPD) is rapidly increasing. However, little is known about the provision of physiotherapy for PwPD in everyday practice. The objective of this study was to gain insight into the nature of physiotherapeutic care for PwPD in hospitals, primary care units, and community services in Sweden.MethodsA web-based survey was sent out to 2956 members of the Swedish Association of Physiotherapists, including questions about treatment, measurement tools, multi-professional collaborations, adherence to physiotherapy guidelines, professional expertise, and needs for gaining expertise regarding PwPD.ResultsOf the 1189 physiotherapists who completed the survey, 705 were treating 1 or more PwPD per month in hospitals (21%), in primary care units (37%), and in the community (42%). Physiotherapy frequently targeted a wide range of musculoskeletal and mobility impairments; however, freezing of gait and pain were less frequently treated. Measurement tools recommended for PwPD were infrequently used, and there was a preference for single-item questions/tools compared with multi-item instruments. Collaboration with other health care professionals for the rehabilitation of PwPD was rare and was more evident in hospitals than in primary care units and the community. Adherence to physiotherapy guidelines w
+
+---
+
+pid: PMID:30363506
+题目: Focal Muscle Vibration Improves Gait in Parkinson's Disease: A Pilot Randomized, Controlled Trial.
+年份: 2016  类型: research-article; Journal Article
+摘要: BackgroundIn Parkinson's disease (PD), gait disorders lead to increased risk of falls and patients' reduced participation and independence. Several observations suggest that a single session of focal muscle vibration (fMV) applied to trunk or lower limb muscles during gait may improve several gait variables in patients with PD. The possible long-term beneficial effects of repetitive sessions of fMV (r-fMV) on gait of patients with PD have been investigated.MethodsA randomized, controlled trial study has been conducted in an outpatient rehabilitation department. Twenty patients with PD diagnosis have been randomized in two groups: "real" or "sham" r-fMV application to quadriceps and paraspinal muscles in patients with PD. Gait was evaluated with objective gait analysis, and a number of variables, including velocity, step length, stride length, percentage of stance, double support duration, cadence, swing velocity, and step width, have been measured. Gait analysis was performed before and 24 hours and 1 and 3 weeks after r-fMV.ResultsAfter real, but not sham, r-fMV, patients with PD had significant gait improvement as a result of increased walking velocity and stride length. The r-fMV-induced beneficial after effects lasted at least 1 week after the end of stimulation.ConclusionsData emerging from our pilot randomized, controlled trial study suggest that r-fMV may improve gait di
+
+---
+
+pid: PMID:30363528
+题目: Predictors of Adherence to a Falls Prevention Exercise Program for People with Parkinson's Disease.
+年份: 2015  类型: research-article; Journal Article
+摘要: BackgroundLong-term benefits of exercise for people with Parkinson's disease (PD) require regular and sustained participation. This study aimed to investigate predictors of adherence to a minimally supervised exercise program designed to reduce falls in people with PD.MethodPeople with idiopathic PD who participated in the exercise arm of a randomized, controlled trial were included. Exercises were prescribed three times per week for 6 months. Adherence was defined as the percentage of prescribed sessions participants reported as having undertaken. Potential predictors of adherence included baseline measures of demographic variables, disease severity and duration, falls and fear of falling, pain, self-reported health and quality of life, cognition, physical activity levels, freezing of gait, functional mobility and balance, and knee extensor strength.ResultsThe 108 participants included undertook a mean of 72% (standard deviation: 38%) of prescribed sessions. Participants had higher levels of adherence if they had shorter disease duration, less bodily pain, and better self-reported health and quality of life. A multivariate model (including disease duration, severity of bodily pain, self-reported physical well-being, the Frontal Assessment Battery, the Short Physical Performance Battery, and maximum walking time) explained 9% of the variance in exercise adherence, with shorter 
+
+---
+
+pid: PMID:30363531
+题目: Low-Frequency Stimulation of Globus Pallidus Internus for Axial Motor Symptoms of Parkinson's Disease.
+年份: 2015  类型: letter; Journal Article
+摘要: （无摘要）
+
+---
+
+pid: PMID:30363689
+题目: Accuracy of Markerless 3D Motion Capture Evaluation to Differentiate between On/Off Status in Parkinson's Disease after Deep Brain Stimulation.
+年份: 2018  类型: research-article; Journal Article
+摘要: BackgroundBody motion evaluation (BME) by markerless systems is increasingly being considered as an alternative to traditional marker-based technology because they are faster, simpler, and less expensive. They are increasingly used in clinical settings in patients with movement disorders; however, the wide variety of systems available makes results conflicting.Research questionThe objective of this study was to determine whether a markerless 3D motion capture system is a useful instrument to objectively differentiate between PD patients with DBS in On and Off states and controls and its correlation with the evaluation by means of MDS-UPDRS.MethodsSix PD patients who underwent deep brain stimulation (DBS) bilaterally in the subthalamic nucleus were evaluated using BME and the Unified Parkinson's Disease Rating Scale (UPDRS-III) with DBS turned On and Off. BME of 16 different movements in six controls paired by age and sex was compared with that in PD patients with DBS in On and Off states.ResultsA better performance in the BME was correlated with a lower UPDRS-III score. There was no statistically significant difference between patients in Off and On states of DBS regarding BME. However, some items such as left shoulder flexion (p=0.038), right shoulder rotation (p=0.011), and left trunk rotation (p=0.023) were different between Off patients and healthy controls.SignificanceKine
+
+---
+
+pid: PMID:30363825
+题目: Full Parkinsonian Triad Induced by Pallidal High-Frequency Stimulation in Cervical Dystonia.
+年份: 2015  类型: Journal Article; Case Reports; case-report
+摘要: （无摘要）
+
+---
+
+pid: PMID:30363872
+题目: The Pirouette Test to Evaluate Asymmetry in Parkinsonian Gait Freezing.
+年份: 2014  类型: Journal Article; Case Reports; case-report
+摘要: （无摘要）
+
+---
+
+pid: PMID:30368226
+题目: Caffeic acid improves locomotor activity and lessens inflammatory burden in a mouse model of rotenone-induced nigral neurodegeneration: Relevance to Parkinson's disease therapy.
+年份: 2019  类型: Journal Article
+摘要: BackgroundCaffeic acid phenethyl ester is found in honey bee propolis. It has immunomodulatory, anti-inflammatory and anti-cancer properties. Rotenone is a pesticide commonly used for inducing experimental Parkinson's disease (PD) due to complex I inhibition and microglia activating properties. The current study examined neuroprotective effect of caffeic acid against rotenone-induced neurodegeneration in groups of seven mice.MethodsMice received protective doses of caffeic acid (2.5, 5 or 10 mg/kg) daily and nine injections of rotenone (1 mg kg, subcutaneously) - every 48 h. Behavioral evaluation of motor function was done by a battery of tests including open-field test, cylinder test, pole test and rotarod test; all these tests showed motor impairment.ResultsAssay of striatal dopamine highlighted a significant decrease and increases in inflammatory markers. In addition, histopathological assessment of substantia nigra neurons demonstrated low immunostaining for tyrosine hydroxylase (TH) in rotenone treated mice. PCR analysis highlighted upregulation for genes encoding CD11b (a microglia surface antigen), cyclooxygenase-2 (COX-2), inducible nitric oxide synthase (iNOS) and nuclear factor-κB (NFκB). Treatment with caffeic acid (5 or 10 mg/kg) amended most of rotenone-induced motor deficits, lessened microglia expression and inflammatory mediators and improved the nigral TH immun
+
+---
+
+pid: PMID:30380506
+题目: The transition between turning and sitting in patients with Parkinson's disease: A wearable device detects an unexpected sequence of events.
+年份: 2019  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundWhen older adults turn to sit, about 80% of the subjects complete the turn before starting to sit i.e., a distinct-strategy, while in about 20%, part of the turning and sitting take place concurrently, i.e., an overlapping-strategy. A prolonged duration of the separation between tasks in the distinct-strategy (D-interval) and a prolonged duration of the overlap interval in overlapping-strategy (O-interval) are related to worse motor symptoms and poorer cognition. In the present study, we evaluated what strategy is employed by patients with Parkinson's disease (PD) when they transition from turning to sitting.Methods96 participants with PD performed turn to sit as part of the Timed Up and Go test, both with and without medications, while wearing a body-fixed sensor. We quantified the turn-to-sit transition and determined which strategy (distinct or overlapping) was employed. We then stratified the cases and used regression models adjusted for age, gender, height, and weight to examine the associations of the D-interval or O-interval with parkinsonian features and cognition.ResultsMost patients (66%) employed the overlapping-strategy, both off and on anti-parkinsonian medications. Longer O-intervals were associated with longer duration of PD, more severe PD motor symptoms, a higher postural-instability-gait-disturbance (PIGD) score, and worse freezing of gait. Longer D-

@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:26824660
+题目: Cell-Type-Specific Control of Brainstem Locomotor Circuits by Basal Ganglia.
+年份: 2016  类型: Research Support, N.I.H., Intramural; Research Support, Non-U.S. Gov't; research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: The basal ganglia (BG) are critical for adaptive motor control, but the circuit principles underlying their pathway-specific modulation of target regions are not well understood. Here, we dissect the mechanisms underlying BG direct and indirect pathway-mediated control of the mesencephalic locomotor region (MLR), a brainstem target of BG that is critical for locomotion. We optogenetically dissect the locomotor function of the three neurochemically distinct cell types within the MLR: glutamatergic, GABAergic, and cholinergic neurons. We find that the glutamatergic subpopulation encodes locomotor state and speed, is necessary and sufficient for locomotion, and is selectively innervated by BG. We further show activation and suppression, respectively, of MLR glutamatergic neurons by direct and indirect pathways, which is required for bidirectional control of locomotion by BG circuits. These findings provide a fundamental understanding of how BG can initiate or suppress a motor program through cell-type-specific regulation of neurons linked to specific actions.
+
+---
+
+pid: PMID:26835154
+题目: Freezing of gait associated with a corpus callosum lesion.
+年份: 2016  类型: Journal Article; Case Reports; case-report
+摘要: Freezing of gait (FoG) is a debilitating feature of Parkinson's disease and other parkinsonian disorders. This case demonstrates a variant of freezing of gait in a non-parkinsonian patient with a lesion of the anterior corpus callosum. The freezing improved with increased upper extremity sensory input, suggesting that compensatory circuits for use of somatosensory inputs from the arms to postural and locomotor centers were intact.
+
+---
+
+pid: PMID:26836515
+题目: Dissociable Effects of Dopamine on the Initial Capture and the Reactive Inhibition of Impulsive Actions in Parkinson's Disease.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Dopamine plays a key role in a range of action control processes. Here, we investigate how dopamine depletion caused by Parkinson disease (PD) and how dopamine restoring medication modulate the expression and suppression of unintended action impulses. Fifty-five PD patients and 56 healthy controls (HCs) performed an action control task (Simon task). PD patients completed the task twice, once withdrawn from dopamine medications and once while taking their medications. PD patients experienced similar susceptibility to making fast errors in conflict trials as HCs, but PD patients were less proficient compared with HCs at suppressing incorrect responses. Administration of dopaminergic medications had no effect on impulsive error rates but significantly improved the proficiency of inhibitory control in PD patients. We found no evidence that dopamine precursors and agonists affected action control in PD differently. Additionally, there was no clear evidence that individual differences in baseline action control (off dopamine medications) differentially responded to dopamine medications (i.e., no evidence for an inverted U-shaped performance curve). Together, these results indicate that dopamine depletion and restoration therapies directly modulate the reactive inhibitory control processes engaged to suppress interference from the spontaneously activated response impulses but exert no
+
+---
+
+pid: PMID:26842842
+题目: The Neural Basis of Postural Instability Gait Disorder Subtype of Parkinson's Disease: A PET and fMRI Study.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: AimsThe aim of this study is to further uncover the neural basis of postural instability gait disorder (PIGD) subtype of Parkinson's disease.MethodsWith F-18 fluorodeoxyglucose PET (FDG-PET), brain glucose metabolism of patients with PIGD (n = 15) was compared with healthy controls (n = 17) and tremor-dominant (TD) patients (n = 15), and the correlation between metabolism and PIGD symptoms was also assessed. Within PIGD symptom-correlated hypometabolic areas, the relationship of functional connectivity (FC) with motor and cognitive symptoms was examined by using functional MRI.ResultsCompared with controls, patients with PIGD displayed a distributed pattern of brain hypometabolism including striatal, frontal, and parietal areas. Relative to the pattern of TD patients, the pattern of patients with PIGD had additional metabolic decreases in caudate and inferior parietal lobule (IPL, Brodmann area [BA] 40). In PIGD group, the metabolic reductions in IPL (BA 40), middle frontal gyrus (MFG, BA 9) and fusiform gyrus (FG, BA 20) were associated with severe PIGD symptoms. Regions showing such correlation were chosen for further seed-based FC analysis. Decreased FC within the prefrontal-parietal network (between the MFG and IPL) was associated with severe PIGD symptoms.ConclusionThe involvement of the caudate, FG, and prefrontal-parietal network may be associated with the prominent gait
+
+---
+
+pid: PMID:26862915
+题目: Impaired Retention of Motor Learning of Writing Skills in Patients with Parkinson's Disease with Freezing of Gait.
+年份: 2016  类型: Comparative Study; Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundPatients with Parkinson's disease (PD) and freezing of gait (FOG) suffer from more impaired motor and cognitive functioning than their non-freezing counterparts. This underlies an even higher need for targeted rehabilitation programs in this group. However, so far it is unclear whether FOG affects the ability for consolidation and generalization of motor learning and thus the efficacy of rehabilitation.ObjectiveTo investigate the hallmarks of motor learning in people with FOG compared to those without by comparing the effects of an intensive motor learning program to improve handwriting.MethodsThirty five patients with PD, including 19 without and 16 with FOG received six weeks of handwriting training consisting of exercises provided on paper and on a touch-sensitive writing tablet. Writing training was based on single- and dual-task writing and was supported by means of visual target zones. To investigate automatization, generalization and retention of learning, writing performance was assessed before and after training in the presence and absence of cues and dual tasking and after a six-week retention period. Writing amplitude was measured as primary outcome measure and variability of writing and dual-task accuracy as secondary outcomes.ResultsSignificant learning effects were present on all outcome measures in both groups, both for writing under single- and dual-ta
+
+---
+
+pid: PMID:26872510
+题目: Potential of APDM mobility lab for the monitoring of the progression of Parkinson's disease.
+年份: 2016  类型: research-article; Review; Journal Article
+摘要: APDM's Mobility Lab system provides portable, validated, reliable, objective measures of balance and gait that are sensitive to Parkinson's disease (PD). In this review, we describe the potential of objective measures collected with the Mobility Lab system for tracking longitudinal progression of PD. Balance and gait are among the most important motor impairments influencing quality of life for people with PD. Mobility Lab uses body-worn, Opal sensors on the legs, trunk and arms during prescribed tasks, such as the instrumented Get Up and Go test or quiet stance, to quickly quantify the quality of balance and gait in the clinical environment. The same Opal sensors can be sent home with patients to continuously monitor the quality of their daily activities. Objective measures have the potential to monitor progression of mobility impairments in PD throughout its course to improve patient care and accelerate clinical trials.
+
+---
+
+pid: PMID:26880095
+题目: The pedunculopontine tegmental nucleus-A functional hypothesis from the comparative literature.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article
+摘要: We present data from animal studies showing that the pedunculopontine tegmental nucleus-conserved through evolution, compartmentalized, and with a complex pattern of inputs and outputs-has functions that involve formation and updates of action-outcome associations, attention, and rapid decision making. This is in contrast to previous hypotheses about pedunculopontine function, which has served as a basis for clinical interest in the pedunculopontine in movement disorders. Current animal literature points to it being neither a specifically motor structure nor a master switch for sleep regulation. The pedunculopontine is connected to basal ganglia circuitry but also has primary sensory input across modalities and descending connections to pontomedullary, cerebellar, and spinal motor and autonomic control systems. Functional and anatomical studies in animals suggest strongly that, in addition to the pedunculopontine being an input and output station for the basal ganglia and key regulator of thalamic (and consequently cortical) activity, an additional major function is participation in the generation of actions on the basis of a first-pass analysis of incoming sensory data. Such a function-rapid decision making-has very high adaptive value for any vertebrate. We argue that in developing clinical strategies for treating basal ganglia disorders, it is necessary to take an account of
+
+---
+
+pid: PMID:26883663
+题目: Postural sensory correlates of freezing of gait in Parkinson's disease.
+年份: 2016  类型: Journal Article
+摘要: IntroductionTo elucidate the unique patterns of postural sensory deficits contributing to freezing of gait (FOG) in patients with Parkinson's disease (PD) and to identify postural sensory modalities that correlate with FOG severity.MethodsTwenty-five PD patients with FOG, 22 PD patients without FOG, and 26 age-matched controls were evaluated using a sensory organization test and clinical measures including the Unified Parkinson's Disease Rating Scale motor score, Montreal Cognitive Assessment, Frontal Assessment Battery, Activities-specific Balance Confidence, Beck Anxiety Inventory, Beck Depression Inventory, and Berg Balance Scale. Multivariable logistic regression analysis was performed for posturographic parameters and possible confounders to determine postural sensory contributors to FOG. We also correlated FOG severity, measured using a New Freezing of Gait Questionnaire, with posturographic parameters.ResultsPD patients with FOG showed worse postural sensory processing compared with those without FOG. In particular, the inability to use the vestibular information (odds ratio [OR] 1.447; 95% confidential interval [CI]: 1.120, 1.869) and poor control over the perturbed somatosensory inputs (OR 2.904; 95% CI: 1.028, 8.202) significantly contributed to FOG. Among PD patients with FOG, FOG severity was correlated with higher reliance on visual information (ρ = -0.432, p = 0.0
+
+---
+
+pid: PMID:26889015
+题目: Neural Control of Walking in People with Parkinsonism.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; review-article; Review; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: People with Parkinson's disease exhibit debilitating gait impairments, including gait slowness, increased step variability, and poor postural control. A widespread supraspinal locomotor network including the cortex, cerebellum, basal ganglia, and brain stem contributes to the control of human locomotion, and altered activity of these structures underlies gait dysfunction due to Parkinson's disease.
+
+---
+
+pid: PMID:26909330
+题目: Relation of 18-F-Dopa PET with hypokinesia-rigidity, tremor and freezing in Parkinson's disease.
+年份: 2016  类型: research-article; Journal Article
+摘要: IntroductionIn this retrospective study concerning patients with Parkinson's disease (PD) scanned with 18-F-Dopa PET (N = 129), we looked for an association between reduced 18-F-Dopa uptake and the key PD symptoms tremor and hypokinesia-rigidity. We hypothesized to find a stronger correlation between dopaminergic depletion in the striatum and hypokinesia-rigidity compared to tremor.MethodsThe onset side of symptoms (documented for 102 patients) as well as the first registered UPDRS (available for 79 patients) was used to correlate with F-Dopa uptake values in the caudate nucleus and putamen in this large retrospective sample.ResultsReduced F-Dopa uptake was contralateral to hypokinesia-rigidity symptoms and correlated with its severity (quantified by UPDRS). For tremor severity, no correlation was seen with F-Dopa reduction. Furthermore, freezing of gait correlated with reduced F-Dopa uptake in the putamen of the right hemisphere.Conclusion and discussionOur results, obtained in a large patient group, provides support for the concept that tremor in PD is not only based on a dopamine related pathway but may rely on a different pathway.
+
+---
+
+pid: PMID:26911448
+题目: COPPADIS-2015 (COhort of Patients with PArkinson's DIsease in Spain, 2015), a global--clinical evaluations, serum biomarkers, genetic studies and neuroimaging--prospective, multicenter, non-interventional, long-term study on Parkinson's disease progression.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Multicenter Study; Journal Article
+摘要: BackgroundParkinson's disease (PD) is a progressive neurodegenerative disorder causing motor and non-motor symptoms that can affect independence, social adjustment and the quality of life (QoL) of both patients and caregivers. Studies designed to find diagnostic and/or progression biomarkers of PD are needed. We describe here the study protocol of COPPADIS-2015 (COhort of Patients with PArkinson's DIsease in Spain, 2015), an integral PD project based on four aspects/concepts: 1) PD as a global disease (motor and non-motor symptoms); 2) QoL and caregiver issues; 3) Biomarkers; 4) Disease progression.Methods/designObservational, descriptive, non-interventional, 5-year follow-up, national (Spain), multicenter (45 centers from 15 autonomous communities), evaluation study. Specific goals: (1) detailed study (clinical evaluations, serum biomarkers, genetic studies and neuroimaging) of a population of PD patients from different areas of Spain, (2) comparison with a control group and (3) follow-up for 5 years. COPPADIS-2015 has been specifically designed to assess 17 proposed objectives.Study populationapproximately 800 non-dementia PD patients, 600 principal caregivers and 400 control subjects. Study evaluations: (1) baseline includes motor assessment (e.g., Unified Parkinson's Disease Rating Scale part III), non-motor symptoms (e.g., Non-Motor Symptoms Scale), cognition (e.g., Parkin
+
+---
+
+pid: PMID:26924016
+题目: Altered neuronal activity in the pedunculopontine nucleus: An electrophysiological study in a rat model of Parkinson's disease.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: The pedunculopontine nucleus (PPN) is a new deep brain stimulation target for treating Parkinson's disease (PD). But the alterations of the PPN electrophysiological activities in PD are still debated. To investigate these potential alterations, extracellular single unit and local field potential (LFP) activities in the PPN were recorded in unilateral hemispheric 6-hydroxydopamine (6-OHDA) lesioned rats and in control rats, respectively. The spike activity results revealed two types of neurons (Type I and Type II) with distinct electrophysiological characteristics in the PPN. Both types of neurons had increased firing rate and changed firing pattern in lesioned rats when compared to control rats. Specifically, Type II neurons showed an increased firing rate when the rat state was switched from rest to locomotion. The LFP results demonstrated that lesioned rats had lower LFP power at 0.7-12Hz and higher power at 12-30Hz than did control animals in either resting or locomotor state. These findings provide a better understanding of the effects of 6-OHDA lesion on neuronal activities in the PPN and also provide a proof of the link between this structure and locomotion, which contributes to better understanding the mechanisms of the PPN functioning in the pathophysiology of PD.
+
+---
+
+pid: PMID:26924977
+题目: Bicycling and Walking are Associated with Different Cortical Oscillatory Dynamics.
+年份: 2016  类型: research-article; Journal Article
+摘要: Although bicycling and walking involve similar complex coordinated movements, surprisingly Parkinson's patients with freezing of gait typically remain able to bicycle despite severe difficulties in walking. This observation suggests functional differences in the motor networks subserving bicycling and walking. However, a direct comparison of brain activity related to bicycling and walking has never been performed, neither in healthy participants nor in patients. Such a comparison could potentially help elucidating the cortical involvement in motor control and the mechanisms through which bicycling ability may be preserved in patients with freezing of gait. The aim of this study was to contrast the cortical oscillatory dynamics involved in bicycling and walking in healthy participants. To this end, EEG and EMG data of 14 healthy participants were analyzed, who cycled on a stationary bicycle at a slow cadence of 40 revolutions per minute (rpm) and walked at 40 strides per minute (spm), respectively. Relative to walking, bicycling was associated with a stronger power decrease in the high beta band (23-35 Hz) during movement initiation and execution, followed by a stronger beta power increase after movement termination. Walking, on the other hand, was characterized by a stronger and persisting alpha power (8-12 Hz) decrease. Both bicycling and walking exhibited movement cycle-depen
+
+---
+
+pid: PMID:26945525
+题目: Measurement instruments to assess posture, gait, and balance in Parkinson's disease: Critique and recommendations.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundDisorders of posture, gait, and balance in Parkinson's disease (PD) are common and debilitating. This MDS-commissioned task force assessed clinimetric properties of existing rating scales, questionnaires, and timed tests that assess these features in PD.MethodsA literature review was conducted. Identified instruments were evaluated systematically and classified as "recommended," "suggested," or "listed." Inclusion of rating scales was restricted to those that could be used readily in clinical research and practice.ResultsOne rating scale was classified as "recommended" (UPDRS-derived Postural Instability and Gait Difficulty score) and 2 as "suggested" (Tinetti Balance Scale, Rating Scale for Gait Evaluation). Three scales requiring equipment (Berg Balance Scale, Mini-BESTest, Dynamic Gait Index) also fulfilled criteria for "recommended" and 2 for "suggested" (FOG score, Gait and Balance Scale). Four questionnaires were "recommended" (Freezing of Gait Questionnaire, Activities-specific Balance Confidence Scale, Falls Efficacy Scale, Survey of Activities, and Fear of Falling in the Elderly-Modified). Four tests were classified as "recommended" (6-minute and 10-m walk tests, Timed Up-and-Go, Functional Reach).ConclusionWe identified several questionnaires that adequately assess freezing of gait and balance confidence in PD and a number of useful clinical tests. However, 
+
+---
+
+pid: PMID:26956115
+题目: Deep Brain Stimulation for Movement Disorders of Basal Ganglia Origin: Restoring Function or Functionality?
+年份: 2016  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: Deep brain stimulation (DBS) is highly effective for both hypo- and hyperkinetic movement disorders of basal ganglia origin. The clinical use of DBS is, in part, empiric, based on the experience with prior surgical ablative therapies for these disorders, and, in part, driven by scientific discoveries made decades ago. In this review, we consider anatomical and functional concepts of the basal ganglia relevant to our understanding of DBS mechanisms, as well as our current understanding of the pathophysiology of two of the most commonly DBS-treated conditions, Parkinson's disease and dystonia. Finally, we discuss the proposed mechanism(s) of action of DBS in restoring function in patients with movement disorders. The signs and symptoms of the various disorders appear to result from signature disordered activity in the basal ganglia output, which disrupts the activity in thalamocortical and brainstem networks. The available evidence suggests that the effects of DBS are strongly dependent on targeting sensorimotor portions of specific nodes of the basal ganglia-thalamocortical motor circuit, that is, the subthalamic nucleus and the internal segment of the globus pallidus. There is little evidence to suggest that DBS in patients with movement disorders restores normal basal ganglia functions (e.g., their role in movement or reinforcement learning). Instead, it appears that high-freq
+
+---
+
+pid: PMID:26969628
+题目: A systematic review of the characteristics and validity of monitoring technologies to assess Parkinson's disease.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; Systematic Review; review-article; Journal Article
+摘要: BackgroundThere is growing interest in having objective assessment of health-related outcomes using technology-based devices that provide unbiased measurements which can be used in clinical practice and scientific research. Many studies have investigated the clinical manifestations of Parkinson's disease using such devices. However, clinimetric properties and clinical validation vary among the different devices.MethodsGiven such heterogeneity, we sought to perform a systematic review in order to (i) list, (ii) compare and (iii) classify technological-based devices used to measure motor function in individuals with Parkinson's disease into three groups, namely wearable, non-wearable and hybrid devices. A systematic literature search of the PubMed database resulted in the inclusion of 168 studies. These studies were grouped based on the type of device used. For each device we reviewed availability, use, reliability, validity, and sensitivity to change. The devices were then classified as (i) 'recommended', (ii) 'suggested' or (iii) 'listed' based on the following criteria: (1) used in the assessment of Parkinson's disease (yes/no), (2) used in published studies by people other than the developers (yes/no), and (3) successful clinimetric testing (yes/no).ResultsSeventy-three devices were identified, 22 were wearable, 38 were non-wearable, and 13 were hybrid devices. In accordance 
+
+---
+
+pid: PMID:26997007
+题目: Postural & striatal deformities in Parkinson`s disease: Are these rare?
+年份: 2016  类型: review-article; Review; Journal Article
+摘要: Parkinson`s disease (PD) is the most common neurodegenerative disease and is characterized by tremor, rigidity and akinesia. Diagnosis is clinical in the majority of the patients. Patients with PD may have stooped posture but some of them develop different types of postural and striatal deformities. Usually these deformities are more common in atypical parkinsonian disorders such as progressive supranuclear palsy and multisystem atrophy. But in many studies it has been highlighted that these may also be present in approximately one third of PD patients leading to severe disability. These include antecollis or dropped head, camptocormia, p0 isa syndrome, scoliosis, striatal hands and striatal toes. The pathogenesis of these deformities is a complex combination of central and peripheral influences such as rigidity, dystonia and degenerative skeletal changes. Duration of parkinsonism symptoms is an important risk factor and in majority of the patients these deformities are seen in advanced statge of the disease. The patients with such symptoms may initially respond to dopaminergic medications but if not intervened they may become fixed and difficult to treat. Pain and restriction of movement are most common clinical manifestations and these may mimick symptoms of musculoskeletal disorders like rheumatoid arthritis. Early diagnosis is important as the patients may respond to adjust
+
+---
+
+pid: PMID:27004625
+题目: Effect of three cueing devices for people with Parkinson's disease with gait initiation difficulties.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundFreezing of gait (FOG) remains one of the most common debilitating aspects of Parkinson's disease and has been linked to injuries, falls and reduced quality of life. Although commercially available portable cueing devices exist claiming to assist with overcoming freezing; their immediate effectiveness in overcoming gait initiation failure is currently unknown. This study investigated the effects of three different types of cueing device in people with Parkinson's disease who experience freezing.MethodsTwenty participants with idiopathic Parkinson's disease who experienced freezing during gait but who were able to walk short distances indoors independently were recruited. At least three attempts at gait initiation were recorded using a 10 camera Qualisys motion analysis system and four force platforms. Test conditions were; Laser Cane, sound metronome, vibrating metronome, walking stick and no intervention.ResultsDuring testing 12 of the 20 participants had freezing episodes, from these participants 100 freezing and 91 non-freezing trials were recorded. Clear differences in the movement patterns were seen between freezing and non-freezing episodes. The Laser Cane was most effective cueing device at improving the forwards/backwards and side to side movement and had the least number of freezing episodes. The walking stick also showed significant improvements compared to 
+
+---
+
+pid: PMID:27004660
+题目: Impaired synergic control of posture in Parkinson's patients without postural instability.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundPostural instability is one of most disabling motor symptoms in Parkinson's disease. Indices of multi-muscle synergies are new measurements of movement and postural stability.ObjectivesMulti-muscle synergies stabilizing vertical posture were studied in Parkinson's disease patients without clinical symptoms of postural instability (Hoehn-Yahr ≤ II) and age-matched controls. We tested the hypothesis that both synergy indices during quiet standing and synergy adjustments to self-triggered postural perturbations would be reduced in patients.MethodsEleven Parkinson's disease patients and 11 controls performed whole-body tasks while standing. Surface electromyography was used to quantify synergy indices stabilizing center of pressure shifts in the anterior-posterior direction during a load-release task.ResultsParkinson's disease patients showed a significantly lower percentage of variance in the muscle activation space accounted for by the first four principal components, significantly reduced synergy indices during steady state, and significantly reduced anticipatory synergy adjustments (a drop in the synergy index prior to the self-triggered unloading).ConclusionsThe study demonstrates for the first time that impaired synergic control in Parkinson's disease can be quantified in postural tasks, even in patients without clinical manifestations of postural instability. Syner
+
+---
+
+pid: PMID:27032775
+题目: Secondary task performance during challenging walking tasks and freezing episodes in Parkinson's disease.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Parkinson's disease (PD) patients likely use attentional strategies to compensate for their gait deficits, which increases the cognitive challenge of walking. The interplay between cognitive functions and gait can be investigated by evaluating the subject's attendance to a secondary task during walking. We hypothesized that the ability to attend to a secondary task decreases during challenging walking conditions in PD, particularly during freezing of gait (FOG)-episodes. Twenty-nine PD patients and 14 age-matched controls performed a simple reaction task that involved squeezing a ball as fast as possible in response to an auditory stimulus. Participants performed this reaction task during four conditions: (1) walking at preferred speed; (2) walking with short steps at preferred speed; (3) walking with short steps, as rapidly as possible; (4) making rapid full turns. We used surface electromyography to determine reaction times, and a pressure sensor located within the ball to determine movement onset. Reaction times of PD patients were slower (on average by 42 ms) compared to controls, regardless of the walking task. In both groups, reaction times were significantly longer during the turning condition compared to all other conditions. FOG-episodes were most often seen during the turning condition. In PD patients, reaction times were significantly longer during FOG-episodes compa
+
+---
+
+pid: PMID:27049389
+题目: Towards Real-Time Detection of Freezing of Gait Using Wavelet Transform on Wireless Accelerometer Data.
+年份: 2016  类型: research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article
+摘要: Injuries associated with fall incidences continue to pose a significant burden to persons with Parkinson's disease (PD) both in terms of human suffering and economic loss. Freezing of gait (FOG), which is one of the symptoms of PD, is a common cause of falls in this population. Although a significant amount of work has been performed to characterize/detect FOG using both qualitative and quantitative methods, there remains paucity of data regarding real-time detection of FOG, such as the requirements for minimum sensor nodes, sensor placement locations, and appropriate sampling period and update time. Here, the continuous wavelet transform (CWT) is employed to define an index for correctly identifying FOG. Since the CWT method uses both time and frequency components of a waveform in comparison to other methods utilizing only the frequency component, we hypothesized that using this method could lead to a significant improvement in the accuracy of FOG detection. We tested the proposed index on the data of 10 PD patients who experience FOG. Two hundred and thirty seven (237) FOG events were identified by the physiotherapists. The results show that the index could discriminate FOG in the anterior-posterior axis better than other two axes, and is robust to the update time variability. These results suggest that real time detection of FOG may be realized by using CWT of a single shank
+
+---
+
+pid: PMID:27053331
+题目: Update on Deep Brain Stimulation for Dyskinesia and Dystonia: A Literature Review.
+年份: 2016  类型: review-article; Review; Journal Article
+摘要: Deep brain stimulation (DBS) has been an established surgical treatment option for dyskinesia from Parkinson disease and for dystonia. The present article deals with the timing of surgical intervention, selecting an appropriate target, and minimizing adverse effects. We provide an overview of current evidences and issues for dyskinesia and dystonia as well as emerging DBS technology.
+
+---
+
+pid: PMID:27059036
+题目: A central processing sensory deficit with Parkinson's disease.
+年份: 2016  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Parkinson's disease (PD) is a progressive degenerative disease manifested by tremor, rigidity, bradykinesia, and postural instability. Deficits in proprioceptive integration are prevalent in individuals with PD, even at early stages of the disease. These deficits have been demonstrated primarily during investigations of reaching. Here, we investigated how PD affects sensory fusion of multiple modalities during upright standing. We simultaneously perturbed upright stance with visual, vestibular, and proprioceptive stimulation, to understand how these modalities are reweighted so that overall feedback remains suited to stabilizing upright stance in individuals with PD. Eight individuals with PD stood in a visual cave with a moving visual scene at 0.2 Hz while an 80-Hz vibratory stimulus was applied bilaterally to their Achilles tendons (stimulus turns on-off at 0.28 Hz) and a ±1 mA bilateral monopolar galvanic stimulus was applied at 0.36 Hz. The visual stimulus was presented at different amplitudes (0.2°, 0.8° rotation about ankle axis) to measure: the change in gain (weighting) to vision, an intramodal effect; and a simultaneous change in gain to vibration and galvanic stimulation, both intermodal effects. Trunk/leg gain relative to vision decreased when visual amplitude was increased, reflecting an intramodal visual effect. In contrast, when vibration was turned on/off, leg ga
+
+---
+
+pid: PMID:27069384
+题目: Optogenetic approaches to evaluate striatal function in animal models of Parkinson disease.
+年份: 2016  类型: research-article; Review; Journal Article
+摘要: Optogenetics refers to the ability to control cells that have been genetically modified to express light-sensitive ion channels. The introduction of optogenetic approaches has facilitated the dissection of neural circuits. Optogenetics allows for the precise stimulation and inhibition of specific sets of neurons and their projections with fine temporal specificity. These techniques are ideally suited to investigating neural circuitry underlying motor and cognitive dysfunction in animal models of human disease. Here, we focus on how optogenetics has been used over the last decade to probe striatal circuits that are involved in Parkinson disease, a neurodegenerative condition involving motor and cognitive abnormalities resulting from degeneration of midbrain dopaminergic neurons. The precise mechanisms underlying the striatal contribution to both cognitive and motor dysfunction in Parkinson disease are unknown. Although optogenetic approaches are somewhat removed from clinical use, insight from these studies can help identify novel therapeutic targets and may inspire new treatments for Parkinson disease. Elucidating how neuronal and behavioral functions are influenced and potentially rescued by optogenetic manipulation in animal models could prove to be translatable to humans. These insights can be used to guide future brain-stimulation approaches for motor and cognitive abnormal
+
+---
+
+pid: PMID:27070004
+题目: Impaired Switching from Self-Prepared  Actions in Mild Parkinson Disease.
+年份: 2015  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundPlanned and initiated actions frequently need to be terminated in favor of another action. It is known that many individuals with Parkinson's disease (PD) have more difficulty self-initiating movement (i.e., endogenously evoked movement)than moving in response to environmental stimuli (i.e., exogenously evoked movement). However, it is not known if individuals with PD display this same endogenous-exogenous asymmetry when needing to terminate, disengage, and reprogram movements.ObjectiveThis study used a novel reaction time (RT) paradigm to test whether patients with mild PD have subclinical deficits of endogenous movement initiation and endogenous movement reprogramming.MethodsTwelve non-demented individuals with PD on medication and 15 demographically similar healthy control (HC)participants completed an experimental paradigm that examined their RTs (key press) following self-selected valid action preparation (endogenous cues) versus valid exogenously presented cues. The paradigm also assessed participants' ability to rapidly stop their endogenous or exogenous preparation following an invalid cue and execute an alternative action (key press).ResultsParticipants with PD produced similar RTs as controls following endogenous and exogenous valid cues, and following invalid exogenous cues. However, following invalid endogenous cues, PD participants were slower than HC par
+
+---
+
+pid: PMID:27092242
+题目: A protocol to examine vision and gait in Parkinson's disease: impact of cognition and response to visual cues.
+年份: 2015  类型: research-article; Journal Article
+摘要: Background Cognitive and visual impairments are common in Parkinson's disease (PD) and contribute to gait deficit and falls. To date, cognition and vision in gait in PD have been assessed separately. Impact of both functions (which we term 'visuo-cognition') on gait however is likely interactive and can be tested using visual sampling (specifically saccadic eye movements) to provide an online behavioural measure of performance. Although experiments using static paradigms show saccadic impairment in PD, few studies have quantified visual sampling during dynamic motor tasks such as gait. This article describes a protocol developed for testing visuo-cognition during gait in order to examine the: 1) independent roles of cognition and vision in gait in PD, 2) interaction between both functions, and 3) role of visuo-cognition in gait in PD. Methods Two groups of older adults (≥50 years old) were recruited; non-demented people with PD (n=60) and age-matched controls (n=40). Participants attended one session and a sub-group (n=25) attended two further sessions in order to establish mobile eye-tracker reliability. Participants walked in a gait laboratory under different attentional (single and dual task), environmental (walk straight, through a door and turning), and cueing (no visual cues and visual cues) conditions. Visual sampling was recorded using synchronised mobile eye-tracker an
+
+---
+
+pid: PMID:27094039
+题目: The quality of turning in Parkinson's disease: a compensatory strategy to prevent postural instability?
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundThe ability to turn while walking is essential for daily living activities. Turning is slower and more steps are required to complete a turn in people with Parkinson's disease (PD) compared to control subjects but it is unclear whether this altered strategy is pathological or compensatory. The aim of our study is to characterize the dynamics of postural stability during continuous series of turns while walking at various speeds in subjects with PD compared to control subjects. We hypothesize that people with PD slow their turns to compensate for impaired postural stability.MethodMotion analysis was used to compare gait kinematics between 12 subjects with PD in their ON state and 19 control subjects while walking continuously on a route composed of short, straight paths interspersed with eleven right and left turns between 30 and 180°. We asked subjects to perform the route at three different speeds: preferred, faster, and slower. Features describing gait spatio-temporal parameters and turning characteristics were extracted from marker trajectories. In addition, to quantify dynamic stability during turns we calculated the distance between the lateral edge of the base of support and the body center of mass, as well as the extrapolated body center of mass.ResultsSubjects with PD had slower turns and did not widen the distance between their feet for turning, compared to c
+
+---
+
+pid: PMID:27100197
+题目: Cholinergic Mesopontine Signals Govern Locomotion and Reward through Dissociable Midbrain Pathways.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: The mesopontine tegmentum, including the pedunculopontine and laterodorsal tegmental nuclei (PPN and LDT), provides major cholinergic inputs to midbrain and regulates locomotion and reward. To delineate the underlying projection-specific circuit mechanisms, we employed optogenetics to control mesopontine cholinergic neurons at somata and at divergent projections within distinct midbrain areas. Bidirectional manipulation of PPN cholinergic cell bodies exerted opposing effects on locomotor behavior and reinforcement learning. These motor and reward effects were separable via limiting photostimulation to PPN cholinergic terminals in the ventral substantia nigra pars compacta (vSNc) or to the ventral tegmental area (VTA), respectively. LDT cholinergic neurons also form connections with vSNc and VTA neurons; however, although photo-excitation of LDT cholinergic terminals in the VTA caused positive reinforcement, LDT-to-vSNc modulation did not alter locomotion or reward. Therefore, the selective targeting of projection-specific mesopontine cholinergic pathways may offer increased benefit in treating movement and addiction disorders.
+
+---
+
+pid: PMID:27103479
+题目: Freezing of gait that disappears: Should there be rest before rehab?
+年份: 2016  类型: Letter; Research Support, Non-U.S. Gov't; research-article
+摘要: （无摘要）
+
+---
+
+pid: PMID:27104136
+题目: Associations between mobility, cognition and callosal integrity in people with parkinsonism.
+年份: 2016  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Falls in people with parkinsonism are likely related to both motor and cognitive impairments. In addition to idiopathic Parkinson's disease (PD), some older adults have lower body parkinsonism (a frontal gait disorder), characterized by impaired lower extremity balance and gait as well as cognition, but without tremor or rigidity. Neuroimaging during virtual gait suggests that interhemispheric, prefrontal cortex communication may be involved in locomotion, but contributions of neuroanatomy connecting these regions to objective measures of gait in people with parkinsonism remains unknown. Our objectives were to compare the integrity of fiber tracts connecting prefrontal and sensorimotor cortical regions via the corpus callosum in people with two types of parkinsonism and an age-matched control group and to relate integrity of these callosal fibers with clinical and objective measures of mobility and cognition. We recruited 10 patients with frontal gait disorders, 10 patients with idiopathic PD and 10 age-matched healthy control participants. Participants underwent cognitive and mobility testing as well as diffusion weighted magnetic resonance imaging to quantify white matter microstructural integrity of interhemispheric fiber tracts. People with frontal gait disorders displayed poorer cognitive performance and a slower, wider-based gait compared to subjects with PD and age-match

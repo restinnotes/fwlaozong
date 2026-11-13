@@ -1,0 +1,223 @@
+下面是检索得到的一批文献（题目、年份、类型、摘要）。请判断每篇对回答研究问题有没有用。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+判定：
+- include：提供了回答研究问题需要的直接证据（原始研究数据、荟萃分析），或者是该问题的重要综述/理论文章。
+- maybe：可能有用的间接或交叉证据，摘要看不出来。
+- exclude：和研究问题无关，或只是顺带提到。
+宁可多收不要漏收：不确定时选 maybe。
+
+只输出一个 JSON：{"items":[{"pid":"","decision":"include|maybe|exclude","reason":"一句话"}]}，每篇一项，pid 照抄。
+
+【文献】
+pid: PMID:37862221
+题目: The autophagy protein Atg9 functions in glia and contributes to parkinsonian symptoms in a Drosophila model of Parkinson's disease.
+年份: 2024  类型: research-article; Journal Article
+摘要: Parkinson's disease is a progressive neurodegenerative disease characterized by motor deficits, dopaminergic neuron loss, and brain accumulation of α-synuclein aggregates called Lewy bodies. Dysfunction in protein degradation pathways, such as autophagy, has been demonstrated in neurons as a critical mechanism for eliminating protein aggregates in Parkinson's disease. However, it is less well understood how protein aggregates are eliminated in glia, the other cell type in the brain. In the present study, we show that autophagy-related gene 9 (Atg9), the only transmembrane protein in the autophagy machinery, is highly expressed in Drosophila glia from adult brain. Results from immunostaining and live cell imaging analysis reveal that a portion of Atg9 localizes to the trans-Golgi network, autophagosomes, and lysosomes in glia. Atg9 is persistently in contact with these organelles. Lacking glial atg9 reduces the number of omegasomes and autophagosomes, and impairs autophagic substrate degradation. This suggests that glial Atg9 participates in the early steps of autophagy, and hence the control of autophagic degradation. Importantly, loss of glial atg9 induces parkinsonian symptoms in Drosophila including progressive loss of dopaminergic neurons, locomotion deficits, and glial activation. Our findings identify a functional role of Atg9 in glial autophagy and establish a potential 
+
+---
+
+pid: PMID:37864439
+题目: Combined Reactive and Volitional Step Training Improves Balance Recovery and Stepping Reaction Time in People With Parkinson's Disease: A Randomised Controlled Trial.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; research-article; Randomized Controlled Trial; Journal Article
+摘要: BackgroundFalls are frequent and devastating events for people with Parkinson's disease (PD). Here, we investigated whether laboratory-based reactive step training combined with home-based volitional step training was effective in improving balance recovery and stepping ability in people with PD.MethodsForty-four people with idiopathic PD were randomized into intervention or control groups. Intervention participants performed unsupervised volitional step training using home-based exergames (80+ minutes/week) for 12 weeks and attended reactive step training sessions in which they were exposed to slip and trip perturbations at 4 and 8 weeks. Control participants continued their usual activities. Primary outcomes were balance recovery following an induced-trip/slip and choice stepping reaction time (CSRT) at the 12-week reassessment. Secondary outcomes comprised sensorimotor, balance, cognitive, psychological, complex stepping (inhibitory CSRT and Stroop Stepping Test [SST]), gait measures, and falls experienced in everyday life.ResultsAt reassessment, the intervention group had significantly fewer total laboratory-induced falls and faster CSRT compared to the control group (P P ConclusionCombined volitional and reactive step training improved balance recovery from an induced-perturbation, voluntary stepping time, and stepping accuracy in cognitively challenging tests in people wi
+
+---
+
+pid: PMID:37864752
+题目: Correction to: Detection and prediction of freezing of gait with wearable sensors in Parkinson's disease.
+年份: 2024  类型: Published Erratum
+摘要: （无摘要）
+
+---
+
+pid: PMID:37866407
+题目: Activation of cyclic AMP signaling pathway in dopaminergic neurons rescues locomotion defects in a Drosophila larval model of Parkinson's disease.
+年份: 2024  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: Parkinson's disease (PD) is a neurodegenerative disease showing uncontrollable motor symptoms that are primarily caused by the progressive loss of dopaminergic neurons in the brain. Currently no treatment exists to prevent PD progression. Therefore, discovery of new neuroprotective strategies still has great potential to benefit PD patients. A handful of studies show that activation of cAMP pathways is neuroprotective against PD progression. However, the neuroprotective role of this signaling cascade specifically in DA neurons has not been explored. In this study, fruit fly Drosophila melanogaster was used because of its sophisticated and powerful genetic approaches, especially with related to cAMP signaling pathway. We have investigated molecular mechanisms of neuroprotection in a fly larval model of PD by administering an environmental PD toxin rotenone. Increased cAMP signaling in the dunce mutant fly carrying defects in phosphodiesterase (PDE) gene, is neuroprotective against rotenone-induced locomotion deficits. Furthermore, the neuroprotective role of cAMP signaling specifically in DA neurons has been studied as it has not been explored. By using transgenic flies expressing designer receptors exclusively activated by designer drugs (DREADDs), we have shown that an increase of cAMP levels in DA neurons rescues rotenone-induced locomotion deficits. We also showed that this 
+
+---
+
+pid: PMID:37867618
+题目: Embodied bidirectional simulation of a spiking cortico-basal ganglia-cerebellar-thalamic brain model and a mouse musculoskeletal body model distributed across computers including the supercomputer Fugaku.
+年份: 2023  类型: research-article; Journal Article
+摘要: Embodied simulation with a digital brain model and a realistic musculoskeletal body model provides a means to understand animal behavior and behavioral change. Such simulation can be too large and complex to conduct on a single computer, and so distributed simulation across multiple computers over the Internet is necessary. In this study, we report our joint effort on developing a spiking brain model and a mouse body model, connecting over the Internet, and conducting bidirectional simulation while synchronizing them. Specifically, the brain model consisted of multiple regions including secondary motor cortex, primary motor and somatosensory cortices, basal ganglia, cerebellum and thalamus, whereas the mouse body model, provided by the Neurorobotics Platform of the Human Brain Project, had a movable forelimb with three joints and six antagonistic muscles to act in a virtual environment. Those were simulated in a distributed manner across multiple computers including the supercomputer Fugaku, which is the flagship supercomputer in Japan, while communicating via Robot Operating System (ROS). To incorporate models written in C/C++ in the distributed simulation, we developed a C++ version of the rosbridge library from scratch, which has been released under an open source license. These results provide necessary tools for distributed embodied simulation, and demonstrate its possibil
+
+---
+
+pid: PMID:37868930
+题目: Prevention of Falls in Parkinson's Disease: Guidelines and Gaps.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: BackgroundPeople living with Parkinson's disease (PD) have a high risk for falls.ObjectiveTo examine gaps in falls prevention targeting people with PD as part of the Task Force on Global Guidelines for Falls in Older Adults.MethodsA Delphi consensus process was used to identify specific recommendations for falls in PD. The current narrative review was conducted as educational background with a view to identifying gaps in fall prevention.ResultsA recent Cochrane review recommended exercises and structured physical activities for PD; however, the types of exercises and activities to recommend and PD subgroups likely to benefit require further consideration. Freezing of gait, reduced gait speed, and a prior history of falls are risk factors for falls in PD and should be incorporated in assessments to identify fall risk and target interventions. Multimodal and multi-domain fall prevention interventions may be beneficial. With advanced or complex PD, balance and strength training should be administered under supervision. Medications, particularly cholinesterase inhibitors, show promise for falls prevention. Identifying how to engage people with PD, their families, and health professionals in falls education and implementation remains a challenge. Barriers to the prevention of falls occur at individual, environmental, policy, and health system levels.ConclusionEffective mitigation of
+
+---
+
+pid: PMID:37872145
+题目: A non-canonical striatopallidal Go pathway that supports motor control.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: In the classical model of the basal ganglia, direct pathway striatal projection neurons (dSPNs) send projections to the substantia nigra (SNr) and entopeduncular nucleus to regulate motor function. Recent studies have re-established that dSPNs also possess axon collaterals within the globus pallidus (GPe) (bridging collaterals), yet the significance of these collaterals for behavior is unknown. Here we use in vivo optical and chemogenetic tools combined with deep learning approaches in mice to dissect the roles of dSPN GPe collaterals in motor function. We find that dSPNs projecting to the SNr send synchronous motor-related information to the GPe via axon collaterals. Inhibition of native activity in dSPN GPe terminals impairs motor activity and function via regulation of Npas1 neurons. We propose a model by which dSPN GPe axon collaterals (striatopallidal Go pathway) act in concert with the canonical terminals in the SNr to support motor control by inhibiting Npas1 neurons.
+
+---
+
+pid: PMID:37872986
+题目: A review of emergent intelligent systems for the detection of Parkinson's disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is a neurodegenerative disorder affecting people worldwide. The PD symptoms are divided into motor and non-motor symptoms. Detection of PD is very crucial and essential. Such challenges can be overcome by applying artificial intelligence to diagnose PD. Many studies have also proposed the implementation of computer-aided diagnosis for the detection of PD. This systematic review comprehensively analyzed all appropriate algorithms for detecting and assessing PD based on the literature from 2012 to 2023 which are conducted as per PRISMA model. This review focused on motor symptoms, namely handwriting dynamics, voice impairments and gait, multimodal features, and brain observation using single photon emission computed tomography, magnetic resonance and electroencephalogram signals. The significant challenges are critically analyzed, and appropriate recommendations are provided. The critical discussion of this review article can be helpful in today's PD community in such a way that it allows clinicians to provide proper treatment and timely medication.
+
+---
+
+pid: PMID:37876795
+题目: LRRK2 G2019S promotes astrocytic inflammation induced by oligomeric α-synuclein through NF-κB pathway.
+年份: 2023  类型: research-article; Journal Article
+摘要: Parkinson's disease (PD) is characterized by the irreversible loss of dopaminergic neurons and the accumulation of α-synuclein in Lewy bodies. The oligomeric α-synuclein (O-αS) is the most toxic form of α-synuclein species, and it has been reported to be a robust inflammatory mediator. Mutations in Leucine-Rich Repeat Kinase 2 (LRRK2) are also genetically linked to PD and neuroinflammation. However, how O-αS and LRRK2 interact in glial cells remains unclear. Here, we reported that LRRK2 G2019S mutation, which is one of the most frequent causes of familial PD, enhanced the effects of O-αS on astrocytes both in vivo and in vitro. Meanwhile, inhibition of LRRK2 kinase activity could relieve the inflammatory effects of both LRRK2 G2019S and O-αS. We also demonstrated that nuclear factor κB (NF-κB) pathway might be involved in the neuroinflammatory responses. These findings revealed that inhibition of LRRK2 kinase activity may be a viable strategy for suppressing neuroinflammation in PD.
+
+---
+
+pid: PMID:37879897
+题目: Are patients with GBA-Parkinson disease good candidates for deep brain stimulation? A longitudinal multicentric study on a large Italian cohort.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; research-article; Multicenter Study; Journal Article
+摘要: BackgroundGBA variants increase the risk of developing Parkinson disease (PD) and influence its outcome. Deep brain stimulation (DBS) is a recognised therapeutic option for advanced PD. Data on DBS long-term outcome in GBA carriers are scarce.ObjectiveTo elucidate the impact of GBA variants on long-term DBS outcome in a large Italian cohort.MethodsWe retrospectively recruited a multicentric Italian DBS-PD cohort and assessed: (1) GBA prevalence; (2) pre-DBS clinical features; and (3) outcomes of motor, cognitive and other non-motor features up to 5 years post-DBS.ResultsWe included 365 patients with PD, of whom 73 (20%) carried GBA variants. 5-year follow-up data were available for 173 PD, including 32 mutated subjects. GBA-PD had an earlier onset and were younger at DBS than non-GBA-PD. They also had shorter disease duration, higher occurrence of dyskinesias and orthostatic hypotension symptoms.At post-DBS, both groups showed marked motor improvement, a significant reduction of fluctuations, dyskinesias and impulsive-compulsive disorders (ICD) and low occurrence of most complications. Only cognitive scores worsened significantly faster in GBA-PD after 3 years. Overt dementia was diagnosed in 11% non-GBA-PD and 25% GBA-PD at 5-year follow-up.ConclusionsEvaluation of long-term impact of GBA variants in a large Italian DBS-PD cohort supported the role of DBS surgery as a valid th
+
+---
+
+pid: PMID:37881362
+题目: Enhanced brain functional connectivity and activation after 12-week Tai Chi-based action observation training in patients with Parkinson's disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: IntroductionMotor-cognitive interactive interventions, such as action observation training (AOT), have shown great potential in restoring cognitive function and motor behaviors. It is expected that an advanced AOT incorporating specific Tai Chi movements with continuous and spiral characteristics can facilitate the shift from automatic to intentional actions and thus enhance motor control ability for early-stage PD. Nonetheless, the underlying neural mechanisms remain unclear. The study aimed to investigate changes in brain functional connectivity (FC) and clinical improvement after 12 weeks of Tai Chi-based action observation training (TC-AOT) compared to traditional physical therapy (TPT).MethodsThirty early-stage PD patients were recruited and randomly assigned to the TC-AOT group (N = 15) or TPT group (N = 15). All participants underwent resting-state functional magnetic resonance imaging (rs-fMRI) scans before and after 12 weeks of training and clinical assessments. The FCs were evaluated by seed-based correlation analysis based on the default mode network (DMN). The rehabilitation effects of the two training methods were compared while the correlations between significant FC changes and clinical improvement were investigated.ResultsThe results showed that the TC-AOT group exhibited significantly increased FCs between the dorsal medial prefrontal cortex and cerebellum crus
+
+---
+
+pid: PMID:37887004
+题目: Metabolic Basis of Circadian Dysfunction in Parkinson's Disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is one of the most common neurodegenerative disorders. The management of PD is a challenging aspect for general physicians and neurologists. It is characterized by the progressive loss of dopaminergic neurons. Impaired α-synuclein secretion and dopamine release may cause mitochondrial dysfunction and perturb energy metabolism, subsequently altering the activity and survival of dopaminergic neurons, thus perpetuating the neurodegenerative process in PD. While the etiology of PD remains multifactorial, emerging research indicates a crucial role of circadian dysfunction in its pathogenesis. Researchers have revealed that circadian dysfunction and sleep disorders are common among PD subjects and disruption of circadian rhythms can increase the risk of PD. Hence, understanding the findings of circadian biology from translational research in PD is important for reducing the risk of neurodegeneration and for improving the quality of life. In this review, we discuss the intricate relationship between circadian dysfunction in cellular metabolism and PD by summarizing the evidence from animal models and human studies. Understanding the metabolic basis of circadian dysfunction in PD may shed light on novel therapeutic approaches to restore circadian rhythm, preserve dopaminergic function, and ameliorate disease progression. Further investigation into the complex i
+
+---
+
+pid: PMID:37891141
+题目: Effect of musical cues on gait in individuals with Parkinson disease with comorbid dementia.
+年份: 2024  类型: research-article; Journal Article; Research Support, N.I.H., Extramural
+摘要: BackgroundIndividuals with Parkinson disease and comorbid dementia (PDD) demonstrate gait impairments, but little is known about how these individuals respond to interventions for gait dysfunction. Rhythmic auditory stimulation (RAS), which utilizes music or other auditory cues to alter gait, has been shown to be effective for improving gait in individuals with PD without dementia, but has not been explored in individuals with PDD.Research questionCan individuals with PDD modulate their gait in response to music and mental singing cues?MethodsThis single center, cross-sectional, interventional study included 17 individuals with PDD. Participants received Music and Mental singing cues at tempos of 90 %, 100 %, 110 %, and 120 % of their uncued walking cadence. Participants were instructed to walk to the beat of the song. Gait variables were collected using APDM Opal sensors. Data were analyzed using mixed effect models to explore the impact of tempo and cue type (Music vs Mental) on selected gait parameters of velocity, cadence, and stride length.ResultsMixed effects models showed a significant effect of tempo but not for cue type for velocity (F=11.51, p < .001), cadence (F=11.13, p < .001), and stride length (F=5.68, p = .002). When looking at the marginal means, velocity at a cue rate of 90 % was significantly different from 100 %, indicating participants walked slower with a 
+
+---
+
+pid: PMID:37892126
+题目: Stalling the Course of Neurodegenerative Diseases: Could Cyanobacteria Constitute a New Approach toward Therapy?
+年份: 2023  类型: Research Support, Non-U.S. Gov't; review-article; Review; Journal Article
+摘要: Neurodegenerative diseases (NDs) are characterized by progressive and irreversible neuronal loss, accompanied by a range of pathological pathways, including aberrant protein aggregation, altered energy metabolism, excitotoxicity, inflammation, and oxidative stress. Some of the most common NDs include Alzheimer's Disease (AD), Parkinson's Disease (PD), Multiple Sclerosis (MS), Amyotrophic Lateral Sclerosis (ALS), and Huntington's Disease (HD). There are currently no available cures; there are only therapeutic approaches that ameliorate the progression of symptoms, which makes the search for new drugs and therapeutic targets a constant battle. Cyanobacteria are ancient prokaryotic oxygenic phototrophs whose long evolutionary history has resulted in the production of a plethora of biomedically relevant compounds with anti-inflammatory, antioxidant, immunomodulatory, and neuroprotective properties, that can be valuable in this field. This review summarizes the major NDs and their pathophysiology, with a focus on the anti-neurodegenerative properties of cyanobacterial compounds and their main effects.
+
+---
+
+pid: PMID:37893051
+题目: Extrapyramidal Side Effects with Chronic Atypical Antipsychotic Can Be Predicted by Labeling Pattern of FosB and phosphoThr34-DARPP-32 in Nucleus Accumbens.
+年份: 2023  类型: research-article; Journal Article
+摘要: Extrapyramidal side effects (EPS) can be induced by neuroleptics that regulate the expression of transcription factor FosB and dopaminergic mediator DARPP-32 in the striatum. However, the long-term neurobiological changes in striatal projection neurons resulting from a cumulative dosage of typical and atypical antipsychotics are poorly understood. The present study aimed to determine the differential and long-lasting changes in FosB distribution and DARPP-32 phosphorylation in the striatum and nucleus accumbens (NAc) associated with chronic antipsychotic-induced EPS. Male C57Bl/6J mice received daily injections of Olanzapine (Olz, 15 mg/kg), Clozapine (Clz, 20 mg/kg), or Haloperidol (Hal, 1 mg/kg), for a period of 11 weeks with a 4-day withdrawal period before the last dosage. Catalepsy for detection of EPS, along with open-field and rotarod tests, were assessed as behavioral correlates of motor responses. Additionally, FosB and phosphorylated-DARPP-32 immunohistochemistry were examined in striatal regions after treatment. All antipsychotics produced catalepsy and reduced open-field exploration, such as impaired rota-rod performance after Olz and Hal. The washout period was critical for Clz-induced side effects reduction. Both Olz and Clz increased FosB in NAc Shell-region, and phosphoThr34-DARPP-32 in NAc. Only Clz reduced phosphoThr75-DARPP-32 in the dorsal striatum and showe
+
+---
+
+pid: PMID:37899049
+题目: Clinical assessment of upper limb impairments and functional capacity in Parkinson's disease: a systematic review.
+年份: 2023  类型: research-article; Systematic Review; Journal Article
+摘要: BackgroundParkinson's disease (PD) may progressively reduce the upper limb's functionality. Currently, there is no standardized upper limb functional capacity assessment in PD in the rehabilitation field.ObjectiveTo identify specific outcome measurements to assess upper limbs in PD and access functional capacity.MethodsWe systematically reviewed and analyzed the literature in English published from August/2012 to August/2022 according to PRISMA. The following keywords were used in our search: "upper limbs" OR "upper extremity" and "Parkinson's disease." Two researchers searched independently, including studies accordingly to our inclusion and exclusion criteria. Registered at PROSPERO CRD42021254486.ResultsWe found 797 studies, and 50 were included in this review (n = 2.239 participants in H&Y stage 1-4). The most common upper limbs outcome measures found in the studies were: (i) UPDRS-III and MDS-UPDRS to assess the severity and progression of PD motor symptoms (tremor, bradykinesia, and rigidity) (ii) Nine Hole Peg Test and Purdue Pegboard Test to assess manual dexterity; (iii) Spiral test and Funnel test to provoke and assess freezing of upper limbs; (iv) Technology assessment such as wearables sensors, apps, and other device were also found.ConclusionWe found evidence to support upper limb impairments assessments in PD. However, there is still a large shortage of specific t
+
+---
+
+pid: PMID:37899134
+题目: Cholinergic centro-cingulate network in Parkinson disease and normal aging.
+年份: 2023  类型: research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: Decreased cholinergic binding within the recently identified centro-cingulate brain network robustly has been shown to robustly correlate with the severity of cognitive impairment in Parkinson disease (PD). This network with key hubs within the cingulum, operculum and peri-central cortical regions also correlates with elements of parkinsonian motor impairments, including postural instability and gait difficulties, such as falls or freezing. MRI neuroimaging studies have shown that the anterior midcingulate cortex is a key node for cognitive aspects of movement generation, i.e., intentional motor control. Recent evidence also suggests a novel aspect of organization of primary motor cortex, describing "effector" regions for fine movement control intercalated with interlinked "inter-effector" regions devoted to whole-body control. A distinguishing feature of inter-effector regions is tight linkage to the cingular and opercular regions. Such inter-effector regions have been proposed to be part of a greater somato-cognitive action network necessary for integration of goals and movement. Recent evidence also points to vulnerabilities of cholinergic nerve terminals in the centro-cingulate network in older non-PD adults. These features of normal aging underscore that cortical cholinergic terminal losses in age-associated neurodegenerative disorders are likely not exclusively the result
+
+---
+
+pid: PMID:37900610
+题目: Usability and utility of a remote monitoring system to support physiotherapy for people with Parkinson's disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: BackgroundPhysiotherapy for persons with Parkinson's disease (PwPD) could benefit from objective and continuous tracking of physical activity and falls in daily life.ObjectivesWe designed a remote monitoring system for this purpose and describe the experiences of PwPD and physiotherapists who used the system in daily clinical practice.MethodsTwenty-one PwPD (15 men) wore a sensor necklace to passively record physical activity and falls for 6 weeks. They also used a smartphone app to self-report daily activities, (near-)falls and medication intake. They discussed those data with their PD-specialized physiotherapist (n = 9) during three regular treatment sessions. User experiences and aspects to be improved were gathered through interviews with PwPD and physiotherapists, resulting in system updates. The system was evaluated in a second pilot with 25 new PwPD (17 men) and eight physiotherapists.ResultsWe applied thematic analysis to the interview data resulting in two main themes: usability and utility. First, the usability of the system was rated positively, with the necklace being easy to use. However, some PwPD with limited digital literacy or cognitive impairments found the app unclear. Second, the perceived utility of the system varied among PwPD. While many PwPD were motivated to increase their activity level, others were not additionally motivated because they perceived the
+
+---
+
+pid: PMID:37905594
+题目: Carpesii fructus extract exhibits neuroprotective effects in cellular and Caenorhabditis elegans models of Parkinson's disease.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: ObjectiveParkinson's disease (PD) is a debilitating neurodegenerative disorder characterized by the progressive loss of dopaminergic neurons in the substantia nigra. Despite extensive research, no definitive cure or effective disease-modifying treatment for PD exists to date. Therefore, the identification of novel therapeutic agents with neuroprotective properties is of utmost importance. Here, we aimed to investigate the potential neuroprotective effects of Carpesii fructus extract (CFE) in both cellular and Caenorhabditis elegans (C. elegans) models of PD.MethodsThe neuroprotective effect of CFE in H2O2- or 6-OHDA-induced PC-12 cells and α-synuclein-overexpressing PC-12 cells were investigated by determining the cell viability, mitochondrial damage, reactive oxygen species (ROS) production, apoptosis, and α-synuclein expression. In NL5901, BZ555, and N2 worms, the expression of α-synuclein, motive ability, the viability of dopaminergic neurons, lifespan, and aging-related phenotypes were investigated. The signaling pathway was detected by Western blotting and validated by employing small inhibitors and RNAi bacteria.ResultsIn cellular models of PD, CFE significantly attenuated H2O2- or 6-OHDA-induced toxicity, as evidenced by increased cell viability and reduced apoptosis rate. In addition, CFE treatment suppressed ROS generation and restored mitochondrial membrane potential,
+
+---
+
+pid: PMID:37905876
+题目: The dual role of striatal interneurons: circuit modulation and trophic support for the basal ganglia.
+年份: 2024  类型: review-article; Journal Article
+摘要: AbstractStriatal interneurons play a key role in modulating striatal-dependent behaviors, including motor activity and reward and emotional processing. Interneurons not only provide modulation to the basal ganglia circuitry under homeostasis but are also involved in changes to plasticity and adaptation during disease conditions such as Parkinson's or Huntington's disease. This review aims to summarize recent findings regarding the role of striatal cholinergic and GABAergic interneurons in providing circuit modulation to the basal ganglia in both homeostatic and disease conditions. In addition to direct circuit modulation, striatal interneurons have also been shown to provide trophic support to maintain neuron populations in adulthood. We discuss this interesting and novel role of striatal interneurons, with a focus on the maintenance of adult dopaminergic neurons from interneuron-derived sonic-hedgehog.
+
+---
+
+pid: PMID:37907554
+题目: White matter changes in Parkinson's disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is the second most common neurodegenerative disease after Alzheimer's disease (AD). It is characterized by a progressive loss of dopaminergic neurons in the substantia nigra pars compacta (SNc) and the formation of Lewy bodies (LBs). Although PD is primarily considered a gray matter (GM) disease, alterations in white matter (WM) have gained increasing attention in PD research recently. Here we review evidence collected by magnetic resonance imaging (MRI) techniques which indicate WM abnormalities in PD, and discuss the correlations between WM changes and specific PD symptoms. Then we summarize transcriptome and genome studies showing the changes of oligodendrocyte (OLs)/myelin in PD. We conclude that WM abnormalities caused by the changes of myelin/OLs might be important for PD pathology, which could be potential targets for PD treatment.
+
+---
+
+pid: PMID:37908703
+题目: Computerized analysis of hypomimia and hypokinetic dysarthria for improved diagnosis of Parkinson's disease.
+年份: 2023  类型: research-article; Journal Article
+摘要: Background and objectiveAn aging society requires easy-to-use approaches for diagnosis and monitoring of neurodegenerative disorders, such as Parkinson's disease (PD), so that clinicians can effectively adjust a treatment policy and improve patients' quality of life. Current methods of PD diagnosis and monitoring usually require the patients to come to a hospital, where they undergo several neurological and neuropsychological examinations. These examinations are usually time-consuming, expensive, and performed just a few times per year. Hence, this study explores the possibility of fusing computerized analysis of hypomimia and hypokinetic dysarthria (two motor symptoms manifested in the majority of PD patients) with the goal of proposing a new methodology of PD diagnosis that could be easily integrated into mHealth systems.MethodsWe enrolled 73 PD patients and 46 age- and gender-matched healthy controls, who performed several speech/voice tasks while recorded by a microphone and a camera. Acoustic signals were parametrized in the fields of phonation, articulation and prosody. Video recordings of a face were analyzed in terms of facial landmarks movement. Both modalities were consequently modeled by the XGBoost algorithm.ResultsThe acoustic analysis enabled diagnosis of PD with 77% balanced accuracy, while in the case of the facial analysis, we observed 81% balanced accuracy. Th
+
+---
+
+pid: PMID:37913759
+题目: A Paradigm Shift in the Management of Patients with Parkinson's Disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: BackgroundTechnological evolution leads to the constant enhancement of monitoring systems and recording symptoms of diverse disorders.SummaryFor Parkinson's disease, wearable devices empowered with machine learning analysis are the main modules for objective measurements. Software and hardware improvements have led to the development of reliable systems that can detect symptoms accurately and be implicated in the follow-up and treatment decisions.Key messagesAmong many different devices developed so far, the most promising ones are those that can record symptoms from all extremities and the trunk, in the home environment during the activities of daily living, assess gait impairment accurately, and be suitable for a long-term follow-up of the patients. Such wearable systems pave the way for a paradigm shift in the management of patients with Parkinson's disease.
+
+---
+
+pid: PMID:37914414
+题目: Nationwide Retrospective Analysis of Combinations of Advanced Therapies in Patients With Parkinson Disease.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Background and objectivesAdvanced therapies (ATs; deep brain stimulation [DBS] or pump therapies: continuous subcutaneous apomorphine infusion [CSAI], levodopa/carbidopa intestinal gel [LCIG]) are used in later stages of Parkinson disease (PD). However, decreasing efficacy over time and/or side effects may require an AT change or combination in individual patients. Current knowledge about changing or combining ATs is limited to mostly retrospective and small-scale studies. The nationwide case collection Combinations of Advanced Therapies in PD assessed simultaneous or sequential AT combinations in Germany since 2005 to analyze their clinical outcome, their side effects, and the reasons for AT modifications.MethodsData were acquired retrospectively by modular questionnaires in 22 PD centers throughout Germany based on clinical records and comprised general information about the centers/patients, clinical (Mini-Mental Status Test/Montréal Cognitive Assessment, Movement Disorder Society-Sponsored Revision of the Unified Parkinson's Disease Rating Scale [MDS-UPDRS], side effects, reasons for AT modification), and therapeutical (ATs with specifications, oral medication) data. Data assessment started with initiation of the second AT.ResultsA total of 148 AT modifications in 116 patients were associated with significantly improved objective (median decrease of MDS-UPDRS Part III 4.0 p
+
+---
+
+pid: PMID:37917153
+题目: An integrated review of music cognition and rhythmic stimuli in sensorimotor neurocognition and neurorehabilitation.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; research-article; Review; Journal Article; Research Support, N.I.H., Extramural
+摘要: This work reviews the growing body of interdisciplinary research on music cognition, using biomechanical, kinesiological, clinical, psychosocial, and sociological methods. The review primarily examines the relationship between temporal elements in music and motor responses under varying contexts, with considerable relevance for clinical rehabilitation. After providing an overview of the terminology and approaches pertinent to theories of rhythm and meter from the musical-theoretical and cognitive fields, this review focuses on studies on the effects of rhythmic sensory stimulation on gait, rhythmic cues' effect on the motor system, reactions to rhythmic stimuli attempting to synchronize mobility (i.e., musical embodiment), and the application of rhythm for motor rehabilitation for individuals with Parkinson's disease, stroke, mild cognitive impairment, Alzheimer's disease, and other neurodegenerative or neurotraumatic diseases. This work ultimately bridges the gap between the musical-theoretical and cognitive science fields to facilitate innovative research in which each discipline informs the other.
+
+---
+
+pid: PMID:37919332
+题目: Overview on wearable sensors for the management of Parkinson's disease.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: Parkinson's disease (PD) is affecting about 1.2 million patients in Europe with a prevalence that is expected to have an exponential increment, in the next decades. This epidemiological evolution will be challenged by the low number of neurologists able to deliver expert care for PD. As PD is better recognized, there is an increasing demand from patients for rigorous control of their symptoms and for therapeutic education. In addition, the highly variable nature of symtoms between patients and the fluctuations within the same patient requires innovative tools to help doctors and patients monitor the disease in their usual living environment and adapt treatment in a more relevant way. Nowadays, there are various body-worn sensors (BWS) proposed to monitor parkinsonian clinical features, such as motor fluctuations, dyskinesia, tremor, bradykinesia, freezing of gait (FoG) or gait disturbances. BWS have been used as add-on tool for patients' management or research purpose. Here, we propose a practical anthology, summarizing the characteristics of the most used BWS for PD patients in Europe, focusing on their role as tools to improve treatment management. Consideration regarding the use of technology to monitor non-motor features is also included. BWS obviously offer new opportunities for improving management strategy in PD but their precise scope of use in daily routine care should
+
+---
+
+pid: PMID:37920444
+题目: Rehabilitation for non-motor symptoms for patients with Parkinson's disease from an α-synuclein perspective: a narrative review.
+年份: 2023  类型: research-article; Journal Article
+摘要: Parkinson's disease (PD) is a common neurodegenerative disorder affecting aged population around the world. PD is characterized by neuronal Lewy bodies present in the substantia nigra of the midbrain and the loss of dopaminergic neurons with various motor and non-motor symptoms associated with the disease. The protein α-synuclein has been extensively studied for its contribution to PD pathology, as α-synuclein aggregates form the major component of Lewy bodies, a hallmark of PD. In this narrative review, the authors first focus on a brief explanation of α-synuclein aggregation and circumstances under which aggregation can occur, then present a hypothesis for PD pathogenesis in the peripheral nervous system (PNS) and how PD can spread to the central nervous system from the PNS via the transport of α-synuclein aggregates. This article presents arguments both for and against this hypothesis. It also presents various non-pharmacological rehabilitation approaches and management techniques for both motor and non-motor symptoms of PD and the related pathology. This review seeks to examine a possible hypothesis of PD pathogenesis and points to a new research direction focus on rehabilitation therapy for patients with PD. As various non-motor symptoms of PD appear to occur earlier than motor symptoms, more focus on the treatment of non-motor symptoms as well as a better understanding of
+
+---
+
+pid: PMID:37924925
+题目: Utility of serum neurofilament light chain and glial fibrillary acidic protein as diagnostic biomarkers of freezing of gait in Parkinson's disease.
+年份: 2024  类型: Research Support, Non-U.S. Gov't; Journal Article
+摘要: Freezing of gait (FOG) is one of the most distressing features of Parkinson's disease (PD), increasing the risks of fractures and seriously affecting patients' quality of life. We aimed to examine the potential diagnostic roles of serum neurofilament light chain (NFL) and glial fibrillary acidic protein (GFAP) in PD patients with FOG (PD-FOG). We included 99 patients, comprising 54 PD patients without FOG (PD-NoFOG), 45 PD-FOG and 37 healthy controls (HCs). Our results indicated serum markers were significantly higher in PD-FOG and postural instability and gait difficulty (PIGD) motor subtype patients than in PD-NoFOG and non-PIGD subtype patients (P < 0.05), respectively. Patients with high concentrations of the markers NFL and GFAP had higher PIGD scores and greater FOG severity than those with low concentrations. Moreover, serum levels of both NFL and GFAP were significantly positively associated with age, FOG severity, PD-FOG status, and negatively associated with Mini-Mental State Examination (MMSE) scores. Logistic regression analysis identified serum levels of NFL and GFAP as independent risk factors for PD-FOG. Mediation analysis revealed that MMSE scores fully mediated the relationship between serum GFAP levels and FOG-Q scores, accounting for 33.33% of the total effects (indirect effect = 0.01, 95% CI 0.01-0.02). NFL levels differentiated PD-FOG from PD-NoFOG with rel
+
+---
+
+pid: PMID:37928722
+题目: Research hotspots and trends of transcranial magnetic stimulation in Parkinson's disease: a bibliometric analysis.
+年份: 2023  类型: review-article; Review; Journal Article
+摘要: BackgroundTranscranial magnetic stimulation (TMS), as a non-invasive neuromodulation technique, has been widely used in the treatment of Parkinson's disease (PD). The increasing application of TMS has promoted an increasing number of clinical studies. In this paper, a bibliometric analysis of existing studies was conducted to reveal current research hotspots and guide future research directions.MethodRelevant articles and reviews were obtained from the Science Citation Index Expanded of Web of Science Core Collection database. Data related to publications, countries, institutions, authors, journals, citations, and keywords in the studies included in the review were systematically analyzed using VOSviewer 1.6.18 and Citespace 6.2.4 software.ResultA total of 1,894 papers on the topic of TMS in PD between 1991 and 2022 were analyzed and visualized to identify research hotspots and trends in the field. The number of annual publications in this field of study has increased gradually over the past 30 years, with the number of annual publications peaking in 2022 (n = 150). In terms of publications and total citations, countries, institutions, and authors from North America and Western Europe were found to make significant contributions to the field. The current hotspot focuses on the effectiveness of TMS for PD in different stimulation modes or different stimulated brain regions. The 
+
+---
+
+pid: PMID:37936189
+题目: Sericin alleviates motor dysfunction by modulating inflammation and TrkB/BDNF signaling pathway in the rotenone-induced Parkinson's disease model.
+年份: 2023  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: BackgroundParkinson's disease (PD) is a progressive neurodegenerative disorder characterized by the degeneration of nigrostriatal dopaminergic neurons and movement impairment. Based on theories, neuroinflammatory processes may be vital in the etiology of PD and other neurodegenerative diseases. Reports show that rotenone has neurotoxic, inflammatory, and motor impairment effects in PD. Sericin is a natural polymer with effective properties, such as neuroprotective and anti-inflammatory. Therefore, this study aimed to examine the effects of sericin administration on motor dysfunction by modulating inflammation and tyrosine kinase B/brain-derived neurotrophic factor (TrkB/BDNF) pathway in the rotenone-induced PD model.MethodsWistar male rats (3-months-old) were treated with rotenone (2 mg/kg every 48 h for 30 days) to induce a rotenone-induced PD model. Also, sericin was administered orally at dose of 200 mg/kg every 48 h for 30 days. Rotarod and bar tests were performed for motor dysfunction. The protein levels of BDNF, c-fos, TrkB, tumor necrosis factor- α (TNF-α), interleukin-6 (IL-6) and catalase activity were evaluated in the striatum area.ResultsResults showed that sericin increased latent time in the rotarod test and decreased the time staying on the pole in the bar test compared to the PD group (P ConclusionThese results support a protective benefit of sericin therapy in 

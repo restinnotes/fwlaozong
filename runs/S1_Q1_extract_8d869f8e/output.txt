@@ -1,0 +1,82 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；术后临床结局分析（post hoc analysis）",
+      "population": "接受双侧高频STN-DBS的帕金森病伴冻结步态（PD-FOG）患者",
+      "n": "76；从776名PD患者中筛选。FOG缓解42例，轻微变化22例，恶化12例；缓解组中18例FOG完全消失",
+      "condition": "刺激频率≥90 Hz，仅纳入术后高频STN-DBS患者；平均随访12.14±7.03个月。随访时患者处于最佳治疗刺激设置。FOG-Q在药物OFF状态评估，排除ON-state FOG患者。FOG-Q改善定义为评分下降超过30%，恶化定义为评分增加",
+      "measure": "术前与术后FOG Questionnaire（FOG-Q）评分及其百分比变化；同时评估UPDRS-III和左旋多巴等效日剂量（LEDD）",
+      "finding": "总体上，高频STN-DBS后FOG-Q显著改善，但个体反应存在明显异质性。平均FOG-Q从术前16.89±5.46下降至术后10.05±7.16（P<0.001），平均改善率为37.93±42.61%。76例中42例改善、22例轻微变化、12例恶化，18例完全消失。说明高频STN-DBS与FOG改善并非稳定的一致关系，部分患者甚至出现恶化。",
+      "effect": "FOG-Q：16.89±5.46→10.05±7.16，P<0.001；平均改善率37.93±42.61%；改善55.3%（42/76），轻微变化28.9%（22/76），恶化15.8%（12/76），完全消失23.7%（18/76）",
+      "limitations": "研究为回顾性分析，且仅纳入776例筛选对象中的76例，限制了代表性。研究仅纳入高频刺激患者，不能直接推断低频刺激的效果。FOG-Q是主观问卷，不能区分运动、认知及情绪因素引起的冻结，也不能替代具有控制条件的任务步态测试。不同患者的随访时间存在差异。研究没有直接记录STN神经元放电或局部场电位，因此不能将临床改善直接解释为某种STN神经活动模式的改变。",
+      "quote": "Although the average FOG-Q at baseline was 16.89 ± 5.46 and significantly decreased to 10.05 ± 7.16 at follow-up (P < 0.001), the patient-specific changes were diverse among individuals.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；DBS电极定位及刺激接触点坐标相关分析",
+      "population": "接受双侧高频STN-DBS的PD-FOG患者；比较术后FOG改善组与恶化组",
+      "n": "76；改善组42例，恶化组12例，另有轻微变化组22例",
+      "condition": "高频STN-DBS，刺激频率≥90 Hz；术后在最佳治疗刺激参数下评估。FOG-Q采用药物OFF状态评估。根据术前MRI和术后CT重建电极位置，将激活接触点转换至MNI空间",
+      "measure": "DBS激活接触点的MNI三维坐标（x、y、z），以及其与FOG-Q百分比变化之间的Spearman相关；比较改善组和恶化组右侧STN激活接触点的位置",
+      "finding": "右侧STN激活接触点的x和z坐标越大，FOG-Q改善率越高（x：R=0.27，P=0.020；z：R=0.32，P=0.005）。组间比较发现，FOG改善组的激活接触点主要位于右侧STN背外侧三分之二，而恶化组主要位于右侧STN腹内侧中央区域。改善组与恶化组的x坐标分别为12.96±1.31和12.18±1.22（P=0.045）；z坐标分别为−5.81±1.72和−7.35±2.02（P=0.015），其中z坐标差异经过Bonferroni校正后仍显著。18例FOG完全消失患者的分析也支持背外侧STN刺激与FOG消失有关（P=0.011）。",
+      "effect": "右侧x坐标：R=0.27，P=0.020；右侧z坐标：R=0.32，P=0.005；改善组与恶化组z坐标差异：P=0.015（Bonferroni校正后仍显著）",
+      "limitations": "研究发现主要集中于右侧STN，不能据此认定右侧STN具有确定的功能优势。作者指出，每位患者只有一种刺激设置，无法区分观察到的侧化现象究竟来自刺激靶点不对称、解剖结构不对称、半球优势还是其他机制。该分析反映激活接触点位置与临床结局的相关性，不是STN神经元活动的直接测量。回顾性分组和单次刺激设置也限制了因果解释。",
+      "quote": "most active contacts were located at the dorsolateral two-thirds of the right STN in the FOG-alleviation group, but in the ventrocentral portion of the right STN in the FOG-deterioration group.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；基于有限元模型的刺激体积（VTA）与STN亚区重叠分析",
+      "population": "接受双侧高频STN-DBS的PD-FOG患者",
+      "n": "76",
+      "condition": "使用患者个体化的刺激参数，包括激活接触点、脉宽、频率和电压，结合电极重建及有限元方法计算VTA；高频刺激≥90 Hz。FOG结局为术前至术后药物OFF状态FOG-Q百分比变化",
+      "measure": "VTA与右侧及左侧STN整体、感觉运动区、联合区和边缘区的空间重叠程度；使用Spearman相关分析重叠程度与FOG-Q变化的关系",
+      "finding": "右侧VTA与STN边缘区（limbic STN）的重叠越大，FOG改善越差，表现为VTA与右侧limbic STN重叠程度和FOG-Q改善率呈负相关（R=−0.27，P=0.003），经过Bonferroni校正后仍显著。该关系在左侧半球未观察到。值得注意的是，VTA与整个STN、感觉运动STN及联合STN的重叠程度均不能预测FOG-Q变化。因此，刺激是否覆盖特定STN亚区可能比单纯刺激STN的总体体积更有关系。",
+      "effect": "右侧VTA-limbic STN重叠：Spearman R=−0.27，P=0.003；Bonferroni校正后仍显著；左侧未发现相应显著关系；全STN、感觉运动STN及联合STN重叠均无显著预测作用",
+      "limitations": "VTA是根据刺激参数和有限元模型估算的组织激活范围，不是直接测量的神经元放电或局部场电位。左右半球结果不一致，但研究无法确定其原因。单一刺激设置限制了对不同刺激位置和刺激强度的因果比较。FOG-Q不能区分运动、认知和情绪相关的冻结机制。",
+      "quote": "Greater VTA and limbic STN overlap in the right hemisphere was shown to be significantly related to a worse deterioration of FOG symptom",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；患者特异性刺激映射（patient-specific stimulation mapping，PSM）及留一交叉验证分析",
+      "population": "接受双侧高频STN-DBS的PD-FOG患者",
+      "n": "76",
+      "condition": "根据个体电极重建、激活接触点和VTA，建立体素水平的刺激位置与FOG-Q百分比变化之间的关联模型；使用留一交叉验证（LOOCV），并纳入性别、病程、术前MoCA、焦虑抑郁评分、LEDD下降及UPDRS-III改善率等协变量",
+      "measure": "体素水平的刺激位置与FOG-Q变化相关性；识别改善相关区域（sweet spots）和恶化相关区域（sour spots）",
+      "finding": "体素映射显示，双侧STN背外侧三分之二区域与FOG-Q改善呈正相关；右侧STN腹内侧中央区域及左侧中央STN周围的内囊区域与FOG-Q改善呈负相关。PSM模型经过LOOCV验证后仍具有统计学意义，调整临床协变量后结果依然显著。右侧sweet spot和sour spot的质心分别为（13.7，−11.6，−4.7）和（11.7，−13.8，−8.9）；左侧分别为（−12.1，−12.6，−5.4）和（−12.7，−11.0，−5.9）。该结果提示，STN不同空间区域的刺激可能对FOG产生方向相反的临床效应。",
+      "effect": "PSM模型LOOCV：Spearman R=0.29，P=0.002；调整协变量后：R=0.25，P=0.009",
+      "limitations": "LOOCV属于同一队列内部验证，并非独立外部样本验证。模型依赖VTA估算及问卷结局，不能证明特定体素的刺激直接引起相应神经活动或临床变化。仅有单一治疗刺激设置，不能充分识别刺激位置与刺激强度之间的交互作用。该模型识别的是刺激位置与FOG结局的统计关联，不应直接等同于神经元功能定位。",
+      "quote": "Voxels at the dorsolateral two-thirds of the bilateral STN were positively associated with the %FOG-Q change",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；基于规范性扩散MRI连接组的结构连接分析及预测模型",
+      "population": "接受双侧高频STN-DBS的PD-FOG患者；结构连接组使用PPMI数据库中的PD患者规范性连接数据",
+      "n": "临床队列76例；规范性连接组来自PPMI数据库90例PD患者。进一步比较18例FOG完全消失患者与12例FOG恶化患者",
+      "condition": "根据76例患者个体VTA，通过PPMI规范性扩散MRI连接组识别受到刺激的白质纤维束。每名受试者采样20,000条纤维，仅纳入与至少20%患者VTA连接的纤维束。使用纤维连接状态与FOG-Q变化建立结构连接预测模型，并采用LOOCV和协变量调整验证",
+      "measure": "VTA与全脑结构纤维束的连接关系；比较连接SMA、pre-SMA、内侧前额叶皮质（mPFC）、腹外侧前额叶皮质（vlPFC）及中脑运动区（MLR）/脚桥核（PPN）的纤维束与FOG-Q变化的相关性",
+      "finding": "STN刺激区域与SMA和pre-SMA连接的纤维束受到刺激越多，FOG改善越明显；连接mPFC和vlPFC的纤维束受到刺激越多，FOG改善越差。许多与改善正相关的纤维束进一步延伸至MLR，特别是PPN。正向纤维束主要经过STN背外侧区域，负向纤维束主要经过腹内侧STN及其周围中央内囊区域。对18例FOG完全消失患者和12例FOG恶化患者的比较也发现，前者更多刺激STN-SMA/pre-SMA纤维，后者更多刺激STN-PFC纤维。结构连接预测模型通过LOOCV验证，并在协变量调整后保持显著。作者据此提出一个候选运动网络机制：刺激STN-SMA/pre-SMA相关通路可能促进SMA及其下游MLR/PPN相关运动启动网络。与之相对，前额叶相关通路可能涉及认知和情感网络负荷增加，从而与FOG恶化有关。这两种解释是基于连接组关联提出的机制假设，并非本研究直接测得的神经活动变化。",
+      "effect": "结构连接模型LOOCV：Spearman R=0.29，P=0.003；调整协变量后：R=0.25，P=0.007；FOG消失组与恶化组的纤维束比较方向与整体模型一致",
+      "limitations": "研究使用PPMI规范性扩散MRI连接组，而不是每位患者自己的扩散MRI，不能反映个体实际纤维结构差异。作者明确指出，规范性连接组无法识别患者个体的连接变化。结构连接分析主要识别纤维解剖连接，不能直接证明刺激引起了相应通路的功能激活。纤维束与FOG变化的关联不能证明其因果作用。作者提出的SMA/pre-SMA-MLR/PPN运动启动机制及前额叶认知情感负荷机制均未在本研究中通过直接神经记录或任务实验加以验证。要区分两种解释，可依据作者建议采用任务步态测试及患者个体化扩散MRI和fMRI，分别检验运动通路和前额叶通路的预测关系。",
+      "quote": "The %FOG-Q changes were positively correlated with fibre tracts connecting the VTAs in the STN to the supplementary motor area and pre-SMA but negatively correlated with fibre tracts to the medial and ventrolateral prefrontal cortices",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:37701817",
+      "design": "回顾性队列研究；基于规范性静息态fMRI连接组的功能连接分析",
+      "population": "接受双侧高频STN-DBS的PD-FOG患者；使用PPMI数据库的规范性静息态fMRI连接组",
+      "n": "临床队列76例；规范性连接组来自PPMI数据库90例PD患者",
+      "condition": "以每名患者的双侧VTA作为功能连接种子区域，使用PPMI规范性静息态fMRI数据计算VTA与全脑其他体素的时间序列相关，进行平均及Fisher Z转换，再将个体功能连接模式与FOG-Q百分比变化进行体素水平相关分析。使用LOOCV，并进一步调整性别、病程、术前MoCA、焦虑抑郁评分、LEDD下降及UPDRS-III改善率",
+      "measure": "VTA种子区域与全脑的静息态功能连接；分析SMA/pre-SMA、运动皮质、基底节、MLR、背侧前扣带皮质（dACC）、枕叶、前额叶、 cerebellum及腹侧前扣带皮质（vACC）与FOG-Q变化的关联",
+      "finding": "功能连接分析显示，与SMA/pre-SMA、运动皮质、基底节、MLR、dACC及枕叶区域的功能连接增强与FOG改善相关；与前额叶、 cerebellum及vACC区域的功能连接则与FOG恶化相关。这些关联在方向上部分支持结构连接分析所提示的运动网络和前额叶网络的相反作用。然而，功能连接预测模型未能通过LOOCV验证，调整协变量后同样未通过。因此，功能连接结果虽然提供了潜在的相关网络信息，但其预测稳定性弱于本研究的结构连接模型。",
+      "effect": "功能连接模型LOOCV：Spearman R=0.15，P=0.098；调整协变量后：R=0.14，P=0.114，均未达到统计学显著性",
+      "limitations": "这是本研究中与结构连接分析存在重要差异的结果：结构连接模型通过LOOCV验证，而功能连接模型未通过。不能将功能连接的体素水平相关直接解释为稳定的预测机制。研究使用规范性静息态fMRI连接组，而不是患者个体化的fMRI数据，无法反映个体功能网络变化。作者明确指出，未来应收集患者特异性扩散MRI及fMRI数据。FOG-Q无法区分认知、运动及情绪因素，静息态功能连接也不能直接说明步行过程中发生的神经活动变化。可能影响不同连接分析结果的因素包括连接测量方法不同、规范性连接组的个体代表性不足，以及缺乏任务状态下的步态测量。",
+      "quote": "Although the functional network had a predictive trend, the model failed in the LOOCV analysis (Spearman R = 0.15, P = 0.098).",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

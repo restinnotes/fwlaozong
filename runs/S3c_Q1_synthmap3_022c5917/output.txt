@@ -1,0 +1,462 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P3_C1",
+      "text": "Freezer患者在无冻结步态阶段已经表现出较长的STN movement-band beta burst duration。2018年研究中，Freezer相较Non-Freezer在SIP无冻结时段和自然前向行走FW无冻结时段均表现出显著延长的beta burst duration。这支持beta burst持续时间与FOG易感表型相关，而不只是冻结事件发生时的伴随现象。值得注意的是，静息状态下两组没有显著差异，提示这种异常具有运动状态依赖性，而非稳定存在的静息态组间差异。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度：中等偏低。两个运动任务方向一致，但来自同一项小样本研究，而非独立重复验证。FW分析排除了观察到的冻结事件；SIP和FW组间比较均属于无冻结阶段的易感性比较。burst级重复观测的患者内聚类处理不明确。研究队列还可能与2017年研究重叠。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "supports",
+          "note": "SIP无冻结时段Freezer的beta burst duration显著长于Non-Freezer，H(1)=45.068，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_2",
+          "relation": "supports",
+          "note": "自然前向行走FW无冻结时段也观察到Freezer的beta burst duration显著较长，H(1)=69.564，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_3",
+          "relation": "supports",
+          "note": "静息状态下Freezer与Non-Freezer的beta burst duration没有显著差异，支持异常主要在运动状态下显现。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C2",
+      "text": "STN beta burst duration与实际FOG事件存在直接的事件相关性。在SIP原地踏步任务中，5名发生冻结的Freezer患者，其冻结期间的beta burst duration显著长于同一任务中的非冻结踏步阶段。这是本部分证据中最直接的STN神经活动与实际FOG事件相关的证据，支持冻结期间存在beta活动持续时间延长。不过，该结果仅证明冻结期间的关联，不能证明beta burst延长发生在冻结之前，也不能证明它启动或导致了冻结。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度：中等偏低。具有实际冻结事件和同一患者内对照，因而比Freezer与Non-Freezer组间比较更直接；但只有5名患者，且使用SIP替代任务而非自然前向行走。F(1,815)涉及大量重复观测，患者内burst聚类处理不明确。没有固定的冻结前预测窗口，也没有报告效应量及置信区间。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_6",
+          "relation": "supports",
+          "note": "SIP中同一Freezer患者冻结期间的beta burst duration显著长于非冻结踏步阶段，F(1,815)=13.114，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "qualifies",
+          "note": "Freezer在无冻结步态阶段也存在较长burst duration，说明冻结期间的延长可能叠加在既有易感性异常之上，而非完全从正常基线突然产生。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_7",
+          "relation": "qualifies",
+          "note": "同一事件比较中relative mean beta burst power没有显著变化，说明冻结相关的持续时间变化不意味着所有beta burst指标同步变化。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C3",
+      "text": "STN beta burst power与FOG易感性或实际冻结事件的关系不稳定，明显受到任务条件影响。SIP无冻结时段，Freezer的relative mean beta burst power高于Non-Freezer；但在自然前向行走FW无冻结时段，两组没有显著差异。在SIP内部进行实际冻结与非冻结阶段比较时，burst power也没有显著差异。因此，现有证据不支持将较高的beta burst power视为跨任务稳定的FOG特异性指标，也不支持将其视为冻结事件的可靠伴随指标。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "证据强度：低至中等。不一致结果来自同一研究的不同任务和不同事件阶段，不能通过简单多数判断。SIP与FW的运动环境、视觉输入及任务要求不同；两项阴性比较没有完整报告效应量和置信区间。burst power的定义及归一化方式也不能与平均beta频段功率直接等同。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_4",
+          "relation": "supports",
+          "note": "SIP无冻结时段Freezer的relative mean beta burst power显著高于Non-Freezer，H(1)=212.680，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_5",
+          "relation": "contradicts",
+          "note": "FW无冻结时段Freezer与Non-Freezer的mean beta burst power没有显著差异，与SIP的组间结果不同。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_7",
+          "relation": "contradicts",
+          "note": "SIP实际冻结与非冻结阶段的relative mean beta burst power没有显著差异，不支持burst power作为事件特异性指标。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C4",
+      "text": "STN beta burst duration和beta burst power是不同的神经信号特征，不能合并为单一的beta异常指标。2018年研究在静息、SIP和FW条件下均发现两者相关性较弱。尤其是FW期间R²仅为0.006，而SIP期间为0.108。结合冻结期间burst duration延长但burst power没有显著变化的结果，提示FOG相关的beta异常可能主要体现为时间组织特征，而非单纯的振幅或功率增加。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度：中等。三个任务均报告了duration与power的弱相关，且事件比较呈现不同方向的结果。但burst级相关分析可能受到同一患者内重复观测影响，聚类处理不明确。时间组织异常是否具有独立的病理生理意义仍需验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_10",
+          "relation": "supports",
+          "note": "静息状态下burst duration与burst power仅有弱相关，R²=0.0625，尽管P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_11",
+          "relation": "supports",
+          "note": "SIP期间两项指标的相关性仍较弱，R²=0.108，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_12",
+          "relation": "supports",
+          "note": "FW期间两项指标几乎没有相关性，R²=0.006。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_6",
+          "relation": "supports",
+          "note": "冻结期间burst duration延长，提供了时间组织指标与实际冻结相关的直接证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_7",
+          "relation": "supports",
+          "note": "冻结与非冻结阶段burst power没有显著差异，进一步显示duration与power不能互相替代。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C5",
+      "text": "STN beta相对功率与beta Sample Entropy（SampEn）在任务平均或患者平均层面呈显著负指数关系，但这一关系不能直接解释为FOG事件机制。在FW、SIP和TBC三个任务中，beta功率越高，beta SampEn越低。该结果支持beta频谱功率与时间序列复杂度之间存在统计关联，但不证明功率变化导致熵变化，也没有证明这一关系能够预测或识别冻结事件。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度：中等。三个任务均观察到方向一致的显著拟合关系，但全部来自同一项2017年研究，且Freezer与Non-Freezer合并分析。FW及其他任务使用试次平均值，SIP每名患者只有一个试次。拟合观测数未明确报告，属于横断面关联而非事件级时间序列因果分析。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_13",
+          "relation": "supports",
+          "note": "FW中beta功率与beta SampEn呈负指数关系，Adjusted R²=0.71，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_14",
+          "relation": "supports",
+          "note": "SIP中存在同方向负指数关系，Adjusted R²=0.82，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_15",
+          "relation": "supports",
+          "note": "TBC中也存在同方向负指数关系，Adjusted R²=0.82，P<0.001；但TBC数据包含冻结任务阶段的平均值，不能定位具体事件。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_11",
+          "relation": "qualifies",
+          "note": "Freezer组TBC与FW之间的beta SampEn没有显著差异，说明存在功率-熵关联不等于熵具有冻结事件特异性。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C6",
+      "text": "本部分证据没有建立STN beta SampEn随实际FOG发生而增加的稳定关系。Freezer组在包含实际冻结的TBC与主要无冻结的FW之间没有显著beta SampEn差异；Non-Freezer组两个任务之间也没有显著差异。Non-Freezer组alpha SampEn同样没有显著任务差异。因此，beta SampEn与beta功率之间存在相关性，并不能被进一步解释为beta SampEn是FOG事件的可靠神经标志物。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度：低至中等。多个阴性比较方向一致，但样本很小，部分比较未报告独立统计量和P值，不能将未达到显著性解释为两个条件完全等效。TBC比较未进行冻结事件级分段，不能排除短暂事件相关熵变化被任务平均掩盖。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_11",
+          "relation": "supports",
+          "note": "Freezer组TBC与FW之间beta SampEn没有显著差异，尽管TBC包含实际冻结。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_12",
+          "relation": "supports",
+          "note": "Non-Freezer组TBC与FW之间beta SampEn也没有显著差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_10",
+          "relation": "supports",
+          "note": "Non-Freezer组alpha SampEn在TBC和FW之间没有显著差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_15",
+          "relation": "qualifies",
+          "note": "TBC任务整体存在beta功率与beta SampEn的负指数关系，但这是患者或试次平均层面的关联，不是冻结事件级熵变化。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C7",
+      "text": "复杂步行任务本身能够改变STN alpha和beta功率，即使受试者没有发生FOG。2017年研究中，Non-Freezer在包含转弯、障碍物和狭窄通道的TBC任务中，alpha及beta相对功率均低于直线FW。由于两个任务均未观察到FOG，这说明STN alpha或beta功率下降不是冻结发生的充分条件，也不能将Freezer组复杂任务期间的功率变化全部归因于FOG。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据强度：中等。两种频段均有统计学显著结果，但来自单中心小样本研究。TBC和FW同时存在运动复杂度、转弯、视觉环境及注意需求差异，无法区分具体引起功率变化的因素。结果也不能排除功率变化在特定患者或冻结阶段具有额外意义。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_8",
+          "relation": "supports",
+          "note": "Non-Freezer在无FOG的TBC期间STN alpha相对功率低于FW，F(1,48)=3.83，P<0.05。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_9",
+          "relation": "supports",
+          "note": "Non-Freezer在无FOG的TBC期间STN beta相对功率也低于FW，F(1,48)=5.84，P=0.02。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_10",
+          "relation": "qualifies",
+          "note": "相同任务对照中alpha SampEn没有显著变化，说明功率变化不必然伴随时间序列复杂度变化。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C8",
+      "text": "双侧STN beta burst duration的不对称性与双下肢stride time的不对称性存在较强患者级相关，但现有结果不支持简单的单侧STN对侧肢体控制模型。在SIP无冻结阶段，双侧STN平均burst duration差值与双腿stride time差值呈强正相关；但单侧STN平均burst duration与对侧腿stride time之间没有发现相关性。这提示双侧STN活动与双侧步态协调可能存在网络层面的联系，但不能证明不对称性导致步态异常或FOG。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度：低。双侧差值相关性来自10名患者，未报告置信区间；单侧相关性的具体统计量也未报告。差值之间的相关性可能受到共同因素或测量误差影响，不能建立方向性或因果关系。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_8",
+          "relation": "supports",
+          "note": "双侧STN burst duration差值与双腿stride time差值呈强正相关，r=0.853，P=0.002。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_9",
+          "relation": "qualifies",
+          "note": "单侧STN burst duration与对侧腿stride time之间未发现相关性，不支持简单的单侧对侧控制解释。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C9",
+      "text": "STN DBS能够急性调节beta burst duration，但目前不能证明这种神经调节是临床抗冻结作用的中介机制。在SIP实际冻结阶段，60 Hz和140 Hz刺激均显著缩短beta burst duration，且两种频率之间没有显著差异。在Freezer无冻结踏步阶段，两种频率也均缩短较长的burst duration。这说明STN beta burst持续时间是可被刺激改变的神经指标，但这种变化并不只发生于冻结事件期间。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度：中等偏低。受试者内刺激条件比较提供了刺激改变神经指标的干预证据，但样本量小，使用急性实验性刺激参数，且burst级重复观测的患者内聚类处理不明确。研究没有证明burst缩短伴随FOG发生率或持续时间下降，也没有建立神经变化介导行为改善的关系。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_13",
+          "relation": "supports",
+          "note": "实际SIP冻结期间，60 Hz和140 Hz均较no DBS显著缩短beta burst duration，整体刺激条件效应F(2,3007)=24.27，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_14",
+          "relation": "supports",
+          "note": "SIP无冻结阶段，60 Hz和140 Hz同样缩短Freezer患者的beta burst duration，F(2,2803)=22.247，P<0.001。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_6",
+          "relation": "qualifies",
+          "note": "无刺激条件下冻结期间burst duration较长，为刺激改变该指标提供事件相关背景，但不能据此证明刺激缩短burst会减少冻结。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C10",
+      "text": "STN DBS频率对步态启动的影响具有任务情境依赖性，但现有行为证据不能直接用于解释STN神经活动与FOG的关系。在无认知干扰的步态启动任务中，多巴胺治疗、80 Hz和130 Hz STN-DBS均与步态启动改善相关；在Stroop认知干扰双任务中，130 Hz条件下所有步态启动参数显著恶化，而80 Hz条件下没有观察到明显的认知干扰效应。这提示高频刺激对认知-运动整合可能具有任务依赖的影响，但步态启动障碍不等同于实际FOG。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度：低。研究没有记录STN神经信号，也没有实际FOG事件终点。认知干扰分析仅有9名PD患者，摘要未提供具体效应量和置信区间。80/130 Hz研究与60/140 Hz beta burst研究采用不同任务、不同刺激条件，不能直接合并为同一神经机制证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30100532_1",
+          "relation": "supports",
+          "note": "无认知干扰时，多巴胺治疗、80 Hz及130 Hz STN-DBS条件下均观察到步态启动改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_30100532_2",
+          "relation": "supports",
+          "note": "Stroop双任务中130 Hz条件下步态启动参数显著恶化，而80 Hz条件下没有明显认知干扰效应。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_13",
+          "relation": "qualifies",
+          "note": "60 Hz和140 Hz可以改变SIP冻结期间的beta burst duration，但没有直接提供80 Hz和130 Hz条件下的神经信号证据。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C11",
+      "text": "FOG具有临床表型异质性，这可能是不同STN神经电生理研究结果不一致的一个潜在来源。41名FOG患者的研究识别出三个数据驱动的冻结亚组，问卷严重程度与行为评估的冻结时间百分比呈正相关。这说明仅使用Freezer与Non-Freezer二分类可能掩盖患者间差异。然而，该研究没有STN记录，也没有提供各亚组与特定STN振荡特征的对应关系，因此亚型特异性神经机制仍未得到直接验证。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度：临床表型异质性为中等证据；其解释STN研究冲突的能力为低证据。聚类结果来自41名患者，摘要没有提供三个亚组的具体名称、外部验证结果及其神经生理对应关系。不能将三个亚组直接等同于不同的STN beta机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30153383_1",
+          "relation": "supports",
+          "note": "识别出三个数据驱动的FOG亚组；问卷严重程度与冻结时间百分比相关，r=0.54，内部一致性Cronbach's alpha=0.937。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "qualifies",
+          "note": "2018年STN burst研究采用Freezer与Non-Freezer二分类，未进一步区分FOG运动学亚型。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_11",
+          "relation": "qualifies",
+          "note": "2017年熵研究同样没有对Freezer内部的具体冻结亚型进行分层。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C12",
+      "text": "2017年Syrkin-Nikolau研究与2018年Anidi研究不能被简单视为两项完全独立的重复验证。两项研究存在研究中心、研究团队和Activa PC+S设备方面的重叠；2018年研究还明确指出部分先前研究受试者随时间由Non-Freezer转变为Freezer，并引用2017年研究。因此存在潜在队列重叠，可能影响跨研究证据的独立性和总体证据强度。不过，现有资料没有患者级匹配信息，不能断言两项研究使用了完全相同的患者。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "证据强度：中等偏低。研究团队、设备和作者重叠有明确记录，但实际重叠人数及患者身份未报告。两项研究仍应作为不同发表的原始研究保留，同时在综合证据时避免将其结果当成完全独立的队列重复验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "qualifies",
+          "note": "2018年研究的队列账本记录了与2017年Stanford Activa PC+S研究的潜在队列重叠，并指出先前受试者可能随时间转变为Freezer。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_2",
+          "relation": "qualifies",
+          "note": "2018年研究具有相同研究中心和设备背景，但没有提供可确认完全重叠的患者级信息。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_8",
+          "relation": "qualifies",
+          "note": "2017年研究是Stanford Activa PC+S患者队列中的原始电生理研究，不能在独立性未确定时与2018年研究简单累加为独立样本。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C13",
+      "text": "研究间冲突不能简单归结为STN beta活动与FOG之间存在或不存在关联，至少需要区分任务效应、测量指标、事件阶段和刺激暴露历史。2017年研究比较TBC与FW，并分析平均频谱功率和SampEn；2018年研究则采用movement-band beta burst duration和burst power，并同时研究SIP与自然前向行走。2017年患者长期DBS治疗时间平均约14.6个月，2018年患者已持续高频DBS至少21个月。此外，两个研究的SIP、FW和TBC任务结构不同。这些方法和条件差异足以使平均功率、熵和burst持续时间产生不同结果，而不必假定其中某项研究必然错误。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "证据强度：中等，作为解释研究异质性的综合判断；具体各因素贡献尚未量化。刺激历史、任务难度、信号处理和患者构成同时存在差异，现有研究没有通过统一方案进行直接因子比较，因此不能确定哪一个因素是主要来源。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_8",
+          "relation": "supports",
+          "note": "2017年研究显示复杂TBC任务本身可降低Non-Freezer的alpha功率。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_9",
+          "relation": "supports",
+          "note": "2017年研究显示复杂TBC任务本身也可降低Non-Freezer的beta功率。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_11",
+          "relation": "supports",
+          "note": "2017年研究采用SampEn而非burst持续时间衡量beta时间组织特征，且没有发现Freezer组TBC与FW之间显著差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "supports",
+          "note": "2018年研究使用movement-band beta burst duration，在SIP无冻结阶段观察到Freezer组差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_2",
+          "relation": "supports",
+          "note": "2018年研究在自然前向行走中也发现Freezer组burst duration差异，但使用了不同的运动任务和分析指标。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_3",
+          "relation": "supports",
+          "note": "2018年研究静息状态下没有组间burst duration差异，说明运动状态也是结果异质性的来源之一。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_5",
+          "relation": "supports",
+          "note": "FW无冻结阶段burst power没有组间差异，与SIP中的组间功率差异形成任务依赖性对照。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C14",
+      "text": "竞争性机制假说A：病理性beta burst持续或运动状态切换障碍模型。该假说认为，Freezer在运动期间存在过长的STN beta burst，反映运动控制网络难以终止当前同步活动或灵活切换运动状态；当运动状态转换要求增加时，这种持续性活动可能进一步妨碍步态推进，从而参与FOG发生。其可检验预测是：在自然行走中，冻结前和冻结期间的burst duration应呈现可重复的时间性延长；延长幅度应预测冻结风险或持续时间；如果该指标具有因果中介作用，刺激缩短burst duration应同时降低冻结概率或持续时间。现有证据支持这一假说的研究动机，但尚未证明beta burst持续性是FOG的原因。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是基于观察性关联和刺激调节结果提出的机制推断，不是已经观察到的因果机制。现有研究没有自然行走中的冻结前事件预测，也没有证明刺激引起的burst缩短能够改善实际FOG。还不能区分beta burst延长是病因、冻结过程的结果，还是共同上游网络异常的伴随表现。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "supports",
+          "note": "Freezer无冻结步态期间已存在较长beta burst，为运动状态下的易感性异常提供依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_2",
+          "relation": "supports",
+          "note": "自然前向行走无冻结时段也观察到相同方向的burst duration差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_6",
+          "relation": "supports",
+          "note": "同一患者冻结期间burst duration进一步延长，支持可能存在事件相关变化。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_13",
+          "relation": "supports",
+          "note": "DBS刺激能够缩短实际冻结期间的burst duration，说明该神经指标具有可调节性。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_14",
+          "relation": "qualifies",
+          "note": "无冻结阶段同样可以通过DBS缩短burst duration，因此该指标变化并非冻结事件独有。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_7",
+          "relation": "qualifies",
+          "note": "冻结期间burst power没有显著变化，提示假说应重点针对burst持续时间，而不是笼统的beta功率增加。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C15",
+      "text": "竞争性机制假说B：任务需求驱动的生理性beta功率调节模型。该假说认为，复杂步行任务中的alpha和beta功率变化主要反映注意需求、转弯、障碍物处理及运动适应，而不一定代表FOG病理过程。2017年Non-Freezer在没有冻结的TBC任务中也出现alpha和beta功率下降，支持这种可能性。该模型预测，在匹配任务复杂度、视觉环境和运动学需求后，部分Freezer与Non-Freezer之间的平均功率差异会减弱；相反，如果某项信号确实具有冻结特异性，其变化应在同一患者冻结与非冻结事件的匹配比较中仍然存在。该模型与beta burst持续性模型并不完全互斥：平均功率变化可以是生理性任务适应，而burst duration延长可能反映另一种病理过程。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是对任务混杂的机制解释，而非已经证实的生理机制。TBC同时改变多个任务因素，现有研究无法分离注意、视觉输入、转弯及障碍物的独立作用。该假说需要任务难度匹配和事件级比较进行验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_8",
+          "relation": "supports",
+          "note": "Non-Freezer在没有FOG的复杂TBC任务中alpha功率下降，证明alpha功率变化并非冻结所必需。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_9",
+          "relation": "supports",
+          "note": "Non-Freezer在没有FOG的复杂TBC任务中beta功率也下降，支持任务依赖性解释。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_5",
+          "relation": "supports",
+          "note": "Freezer与Non-Freezer在自然FW无冻结时段的burst power没有显著差异，提示任务条件会改变组间功率结果。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_6",
+          "relation": "qualifies",
+          "note": "同一患者冻结与非冻结阶段的burst duration存在差异，提示任务需求解释可能不能涵盖所有事件相关的时间组织异常。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C16",
+      "text": "竞争性机制假说C：FOG临床亚型依赖的STN神经机制模型。该假说认为，不同FOG亚型可能具有不同的STN活动特征，例如部分亚型主要表现为beta burst持续时间延长，而另一些亚型可能主要表现为不同的频谱功率或复杂度变化。因此，将所有FOG患者合并为Freezer组可能稀释亚型特异性信号，造成研究结果不一致。该模型预测，在使用经过验证的冻结亚型标准进行分层后，不同亚型将呈现可重复且可区分的STN神经特征。当前证据只支持FOG存在临床异质性，并没有直接证明不同亚型对应不同STN机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "证据强度：低。现有表型聚类研究没有神经信号记录，STN研究也没有充分报告冻结亚型。不能根据三个行为聚类直接推断存在三个STN神经机制。还需要控制药物反应、疾病严重程度和DBS治疗历史等潜在混杂因素。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30153383_1",
+          "relation": "supports",
+          "note": "41名FOG患者中识别出三个数据驱动的冻结亚组，为亚型依赖模型提供临床表型依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_1",
+          "relation": "qualifies",
+          "note": "2018年burst研究采用Freezer与Non-Freezer二分类，没有进一步区分FOG亚型。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_11",
+          "relation": "qualifies",
+          "note": "2017年熵研究的Freezer组同样没有提供具体冻结亚型分层结果。"
+        }
+      ]
+    },
+    {
+      "cid": "P3_C17",
+      "text": "竞争性机制假说D：双侧STN网络协调失衡模型。该假说认为，FOG相关步态异常可能不主要由某一侧STN单独驱动，而与双侧STN活动协调及双下肢运动时序之间的网络关系有关。该模型预测，双侧STN beta burst持续时间的不对称性应与双侧步态不对称性相关，并且双侧联合神经指标可能比单侧STN指标更能预测冻结风险。现有研究中的双侧差值相关性支持这一假说的可检验性，但尚无直接证据证明双侧网络不对称导致FOG。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "证据强度：低。现有结果来自10名患者的SIP无冻结步态分析，样本量小且属于横断面相关。没有冻结事件预测、方向性分析或双侧STN因果干预证据。双侧差值相关性也可能受到共同步态因素影响。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_30196050_8",
+          "relation": "supports",
+          "note": "双侧STN burst duration差值与双腿stride time差值呈强正相关，提供双侧协调模型的直接关联依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_30196050_9",
+          "relation": "qualifies",
+          "note": "单侧STN burst duration与对侧腿stride time没有发现相关性，说明需要检验双侧网络解释，而不能直接采用单侧控制模型。"
+        }
+      ]
+    }
+  ]
+}</escape>

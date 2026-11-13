@@ -1,0 +1,240 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:42301334
+题目: The Noradrenergic Brain in Parkinson's Disease.
+年份: 2026  类型: review-article; Review; Journal Article
+摘要: Purpose of reviewCerebral noradrenergic activity modulates physiological functions of behaviour, cognition, movement, arousal and sleep. This review aims to provide an accurate summary of the current knowledge on the involvement of the noradrenergic system in Parkinson's Disease (PD) and its clinical correlations based on neuroimaging studies.Recent findingsStudies in PD highlight neuromelanin MRI signal loss in the locus coeruleus (LC), and positron emission tomography shows noradrenergic denervation across subcortical and cortical areas. More severe phenotypes of PD, manifesting with cognitive decline, apathy, REM sleep behaviour disorder and autonomic dysfunction, are associated with more severe noradrenergic dysfunction. Conversely more preserved noradrenergic transmission is common in tremulous PD. Furthermore, noradrenergic dysfunction, is also involved in transient motor manifestations such as tremor and freezing of gait. Recent neuroimaging advances greatly expanded the knowledge about noradrenergic dysfunction pathophysiology in PD. However, pharmacological treatment of its several associated manifestations is still lacking and needs further investigation.
+
+---
+
+pid: PMID:42310513
+题目: Experiences of Anxiety and Its Relationship to Freezing of Gait in Parkinson's Disease: A Qualitative Study.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait (FOG) is a disabling motor symptom in Parkinson's disease (PD) with substantial impact on mobility and quality of life. Anxiety is frequently implicated in triggering or worsening FOG, yet the lived experience of this interaction remains poorly understood. This study explored how individuals with PD reflect on the interaction between anxiety and FOG following an anxiety-focused intervention, aiming to better understand how and why this interaction develops and impacts daily life. A thematic analysis was conducted using semistructured interviews with 12 individuals with PD who reported daily FOG episodes influenced by anxiety or stress. Interviews were conducted during the final session of a behavioral intervention targeting anxiety related to FOG. Interviews were transcribed verbatim and analyzed iteratively to identify patterns of meaning. Five overarching themes emerged. First, participants described how anxiety was linked to a gradual loss of confidence in their walking abilities, driven by perceived loss of control, unpredictability of FOG, and feelings of vulnerability. Second, regaining control over walking was mentioned to reduce anxiety, either through having a compensatory strategy available in case of a freezing episode, or through contextual factors (e.g., being in the dopaminergic ON state). Third, anxiety typically developed gradually alongside the progression of FOG and the concomitant decline in confidence during walking, but could also intensify following negative events, such as falls. Fourth, anxiety was reported to divert attentional resources toward potential threats and make it more difficult to focus on strategies for managing FOG. Finally, many participants engaged in avoidance behaviors, causing negative downstream effects such as limiting social participation and physical activity. These findings highlight the importance of early recognition, as well as the potential for interventions that enhance confidence to help reduce anxiety surrounding FOG.
+
+---
+
+pid: PMID:42310670
+题目: Real-world gait study of Parkinson's disease using wearable sensors: a systematic review.
+年份: 2026  类型: Systematic Review; review-article; Review; Journal Article
+摘要: BackgroundNew technologies, such as wearable sensors, allow the quantitative assessment of gait alterations due to Parkinson's disease (PD) through Digital Mobility Outcomes (DMOs). These DMOs have the potential to complement traditional clinical assessments but must be relevant, reliable, and representative of the patient's overall condition. Real-world monitoring offers a valuable approach for this type of day-to-day evaluation of patients.ObjectiveThis systematic review has four primary aims: 1) To identify trends in protocol design for real-world gait monitoring using wearables in patients with PD. 2) To detail the analysis of inertial data and the computation of DMOs. 3) To summarize the clinical scales and symptoms studied. 4) To outline trends in the conclusions and limitations reported by authors in this field.MethodsThree databases (MEDLINE via PubMed, Cochrane, and EMBASE) were systematically searched between September 1, 2013, and September 15, 2023. Eligibility criteria included studies involving adults with a PD diagnosis, the use of a wearable device with at least one accelerometer or gyroscope, and gait analysis conducted in real-world settings.Results and conclusionSixty-three studies were selected. Overall, wearables successfully provide clinically meaningful information on gait impairment in patients with PD. Stride speed as a DMO is well-established and clinically meaningful, while other metrics, such as stride length, stride duration, and cadence, show great promise for routine clinical practice and research. However, the lack of consensus on the methods of investigation and the small sample sizes remain significant barriers that must be addressed to facilitate broader adoption in clinical practice and research.
+
+---
+
+pid: PMID:42310830
+题目: Tackling Anxiety- and Stress-Related Freezing of Gait in People With Parkinson's Disease (TACKLING-FOG): Study Protocol for a Randomized Controlled Trial.
+年份: 2026  类型: Clinical Trial Protocol; Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait (FOG) is a common and disabling symptom in people with Parkinson's Disease (PD), characterized by paroxysmal episodes where there is an inability to step effectively, despite attempting to do so. Anxiety and stress exacerbate FOG, particularly in situations where people with FOG anticipate not being in control of their movements. Some people with PD use compensatory strategies that target anxiety and stress to improve FOG. However, tailored strategies to ameliorate anxiety- and stress-related FOG have never been evaluated in a systematic manner. We describe the study protocol of the TACKLING-FOG trial, which aims to evaluate the effectiveness of a novel 4-week Managing the Mental State intervention in reducing FOG-related anxiety and stress to improve FOG. We also aim to identify the key determinants influencing the response to the intervention. This study is a randomized controlled trial (RCT) with a waitlist control group. Forty participants with PD who experience anxiety- or stress-related FOG will be included. All participants receive a baseline measurement and are subsequently randomized to the intervention or control group in a 1:1 ratio. The intervention group immediately receives four weekly sessions of the Managing the Mental State intervention, whereas the control group enters a waitlist period. Afterwards, both groups are reassessed. Next, the intervention group enters a 10-week follow-up period, while the control group receives the intervention, is reassessed, and enters the follow-up period. Both groups receive a final measurement at the end of the follow-up. The primary outcome is the percentage of time frozen during a home-based walking course that includes self-selected FOG "hotspots." Secondary outcomes involve the percentage of time frozen during the same trajectory under elevated stress conditions and during a standardized FOG-provoking protocol. Additionally, heart rate is collected as a physiological marker of stress and anxiety, and questionnaires are administered to assess domains that may improve in response to the intervention, including anxiety, quality of life, and self-esteem. TACKLING-FOG will be the first RCT to examine the use of tailor-made behavioral strategies to tackle anxiety- and stress-related FOG in people with PD. Trial Registration: Clinicaltrials.gov NCT06302309. Registered on March 8, 2024.
+
+---
+
+pid: PMID:42397913
+题目: Distinct contributions of two subpopulations of subthalamic neurons to levodopa-induced dyskinesia.
+年份: 2026  类型: research-article; Journal Article
+摘要: The subthalamic nucleus (STN) is a prominent target for deep-brain stimulation (DBS) in the treatment of levodopa-induced dyskinesia (LID), a common motor complication of Parkinson's disease. However, the precise impact of STN-DBS on LID remains unclear. Here, we investigated the functional roles of two distinct neuronal populations within the STN in regulating LID. In a mouse model of LID, STN neurons projecting to the entopeduncular nucleus (EP) exhibited a U-shaped activation pattern, whereas those projecting to the tegmental reticular nucleus (RtTg) displayed a predominantly inhibitory response. Activation of EP-projecting STN neurons alleviated dyskinesia but worsened hypokinesia in the parkinsonian state. Activation of RtTg-projecting STN neurons alone did not induce hyperkinetic characteristics, except when combined with levodopa. These findings reveal two anatomically and functionally distinct populations of STN neurons involved in LID regulation, offering insights into the circuitry underlying STN-DBS.
+
+---
+
+pid: PMID:42400317
+题目: Topography of Regional Cerebral GABA&lt;sub&gt;A&lt;/sub&gt; Receptor Availability in Parkinson's Disease Patients With Freezing of Gait.
+年份: 2026  类型: research-article; Research Support, U.S. Gov't, Non-P.H.S.; Journal Article; Research Support, N.I.H., Extramural
+摘要: We aimed to explore the relationship between regional gamma-aminobutyric acid (GABAA) receptor availability, measured with [11C]-flumazenil brain positron emission tomography (PET) and freezing of gait in patients with Parkinson's disease. Freezing of gait is a significant mobility impairment with limited effectiveness to L-DOPA in advancing disease implying a role for other neurotransmitters, such as GABA. Imaging studies using [11C]-flumazenil PET and magnetic resonance imaging (MRI) were conducted in 33 patients with Parkinson's disease (9F/24M; age 68.34 ± 6.38, disease duration 8.03 ± 4.73, motor Movement Disorders Society-revised Unified Parkinson's Disease Rating Scale (MDS-UPDRS) scores 44.01 ± 14.85). Patients were classified into two groups: "freezers" (n = 8) and "nonfreezers" (n = 25), based on the MDS-UPDRS Part III off state examination. Whole brain voxel-based t-tests group comparisons were performed using SPM12. Reduced GABAA binding was observed in the cerebellum vermis, esp. vermis lobule VI, left posterior cingulum, posterior parahippocampal gyrus/fimbriae, medial occipital-temporal gyrus and the right gyrus rectus, right anterior cingulum, and adjacent right superior frontal gyrus that demonstrated significantly reduced GABAA receptor availability in the individuals with freezing as compared to those without. In addition, reductions were also seen in the left posterior putamen and pallidum. Findings may augur a role for GABAA inverse agonists for novel investigation of FOG treatment in Parkinson's disease.
+
+---
+
+pid: PMID:42417016
+题目: Enhanced Gait Variability Index in Neurological and Geriatric Rehabilitation: A Scoping Review.
+年份: 2026  类型: Scoping Review; review-article; Journal Article
+摘要: BackgroundGait variability is a sensitive marker of neuromotor function and a clinically relevant indicator of fall risk and mobility impairment in neurological and geriatric populations. The Enhanced Gait Variability Index (eGVI) has emerged as a promising composite measure that captures multidimensional gait irregularity in a single interpretable score, offering a practical advantage over single-parameter approaches. Despite growing clinical interest, the evidence base supporting its standardized implementation has not been mapped.ObjectivesTo characterize populations and clinical contexts where the eGVI has been applied, map assessment protocol heterogeneity, and identify methodological gaps limiting precision medicine-aligned implementation in neurological and geriatric rehabilitation.MethodsA scoping review following PRISMA-ScR guidelines was conducted using PubMed, CINAHL, Scopus, Emcare, and Web of Science. Peer-reviewed studies reporting eGVI outcomes were included. Data were extracted on participant characteristics, gait assessment protocols, and outcomes, with attention to factors influencing clinical interpretation.ResultsEighteen studies involving 1,915 participants were included, predominantly examining Parkinson's disease (39%) and older adult populations (22%). The eGVI demonstrated preliminary sensitivity to neuromotor impairment, age-related gait changes, and increased task complexity during dual-task walking; findings were most consistent in Parkinson's disease, based on limited number of studies (n = 7). Substantial heterogeneity in walkway systems, walking conditions, assistive device use, and reference populations limited comparability.ConclusionWhile the eGVI shows promise as a clinical outcome measure, protocol variability and reliance on a single unvalidated normative reference limit its clinical use. Population-specific protocols and normative data consistent with a precision medicine approach, are essential for reliable adoption.
+
+---
+
+pid: PMID:42421444
+题目: Noninvasive Brain Stimulation for Parkinson's Disease: Therapeutic Applications and Clinical Perspectives.
+年份: 2026  类型: review-article; Journal Article
+摘要: Noninvasive brain stimulation (NIBS), including repetitive transcranial magnetic stimulation (rTMS), transcranial direct current stimulation (tDCS), and transcranial alternating current stimulation (tACS), has been investigated as an adjunctive therapeutic approach for neurological and psychiatric disorders. In Parkinson's disease (PD), NIBS is of particular interest because several motor and nonmotor symptoms remain insufficiently controlled by pharmacological or surgical treatments. This review summarizes the mechanisms and clinical applications of NIBS in PD, with emphasis on cortical excitability, synaptic plasticity, and network oscillations. These physiological effects may contribute to therapeutic benefit, although clinical responses vary according to stimulation parameters, disease stage, and concurrent task or rehabilitation context. Among NIBS modalities, rTMS has the most consistent clinical evidence, particularly for improving motor symptoms, gait disturbance, depression, and selected cognitive outcomes when applied to the motor cortex, supplementary motor area, or dorsolateral prefrontal cortex. tDCS has shown limited and inconsistent efficacy as a monotherapy for motor symptoms but may have potential benefits for cognitive and mood-related outcomes, especially when combined with physical rehabilitation or cognitive training. tACS remains at an earlier stage of clinical investigation, with preliminary evidence suggesting that frequency-specific stimulation may modulate abnormal oscillatory activity and improve selected motor outcomes, such as tremor or motor stability. Safety, tolerability, and biomarker-guided personalization are important considerations for clinical translation. Further studies are needed to standardize stimulation protocols, assess long-term efficacy, and identify predictors of treatment response. Overall, NIBS represents a generally safe and noninvasive approach that may complement existing treatments for PD. This review summarizes the current evidence and future directions for NIBS-based interventions.
+
+---
+
+pid: PMID:42422531
+题目: Reduced pre-movement subthalamic beta desynchronization marks motor deficit in Parkinson's disease.
+年份: 2026  类型: research-article; Journal Article
+摘要: Abnormal beta-band (13-30 Hz) oscillations in the subthalamic nucleus are a well-established biomarker of motor dysfunction in Parkinson's disease. While most prior work has focused on beta activity during rest or sustained movement, far less is known about its transient dynamics during movement preparation-a critical phase in which suppression of beta-band activity (beta desynchronization) is thought to facilitate motor circuit readiness. Here, we delineate subthalamic beta-band activity specifically in the pre-movement initiation window across diverse motor tasks and demonstrate its association with both clinical motor impairment severity and subsequent movement acceleration. We recorded subthalamic nucleus local field potentials and kinematics in sixteen individuals with Parkinson's disease (10 males, 6 females; mean age 57.9 ± 10.5 years) implanted with sensing deep brain stimulation systems (Medtronic Activa® PC+S). While off medication and stimulation, participants performed cued motor tasks, including sit-to-stand, stand-to-walk and wrist flexion-extension. Pre-movement beta desynchronization, quantified as beta power normalized to resting baseline, was extracted and analysed using linear mixed-effects models to determine its relationship with clinical impairment severity and movement acceleration. Across all tasks, we observed robust pre-movement beta desynchronization in the subthalamic nucleus (P P P < 0.05). A strong link between greater pre-movement beta desynchronization, less severe bradykinesia and more vigorous movement suggests that impaired beta modulation reflects disruptions in motor planning, delayed recruitment of motor networks and excessive basal ganglia inhibition. These circuit-level abnormalities likely contribute to the difficulties individuals with Parkinson's disease face in initiating and executing movements, offering valuable insight into the neurophysiological basis of motor dysfunction in Parkinson's disease.
+
+---
+
+pid: PMID:42423496
+题目: Performance of a Personalized Smart Cueing Device to Detect Freezing of Gait in Parkinson's Disease.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: External cueing is a proven strategy to overcome freezing of gait (FoG) in Parkinson's disease (PD). However, manual activation of cueing is often too late and continuous cueing may be perceived as burdensome. Therefore, the Cue2walk, a medical device for FoG detection and provision of external cues, was developed. This study aimed to determine (1) the performance to detect FoG of the Cue2walk device and (2) the effect of personal optimization on its performance to detect FoG. Twenty-four people with PD and daily FoG completed a gait circuit including FoG-triggering tasks in their own home environment, while wearing a Cue2walk device to collect acceleration data. Two experienced independent raters rated the occurrence of FoG using video annotation. The data set of each participant was split into a training (60%) and test set (40%), obtaining an even distribution of FoG episodes. The training set was used to personalize the settings of the algorithm. The test set was subsequently used to assess the performance to detect FoG of the standard and personalized setting by calculating sensitivity, specificity, and latency (time between onset and detection of FoG). Sensitivity was 28.2% ± 31.6%, specificity was 96.0% ± 4.1%, and latency was 1.9 s ± 2.4 s on the test set with the standard settings. With personalized settings, sensitivity was 89.1% ± 14.8%, specificity was 93.3% ± 5.5%, and latency was 1.6 s ± 2.2 s. Sensitivity was significantly higher for the personalized settings (p < 0.001), while latency and specificity remained similar. The Cue2walk device showed good performance to detect FoG when using the personalized settings. The clinical effectiveness needs to be determined in future research.
+
+---
+
+pid: PMID:42438839
+题目: Brain markers of cognitive-motor control of gait function in Parkinson's disease: links with physical activity and aerobic fitness.
+年份: 2026  类型: review-article; Journal Article
+摘要: PurposeThis narrative review synthesizes magnetic resonance imaging (MRI) evidence of (i) the associations between physical activity and/or aerobic fitness and brain markers related to cognitive function in Parkinson's disease (PD); and (ii) MRI-derived brain markers linked to gait impairment in PD. We also propose a conceptual framework describing how physical activity or fitness may support the cognitive-motor networks associated with gait.MethodsPubMed and Web of Science were searched for MRI studies examining the relationships between physical activity/fitness and cognition-relevant brain markers as well as MRI studies linking brain markers to gait outcomes (including cognition-related gait measures and freezing of gait).ResultsFourteen observational studies met our inclusion criteria. Higher physical activity and/or fitness were seen to be generally associated with better cognitive performance and MRI features suggestive of preserved brain integrity and connectivity within the cognitive-motor networks. Regarding gait, the reviewed evidence suggests a shift toward greater reliance on cognitive-motor control to compensate for impaired automatic motor control, which may occur when this compensatory cognitive control becomes insufficient under increased task demands.ConclusionPhysical activity and fitness may contribute to gait function in patients with Parkinson's disease by supporting the cognitive-motor integration required for walking. Longitudinal and interventional studies using ecologically valid paradigms that approximate real-world (including dual-task) walking, ideally combined with wearable neuroimaging approaches, are needed to clarify how changes in physical activity or fitness are related to neural markers of gait.
+
+---
+
+pid: PMID:42438840
+题目: Structural and functional brain changes following diverse exercise interventions in Parkinson's disease: an MRI-based narrative review.
+年份: 2026  类型: review-article; Journal Article
+摘要: PurposeThis narrative review synthesizes magnetic resonance imaging (MRI) evidence from exercise intervention studies in patients with Parkinson's disease (PD), focusing on structural and functional brain changes associated with motor and cognitive outcomes. We also propose an interpretative framework in which exercise-related neuroplasticity in PD is understood as region- and task-dependent reorganization across cognitive-motor networks.MethodsPubMed and Web of Science were searched for interventional studies in patients with PD that examined the effects of exercise-based training on motor and/or cognitive outcomes and included MRI-based assessments of brain structure or function. Studies were eligible if they used a randomized controlled or crossover design and were published in English.ResultsEighteen interventional trials met the inclusion criteria. Structural MRI findings were limited but suggested subtle region-specific changes in the cerebellum, putamen, and hippocampus rather than a uniform global structural response. Resting-state fMRI studies indicated distributed reorganization across both motor and extramotor networks, including the sensorimotor, salience, default mode, frontoparietal, attentional, and medial temporal systems. Task-based fMRI studies further suggested that exercise-related neural adaptation in PD is strongly shaped by task demand, with reduced prefrontal recruitment observed during complex gait-related conditions and increased recruitment of control-related regions during motor imagery or internally simulated tasks.ConclusionExercise interventions in PD may influence motor and cognitive outcomes through neuroplastic changes that are better characterized by circuit-specific structural remodeling, context-dependent resting-state network retuning, and task-dependent functional reallocation rather than by a single uniform neural response.
+
+---
+
+pid: PMID:42460839
+题目: Pharmacologically Modulating the Noradrenergic Arousal System to Reduce Freezing of Gait in Parkinson's Disease: Study Protocol of the International AnTi-FREEZE Study.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait (FOG) is a burdensome Parkinson's disease (PD) symptom. Gait control in people with PD relies on compensation from cognitive, sensory and limbic networks. Their integration is influenced by the noradrenergic ascending arousal system, modulated by the locus coeruleus. In PD, locus coeruleus degeneration has been linked to increased FOG severity. Atomoxetine, a selective noradrenaline reuptake inhibitor, may provide a novel therapeutic approach for FOG. However, to date, studies on atomoxetine's effect on FOG have been inconsistent and had small sample sizes. This study will evaluate the effects of atomoxetine on FOG severity, both in the dopaminergic OFF- and ON-states. Moreover, we will investigate its mode of action by examining its influence on functional network topology. Additionally, we will examine clinical and imaging markers associated with an individual's treatment response. Sixty patients with frequent FOG will be recruited for a multicentre, single-dose, double-blind, placebo-controlled, crossover clinical trial. Assessments include clinimetrics, cognition, MDS-UPDRS III, gait assessments, pupillometry and neuroimaging, conducted in the dopaminergic OFF- and ON-states. The primary outcome is FOG severity in the dopaminergic OFF-state, quantified based on the percentage of time spent frozen during gait assessments. Resting-state fMRI is conducted to assess network integration and segregation across brain regions and task-fMRI to reveal neural circuitry changes during FOG. Lastly, locus coeruleus and substantia nigra integrity will be assessed using structural MRI. This study will provide insights into the role of the noradrenergic ascending arousal system and potentially identify a novel pharmaceutical treatment pipeline for FOG in PD.
+
+---
+
+pid: PMID:42483310
+题目: Breaking the Freeze: The Role of Cognitive Function in Freezing of Gait in Parkinson's Disease.
+年份: 2026  类型: review-article; Review; Journal Article
+摘要: Freezing of gait (FOG) is a highly disabling, poorly dopa-responsive symptom of Parkinson's disease (PD) that becomes increasingly prevalent with disease progression and is one of the main contributors to falls and loss of independence. Although FOG has long been viewed as a motor phenomenon, converging evidence shows that executive impairment-particularly deficits in attention, task-switching, inhibition, and visuospatial processing-is strongly implicated in its pathophysiology. Yet the field lacks a coherent framework explaining how these cognitive processes contribute to FOG and how they should be targeted in therapy. This narrative review synthesizes current evidence on the neural mechanisms linking cognitive dysfunction and FOG. Literature was identified through targeted searches of neuroimaging, behavioral, and rehabilitation studies in PD with and without FOG. Findings consistently demonstrate altered activity and connectivity within corticostriatal and corticolimbic circuits in freezers, including inefficient hyperactivation of the frontal, prefrontal, and posterior parietal cortices, and abnormal coupling between the ventral striatum, precuneus, and amygdala. These patterns suggest that cognitive networks become overrecruited yet insufficient to compensate for impaired motor automaticity, especially under dual-task demands or emotional load. Robust cognitive reserve can serve as compensation, whereas cognitive impairment can contribute to FOG in situations with high cognitive load. Freezers show disproportionate deficits in inhibitory control, visuospatial processing, and task-switching, which correlate with gait initiation failures and FOG severity. Cognitive training, particularly dual-task and other motor-cognitive interventions, shows promising yet variable effects on gait, executive performance, and FOG; however, the field lacks clarity about which cognitive and executive domains are causally involved and which merely reflect compensatory strain. FOG-specific mechanistic models integrating motor, executive, and limbic dysfunction are needed to guide individualized cognitive training and optimize therapeutic outcomes for people with PD.
+
+---
+
+pid: PMID:42484421
+题目: Feasibility of Real-Time Autonomous Functional Electrical Stimulation for Freezing of Gait.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait is a debilitating walking disturbance that can severely worsen quality of life for people with Parkinson's disease. However, current Parkinson's disease treatments do not effectively address freezing of gait, leading researchers to explore cueing to mitigate the symptom. Somatosensory stimulation is an emerging cueing strategy that could be discreet and practical to mitigate freezing of gait duration. Twenty-six participants (seven females) attempted walking trials in a freeze-inducing path while wearing a functional electrical stimulation cueing device. Functional electrical stimulation cueing was activated autonomously in real time. Constrained random sampling was used to designate each trial as cueing system on or off, providing a control for within-participant analysis. A total of 576 freezing episodes were recorded with the device on. Of those, 492 were successfully stimulated. To assess cueing performance, freezing of gait time per trial in the on and off device states was calculated for each participant. On average, freezing of gait time per trial decreased from 5.84 to 5.69 s (2.44%). Freezing of gait time per trial increased for half the participants and the other half experienced a decrease. There were no statistically significant group-level effects, though electrical stimulation cueing elicits a wide range of responses from different participants, with the technology mitigating freezing of gait for some individuals. Because functional electrical stimulation has numerous modifiable parameters that influence sensation and nervous system response, personalizing these parameters could enhance the effectiveness of freezing of gait mitigation and provide deeper insights into freezing of gait.
+
+---
+
+pid: PMID:42484650
+题目: Effect of continuous subcutaneous foslevodopa/foscarbidopa infusion on gait in advanced Parkinson's disease: a real-world wearable-based study.
+年份: 2026  类型: Journal Article
+摘要: BackgroundIn patients with advanced Parkinson's disease (PD), spatiotemporal gait parameters and freezing of gait (FoG) show a variable responsiveness to levodopa, with FoG often exacerbated by motor fluctuations. Continuous subcutaneous foslevodopa/foscarbidopa (LDp/CDp) infusion effectively reduces motor fluctuations; however, its effects on gait remain incompletely explored.ObjectivesTo provide an objective, wearable-based assessment of FoG and gait parameters during LDp/CDp infusion in patients with PD, and to investigate their association with motor fluctuations and clinical outcomes.MethodsPD patients were evaluated at baseline (T0), after 6 (T1) and 12 months (T2) of LDp/CDp therapy. Real-world monitoring was performed using a wearable sensor (STAT-ON) for five consecutive days at each timepoint. Wearable-derived outcomes included FoG/h, gait parameters (gait speed, step length, cadence, stride fluidity) and motor-state distribution (OFF-time, ON-time, dyskinesia). Clinical assessments included MDS-UPDRS Part III-IV, new Freezing of Gait Questionnaire (NFOG-Q) and PDQ-39.ResultsFoG/h, stride fluidity, step length improved significantly over time (p = 0.017, p = 0.004, p = 0.002, respectively), alongside the reduction in OFF time (p = 0.043) and dyskinesia (p = 0.021). MDS-UPDRS Part IV, NFOG-Q, and PDQ-39 scores improved significantly in parallel. OFF-time reduction was associated with reduced FoG burden (ρ = 0.657, p = 0.011) and increased stride fluidity (ρ = - 0.741, p = 0.002). Post-hoc analyses indicated that improvements were evident at T1 and maintained at T2. LEDD remained unchanged.ConclusionsLDp/CDp infusion is effective in improving FoG and selected gait parameters in PD, reflecting stabilization of motor fluctuations without increased dopaminergic exposure.
+
+---
+
+pid: PMID:42495269
+题目: Freezing of gait and the effects of vibrotactile cueing in Parkinson's disease-a study protocol of a cross-sectional multimodal brain imaging approach in virtual walking scenarios.
+年份: 2026  类型: methods-article; Journal Article
+摘要: BackgroundFreezing of gait (FOG) is one of the most debilitating motor symptoms in Parkinson's disease (PD), affecting a substantial proportion of people with PD. Numerous hypothetical mechanisms exist, attempting to explain FOG. Current evidence originated from stationary measures in lying positions, limiting the understanding of neurophysiological changes elicited by FOG episodes during regular locomotion. Neurophysiological aspects of FOG, especially in response to vibrotactile cueing, have been explored only by a few studies. To address this gap, the current study aims to investigate FOG episodes in people with PD and the impact of vibrotactile cueing while walking through virtual environments on a self-paced treadmill.MethodsThirty people with Parkinson's Disease and FOG will be recruited. They will undergo screening and familiarization before performing different walking tests in virtual reality using the Gait Real-time Analysis Interactive Lab (GRAIL). Participants will perform two experimental blocks, each consisting of four walking trials of approximately 10 min. A break of 10 to 30 min will be provided between blocks. Walking with or without vibrotactile cueing will be performed in alternation. During walking, electrocortical (EEG), hemodynamic (fNIRS), kinematic data (3D motion capture), and kinetic data (force plates) will be recorded. Data will be analyzed to investigate spatiotemporal and frequency characteristics of electrocortical and hemodynamic brain activity related to FOG and the impact of vibrotactile cueing on neural signatures and gait improvements in FOG.DiscussionCombining neurophysiological measurements of EEG and fNIRS paired with kinematics and kinetics will provide insights into the cortical and behavioral changes associated with FOG and vibrotactile cueing, to derive results that can be used for the design of intervention strategies for treating PD.Study protocol registrationhttps://drks.de/search/de/trial/DRKS00034584, identifier DRKS00034584.
+
+---
+
+pid: PMID:42522567
+题目: Distinct roles of the human cuneiform and pedunculopontine nuclei in gait and freezing of gait.
+年份: 2026  类型: Journal Article
+摘要: Freezing of gait (FOG) in Parkinson's disease (PD) is a major cause of disability, often resistant to dopaminergic therapy and deep brain stimulation (DBS). Its underlying neural mechanisms remain unclear. The mesencephalic locomotor region (MLR) is a critical hub for gait control and a therapeutic target for DBS, but the respective functional roles of its two main nuclei, i.e. the cuneiform nucleus (CuN) and the pedunculopontine nucleus (PPN), remain unclear in human gait. Here, we combined local field potential recordings from both the CuN and PPN with detailed biomechanical analyses of gait initiation in four PD patients suffering from dopa-resistant FOG. Neural activity was aligned to anticipatory postural adjustments (APA) and step execution to characterize the temporal organization of MLR dynamics during gait initiation and to identify alterations preceding freezing episodes. We also examined the effects of CuN, PPN and sham stimulation on gait initiation. During gait initiation, the CuN and PPN exhibited distinct temporal and spectral neuronal activity patterns associated with different phases of gait initiation. Alpha-band activity in the CuN increased prior to APA and correlated with stepping rhythm, whereas the PPN showed prominent beta-band desynchronization during postural adjustments followed by alpha modulation during step execution. When FOG occurred after gait initiation (FOG + trials, n = 38), we observed a breakdown of this spatiotemporal organization. Specifically, freezing was preceded by exaggerated and mistimed alpha-band synchronization across the MLR and abnormal modulation of PPN beta activity compared with non-freezing trials (FOG- trials, n = 115, p < 0.05). CuN stimulation selectively improved gait rhythm, whereas PPN stimulation worsened forward propulsion. Across patients, excessive mesencephalic alpha activity predicted impaired gait initiation and reduced responsiveness to stimulation. Together, these findings reveal a functional dissociation within the human MLR, with CuN activity linked to rhythmic step preparation and PPN activity associated with postural and execution-related processes, and subsequent FOG was associated with disruption of MLR dynamics during gait initiation, rather than a uniform loss of locomotor drive. By clarifying the distinct roles of the CuN and PPN and identifying frequency-specific biomarkers associated with gait failure, this study provides a mechanistic framework for understanding variable outcomes of MLR-DBS and supports the development of spatially and temporally adaptive neuromodulation strategies for gait disorders.
+
+---
+
+pid: PMID:42552260
+题目: Freezing of Gait: A Tribute to Nir Giladi.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Freezing of gait (FoG) is frequently triggered during gait initiation, a transition that depends on anticipatory postural adjustments (APAs). However, the neuroanatomical substrates linking brain morphometry to APA control during step initiation in FoG remain unclear. We investigated whether subcortical volumes and cortical thickness in motor-cognitive regions relate to APA features and clinical severity. Forty-four right-handed individuals with midstage PD (26 PD + FoG; 18 PD - FoG) performed step initiation. FreeSurfer-derived regional volumes and cortical thickness were extracted. Associations between morphometry and APA metrics were tested across all participants and within groups. Group differences were tested using the Mann-Whitney U tests, and partial Spearman correlations examined morphometry-clinical and morphometry-APA associations, controlling for UPDRS-III and daily levodopa dose. Compared with PD without FoG, the PD + FoG group showed higher UPDRS-III scores and levodopa doses, lower APA mediolateral amplitudes, and larger amygdala volumes. Across all participants, longer APA duration was associated with smaller putamen, thalamus, and dorsolateral prefrontal cortex volumes, whereas greater APA mediolateral amplitude was associated with lower frontopolar cortical thickness. In PD + FoG, freezing severity and APA features were associated with distinct morphometric patterns across the basal ganglia, thalamus, prefrontal, cingulate, SMA, and insular regions. These findings suggest that gait initiation impairment in PD reflects distributed morphometric alterations rather than a single regional substrate. APA measures may provide mechanistically relevant biomechanical markers for identifying neural systems involved in FoG.
+
+---
+
+pid: PMID:42552316
+题目: Vestibular nucleus stimulation for ameliorating locomotor dynamics in a Parkinsonian mouse model.
+年份: 2026  类型: Research Support, Non-U.S. Gov't; research-article; Journal Article
+摘要: Postural and locomotor dysfunction represent axial symptoms of Parkinson's disease (PD), which remain poorly treated by medication and deep brain stimulation. Whilst non-invasive neuromodulation of the vestibular system via the vestibular nucleus complex (VNC) offers a novel therapeutic avenue, the underlying circuits are still poorly characterized. Here we show that the mouse VNC feeds extensive Vglut2-defined projections into striato-thalamo-subthalamic and caudal medulla motor hubs and receives substantial input from the sensorimotor cortex. Optogenetic activation of excitatory VNC neurons at sub-symptomatic intensities increased cFos-based activity in basal ganglia-associated and brainstem motor targets. Unbiased pose dynamics and motion analysis respectively showed enhancement of behavioural modularity and locomotion with threshold-level stimulation. In a mouse model of PD, the latter further favored naturalistic gait patterns through improved motor coordination. Our data identify excitatory VNC processes as candidates for therapeutic targeting of axial motor dysfunction in the context of PD.
+
+【格式适配】本次给了多篇论文（都只有摘要，basis 一律写 abstract）。请对每篇分别按上面的格式输出，publication.ref 照抄该篇的 pid，最外层写成 {"papers": [ {"publication": {...}, "evidence": [...]}, ... ]}。

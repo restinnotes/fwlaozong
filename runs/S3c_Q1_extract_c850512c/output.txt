@@ -1,0 +1,1603 @@
+<escape>{
+  "papers": [
+    {
+      "publication": {
+        "ref": "PMID:38846039",
+        "title": "Vestibular dysfunction in Parkinson's disease: a neglected topic.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "综述性文献。摘要未提供可识别的原始患者队列或具体原始研究PMID/DOI，不构成独立患者队列。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:38852434",
+        "title": "Clinical neurophysiology in the treatment of movement disorders: IFCN handbook chapter.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "IFCN手册综述章节，讨论多种神经调控技术。摘要未提供STN神经活动与FOG关系的具体原始数据，也未列出可匹配的原始研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:38894949",
+        "title": "Asymmetries of the subthalamic activity in Parkinson's disease: phase-amplitude coupling among local field potentials.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告24例PD患者的STN局部场电位记录，但未提供研究中心、招募时间及可用于跨论文队列匹配的患者特征。与其他给定STN研究的队列重叠未知。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "38894949_E1",
+          "design": "人类PD患者观察性神经电生理研究；比较左右STN的beta相位-振幅耦合，并评估左旋多巴给药前后的变化。",
+          "population": "24例帕金森病患者；摘要未进一步提供FOG患者比例、疾病分期或临床FOG表型。",
+          "n_enrolled": null,
+          "n_analyzed": 24,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 24,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "n_enrolled、FOG患者数、FOG事件数、试次数及电极/触点数均为摘要未提及；FOG事件级分析未在摘要中报告。",
+          "endpoint_class": "unclear",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported；摘要未报告FOG分组、冻结事件或FOG严重程度。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "左旋多巴给药前后比较；摘要提及OFF condition下的高频与high-beta耦合，但未说明具体剂量、给药时间及ON/OFF判定标准。",
+          "DBS_state_and_parameters": "摘要未报告DBS临床状态、测试刺激状态或刺激参数；研究使用STN局部场电位记录。",
+          "task": "摘要未说明具体运动任务或静息记录条件。",
+          "recording_location": "双侧丘脑底核（STN）局部场电位；比较左、右半球。",
+          "measure": "相位-振幅耦合（PAC）。beta相位包括low-beta和high-beta；振幅指标包括low-frequency、medium-frequency和high-frequency活动。该指标为跨频耦合，不等同于单独的beta平均功率。",
+          "frequency_and_analysis_window": "相位频段：low-beta 12–20 Hz、high-beta 20–30 Hz；振幅频段：low 30–45 Hz、medium 70–100 Hz、high 260–360 Hz。分析窗口、基线、归一化方式及具体PAC估计方法未在摘要报告。",
+          "finding": "研究报告左右STN之间存在显著beta相位-振幅耦合不对称，左旋多巴产生与对侧相关的药物效应。OFF状态下high-beta相位与高频振幅之间存在较高耦合。该不对称性与运动症状起始侧无关。摘要没有报告FOG表型或事件，因此不能据此判断STN-PAC与FOG之间的关系。",
+          "effect_estimate": "报告显著的半球间PAC不对称及相反侧依赖的药物效应。摘要中的P值字符串不完整，仅能辨认出部分P<0.01信息，无法将具体P值对应到各比较。无可提取的效应量和置信区间。",
+          "statistical_unit_and_method": "患者队列24例；左右半球及药物状态比较。具体统计模型、患者级与试次级统计单位、重复测量处理方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经电生理研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "报告24例患者，但摘要未说明连续入组、排除标准或招募方式。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "未报告LFP信号质量、伪迹剔除、参考电极或信号预处理方法。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "存在左旋多巴前后比较，但摘要没有说明给药顺序、洗脱时间及可能影响PAC的临床混杂因素。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "存在双侧和药物状态重复比较，但摘要未说明患者内相关性处理方法。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个相位和振幅频段，摘要未说明多重比较校正。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要中的P值信息不完整，无法核对全部预设分析和结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "这是STN跨频耦合的直接神经电生理证据，但不是STN活动与FOG关系的直接证据。摘要未提供FOG患者人数、FOG事件、自然步行任务或冻结阶段分析。不能将其PAC不对称结果解释为FOG特异性生物标志物。",
+          "quote": "Subthalamic low- (12-20 Hz) and high-beta (20-30 Hz) oscillations were compared with low- (30-45 Hz), medium- (70-100 Hz) and high-frequency (260-360 Hz) bands.",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:38899557",
+        "title": "A Pragmatic Review on Spinal Cord Stimulation Therapy for Parkinson's Disease Gait Related Disorders: Gaps and Controversies.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "系统综述和叙述性综合，纳入45项人类研究及临床试验。该数字为综述纳入研究的数量，不是单一患者队列。摘要未提供与STN神经活动相关的具体原始研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39006221",
+        "title": "Machine learning model comparison for freezing of gait prediction in advanced Parkinson's disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告21例接受STN-DBS的晚期PD患者。未提供中心、招募日期或患者特征以确认与其他STN-DBS论文是否存在队列重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39006221_E1",
+          "design": "观察性、横断面机器学习分类研究；使用可穿戴设备记录的instrumented stand-and-walk（SAW）步态数据比较五种分类算法。",
+          "population": "21例晚期PD且接受STN-DBS的患者，平均年龄64.24岁，男性16例，平均病程14年。其中14例在OFF medication/OFF DBS状态下被归类为具有FOG。",
+          "n_enrolled": null,
+          "n_analyzed": 21,
+          "n_patients_with_FOG": 14,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": 42,
+          "n_electrodes_contacts": null,
+          "missing_reason": "n_enrolled及电极/触点数摘要未提及；n_trials依据摘要明确报告的21例患者每人完成2次SAW试验计算为42；没有STN神经记录，n_patients_with_valid_neural_data不适用；FOG事件数未报告。",
+          "endpoint_class": "D_susceptibility",
+          "event_phase": "susceptibility",
+          "freezing_phenotype": "Freezer versus non-freezer；根据MDS-UPDRS FOG subscore是否非零分类。未报告akinetic、trembling-in-place等具体冻结表现。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "OFF medication；OFF DBS。所有SAW试验均在该实验状态下完成。摘要未报告停药时间。",
+          "DBS_state_and_parameters": "所有患者均接受STN-DBS治疗；测试时DBS关闭。刺激频率、幅度、脉宽及触点配置未报告。",
+          "task": "instrumented stand-and-walk（SAW）；每位患者完成两次试验。通过可穿戴传感器获取步态总结统计量。",
+          "recording_location": "无STN LFP或STN单位活动记录。使用可穿戴运动传感器获取步态运动学特征。STN-DBS植入状态不等于STN神经活动记录。",
+          "measure": "可穿戴传感器步态summary statistics；k-nearest neighbors、logistic regression、naive Bayes、random forest和support vector machines五种机器学习分类器。",
+          "frequency_and_analysis_window": "无神经振荡频段分析。SAW试验窗口及可穿戴信号的具体采样频率、滤波和特征提取时间窗未在摘要报告。",
+          "finding": "五种机器学习模型在区分FOG与非FOG患者方面表现统计学相近。研究指出random forest模型利用具有判别意义的空间和时间步态特征。该结果反映OFF medication/OFF DBS状态下的患者易感性分类，而非STN神经信号与实际冻结事件的关系。",
+          "effect_estimate": "摘要没有给出各模型AUC、准确率、敏感度、特异度或置信区间。仅报告模型预测表现统计学相近；摘要中相关P值字符串不完整。",
+          "statistical_unit_and_method": "患者FOG分类标签；每人两次SAW试验；分层五折交叉验证。摘要未说明交叉验证是否按患者分组，不能确认同一患者的两次试验是否被分配至不同折。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性预测与机器学习研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "some_concerns",
+                "reason": "样本仅21例晚期STN-DBS患者，摘要未说明连续入组及排除标准，外部适用性有限。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "FOG标签采用MDS-UPDRS FOG subscore非零，由运动障碍专科医生评估，但不是同一SAW试验中实际冻结事件的逐事件标签。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "摘要未报告可穿戴传感器采样率、信号质量、伪迹处理或数据缺失情况。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "OFF medication/OFF DBS状态得到统一，但疾病严重程度、步态基础能力和其他临床因素的调整情况未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "some_concerns",
+                "reason": "每人两次SAW试验，但摘要没有说明交叉验证是否以患者为单位分组，存在试次间信息泄漏的可能性。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "比较五种算法，但摘要未说明统计检验及多重比较校正。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "样本量较小，采用内部五折交叉验证；摘要未报告独立外部验证。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要没有完整提供模型性能数值及各模型详细结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "研究对象具有STN-DBS植入物，但实验没有记录STN神经活动。FOG标签是患者级临床表型，不是实际冻结事件标签。因此不能将该研究作为STN beta或其他STN振荡与FOG事件关联的直接证据。",
+          "quote": "Each patient performed two SAW trials in their OFF Medication-OFF DBS state.",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39066504",
+        "title": "Dysfunction of motor cortices in Parkinson's disease.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "关于PD运动皮层功能的综述。摘要未提供STN-FOG事件级原始数据或可识别的原始研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39104178",
+        "title": "A radiomics approach for predicting gait freezing in Parkinson's disease based on resting-state functional magnetic resonance imaging indices: A cross-sectional study.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告28例PD-FOG患者和30例PD-nFOG患者。未提供中心、招募日期或作者声明，无法判断是否与其他给定FOG影像研究存在患者队列重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39104178_E1",
+          "design": "横断面观察性神经影像及机器学习预测研究；基于静息态fMRI多层级指标提取影像组学特征，并建立前馈神经网络模型。",
+          "population": "28例PD伴FOG患者和30例PD不伴FOG患者；PD-FOG组男性15例，平均年龄63岁；PD-nFOG组男性16例，平均年龄64岁。",
+          "n_enrolled": 58,
+          "n_analyzed": 58,
+          "n_patients_with_FOG": 28,
+          "n_patients_with_valid_neural_data": 58,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "PD患者总数及分组人数可由摘要直接获得；FOG事件数和试次数不适用，因为研究采用静息态fMRI及患者表型分类；电极/触点不适用；健康对照人数摘要未提及。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "PD with FOG versus PD without FOG；具体akinetic、trembling-in-place或其他FOG亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告扫描时Med-On或Med-Off状态、左旋多巴剂量及给药时间。",
+          "DBS_state_and_parameters": "摘要未报告DBS治疗状态或刺激参数。",
+          "task": "静息态3.0T功能磁共振成像；非自然步行任务，未记录实际冻结事件。",
+          "recording_location": "全脑静息态fMRI；摘要没有提供STN特异性ROI结果或STN局部神经记录。",
+          "measure": "mean amplitude of low-frequency fluctuations（mALFF）、mean regional homogeneity（mReHo）和degree centrality（DC）；使用LASSO提取特征并建立前馈神经网络。",
+          "frequency_and_analysis_window": "静息态fMRI；具体低频频段边界、扫描时长、时间窗、基线及归一化方法未在摘要报告。",
+          "finding": "在区分PD-FOG与PD-nFOG时，仅使用mReHo指标的模型获得最高AUC 0.750，准确率70.9%。该结果属于静息态全脑影像表型分类，不是STN电生理或冻结事件预测证据。",
+          "effect_estimate": "AUC=0.750；accuracy=70.9%。置信区间和该比较的具体统计显著性未在摘要报告。",
+          "statistical_unit_and_method": "患者级分类；LASSO特征选择、前馈神经网络、重复100次五折交叉验证。摘要未说明交叉验证分折是否严格按患者独立。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像预测及机器学习研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "some_concerns",
+                "reason": "PD患者共58例，样本量有限；摘要未说明连续入组、排除标准及外部中心验证。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "摘要未说明FOG诊断采用何种临床量表、视频评审或冻结事件判定标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "虽然报告3.0T扫描，但未说明头动、图像质量控制、伪迹剔除及有效扫描数据比例。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "摘要没有充分报告年龄、疾病严重程度、药物状态等混杂因素的调整情况。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "采用重复五折交叉验证，但摘要未说明是否以患者为单位分割数据。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "some_concerns",
+                "reason": "比较多个影像指标、分类任务和模型，摘要未充分说明多重比较控制。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "使用内部重复交叉验证，但摘要未报告独立外部验证；LASSO和神经网络在有限样本中的泛化能力仍不确定。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "提供部分最高AUC结果，但摘要末尾关于其他模型的结果不完整。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该研究提供FOG患者静息态脑功能表型的替代证据，但没有STN特异性神经记录，也没有自然步行中的事件级FOG标签。影像分类能力不能直接解释为STN神经活动与FOG的因果联系。",
+          "quote": "mean regional homogeneity values achieved the highest area under the receiver operating characteristic curve values of 0.750 (with an accuracy of 70.9%).",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39104178_E2",
+          "design": "横断面观察性神经影像及机器学习分类研究；使用静息态fMRI的mReHo指标建立PD-FOG与健康对照的分类模型。",
+          "population": "28例PD-FOG患者与健康对照；健康对照人数未在摘要报告。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": 28,
+          "n_patients_with_valid_neural_data": 28,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "PD-FOG人数为28；健康对照人数及该二分类任务的总分析人数摘要未提及，因此n_enrolled和n_analyzed为null；事件数、试次数不适用。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "PD with FOG versus healthy controls；FOG具体运动学亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "静息态3.0T fMRI。",
+          "recording_location": "全脑静息态fMRI；没有STN特异性神经记录。",
+          "measure": "mean regional homogeneity（mReHo）影像组学指标及前馈神经网络分类。",
+          "frequency_and_analysis_window": "静息态fMRI；具体频段、扫描时长和分析时间窗未报告。",
+          "finding": "mReHo模型在区分PD-FOG患者与健康对照时获得AUC 0.759、准确率65.3%。",
+          "effect_estimate": "AUC=0.759；accuracy=65.3%。置信区间未报告。",
+          "statistical_unit_and_method": "患者级分类；前馈神经网络；摘要报告重复100次五折交叉验证，但未提供该比较的详细模型参数。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像预测研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "some_concerns",
+                "reason": "PD-FOG组28例，健康对照人数及其选择方式未在摘要报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "FOG临床诊断与判定标准未在摘要报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "未报告MRI头动和图像质量控制细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "PD患者与健康对照在疾病状态上存在系统差异，摘要未报告充分的混杂控制。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "报告内部重复交叉验证，但未报告独立外部验证。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要只提供部分模型结果，不能核查全部预设分析。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "健康对照人数未知，不能准确恢复该任务的总样本量。该结果不是STN特异性指标，也不是实际冻结事件关联。",
+          "quote": "the models using only the mean regional homogeneity values achieved the highest area under the receiver operating characteristic curve values of 0.750 and 0.759.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39143114",
+        "title": "Multimodal neuroimaging to characterize symptom-specific networks in movement disorders.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "多模态神经影像综述。摘要讨论症状特异性网络及DBS的大尺度网络效应，但没有报告STN-FOG直接实验数据或可识别的原始研究队列。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39190604",
+        "title": "Interrogating basal ganglia circuit function in people with Parkinson's disease and dystonia.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告DBS手术中GPi微电极记录及PD和肌张力障碍患者比较，但没有提供可与给定STN-FOG研究匹配的队列信息。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39200289",
+        "title": "New Perspectives for Spinal Cord Stimulation in Parkinson's Disease-Associated Gait Impairment: A Systematic Review.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "系统综述，纳入18篇文献及70名患者，属于既有SCS研究的二次综合，不构成独立患者队列。摘要未提供STN神经活动与FOG关系的具体原始研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39227357",
+        "title": "Cerebellar involvement in Parkinson's disease: Pathophysiology and neuroimaging.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "小脑病理生理和神经影像综述。摘要没有提供STN神经活动与FOG事件的原始数据或具体原始研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39229492",
+        "title": "Freezing of gait in Parkinson's disease is related to imbalanced stopping-related cortical activity.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告23例每日出现FOG的PD患者和22名年龄匹配对照。未提供研究中心、招募时间或作者声明，不能判断与其他给定FOG队列是否重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39229492_E1",
+          "design": "自由活动条件下的观察性fNIRS神经生理研究；比较FOG患者与健康对照在无冻结的FOG诱发任务中的皮层血流动力学活动。",
+          "population": "23例每日经历FOG的PD患者（freezers）及22名年龄匹配健康对照，共45人。",
+          "n_enrolled": 45,
+          "n_analyzed": 45,
+          "n_patients_with_FOG": 23,
+          "n_patients_with_valid_neural_data": 23,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "样本总数和PD-FOG患者数由摘要报告；具体FOG事件数、各任务试次数及有效数据剔除人数未报告；fNIRS不是STN电极/触点记录，电极/触点数不适用。",
+          "endpoint_class": "D_susceptibility",
+          "event_phase": "non_event_gait",
+          "freezing_phenotype": "Daily freezing；具体akinetic、trembling-in-place或kinetic-no-trembling亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告测试时Med-On或Med-Off状态。",
+          "DBS_state_and_parameters": "摘要未报告DBS状态及参数。",
+          "task": "自由活动条件下的turning和doorway passing；本条结果特指这些任务中未发生冻结的情况。",
+          "recording_location": "多个运动相关皮层区域的功能性近红外光谱记录；包括premotor areas、supplementary motor area（SMA）和prefrontal cortex（PFC）。",
+          "measure": "fNIRS测量皮层血流动力学活动；研究对步行相关混杂信号进行了校正。",
+          "frequency_and_analysis_window": "fNIRS血流动力学信号；具体波长、滤波频段、任务窗口及基线归一化方法未在摘要报告。",
+          "finding": "在turning和doorway passing且没有发生冻结的任务中，FOG患者相较健康对照显示更高的premotor areas活动。该结果反映冻结易感性相关任务中的皮层差异，不是实际冻结事件前的STN信号。",
+          "effect_estimate": "方向为freezers高于controls；摘要未提供效应量、置信区间或P值。",
+          "statistical_unit_and_method": "患者组间比较及任务条件比较；具体模型、重复测量结构和患者级统计方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经生理及事件相关行为研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "报告23例freezers和22名对照，但未说明连续入组、排除标准或对照招募方式。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "摘要明确区分实际冻结和无冻结任务，但未说明冻结事件的具体视频评审或临床确认程序。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "some_concerns",
+                "reason": "研究报告校正步行混杂，但没有提供具体运动伪迹校正算法和有效数据比例。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "freezers与controls之间可能存在临床差异，摘要未报告药物状态及其他临床混杂因素调整。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "同一参与者完成多个任务条件，但摘要未说明患者内相关性处理。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个皮层区域和任务条件，摘要未说明多重比较校正。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要没有完整提供所有脑区和任务比较的数值结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "研究提供皮层层面的FOG易感性证据，但没有STN记录。无冻结任务中的premotor activity不能被称为pre-FOG event-associated activity，因为摘要没有证明这些试次随后出现FOG。",
+          "quote": "During these freezing-provoking tasks, the freezers displayed higher activity in the premotor areas than controls.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39229492_E2",
+          "design": "自由活动条件下的观察性fNIRS研究；比较FOG诱发任务与主动停止任务中的皮层活动模式。",
+          "population": "23例每日经历FOG的PD患者及22名年龄匹配健康对照，共45人。",
+          "n_enrolled": 45,
+          "n_analyzed": 45,
+          "n_patients_with_FOG": 23,
+          "n_patients_with_valid_neural_data": 23,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "样本人数由摘要报告；各条件试次数和FOG事件数未报告；电极/触点数不适用。",
+          "endpoint_class": "D_susceptibility",
+          "event_phase": "non_event_gait",
+          "freezing_phenotype": "Daily freezing；具体运动学亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "无冻结的turning和doorway passing，与voluntary stopping任务进行比较。",
+          "recording_location": "SMA、PFC及其他运动相关皮层区域；fNIRS记录。",
+          "measure": "皮层血流动力学活动；研究对步行相关混杂进行了校正。",
+          "frequency_and_analysis_window": "fNIRS血流动力学信号；具体分析频段、时间窗及基线处理未报告。",
+          "finding": "在freezers和controls两组中，turning和doorway passing（未发生冻结时）的皮层活动模式与主动停止任务相似，涉及SMA和PFC激活。该发现支持FOG诱发任务可能涉及停止相关皮层机制，但不是实际冻结事件的神经信号证据。",
+          "effect_estimate": "报告活动模式相似及SMA/PFC参与；未提供具体效应量、置信区间或P值。",
+          "statistical_unit_and_method": "同一患者内不同任务条件的比较；具体重复测量模型和统计方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经生理研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要未充分说明患者和对照的入组方式。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "摘要区分了无冻结任务与实际冻结，但未报告冻结判定的具体标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "some_concerns",
+                "reason": "报告了步行混杂校正，但具体信号处理流程未提供。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "摘要没有提供药物状态、认知能力或其他临床因素的调整细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "存在任务内重复测量，但统计处理方法未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "多个皮层区域及任务条件的比较未提供校正细节。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "不能把FOG诱发任务中的停止样活动解释为同一试次中实际冻结的前兆。摘要没有提供事件级STN记录。",
+          "quote": "turning and doorway passing (without freezing) resemble cortical activity during stopping in both groups involving activation of the supplementary motor area and prefrontal cortex.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39229492_E3",
+          "design": "自由活动条件下的观察性事件相关fNIRS研究；在FOG患者内部比较实际冻结、主动停止及无冻结诱发任务。",
+          "population": "23例每日经历FOG的PD患者；另有22名健康对照，但本条比较限于freezers内部。",
+          "n_enrolled": 45,
+          "n_analyzed": 23,
+          "n_patients_with_FOG": 23,
+          "n_patients_with_valid_neural_data": 23,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "患者人数由摘要报告；实际冻结事件数和各任务试次数摘要未提及；fNIRS无STN电极/触点。",
+          "endpoint_class": "unclear",
+          "event_phase": "during_FOG",
+          "freezing_phenotype": "Actual freezing；具体akinetic、trembling-in-place或其他冻结亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "自然活动条件下的实际冻结，与voluntary stopping任务比较。",
+          "recording_location": "PFC及其他运动相关皮层区域；fNIRS记录。",
+          "measure": "实际冻结期间与主动停止期间的皮层血流动力学活动。",
+          "frequency_and_analysis_window": "fNIRS血流动力学信号；冻结起始前后分析窗口、持续时间、基线及归一化方法未报告。",
+          "finding": "在freezers内部，实际冻结期间PFC活动低于voluntary stopping期间。作者据此提出SMA与PFC停止相关活动之间可能存在不平衡。",
+          "effect_estimate": "PFC活动方向为actual freezing低于voluntary stopping；未报告效应量、置信区间和P值。",
+          "statistical_unit_and_method": "患者内部任务/事件条件比较；具体事件级统计模型、每名患者贡献事件数及重复事件相关性处理未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性事件相关神经生理研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要报告23例freezers，但未说明患者选择及事件可用性筛选过程。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "摘要使用actual freezing一词，但没有明确报告是否通过视频或临床专家逐事件确认。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "some_concerns",
+                "reason": "研究对步行混杂进行校正，但实际冻结期间的动作伪迹处理细节未提供。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "摘要未提供药物状态、冻结持续时间和事件严重程度等潜在混杂因素的控制情况。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "每名患者可能贡献多个冻结事件，但事件数及统计模型未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "比较多个皮层区域和任务条件，校正方法未报告。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要没有给出全部皮层区域和事件条件的效应量。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是给定论文中与实际冻结事件最接近的皮层神经生理证据，但摘要没有明确报告视频/临床逐事件确认方法，故不能严格归入A_actual_natural。该研究记录的是皮层血流动力学，而不是STN神经活动。PFC低于主动停止并不直接证明STN活动升高或降低。",
+          "quote": "during actual freezing events, activity in the prefrontal cortex was lower than during voluntary stopping.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39273491",
+        "title": "Transient Increases in Neural Oscillations and Motor Deficits in a Mouse Model of Parkinson's Disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "动物实验研究，使用6-OHDA损毁小鼠。摘要未报告动物数量、实验批次或与其他研究的动物队列关系。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39273491_E1",
+          "design": "6-OHDA损毁PD模型动物实验；在静息和运动过程中进行多脑区局部场电位记录，并进行行为学测试。",
+          "population": "6-OHDA损毁小鼠及健康对照小鼠；摘要未报告动物总数及各组人数。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "动物样本量、完成LFP分析的动物数、电极/记录触点数和运动试次数均为摘要未提及；人类患者分母不适用；摘要未报告动物FOG模型或FOG事件。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_applicable_to_reported_model；摘要报告运动协调障碍及前肢不对称，没有报告FOG-like行为或冻结表型。",
+          "medication_phenotype": "not_applicable",
+          "experimental_medication_state": "6-OHDA损毁动物模型；摘要未报告左旋多巴或其他药物干预。",
+          "DBS_state_and_parameters": "未报告DBS；不适用。",
+          "task": "静息和locomotion；行为学测试包括运动协调和前肢不对称评估。",
+          "recording_location": "多脑区LFP记录，包括primary motor cortex（M1）、caudate-putamen（CPu）、subthalamic nucleus（STN）、substantia nigra pars compacta（SNc）和pedunculopontine nucleus（PPN）。",
+          "measure": "LFP频段活动，包括delta、theta、alpha、beta和gamma功率/活动水平；另有运动协调和前肢不对称行为指标。",
+          "frequency_and_analysis_window": "delta、theta、alpha、beta和gamma频段；具体频率边界、运动前后分析窗口、功率归一化和基线定义未在摘要报告。",
+          "finding": "6-OHDA损毁小鼠在运动期间出现多个频段活动增加，包括delta、theta、alpha、beta和gamma；增加涉及STN及M1、CPu、SNc和PPN等多个区域。摘要没有报告FOG事件或FOG-like现象。",
+          "effect_estimate": "报告多个脑区及频段活动显著增加，但未提供具体功率差值、效应量、置信区间或P值。",
+          "statistical_unit_and_method": "动物组间和状态条件比较；具体动物级统计单位、重复运动窗口处理和多脑区统计方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：动物神经电生理研究领域级评估。",
+            "domains": [
+              {
+                "domain": "动物样本选择",
+                "judgement": "unclear",
+                "reason": "摘要没有报告动物数量、随机分组或纳入排除标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "not_assessable",
+                "reason": "研究报告运动缺陷，但摘要没有FOG行为标签或冻结事件判定。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "摘要没有提供LFP信号质量、运动伪迹校正及电极定位验证细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "摘要未报告病变侧、记录侧及其他动物间差异的调整情况。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "存在静息与运动状态重复记录，但未说明动物内重复测量模型。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个脑区和频段，摘要未说明多重比较校正。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "未提供全部脑区、频段和行为指标的详细统计结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "该研究提供PD动物模型中STN振荡活动与运动状态相关的证据，但没有FOG模型、冻结事件或FOG-like行为判定。不能把运动缺陷等同于FOG，也不能将多脑区同步活动变化归因于STN特异性机制。",
+          "quote": "The LFP analysis revealed increased delta, theta, alpha, beta, and gamma band activity in 6-OHDA lesioned mice during movement.",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39295169",
+        "title": "New Insights into Freezing of Gait in Parkinson's Disease from Spectral Dynamic Causal Modeling.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告PD-FOG与PD-nFOG患者的静息态fMRI研究，但没有给出样本量、研究中心、招募时间或患者特征，无法匹配其他给定FOG队列。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39295169_E1",
+          "design": "横断面观察性静息态fMRI研究；使用数据驱动ROI选择和功能连接分析比较FOG与非FOG患者。",
+          "population": "帕金森病freezers与nonfreezers；摘要未报告两组人数、年龄或疾病严重程度。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未提及总样本量、分组人数及有效MRI数据人数；静息态研究无步行试次数和FOG事件级计数；无电极/触点记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "Freezers versus nonfreezers；具体冻结运动学亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告扫描时Med-On/Med-Off状态。",
+          "DBS_state_and_parameters": "摘要未报告DBS状态和参数。",
+          "task": "静息态功能磁共振成像；无实际步行或冻结事件任务。",
+          "recording_location": "全脑静息态fMRI；重点涉及双侧背外侧前额叶皮层（DLPFC）和双侧中脑运动区（MLR）；未报告STN局部神经记录。",
+          "measure": "静息态功能连接（functional connectivity，FC）；数据驱动ROI分析。",
+          "frequency_and_analysis_window": "静息态fMRI；具体频率范围、扫描时长和时间窗未在摘要报告。",
+          "finding": "与nonfreezers相比，freezers表现出双侧DLPFC与双侧MLR之间异常增加的功能连接。该发现指向前额叶-脑干运动网络的FOG表型关联，而不是STN活动。",
+          "effect_estimate": "方向为freezers高于nonfreezers；摘要未提供FC差值、效应量、置信区间或P值。",
+          "statistical_unit_and_method": "患者组间静息态FC比较；采用数据驱动ROI选择。具体统计模型、患者级调整变量和多重比较校正未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要未报告两组人数、招募方式和排除标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "摘要没有说明freezer分组使用的临床标准或FOG量表。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "未提供头动、扫描质量及fMRI预处理细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "摘要讨论了初始多巴胺缺失和结构改变，但没有充分提供其他潜在临床混杂因素的调整情况。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "not_assessable",
+                "reason": "摘要未报告多次扫描或事件级重复数据。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "some_concerns",
+                "reason": "采用数据驱动ROI及多个连接分析，摘要未提供多重比较控制细节。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "unclear",
+                "reason": "没有报告独立外部验证或模型稳定性分析。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要没有提供全部ROI连接及统计结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该研究提供DLPFC-MLR网络层面的FOG关联，但没有STN神经记录，也没有实际冻结事件的时间锁定信号。静息态功能连接不能直接解释为冻结前或冻结期间的神经变化。",
+          "quote": "Abnormally increased functional connectivity between the bilateral dorsolateral prefrontal cortex (DLPFC) and the bilateral mesencephalic locomotor region (MLR) was identified in freezers compared with nonfreezers.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39295169_E2",
+          "design": "横断面观察性静息态fMRI研究；采用spectral dynamic causal modeling（spectral DCM）估计DLPFC至MLR的有效连接。",
+          "population": "PD freezers与nonfreezers；摘要未报告样本量和两组人数。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "患者人数及有效神经影像数据人数摘要未提及；无事件级FOG数据或步行试次数；无电极/触点记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "Freezers versus nonfreezers；FOG具体亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "静息态fMRI及spectral DCM分析。",
+          "recording_location": "左侧DLPFC至双侧MLR的有效连接；未报告STN神经记录。",
+          "measure": "spectral DCM估计的top-down excitatory effective connectivity；左DLPFC向双侧MLR的有效连接。",
+          "frequency_and_analysis_window": "静息态fMRI spectral DCM；具体频率范围和分析窗口未报告。",
+          "finding": "与nonfreezers相比，freezers存在从左DLPFC到双侧MLR增加的top-down excitatory effective connectivity。该连接变化与FOG严重程度呈反向关联。",
+          "effect_estimate": "后验概率大于99%；连接参数具体数值、与FOG严重程度关联的相关系数及置信区间未报告。",
+          "statistical_unit_and_method": "患者级有效连接模型；spectral DCM；报告posterior probability>99%。FOG严重程度关联的具体统计模型未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像及有效连接建模研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要没有报告样本量、招募方式及患者排除标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "FOG分组和严重程度量表未在摘要中说明。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "摘要未提供fMRI质量控制及头动校正细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "作者报告连接模式不归因于初始多巴胺缺失或结构变化，但其他临床混杂因素调整情况不明。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "some_concerns",
+                "reason": "使用数据驱动ROI和多个有效连接参数，摘要未说明全部多重比较控制。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "unclear",
+                "reason": "摘要未报告独立数据集验证及模型稳定性检验。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "只提供部分有效连接方向和后验概率，没有完整连接矩阵及全部模型参数。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是前额叶-脑干有效连接的表型关联证据，不是STN神经活动证据。反向关联不能直接推断增强该连接会加重或减轻FOG。",
+          "quote": "increased top-down excitatory effective connectivity from the left DLPFC to bilateral MLR",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39295169_E3",
+          "design": "横断面观察性静息态fMRI研究；采用spectral DCM估计左DLPFC内部自抑制连接。",
+          "population": "PD freezers与nonfreezers；摘要未报告样本量。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "患者人数和有效影像人数摘要未提及；无实际冻结事件和步行试次数；无电极/触点记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "Freezers versus nonfreezers；具体FOG运动学表现未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "静息态fMRI；spectral DCM。",
+          "recording_location": "左侧DLPFC内部有效连接；未报告STN记录。",
+          "measure": "DLPFC self-inhibitory effective connectivity。",
+          "frequency_and_analysis_window": "静息态spectral DCM；具体频率范围和分析时间窗未报告。",
+          "finding": "freezers与nonfreezers之间存在左DLPFC内部独立self-inhibitory connectivity差异；该连接指标与FOG严重程度呈反向关联。",
+          "effect_estimate": "后验概率大于99%；具体自抑制连接参数和严重程度关联系数未报告。",
+          "statistical_unit_and_method": "患者级spectral DCM有效连接估计；报告posterior probability>99%。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像及有效连接建模研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要未提供样本量和入组标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "unclear",
+                "reason": "FOG分组和严重程度测量方法未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "fMRI预处理及质量控制信息未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "摘要未充分报告临床协变量调整。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "some_concerns",
+                "reason": "有效连接参数和ROI较多，但摘要未说明校正策略。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "unclear",
+                "reason": "摘要未提供外部验证。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "未提供完整连接模型及全部估计参数。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "左DLPFC内部自抑制连接是非STN网络层面的候选机制。摘要报告其与FOG严重程度反向关联，但没有事件级验证或STN记录。",
+          "quote": "an independent self-inhibitory connectivity within the left DLPFC in freezers versus nonfreezers",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39296915",
+        "title": "Case report: Levodopa challenge test is important in identifying dopamine-induced freezing of gait in patient with Parkinson's disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "单病例报告。摘要未提供患者中心或其他可用于匹配既有队列的信息。不能将其视为独立重复患者队列。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39296915_E1",
+          "design": "单病例报告；通过左旋多巴挑战试验识别药物诱发性FOG，并在降低左旋多巴等效剂量后观察临床变化。",
+          "population": "1例帕金森病女性患者，伴难治性FOG。",
+          "n_enrolled": 1,
+          "n_analyzed": 1,
+          "n_patients_with_FOG": 1,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "病例数为1；神经记录、实际冻结事件数、挑战试验次数及电极/触点数摘要未提及；未报告神经电生理数据。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "Refractory FOG；dopamine-induced FOG；具体akinetic、trembling-in-place等运动学表型未报告。",
+          "medication_phenotype": "ON-FOG",
+          "experimental_medication_state": "进行levodopa challenge test；摘要未提供具体剂量、给药时间和各阶段药物浓度。降低总levodopa equivalent dosage后症状缓解。",
+          "DBS_state_and_parameters": "摘要未报告DBS治疗或刺激参数。",
+          "task": "左旋多巴挑战试验；具体步行、转弯或启动任务未在摘要报告。",
+          "recording_location": "未报告STN或其他脑区神经记录。",
+          "measure": "临床FOG表现与左旋多巴挑战前后症状变化；未报告LFP、单单位活动或脑影像指标。",
+          "frequency_and_analysis_window": "不适用；未报告神经信号。",
+          "finding": "一例PD患者的难治性FOG在左旋多巴挑战试验中被识别为dopamine-induced FOG；降低总左旋多巴等效剂量后症状缓解。",
+          "effect_estimate": "单病例定性观察；无数值效应量、置信区间或统计检验。",
+          "statistical_unit_and_method": "单患者病例级临床观察；无群体统计推断。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：单病例临床报告领域级评估。",
+            "domains": [
+              {
+                "domain": "病例选择",
+                "judgement": "not_assessable",
+                "reason": "单病例报告，摘要未说明病例选择和排除标准。",
+                "source_locator": "Abstract—Case presentation"
+              },
+              {
+                "domain": "FOG标签有效性",
+                "judgement": "unclear",
+                "reason": "摘要报告挑战试验识别dopamine-induced FOG，但没有提供视频确认、临床量表或逐事件定义。",
+                "source_locator": "Abstract—Case presentation"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "剂量调整与症状改善存在时间关联，但摘要未报告其他同时发生的治疗变化或自然病程影响。",
+                "source_locator": "Abstract—Case presentation"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "unclear",
+                "reason": "摘要未说明FOG改善的量化指标及评估者盲法。",
+                "source_locator": "Abstract—Case presentation"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要仅报告挑战试验识别及剂量调整后的改善，未提供详细剂量和所有阶段的结果。",
+                "source_locator": "Abstract—Case presentation"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该病例提示FOG存在不同药物反应表型，不能把所有FOG患者视为OFF-FOG。它没有STN神经活动记录，不能用于解释STN振荡与FOG之间的关系。",
+          "quote": "It was identified as dopamine-induced FOG during levodopa challenge test.",
+          "source_locator": {
+            "section": "Abstract—Case presentation",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39315077",
+        "title": "Knowledge mapping of freezing of gait in Parkinson's disease: a bibliometric analysis.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable_secondary_source",
+        "cohort_relation_basis": "基于Web of Science文献数据库的文献计量分析，纳入1340篇文献。该研究分析的是文献集合而非独立患者或动物队列，不能作为神经生理重复验证。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:39323762",
+        "title": "Case report: Improvement of gait with adaptive deep brain stimulation in a patient with Parkinson's disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "单病例自适应STN-DBS研究。摘要未报告患者中心、植入时间或其他可匹配队列特征，不能确认与其他STN-DBS研究是否存在队列重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39323762_E1",
+          "design": "单病例、患者内DBS条件比较；比较常规DBS与基于STN beta功率调节电流幅度的自适应DBS。",
+          "population": "1例帕金森病患者，存在步态障碍并长期接受常规DBS。",
+          "n_enrolled": 1,
+          "n_analyzed": 1,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 1,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "患者数和存在STN beta记录可由摘要确认；FOG患者数及FOG事件数摘要未提及；步态试次数、电极/触点数量及具体分析数据量未报告。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "Gait impairment；摘要未明确报告FOG诊断或冻结运动学亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告测试时Med-On/Med-Off状态、药物剂量或给药时间。",
+          "DBS_state_and_parameters": "患者长期接受常规DBS；比较conventional DBS与adaptive DBS。自适应模式的电流幅度随STN beta功率线性调整。具体刺激频率、幅度范围、脉宽、触点及方向性未报告。",
+          "task": "步态运动学评估及gait initiation中的anticipatory postural adjustments（APAs）；具体直行、转弯或FOG诱发任务未在摘要说明。",
+          "recording_location": "STN局部场电位；具体侧别、触点位置和记录方向未报告。",
+          "measure": "STN beta oscillations与步态运动学、步态启动APA；自适应DBS以beta功率作为反馈变量调节电流幅度。",
+          "frequency_and_analysis_window": "beta频段；具体上下边界、功率估计时间窗、更新间隔、基线和归一化方法未在摘要报告。",
+          "finding": "相较常规刺激条件，自适应DBS下患者表现出持续且长期的步行改善，同时保留其他疾病症状的治疗获益。作者提出可能通过避免过度刺激和异常牵引上位运动网络改善步态。摘要未明确报告FOG事件或FOG评分。",
+          "effect_estimate": "单病例定性报告consistent and long-lasting improvement；没有提供步态速度、步长、APA幅度、FOG次数、效应量或置信区间。",
+          "statistical_unit_and_method": "单患者患者内条件比较；步态运动学和STN beta功率；未报告群体统计检验。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I-inspired adapted_not_validated：单病例非随机DBS干预研究评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "high",
+                "reason": "仅报告一名患者，无法评估患者选择代表性或结果的群体可推广性。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "干预分类与偏离",
+                "judgement": "unclear",
+                "reason": "报告常规与自适应DBS，但没有提供测试顺序、刺激参数和条件持续时间。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "单病例患者内比较，摘要未说明药物状态、时间效应和其他同步治疗的控制。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "神经信号质量",
+                "judgement": "unclear",
+                "reason": "摘要未报告STN beta信号伪迹、功率估计稳定性或反馈延迟。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "报告步态运动学改善，但没有提供具体指标、盲法或FOG事件确认方法。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "未报告测试次数和患者内重复测量统计处理。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要未提供完整的步态和神经信号定量结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "high"
+          },
+          "limitations": "该研究是STN beta反馈调节与步态改善的直接病例级证据，但不是FOG特异性证据。不能把gait improvement自动等同于FOG改善，也不能证明beta功率与实际冻结事件相关。单病例结果不能代表群体效应。",
+          "quote": "With adaptive DBS, the patient showed a consistent and long-lasting improvement in walking.",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39344591",
+        "title": "Effect of cerebrospinal dual-site magnetic stimulation on freezing of gait in Parkinson's disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告57例PD伴左旋多巴无反应FOG患者的随机双盲试验。未提供中心、招募时间或其他队列特征，无法判断与其他FOG研究是否重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39344591_E1",
+          "design": "随机双盲三组干预试验；比较双靶点脑-脊髓磁刺激、单靶点M1刺激和假刺激，共进行10次治疗。",
+          "population": "57例PD患者，均存在levodopa-unresponsive FOG。",
+          "n_enrolled": 57,
+          "n_analyzed": null,
+          "n_patients_with_FOG": 57,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "随机分配患者总数57由摘要报告；最终分析人数、各组人数及神经生理有效数据人数摘要未提及；FOG事件数和步态试次数未报告；无STN电极/触点记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "Levodopa-unresponsive FOG；具体akinetic、trembling-in-place或其他亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要报告levodopa-unresponsive FOG，但未说明治疗及结局评估时的具体Med-On/Med-Off状态、剂量和给药时间。",
+          "DBS_state_and_parameters": "摘要未报告DBS；干预为双侧小腿初级运动皮层（M1-LL）重复经颅磁刺激及腰段脊髓经皮磁刺激。",
+          "task": "10次治疗；在治疗后1天和1个月评估FOG、步态和运动功能。具体步行任务及FOG量表未报告。",
+          "recording_location": "干预靶点为双侧M1-LL和腰段脊髓；另报告abductor pollicis brevis的short-interval intracortical inhibition（SICI）。没有STN神经记录。",
+          "measure": "FOG、步态及运动功能临床结局；SICI作为神经生理指标。该SICI指标不等同于STN beta或STN局部神经活动。",
+          "frequency_and_analysis_window": "低频rTMS；具体刺激频率、强度、脉宽、治疗间隔和SICI分析窗口未在摘要报告。结局时间为治疗后1天及1个月。",
+          "finding": "与假刺激相比，低频rTMS改善FOG、步态及运动功能；双靶点方案在减轻FOG和改善步态方面优于单靶点M1方案。双靶点方案的优势与abductor pollicis brevis的SICI增加相关。",
+          "effect_estimate": "报告方向性改善及双靶点优于单靶点；摘要没有提供FOG评分差值、效应量、置信区间或具体P值。",
+          "statistical_unit_and_method": "随机分组患者级干预比较；三组设计，10次治疗，治疗后1天及1个月随访。具体统计模型及意向治疗分析情况未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "RoB 2相关域初评。",
+            "domains": [
+              {
+                "domain": "随机化过程",
+                "judgement": "some_concerns",
+                "reason": "摘要报告随机分组，但没有说明随机序列生成、分配隐藏和基线平衡。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "偏离预期干预",
+                "judgement": "unclear",
+                "reason": "报告双盲设计，但未说明患者、治疗人员和结局评估者的具体盲法实施情况。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "缺失结局数据",
+                "judgement": "unclear",
+                "reason": "摘要没有提供各组最终分析人数、失访及缺失数据处理方法。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "报告FOG及步态改善，但具体量表、测量者盲法和事件确认方法未说明。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要未提供全部结局数值、置信区间及预注册方案。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是FOG临床干预证据和皮层抑制指标证据，但不涉及STN记录。SICI增加与临床改善的相关性不能证明其是改善FOG的中介机制，也不能直接外推至STN beta机制。",
+          "quote": "the dual-site protocol demonstrated superior efficacy in mitigating FOG and improving gait compared to the single-site approach",
+          "source_locator": {
+            "section": "Abstract—Methods/Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:39358869",
+        "title": "Functional connectivity compensation in Parkinson's disease with freezing of gait.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告18例PD患者（10例FOG、8例non-FOG）和10名健康对照。未报告中心、招募日期及其他可用于跨研究匹配的患者信息。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "39358869_E1",
+          "design": "横断面观察性静息态fMRI研究；采用seed-based functional connectivity和图论分析，并通过多元线性回归分析FOG严重程度相关性。",
+          "population": "18例PD患者，其中10例PD-FOG、8例PD-nFOG；另有10名健康对照，总计28人。",
+          "n_enrolled": 28,
+          "n_analyzed": 28,
+          "n_patients_with_FOG": 10,
+          "n_patients_with_valid_neural_data": 18,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "总人数、PD患者人数和FOG患者人数由摘要报告；FOG事件数及步行试次数不适用；电极/触点不适用，因为使用静息态fMRI而非STN电生理记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "PD-FOG versus PD-nFOG；使用Freezing of Gait Questionnaire严重程度关联；具体冻结运动学亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告扫描时Med-On/Med-Off状态。",
+          "DBS_state_and_parameters": "摘要未报告DBS状态和参数。",
+          "task": "静息态fMRI；无自然步行或实际冻结事件记录。",
+          "recording_location": "全脑静息态fMRI；重点结果涉及cerebellar Vermis12与left temporal occipital fusiform cortex之间的功能连接。没有STN局部神经记录。",
+          "measure": "seed-based functional connectivity；Freezing of Gait Questionnaire严重程度；多元线性回归。",
+          "frequency_and_analysis_window": "静息态fMRI；具体频率范围、扫描时长、时间窗、基线和归一化方法未报告。",
+          "finding": "FOG Questionnaire严重程度与Vermis12至左侧temporal occipital fusiform cortex之间降低的功能连接相关。该结果提示小脑相关网络与FOG临床表型有关。",
+          "effect_estimate": "r=-0.82，P<0.001。摘要没有报告置信区间。",
+          "statistical_unit_and_method": "患者级临床量表与静息态FC相关；多元线性回归；相关分析样本具体人数未在摘要单独说明。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像关联研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "some_concerns",
+                "reason": "PD样本仅18例，且摘要未报告连续入组或排除标准。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "使用FOG Questionnaire严重程度，但摘要没有报告临床冻结事件的逐事件确认。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "没有报告MRI头动、扫描质量和图像预处理细节。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "报告多元线性回归，但摘要未列出全部调整协变量。",
+                "source_locator": "Abstract—Methods/Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "not_assessable",
+                "reason": "摘要报告静息态扫描，未报告重复扫描或事件级重复测量。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个脑区及功能连接比较，摘要未说明多重比较校正。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "unclear",
+                "reason": "研究为关联分析，摘要未报告独立验证或模型稳定性分析。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要只给出一个明确相关系数，不能核查所有预设连接和临床变量分析。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该结果是FOG严重程度与小脑相关静息态功能连接的关联，不是STN神经活动或实际冻结事件证据。量表关联不能确定连接改变发生于冻结之前、期间还是之后。",
+          "quote": "Freezing of Gait Questionnaire severity was correlated with decreased brain functional connection between Vermis12 and the left temporal occipital fusiform cortex (r = -0.82, P < .001).",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "39358869_E2",
+          "design": "横断面观察性静息态fMRI研究；比较PD-FOG与PD-nFOG患者的全脑功能连接模式。",
+          "population": "10例PD-FOG、8例PD-nFOG及10名健康对照；本条比较为10例PD-FOG与8例PD-nFOG。",
+          "n_enrolled": 28,
+          "n_analyzed": 18,
+          "n_patients_with_FOG": 10,
+          "n_patients_with_valid_neural_data": 18,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "本条组间比较涉及18例PD患者；FOG事件数和试次数不适用；电极/触点数不适用。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "PD-FOG versus PD-nFOG；具体冻结运动学亚型未报告。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "摘要未报告。",
+          "task": "静息态fMRI。",
+          "recording_location": "全脑静息态功能连接；涉及left inferior frontal gyrus language network与postcentral gyrus。",
+          "measure": "Seed-based functional connectivity及网络连接分析。",
+          "frequency_and_analysis_window": "静息态fMRI；具体频率边界和分析窗口未报告。",
+          "finding": "与PD-nFOG患者相比，PD-FOG患者表现出left inferior frontal gyrus language network与postcentral gyrus之间的代偿性连接增强。",
+          "effect_estimate": "方向为PD-FOG高于PD-nFOG；摘要未提供具体连接强度差值、效应量、置信区间或P值。",
+          "statistical_unit_and_method": "患者级组间功能连接比较；采用seed-based分析和图论分析。具体模型和多重比较校正未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated：观察性神经影像研究领域级评估。",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "some_concerns",
+                "reason": "FOG组10例、non-FOG组8例，样本量较小；入组和排除标准未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "采用FOG患者分组，但摘要未说明诊断及逐事件冻结确认方法。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "MRI质量控制和预处理细节未报告。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "摘要未充分报告疾病严重程度、药物状态和其他临床变量的调整。",
+                "source_locator": "Abstract—Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个脑区及网络连接，校正方法未报告。",
+                "source_locator": "Abstract—Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要只给出部分网络差异，未提供全部连接分析结果。",
+                "source_locator": "Abstract—Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "代偿性连接增强是非STN的网络层面观察性结果。摘要没有证明该连接是FOG的原因、补偿机制或冻结事件的即时神经前兆。",
+          "quote": "PD-FOG patients exhibited a compensatory increase in connectivity between the left inferior frontal gyrus language network and the postcentral gyrus compared to PD-nFOG patients.",
+          "source_locator": {
+            "section": "Abstract—Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    }
+  ]
+}</escape>

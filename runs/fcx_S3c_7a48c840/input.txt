@@ -1,0 +1,139 @@
+下面是评委对一份研究报告的评审意见。请从中抽出所有针对这份报告的"报告误读、错引、错报了某一篇具体文献"的事实性指控（例如：报告说某研究发现了 A，评委说原文其实是 B；报告写的样本量、条件、结论和原文不符）。只抽针对这份报告、针对具体文献内容的指控（对另一份报告的指控不要抽），不抽"覆盖不够""不够严谨"这类总体评价。
+
+每条写：被指控的文献（尽量给 PMID 或 DOI；没有就给第一作者、年份和题目关键词）、报告的说法、评委认为原文的说法。
+
+只输出一个 JSON：{"accusations":[{"paper":"","pmid":"","doi":"","report_says":"","judge_says":""}]}；没有就给空数组。
+
+【评审意见】
+{
+ "standards": [
+  {
+   "n": 1,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "文献覆盖面较广，结构化附录包含大量研究和证据记录，但检索过程不可复核。报告没有明确说明检索数据库、完整检索式、各数据库检索日期、纳入排除标准、筛选流程及重复队列识别方法。文献数量不能直接证明重要研究没有遗漏。尤其缺少可重复的文献覆盖审计。",
+     "where": "报告写明“证据截止日期：2026年11月13日”，但末尾又说明“本报告仅依据本次提供的结构化结论、假说、证据表及其文献编号进行综合，没有引入外部文献或新增实验数据。”没有提供完整检索方法。<FileCite ref=\"turn0file0\" line_range_start={7} line_range_end={7} /> <FileCite ref=\"turn0file0\" line_range_start={1364} line_range_end={1364} />"
+    },
+    {
+     "severity": "moderate",
+     "what": "部分重要交叉证据虽然进入参考文献或结构化附录，但没有充分进入正文的机制综合。包括：Georgiades等人的STN术中MUA研究（PMID:31665229），涉及8名患者、19次VR诱发运动阻滞及STN放电与下肢EMG的时间关系；Klocke等2026年关于认知、焦虑与STN theta活动的研究（PMID:42236313）；以及2026年基于STN神经活动的activity-dependent aDBS研究（PMID:42297979）。后两项分别直接影响H4认知情绪负荷解释和H12动态刺激解释。尤其是2026年aDBS研究，正文没有充分讨论其患者特异性频段及冻结改善结果。",
+     "where": "直接事件证据主要展开为“2019年：冻结相关的皮层-STN低频解耦”“2022年：自然冻结期间STN低beta活动增强”及后续研究。H4支持依据为“[PMID:41131028; PMID:41388789; PMID:28892573]”，H12支持依据为“[DOI:10.1101/2024.06.26.24309418; PMID:32634599]”，没有将上述2026研究纳入相应正文论证。<FileCite ref=\"turn0file0\" line_range_start={81} line_range_end={106} /> <FileCite ref=\"turn0file0\" line_range_start={735} line_range_end={738} /> <FileCite ref=\"turn0file0\" line_range_start={916} line_range_end={936} />"
+    },
+    {
+     "severity": "minor",
+     "what": "没有纳入2026年国际FOG共识组织更新的FOG临床定义和视频技术标注标准（Gilat等，DOI:10.1038/s41582-025-01179-3）。这项研究直接涉及FOG事件定义、视频标注和患者亚型分类。报告虽然强调统一事件标注，但没有利用这项重要标准化成果。特别是shuffling应区分阵发性冻结表现与持续性小碎步，避免将两者混为同一结局。",
+     "where": "报告将“shuffling steps with minimal effective forward movement”列为冻结表现，并提出“视频及专家标注 | 实际冻结起止时间和亚型”，但没有给出与最新共识一致的操作性定义。<FileCite ref=\"turn0file0\" line_range_start={136} line_range_end={142} /> <FileCite ref=\"turn0file0\" line_range_start={1006} line_range_end={1013} />"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "存在一处重要的原始文献归属错误。2017年Freezer在SIP期间beta功率较低的研究是Syrkin-Nikolau等人（PMID:28890315），不是Storzer等人。Storzer等人（PMID:28892573）研究的是行走和骑车，发现两种运动状态下STN beta总体受到抑制，同时Freezer存在运动启动相关的约18 Hz窄带功率增强。两项研究的任务、频谱特征和结论不同。错误归属会影响beta方向冲突的解释。",
+     "where": "表格原文：“Storzer等，2017 | SIP无冻结 | Freezer的相对beta功率较低”。其后引用列表包含PMID:28892573，却没有在该表述处引用真正支持低beta结果的PMID:28890315。<FileCite ref=\"turn0file0\" line_range_start={237} line_range_end={249} />"
+    },
+    {
+     "severity": "moderate",
+     "what": "STN+SNr联合刺激部分的原始临床证据引用不完整。20名完成患者、额外改善4.7分FOG-Q的长期随机交叉研究应直接引用PMID:40760816；10名患者的急性双盲交叉研究应引用PMID:38363617。正文对应引用列表却包含PMID:35490252（综述）和PMID:37104542（计算模型），没有列出上述关键原始临床试验。虽然原始试验出现在参考文献和结构化附录中，但正文无法直接追溯到最重要的原始证据。",
+     "where": "表格原文：“20名完成患者中，STN+SNr相较STN-only的FOG-Q额外改善4.7分”；其后引用为“[PMID:35490252; PMID:37104542; PMID:42860886; PMID:42909654; PMID:42968793]”。<FileCite ref=\"turn0file0\" line_range_start={457} line_range_end={467} />"
+    },
+    {
+     "severity": "moderate",
+     "what": "预印本与正式发表版本没有得到充分的版本核对和去重。2025年Garulli预印本DOI:10.1101/2025.04.22.650006已有对应正式发表版本PMID:41654501。2025年Collomb-Clerc相关预印本DOI:10.1101/2025.01.10.632393也需要与正式发表的PMID:40709562明确匹配。报告仍将这类关系表述为“可能属于同一研究”。此外，2026年Klocke研究DOI:10.21203/rs.3.rs-9617843/v1和Beaudoin研究DOI:10.64898/2026.08.13.744293应明确标注为预印本，不能与正式同行评审论文给予完全相同的证据成熟度。",
+     "where": "报告写道：“2025年预印本与正式发表版本可能属于同一研究”；同时正文分别使用上述预印本DOI描述研究结果，但没有一致标记发表状态。<FileCite ref=\"turn0file0\" line_range_start={193} line_range_end={194} /> <FileCite ref=\"turn0file0\" line_range_start={227} line_range_end={229} /> <FileCite ref=\"turn0file0\" line_range_start={587} line_range_end={594} />"
+    },
+    {
+     "severity": "moderate",
+     "what": "部分关键研究的证据提取停留在摘要层面，没有充分利用原始全文。一个例子是PMID:39470410：原文提供了12名患者、5名FOG患者、7名非FOG患者，以及alpha频段（8–12 Hz）STN-腓肠肌相干性和步态周期相关结果。报告却称具体样本量、频段和时间窗口信息有限。另一个例子是PMID:42297979：附录仅采用摘要，因而没有提取全文中的35名患者神经活动研究和4名患者活动依赖性刺激可行性研究，也没有纳入P2、P3的FOG改善结果。这些信息对比较beta特异性刺激与活动状态依赖刺激非常重要。",
+     "where": "关于PMID:39470410，正文写道：“现有报告对样本数量、具体频段、时间窗口及统计模型提供的信息有限。”结构化附录对PMID:42297979则注明“摘要未报告患者人数、Freezer比例或具体临床特征”，并标记“basis:abstract”。<FileCite ref=\"turn0file0\" line_range_start={148} line_range_end={166} /> <FileCite ref=\"turn0file0\" line_range_start={1368} line_range_end={1369} />"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "verdict": "met",
+   "issues": [
+    {
+     "severity": "minor",
+     "what": "机制综合已经比较深入，但部分竞争性解释尚未完全转化为同一实验中的可区分变量。例如H3、H4和H5涉及认知负荷、焦虑、动作选择及注意资源竞争；2026年Klocke等研究（PMID:42236313）已经发现转弯冻结期间STN theta功率与焦虑程度及MoCA评分相关。然而，第一优先级自然FOG多模态实验没有明确纳入焦虑量表、认知表现及认知双任务负荷的同步测量。建议补充这些变量，以免将认知情绪因素产生的STN变化误判为局部运动病理或反馈异常。",
+     "where": "H4提出“注意负荷、视觉空间导航、步速下降及步长变化”等解释；但5.2节“同步记录内容”仅列出LFP、皮层信号、EMG、IMU、视频和测力平台，没有明确列出认知及情绪测量。<FileCite ref=\"turn0file0\" line_range_start={715} line_range_end={735} /> <FileCite ref=\"turn0file0\" line_range_start={1006} line_range_end={1013} />"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "verdict": "met",
+   "issues": []
+  },
+  {
+   "n": 5,
+   "verdict": "not_testable",
+   "issues": []
+  },
+  {
+   "n": 6,
+   "verdict": "met",
+   "issues": []
+  },
+  {
+   "n": 7,
+   "verdict": "not_testable",
+   "issues": []
+  }
+ ],
+ "spot_checks": [
+  {
+   "claim": "STN参与PD相关FOG运动控制，但尚不能认定STN是唯一或始发病理位置。",
+   "cited": "PMID:31505548; PMID:31665229; PMID:36070366; PMID:39470410; PMID:40709562; DBS干预研究",
+   "verdict": "consistent",
+   "why": "与原始证据一致。自然行走LFP、术中STN单神经元/MUA记录及冻结事件研究共同支持STN参与FOG相关运动网络。Georgiades等研究还记录了8名患者的19次VR诱发运动阻滞，发现STN放电及beta/theta活动与冻结相关运动输出异常有关。不过该研究属于术中VR任务，不等同于自然行走。现有证据仍不能证明STN是FOG唯一或始发病理位置。PMID:31665229。"
+  },
+  {
+   "claim": "实际FOG事件附近存在STN神经活动异常，但频段、方向和时间阶段具有明显异质性。",
+   "cited": "PMID:31505548; PMID:36070366; PMID:39470410; DOI:10.1101/2025.04.22.650006; DOI:10.21203/rs.3.rs-9617843/v1",
+   "verdict": "consistent",
+   "why": "与原始研究一致。Pozzi研究发现冻结相关皮层-STN低频耦合下降；Thenaisie研究发现实际冻结期间低beta增强；Klocke研究发现冻结前后的STN-肌肉协调异常；Garulli研究发现复杂度变化，但显著结果主要来自一名患者；2026年转弯冻结预印本发现冻结转弯期间低beta相对功率增加，但冻结前转弯与正常转弯的直接比较没有得到显著差异。报告正确区分了冻结前、冻结中和恢复期，也没有把不同指标当成同一现象。"
+  },
+  {
+   "claim": "表2.2所述Storzer等2017年研究发现，Freezer在没有冻结的SIP阶段相对beta功率较低。",
+   "cited": "PMID:28892573（Storzer et al., 2017）",
+   "verdict": "wrong",
+   "why": "这是明确的原始文献归属错误。PMID:28892573研究的是行走和骑车，报告Freezer在运动启动时出现约18 Hz窄带功率增强，并非SIP期间相对beta功率降低。真正报告Freezer在无冻结运动期间beta功率较低的是Syrkin-Nikolau等人的PMID:28890315。2026年综述也将这两项研究分别列出。该错误不推翻报告关于beta不是普遍FOG标志的总体结论，但该表格行不能成立。"
+  },
+  {
+   "claim": "Pozzi等2019年研究发现，冻结开始前约1.5秒皮层-STN的4–13 Hz耦合下降；冻结开始时beta耦合增加，但成功停止和门口通过也可出现类似beta耦合变化。",
+   "cited": "PMID:31505548",
+   "verdict": "consistent",
+   "why": "与原始研究报告一致。研究同步记录7名患者的EEG和STN-LFP，其中5名有FOG，分析14次实际冻结事件。低频耦合下降发生于冻结前并在冻结期间持续，恢复行走后重新出现。beta耦合增加并非FOG特异，因为成功停止等动作转换也出现类似变化。需要注意，小样本和重复事件的患者内聚类限制了群体推断，研究也没有证明耦合下降具有因果作用。"
+  },
+  {
+   "claim": "Thenaisie等2022年研究发现，实际冻结期间STN低beta活动增强，并与双腿交替运动受损相关；冻结终止后低beta活动消退。",
+   "cited": "PMID:36070366",
+   "verdict": "consistent",
+   "why": "核心结果与原始研究一致。研究中FOG神经分析涉及4名患者和173次冻结事件，报告了冻结期间低beta活动增强及冻结终止后的活动变化，并结合下肢肌电分析步态恢复。报告正确指出事件数不能代替患者数，也没有把时间关联直接解释为因果关系。"
+  },
+  {
+   "claim": "Anidi等2018年研究发现，Freezer在SIP和前向步行中存在较长的STN beta burst duration，部分实际冻结事件也出现延长。",
+   "cited": "PMID:30196050; PMID:31505548; DOI:10.21203/rs.3.rs-9617843/v1",
+   "verdict": "consistent",
+   "why": "与原始研究总体一致。Anidi研究发现Freezer的病理性beta burst持续时间与冻结易感性相关，部分发生SIP冻结的患者还出现冻结期间burst持续时间延长。但这不意味着自然FOG期间所有患者的平均burst duration都会增加。Pozzi研究没有发现稳定的冻结期burst duration延长，Klocke 2026预印本则显示长时程burst比例变化与平均持续时间差异可以并存。报告对这几类指标进行了合理区分。"
+  },
+  {
+   "claim": "Collomb-Clerc等2025年研究发现，STN活动与步态启动运动学之间的关系能够反映后续FOG风险，首次FOG发生在GI后中位约8步。",
+   "cited": "DOI:10.1101/2025.01.10.632393; PMID:40709562",
+   "verdict": "consistent",
+   "why": "与正式发表研究的主要结果一致。研究纳入38名患者，FOG观察组12名，分析99个阳性GI试次和263次FOG事件，首次FOG发生在GI后中位约8步。报告也正确强调，这属于同一试次后续冻结风险的关联证据，不是冻结发生前最后一秒的即时触发信号。正式发表版本应作为主要引用，并与预印本合并管理。"
+  },
+  {
+   "claim": "DBS总体具有一定FOG治疗价值，但STN+SNr联合刺激相较STN单靶点的额外获益仍存在冲突。",
+   "cited": "PMID:42098512; PMID:40760816; PMID:38363617; PMID:39957196; PMID:42860886; PMID:42909654; PMID:42968793",
+   "verdict": "consistent",
+   "why": "与现有临床证据一致。DBS综合Meta分析报告FOG-Q平均差MD=-2.99，95%CI[-5.69,-0.29]，但结果涉及不同靶点、频率及药物状态，不能全部归因于STN。STN+SNr方面，长期随机交叉研究报告20名完成患者额外改善4.7分FOG-Q；10名患者的急性双盲研究没有发现明确额外优势；2026年多中心研究在90天时也没有证明联合刺激优于STN-only。两项2026年Meta分析的结论不同。因此，报告将其判定为存在冲突而非已确立的联合刺激优势，是合理的。"
+  }
+ ]
+}

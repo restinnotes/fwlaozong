@@ -1,0 +1,373 @@
+你只做一件事：把下面列出的论文全文下载到当前目录。不要阅读、总结或分析论文内容。
+
+规则：
+1. 只用合法的开放来源：Europe PMC、PubMed Central、出版社的开放获取页面、Unpaywall 指向的开放版本、作者或机构仓库、bioRxiv/medRxiv/arXiv 等预印本服务器。禁止使用 Sci-Hub、LibGen、Anna's Archive 之类来源，也不要尝试绕过付费墙或登录。
+2. 每篇保存为 <key>.pdf（拿不到 PDF、只有完整 HTML 全文时保存为 <key>.html）。key 见列表。
+3. 保存后自己检查：PDF 要以 %PDF 开头、大于 50KB；HTML 要包含正文（Methods/Results 等），不能是验证码页、登录页或只有摘要的页面。不合格的删掉，换来源再试；确实没有开放版本就记 not_open。
+4. 可以用 curl、Python、浏览器自动化等任何你需要的手段；可以并行。
+5. 最后写 manifest.json：一个 JSON 数组，每篇一项 {"key","status"(ok/not_open/failed),"file","source_url","note"}。
+6. 最后一条消息只输出一行：完成 N 篇 / 共 M 篇。
+
+论文列表（JSON）：
+[
+ {
+  "key": "DOI_10.1101_19011858",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/19011858",
+  "title": "Neural Closed Loop Deep Brain Stimulation for Freezing of Gait",
+  "year": 2019,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2021.07.01.21259612",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2021.07.01.21259612",
+  "title": "Structural connectivity of subthalamic nucleus stimulation for improving freezing of gait",
+  "year": 2021,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2025.05.08.25327015",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2025.05.08.25327015",
+  "title": "Subthalamic Nucleus Deep Brain Stimulation Alleviates the Sequence Effect and Freezing of Gait in Parkinson’s Disease",
+  "year": 2025,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_671479",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/671479",
+  "title": "The turning and barrier course reveals gait parameters for detecting freezing of gait and measuring the efficacy of deep brain stimulation",
+  "year": 2019,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "DOI_10.21203_rs.3.rs-4058858_v1",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.21203/rs.3.rs-4058858/v1",
+  "title": "The effect of Levodopa and Stimulation on post-surgery Freezing of Gait in STN-DBS Parkinson's Disease patients: a clinical and kinematic analysis",
+  "year": 2024,
+  "journal": "Research Square"
+ },
+ {
+  "key": "DOI_10.21203_rs.3.rs-4216535_v1",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.21203/rs.3.rs-4216535/v1",
+  "title": "Subthalamic and Nigral Stimulation for Freezing of Gait in Parkinson disease: randomized pilot trial",
+  "year": 2024,
+  "journal": "Research Square"
+ },
+ {
+  "key": "DOI_10.64898_2026.02.02.702843",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.64898/2026.02.02.702843",
+  "title": "Body-segment coordination as a new predictor of freezing of gait in people with Parkinson’s disease",
+  "year": 2026,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "PMID_10634253",
+  "pmid": "10634253",
+  "pmcid": null,
+  "doi": "10.1002/1531-8257(200001)15:1<136::aid-mds1021>3.0.co;2-5",
+  "title": "Bilateral subthalamic nucleus stimulation in a parkinsonian patient with preoperative deficits in speech and cognition: persistent improvement in mobility but increased dependency: a case study.",
+  "year": 2000,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_16139421",
+  "pmid": "16139421",
+  "pmcid": null,
+  "doi": "10.1016/j.clineuro.2005.07.008",
+  "title": "Freezing of gait after bilateral subthalamic nucleus stimulation for Parkinson's disease.",
+  "year": 2006,
+  "journal": "Clinical neurology and neurosurgery"
+ },
+ {
+  "key": "PMID_17712844",
+  "pmid": "17712844",
+  "pmcid": null,
+  "doi": "10.1002/mds.21609",
+  "title": "Different cerebral cortical areas influence the effect of subthalamic nucleus stimulation on parkinsonian motor deficits and freezing of gait.",
+  "year": 2007,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_18413568",
+  "pmid": "18413568",
+  "pmcid": null,
+  "doi": "10.1212/01.wnl.0000310416.90757.85",
+  "title": "Effects of subthalamic nucleus stimulation and levodopa on freezing of gait in Parkinson disease.",
+  "year": 2008,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_18420482",
+  "pmid": "18420482",
+  "pmcid": null,
+  "doi": "10.1212/01.wnl.0000303972.16279.46",
+  "title": "STN-DBS frequency effects on freezing of gait in advanced Parkinson disease.",
+  "year": 2008,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_19705483",
+  "pmid": "19705483",
+  "pmcid": null,
+  "doi": "10.1002/mds.22743",
+  "title": "STN versus PPN-DBS for alleviating freezing of gait: toward a frequency modulation approach?",
+  "year": 2009,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_21370271",
+  "pmid": "21370271",
+  "pmcid": null,
+  "doi": "10.1002/mds.23583",
+  "title": "Modulation of gait coordination by subthalamic stimulation improves freezing of gait.",
+  "year": 2011,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_21397548",
+  "pmid": "21397548",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2011.02.014",
+  "title": "Acute induction of levodopa-resistant freezing of gait upon subthalamic nucleus electrode implantation.",
+  "year": 2011,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_21997389",
+  "pmid": "21997389",
+  "pmcid": null,
+  "doi": "10.1002/mds.23990",
+  "title": "Doorway-provoked freezing of gait in Parkinson's disease.",
+  "year": 2012,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_22696586",
+  "pmid": "22696586",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2011-302091",
+  "title": "Effect of stimulation frequency on immediate freezing of gait in newly activated STN DBS in Parkinson's disease.",
+  "year": 2012,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_22906284",
+  "pmid": "22906284",
+  "pmcid": null,
+  "doi": "10.1177/147323001204000330",
+  "title": "Effect of bilateral deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease.",
+  "year": 2012,
+  "journal": "The Journal of international medical research"
+ },
+ {
+  "key": "PMID_23039143",
+  "pmid": "23039143",
+  "pmcid": "PMC3990225",
+  "doi": "10.3171/2012.8.jns112006",
+  "title": "Effects of deep brain stimulation in the subthalamic nucleus or globus pallidus internus on step initiation in Parkinson disease: laboratory investigation.",
+  "year": 2012,
+  "journal": "Journal of neurosurgery"
+ },
+ {
+  "key": "PMID_23485851",
+  "pmid": "23485851",
+  "pmcid": null,
+  "doi": "10.1093/brain/awt049",
+  "title": "Exploring the cortical and subcortical functional magnetic resonance imaging changes associated with freezing in Parkinson's disease.",
+  "year": 2013,
+  "journal": "Brain : a journal of neurology"
+ },
+ {
+  "key": "PMID_23749331",
+  "pmid": "23749331",
+  "pmcid": null,
+  "doi": "10.1007/s00415-013-6983-2",
+  "title": "Low-frequency subthalamic nucleus deep brain stimulation for axial symptoms in advanced Parkinson's disease.",
+  "year": 2013,
+  "journal": "Journal of neurology"
+ },
+ {
+  "key": "PMID_24361601",
+  "pmid": "24361601",
+  "pmcid": null,
+  "doi": "10.1016/j.nbd.2013.12.005",
+  "title": "High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease.",
+  "year": 2014,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_24396010",
+  "pmid": "24396010",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2013-306336",
+  "title": "Effects of deep brain stimulation of the subthalamic nucleus on freezing of gait in Parkinson's disease: a prospective controlled study.",
+  "year": 2014,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_25346142",
+  "pmid": "25346142",
+  "pmcid": null,
+  "doi": "10.1111/ane.12342",
+  "title": "Motor symptoms after deep brain stimulation of the subthalamic nucleus.",
+  "year": 2015,
+  "journal": "Acta neurologica Scandinavica"
+ },
+ {
+  "key": "PMID_25540305",
+  "pmid": "25540305",
+  "pmcid": "PMC4336001",
+  "doi": "10.1212/wnl.0000000000001184",
+  "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.",
+  "year": 2015,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_26259857",
+  "pmid": "26259857",
+  "pmcid": null,
+  "doi": "10.1212/wnl.0000000000001823",
+  "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.",
+  "year": 2015,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_26319759",
+  "pmid": "26319759",
+  "pmcid": null,
+  "doi": "10.1016/j.neucli.2015.07.001",
+  "title": "Effects of deep brain stimulation on balance and gait in patients with Parkinson's disease: A systematic neurophysiological review.",
+  "year": 2015,
+  "journal": "Neurophysiologie clinique = Clinical neurophysiology"
+ },
+ {
+  "key": "PMID_26467485",
+  "pmid": "26467485",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2015.10.002",
+  "title": "Variable frequency stimulation of subthalamic nucleus for freezing of gait in Parkinson's disease.",
+  "year": 2015,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_26482492",
+  "pmid": "26482492",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2015.09.047",
+  "title": "Reversible improvement in severe freezing of gait from Parkinson's disease with unilateral interleaved subthalamic brain stimulation.",
+  "year": 2015,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_27766724",
+  "pmid": "27766724",
+  "pmcid": null,
+  "doi": "10.1111/ene.13167",
+  "title": "Effect of high-frequency subthalamic neurostimulation on gait and freezing of gait in Parkinson's disease: a systematic review and meta-analysis.",
+  "year": 2017,
+  "journal": "European journal of neurology"
+ },
+ {
+  "key": "PMID_27915226",
+  "pmid": "27915226",
+  "pmcid": null,
+  "doi": "10.1016/j.gaitpost.2016.11.039",
+  "title": "Subthalamic nucleus stimulation and gait in Parkinson's Disease: a not always fruitful relationship.",
+  "year": 2017,
+  "journal": "Gait & posture"
+ },
+ {
+  "key": "PMID_28392298",
+  "pmid": "28392298",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2017.03.015",
+  "title": "Variable frequency stimulation of subthalamic nucleus in Parkinson's disease: Rationale and hypothesis.",
+  "year": 2017,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_28830666",
+  "pmid": "28830666",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2017.08.016",
+  "title": "Depression may negatively affect the change in freezing of gait following subthalamic nucleus stimulation in Parkinson's disease.",
+  "year": 2017,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_29654112",
+  "pmid": "29654112",
+  "pmcid": null,
+  "doi": "10.1136/jnnp-2018-318060",
+  "title": "Long-term effect of low frequency stimulation of STN on dysphagia, freezing of gait and other motor symptoms in PD.",
+  "year": 2018,
+  "journal": "Journal of neurology, neurosurgery, and psychiatry"
+ },
+ {
+  "key": "PMID_30077869",
+  "pmid": "30077869",
+  "pmcid": null,
+  "doi": "10.1016/j.clinph.2018.07.006",
+  "title": "Correlation between deep brain stimulation effects on freezing of gait and audio-spinal reflex.",
+  "year": 2018,
+  "journal": "Clinical neurophysiology : official journal of the International Federation of Clinical Neurophysiology"
+ },
+ {
+  "key": "PMID_30100532",
+  "pmid": "30100532",
+  "pmcid": null,
+  "doi": "10.1016/j.clinph.2018.07.013",
+  "title": "Decreasing subthalamic deep brain stimulation frequency reverses cognitive interference during gait initiation in Parkinson's disease.",
+  "year": 2018,
+  "journal": "Clinical neurophysiology : official journal of the International Federation of Clinical Neurophysiology"
+ },
+ {
+  "key": "PMID_30241951",
+  "pmid": "30241951",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2018.09.008",
+  "title": "Simultaneous low-frequency deep brain stimulation of the substantia nigra pars reticulata and high-frequency stimulation of the subthalamic nucleus to treat levodopa unresponsive freezing of gait in Parkinson's disease: A pilot study.",
+  "year": 2019,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_30641837",
+  "pmid": "30641837",
+  "pmcid": null,
+  "doi": "10.3171/2018.8.jns18350",
+  "title": "Long-term effect of subthalamic nucleus deep brain stimulation on freezing of gait in Parkinson's disease.",
+  "year": 2019,
+  "journal": "Journal of neurosurgery"
+ },
+ {
+  "key": "PMID_30704853",
+  "pmid": "30704853",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2019.01.021",
+  "title": "Clinical and anatomical predictors for freezing of gait and falls after subthalamic deep brain stimulation in Parkinson's disease patients.",
+  "year": 2019,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_30746411",
+  "pmid": "30746411",
+  "pmcid": "PMC6335519",
+  "doi": "10.1002/mdc3.12681",
+  "title": "Alternate Subthalamic Nucleus Deep Brain Stimulation Parameters to Manage Motor Symptoms of Parkinson's Disease: Systematic Review and Meta-analysis.",
+  "year": 2019,
+  "journal": "Movement disorders clinical practice"
+ }
+]

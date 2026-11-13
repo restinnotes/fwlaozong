@@ -1,0 +1,305 @@
+你拿到的是一个研究问题的证据库：每条证据来自一篇已读过的论文，带研究条件和局限。请在这个证据库的基础上完成综合。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+【成果要满足的标准】
+1. **研究覆盖**：主动寻找相关研究和交叉方向，尽可能减少重要证据及研究方向的遗漏。
+2. **证据可靠**：重要结论能够追溯到原始文献、具体证据和研究条件；区分直接证据、推断与假说。
+3. **深度综合**：不仅总结论文，还要分析研究之间的矛盾、方法学限制、替代解释和未知问题。
+4. **知识分层**：原始证据、单项研究发现、跨研究综合结论、机制模型、研究假说之间具有明确关系。
+5. **长期积累**：过去的研究结果能够被重新检索和用于新问题；新证据能够触发相关旧结论的重新评价。
+6. **科学严谨**：明确不确定性；区分相关性与因果性，不能将模型之间的共识当成实验验证。
+7. **持续自主改进**：能够发现系统或研究成果的缺陷，验证原因，尝试改进，并检查改进是否真实有效。
+
+要求：
+1. 先形成跨研究的结论（claims）：每条结论写明依据的证据编号以及关系（supports/contradicts/qualifies），给出证据强度和不确定性。相互冲突的证据要分析冲突可能来自哪里（条件、方法、分组、样本），不要简单取多数。
+2. 再提出竞争性机制假说（hypotheses）：每个假说关联支持和不利于它的结论；给出能把它和其他假说区分开的预测，以及什么结果会推翻它。不同假说的预测要真的不一样。
+3. 区分相关与因果，区分直接证据、推断和假说。模型自己的推理不能当成证据。
+4. 如果证据库明显缺了某类证据，写进 gaps，并给出应该补检索的检索式（Europe PMC 语法）。
+5. 结论编号用 C1、C2…，假说用 H1、H2…，证据只用库里已有的编号。
+
+只输出一个 JSON：
+{"claims":[{"cid":"C1","text":"","level":"finding|synthesis|mechanism","status":"well-supported|supported|contested|weak|speculative","uncertainty":"","evidence":[{"eid":"","relation":"supports|contradicts|qualifies","note":""}]}],
+ "hypotheses":[{"hid":"H1","name":"","text":"","claims":[{"cid":"C1","relation":"supports|contradicts"}],"predictions":[""],"falsifiers":[""]}],
+ "gaps":[{"what":"","query":""}]}
+
+【证据库】
+[E_PMID_11285786_1] PMID:11285786 (2001) [Gait disorders in Parkinson disease. Gait freezing and falls: therapeutic management].
+  设计:综述 | 对象:帕金森病患者；摘要未报告汇总样本量 | n=不适用 | 条件:总结帕金森病步态障碍、冻结、跌倒及功能神经外科治疗 | 测量:既有临床研究和功能神经外科治疗效果的定性总结
+  发现:综述认为STN刺激对步态障碍的作用与左旋多巴相似，但其长期效果仍需要评估。 | 效应:综述层面的观点支持STN刺激具有改善步态的临床作用，同时指出长期疗效尚未确定。 | 局限:摘要没有提供STN刺激对FOG的独立定量汇总，也没有区分左旋多巴反应性与抵抗性FOG。作者明确指出长期效果仍需评估。该结论不能用于确定STN内源性神经活动与FOG之间的关系。 | 依据:abstract
+[E_PMID_18420482_1] PMID:18420482 (2008) STN-DBS frequency effects on freezing of gait in advanced Parkinson disease.
+  设计:盲法刺激参数比较临床研究 | 对象:报告严重步态障碍的晚期帕金森病患者，接受STN-DBS治疗 | n=13 | 条件:比较刺激关闭、60 Hz和130 Hz，以及常用电压（中位数3 V）与高电压（中位数3.7 V）。频率比较时维持总刺激能量相同。摘要未说明药物状态。 | 测量:冻结发作次数、UPDRS运动评分。
+  发现:60 Hz高电压/等能量条件下，冻结发作次数显著低于刺激关闭条件；130 Hz高电压条件下，冻结发作次数反而高于刺激关闭条件。130 Hz时UPDRS运动评分略有改善，但未达到统计学显著。 | 效应:60 Hz高电压刺激与冻结减少相关；130 Hz高电压刺激与冻结增加相关。摘要未报告60 Hz与130 Hz之间直接比较的效应量。 | 局限:样本量仅13例，且入组对象为严重步态障碍患者，可能不能代表一般STN-DBS人群。药物状态、冻结诱发任务和具体随机化程序未在摘要中报告。电压与频率并非完全独立变化，频率比较涉及等能量调整。与其他低频刺 | 依据:abstract
+[E_PMID_18413568_1] PMID:18413568 (2008) Effects of subthalamic nucleus stimulation and levodopa on freezing of gait in Parkinson disease.
+  设计:连续病例术前与术后比较研究 | 对象:接受双侧STN刺激的帕金森病患者 | n=123 | 条件:术前及术后1年；左旋多巴OFF/ON和DBS OFF/ON条件 | 测量:Stand-Walk-Sit Test及FOG发作情况
+  发现:术前有FOG的患者中，左旋多巴能够缓解FOG；术后STN刺激在除2名患者外的其余FOG患者中重现了术前左旋多巴诱导的改善。在术前存在FOG的患者中，STN刺激的效果与术前或术后的左旋多巴效果没有显著差 | 效应:STN-DBS能够改善多数具有左旋多巴反应性的FOG患者，但其改善程度受到术前FOG表型及药物反应性的影响。 | 局限:连续病例研究而非随机刺激干预；FOG通过Stand-Walk-Sit任务评估，可能不能覆盖日常生活中的所有冻结情境。研究没有同步记录STN神经活动，不能确定临床改善对应何种神经振荡变化。 | 依据:abstract
+[E_PMID_18413568_2] PMID:18413568 (2008) Effects of subthalamic nucleus stimulation and levodopa on freezing of gait in Parkinson disease.
+  设计:连续病例术前与术后比较研究 | 对象:接受双侧STN刺激的帕金森病患者 | n=123 | 条件:术前及术后1年；比较术前有无FOG患者的STN刺激反应 | 测量:Stand-Walk-Sit Test及术后新发FOG或无法完成测试的情况
+  发现:11名患者在手术后首次出现FOG或无法完成步行测试。对于术前没有FOG的患者，STN刺激的改善效果未达到其术前左旋多巴治疗所达到的水平。 | 效应:术前FOG表型与术后STN-DBS的步态疗效有关；STN-DBS并非对所有患者都能改善步态，部分患者术后出现新的步态问题。 | 局限:摘要没有提供11名新发患者的具体临床特征、刺激参数和长期变化。无法区分手术本身、持续刺激或疾病进展对新发步态问题的贡献。未测量STN神经活动。 | 依据:abstract
+[E_PMID_19815246_1] PMID:19815246 (2010) [Deep brain stimulation and gait disorders in Parkinson disease].
+  设计:叙述性综述 | 对象:晚期帕金森病伴步态障碍或冻结步态的患者，综述涉及STN、苍白球及丘脑刺激。 | n=摘要未报告纳入研究数量及患者总数 | 条件:综述不同脑深部刺激靶点、左旋多巴反应及疾病进展对步态和FOG的影响，未提供统一的药物状态或刺激参数。 | 测量:步态障碍、冻结步态及其对左旋多巴和DBS的临床反应。
+  发现:综述明确指出STN刺激能够改善左旋多巴反应性步态障碍和FOG，但部分患者在STN刺激后恶化，另一些患者对左旋多巴的反应优于STN刺激。两种治疗可能存在协同作用。左旋多巴抵抗性步态障碍和FOG通常不能从 | 效应:综述报告的是具有患者异质性的定性结论：左旋多巴反应性是STN刺激改善步态的重要条件；左旋多巴抵抗性FOG通常获益有限；部分患者可能出现刺激相关恶化。 | 局限:摘要未提供系统检索方法、纳入研究数量、患者总数及定量效应量。不同患者的药物反应、疾病阶段和刺激后随访时间可能不同，不能将综述中的总体观点理解为所有患者均有相同反应。关于非多巴胺能通路的解释属于作者提出 | 依据:abstract
+[E_PMID_19811797_1] PMID:19811797 (2010) [Pharmacological hypotheses and therapeutic strategies for gait disorders in Parkinson's disease].
+  设计:综述 | 对象:帕金森病患者；摘要未报告汇总样本量 | n=不适用 | 条件:综述药物治疗、步态障碍及相关神经递质系统的病理生理假说 | 测量:既有基础研究、临床试验和药物治疗研究的机制性总结
+  发现:综述提出，NMDA受体拮抗剂美金刚可能通过减轻STN谷氨酸能过度激活对PPN的影响，改善波动性帕金森患者的运动症状和步态。 | 效应:提出STN过度兴奋影响脑干PPN的候选机制，强调STN与PPN之间的功能联系可能参与步态障碍。 | 局限:这是综述提出的可能机制，而非直接测量STN-PPN活动或证明其导致FOG的实验结果。摘要没有提供定量汇总、样本量或FOG专属效应。作者使用possibly表述，说明该机制仍属于假说。 | 依据:abstract
+[E_PMID_21777828_1] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:接受丘脑底核深部脑刺激（STN-DBS）的帕金森病（PD）患者 | n=未报告，综述未提供该研究的具体样本量 | 条件:在接受DBS治疗的PD患者中，将与较长步长腿对侧的STN刺激降低50%；药物状态、具体步态任务及其他刺激参数未报告。 | 测量:冻结步态（FOG）及步态协调；步长对称性被作为可能的作用解释，但未报告具体量化方法。
+  发现:降低与较长步长腿对侧的STN刺激50%后，患者FOG减少。作者推测这一效应可能由步态对称性改善所介导。 | 效应:STN刺激的不对称调整能够减少FOG，提示STN刺激对步态协调及FOG的影响可能与刺激侧别和双侧步态对称性有关。 | 局限:综述未报告样本量、患者FOG严重程度、药物状态、刺激频率及其他参数，也未提供效应量。步态对称性改善是作者提出的可能解释，并未证明是FOG减少的中介机制。该结果反映刺激操纵的临床效应，而非FOG发生过程 | 依据:fulltext
+[E_PMID_21777828_2] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:接受STN-DBS的帕金森病患者 | n=未报告 | 条件:接受STN-DBS治疗；综述明确指出，改善FOG的效果尤其见于药物关闭状态（off state）。未提供具体刺激参数、刺激开关比较方案及任务范式。 | 测量:临床FOG症状；具体评估量表、客观步态检测方法及效应量未报告。
+  发现:综述明确指出，STN-DBS能够减轻PD患者的FOG症状，且这种改善在药物off状态尤其明显。 | 效应:STN-DBS具有改善FOG的作用，且其临床效应受到药物状态影响。 | 局限:综述没有提供原始研究的样本量、具体刺激参数、药物状态下的定量比较或FOG评估细节。文章同时指出FOG并非只发生于off状态，因此不能将STN-DBS的改善作用简单理解为仅针对多巴胺药物不足所引起的FO | 依据:fulltext
+[E_PMID_21777828_3] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:接受STN-DBS的PD患者中的一个亚组 | n=未报告；未提供出现刺激诱发FOG的患者比例 | 条件:STN-DBS治疗期间；综述未说明诱发FOG时的药物状态、刺激频率、刺激强度、刺激位置、步态任务及患者亚组划分标准。 | 测量:临床FOG发生情况；具体诱发任务和测量方法未报告。
+  发现:与STN-DBS能够改善FOG的报告相反，综述指出，在一部分PD患者中，STN-DBS本身能够诱发FOG。 | 效应:STN刺激可能产生相反的临床效应：部分患者FOG改善，另一些患者FOG被诱发。 | 局限:综述没有提供刺激诱发FOG患者的样本量、比例、临床特征和刺激参数，无法确定这种相反效应是否与患者表型、药物状态、刺激频率或刺激条件有关。文章也没有提供刺激诱发FOG前后STN神经活动的直接记录，因此不 | 依据:fulltext
+[E_PMID_21777828_4] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:接受STN-DBS的部分PD患者 | n=未报告 | 条件:调整STN-DBS刺激频率，降低刺激频率；具体调整前后的频率数值、药物状态、刺激强度和任务范式未报告。 | 测量:临床FOG症状；具体测量方法和评估时间未报告。
+  发现:综述报告，降低STN-DBS刺激频率在部分患者中能够减少FOG。 | 效应:降低刺激频率可能改善部分患者的FOG，提示刺激参数是影响STN-DBS临床效果的一个因素。 | 局限:综述没有报告具体频率数值、样本量、患者分组、效应量及药物状态，不能确定低频刺激改善FOG的适用患者范围，也无法直接解释其与常规刺激诱发FOG的差异。刺激频率调整的临床效果不能直接等同于STN内源性神经 | 依据:fulltext
+[E_PMID_21777828_5] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:PD患者，特别是存在FOG的患者；属于理论机制假说，不对应独立实验样本 | n=不适用，未报告独立实验样本量 | 条件:自发启动步行时，基底节与辅助运动区（SMA）之间的运动控制环路出现功能障碍；外部视觉或听觉线索可能通过小脑－背侧前运动皮层通路补偿。 | 测量:该段属于病理生理机制假说，没有报告直接测量STN放电或STN局部场电位的数据。
+  发现:作者提出，FOG可能源于基底节－SMA环路的自发运动启动和自动化功能受损。患者因此更依赖外部线索维持步行。作者还提出，FOG患者中MLR活动增加可能是维持步行的代偿性驱动。 | 效应:提出一种基于运动自动化缺陷和代偿性控制的机制解释：基底节相关的内部运动驱动不足，使步行更加依赖外部线索和其他运动控制网络。 | 局限:这是综述提出的机制假说，而非直接验证的STN机制。文章没有明确定位STN在该环路中的具体异常活动模式，也没有提供STN活动与FOG发作时间关系的直接证据。该假说不能单独解释为什么STN-DBS在部分患 | 依据:fulltext
+[E_PMID_21777828_6] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:PD患者及存在FOG的患者；属于理论机制模型，不对应独立实验样本 | n=不适用，未报告独立实验样本量 | 条件:FOG发作期间，运动、认知和边缘系统皮层向基底节提供的相互竞争的信息输入发生短暂交叉干扰（cross-talk）。 | 测量:理论模型涉及基底节输出核的同步放电及脑干运动区域受到的抑制；本文没有提供该过程的直接STN神经电生理测量。
+  发现:作者引用另一种异常中央驱动假说：不同皮层输入之间的短暂交叉干扰可能导致基底节输出核出现瞬时同步放电，增加对脑干运动区域的抑制，最终产生FOG。 | 效应:提出一种发作性神经网络失调机制，预测FOG可能与基底节输出活动的瞬时同步化及脑干运动区域受到过度抑制有关。 | 局限:作者将其作为替代性病理生理假说提出，并未在本文中进行直接验证。该模型讨论的是基底节输出核，而不是STN特异性放电，因此不能据此认定STN同步活动已经被证实与FOG存在因果关系。模型也没有给出可量化的同 | 依据:fulltext
+[E_PMID_21777828_7] PMID:21777828 (2011) Freezing of gait: moving forward on a mysterious clinical phenomenon.
+  设计:review | 对象:PD患者及存在FOG的患者；属于理论机制假说，不对应独立实验样本 | n=不适用，未报告独立实验样本量 | 条件:步行启动过程中，预期姿势调整（anticipatory postural adjustments，APAs）与步伐启动之间的协调出现障碍。 | 测量:膝部震颤、重复性侧向重心转移及姿势调整；综述引用的相关研究观察到FOG期间的膝部震颤与重复性APA模式相似。
+  发现:作者提出，FOG期间的膝部震颤可能代表反复出现的姿势调整，而不是单纯的震颤或完全运动不能。这提示步行启动前的运动程序准备，以及姿势准备与步伐启动之间的协调可能发生障碍。作者进一步提出，基底节参与的预先 | 效应:提出姿势控制与步行控制耦合障碍的机制解释，可能与基底节相关的运动程序准备异常有关。 | 局限:作者将其作为病理生理假说提出。膝部震颤与APA相似并不能证明STN活动异常是其原因。本文没有提供STN神经元记录，也没有证明姿势－步态耦合障碍与STN刺激诱发FOG之间存在直接关系。 | 依据:fulltext
+[E_PMID_23039143_1] PMID:23039143 (2012) Effects of deep brain stimulation in the subthalamic nucleus or globus pallidus internus on step ini
+  设计:随机STN与GPi靶点比较研究，包含术前术后重复测量 | 对象:接受DBS的帕金森病患者，以及健康对照和未接受DBS的PD对照 | n=DBS患者 n=29（STN n=15，GPi n=14）；健康对照 n=28；PD非手术对照 n=9 | 条件:术前左旋多巴OFF/ON；术后6个月左旋多巴OFF/ON与DBS OFF/ON组合条件 | 测量:力平台测量预期姿势调整（APA）的幅度和持续时间；运动分析系统测量第一步长度和速度
+  发现:STN或GPi DBS术后，APA较术前最佳左旋多巴治疗状态显著恶化；STN与GPi组之间没有发现APA差异。第一步速度在STN组术后出现恶化。 | 效应:DBS对步态启动的姿势准备可能产生不利影响，与部分研究报告的FOG改善并不完全一致。 | 局限:研究测量的是步态启动和APA，并未直接测量FOG发作或FOG严重程度。APA异常只能作为步态启动相关指标，不能直接等同于冻结。STN与GPi均存在APA变化，不能据此认定STN特异性机制。研究没有记录 | 依据:abstract
+[E_PMID_23445615_1] PMID:23445615 (2013) Levodopa-resistant freezing of gait and executive dysfunction in Parkinson's disease.
+  设计:匹配病例对照及术前术后认知、运动功能比较研究 | 对象:晚期PD伴左旋多巴抵抗性FOG患者，以及不伴左旋多巴抵抗性FOG的匹配PD患者 | n=L-FOG n=38；匹配对照 n=38；从400名患者中筛选 | 条件:STN手术前及术后1年；比较左旋多巴抵抗性FOG与非L-FOG患者 | 测量:额叶综合评分、执行功能及UPDRS II的FOG项目评分
+  发现:术后L-FOG组整体执行功能损害较对照组严重，但其中11名L-FOG患者仍保留执行功能；FOG严重程度与执行功能损害程度之间没有相关性。 | 效应:作者认为额叶执行功能障碍可能是部分患者L-FOG的机制，但不能解释所有L-FOG病例。 | 局限:没有直接测量STN神经活动，不能将执行功能异常归因于STN异常。11名患者保留执行功能且FOG严重程度无相关性，说明该机制并非普遍适用。摘要没有详细报告药物及刺激状态。 | 依据:abstract
+[E_PMID_24142148_1] PMID:24142148 (2013) Freezing of gait in Parkinson's disease is associated with functional decoupling between the cogniti
+  设计:任务态fMRI功能连接病例对照研究 | 对象:PD伴FOG患者及无FOG病史的匹配PD患者 | n=PD+FOG n=10；PD-FOG n=10 | 条件:虚拟现实步态任务；左旋多巴ON和OFF两个状态；同时分析认知负荷 | 测量:fMRI独立成分分析及运动网络、认知控制网络、基底节网络之间的功能连接
+  发现:FOG患者表现出双侧认知控制网络与基底节网络之间的功能脱耦，该脱耦还与阵发性运动停止相关。 | 效应:FOG与基底节-认知控制网络之间的信息交流异常相关，提供了不同于单纯STN局部振荡异常的网络层面解释。 | 局限:研究分析的是基底节网络整体，并未单独报告STN的激活或功能连接，因此不能将结果直接归因于STN。样本量较小，任务采用虚拟现实步态而非自然行走。摘要没有给出不同药物状态下的具体连接效应量。 | 依据:abstract
+[E_PMID_24165197_1] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:随机、盲法评估、交叉频率比较研究（原始临床研究） | 对象:帕金森病患者，接受双侧STN-DBS至少3个月，主诉或被观察到步态改变；能够在停用抗帕金森药物后独立行走；排除认知障碍及MMSE<24者。 | n=20例入组，1例因严重冻结步态退出；完成者19例。UPDRS III完整数据14例。 | 条件:患者隔夜停用抗帕金森药物约12小时，DBS保持开启。随机分配60 Hz和130 Hz刺激顺序，每种频率各测试两次，每次切换后等待60分钟再进行步态评估。电压、脉宽及其他刺激参数保持不变。无OFF-DB | 测量:主要指标：GAITRite测量的步幅长度（stride length）相对于基线的变化。次要指标包括步行速度、步数、步频、单/双支撑时间及Stand-Walk-Sit（SWS）测试时间。
+  发现:60 Hz组步幅长度变化中位数为1.19 cm，130 Hz组为2.86 cm，两组差异无统计学意义。其他次要步态指标也未发现60 Hz与130 Hz之间的显著差异。 | 效应:未证实单纯降低STN-DBS频率至60 Hz能够改善步幅长度或整体步态表现；数值上60 Hz组步幅长度改善幅度反而小于130 Hz组，但差异不显著。 | 局限:样本量小，主要分析以描述性统计为主。研究保持电压和脉宽不变，因此降低频率同时降低了总电能传递（TEED），不能与既往保持TEED恒定、同时提高电压的研究直接比较。作者指出未获得术后MRI，无法确定电极 | 依据:fulltext
+[E_PMID_24165197_2] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:随机、盲法评估、交叉频率比较研究；FOG相关结果分析 | 对象:20例接受双侧STN-DBS的帕金森病患者，其中7例将冻结步态列为主要步态主诉，另外包括平衡障碍和慌张步态患者。 | n=20例入组；其中7例主要主诉为冻结步态。 | 条件:隔夜停药约12小时，DBS开启；比较60 Hz与130 Hz刺激，每种频率刺激60分钟后评估，电压及脉宽保持不变。 | 测量:冻结次数相关分析、步数及步态参数；作者讨论的主要FOG相关结局为冻结发作及步数变化。
+  发现:作者报告，60 Hz与130 Hz之间没有显著差异；根据冻结次数、主要步态主诉、DBS术后时间及刺激频率顺序进行的分析也没有发现显著差异。作者明确表示，未能证明单纯改变至60 Hz可以减少步数和冻结发 | 效应:在本研究的停药状态、短时刺激条件下，没有观察到降低刺激频率能够减少FOG的显著证据。 | 局限:作者指出FOG在临床环境中难以重复诱发，多数患者在研究期间没有重现其主要步态问题，可能造成结局测量不敏感。论文没有充分报告冻结发作次数的具体数值、逐患者变化及其测量定义。样本中不同步态障碍混合，FOG | 依据:fulltext
+[E_PMID_24165197_3] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:随机交叉刺激频率研究；主观疗效及随访观察 | 对象:接受双侧STN-DBS的帕金森病患者；其中部分患者认为改变刺激频率后步态有所改善。 | n=20例入组；7例要求以不同于基线的频率离开研究，其中2例报告明显步态改善。 | 条件:研究期间比较60 Hz和130 Hz刺激。两名主观改善者均在研究开始时使用助行器，随后采用60 Hz刺激；研究报告了6周后的主观随访情况。 | 测量:患者主观步态改善、助行器使用情况，以及客观步幅长度、步行速度和双支撑时间。
+  发现:7名要求改变基线刺激频率的患者中，2名报告步态出现明显主观改善；两人均报告在改为60 Hz刺激后，6周时不再需要使用助行器，行走稳定性有所改善。但这两名患者在研究中的步幅长度、步行速度和双支撑时间均没 | 效应:存在少数患者主观上对60 Hz刺激产生明显步态改善的现象，但主观改善没有得到研究期间客观步态测量结果的支持。 | 局限:响应者仅2例，属于小样本主观观察；患者要求改变频率及6周后的改善报告不能证明刺激频率与改善之间存在因果关系。客观测量未能区分响应者与其他患者。作者还指出，患者主要步态主诉与盲法评估者判断可能不一致。 | 依据:fulltext
+[E_PMID_24165197_4] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:病例报告（本文转述既往研究Xie et al.） | 对象:帕金森病患者，接受新近启用的双侧STN-DBS；植入前存在多巴胺反应性冻结步态。 | n=2例 | 条件:初次STN-DBS程控阶段，将刺激频率从130 Hz降低至60 Hz。本文报告改变频率时其他刺激参数未发生变化。具体药物状态和步态测试范式在本文转述中未交代。 | 测量:冻结步态的即时变化及长期随访表现。
+  发现:作者转述Xie等人的两个病例：患者在130 Hz刺激下出现FOG加重，仅将频率改为60 Hz后，FOG立即改善；这一改善在10个月随访时仍然存在。 | 效应:与本研究未发现60 Hz客观步态优势的结果不同，该病例报告支持在部分新近启用STN-DBS、存在多巴胺反应性FOG的患者中，降低频率可能产生即时且持续的FOG改善。 | 局限:仅有2例病例，证据等级有限。本文没有提供这两个病例的详细步态定量结果、完整药物状态及测试条件，无法判断结果能否推广至长期接受STN-DBS、存在慢性步态障碍的患者。该结果是本文对既往研究的转述，并非本 | 依据:fulltext
+[E_PMID_24165197_5] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:临床刺激参数比较研究（本文转述既往研究Moreau et al.） | 对象:接受STN-DBS的晚期帕金森病患者。 | n=本文该处未报告具体样本量。 | 条件:本文转述了高电压、130 Hz刺激与降低频率至60 Hz后的比较。作者还报告了在通常电压基础上进行小幅调整、使TEED大致相当的60 Hz刺激条件，并将其与高电压高频及高电压低频刺激进行比较。具体药物 | 测量:FOG发作次数及步数。
+  发现:作者报告，Moreau等人的研究显示，高电压、130 Hz刺激时步数和FOG发作次数增加，仅降低频率至60 Hz后上述表现改善。此外，在通常电压基础上小幅调整以维持相近TEED的60 Hz条件下，FO | 效应:既往研究支持低频刺激可能改善FOG，但改善幅度与电压和TEED条件有关；不同电压条件下的60 Hz效果并不完全相同。 | 局限:本文没有提供Moreau研究的具体样本量、详细刺激参数、药物状态及完整定量结果。其结果为本文讨论部分对既往研究的二次转述。由于频率和电压可能同时变化，不能将所有改善都归因于频率本身。 | 依据:fulltext
+[E_PMID_24165197_6] PMID:24165197 (2014) 60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulatio
+  设计:刺激频率调整及随访研究（本文转述既往研究Ricchi et al.） | 对象:接受STN-DBS治疗的帕金森病患者。 | n=本文未报告具体样本量。 | 条件:将STN-DBS频率调整至80 Hz，同时调整电压以补偿频率下降所导致的TEED变化。研究在药物开启（medication ON）状态下进行；患者处于具体药物给药周期的哪个阶段，本文称原研究没有说明。 | 测量:步态改善的急性效应及长期随访效果。
+  发现:作者转述Ricchi等人的结果：80 Hz频率调整后3小时观察到步态改善，但这种改善没有持续，在从1个月开始的后续随访中未能维持。 | 效应:低频刺激的步态改善可能具有时间依赖性：急性阶段可以观察到获益，但不能据此推断长期疗效持续存在。 | 局限:本文未提供该研究的样本量、具体FOG定量指标及完整随访数据。原研究在药物开启状态下进行，但未说明患者在药物给药周期中的具体位置，可能影响不同研究之间的步态结果比较。该证据是本文对既往研究的转述。 | 依据:fulltext
+[E_PMID_24361601_1] PMID:24361601 (2014) High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease.
+  设计:观察性电生理病例对照研究 | 对象:植入STN慢性刺激电极的帕金森病患者，分为有FOG组（p-FOG）和无FOG组（n-FOG）。 | n=22（p-FOG组14例，n-FOG组8例） | 条件:比较有无FOG患者的STN及皮层EEG振荡活动，并观察左旋多巴给药后的变化。摘要未详细说明步态任务、刺激开关状态和高beta频段的具体边界。 | 测量:STN和皮层EEG的低beta、高beta频段功率及皮层-STN相干性。
+  发现:p-FOG患者的STN高beta功率显著高于n-FOG患者（F=11.6，p=0.002）。左旋多巴给药后，高beta活动显著降低，同时FOG受到抑制（F=4.6，p=0.042）。高beta皮层-S | 效应:高beta STN活动与FOG存在组间关联，并随左旋多巴给药及FOG抑制而降低。研究同时提示高beta与低beta皮层-STN连接具有不同的空间分布。 | 局限:样本量较小，摘要未报告高beta频段的具体范围、药物给药前后的完整临床条件及刺激状态。组间比较和药物前后相关变化不能单独证明高beta活动是FOG的直接原因。与步行任务研究中观察到的低beta和the | 依据:abstract
+[E_PMID_23861319_1] PMID:23861319 (2014) The neural correlates of upper limb motor blocks in Parkinson's disease and their relation to freezi
+  设计:任务态功能磁共振病例对照研究 | 对象:PD伴FOG患者、PD不伴FOG患者及健康对照 | n=PD+FOG n=16；PD-FOG n=16；健康对照 n=16 | 条件:双侧手指运动任务；分析成功完成运动时的脑激活 | 测量:功能磁共振成像（fMRI）测量脑区激活，包括STN、苍白球、壳核及皮质运动区域
+  发现:在成功完成手指运动时，PD+FOG患者相较PD-FOG患者和健康对照表现出双侧STN激活增加，同时背侧壳核和苍白球激活也增加。 | 效应:FOG患者在成功完成非步行运动时也表现出较高的STN任务相关激活，提示STN激活差异可能与FOG患者的运动控制特征有关。 | 局限:研究任务为双侧手指运动，而非步行或冻结诱发任务；STN激活增加发生在成功运动期间，并非直接记录FOG发作期间的STN活动。fMRI不能直接提供β振荡等频谱信息，也不能确定STN激活增加是FOG的原因还 | 依据:abstract
+[E_PMID_24937008_1] PMID:24937008 (2014) Functional reorganization of the locomotor network in Parkinson patients with freezing of gait.
+  设计:comparative neuroimaging study | 对象:帕金森病患者，包括FOG+和FOG-患者，以及年龄匹配的健康对照。 | n=最初纳入26名PD患者和15名健康对照；经过严格运动校正后，15名PD患者和14名健康对照进入分析。FOG+和FOG-亚组各自人数未在摘要中报告。 | 条件:静息态功能磁共振成像（resting-state fMRI）和弥散张量成像（DTI）；结合FOG自我报告、临床评估和客观严重程度测量。药物状态及DBS刺激状态未在摘要中明确报告。 | 测量:双侧辅助运动区（SMA）与丘脑底核（STN）、中脑步行区（MLR）及小脑步行区（CLR）之间的功能连接强度；步行网络节点间的结构连接强度；功能连接与FOG严重程度之间的相关性。
+  发现:FOG+患者相较于FOG-患者和健康对照，表现出SMA与双侧MLR之间以及SMA与左侧CLR之间更强的功能连接。尤其是SMA-MLR功能连接强度与FOG+患者的临床、自我报告及客观冻结严重程度均呈正相 | 效应:FOG+患者的SMA-MLR及SMA-左侧CLR功能连接增强；SMA-MLR连接越强，FOG严重程度越高。作者提出可能存在STN-SMA连接减弱及向脑干步行网络的功能重组，但该机制在摘要中属于解释性假 | 局限:论文摘要报告的运动校正后样本仅有15名PD患者和14名健康对照，样本量较小；未报告FOG+和FOG-亚组的具体人数。静息态功能连接属于相关性测量，不能确定连接改变与FOG之间的因果方向。摘要未报告ST | 依据:abstract
+[E_PMID_25540305_1] PMID:25540305 (2015) Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.
+  设计:随机、双盲、交叉条件临床试验 | 对象:接受双侧STN-DBS的帕金森病患者，尽管常规130 Hz刺激和多巴胺能药物治疗，仍存在FOG。 | n=7 | 条件:所有患者均在药物开启状态接受130 Hz、60 Hz及DBS关闭三种条件，随机双盲评估。三种条件在同一天完成。随后维持效果最好的60 Hz条件3至8周，平均约6周。 | 测量:FOG问卷、Stand-Walk-Sit Test、UPDRS-III及轴性症状评分；同时通过改良钡餐吞咽检查和吞咽问卷评估吞咽功能。
+  发现:与常规130 Hz相比，60 Hz显著降低FOG，同时改善轴性和帕金森运动症状。60 Hz条件下的获益在平均6周的随访中仍然存在。研究还发现60 Hz使钡餐检查中的误吸频率降低57%，主观吞咽困难降低 | 效应:60 Hz相较130 Hz显著改善药物开启状态下持续存在的FOG；FOG具体效应量未在摘要中提供。 | 局限:样本仅7例，研究证据等级为Class IV。主要研究终点是吞咽功能，FOG属于次要终点。急性刺激条件比较仅在一天内完成，后续随访约6周，无法确定长期疗效。患者均为常规130 Hz和药物治疗下仍有FOG | 依据:abstract
+[E_PMID_26887333_1] PMID:26887333 (2016) Subthalamic stimulation may inhibit the beneficial effects of levodopa on akinesia and gait.
+  设计:多中心临床病例系列及电极接触点定位研究 | 对象:STN-DBS术后出现步态和/或运动不能恶化，且停用刺激后可以逆转的帕金森病患者。 | n=17例入组，其中12例完成全部评估。 | 条件:包括药物开启状态下各电极接触点的单极刺激测试，以及五种条件比较：药物关闭/DBS关闭、药物关闭/最佳DBS、药物开启/DBS关闭、药物开启/最佳DBS、药物开启/导致恶化的DBS。重点比较药物开启/恶 | 测量:Stand-Walk-Sit Test、UPDRS-III分项、FOG量表、运动障碍评分及刺激接触点的解剖定位。
+  发现:药物开启/恶化性DBS相较药物开启/DBS关闭，显著恶化运动不能（p=0.02）、Stand-Walk-Sit Test表现（p=0.001）和FOG（p=0.02），同时改善异动症（p=0.003） | 效应:特定STN周围接触点刺激可能恶化FOG和步态，而不是所有STN区域刺激均产生改善。作者认为这一现象可能与电极位置偏离目标有关。 | 局限:这是针对刺激后恶化患者进行的选择性病例研究，不代表一般STN-DBS患者。17例中仅12例完成完整评估。导致恶化的接触点主要位于STN背侧和前方的邻近结构，因此不能将其直接解释为STN内部神经活动的效 | 依据:abstract
+[E_PMID_28119584_1] PMID:28119584 (2016) A Neurocomputational Model of the Effect of Cognitive Load on Freezing of Gait in Parkinson's Diseas
+  设计:computational model | 对象:模型模拟的PD冻结步态患者（freezers）和非冻结步态患者（non-freezers）；摘要未报告实际受试者样本量。 | n=未报告；属于计算模型研究。 | 条件:模型模拟患者在虚拟现实环境中通过一系列门口，同时执行Stroop词语线索任务。比较简单与复杂刺激、不同程度的决策冲突及多巴胺药物状态。 | 测量:模型模拟的步行启动延迟、运动中断次数，以及认知负荷和多巴胺治疗对冻结行为的影响。模型基于皮质-基底节认知及运动环路和强化学习actor-critic架构。
+  发现:高冲突线索与步行启动延迟增加有关；复杂线索相较简单线索，在PD冻结步态患者中引起更多运动中断。模型还模拟了多巴胺药物对运动中断的影响。作者提出，冻结行为可以由任务参数（门口和认知线索）的叠加产生，而不 | 效应:认知冲突增加步行启动延迟；复杂任务增加冻结患者的运动中断次数。模型预测认知与运动环路中的风险敏感性可能存在患者亚组差异。 | 局限:属于计算模型而非直接神经生理实验；摘要没有报告STN特异性神经活动、STN局部场电位或STN刺激对冻结的直接影响。模型结果依赖其环路结构、参数设定和强化学习假设，不能直接证明STN参与了所模拟的冻结过 | 依据:abstract
+[E_PMID_28529730_1] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为随机、双盲、前瞻性交叉研究） | 对象:13名帕金森病患者，接受双侧STN DBS，平均术后刺激5年后出现轴向症状，所有患者均有FOG。 | n=13 | 条件:药物Off状态。比较DBS Off、130 Hz常规电压（中位数3.0 V）、130 Hz高电压（中位数3.7 V）、60 Hz等效能量常规电压及60 Hz等效能量高电压。单极刺激，10人使用腹侧触点 | 测量:Stand-Walk-Sit（SWS）测试，包括完成时间、步数和FOG发作次数；UPDRS-III运动评分。
+  发现:60 Hz两种等效能量条件在SWS所有指标上均显著优于DBS Off及130 Hz两种条件。60 Hz高电压条件获得最佳步态表现和最少FOG发作。130 Hz提高电压后，所有步态指标恶化，FOG发作次 | 效应:支持60 Hz相对于130 Hz改善FOG，且在等效TEED条件下仍然有效；提高130 Hz电压可能加重FOG。两名患者因节段性症状恶化，尤其是震颤加重，转回130 Hz。 | 局限:样本量小（n=13），且所有患者均为HFS下出现FOG的选择性人群。药物状态仅评估Off状态。触点位置并不统一（腹侧10人、背侧3人）。8个月随访中部分患者需要增加左旋多巴剂量。不能据此确定所有FOG | 依据:fulltext
+[E_PMID_28529730_2] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为开放标签研究） | 对象:12名接受双侧STN DBS的PD患者，平均接受高频刺激4.3年后仍存在步态困难，其中7人有FOG、6人有姿势不稳、7人有跌倒。 | n=12（其中3人不能耐受LFS，实际完成后续比较者9人） | 条件:从HFS切换到60 Hz LFS，持续8–12周后评估，与HFS比较；药物On状态；开放标签研究。3人因震颤、僵直或步态恶化不能耐受LFS。TEED是否维持未报告。 | 测量:UPDRS-II和UPDRS-III，包括言语、跌倒、行走及步态相关项目。
+  发现:切换到60 Hz后，UPDRS-II相关评分以及言语、跌倒和行走项目显著改善，UPDRS-III中的言语和步态项目也改善。但个体反应存在差异，2名患者的姿势稳定性和步态恶化。 | 效应:总体支持60 Hz对部分存在步态障碍的患者有益，但并非所有患者均获益；FOG特异性改善程度未单独报告。 | 局限:开放标签设计，存在评价偏倚可能；3人不能耐受LFS。7名患者需要平均增加1.3 V双侧刺激电压以维持其他帕金森症状的控制。研究没有说明TEED是否维持，也没有报告FOG患者是否比无FOG患者更容易获益 | 依据:fulltext
+[E_PMID_28529730_3] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为2例病例报告） | 对象:2名PD患者，接受新近植入的STN DBS电极，常规HFS激活后出现FOG。 | n=2 | 条件:比较130 Hz HFS与60 Hz LFS，在药物Off和药物On两种状态下评估。研究对象为新近植入电极后出现的刺激相关FOG。 | 测量:FOG表现、UPDRS-III运动评分及言语症状。
+  发现:两名患者在60 Hz刺激下均立即出现FOG、UPDRS-III评分及言语症状改善，而且这种改善在药物Off和On状态下均存在。获益持续至研究随访的10个月。 | 效应:提示60 Hz改善FOG不一定要求患者经历多年慢性HFS或疾病长期进展；新近植入后出现的刺激相关FOG也可能对降低刺激频率产生反应。 | 局限:仅2例患者，不能排除个体差异。病例报告不能确定改善机制。该研究的TEED调整情况及触点位置细节在综述中没有充分报告。没有直接测量STN神经活动。 | 依据:fulltext
+[E_PMID_28529730_4] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为回顾性研究） | 对象:5名双侧STN DBS术后的PD患者，术前所有患者均有药物Off状态FOG，其中3人还存在药物难治性FOG。 | n=5 | 条件:患者在130–185 Hz HFS下FOG和轴向症状恶化，平均在DBS手术后约2个月切换至60 Hz LFS。评估时处于药物On状态。所有患者均使用腹侧触点，其中3人同时使用背侧触点。 | 测量:UPDRS-III、轴向症状和步态分项评分、FOG表现。
+  发现:在HFS下，4/5患者于药物On状态出现FOG；切换至60 Hz后，仅2/5患者仍有FOG，且FOG严重程度和轴向症状有所减轻。 | 效应:60 Hz相较130–185 Hz与FOG发生比例下降相关，且在术后较早期出现的FOG患者中也观察到改善。 | 局限:样本量仅5人，采用回顾性设计。所有患者均经过FOG选择，不能代表一般STN DBS人群。没有说明频率改变时是否维持TEED。所有患者使用腹侧触点，3人同时使用背侧触点，触点位置可能影响结果。 | 依据:fulltext
+[E_PMID_28529730_5] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为随机、双盲、前瞻性交叉研究） | 对象:7名双侧STN DBS患者，平均接受DBS 4.4年，在130 Hz刺激下存在药物难治性FOG。 | n=7 | 条件:药物On状态下随机比较130 Hz HFS、60 Hz LFS及DBS Off。使用患者原有电压、脉宽和触点，没有调整TEED。随后将产生最少FOG的60 Hz设置持续6–8周，再次评估。 | 测量:SWS测试（7米往返步行时间及FOG发作次数）、FOG问卷、UPDRS-III轴向及总运动评分；吞咽功能采用视频透视吞咽检查和吞咽问卷评估。
+  发现:60 Hz显著改善FOG、轴向症状和总体帕金森运动症状，相比130 Hz有更好的表现。60 Hz下轴向评分和UPDRS-III总评分也优于DBS Off；130 Hz下轴向评分反而比DBS Off更差 | 效应:支持60 Hz对HFS下药物难治性FOG具有显著改善作用，并可能同时改善其他轴向功能。该研究还提示LFS的获益不一定只是撤除HFS的不良作用，因为LFS相对于DBS Off也有显著改善。 | 局限:样本量仅7人，患者均为HFS下药物难治性FOG，选择性较强。评估处于药物On状态。没有维持TEED，因此频率和总刺激能量同时发生变化。随访时间有限。1名患者在3周后因手部震颤恶化转回130 Hz。研究 | 依据:fulltext
+[E_PMID_28529730_6] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为前瞻性随访研究） | 对象:11名双侧STN DBS术后5年内出现步态障碍的PD患者，表现为频繁跌倒和/或FOG。 | n=11 | 条件:比较130 Hz HFS和80 Hz LFS。药物On状态，维持TEED。切换频率3小时后进行急性评估，并在80 Hz持续1、5、15个月后随访。 | 测量:SWS测试、UPDRS-II、UPDRS-III及临床总体改善评分。
+  发现:切换至80 Hz后，SWS步数出现显著的急性改善，但在1、5和15个月随访时，SWS测试已不能检测到持续的步态改善。8人维持80 Hz至15个月，其中5人总体改善、3人无变化；另有3人因运动症状控制不 | 效应:80 Hz可能产生短期步态改善，但未显示持续的客观步态获益；不能据此认定80 Hz能够稳定改善FOG。 | 局限:研究中没有在80 Hz或130 Hz评估时实际诱发FOG，FOG病史不能等同于测试时存在FOG。研究主要使用80 Hz而非60 Hz，不能直接与60 Hz研究等同。3名患者因节段性症状控制不佳转回HF | 依据:fulltext
+[E_PMID_28529730_7] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为临床观察研究） | 对象:45名存在轴向症状的PD患者，其中44人接受双侧STN刺激；患者因早期轴向获益丧失、长期轴向症状恶化、常规HFS效果不足或严重低声等原因入组。 | n=45 | 条件:HFS为130–185 Hz；LFS组中39人切换至80 Hz，6人切换至60 Hz。药物On状态，切换后中位111.5天评估，没有维持TEED。FOG不是入组必需条件。 | 测量:UPDRS-III总评分、轴向和步态分项、言语分项及自我报告的跌倒次数。
+  发现:切换至LFS后，各项客观结局均没有显著差异。部分患者主观感觉改善，但客观测量没有显示相应改善。 | 效应:总体未证实LFS相较HFS具有显著的轴向或步态获益，与主要纳入HFS下存在FOG患者的60 Hz研究形成冲突。 | 局限:FOG不是入组标准，患者临床表型异质性较大。绝大多数使用80 Hz，只有6人使用60 Hz。药物On状态评估且未维持TEED。队列中还存在其他刺激靶点或既往治疗，例如PPN刺激、GPi电极等，不能视为 | 依据:fulltext
+[E_PMID_28529730_8] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为随机、双盲、前瞻性交叉研究） | 对象:14名接受双侧STN DBS的PD患者，多数患者有药物Off状态FOG病史，但测试时药物On状态下均未观察到FOG。 | n=14 | 条件:比较130 Hz HFS和60 Hz LFS，药物On状态，随机、双盲、前瞻性交叉设计，维持TEED。先分别优化两种频率的刺激触点，再使用各自最佳触点进行比较。LFS的最佳触点分布显著更偏腹侧。每个条 | 测量:UPDRS-III、轴向运动评分、运动不能评分、10米计时步行测试和Berg平衡量表。
+  发现:60 Hz相较130 Hz具有更低的UPDRS-III评分，轴向运动症状和运动不能评分显著改善，步行时间和步数减少，平衡有改善趋势。震颤和僵直评分没有显著差异。 | 效应:即使测试时没有FOG，具有FOG病史的患者仍可能在60 Hz下出现轴向及步态改善。 | 局限:测试时药物On状态下没有实际FOG，不能直接证明60 Hz减少了FOG发作。LFS与HFS使用的最佳触点位置显著不同，且LFS更偏腹侧，因此频率效应与触点位置效应难以完全分离。样本量小，评估主要为急性 | 依据:fulltext
+[E_PMID_28529730_9] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为随机条件交叉比较） | 对象:17名接受双侧STN DBS至少6个月的PD患者，其中8人为震颤主导型，9人为非震颤主导型。FOG状态没有明确报告。 | n=17 | 条件:药物Off状态下随机比较DBS Off、60 Hz LFS和至少130 Hz HFS。维持原有电压和脉宽，因此改变频率时没有维持TEED。每种条件评估约10分钟后测量。 | 测量:UPDRS-III、8米步行测试、力平台平衡测量及言语流畅性。
+  发现:60 Hz和HFS之间在步态、平衡和言语流畅性方面均没有急性显著差异。HFS在震颤主导型患者中对震颤的控制更好。 | 效应:没有支持一般STN DBS患者通过60 Hz获得额外步态或平衡获益的证据。 | 局限:FOG是否存在没有报告，也没有按照FOG表型进行分组。药物Off状态，TEED没有维持，且仅观察急性刺激效果。研究对象不是专门筛选的FOG患者。 | 依据:fulltext
+[E_PMID_28529730_10] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为临床条件比较研究） | 对象:19名接受双侧STN DBS的PD患者，没有预先规定FOG入组条件。 | n=19 | 条件:药物Off状态下比较DBS Off、60 Hz LFS和大于100 Hz HFS。各条件维持基线电压，因此改变频率时没有维持TEED。另有10人接受30 Hz和60 Hz高电压刺激评估。 | 测量:UPDRS-III、步态启动时步长和速度、步行速度及静态和动态姿势控制。
+  发现:60 Hz和大于100 Hz条件均较DBS Off显著改善UPDRS-III、步态启动时的步长和速度以及步行速度，但60 Hz与HFS之间没有显著差异。提高60 Hz电压也没有显示优于HFS的效果。 | 效应:表明在没有明确FOG选择条件的一般PD DBS人群中，60 Hz和HFS可能具有相似的步态改善效果，而非60 Hz特异性优势。 | 局限:FOG状态未知，没有FOG特异性分组或结局。综述认为研究中可能没有很多实际存在FOG的患者。TEED未维持，临床变化幅度较小。不能直接将结果用于HFS下明确出现FOG的患者。 | 依据:fulltext
+[E_PMID_28529730_11] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；综述转述的原研究为临床条件比较研究） | 对象:20名接受双侧STN DBS至少3个月的PD患者，存在步态问题，其中7人有平衡问题、7人有FOG、6人有慌张步态。 | n=20 | 条件:药物Off状态下比较130 Hz HFS和60 Hz LFS，改变频率时没有维持TEED。 | 测量:主要结局为GaitRite测量的步幅长度；次要结局包括SWS测试时间、步速、步频、单支撑及双支撑时间，以及UPDRS-III。
+  发现:改变刺激频率后，主要结局步幅长度及次要步态指标均没有显著差异。不过，1名在130 Hz下出现FOG的患者在60 Hz下步态仍然改善。综述指出，研究中的步态问题难以在评估时重复诱发。 | 效应:总体不支持60 Hz对混合步态障碍患者产生显著改善，但个别HFS下出现FOG的患者可能仍有60 Hz获益。 | 局限:没有维持TEED，低频刺激可能同时减少总能量输送。原研究指出步态主诉难以在测试中重复诱发，可能降低检测能力。不同步态障碍表型混合，FOG亚组样本较小。作者提出未维持TEED可能解释阴性结果。 | 依据:fulltext
+[E_PMID_28529730_12] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；跨研究明确观点汇总） | 对象:接受双侧STN DBS的PD患者，按照130 Hz HFS下是否实际出现FOG、是否仅有FOG病史以及是否没有预先规定FOG条件进行比较。 | n=未报告（跨研究汇总） | 条件:综合比较60 Hz或80 Hz LFS与130 Hz或更高频率HFS的研究，涉及药物On和Off状态、不同TEED设置以及不同评估范式。 | 测量:HFS下FOG是否实际出现、FOG病史、LFS后FOG变化及轴向症状变化。
+  发现:综述明确认为，HFS下实际观察到FOG，是预测LFS获益最一致的指标。几乎所有在HFS评估时存在FOG的研究对象，在60 Hz下均表现出改善，包括药物On和Off状态以及维持或不维持TEED的研究。仅 | 效应:提示FOG表型可能是刺激频率与临床反应之间的重要效应修饰因素：HFS下是否存在FOG，比单纯FOG病史更能解释不同研究结果。 | 局限:这是跨研究的定性总结，不是统一标准下的个体患者数据分析，也没有提供合并效应量。不同研究的FOG判定、药物状态、刺激频率、TEED、触点位置、样本量和研究设计均不同。Phibbs研究总体阴性，但其中一名 | 依据:fulltext
+[E_PMID_28529730_13] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；跨研究明确观点汇总） | 对象:接受双侧STN DBS且存在FOG或其他步态障碍的PD患者。 | n=未报告（跨研究汇总） | 条件:比较以60 Hz为主的LFS研究与以80 Hz为主的低至中频刺激研究，并与130 Hz HFS比较。 | 测量:FOG发作、步态表现及其他轴向症状。
+  发现:综述指出，所有报告FOG成功改善的LFS研究均使用60 Hz；主要使用80 Hz的研究则出现无显著获益或急性改善不能长期维持的结果。Sidiropoulos研究主要使用80 Hz，没有发现客观显著获益 | 效应:提示60 Hz可能比80 Hz更有利于FOG改善，但现有跨研究结果不能证明频率本身就是差异的唯一原因。 | 局限:60 Hz与80 Hz并非在相同患者中进行严格随机头对头比较。不同研究的FOG入组标准、FOG是否在测试时出现、TEED、触点位置、药物状态和随访时间均不同。因此频率差异与患者选择及研究设计差异存在混 | 依据:fulltext
+[E_PMID_28529730_14] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；对TEED相关研究的综合分析） | 对象:接受双侧STN DBS且在HFS下存在FOG的PD患者，重点涉及Xie等人对TEED调整与否进行比较的研究。 | n=未报告（综述未给出该TEED比较研究的具体样本量） | 条件:比较60 Hz与130 Hz刺激，并在双盲设计中考察改变频率时维持或不维持TEED的情况。 | 测量:FOG、轴向症状及其他临床运动结局。
+  发现:综述报告，Xie等人的后续双盲研究发现，无论调整TEED与否，LFS对FOG和轴向症状的有益作用均存在。作者据此认为，LFS的获益不完全是降低总刺激能量造成的。 | 效应:TEED是否维持并不能单独解释所有LFS研究的阳性和阴性结果。综述同时提出两种可能方向：降低能量可能减少非特异性刺激或邻近结构过度刺激；维持TEED时提高电压，也可能增强LFS对FOG的改善。 | 局限:综述没有在此处提供TEED比较研究的详细样本量和效应量。不同研究对电压、脉宽和频率的调整方式不同。作者明确指出，降低刺激能量与维持刺激能量可能产生相反方向的影响，现有资料不足以确定其具体贡献。 | 依据:fulltext
+[E_PMID_28529730_15] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；作者提出的机制假说，依据其引用的解剖、生理和刺激研究） | 对象:双侧STN DBS的PD患者；该机制是对FOG患者LFS反应的解释，并非独立临床队列的直接测量结果。 | n=未报告（机制假说） | 条件:作者提出，STN附近的脚桥核区域（PPNa）距离STN约5–8 mm，具有解剖和生理联系。STN DBS产生的电流可能扩散至PPNa；HFS可能对该区域产生不利影响，而60 Hz可能通过影响PPN下行 | 测量:综述讨论的依据包括PPN区域的刺激频率与步态反应，以及PPN下行投射刺激对运动的影响；没有报告在这些STN DBS临床患者中直接测量PPNa活动。
+  发现:作者提出电流扩散至PPNa是解释HFS相关FOG和60 Hz获益的一个主要机制。其引用的研究显示，PPNa区域10–25 Hz刺激可改善步态，60 Hz刺激PPN下行投射可产生推动运动的作用；80 H | 效应:该假说预测，LFS的步态获益可能与刺激电流是否影响PPNa及其下行通路有关，而不只是STN局部刺激频率的改变。60 Hz可能比80 Hz更容易产生有利的运动效应。 | 局限:这是作者提出的间接机制解释，并非本综述所讨论的STN DBS临床研究已经直接证实的机制。尚未明确哪些周围结构受到刺激以及其具体贡献。作者提出可利用定向DBS进一步研究电极、活动触点与PPNa及其通路的 | 依据:fulltext
+[E_PMID_28529730_16] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；作者提出的机制假说） | 对象:接受STN DBS的PD患者，尤其是HFS下存在FOG并可能对60 Hz LFS产生反应的患者。 | n=未报告（机制假说） | 条件:作者提出60 Hz LFS可能改变异常神经振荡，并增强促运动的gamma频段活动。 | 测量:异常神经振荡及促运动gamma频段活动；综述没有提供相应STN神经活动与FOG改善之间的直接定量相关结果。
+  发现:作者提出，60 Hz LFS可能覆盖或改变异常神经振荡，并增强促运动gamma频段活动，从而改善FOG和轴向症状。 | 效应:这是区别于PPNa电流扩散假说的另一种解释：FOG改善可能与STN相关神经振荡模式改变有关，而不一定完全依赖电流扩散至邻近PPN区域。 | 局限:综述将其作为可能机制提出，没有证明60 Hz改善FOG时确实发生了相应的gamma活动增强，也没有提供异常振荡变化与FOG改善的直接相关性或时间关系。作者指出目前机制尚不确定。 | 依据:fulltext
+[E_PMID_28529730_17] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；跨研究时间特征及机制观点汇总） | 对象:双侧STN DBS后出现FOG的PD患者，包括术后数年出现症状者以及术后早期出现刺激相关FOG者。 | n=未报告（跨研究汇总） | 条件:比较术后约4–5年出现FOG的慢性刺激病例，与新近植入STN DBS后立即出现FOG或术后数月出现FOG的病例。 | 测量:FOG发生时间、刺激激活后的症状变化及刺激电压变化。
+  发现:综述指出，多项研究中的FOG出现在双侧STN DBS术后约4–5年，但也有患者在新近植入的STN DBS激活常规HFS后立即出现FOG，另有患者在术后数月出现FOG。作者认为，疾病进展、慢性刺激作用或 | 效应:单纯用疾病进展解释所有FOG，或单纯用长期HFS解释所有FOG，都不能涵盖综述报告的全部时间特征。作者提出，非多巴胺能系统尤其胆碱能系统退化，以及慢性刺激过程中电压逐渐升高导致刺激体积增大，均可能参与 | 局限:这些解释主要来自不同研究的发病时间和临床表现比较，没有直接证明疾病进展、胆碱能退化或慢性刺激体积扩大与FOG之间的因果关系。不同患者的疾病病程、DBS植入时间和刺激参数存在差异。 | 依据:fulltext
+[E_PMID_28529730_18] PMID:28529730 (2017) Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Park
+  设计:review（mini-review；转述既有meta-analysis的明确结论） | 对象:接受STN DBS的PD患者；综述转述的meta-analysis并非专门针对HFS下出现FOG的患者。 | n=未报告（该mini-review未提供所引用meta-analysis的样本量及具体合并效应量） | 条件:比较基线药物Off状态与STN DBS开启、药物Off状态下的FOG表现，刺激条件主要为常规HFS。 | 测量:FOG临床表现。
+  发现:综述指出，既有meta-analysis发现，STN DBS开启、药物Off状态下的FOG相较基线药物Off状态显著改善，所涉及的刺激主要为常规HFS。 | 效应:说明常规HFS本身也可以改善部分患者的FOG，并非所有FOG都由HFS诱发或加重。LFS的潜在价值更可能体现在特定HFS下出现FOG或轴向症状恶化的患者群体。 | 局限:本mini-review没有提供所引用meta-analysis的具体样本量、合并效应量和异质性指标。该结论是STN DBS相对基线的总体效果，不能用于证明HFS对每位患者均有效，也不能解释为何部分患 | 依据:fulltext
+[E_PMID_28890315_1] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；自由活动状态下同步记录STN局部场电位（LFP）与步态运动学 | 对象:14例帕金森病（PD）患者，双侧植入STN-DBS电极；8例Freezers，6例Non-Freezers。Freezer根据临床病史和/或术前、实验任务中观察到的冻结行为分类 | n=SIP神经分析：5例Freezers、4例Non-Freezers，共18个STN记录（STNs） | 条件:所有任务均在停药、DBS关闭至少87分钟后进行。Stepping in Place（SIP）任务中无FOG的重复原地踏步。SIP在12/14例患者中于DBS系统激活前完成，另2例在初次程控后6个月完成 | 测量:双极STN-LFP相对β频段功率（13–30 Hz）；通过功率谱密度计算，使用40–70 Hz静息功率进行归一化
+  发现:无FOG的原地踏步期间，Freezers的STN相对β功率显著低于Non-Freezers，表现为运动期间静息β功率的衰减程度更大。两组步频和小腿角速度相近。 | 效应:Freezers与Non-Freezers的相对β功率差异：H(1)=7.17，P=0.036；Freezers运动期间静息β功率衰减更明显：F(1,15)=28.37，P<0.001。 | 局限:作者承认样本量较小。14例患者中有5例因神经信号分析条件不满足而被排除（3例存在间歇性震颤，2例后续访视未观察到可识别的β峰）。此外，SIP与FW/TBC任务的实施时间不同，可能受到长期DBS治疗影响 | 依据:fulltext
+[E_PMID_28890315_2] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；自由活动状态下STN-LFP非线性信号分析 | 对象:PD患者中的Freezers与Non-Freezers；SIP神经分析包括5例Freezers、4例Non-Freezers | n=18个STNs；9例患者 | 条件:停药、DBS关闭状态下，SIP任务中没有发生FOG的原地踏步阶段；与静息站立状态进行比较 | 测量:STN β频段（13–30 Hz）Sample Entropy（SampEn）；参数m=4，r=数据标准差的20%
+  发现:无FOG的原地踏步期间，Freezers的STN β频段Sample Entropy显著高于Non-Freezers，说明Freezers的β频段LFP时间序列具有更低的可预测性。该差异与Freeze | 效应:Freezers与Non-Freezers的β SampEn差异：H(1)=4.61，P=0.032。 | 局限:该结果仅在SIP任务中观察到，在FW无FOG期间未重复出现。作者指出，差异可能来自任务本身的不同（SIP没有向前运动和视觉流），也可能来自长期STN-DBS治疗的影响。SIP与FW并非在同一天完成，无 | 依据:fulltext
+[E_PMID_28890315_3] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；Freezer与Non-Freezer组间比较 | 对象:接受双侧STN-DBS的PD患者，按是否存在FOG分组 | n=总入组14例；该项阴性比较未单独报告具体有效样本量。神经分析排除5例 | 条件:停药、DBS关闭；比较静息站立、Forward Walking（FW）无FOG以及SIP/FW无FOG运动阶段 | 测量:STN-LFP α频段功率（8–12 Hz）、β频段功率（13–30 Hz）及两个频段的Sample Entropy
+  发现:静息状态下，Freezers与Non-Freezers之间没有α/β功率或Sample Entropy差异。FW无FOG期间，两组也没有β功率或β SampEn差异。α功率和α SampEn在无FOG | 效应:组间比较未发现统计学显著差异。 | 局限:阴性结果可能受到任务范式和治疗时间差异影响。尤其是SIP与FW的β SampEn组间差异不同，作者明确指出不能确定这是由于任务缺乏向前运动和视觉流，还是由于长期DBS治疗所致。另外，TBC任务中Fre | 依据:fulltext
+[E_PMID_28890315_4] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；Freezers内部FOG与非FOG时段的重复测量比较 | 对象:具有FOG的PD患者（Freezers） | n=8个STNs | 条件:停药、DBS关闭至少87分钟；比较发生FOG的步态时段与FW无FOG时段。FOG主要通过Turning and Barrier Course（TBC）诱发：8例Freezers中7例在TBC发生冻结， | 测量:STN-LFP β频段功率（13–30 Hz）
+  发现:Freezers在FOG期间的STN β功率显著低于FW无FOG期间的β功率，提示β功率下降不仅存在于Freezer与Non-Freezer的无FOG组间比较中，也与Freezer内部冻结事件的发生相 | 效应:F(1,51)=14.45，P<0.001。 | 局限:比较涉及不同步态任务和行为状态，不能完全区分FOG本身的影响与任务难度、转弯及障碍通行的影响。TBC和FW在任务结构上不同。研究仅包括小样本Freezers，且所有记录均在停药、DBS关闭条件下完成， | 依据:fulltext
+[E_PMID_28890315_5] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；Freezers内部FOG与非FOG时段的重复测量比较 | 对象:具有FOG的PD患者（Freezers） | n=8个STNs | 条件:停药、DBS关闭；比较FOG发生期间与FW无FOG期间的STN-LFP。FOG主要由转弯及穿过狭窄障碍通道的TBC任务诱发 | 测量:STN-LFP α频段Sample Entropy（8–12 Hz），使用非线性时间序列分析
+  发现:Freezers在FOG期间的α频段Sample Entropy显著高于无FOG的行走期间，表明FOG发生时STN α频段神经活动的时间可预测性降低。该变化与β功率下降同时出现，但研究没有发现β Sa | 效应:正文Results报告F(1,51)=7.67，P=0.005。摘要则报告P<0.001，两处显著性水平存在报告不一致。 | 局限:作者认为α频段活动可能与FOG相关，但没有证明其因果作用。TBC包含转弯、障碍通行等更复杂的运动要求，可能同时增加注意和执行功能需求，因此不能将α SampEn升高完全归因于冻结本身。正文与摘要的P值 | 依据:fulltext
+[E_PMID_28890315_6] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；Non-Freezers内部不同步态任务的重复测量比较 | 对象:没有表现出FOG的PD患者（Non-Freezers） | n=7个STNs | 条件:停药、DBS关闭；比较Turning and Barrier Course（TBC）与Forward Walking（FW）。两项任务在同一天完成，均在平均接受14.6个月STN-DBS治疗之后进行； | 测量:STN-LFP α频段功率（8–12 Hz）、β频段功率（13–30 Hz）及α/β Sample Entropy
+  发现:即使没有发生FOG，Non-Freezers在TBC期间的α功率和β功率也均低于FW期间。但α SampEn和β SampEn在两种任务之间没有显著差异。这表明STN频段功率变化并不完全特异于FOG， | 效应:α功率：F(1,48)=3.83，P<0.05；β功率：F(1,48)=5.84，P=0.02。α SampEn和β SampEn均无显著差异。 | 局限:这是区分FOG相关神经变化与一般任务效应的重要对照，但TBC与FW在转弯、障碍通行和认知运动要求方面并不相同。作者没有提供能够完全匹配两种任务运动要求的实验比较。 | 依据:fulltext
+[E_PMID_28890315_7] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；跨任务神经信号相关性分析 | 对象:PD患者整体，包括Freezers和Non-Freezers | n=全组；各任务相关分析未单独报告患者数 | 条件:停药、DBS关闭；分别分析Forward Walking（FW）、Stepping in Place（SIP）及Turning and Barrier Course（TBC）。FW和TBC的多次试验取 | 测量:STN-LFP相对β频段功率与β频段Sample Entropy之间的关系
+  发现:三个任务中均发现β功率与β SampEn之间存在显著负指数关系：β功率越低，β SampEn越高。该关系在没有FOG的FW和SIP中存在，也在包含FOG事件的TBC中存在。 | 效应:FW：F=42.07，调整R²=0.71，P<0.001；SIP：F=72.22，调整R²=0.82，P<0.001；TBC：F=78.36，调整R²=0.82，P<0.001。 | 局限:这是跨任务的功率与熵相关性，不是因果关系。由于β功率和β SampEn呈明显负相关，二者并非完全独立的观察指标。该相关关系本身不能确定熵增加是FOG的原因，还是运动障碍后的代偿反应。 | 依据:fulltext
+[E_PMID_28890315_8] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究；跨任务神经信号相关性分析 | 对象:PD患者整体，包括Freezers和Non-Freezers | n=全组；具体有效样本量未单独报告 | 条件:停药、DBS关闭；FW、SIP及TBC任务 | 测量:STN-LFP α频段功率（8–12 Hz）与α频段Sample Entropy之间的关系
+  发现:与β频段不同，α功率与α SampEn之间没有观察到相关关系。说明α频段功率和α频段时间复杂度的变化并不呈现β频段相同的负相关模式。 | 效应:未观察到显著相关关系。 | 局限:该结果不支持简单地用α功率变化解释α熵变化。研究没有进一步确定FOG期间α SampEn升高的具体神经生理来源。 | 依据:fulltext
+[E_PMID_28890315_9] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:本文讨论部分转述的既往原始研究；具体研究设计未在本文详细报告 | 对象:PD患者中的Freezers与Non-Freezers | n=本文未报告原研究样本量 | 条件:Toledo等（2014）：静息状态；STN高β频段22–35 Hz；研究在DBS电极植入后不久进行 | 测量:STN-LFP高β频段（22–35 Hz）功率
+  发现:Toledo等报告，自述为Freezer的PD患者在静息状态下具有高于Non-Freezers的高β功率。这与本研究未发现静息状态Freezer与Non-Freezer之间β功率差异的结果不同，也与本 | 效应:本文未提供该既往研究的具体效应量和P值。 | 局限:本文指出，既往研究在DBS电极植入后不久进行，微损伤效应可能影响观察结果。该研究使用22–35 Hz高β频段，而本研究使用13–30 Hz整体β频段，因此频段定义也可能是结果冲突的来源。本文未提供该研 | 依据:fulltext
+[E_PMID_28890315_10] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:本文讨论部分转述的既往原始研究；具体研究设计未在本文详细报告 | 对象:PD患者中的Freezers与Non-Freezers | n=本文未报告原研究样本量 | 条件:Singh等（2013）：行走期间；STN低β频段12–22 Hz；研究在DBS电极植入后不久进行 | 测量:STN-LFP低β频段（12–22 Hz）功率
+  发现:Singh等报告，Freezers在行走期间具有较高的低β功率。该结果与本研究SIP无FOG期间Freezers具有较低β功率的结果方向相反。 | 效应:本文未提供该既往研究的具体效应量和P值。 | 局限:本文指出，既往研究在DBS电极植入后不久完成，可能受到微损伤效应影响。此外，Singh等使用12–22 Hz低β频段，而本研究将13–30 Hz作为整体β频段分析，无法直接视为相同频段的比较。本文没有 | 依据:fulltext
+[E_PMID_28890315_11] PMID:28890315 (2017) Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's
+  设计:原始观察性研究中的机制假说与讨论；未进行机制干预验证 | 对象:PD患者，尤其是Freezers；机制解释基于Freezer与Non-Freezer的STN-LFP比较及Freezers内部FOG与非FOG比较 | n=机制假说不适用；基础研究包括14例入组患者，SIP神经分析9例患者，FOG比较8个STNs | 条件:作者根据停药、DBS关闭条件下的神经信号观察提出两种竞争性解释：无FOG踏步期间Freezers的β功率下降、β熵升高；FOG期间β功率进一步下降、α熵升高 | 测量:STN-LFP β功率、β SampEn、α SampEn，以及作者讨论的神经信息传递、感觉运动信息处理和运动抑制
+  发现:作者提出两种竞争性机制解释。第一种是神经元熵假说（entropy hypothesis）：STN熵增加代表神经活动的不可预测性增加，可能造成STN感觉运动信息输出处理错误及运动抑制；Freezers无 | 效应:两种机制均为作者提出的解释，没有直接因果效应量或机制干预结果。作者明确表示目前不能确定STN熵增加究竟是致病因素还是代偿反应。 | 局限:本研究的观察性设计不能区分熵增加是FOG的原因还是结果，也不能验证代偿假说。作者提出进一步分析从正常行走向FOG转换期间的STN-LFP变化；此外，作者指出应在同一天完成SIP和FW任务，以减少任务差 | 依据:fulltext
+[E_PMID_27766724_1] PMID:27766724 (2017) Effect of high-frequency subthalamic neurostimulation on gait and freezing of gait in Parkinson's di
+  设计:系统综述与Meta分析 | 对象:接受双侧STN-DBS治疗的帕金森病患者。 | n=16项研究提供UPDRS步态项目数据，6项研究提供FOG项目数据；患者总数未在摘要中报告。 | 条件:比较药物关闭/刺激开启（Med-Off/Stim-On）与基线药物关闭状态，并分析6至15个月、24至48个月和超过48个月的随访结果；同时考察药物开启/刺激开启状态。 | 测量:UPDRS步态项目29、FOG项目14及术前左旋多巴反应性。
+  发现:Med-Off/Stim-On相较基线Med-Off显著改善步态，UPDRS步态评分分别从2.43降至0.96、从2.53降至1.31、从2.56降至1.40，对应6至15个月、24至48个月和超过4 | 效应:药物关闭时，STN-DBS对步态和FOG具有持续改善作用；药物开启时，未发现显著的总体改善。术前左旋多巴反应性与刺激后步态改善有关。 | 局限:步态数据来自16项研究，FOG数据仅来自6项研究，摘要未报告总患者数及FOG项目的具体汇总效应量。结局主要依赖UPDRS单项评分，而不是统一的客观冻结事件测量。与2026年Meta分析报告的药物开启状 | 依据:abstract
+[E_PMID_30196050_1] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；被试内重复测量设计，随机呈现不同DBS刺激条件；本条为无DBS条件下Freezer与Non-Freezer组间比较。 | 对象:帕金森病患者，均接受双侧STN DBS电极植入。根据临床FOG病史和/或实验任务中是否出现冻结分为Freezers和Non-Freezers。 | n=总N=12（7男）；Freezers=8，Non-Freezers=4。SIP任务神经分析使用18个STN半球。 | 条件:所有实验均在OFF-medication状态进行；无DBS刺激；Stepping-in-place（SIP）任务；比较未发生FOG时的正常交替踏步阶段。 | 测量:植入式Activa PC+S记录双侧STN局部场电位（LFP）。提取13–30 Hz beta频段内个体化movement band，利用振幅包络超过基线的持续时间计算beta burst durat
+  发现:Freezers在SIP任务未发生FOG时，其movement-band beta burst持续时间显著长于Non-Freezers。 | 效应:Freezer组大于Non-Freezer组；H(1)=45.068，P<0.001。作者未报告标准化效应量。 | 局限:样本量小且组别不平衡（8比4）。SIP神经分析排除了1名在整个任务中持续冻结、无法完成任务的患者，以及4个受到刺激伪迹或心电伪迹影响的STN半球。Freezer分类同时依赖临床病史和任务中观察到的冻结 | 依据:fulltext
+[E_PMID_30196050_2] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；被试内重复测量设计；本条为无DBS条件下Freezer与Non-Freezer组间比较。 | 对象:双侧STN DBS植入的PD患者；Freezers=8，Non-Freezers=4。 | n=总N=12；论文报告FW任务DBS比较的神经分析包含20个STN半球，但该组间比较的具体有效样本数未单独列出。 | 条件:OFF-medication、无DBS；Forward Walking（FW）任务；比较没有发生FOG时的步行阶段。 | 测量:STN LFP个体化movement-band beta burst duration，依据振幅包络超过基线的时间计算。
+  发现:与SIP任务一致，FW任务未发生FOG时，Freezers的STN beta burst持续时间显著长于Non-Freezers。 | 效应:Freezer组大于Non-Freezer组；H(1)=69.564，P<0.001。 | 局限:样本量小、Freezer与Non-Freezer人数不平衡。FW任务中FOG诱发能力有限，只有1名Freezer在无DBS条件下出现一次冻结，该事件被排除在神经及运动学分析之外。因此本结果反映的是FO | 依据:fulltext
+[E_PMID_30196050_3] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；OFF-medication、无DBS条件下Freezer与Non-Freezer组间比较。 | 对象:双侧STN DBS植入的PD患者；Freezers=8，Non-Freezers=4。 | n=总N=12；静息状态下该项burst duration比较的实际STN数量未单独报告。 | 条件:OFF-medication、无DBS；静息状态（resting-state），与SIP和FW运动状态结果进行比较。 | 测量:STN LFP beta burst duration，采用个体化movement band相关的burst分析方法。
+  发现:静息状态下，Freezers与Non-Freezers之间的beta burst持续时间没有显著差异。组间差异主要出现在运动状态，而不是静息状态。 | 效应:组间无显著差异；作者未报告精确P值和效应量。 | 局限:静息状态与步行状态的神经活动谱不同，不能将静息态burst特征直接等同于运动期间的神经活动。静息状态比较的实际分析半球数未单独报告。作者强调需要采用状态特异性的movement band，而不是仅依赖 | 依据:fulltext
+[E_PMID_30196050_4] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；同一患者内冻结与非冻结阶段的比较。 | 对象:PD Freezers；均接受双侧STN DBS植入。 | n=5名在SIP任务中实际出现冻结的Freezers。 | 条件:OFF-medication、无DBS；SIP任务；在同一实验过程中比较发生FOG时与未发生FOG时的交替踏步阶段。 | 测量:同步记录STN LFP和步态运动学，计算movement-band beta burst duration。
+  发现:在发生FOG的Freezers中，冻结期间的STN beta burst持续时间显著长于同一任务中未发生冻结时的持续时间。 | 效应:FOG期间burst duration增加；F(1,815)=13.114，P<0.001。 | 局限:只有5名Freezers在SIP任务中出现可供比较的冻结。另有1名患者在所有SIP刺激条件下持续冻结，无法完成任务，被排除在神经和运动学分析之外。结果可能不代表所有FOG患者。方法学问题：统计自由度较 | 依据:fulltext
+[E_PMID_30196050_5] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；同一患者内冻结与非冻结阶段的比较。 | 对象:PD Freezers；双侧STN DBS植入。 | n=5名在SIP任务中出现冻结的Freezers。 | 条件:OFF-medication、无DBS；SIP任务；比较同一患者发生FOG和未发生FOG的踏步阶段。 | 测量:STN LFP movement-band beta burst power，计算单个burst的平均功率并进行相对功率归一化。
+  发现:与burst duration在FOG期间显著延长不同，FOG期间与非冻结期间的beta burst power没有显著差异。 | 效应:冻结与非冻结阶段的burst power无显著差异；论文未报告精确P值。 | 局限:FOG事件仅来自5名患者。该结果提示burst持续时间与burst功率并非等价指标，不能仅凭功率变化推断冻结状态变化。作者采用个体化movement band和相对功率归一化，测量定义与其他beta功 | 依据:fulltext
+[E_PMID_30196050_6] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；OFF-medication、无DBS条件下Freezer与Non-Freezer组间比较。 | 对象:双侧STN DBS植入的PD患者；Freezers=8，Non-Freezers=4。 | n=总N=12；SIP神经分析使用18个STN半球，FW神经分析报告20个STN半球。 | 条件:OFF-medication、无DBS；SIP和FW任务；比较未发生FOG的运动阶段。 | 测量:STN movement-band beta burst的相对平均功率（relative mean beta burst power）。
+  发现:SIP任务中，Freezers的相对平均beta burst功率显著高于Non-Freezers；但在FW任务中，两组平均burst power没有显著差异。 | 效应:SIP：H(1)=212.680，P<0.001；FW：组间无显著差异。功率差异具有任务依赖性。 | 局限:SIP和FW的结果不一致，提示任务范式可能影响功率差异的检出。样本量小且组别不平衡。该指标是相对burst power，不等同于传统频谱分析中的平均beta频段功率。论文讨论中还引用了既往研究报告的相 | 依据:fulltext
+[E_PMID_30196050_7] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；burst层级的相关性分析。 | 对象:全部12名接受双侧STN DBS植入的PD患者，包括Freezers和Non-Freezers。 | n=12名患者；参与相关性分析的单个burst数量未在该结果中明确报告。 | 条件:无DBS；分别分析静息状态、SIP和FW任务。 | 测量:Pearson相关分析；比较每个STN beta burst的持续时间与该burst的平均功率。
+  发现:burst持续时间与burst功率之间仅存在非常弱的关系，说明这两种动态神经指标在本研究中并不高度相关。 | 效应:静息状态R²=0.0625，P<0.001；SIP任务R²=0.108，P<0.001；FW任务R²=0.006，论文未在该处报告FW对应的P值。 | 局限:burst数量及患者内、半球内观测值的相关结构未在结果中详细说明。R²较低，说明不能用burst power直接替代burst duration。论文采用的功率归一化方法也限制了与其他功率研究的直接比 | 依据:fulltext
+[E_PMID_30196050_8] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；双侧STN神经活动与双下肢步态参数的相关性分析。 | 对象:双侧STN DBS植入的PD患者。 | n=10名具有可用双侧STN神经记录数据的患者。 | 条件:OFF-medication、无DBS；SIP任务；仅分析没有发生FOG的交替踏步阶段。 | 测量:计算左右STN平均beta burst duration之差，并与左右腿stride time之差进行相关分析。
+  发现:双侧STN之间的平均beta burst持续时间差异与双腿stride time差异呈强正相关。两侧STN活动不对称程度越大，双腿步态时间不对称程度也越大。 | 效应:Pearson r=0.853，P=0.002。 | 局限:相关分析仅有10名具有双侧有效记录的患者，不能证明STN活动不对称导致步态不对称。作者据此提出双侧半球共同影响轴向运动的解释，并推测burst较短的一侧可能对另一侧产生代偿作用，但本研究没有直接通过单 | 依据:fulltext
+[E_PMID_30196050_9] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；STN神经活动与对侧下肢步态参数的相关性分析。 | 对象:具有双侧STN LFP记录的PD患者。 | n=10名具有可用双侧STN数据的患者。 | 条件:OFF-medication、无DBS；SIP任务；未发生FOG的踏步阶段。 | 测量:分别比较每侧STN的平均beta burst duration与对侧下肢平均stride time。
+  发现:没有发现单侧STN平均burst duration与对侧腿平均stride time之间的相关性。该结果与双侧STN间burst duration差异和双腿stride time差异之间的强相关形成对 | 效应:无显著相关；论文未报告具体相关系数和P值。 | 局限:样本量仅10人。该结果不能排除其他形式的单侧或双侧神经调节作用。作者认为步态这一轴向运动任务可能受到双侧半球交互影响，但这一解释尚未通过因果性实验验证。 | 依据:fulltext
+[E_PMID_30196050_10] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；单个代表性患者的双侧神经活动与步态时间序列观察。 | 对象:一名具有FOG的PD患者（代表性Freezer）。 | n=N=1；代表性病例，非群体统计结果。 | 条件:SIP任务；无DBS；观察未发生冻结的交替踏步阶段以及随后步态恶化和冻结发生的时间过程。 | 测量:分别记录更受累侧（MA）和较少受累侧（LA）STN的beta burst duration，并与同步步态运动学比较。
+  发现:该患者未冻结阶段MA STN平均burst duration为0.85秒，LA STN为0.55秒，均高于Non-Freezer组平均值0.27±0.04秒。任务开始23秒后，LA STN的burst | 效应:描述性时间序列观察，没有群体统计检验。提示双侧STN burst持续时间变化可能与冻结发生前的步态恶化有关。 | 局限:仅为一名患者的代表性观察，不能推断普遍规律或因果关系。作者提出较短burst持续时间的一侧可能具有代偿作用，但该代偿机制没有通过独立实验验证。 | 依据:fulltext
+[E_PMID_30196050_11] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；随机顺序、被试内重复测量DBS实验。 | 对象:接受双侧STN DBS的PD患者；重点分析Freezer组。 | n=Freezers=8；SIP神经分析使用18个STN半球，FW神经分析使用20个STN半球。SIP中出现冻结的患者为5人。 | 条件:所有患者OFF-medication；随机呈现无刺激、60 Hz和140 Hz STN DBS条件；SIP分别分析冻结和非冻结阶段，FW分析非冻结步行阶段。受试者对刺激条件设盲。 | 测量:STN LFP movement-band beta burst duration；比较不同刺激频率下burst持续时间。
+  发现:Freezers在SIP冻结期间、SIP未冻结期间以及FW未冻结期间均表现出刺激条件对burst duration的显著影响。60 Hz和140 Hz DBS均显著缩短beta burst持续时间，但 | 效应:SIP冻结期间：F(2,3007)=24.27，P<0.001；SIP非冻结期间：F(2,2803)=22.247，P<0.001；FW非冻结期间：F(2,1202)=3.376，P=0.034。两种 | 局限:作者承认样本量小、Freezer与Non-Freezer组人数不平衡、设备伪迹导致部分半球数据排除。实验仅测试OFF-medication状态下的急性刺激效应。刺激关闭后的2分钟washout足以使L | 依据:fulltext
+[E_PMID_30196050_12] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；随机顺序、被试内重复测量DBS实验。 | 对象:接受双侧STN DBS的PD患者；Non-Freezer组。 | n=Non-Freezers=4。 | 条件:OFF-medication；随机呈现无刺激、60 Hz和140 Hz STN DBS；分别执行SIP和FW任务。 | 测量:STN movement-band beta burst duration。
+  发现:与Freezers不同，Non-Freezers在SIP和FW任务中均未出现60 Hz或140 Hz DBS引起的显著burst duration变化。 | 效应:无DBS、60 Hz和140 Hz条件之间均无显著差异。 | 局限:Non-Freezer组仅4人，统计检验能力有限。作者指出该组原有步态参数和burst duration已经相对正常，因此DBS未产生明显改变。该结果不能单独证明DBS具有严格的病理活动选择性。 | 依据:fulltext
+[E_PMID_30196050_13] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；随机顺序、被试内重复测量DBS实验。 | 对象:接受双侧STN DBS的PD Freezers。 | n=Freezers=8；SIP和FW神经记录分别纳入18和20个STN半球。 | 条件:OFF-medication；无DBS、60 Hz和140 Hz STN DBS；SIP无冻结阶段和FW任务。 | 测量:STN movement-band beta burst power，采用相对功率归一化。
+  发现:Freezers的burst power受到DBS显著调节。SIP无冻结期间，60 Hz和140 Hz均降低burst power，且60 Hz的降低幅度大于140 Hz。FW任务中，两种频率均降低b | 效应:SIP：F(2,2380)=245.361，P<0.001；60 Hz相对于140 Hz进一步降低功率，P<0.001。FW：F(2,1195)=136.211，P<0.001；两种频率均较无DBS条 | 局限:burst power在FOG发生与否之间没有显著差异，因此不能把DBS引起的功率降低直接解释为FOG特异性神经调节。60 Hz与140 Hz对功率的影响存在差异，但对burst duration的影 | 依据:fulltext
+[E_PMID_30196050_14] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；随机顺序、被试内重复测量DBS实验。 | 对象:接受双侧STN DBS的PD Non-Freezers。 | n=Non-Freezers=4。 | 条件:OFF-medication；无DBS、60 Hz和140 Hz STN DBS；SIP和FW任务。 | 测量:STN movement-band beta burst power及burst duration。
+  发现:Non-Freezers在SIP和FW任务中，60 Hz与140 Hz DBS均显著降低burst power，且140 Hz降低功率的程度大于60 Hz；但burst duration没有显著改变。 | 效应:SIP：F(2,2282)=89.353，P<0.001；FW：F(2,735)=17.615，P<0.001。两种频率均较无DBS降低功率，且140 Hz相较60 Hz进一步降低功率。 | 局限:Non-Freezer组仅4人。该结果显示功率下降并不必然伴随burst duration缩短，也不必然伴随步态改善。作者报告Non-Freezers的步态参数在DBS下总体没有明显改变，说明单独使用 | 依据:fulltext
+[E_PMID_30196050_15] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:原始人体实验研究；随机顺序、被试内重复测量DBS实验；冻结事件的描述性比较。 | 对象:接受双侧STN DBS的PD Freezers。 | n=Freezers=8。 | 条件:OFF-medication；SIP任务；比较无DBS、60 Hz和140 Hz STN DBS。 | 测量:冻结事件（freezing episodes，FEs）出现人数、冻结总时间及任务中冻结时间比例。
+  发现:无DBS时8名Freezers中有5人出现冻结；60 Hz和140 Hz DBS时分别有2人出现冻结。整个Freezer组冻结总时间从无DBS时的239.4秒，下降至60 Hz时的122秒和140 H | 效应:两种刺激条件下冻结人数和冻结总时间均呈描述性下降；60 Hz条件下冻结总时间低于140 Hz。表1报告的任务冻结比例分别为无DBS 29.37±38.27%、60 Hz 11.01±29.57%、14 | 局限:冻结事件数量较少，且只有5名患者在无DBS时出现SIP冻结。一个在所有SIP刺激条件下持续冻结的患者被排除。FW任务中只有一名患者在无DBS时出现一次冻结，该事件也被排除。因此，FOG改善的定量证据主 | 依据:fulltext
+[E_PMID_30196050_16] PMID:30196050 (2018) Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's diseas
+  设计:本文Discussion中引用的既往原始研究结果（Syrkin-Nikolau et al., 2017；属于二手转述，不是本文新采集的数据）。 | 对象:PD患者，Freezers与Non-Freezers。 | n=本文没有报告被引用研究的样本量。 | 条件:步态期间且没有发生FOG；本文讨论部分未进一步提供该既往研究的药物状态、DBS状态及具体步态任务条件。 | 测量:STN平均beta频段功率（average STN beta band power）和beta entropy。
+  发现:本文作者转述既往研究发现：在没有发生FOG的步态期间，Freezers的平均STN beta频段功率低于Non-Freezers，但beta entropy高于Non-Freezers。这与本文SIP | 效应:Freezers：平均STN beta band power较低，beta entropy较高；本文没有提供该既往研究的定量效应量。 | 局限:这是本文对既往研究的讨论性转述，不能替代对Syrkin-Nikolau et al. 2017原始全文的核对。本文没有在此处提供既往研究的样本量、具体药物和刺激条件、频带定义及功率计算细节。尤其需要区 | 依据:fulltext
+[E_PMID_30262859_1] PMID:30262859 (2018) Frequency-dependent effects of subthalamic deep brain stimulation on motor symptoms in Parkinson's d
+  设计:review/meta-analysis（随机效应模型；纳入10项前瞻性研究） | 对象:接受STN-DBS的帕金森病患者；FOG相关分析来自纳入研究中的FOG评估人群。 | n=总体纳入10项研究、132例患者；FOG分析的具体纳入人数未报告。FOG相关研究共4项，其中2项未进入相应合并分析。 | 条件:急性STN-DBS频率比较：低频刺激（LFS，<100 Hz，主要为60或80 Hz）与高频刺激（HFS，>100 Hz，主要为130或150 Hz）。各研究在刺激参数调整后10–180分钟进行评估。 | 测量:Stand-walk-sit（SWS）测试期间记录的冻结步态（FOG）次数；随机效应模型计算LFS与HFS之间的合并效应量。
+  发现:LFS较HFS能够更显著地减少SWS测试期间的FOG发作次数。合并效应量为−1.71（95% CI：−3.26至−0.16，p=0.03）。研究间异质性为中等（Q=1.96，I²=49%）。 | 效应:支持低频STN-DBS对FOG发作次数的改善效果优于高频STN-DBS。该结果反映的是不同刺激频率下的临床行为效应，而不是STN神经活动与FOG之间的直接相关性。 | 局限:作者指出，4项FOG相关研究中有2项被排除：其中一项在LFS后未观察到任何FOG，FOG评分为零，无法用于Meta分析；另一项虽然测量了FOG评分，但没有参与者实际出现FOG。FOG分析涉及的研究数量 | 依据:fulltext
+[E_PMID_30262859_2] PMID:30262859 (2018) Frequency-dependent effects of subthalamic deep brain stimulation on motor symptoms in Parkinson's d
+  设计:review/meta-analysis（随机效应模型；纳入10项前瞻性研究） | 对象:接受STN-DBS的帕金森病患者；FOG问卷分析来自具有FOG相关评估数据的研究人群。 | n=总体纳入10项研究、132例患者；FOG问卷合并分析的具体人数未报告。FOG相关研究共4项，其中2项未进入相应合并分析。 | 条件:急性低频STN-DBS（LFS，<100 Hz，主要为60或80 Hz）与高频STN-DBS（HFS，>100 Hz，主要为130或150 Hz）比较。各研究刺激参数调整后10–180分钟进行评估。F | 测量:Freezing of Gait Questionnaire（FOG-Q）评分；比较不同STN-DBS刺激频率下的FOG问卷得分。
+  发现:LFS干预后的FOG问卷评分显著低于HFS。合并效应量为−6.52（95% CI：−9.39至−3.66，p<0.00001）。研究间异质性较低（Q=0.08，I²=0%）。 | 效应:支持LFS较HFS更有利于改善患者报告的冻结步态症状。与SWS测试中FOG次数减少的结果方向一致，但这是问卷评分证据，并非神经生理指标。 | 局限:作者指出，4项FOG相关研究中有2项被排除：一项LFS后FOG评分为零，无法纳入Meta分析；另一项没有参与者实际发生FOG。FOG研究数量和样本量较小。虽然FOG问卷分析的统计异质性较低（I²=0% | 依据:fulltext
+[E_PMID_30262859_3] PMID:30262859 (2018) Frequency-dependent effects of subthalamic deep brain stimulation on motor symptoms in Parkinson's d
+  设计:review/meta-analysis（讨论部分转述既往STN局部场电位研究） | 对象:既往研究中接受术中STN局部场电位（LFP）记录的研究对象；本文未报告该神经生理研究的具体样本量及详细人口学特征。 | n=本文未报告该LFP研究的样本量。 | 条件:术中记录STN局部场电位，比较不同频率STN-DBS的影响。文章报告了等效刺激功率条件下HFS与LFS的比较，以及60 Hz和140 Hz刺激下的频段变化。 | 测量:STN局部场电位（LFP）中的alpha频段（8–12 Hz）、beta频段（12–30 Hz）及其子频段功率变化。
+  发现:文章转述Blumenfeld等人的研究结果：在等效功率下，HFS较LFS降低了STN基线alpha和beta频段振荡。具体而言，60 Hz刺激增强alpha/低beta功率（11–15 Hz），同时降 | 效应:提示STN-DBS频率能够差异性调节STN振荡活动，为频率依赖的运动症状改善提供神经生理学解释。但该证据不能直接证明STN alpha/beta振荡变化导致FOG改善，也不能确定FOG改善是否由特定b | 局限:这是作者在讨论中转述的既往LFP研究，而非本Meta分析直接收集的神经生理数据。本文没有提供该研究的样本量、患者FOG分组、药物状态、FOG任务范式及刺激参数调整细节。作者关于beta振荡与运动症状的 | 依据:fulltext
+[E_PMID_30262859_4] PMID:30262859 (2018) Frequency-dependent effects of subthalamic deep brain stimulation on motor symptoms in Parkinson's d
+  设计:review/meta-analysis（讨论部分转述既往动物研究，并提出机制假说） | 对象:既往动物实验中接受STN-DBS并记录脚桥核（PPN）神经活动的实验对象；本文未报告动物种属、样本量及具体实验细节。 | n=本文未报告。 | 条件:比较STN分别接受10 Hz、60 Hz和130 Hz刺激时的PPN神经活动。该证据属于动物实验，不能与人类PD患者的临床FOG结果直接等同。 | 测量:PPN神经元放电模式及其是否出现刺激诱导的节律 entrainment（同步/牵引）。
+  发现:作者转述Sitti等人的动物研究：与10 Hz和130 Hz STN-DBS相比，只有60 Hz STN-DBS产生了PPN神经放电模式的entrainment。作者据此提出，STN低频刺激可能通过电 | 效应:提供了一个不同于单纯STN beta振荡调节的潜在机制解释：低频STN-DBS可能通过影响PPN神经活动改善步态和FOG。需要区分的是，本文报告的直接神经生理发现是PPN放电模式变化，而不是STN自身 | 局限:证据来自作者转述的动物研究，本文没有报告样本量、动物模型及PPN神经记录的具体方法，也没有报告是否直接测量FOG行为。PPN entrainment与人类PD患者FOG改善之间尚未建立直接联系。作者明 | 依据:fulltext
+[E_PMID_30637270_1] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:前瞻性pilot safety and feasibility study；同一受试者内比较OFF DBS、HFS和VFS三种刺激条件。 | 对象:4名帕金森病患者，均接受双侧STN DBS，常规HFS已针对震颤、强直和运动迟缓优化，但仍存在持续性冻结步态（FOG）。3男1女，年龄40–69岁；其中2名患者UPDRS II第14项冻结步态评分为3 | n=4 | 条件:患者在停药、OFF DBS状态下接受基线评估，随后分别在HFS和VFS编程后1小时接受评估。使用10米Timed Up and Go（TUG）任务。HFS频率为130–185Hz（个体化设置）；VFS | 测量:UPDRS III运动评分、10米TUG时间、步态速度和TUG过程中冻结步态发作次数。未直接记录STN神经元放电、局部场电位或神经振荡。
+  发现:与HFS相比，VFS使步态速度平均增加45%（患者1、2、3），冻结步态发作次数平均减少58%（患者1、3、4）。具体而言，患者1的冻结次数由2次降至1次，患者3由4次降至1次，患者4由4次降至2次； | 效应:相对于HFS，VFS使步态速度增加45%，冻结发作次数减少58%。这是小样本描述性结果，没有统计学显著性检验。 | 局限:作者明确承认：样本量小，无法进行统计比较；患者未对刺激状态设盲；HFS与VFS之间的间隔较短，不能排除前一种刺激的残留效应；刺激模式的实施顺序未平衡；没有进行VFS长期随访。此外，FOG改善仅通过临床 | 依据:fulltext
+[E_PMID_30637270_2] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:原始研究引言中的既往临床研究证据概述；本文未提供被引研究的具体实验设计。 | 对象:接受STN DBS的帕金森病患者；本文未报告相关既往研究的具体样本特征及样本量。 | n=未报告 | 条件:比较不同STN DBS频率。低频刺激（LFS）为60–80Hz，高频刺激（HFS）为大于130Hz。作者指出，HFS通常用于控制震颤、强直和运动迟缓，而轴性症状包括步态障碍和FOG可能对HFS反应不佳 | 测量:临床轴性症状，包括步态障碍和冻结步态；不是直接的STN神经电活动测量。
+  发现:作者总结认为，STN低频刺激（60–80Hz）可能有助于改善轴性症状，包括FOG；常规高频刺激（大于130Hz）虽然用于改善帕金森病主要肢体运动症状，但对轴性症状可能无效，甚至可能加重。该结果提示ST | 效应:定性结果：LFS可能有利于FOG等轴性症状，而HFS对轴性症状的改善不足，部分情况下可能恶化。本文未提供具体效应量。 | 局限:这是作者对既往研究的背景性概述，不是本研究4名患者的独立实验结果。本文没有提供被引研究的样本量、药物状态、FOG评估范式、刺激持续时间和具体效应量，因此不能直接比较不同研究的效果大小。该结果反映的是刺 | 依据:fulltext
+[E_PMID_30637270_3] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:原始研究引言中的既往临床研究结果概述；引用Zibetti et al., 2016，本文未报告该研究的具体设计细节。 | 对象:接受STN DBS并尝试低频刺激的帕金森病患者；具体样本特征未在本文报告。 | n=未报告；作者报告约40%的患者需要重新调整刺激频率。 | 条件:患者接受STN低频刺激（LFS），随后因肢体运动症状控制不足而重新切换至高频刺激（HFS）。本文没有给出该研究的具体刺激参数、药物状态和随访时间。 | 测量:低频刺激期间肢体运动症状的临床控制情况，以及是否需要恢复HFS。
+  发现:作者报告，约40%接受STN低频刺激的患者需要切换回HFS，因为LFS不能有效控制帕金森病的肢体运动症状。这提示低频刺激可能存在改善轴性症状与维持肢体运动症状控制之间的临床权衡。 | 效应:约40%的LFS患者需要恢复HFS；这是作者转述的既往研究结果。 | 局限:本文没有提供该40%比例的具体分母、置信区间、患者分层标准、LFS治疗持续时间及药物状态。该发现反映的是肢体运动症状控制不足，并非FOG改善或恶化的直接证据。不能将其解释为40%的患者FOG对LFS无 | 依据:fulltext
+[E_PMID_30637270_4] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:原始研究讨论部分引用的既往神经振荡研究观点；引用Levy et al., 2002和Heimer et al., 2006，本文未提供相关研究的完整实验设计。 | 对象:帕金森病患者；具体样本量、临床分组和疾病特征未在本文报告。 | n=未报告 | 条件:作者在讨论中总结不同帕金森病运动症状与特定频段神经振荡之间的既往关联。FOG对应的振荡特征被描述为阵发性theta振荡增加。本文未明确交代这一FOG相关theta活动的具体记录脑区、药物状态、DBS刺 | 测量:神经振荡频段及其与临床运动症状的关系。作者报告FOG与5–7Hz theta振荡的阵发性增加相关。
+  发现:作者指出，帕金森病不同运动症状可能与不同频段的神经振荡有关：震颤与30–45Hz低gamma振荡相关；运动迟缓和强直与15–28Hz beta振荡相关；FOG与5–7Hz theta振荡的阵发性增加相 | 效应:定性关联：FOG与5–7Hz theta振荡阵发性增加相关。未报告相关强度、效应量或因果效应。 | 局限:作者明确承认，目前尚无充分数据证明每个特定频段与某一种临床症状之间存在明确、独立的对应关系。本文没有直接采集患者的神经电生理数据，也没有报告被引研究中FOG发生前后theta活动的具体变化、记录位置、 | 依据:fulltext
+[E_PMID_30637270_5] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:机制性讨论中的理论解释；非本研究直接实验结果。 | 对象:帕金森病患者；没有提供独立机制实验的样本信息。 | n=未报告 | 条件:讨论持续性STN高频刺激（HFS）对皮质-基底节-丘脑-皮质网络神经振荡同步状态的潜在影响。本文没有提供对应的具体药物状态、行为任务和电生理记录条件。 | 测量:皮质-基底节-丘脑-皮质网络内神经振荡器的病理性同步；本文没有直接测量该同步活动。
+  发现:作者提出，持续HFS作用于STN可能通过破坏皮质-基底节-丘脑-皮质网络中神经振荡器的病理性同步，产生治疗作用。这是一种解释STN DBS疗效的机制假说，但并非专门针对FOG提出的机制，也没有在本研究 | 效应:定性机制假说：持续STN HFS可能降低网络病理性同步；没有报告同步程度的定量变化或FOG相关效应量。 | 局限:作者明确指出DBS获益的确切机制尚不清楚。该观点是理论性解释，本文没有进行STN神经活动记录，也没有验证病理性同步变化是否与FOG发生或缓解直接相关。因此，不能据此判断FOG是否由STN病理性同步驱动 | 依据:fulltext
+[E_PMID_30637270_6] PMID:30637270 (2018) Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.
+  设计:机制性背景证据；作者转述既往in vitro模型研究，引用Grill et al., 2004。 | 对象:体外实验模型；具体实验对象和样本量未在本文报告。 | n=未报告 | 条件:体外模型中持续、连续应用高频刺激（HFS）；具体刺激频率、脉宽和实验持续时间未在本文交代。 | 测量:突触抑制（synaptic depression）及异常神经振荡模式的形成。
+  发现:作者指出，体外模型研究提示，持续应用HFS可能导致突触抑制并形成异常振荡模式。作者将这一现象作为采用变频刺激（VFS）的理论支持，即不同频率交替可能具有区别于持续单一频率刺激的神经生理效应。但本文没有 | 效应:定性机制发现：持续HFS与突触抑制及异常振荡模式形成相关；没有报告效应量。 | 局限:证据来自体外模型，不是帕金森病患者的STN神经记录或FOG行为实验。本文未提供实验模型、刺激参数和定量结果。该发现不能直接外推为人体STN中发生相同变化，也不能证明突触抑制是FOG产生的原因或VFS改 | 依据:fulltext
+[E_PMID_30100532_1] PMID:30100532 (2018) Decreasing subthalamic deep brain stimulation frequency reverses cognitive interference during gait 
+  设计:临床试验，随机、双盲交叉研究 | 对象:PD患者和健康对照，研究STN-DBS频率对步行启动及认知干扰下运动表现的影响。 | n=19名PD患者和20名健康对照；其中仅9名PD患者完成认知干扰任务。 | 条件:PD患者术前分别在多巴胺药物OFF和ON状态接受评估；术后在80 Hz和130 Hz STN-DBS条件下接受随机、双盲交叉评估。任务包括单纯步行启动和结合改良Stroop范式的认知干扰任务。 | 测量:步行启动各项参数及认知干扰条件下同时执行运动和认知任务的表现。
+  发现:在没有认知干扰时，多巴胺治疗、80 Hz STN-DBS和130 Hz STN-DBS均显著改善PD患者的步行启动表现。在认知干扰条件下，130 Hz STN-DBS使所有步行启动参数显著恶化；而术前 | 效应:存在刺激频率与认知任务之间的交互效应：130 Hz刺激在认知干扰条件下损害步行启动表现，80 Hz刺激未观察到同样的明显损害。该研究支持低频STN-DBS可能有利于FOG，但实际测量的是步行启动表现， | 局限:认知干扰实验仅有9名PD患者，实际分析样本较小。研究使用步行启动参数作为FOG相关表现的替代指标，并未直接报告冻结事件发生率或冻结持续时间。没有同步记录STN神经活动，因此不能确定频率相关行为差异是否 | 依据:abstract
+[E_PMID_30153383_1] PMID:30153383 (2018) Evidence for subtypes of freezing of gait in Parkinson's disease.
+  设计:问卷验证与数据驱动聚类研究 | 对象:患有冻结步态的帕金森病患者。 | n=41名PD伴FOG患者。 | 条件:使用Characterizing Freezing of Gait问卷识别容易诱发冻结的情境，并结合行为学步态评估。行为学冻结评估分别在多巴胺药物ON和OFF状态下进行。根据问卷反应采用数据驱动聚类方 | 测量:问卷冻结严重程度、实际冻结时间占比、问卷内部一致性，以及不同亚组在运动、焦虑和注意力方面的表现。
+  发现:研究识别出3种不同的FOG患者亚组。问卷严重程度评分与实际冻结时间百分比呈正相关（r=0.54），问卷内部一致性Cronbach's α=0.937。不同冻结模式与运动、焦虑及注意力障碍存在不同关联。 | 效应:FOG并非单一表现形式；不同患者的冻结模式与运动、焦虑及注意力特征有关。该结果提示患者分组标准和FOG表型可能影响不同研究对神经活动与冻结关系的观察，但本研究没有直接测量STN活动。 | 局限:样本仅41名FOG患者，亚组来自问卷数据驱动聚类。问卷及行为学评估不能直接证明不同亚组具有不同的STN神经活动机制。研究没有报告STN局部场电位、STN功能连接或DBS刺激效应，因此只能作为解释FOG | 依据:abstract
+[E_PMID_31275238_1] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:病例报告（讨论部分对既往研究的定性概述） | 对象:既往接受STN-DBS的帕金森病患者；本文未提供相关研究的具体人群特征 | n=未报告 | 条件:既往STN-DBS研究；区分左旋多巴反应性FOG与on-medication FOG；具体药物状态、刺激参数及任务范式未说明 | 测量:STN-DBS对不同类型FOG的临床改善效果
+  发现:作者指出，多项既往研究显示STN-DBS能够改善左旋多巴反应性FOG，但对on-medication FOG的改善作用有限。这提示FOG的药物反应性可能影响STN-DBS的治疗效果。 | 效应:定性结果：levodopa-responsive FOG可改善；on-medication FOG改善有限。无定量效应量。 | 局限:这是本文对既往研究的二手概述，并非本研究直接观察结果。未提供原始研究的样本量、刺激频率、药物状态、FOG分型标准及测量方法，不能据此直接比较不同研究的效应大小。 | 依据:fulltext
+[E_PMID_31275238_2] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:既往研究（本文讨论部分转述，原始研究设计未报告） | 对象:接受双侧STN电极植入的帕金森病患者；本文未提供原始研究的具体人群特征 | n=未报告 | 条件:比较左侧STN刺激、双侧STN刺激、右侧STN单独刺激及双侧刺激关闭；药物状态和具体刺激参数未在本文中说明 | 测量:FOG发生程度及hesitant gait（本文未说明具体量表或客观步态测量方法）
+  发现:既往研究报告，左侧刺激或双侧刺激均显著增加FOG，而右侧STN单独刺激或关闭双侧刺激时FOG减少，提示STN刺激对FOG的影响可能具有侧化特征。 | 效应:方向性效应：左侧或双侧刺激增加FOG；右侧单侧刺激或双侧关闭减少FOG。未提供具体效应量。 | 局限:本文仅转述既往研究结果，未提供原始研究样本量、药物状态、刺激频率、任务范式、电极定位及FOG评估方法。无法判断侧化效应是否受到电极位置或药物状态影响。 | 依据:fulltext
+[E_PMID_31275238_3] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:既往研究（本文讨论部分转述，原始研究设计未报告） | 对象:接受STN区域刺激的帕金森病患者；本文未提供原始研究的具体人群特征 | n=未报告 | 条件:on-medication状态下进行STN区域高频刺激；作者特别指出该区域包括STN、ZI（zona incerta）及Forel fields，而非严格局限于STN；具体刺激频率未报告 | 测量:on-medication akinesia、步态、rigidity及tremor
+  发现:既往研究报告，高频刺激STN区域可选择性加重on-medication状态下的运动不能和步态障碍，同时改善强直和震颤，提示刺激对不同运动症状可能产生方向相反的影响。 | 效应:定性效应：on-med akinesia和gait恶化；rigidity和tremor改善。未报告效应量。 | 局限:本文未提供原始研究样本量、精确刺激频率、电极位置、任务范式及测量工具。刺激区域同时包含STN、ZI和Forel fields，因此不能将该结果完全归因于STN局部神经活动。 | 依据:fulltext
+[E_PMID_31275238_4] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:病例报告 | 对象:65岁女性，13年病程的运动不能-强直型特发性帕金森病；术前仅有off-medication FOG | n=1 | 条件:STN-DBS术前；隔夜停用多巴胺能药物后，给予400 mg levodopa进行药物挑战；无DBS刺激 | 测量:MDS-UPDRS Part III总运动评分及item 3.11 FOG评分
+  发现:左旋多巴挑战后，患者总运动评分从55降至15，改善72%；FOG评分从4降至0，显示术前FOG对左旋多巴有明显反应。 | 效应:FOG评分：4→0；MDS-UPDRS Part III：55→15，改善72%。 | 局限:单病例，不能代表其他患者的FOG表型。FOG主要通过MDS-UPDRS item 3.11单项评分评估，未报告客观步态参数或冻结事件的定量分析。该结果是术前无刺激条件下的药物反应，不能直接推断术后药物 | 依据:fulltext
+[E_PMID_31275238_5] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:病例报告 | 对象:同一名65岁女性，13年病程的特发性帕金森病，接受双侧STN-DBS | n=1 | 条件:STN-DBS术后重复levodopa challenge；比较off-med/off-stim与off-med/on-stim。测试刺激参数：左STN C+;1-;3-，右STN C+;9-;11- | 测量:MDS-UPDRS item 3.11 FOG评分
+  发现:在不服用左旋多巴时，开启STN刺激后FOG评分为2，而关闭刺激时为4，提示STN刺激单独使用能够减轻该患者的off-medication FOG。 | 效应:off-med/off-stim：FOG评分4；off-med/on-stim：FOG评分2，下降2分。 | 局限:单病例，缺少独立患者重复验证。未报告随机化刺激顺序或盲法评估。结局主要是MDS-UPDRS单项评分，而非客观步态测量。该结果反映电刺激条件下的临床效应，不是STN神经元放电或局部场电位的直接测量。 | 依据:fulltext
+[E_PMID_31275238_6] PMID:31275238 (2019) New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease.
+  设计:病例报告 | 对象:同一名65岁女性，13年病程的特发性帕金森病，接受双侧STN-DBS | n=1 | 条件:STN-DBS术后重复levodopa challenge；关闭DBS刺激，在off-med/off-stim状态出现FOG后给予与术前相同剂量的400 mg levodopa，比较on-med/of | 测量:MDS-UPDRS item 3.11 FOG评分及轴性症状
+  发现:关闭DBS后患者出现FOG，给予levodopa后FOG逐渐改善，评分从4降至1，说明术后左旋多巴单独使用仍然能够改善该患者的FOG。 | 效应:off-med/off-stim至on-med/off-stim：FOG评分4→1，下降3分。 | 局限:单病例，无法确定该现象在其他患者中的普遍性。未报告客观步态运动学数据。该结果与STN刺激单独改善FOG的结果来自同一患者，不能作为独立样本证据。 | 依

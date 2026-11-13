@@ -1,0 +1,162 @@
+下面是检索得到的一批文献，只有题目、年份和文献类型。请做题目初筛：判断每篇是否**可能**和研究问题有关，值得再看摘要。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+规则：宁可多留，不要误删。只有题目明显和研究问题无关（例如完全不同的疾病、器官或技术领域，或者 FOG 指的不是冻结步态）才 drop；拿不准一律 keep。
+
+只输出一个 JSON：{"keep":["pid", ...]}，只列要保留的 pid（照抄），不列的就是 drop。
+
+【文献】
+PMID:29967649 | 2018 | research-article; Randomized Controlled  | Functional Improvements in Parkinson's Disease Following a Randomized Trial of Yoga.
+PMID:29969325 | 2019 | Journal Article | Effect of Genistein on the Transgenic Drosophila Model of Parkinson's Disease.
+PMID:29971984 | 2018 | Letter; brief-report; Case Reports | An Elderly Woman with Reversal of Clinical Presentation Mimicking Rapid-Onset Dystonia-Parkinsonism.
+PMID:29973489 | 2018 | research-article; Journal Article | Action Observation in People with Parkinson's Disease. A Motor⁻Cognitive Combined Approach for Motor Rehabilitation. A Preliminary Report.
+PMID:29977280 | 2018 | research-article; Randomized Controlled  | Effect of Group-Based Rehabilitation Combining Action Observation with Physiotherapy on Freezing of Gait in Parkinson's Disease.
+PMID:29982424 | 2018 | Research Support, Non-U.S. Gov't; resear | Localizing parkinsonism based on focal brain lesions.
+PMID:29984470 | 2017 | Research Support, Non-U.S. Gov't; resear | Imaging genetics in neurodevelopmental psychopathology.
+PMID:29985119 | 2018 | Journal Article | Freezing of gait in Parkinson's disease: functional neuroimaging studies of the frontal lobe.
+PMID:29989183 | 2018 | Research Support, Non-U.S. Gov't; resear | Chronic, intermittent treatment with a cannabinoid receptor agonist impairs recognition memory and brain network functional connectivity.
+PMID:29989488 | 2018 | Research Support, Non-U.S. Gov't; resear | The lysosomal membrane protein LAMP2A promotes autophagic flux and prevents SNCA-induced Parkinson disease-like symptoms in the Drosophila brain.
+PMID:29989948 | 2018 | Research Support, Non-U.S. Gov't; Journa | Modeling, Detecting, and Tracking Freezing of Gait in Parkinson Disease Using Inertial Sensors.
+PMID:29992990 | 2018 | Research Support, Non-U.S. Gov't; resear | Thiamine tetrahydrofurfuryl disulfide promotes voluntary activity through dopaminergic activation in the medial prefrontal cortex.
+PMID:29997561 | 2018 | research-article; Journal Article | Microstructural Changes in Patients With Parkinson's Disease Comorbid With REM Sleep Behaviour Disorder and Depressive Symptoms.
+PMID:30001784 | 2018 | research-article; Review; Journal Articl | Update on Sjögren Syndrome and Other Causes of Sicca in Older Adults.
+PMID:30002119 | 2018 | Research Support, Non-U.S. Gov't; resear | Deletion of Maged1 in mice abolishes locomotor and reinforcing effects of cocaine.
+PMID:30002617 | 2018 | review-article; Review; Journal Article | The Orexin/Receptor System: Molecular Mechanism and Therapeutic Potential for Neurological Diseases.
+PMID:30003674 | 2018 | Research Support, Non-U.S. Gov't; resear | Single neuron activity and c-Fos expression in the rat striatum following electrical stimulation of the peripheral vestibular system.
+PMID:30006367 | 2018 | research-article; Journal Article; Resea | Selective Role of RGS9-2 in Regulating Retrograde Synaptic Signaling of Indirect Pathway Medium Spiny Neurons in Dorsal Striatum.
+PMID:30013462 | 2018 | research-article; Journal Article | Altered Gene Expression in Prefrontal Cortex of a Fabry Disease Mouse Model.
+PMID:30019432 | 2018 | Research Support, Non-U.S. Gov't; resear | Changes of motor corticobulbar projections following different lesion types affecting the central nervous system in adult macaque monkeys.
+PMID:30029227 | 2018 | research-article; Journal Article; Resea | Human infants can generate vergence responses to retinal disparity by 5 to 10 weeks of age.
+PMID:30030590 | 2018 | research-article; Journal Article | Body-relative horizontal-vertical anisotropy in human representations of traveled distances.
+PMID:30035024 | 2018 | Research Support, Non-U.S. Gov't; resear | Subthalamic oscillatory activity and connectivity during gait in Parkinson's disease.
+PMID:30035155 | 2018 | review-article; Journal Article | Tau Imaging in Parkinsonism: What Have We Learned So Far?
+PMID:30038229 | 2020 | Research Support, Non-U.S. Gov't; resear | A dopaminergic mechanism of antipsychotic drug efficacy, failure, and failure reversal: the role of the dopamine transporter.
+PMID:30038277 | 2018 | Research Support, Non-U.S. Gov't; resear | Dopamine neurons create Pavlovian conditioned stimuli with circuit-defined motivational properties.
+PMID:30038582 | 2018 | research-article; Journal Article | Gait Dynamics in Parkinson's Disease: Short Gait Trials "Stitched" Together Provide Different Fractal Fluctuations Compared to Longer Trials.
+PMID:30042662 | 2018 | Research Support, Non-U.S. Gov't; review | Monoaminergic Neuromodulation of Sensory Processing.
+PMID:30042723 | 2018 | Journal Article; Case Reports; case-repo | Heterozygous PLA2G6 Mutation Leads to Iron Accumulation Within Basal Ganglia and Parkinson's Disease.
+PMID:30043140 | 2018 | research-article; Journal Article | Melatonin receptors limit dopamine reuptake by regulating dopamine transporter cell-surface exposure.
+PMID:30046416 | 2018 | Research Support, Non-U.S. Gov't; resear | Nonlinear Predictive Threshold Model for Real-Time Abnormal Gait Detection.
+PMID:30050482 | 2018 | research-article; Journal Article | Does the Clock Tick Slower or Faster in Parkinson's Disease? - Insights Gained From the Synchronized Tapping Task.
+PMID:30054531 | 2018 | Research Support, Non-U.S. Gov't; resear | An integrative omics approach to unravel toxicity mechanisms of environmental chemicals: effects of a formulated herbicide.
+PMID:30056575 | 2019 | research-article; Journal Article | Tyrosine Hydroxylase Inhibition in Substantia Nigra Decreases Movement Frequency.
+PMID:30056831 | 2018 | research-article; Journal Article; Resea | Mettl14 Is Essential for Epitranscriptomic Regulation of Striatal Function and Learning.
+PMID:30057672 | 2018 | research-article; Journal Article | Curcumin Effectively Rescued Parkinson's Disease-Like Phenotypes in a Novel Drosophila melanogaster Model with dUCH Knockdown.
+PMID:30059502 | 2018 | Research Support, Non-U.S. Gov't; resear | Ras-ERK-ETS inhibition alleviates neuronal mitochondrial dysfunction by reprogramming mitochondrial retrograde signaling.
+PMID:30061825 | 2018 | research-article; Journal Article | Vitamin K Deficiency Induced by Warfarin Is Associated With Cognitive and Behavioral Perturbations, and Alterations in Brain Sphingolipids in Rats.
+PMID:30064315 | 2018 | research-article; Review; Journal Articl | Deep brain stimulation for the treatment of disorders of consciousness and cognition in traumatic brain injury patients: a review.
+PMID:30065071 | 2018 | Research Support, Non-U.S. Gov't; review | Parkinson's disease: convergence on synaptic homeostasis.
+PMID:30065694 | 2018 | research-article; Journal Article | Adaptations to Postural Perturbations in Patients With Freezing of Gait.
+PMID:30066433 | 2018 | Research Support, Non-U.S. Gov't; resear | Variation at the TRIM11 locus modifies progressive supranuclear palsy phenotype.
+PMID:30070204 | 2018 | Clinical Trial; Research Support, Non-U. | Effects of spinal cord stimulation on postural control in Parkinson's disease patients with freezing of gait.
+PMID:30071007 | 2018 | research-article; Research Support, U.S. | Brain region-dependent gene networks associated with selective breeding for increased voluntary wheel-running behavior.
+PMID:30072879 | 2018 | research-article; Journal Article | Effects of Sub-Chronic MPTP Exposure on Behavioral and Cognitive Performance and the Microbiome of Wild-Type and mGlu8 Knockout Female and Male Mice.
+PMID:30077869 | 2018 | Research Support, Non-U.S. Gov't; Journa | Correlation between deep brain stimulation effects on freezing of gait and audio-spinal reflex.
+PMID:30078828 | 2018 | review-article; Review; Journal Article | Functions and dysfunctions of the basal ganglia in humans.
+PMID:30084953 | 2018 | Research Support, Non-U.S. Gov't; resear | GDAP2 mutations implicate susceptibility to cellular stress in a new form of cerebellar ataxia.
+PMID:30086388 | 2019 | Research Support, Non-U.S. Gov't; Journa | Spike discharge characteristic of the caudal mesencephalic reticular formation and pedunculopontine nucleus in MPTP-induced primate model of Parkinson disease.
+PMID:30086615 | 2018 | review-article; Journal Article | The Relationship between Saccades and Locomotion.
+PMID:30089025 | 2018 | Research Support, Non-U.S. Gov't; review | Self-motion processing in visual and entorhinal cortices: inputs, integration, and implications for position coding.
+PMID:30090059 | 2018 | Research Support, Non-U.S. Gov't; resear | Retrogradely Transportable Lentivirus Tracers for Mapping Spinal Cord Locomotor Circuits.
+PMID:30090659 | 2018 | review-article; Review; Journal Article | Superoxide Radical Dismutation as New Therapeutic Strategy in Parkinson's Disease.
+PMID:30093665 | 2018 | Research Support, Non-U.S. Gov't; resear | Role of VTA dopamine neurons and neuroligin 3 in sociability traits related to nonfamiliar conspecific interaction.
+PMID:30093877 | 2018 | review-article; Review; Journal Article | Disruption of Inferior Longitudinal Fasciculus Microstructure in Parkinson's Disease: A Systematic Review of Diffusion Tensor Imaging Studies.
+PMID:30097582 | 2018 | Research Support, Non-U.S. Gov't; resear | Biology and genome of a newly discovered sibling species of Caenorhabditis elegans.
+PMID:30100256 | 2018 | research-article; Journal Article; Resea | A Highly Sensitive A-Kinase Activity Reporter for Imaging Neuromodulatory Events in Awake Mice.
+PMID:30101816 | 2019 | research-article; Journal Article | Regional expression of tyrosinase in central catecholaminergic systems of colored mice.
+PMID:30102446 | 2019 | research-article; Journal Article | Inhibition of Experimental Tinnitus With High Frequency Stimulation of the Rat Medial Geniculate Body.
+PMID:30104344 | 2018 | Research Support, Non-U.S. Gov't; resear | S-Nitrosylation of Divalent Metal Transporter 1 Enhances Iron Uptake to Mediate Loss of Dopaminergic Neurons and Motoric Deficit.
+PMID:30104963 | 2018 | research-article; Journal Article; Resea | Hyperactive Response of Direct Pathway Striatal Projection Neurons to L-dopa and D1 Agonism in Freely Moving Parkinsonian Mice.
+PMID:30104997 | 2018 | systematic-review; Journal Article | Levodopa-Carbidopa Intestinal Gel in Parkinson's Disease: A Systematic Review and Meta-Analysis.
+PMID:30105161 | 2018 | research-article; Journal Article | What predicts falls in Parkinson disease?: Observations from the Parkinson's Foundation registry.
+PMID:30105299 | 2018 | research-article; Research Support, U.S. | Differentiation in Theta and Beta Electrocortical Activity between Visual and Physical Perturbations to Walking and Standing Balance.
+PMID:30108242 | 2018 | Research Support, Non-U.S. Gov't; resear | REST overexpression in mice causes deficits in spontaneous locomotion.
+PMID:30108543 | 2018 | research-article; Journal Article | Deep Brain Stimulation in Moroccan Patients With Parkinson's Disease: The Experience of Neurology Department of Rabat.
+PMID:30109983 | 2018 | Research Support, Non-U.S. Gov't; resear | Acute control of the sleep switch in Drosophila reveals a role for gap junctions in regulating behavioral responsiveness.
+PMID:30112142 | 2018 | research-article; Journal Article | Declining Orangutans Population in the Unprotected Forest of Batang Toru.
+PMID:30116027 | 2020 | Research Support, Non-U.S. Gov't; resear | Activation of the mGlu&lt;sub&gt;1&lt;/sub&gt; metabotropic glutamate receptor has antipsychotic-like effects and is required for efficacy of M&lt;sub&gt;4&lt;/sub&gt; muscarinic receptor allosteric modulators.
+PMID:30117805 | 2018 | Research Support, Non-U.S. Gov't; resear | A cell autonomous torsinA requirement for cholinergic neuron survival and motor control.
+PMID:30120410 | 2019 | research-article; Journal Article | Oxytocin attenuates phencyclidine hyperactivity and increases social interaction and nucleus accumben dopamine release in rats.
+PMID:30120419 | 2020 | Research Support, Non-U.S. Gov't; resear | Dendritic remodeling of D1 neurons by RhoA/Rho-kinase mediates depression-like behavior.
+PMID:30122379 | 2018 | Research Support, Non-U.S. Gov't; resear | Transforming Sensory Cues into Aversive Emotion via Septal-Habenular Pathway.
+PMID:30123690 | 2013 | other; Journal Article | Standard strategies for diagnosis and treatment of patients with newly diagnosed Parkinson disease: JAPAN.
+PMID:30129004 | 2018 | research-article; Journal Article | The Protective Effect of Repeated 1MeTIQ Administration on the Lactacystin-Induced Impairment of Dopamine Release and Decline in TH Level in the Rat Brain.
+PMID:30136397 | 2018 | Research Support, Non-U.S. Gov't; resear | Patient-reported and performance-based measures of walking in mild-moderate Parkinson's disease.
+PMID:30137524 | 2019 | Research Support, Non-U.S. Gov't; review | Nicotinic Acetylcholine Receptor Agonists for the Treatment of Alzheimer's Dementia: An Update.
+PMID:30138454 | 2018 | Research Support, Non-U.S. Gov't; resear | Charting the onset of Parkinson-like motor and non-motor symptoms in nonhuman primate model of Parkinson's disease.
+PMID:30138692 | 2018 | Research Support, N.I.H., Intramural; re | Genetic deletion of the dopamine D3 receptor increases vulnerability to heroin in mice.
+PMID:30143726 | 2018 | research-article; Journal Article; Resea | Assessment of the ability of open- and closed-loop cueing to improve turning and freezing in people with Parkinson's disease.
+PMID:30145631 | 2018 | review-article; Review; Journal Article | Diagnostic biomarkers for Parkinson's disease at a glance: where are we?
+PMID:30146163 | 2018 | Research Support, Non-U.S. Gov't; resear | The THO Complex Coordinates Transcripts for Synapse Development and Dopamine Neuron Survival.
+PMID:30146164 | 2018 | Research Support, Non-U.S. Gov't; resear | Anatomically Defined and Functionally Distinct Dorsal Raphe Serotonin Sub-systems.
+PMID:30146591 | 2019 | Comparative Study; research-article; Mul | Antidepressants for Depression, Apathy, and Gait Instability in Parkinson's Disease: A Multicenter Randomized Study.
+PMID:30149466 | 2018 | research-article; Journal Article | Objective Arm Swing Analysis in Early-Stage Parkinson's Disease Using an RGB-D Camera (Kinect®).
+PMID:30150924 | 2018 | research-article; Journal Article | Inhibition of the Prefrontal Projection to the Nucleus Accumbens Enhances Pain Sensitivity and Affect.
+PMID:30152889 | 2018 | Research Support, Non-U.S. Gov't; resear | Event-related deep brain stimulation of the subthalamic nucleus affects conflict processing.
+PMID:30154188 | 2018 | article-commentary; Comment; Research Su | Pink1/Parkin link inflammation, mitochondrial stress, and neurodegeneration.
+PMID:30154587 | 2018 | research-article; Journal Article | Effect of spinal kypho-orthosis to gait and forward flexion in Parkinson disease.
+PMID:30154990 | 2018 | Research Support, Non-U.S. Gov't; resear | Sensory Electrical Stimulation Cueing May Reduce Freezing of Gait Episodes in Parkinson's Disease.
+PMID:30159137 | 2018 | research-article; Journal Article | Crossing Virtual Doors: A New Method to Study Gait Impairments and Freezing of Gait in Parkinson's Disease.
+PMID:30165427 | 2018 | Research Support, Non-U.S. Gov't; resear | Balance control systems in Parkinson's disease and the impact of pedunculopontine area stimulation.
+PMID:30171090 | 2018 | Research Support, Non-U.S. Gov't; resear | The Role of Cholinergic Midbrain Neurons in Startle and Prepulse Inhibition.
+PMID:30171892 | 2019 | Research Support, Non-U.S. Gov't; resear | The pedunclopontine nucleus and Parkinson's disease.
+PMID:30173495 | 2018 | research-article; Journal Article | Neonatal influenza virus infection affects myelination in influenza-recovered mouse brain.
+PMID:30174648 | 2018 | research-article; Journal Article | Virtual Footprints Can Improve Walking Performance in People With Parkinson's Disease.
+PMID:30176987 | 2018 | Research Support, Non-U.S. Gov't; resear | Manipulating midbrain dopamine neurons and reward-related behaviors with light-controllable nicotinic acetylcholine receptors.
+PMID:30177751 | 2018 | Research Support, Non-U.S. Gov't; resear | Class II histone deacetylases require P/Q-type Ca2+ channels and CaMKII to maintain gamma oscillations in the pedunculopontine nucleus.
+PMID:30177811 | 2018 | research-article; Journal Article | Medial septum activation produces opposite effects on dopamine neuron activity in the ventral tegmental area and substantia nigra in MAM vs. normal rats.
+PMID:30179154 | 2018 | Research Support, Non-U.S. Gov't; resear | ErbB4 deletion in noradrenergic neurons in the locus coeruleus induces mania-like behavior via elevated catecholamines.
+PMID:30187821 | 2019 | Journal Article | Anxiety Independently Contributes to Severity of Freezing of Gait in People With Parkinson's Disease.
+PMID:30190599 | 2018 | Clinical Trial; Research Support, Non-U. | Lateral Ventricle Enlargement and Cortical Thinning in Idiopathic Normal-pressure Hydrocephalus Patients.
+PMID:30191176 | 2018 | Research Support, Non-U.S. Gov't; resear | Transparent arrays of bilayer-nanomesh microelectrodes for simultaneous electrophysiology and two-photon imaging in the brain.
+PMID:30191381 | 2019 | research-article; Journal Article | Ablation of Cytochrome c in Adult Forebrain Neurons Impairs Oxidative Phosphorylation Without Detectable Apoptosis.
+PMID:30192747 | 2018 | Research Support, Non-U.S. Gov't; resear | Nicotinamide-N-methyltransferase controls behavior, neurodegeneration and lifespan by regulating neuronal autophagy.
+PMID:30194047 | 2018 | Research Support, Non-U.S. Gov't; resear | Nigrostriatal pathology with reduced astrocytes in LRRK2 S910/S935 phosphorylation deficient knockin mice.
+PMID:30200997 | 2018 | research-article; Journal Article | α-Synuclein disrupts the anti-inflammatory role of Drd2 via interfering β-arrestin2-TAB1 interaction in astrocytes.
+PMID:30201210 | 2018 | Research Support, Non-U.S. Gov't; resear | The combination of the opioid glycopeptide MMP-2200 and a NMDA receptor antagonist reduced l-DOPA-induced dyskinesia and MMP-2200 by itself reduced dopamine receptor 2-like agonist-induced dyskinesia.
+PMID:30210305 | 2018 | Research Support, Non-U.S. Gov't; resear | Targeting VGLUT2 in Mature Dopamine Neurons Decreases Mesoaccumbal Glutamatergic Transmission and Identifies a Role for Glutamate Co-release in Synaptic Plasticity by Increasing Baseline AMPA/NMDA Ratio.
+PMID:30210425 | 2018 | research-article; Journal Article | Oscillatory Activity in the Cortex, Motor Thalamus and Nucleus Reticularis Thalami in Acute TTX and Chronic 6-OHDA Dopamine-Depleted Animals.
+PMID:30210436 | 2018 | review-article; Review; Journal Article | Deep Brain Stimulation and L-DOPA Therapy: Concepts of Action and Clinical Applications in Parkinson's Disease.
+PMID:30211293 | 2018 | research-article; Journal Article | Neuroimaging and neuropsychological assessment of freezing of gait in Parkinson's disease.
+PMID:30213733 | 2019 | Research Support, Non-U.S. Gov't; resear | Dichotomy between motor and cognitive functions of midbrain cholinergic neurons.
+PMID:30214398 | 2018 | review-article; Review; Journal Article | Microglial Implication in Parkinson's Disease: Loss of Beneficial Physiological Roles or Gain of Inflammatory Functions?
+PMID:30214987 | 2017 | letter; Journal Article | Different orthostatic hyperkinesias go "Thump".
+PMID:30215694 | 2018 | review-article; Review; Journal Article; | Modulation of Feeding and Associated Behaviors by Lateral Hypothalamic Circuits.
+PMID:30217235 | 2018 | Clinical Trial Protocol; research-articl | Acceptability to patients, carers and clinicians of an mHealth platform for the management of Parkinson's disease (PD_Manager): study protocol for a pilot randomised controlled trial.
+PMID:30223709 | 2018 | Research Support, Non-U.S. Gov't; resear | Freezing of Gait Boot Camp: feasibility, safety and preliminary efficacy of a community-based group intervention.
+PMID:30225168 | 2018 | research-article; Journal Article | Autonomic dysfunction and white matter microstructural changes in drug-naïve patients with Parkinson's disease.
+PMID:30226827 | 2018 | Research Support, Non-U.S. Gov't; resear | Regularizing firing patterns of rat subthalamic neurons ameliorates parkinsonian motor deficits.
+PMID:30228121 | 2018 | Research Support, Non-U.S. Gov't; resear | GIRK currents in VTA dopamine neurons control the sensitivity of mice to cocaine-induced locomotor sensitization.
+PMID:30232246 | 2018 | Research Support, Non-U.S. Gov't; resear | Smartphone motor testing to distinguish idiopathic REM sleep behavior disorder, controls, and PD.
+PMID:30232364 | 2018 | Research Support, Non-U.S. Gov't; resear | Time course of focused ultrasound effects on β-amyloid plaque pathology in the TgCRND8 mouse model of Alzheimer's disease.
+PMID:30232665 | 2018 | Journal Article | Which cognitive dual-task walking causes most interference on the Timed Up and Go test in Parkinson's disease: a controlled study.
+PMID:30235871 | 2018 | research-article; Journal Article | Deep Brain Stimulation Modified Autism-Like Deficits via the Serotonin System in a Valproic Acid-Induced Rat Model.
+PMID:30236826 | 2019 | Research Support, Non-U.S. Gov't; Journa | Depressive symptoms may increase the risk of the future development of freezing of gait in patients with Parkinson's disease: Findings from a 5-year prospective study.
+PMID:30237404 | 2018 | Letter; Comment | Brain Fogginess and SIBO: A Link or Just a Mirage?
+PMID:30238668 | 2018 | Research Support, Non-U.S. Gov't; resear | Secretome of Undifferentiated Neural Progenitor Cells Induces Histological and Motor Improvements in a Rat Model of Parkinson's Disease.
+PMID:30241951 | 2019 | Research Support, Non-U.S. Gov't; Random | Simultaneous low-frequency deep brain stimulation of the substantia nigra pars reticulata and high-frequency stimulation of the subthalamic nucleus to treat levodopa unresponsive freezing of gait in Parkinson's disease: A pilot study.
+PMID:30242292 | 2018 | Research Support, Non-U.S. Gov't; resear | Learning deficits in rats overexpressing the dopamine transporter.
+PMID:30245616 | 2018 | review-article; Review; Journal Article | Totally Implantable Bidirectional Neural Prostheses: A Flexible Platform for Innovation in Neuromodulation.
+PMID:30245949 | 2018 | review-article; Review; Journal Article | The Effect of Physical Activity in Parkinson's Disease: A Mini-Review.
+PMID:30249601 | 2019 | Research Support, Non-U.S. Gov't; review | Electromagnetic Regulation of Cell Activity.
+PMID:30253665 | 2018 | review-article; Journal Article | Drug discovery and development: Biomarkers of neurotoxicity and neurodegeneration.
+PMID:30254564 | 2018 | research-article; Journal Article | Effects of Galvanic Vestibular Stimulation on Upper and Lower Extremities Motor Symptoms in Parkinson's Disease.
+PMID:30254580 | 2018 | review-article; Review; Journal Article | Optimizing Clinical Assessments in Parkinson's Disease Through the Use of Wearable Sensors and Data Driven Modeling.
+PMID:30255936 | 2018 | Research Support, Non-U.S. Gov't; resear | Regional vesicular acetylcholine transporter distribution in human brain: A [18 F]fluoroethoxybenzovesamicol positron emission tomography study.
+PMID:30258530 | 2018 | Editorial | Potential of PDE10A Inhibitors as Treatment for Schizophrenia and Other Neurological Disorders.
+PMID:30259800 | 2019 | Research Support, Non-U.S. Gov't; resear | Longitudinal In Vivo Diffusion Magnetic Resonance Imaging Remote from the Lesion Site in Rat Spinal Cord Injury.
+PMID:30262792 | 2018 | review-article; Review; Journal Article | Neuroprotective Role of Phytochemicals.
+PMID:30265211 | 2018 | Meta-Analysis; Systematic Review; Journa | Exercise Guidelines for Gait Function in Parkinson's Disease: A Systematic Review and Meta-analysis.
+PMID:30266741 | 2018 | Research Support, Non-U.S. Gov't; resear | Dynamics and Functional Role of Dopaminergic Neurons in the Ventral Tegmental Area during Itch Processing.
+PMID:30266886 | 2018 | Clinical Trial, Phase III; Research Supp | Safety and efficacy of venoplasty in MS: A randomized, double-blind, sham-controlled phase II trial.
+PMID:30267310 | 2019 | research-article; Journal Article | Small Molecule Modifiers of In Vitro Manganese Transport Alter Toxicity In Vivo.
+PMID:30269865 | 2019 | Research Support, Non-U.S. Gov't; resear | Noradrenergic Transmission at Alpha1-Adrenergic Receptors in the Ventral Periaqueductal Gray Modulates Arousal.
+PMID:30272275 | 2018 | research-article; Journal Article | Proanthocyanidins exert a neuroprotective effect via ROS/JNK signaling in MPTP‑induced Parkinson's disease models in vitro and in vivo.
+PMID:30274340 | 2018 | research-article; Validation Study; Jour | A Validation Study of Freezing of Gait (FoG) Detection and Machine-Learning-Based FoG Prediction Using Estimated Gait Characteristics with a Wearable Accelerometer.
+PMID:30279002 | 2018 | research-article; Review; Journal Articl | Machine learning in human movement biomechanics: Best practices, common pitfalls, and new opportunities.
+PMID:30279731 | 2018 | research-article; Journal Article | Dopaminergic precursors differentiated from human blood-derived induced neural stem cells improve symptoms of a mouse Parkinson's disease model.
+PMID:30280416 | 2018 | review-article; Review; Journal Article; | Imaging of Motor Cortex Physiology in Parkinson's Disease.

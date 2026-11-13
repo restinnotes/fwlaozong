@@ -1,0 +1,58 @@
+# Kinematic adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson’s disease
+
+## Dear Editor,
+
+Gait impairment and freezing of gait (GI&FOG) are debilitating symptoms of Parkinson’s disease (PD), which increase the risk of falls, injury, and morbidity, and may be refractory to medication [1]. Open loop deep brain stimulation (olDBS) improves GI&FOG [2,3], but the observed improvement may lose efficacy over time. The waning of efficacy over time and the disabling side effects of combining olDBS with medication have highlighted the potential of demand-based or adaptive DBS (aDBS), where DBS intensity is modulated in response to a biomarker that is related to the pathological motor behavior targeted. Previous studies have successfully implemented aDBS control policy algorithms using relevant neural biomarkers such as the local field potential (LFP) beta band power for aDBS in PD [4–6]. However, it is also possible to perform kinematic aDBS (KaDBS) using representative kinematic biomarkers, such as measures of tremor from wearable inertial measurement units (IMUs) [7,8]. We have demonstrated that IMUs on the lower legs (shanks) provide high-fidelity measures of GI&FOG, which can serve as real-time inputs to a computerized algorithm to automatically detect gait deterioration and freezing events (FEs) [9]. Using a benchtop system, we established that gait arrhythmicity (the coefficient of variation (100*standard deviation/mean) of stride time) was a useable kinematic control variable for KaDBS for GI&FOG. In this study, we demonstrate for the first time the feasibility, safety, tolerability, and efficacy of KaDBS for GI&FOG in a participant with PD and compare its efficacy to off DBS, ON olDBS, and ON random intermittent (iol)DBS.
+
+One female participant (age: 71.7 years; pre-operative off medication MDS-UPDRS-III score: 42; disease duration: 17.4 years; akinetic-rigid subtype; see Supplemental Materials for additional information) with PD and GI&FOG was implanted with bilateral subthalamic nucleus (STN) DBS leads (Medtronic model 3389, Medtronic PLC) and an investigative neurostimulator (Summit® RC + S, Medtronic PLC, FDA IDE approved). The Stanford Institutional Review Board approved all procedures related to the study and the participant gave informed written consent.
+
+The participant was withdrawn from short-acting PD medication at least 12 hours before testing and was not taking long-acting PD medication. The participant completed approximately 90 seconds of a harnessed stepping in place (SIP) task on dual force plates during four different stimulation conditions: OFF DBS (OFF), ON olDBS, ON iolDBS, and ON KaDBS. The ON DBS conditions were randomized, and the participant was blinded to the setting. All stimulation conditions were performed at 140 Hz. The iolDBS condition involved modulating stimulation intensity randomly. A KaDBS controller was tuned during a calibration day using a 30 second calibration run of SIP on KaDBS (see Calibration Procedure in Supplementary Materials). To estimate the total electrical energy delivered (TEED) across conditions, the olDBS intensity was calculated from the average intensity of the KaDBS calibration run, and the iolDBS condition intensity pattern was randomized from the KaDBS calibration run output stimulation to create a similar stimulation pattern to KaDBS that was unaffected by arrhythmicity. During KaDBS, stimulation intensity was modulated in response to gait arrhythmicity, calculated from real-time algorithmic processing of shank IMU kinematic data (Fig. 1A, [9]). Stimulation intensity was adjusted at a tolerable ramp rate within a therapeutic window, which provided safe and tolerable symptom relief without side effects. The percent time freezing and average arrhythmicity was computed post hoc to compare performance across each condition [10]. TEED was calculated for each stimulation condition. For more detailed methods, see Supplementary Materials.
+
+[fig F1] Closed-loop kinematic adaptive deep brain stimulation.(A) Inertial measurement unit (IMU) sensor data streamed to PC-in-the-loop where Java Gait Processing Application calculates arrhythmicity. The Gait Processing Application communicates with the Summit Application to change the stimulation state on the Summit INS according to the stimulation map. Adapted from “Demonstration of Kinematic-Based Closed-loop Deep brain Stimulation for Mitigating Freezing of Gait in People with Parkinson’s Disease” by J. O’Day et al., 2020, IEEE [9]. (B) DBS lead reconstructions in the STN with active contacts highlighted in red. (C) Real-time arrhythmicity over the KaDBS trial with the threshold shown in red. (D) Stimulation decision based on the measured arrhythmicity in reference to the threshold. (E) Modulated stimulation intensity for bilateral STN in response to stimulation decisions. Stimulation was restricted to the therapeutic window. (F–I) Vertical ground reaction forces for the participant (F) OFF stimulation, (G) on open-loop DBS, (H) random intermittent open-loop DBS, and (I) Kinematic adaptive DBS. Freezing events (FE) detected by automated algorithm and are indicated by the vertical green lines and gray shading. (J) Average arrhythmicity and (K) Percent time freezing across the four conditions. (For interpretation of the references to colour in this figure legend, the reader is referred to the Web version of this article.)
+
+The KaDBS controller responded as predicted to real-time inputs of gait arrhythmicity with no adverse events in a participant with PD, using the fully implanted Summit® RC + S neurostimulator (Fig. 1C–E). The participant was able to maintain rhythmic walking for longer on the KaDBS controller compared to the other conditions, and the KaDBS controller responded to increased arrhythmicity. During the OFF condition, the participant experienced a freezing event (FE) within the first 18 seconds of stepping (Fig. 1F). The FE lasted 72.4 seconds. The participant was able to initiate stepping again, although with greater arrhythmicity. Three FEs were detected across the olDBS trial (Fig. 1G), each lasting <1.1 second. Four FEs were detected during the iolDBS condition: the shortest lasted <1 second and the longest lasted 3.1 seconds, (Fig. 1H). KaDBS was the only condition, during which there were no FEs (Fig. 1I). During olDBS and iolDBS there was a longer duration of alternating stepping before the first FE, however the stepping was arrhythmic. Stepping was observed to be more rhythmic on KaDBS for over 70 seconds. Average arrhythmicity was lower during all ON-DBS conditions compared to OFF and was lowest on KaDBS. Arrhythmicity was 227.4% for OFF, 42.9% for olDBS, 43.2% for iolDBS, and 23.4% for KaDBS (Fig. 1J). The percent time freezing was 76.1% for OFF, 7.4% for olDBS, 14.9% for iolDBS, and 0% for KaDBS (Fig. 1K). TEED was slightly higher during the KaDBS trial than during any other ON DBS condition (see supplementary data
+Table S5). KaDBS was the only condition during which the participant perceived that her tremor, rigidity, and imbalance improved, and resulted in the greatest improvement in her FOG in a participant-blinded questionnaire (see Supplementary Materials).
+
+This is the first demonstration of the feasibility, safety, and tolerability of KaDBS for GI&FOG in PD using a real-time measure of gait arrhythmicity as a kinematic input. KaDBS was both well-tolerated by the participant and superior to olDBS, iolDBS, and no DBS (OFF) in attenuating GI&FOG. ON DBS, the participant experienced FEs in both the olDBS and iolDBS conditions but not during KaDBS; arrhythmicity was lowest during KaDBS. Arrhythmicity was observed to worsen over the course of the trials; however, stepping regularity appeared to be better maintained during the KaDBS compared to OFF, olDBS and iolDBS. However, a limitation of this study was that TEED was highest during the KaDBS trial, which may have contributed to symptom improvement. These findings support further research in a larger cohort of individuals using adaptive DBS algorithms based on relevant kinematic biomarkers for the treatment of GI&FOG.
+
+## Supplementary Material
+
+## Acknowledgements
+
+The authors would like to thank the participant in the study as well as members of the Human Motor Control and Neuromodulation Lab. This work was supported by NINDS UH3 NS107709, Robert and Ruth Halperin Foundation, Helen M. Cahill Award for Research in Parkinson’s Disease, the Stanford Bio-X Graduate Fellowship, and Medtronic PLC, who provided the device used in this study but no additional financial support.
+
+## Supplementary data
+
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.brs.2023.07.003.
+
+## Footnotes
+
+## Contributor Information
+
+Jillian A. Melbourne, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA
+
+Yasmine M. Kehnemouyi, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA; Department of Bioengineering, Stanford University, Stanford, CA, USA
+
+Johanna J. O’Day, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA; Department of Bioengineering, Stanford University, Stanford, CA, USA
+
+Kevin B. Wilkins, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA
+
+Aryaman S. Gala, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA
+
+Matthew N. Petrucci, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA; Department of Bioengineering, Stanford University, Stanford, CA, USA
+
+Emilia F. Lambert, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA
+
+Hannah J. Dorris, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA; Department of Biomedical Data Science, Dartmouth University, Hanover, NH, USA
+
+Cameron Diep, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA.
+
+Jeffrey A. Herron, Department of Neurological Surgery, University of Washington, Seattle, WA, USA
+
+Helen M. Bronte-Stewart, Department of Neurology and Neurological Sciences, Stanford University, Stanford, CA, USA; Department of Neurosurgery, Stanford University, Stanford, CA, USA.
+
+## References
+
+## Associated Data
+
+### Supplementary Materials

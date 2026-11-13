@@ -1,0 +1,82 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:42297979",
+      "design": "Clinical study（摘要未说明具体研究设计）",
+      "population": "帕金森病患者；具体患者特征及分组标准未报告",
+      "n": "摘要未报告",
+      "condition": "基于丘脑底核（STN）神经动态实时解码患者在不同运动波动状态下的运动活动，并利用活动依赖性自适应DBS调整刺激参数。摘要未说明具体药物状态、步行任务范式及刺激频率。",
+      "measure": "STN neural dynamics；运动活动实时解码；运动功能及步态障碍改善情况。",
+      "finding": "研究报告STN神经动态能够支持对不同运动状态下持续运动活动的实时解码，并据此实施活动依赖性DBS。活动依赖性刺激改善了运动功能障碍，同时保留了对典型运动症状的治疗效果。",
+      "effect": "报告了STN神经活动与运动活动状态之间的可解码关系，以及活动依赖性DBS对运动障碍的改善作用。但摘要没有报告FOG发作检测准确率、冻结相关神经信号特征或FOG严重程度变化，不能据此认定发现了STN特异性FOG神经标志物。",
+      "limitations": "摘要未报告样本量、具体神经信号频段、FOG患者分组、FOG诱发任务及FOG专门结局指标。虽然明确涉及STN神经动态，但研究结果针对一般运动活动解码，而非FOG特异性神经活动。无法判断STN信号对FOG与其他步态状态是否具有区分能力。",
+      "quote": "Here we expose physiological principles that enable real-time decoding of ongoing locomotor activities across motor fluctuations from the neural dynamics of the subthalamic nucleus.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42211297",
+      "design": "回顾性研究；多模态机器学习模型开发与内部验证，采用5折嵌套交叉验证。",
+      "population": "接受双侧STN-DBS手术的帕金森病患者。",
+      "n": "134",
+      "condition": "利用术前临床量表、基于体素的形态学（VBM）、立体定向电极定位及术前MRI影像组学特征，预测STN-DBS术后FOGQ评分恶化。研究关注术前预测而非STN实时神经电活动。",
+      "measure": "冻结步态问卷（FOGQ）术后恶化；临床量表、结构神经影像、Lead-DBS电极定位、MRI影像组学；LightGBM及其他机器学习模型；ROC曲线、AUC和SHAP特征解释。",
+      "finding": "LightGBM模型在预测STN-DBS术后FOGQ恶化方面表现最佳，AUC达到0.917。研究表明，整合临床、结构影像和影像组学特征能够区分术后FOGQ恶化与未恶化患者。",
+      "effect": "术前多模态特征对术后FOGQ恶化具有较高的预测判别能力（AUC=0.917）。该结果提示STN-DBS术后FOG结局存在患者间异质性，但没有证明某种STN神经活动模式直接导致FOG恶化。",
+      "limitations": "论文明确指出仍需前瞻性多中心队列进行外部验证。方法学上，研究使用的是术前临床、结构影像和电极定位特征，而非STN局部场电位或神经放电活动，因此不能将预测特征解释为STN神经活动生物标志物。摘要未报告FOGQ恶化人数、具体随访时间及外部验证结果。",
+      "quote": "The LightGBM model achieved the highest AUC of 0.917 for predicting FOGQ deterioration.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42185340",
+      "design": "DTI和NODDI影像学组间比较研究，结合ROC判别分析及临床相关性分析。",
+      "population": "帕金森病震颤优势型（PDTD）、姿势不稳步态障碍型（PIGD）患者及健康对照；PIGD进一步划分为FOG阳性和FOG阴性亚组。",
+      "n": "PDTD 25；PIGD 34（PIGD-FOG 21、PIGD-nFOG 13）；健康对照38；合计97。",
+      "condition": "比较PDTD、PIGD与健康对照之间的丘脑束旁核（Pf）相关通路微结构，并进一步比较PIGD-FOG与PIGD-nFOG。研究涉及Pf至背侧壳核、STN及伏隔核的投射通路。未涉及DBS刺激状态或药物状态比较。",
+      "measure": "扩散张量成像（DTI）和神经突方向分散与密度成像（NODDI）；各向异性分数（FA）、神经突密度指数（NDI）、轴向弥散率（AD）、平均弥散率（MD）及径向弥散率（RD）；FOG严重程度及临床特征相关性。",
+      "finding": "与健康对照相比，PIGD患者的Pf相关通路表现出显著微结构异常，包括FA和NDI降低、AD、MD和RD升高；PDTD与健康对照之间以及PDTD与PIGD之间未观察到显著差异。Pf通路微结构指标能够区分PIGD-FOG与PIGD-nFOG。PIGD-FOG亚组的Pf通路微结构损伤与更严重的FOG、认知障碍及较差的运动相关日常生活能力有关。",
+      "effect": "FOG阳性PIGD患者表现出更明显的Pf相关通路微结构异常，且这些指标具有区分FOG阳性与阴性患者的能力。该研究支持包含STN投射在内的基底节相关网络结构与FOG存在联系，但摘要没有单独报告Pf-STN通路的效应，因此不能将整体Pf通路结果归因于STN。",
+      "limitations": "摘要没有报告各条Pf投射通路分别对应的具体效应量、ROC曲线下面积及相关系数。最重要的方法学限制是结果以Pf相关通路整体进行描述，没有明确区分Pf-STN、Pf-背侧壳核和Pf-伏隔核各自的贡献。DTI/NODDI测量的是白质微结构，不是STN局部神经放电或振荡活动，因此不能直接证明STN神经活动与FOG之间的功能关系。研究也没有通过刺激或神经记录建立因果关系。",
+      "quote": "microstructural metrics in Pf pathways effectively discriminated PIGD-FOG from PIGD-nFOG patients.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42045915",
+      "design": "STN-DBS术前术后步态比较研究，结合机器学习分类和SHAP特征解释。",
+      "population": "接受STN-DBS评估的帕金森病患者及年龄匹配健康对照。",
+      "n": "摘要未报告患者和健康对照的具体人数。",
+      "condition": "分析PD患者STN-DBS治疗前后的连续行走表现，并与健康对照比较。未明确说明药物ON/OFF状态、刺激ON/OFF状态及术后评估时间。",
+      "measure": "35项时空步态参数；XGBoost分类；分组SHAP特征重要性分析；步宽变异性、步宽不对称性、双侧肢间协调及前后方向稳定性裕度等指标。",
+      "finding": "特征选择反复识别出步宽变异性、步宽不对称性、双侧肢间协调和前后方向稳定性裕度等具有较高判别能力的步态特征。筛选得到的5个重叠特征能够区分PD患者与健康对照，并且STN-DBS治疗后这些特征向健康人群范围移动。所选特征对病理性步态和治疗变化的识别优于传统均值步态指标。",
+      "effect": "STN-DBS治疗后，多个反映步态变异性、不对称性、协调性和动态稳定性的指标向健康范围改善。但研究没有报告FOG专门结局，也没有直接测量STN神经活动，因此属于STN-DBS影响步态组织的间接证据，不能证明这些特征是FOG特异性神经标志物。",
+      "limitations": "摘要未报告患者样本量、FOG阳性与阴性分组、FOG发作次数或FOGQ变化。药物及刺激状态没有明确说明，可能影响术前术后结果的可比性。研究使用机器学习识别步态特征，但没有同步建立STN神经活动与FOG发作之间的直接对应关系。筛选得到的5个重叠特征中，摘要没有完整列出全部特征名称。",
+      "quote": "A compact set of five overlapping features after selection not only reliably distinguished PD gait from healthy controls but also demonstrated a shift toward healthy ranges following DBS.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42240331",
+      "design": "双盲、随机交叉可行性试验。",
+      "population": "接受STN-DBS手术的帕金森病患者。",
+      "n": "16",
+      "condition": "术后患者在停用抗帕金森药物状态下，分别接受高频和低频（60 Hz）STN-DBS，比较站立、行走及步态启动表现。采用急性交叉比较。",
+      "measure": "测力平台测量站立平衡及步态启动时的姿势控制；线性混合模型分析；临床活动能力、运动症状严重程度和步态后倾指标。",
+      "finding": "与高频刺激相比，低频STN-DBS改善了站立期间的平衡，以及步态启动中的运动阶段平衡，但没有改善步态启动的姿势阶段。上述效应不依赖电极位置及总电能输入。不同刺激条件下，临床活动能力、运动症状严重程度及步态后倾指标没有显著差异。",
+      "effect": "STN刺激频率对客观平衡指标具有任务阶段依赖性影响：低频刺激改善站立和步态启动运动阶段的平衡，但没有产生所有临床步态指标的同步改善。该结果说明STN-DBS的步态效应受刺激参数和任务范式影响，但研究没有直接报告FOG改善或恶化。",
+      "limitations": "研究样本量较小（n=16），主要评价急性刺激效应。研究没有直接测量STN神经活动，也没有将FOG发作或FOGQ作为主要结局。测力平台反映的是平衡控制，而非冻结步态本身，因此不能将客观平衡改善等同于FOG改善。论文还指出，术前存在明显震颤的患者可能无法从低频刺激中获得同等获益，因为低频刺激控制震颤的效果较弱。",
+      "quote": "balance during both standing and the locomotion phase of gait initiation was improved with low-frequency STN-DBS, while no difference in the postural phase of gait initiation.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:42207737",
+      "design": "Systematic review/meta-analysis（系统综述与荟萃分析）。",
+      "population": "接受DBS治疗的帕金森病患者；纳入研究涉及STN、GPi及PPN等刺激靶点。",
+      "n": "纳入19项DBS研究；总患者人数摘要未报告。",
+      "condition": "综合比较DBS术前及术后步态表现，涉及不同手术后评估时间，以及药物ON/OFF和刺激ON/OFF状态。研究靶点包括STN、GPi和PPN。",
+      "measure": "仪器化步态分析；步速、步长、跨步长度、步频及双支撑时间等时空步态参数；光电运动捕捉系统、压力平台和惯性传感器。",
+      "finding": "综述认为DBS能够改善帕金森病患者的时空步态参数，尤其是在刺激开启状态下。纳入研究在术前术后评估时间、药物状态、刺激状态、刺激靶点及步态测量设备方面存在明显异质性。",
+      "effect": "总体支持DBS对PD步态具有改善作用，且刺激开启时改善更明显。但摘要没有提供STN靶点独立的合并效应量，也没有报告STN神经活动与FOG之间的定量关系或FOG专门的荟萃分析结果。",
+      "limitations": "论文明确指出研究间方法学异质性较大，GPi和PPN研究数量有限，限制了结果的普遍适用性。不同药物状态、刺激状态、术后时间及测量设备使研究结果难以直接比较。方法学上，该综述汇总的是步态时空参数，而非STN神经电生理指标；一般步态改善不能直接推断FOG改善，也不能确定STN神经活动与FOG之间的关系。",
+      "quote": "DBS improves spatiotemporal gait parameters in PD, particularly under active stimulation.",
+      "basis": "abstract"
+    }
+  ]
+}</escape>

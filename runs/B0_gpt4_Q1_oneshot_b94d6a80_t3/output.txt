@@ -1,0 +1,2228 @@
+# 丘脑底核神经活动与帕金森病冻结步态的关系：证据冲突、网络机制与因果检验
+
+**研究报告终稿｜截至 2026 年 11 月 13 日**
+
+**领域：** 功能神经外科、运动障碍、神经电生理、神经调控
+**核心对象：** Subthalamic nucleus（STN）、Deep Brain Stimulation（DBS）、Parkinson's disease（PD）、Freezing of gait（FOG）
+
+**研究性质：** 基于原始文献核验的结构化叙述综述与机制比较研究。本文不声称完成了具备完整检索日志和双人独立筛选的 PRISMA 系统综述，也不声称进行了新的患者级 Meta 分析。
+
+## 摘要
+
+**背景：** 帕金森病冻结步态是药物和脑深部电刺激治疗中的重要难题。STN 作为基底节运动网络的关键节点，其病理性神经活动被认为可能参与 FOG，但现有研究对 beta、theta、alpha 振荡的变化方向、时间特征、空间定位及因果意义存在明显分歧。
+
+**目的：** 比较 STN 神经活动与 FOG 关系的直接证据，解释研究冲突，评估 DBS 干预提供的因果约束，并提出具有相互区分预测和明确证伪条件的机制模型。
+
+**方法：** 围绕 STN-LFP、微电极单/多单位记录、皮层—STN 耦合、FOG 事件、步态周期、STN-DBS、SNr、PPN/CuN、药物状态、行为任务及 FOG 自动检测等方向进行迭代检索。优先核对原始论文的 PMID、DOI、摘要和可获得的全文，区分实际冻结、冻结易感性、静息表型以及刺激疗效。通过证据矩阵、反例分析和因果推断约束开展综合。
+
+**结果：** 人体研究显示：部分实际 FOG 伴随 STN beta/theta 增强，但另一些研究发现局部 beta 不变、皮层—STN 低频解耦，或在冻结易感状态下 beta 降低。长 beta burst、神经信号熵、步态相位调制、STN 功能亚区和跨网络耦合提供了超越平均功率的解释。低频及方向性 STN-DBS 对特定患者有益，但疗效具有明显异质性。2026 年多中心随机研究未证明 STN+SNr 联合刺激总体优于优化 STN 刺激；同期的 Meta 分析也存在方法和结论分歧。[R1–R8, R18, R22, R24–R26, R28, R29]
+
+**结论：**
+
+> **最能被现有证据支持的结论不是“FOG 由 STN beta 增强引起”，而是“FOG 涉及状态依赖、频率依赖、空间依赖及时间依赖的皮层—基底节—脑干步态控制失稳”。**
+
+STN 可能在不同 FOG 亚型及不同发作阶段表现为运动阻断执行节点、网络状态转换节点或异常活动的下游读出。现有证据尚不足以确认其中任何一种为普遍机制。下一阶段研究应通过同一患者内的时间分辨记录、主动停止对照、严格药物分型，以及神经标志物锁定的随机干预区分这些模型。
+
+---
+
+## 一、研究范围、概念与证据方法
+
+### 1.1 FOG 的定义
+
+FOG 的核心临床特征是患者试图迈步，但无法产生有效步伐。2026 年国际 FOG 联盟更新定义，进一步规范了临床诊断和视频标注，并强调区分 akinetic freezing、kinetic trembling 及其他运动不成功的冻结表现。[R56]
+
+以下现象不应自动视为同一终点：
+
+| 现象 | 本文如何归类 | 与 FOG 的关系 |
+|---|---|---|
+| 视频确认的真实步行冻结 | 实际 FOG | 最直接的发作证据 |
+| 原地踏步中的冻结 | 步态替代任务 FOG | 具有较高相关性，但缺乏完整位移及负重特征 |
+| 虚拟现实中的脚步停顿 | 虚拟冻结/运动阻断 | 神经机制线索，不能与真实冻结完全等同 |
+| 惯性传感器 iFOG 升高 | 冻结候选指标或易感程度 | 需与人工视频验证 |
+| FOG-Q/NFOG-Q 升高 | 临床表型或回顾性严重程度 | 不能确定神经活动发生的具体时间 |
+| 主动停止行走 | 负对照 | 用于检验 FOG 特异性 |
+| 一般步幅缩短或运动迟缓 | 非特异性步态障碍 | 可与 FOG 共存，但不等价 |
+
+这一区分决定了研究之间是否真正具有可比性。
+
+### 1.2 多巴胺相关亚型
+
+本文将 FOG 至少划分为四种：
+
+- **OFF-FOG：** 多巴胺能药物不足时出现，服药后减轻。
+- **ONOFF-FOG：** 充分药物起效后仍持续存在。
+- **ON-FOG：** 药物作用期间新出现或明显加重。
+- **Biphasic FOG：** 药物作用过程中呈现非单调、双相反应。
+
+这些表型有临床研究支持。[R41–R43]
+
+需要特别强调：ONOFF-FOG 不是左旋多巴诱发 FOG。前者是药物无法消除冻结；后者是药物本身使冻结加重。
+
+### 1.3 研究检索与核验
+
+本研究采用了以下检索方向：
+
+| 研究方向 | 主要检索对象 |
+|---|---|
+| STN 局部活动 | LFP、single unit、multi-unit、beta、theta、alpha、gamma |
+| 动态神经编码 | beta burst、sample entropy、gait-cycle locking、interhemispheric asymmetry |
+| 网络电生理 | cortex-STN coherence、ECoG、EEG、M1、SMA、pre-SMA、S1 |
+| 临床干预 | 60/130 Hz、低/高频 DBS、directional DBS、STN+SNr、adaptive DBS |
+| 脑干系统 | PPN、CuN、MLR、brainstem locomotor circuits |
+| 表型与替代机制 | levodopa response、dual task、cognitive conflict、sensorimotor integration |
+| 证据质量 | FOG annotation、automatic detection、cross-validation、meta-analysis |
+
+通过 PubMed/PMC、出版社原始页面、开放全文及 DOI 信息交叉核对候选文献。保留能确认真实存在、且具有 PMID 或 DOI 的研究。
+
+**核验规则：**
+
+1. 记录发表年份、正式发表版本和主要研究设计。
+2. 区分患者数、试次数、电极触点数、冻结事件数。
+3. 同一队列的不同论文可以作为不同分析证据，但不能重复累计独立患者。
+4. 研究摘要不足以支持的具体数值不予补造。
+5. 系统综述与 Meta 分析不能作为独立于其纳入原始研究的新实验样本。
+6. 对无法确认独立性的研究，保留潜在队列重叠警示。
+
+本文为广覆盖研究综述，不把搜索到的文献数等同于穷尽全部相关文献。
+
+### 1.4 证据知识分层
+
+| 层次 | 结构化表示 | 示例 |
+|---|---|---|
+| 原始文献 | `references` | [R8] 2019 年 Brain 原始研究 |
+| 单项研究证据 | `evidence` | [R8] 冻结前皮层—STN 低频耦合下降 |
+| 单项发现 | `claims.level=finding` | STN beta 在某一特定条件下升高 |
+| 跨研究综合 | `claims.level=synthesis` | beta 增强不是 FOG 的普遍必要条件 |
+| 机制解释 | `claims.level=mechanism` | 步态状态转换时网络耦合失稳 |
+| 待检验研究假说 | `hypotheses` | 相位编码失稳模型及其证伪条件 |
+
+任何一层都不能自动升级到下一层。特别是，**能预测 FOG 的信号不一定造成 FOG；能改善 FOG 的刺激也未必通过改变该信号发挥作用。**
+
+---
+
+## 二、STN 神经活动与 FOG 的核心直接证据
+
+### 2.1 证据矩阵
+
+| 文献 | 人群与实验 | 主要神经发现 | 对机制的约束 |
+|---|---|---|---|
+| [R31] Singh，2013 | 6 名 PD；跑步机，3 名有严重冻结/犹豫 | Freezer 行走时约 12–22 Hz 低 beta 增强或正常抑制不足 | 支持异常低 beta 与步态障碍相关 |
+| [R32] Toledo，2014 | 22 名 PD；14 FOG、8 非 FOG；STN 与皮层记录 | FOG 组静息高 beta 22–35 Hz 更强；左旋多巴可降低 | 表型相关，不证明发作触发 |
+| [R1] Syrkin-Nikolau，2017 | 14 名 PD，8 Freezer；OFF 药物、OFF DBS，自由行走 | Freezer 未冻结行走时 beta 更低、beta entropy 更高；实际冻结时 alpha entropy 更高 | 反对简单持续 beta 增强模型 |
+| [R33] Storzer，2017 | 13 名 PD；行走与骑车 | Freezer 运动时可出现约 18 Hz 狭窄 beta 增强，未必发生冻结 | 区分运动相关异常与实际 FOG |
+| [R34] Anidi，2018 | 12 名 PD；慢性 STN LFP、行走、原地踏步、DBS | Freezer 存在更长 beta burst；60/140 Hz 刺激缩短长 burst 并改善步态 | 支持时间持续性的重要性 |
+| [R2] Chen，2019 | STN LFP、单/双任务行走 | 低 beta 15–21 Hz 与 theta 5–8 Hz 和 FOG 易感指标相关 | 主要反映易感性，不等于发作 |
+| [R3] Georgiades，2019 | 8 名 PD；术中微电极、虚拟步态冻结 | 冻结时 STN 多单位活动及 theta/beta 振荡增强 | 支持运动阻断相关异常活动 |
+| [R8] Pozzi，2019 | 7 名 PD；自由行走、慢性 STN LFP、皮层记录 | 局部 beta 和 burst 持续时间无一致性变化；皮层—STN 4–13 Hz 解耦 | 构成局部 beta 必要性模型的反例 |
+| [R5] Liu，2022 | 8 名 PD；ECoG、STN LFP、TUG | 冻结期 STN beta 增强；高 beta/gamma 相干性异常 | 支持局部活动与网络耦合共同变化 |
+| [R4] Gulberti，2023 | 12 名 PD；术中 STN/SN 微电极、仰卧踏步 | 踏步时 beta 下降，冻结时增加；STN/SN 神经元任务调制不同 | 支持运动阶段和核团分工 |
+| [R30] Georgiades，2023 | 8 名 PD；虚拟双任务、STN 微电极 | 认知冲突诱发运动异常时 theta 降低，伴短暂放电率增加 | 早期认知调制与冻结期活动可能不同 |
+| [R37] Klocke，2024 | 实际行走冻结；STN LFP、EMG、运动学 | 冻结前 STN—下肢肌肉耦合改变；拮抗肌协调障碍 | 将网络信号连接到最终运动输出 |
+| [R7] Fim Neto，2025 | 23 名 PD；静息 STN LFP | FOG 患者 alpha 功率/burst 较高；高 beta burst 幅度与严重程度相关 | 可能是慢性表型标志，而非发作信号 |
+| [R6] Collomb-Clerc，2025 | 38 名 PD；步态启动、STN 空间定位、药物 ON/OFF | 临近冻结时低 beta—步态关系失调，高 beta—步态关系重组 | 提示空间与行为变量之间的映射失稳 |
+| [R25] Zhuang，2026 | 同步皮层—STN LFP 与真实步态周期 | FOG 易感行走中的 S1/SPL 低 beta 相位调制异常；DBS 和左旋多巴可改变部分异常 | 支持步态周期分析而非整段平均 |
+| [R26] Simpson，2026 | 14 名 PD；STN LFP、下肢 EMG、药物状态 | 踏步和左旋多巴对低 beta/高 beta 的作用方向不同 | 不能将整个 beta 频段视为单一生理过程 |
+
+这些研究的一个共同特点是：很多样本仅有个位数到十余名患者。对实际 FOG 的事件对齐结果，需要尤其重视患者级重复性，不能因为一个患者发生大量冻结就认为具有相同数量的独立证据。
+
+主要原始研究资料可核对：[R1–R8, R25, R26, R31–R34]。<Cite refs={["turn301639search3","turn301639search10","turn301639search9","turn301639search1","turn702648search5","turn301639search5","turn261439search0","turn261439search8","turn261439search2"]}/>
+
+### 2.2 低 beta、高 beta 与 theta：方向不一致
+
+现有发现不能被合并为“STN 振荡增强”一个指标。
+
+**低 beta（约 12–22 Hz）：** [R2]、[R31]、[R33] 支持其与异常行走或 FOG 易感性有关，但 [R1] 中 Freezer 的广义 beta 功率反而更低。[R26] 进一步说明正常踏步过程中某些低 beta 活动本来就可以增强。
+
+**高 beta（约 21–35 Hz）：** [R32] 发现其与 FOG 表型及左旋多巴反应有关，[R7] 发现其 burst 幅度与临床严重程度相关。但 [R8] 未发现实际冻结期间存在一致的局部 beta 增强。
+
+**Theta（约 3–8 Hz）：** [R2]、[R3] 观察到 theta 与冻结易感或冻结有关；[R30] 却发现认知负荷导致冻结或严重减慢时 theta 降低。
+
+这些结果说明，振荡活动必须至少同时标记：
+
+- 具体频段及其上下限。
+- 神经组织来源。
+- 行为任务。
+- 药物与刺激状态。
+- 比较对象。
+- 相对冻结事件的时间。
+- 绝对功率、相对功率、burst 或相干性等不同指标。
+
+尤其不能把“皮层 beta 下降”直接写成“STN beta 下降”，也不能把 theta 功率和 theta 相干性视为同一变量。
+
+### 2.3 直接 FOG 与 FOG 易感性的根本差异
+
+FOG 易感性可能反映网络的长期不稳定倾向，而实际发作反映某一次运动状态转换失败。
+
+两者之间可能存在如下关系：
+
+**慢性易感性 → 任务触发下神经控制负荷升高 → 瞬时网络失稳 → 无效迈步 → 运动恢复。**
+
+但目前这条链中的每一个箭头都不能视为已经证明的因果关系。
+
+一个研究发现 Freezer 静息高 beta，并不要求同一患者冻结前高 beta 必须再次增强；同样，Freezer 未冻结时 beta 较低，也不能直接证明其冻结发生时仍然较低。
+
+---
+
+## 三、冲突分析：哪些是真矛盾，哪些是方法差异？
+
+### 3.1 “FOG 时 beta 增强”与“FOG 时 beta 不变”
+
+最直接的对比是 [R3]、[R5] 与 [R8]。
+
+[R3] 在手术中虚拟步态冻结时发现 STN theta/beta 和多单位活动异常增加。[R5] 在真实 TUG 冻结期间发现 STN beta 功率升高。
+
+与之不同，[R8] 在自由行走的 7 名患者中发现，冻结时 STN 局部 beta 功率及 beta burst 持续时间没有一致性显著变化，却出现皮层—STN 低频解耦，而且解耦能够区别于主动停止。
+
+这三项研究对**局部 beta 变化的结果方向确实不同**。
+
+可能来源包括：
+
+| 来源 | 具体问题 | 预期影响 |
+|---|---|---|
+| 实验生态效度 | 虚拟步态、TUG、自由行走是否调用相同运动控制系统？ | 虚拟运动阻断可能更受认知冲突影响 |
+| 神经测量尺度 | 微电极多单位活动与慢性宏电极 LFP | 放电率、局部同步和群体输入可能不一致 |
+| 事件时间窗 | 冻结发生瞬间与整段冻结 | 瞬时增强可能被平均稀释 |
+| 行为对照 | 非冻结行走、成功通过门口、主动停止 | 能否区分一般停止与异常冻结 |
+| 频段分组 | 合并 beta 与低/高 beta 分开 | 可能使相反方向的活动抵消 |
+| 药物状态 | OFF、ON、不同 DBS washout | 改变网络基线与冻结亚型 |
+| 统计层级 | 按患者还是按事件检验 | 可能产生伪重复与夸大确定性 |
+
+**综合结论 C：** STN beta 增强可以伴随部分冻结事件，但“局部 beta 必然增强”已受到反例限制。
+
+仍然可能成立的是一个较弱模型：某些 FOG 亚型或发作阶段具有病理性 beta 同步，但这种同步并非所有冻结事件的必要条件。
+
+### 3.2 Theta 增强与 theta 降低
+
+[R3] 发现冻结期间 theta 增强，[R30] 发现认知提示导致运动异常时 theta 减弱。
+
+有两种主要解释。
+
+第一种是**不同阶段假说**：认知线索之后发生 theta 调节不足，运动控制失败之后出现异常 theta 同步。第二种是**不同病理亚型假说**：有些冻结由认知控制不足主导，另一些由运动阻断主导，因此 theta 方向不同。
+
+这两种解释在跨研究比较中都成立，但它们提出不同预测：
+
+- 阶段假说要求在同一患者、同一冻结事件中观察到先下降后增强的时间序列。
+- 亚型假说要求 theta 变化方向在患者内部相对稳定，却随诱发任务或疾病表型分组而不同。
+
+目前没有充分的同一患者内实验完成这一关键区分。
+
+### 3.3 PPN alpha 降低与异常 alpha 增强
+
+早期 PPN 记录 [R46] 发现，较高 alpha 活动与较好的行走表现相关，冻结时 alpha 降低。
+
+然而，2026 年 Yeche 等 [R59] 同步记录 4 名药物抵抗性 FOG 患者的 PPN 和 CuN，并使用步态启动运动学精确对齐神经活动。研究发现：
+
+- CuN alpha 活动在预期姿势调整（APA）前增加，与步伐节律相关。
+- PPN beta 在姿势调整期间去同步化，随后出现与迈步相关的 alpha 调制。
+- 38 次最终发生 FOG 的试次相比 115 次非 FOG 试次，出现了时间失配、过强的 MLR alpha 同步及异常 PPN beta 调制。
+- CuN 刺激改善了部分步态节律指标，而 PPN 刺激对前向推进可能不利。
+
+这与“所有 PPN/MLR alpha 下降都会导致冻结”这一简单模型不一致。[R59] <Cite ref="turn810618search0"/>
+
+可能的解释是：**alpha 信号的空间来源和出现时机，比其总体强度更重要。**
+
+因此，PPN/CuN 的证据进一步支持对 STN 研究同样适用的原则：不能把有益的生理性同步和错误时间出现的病理性同步混为一谈。
+
+不过 [R59] 只有 4 名患者，且与既往 PPN/CuN 研究可能存在研究平台与患者来源关联；尚不足以独立建立新的普遍机制。
+
+### 3.4 研究冲突的一个核心统计原因：错误的比较对象
+
+建议今后每篇论文都明确使用以下对比编码：
+
+| 对比编码 | 实际比较 | 允许的解释 |
+|---|---|---|
+| B1 | Freezer vs Non-Freezer，静息 | 表型差异 |
+| B2 | Freezer vs Non-Freezer，非冻结行走 | 步态易感状态差异 |
+| B3 | 同一患者行走 vs 静止 | 运动状态调制 |
+| B4 | 同一患者 FOG vs 非 FOG | 发作关联 |
+| B5 | FOG 前 vs 主动停止前 | 冻结特异性候选信号 |
+| B6 | DBS/药物 ON vs OFF | 干预相关变化 |
+| B7 | 不同 DBS 模式随机比较 | 刺激参数对结果的因果影响 |
+| B8 | 标志物锁定刺激 vs 匹配随机刺激 | 更接近特定神经标志物的机制检验 |
+
+在此前研究中，B1、B2 和 B4 经常被统一表述为“FOG 相关活动”，这造成了许多表面矛盾。
+
+---
+
+## 四、DBS 干预证据：能够证明什么？
+
+### 4.1 低频与高频 STN-DBS
+
+| 文献 | 设计 | 结果 |
+|---|---|---|
+| [R9] Moreau，2008 | 13 人；盲法比较 60、130 Hz 与 OFF | 等能量低频条件减少冻结；部分高电压高频条件加重冻结 |
+| [R10] Xie，2012 | 2 例新启用 DBS 后即出现 FOG | 保持其他参数不变，130→60 Hz 后迅速缓解 |
+| [R11] Phibbs，2014 | 20 人；随机盲法比较 | 60 Hz 未改善主要步幅终点，震颤控制较差 |
+| [R12] Khoo，2014 | 随机双盲交叉 | 优化触点后的 60 Hz 改善轴性运动指标，最佳触点更腹侧 |
+| [R13] Xie，2015 | 7 名顽固性 FOG 患者；随机双盲 | 60 Hz 相比 130 Hz 改善 FOG 和吞咽相关指标 |
+| [R14] Xie，2018 | 11 名基线、10 名长期随访 | 60 Hz 的部分 FOG 获益持续至平均约 14.5 个月，但效应减弱 |
+
+这些试验不能用简单的阳性研究数与阴性研究数投票。
+
+[R11] 没有专门选择在高频刺激下仍持续冻结的患者，[R13] 则特意选择这类患者。此外，不同研究对刺激总能量、触点和幅度的处理不同。[R9–R14] <Cite refs={["turn702648search3","turn702648search1","turn702648search0","turn118244search2","turn702648search4"]}/>
+
+更可靠的综合是：
+
+**60 Hz 可以是特定患者 FOG 的有效刺激选择，但其疗效不能只归因于频率；更不能推导为低频 STN-DBS 普遍优于高频。**
+
+### 4.2 刺激空间位置比单纯频率更复杂
+
+空间连接研究形成了三个主要发现：
+
+- [R19]：与运动、额叶、苍白球及脑干相关的连接可能预测 FOG 改善。
+- [R20]：右侧前额叶网络募集较强与较差的 FOG 结局相关，而感觉运动网络募集与改善相关。
+- [R21]：回顾性 sweet spot 分析提示背外侧 STN 及 SMA/pre-SMA/PPN 相关连接可能有利，但特定腹侧或邻近区域可能不利。
+
+2025 年的随机双盲方向性刺激研究 [R22] 在 10 名严重 FOG 患者中发现，中央 STN 定向刺激优于后部感觉运动 STN 定向刺激，冻结事件也更少。
+
+[R23] 在 98 人的回顾性概率映射中发现，术后步态恶化与更腹侧的刺激位置有关。
+
+这些结果共同说明 STN 不应作为空间同质结构分析，但还不足以产生一张对所有患者适用的精确刺激地图。[R19–R23] <Cite refs={["turn407744search6","turn810892search2","turn810892search1","turn810892search0","turn407744search2"]}/>
+
+此外，[R22] 的中央 STN 获益并不意味着 [R21] 所识别的所有非背外侧区域都有利。两项研究的空间比较、刺激范围及结局指标并不完全一致。
+
+### 4.3 STN+SNr 联合刺激
+
+2013 年 Weiss 等的随机交叉研究 [R15] 在总体轴性主要终点上阴性，但 FOG 次要终点提示潜在获益。
+
+2025 年 Artusi 等 [R16] 报告主要 FOG 终点未达到显著差异，但存在可能的应答亚群。同年的 Tan 等 [R17] 报告联合刺激优于单纯 STN 刺激。
+
+**最新关键随机证据 [R18]：**
+
+2026 年 10 月发表的探索性多中心随机双盲研究纳入 45 名进入改良意向治疗分析的患者：
+
+- 优化 STN-DBS：23 人。
+- STN+SNr：22 人。
+- 随访 90 天。
+- 主要终点 FOG-AC。
+
+两组主要终点差异不显著，P=0.692。达到临床有意义改善的患者分别为 7 人和 8 人。联合刺激的响应可能与较短病程有关，但属于探索性分析。
+
+因此，不能把 STN+SNr 视为已经确立的 FOG 标准强化方案。[R15–R18] <Cite refs={["turn702648search2","turn407744search5","turn407744search3","turn407744search0"]}/>
+
+### 4.4 两项 Meta 分析的冲突
+
+2026 年两项 Meta 分析给出不同结果：
+
+| 指标 | [R28] Kong | [R29] Haq |
+|---|---:|---:|
+| FOG 总效应 | Hedges' g = −0.23 | SMD = −0.39 |
+| 95% CI | −1.04 至 0.59 | −0.73 至 −0.04 |
+| 异质性 | I² = 85.6% | I² = 23.2% |
+| 结论 | 未证实额外获益 | 报告统计学优势 |
+
+重要的方法学差异包括：
+
+- 原始试验纳入时间和范围。
+- 交叉设计的配对数据处理。
+- 同一研究多个刺激条件之间的相关性。
+- 不同 FOG 终点的标准化方式。
+- 效应量较大研究的权重。
+- 共享对照条件是否得到恰当处理。
+
+[R28] 对研究内相关性进行了显式处理，并将其 FOG 结论评为极低确定性。[R29] 采用了平行组近似并报告显著效应。
+
+**这两项 Meta 分析不能视为两项独立随机验证，更不能用其中一篇的显著 P 值覆盖另一篇的结果。** 它们是对部分相同原始研究采用不同分析方案后的结果。[R28, R29] <Cite refs={["turn798145view3","turn407744search7"]}/>
+
+下一次规范更新需要患者内配对差值或合理的相关性敏感性分析，并纳入 2026 年 10 月的 [R18]。
+
+### 4.5 Beta burst 自适应 DBS
+
+2025 年 Wilkins 等 [R24] 在 7 人中研究基于 STN beta burst 持续时间的实时自适应刺激。
+
+研究证明该方案技术上可行，并观察到步态获益，但没有证明该方式在主要冻结比较中优于连续刺激或随机间歇调制。
+
+因此：
+
+- beta burst 可以成为控制系统输入。
+- 闭环刺激可以改善运动表现。
+- 但尚未证明 beta burst 是 FOG 的特异性因果介质。
+
+这是**预测价值、控制价值和病因价值之间必须分开的典型实例**。[R24] <Cite ref="turn407744search4"/>
+
+---
+
+## 五、STN 之外的网络证据
+
+### 5.1 认知控制与环境诱发
+
+[R39] 通过虚拟现实实验显示，FOG 患者对认知冲突、狭窄门口和环境线索转换特别敏感。[R38] 的功能影像研究支持认知控制网络与基底节之间存在异常协调。
+
+2026 年 Tian 等 [R50] 在 18 名 FOG 患者中，比较冻结与主动停止前两秒的 EEG 网络活动，发现冻结前局部 beta 网络连接增强及部分低频长距离连接减弱。
+
+这些发现支持认知—运动网络失稳，但 BOLD/EEG 不能直接当作 STN 神经元的记录。[R38, R39, R50]
+
+### 5.2 STN—SNr—脑干系统
+
+STN 通过基底节输出网络影响脑干步态控制。PPN 与 CuN 是相关脑干系统的重要组成部分，但并非功能相同的单一靶点。
+
+PPN alpha 与行走表现的关联 [R46]、药物对 PPN 频谱和冻结的同步影响 [R58]，以及 CuN/PPN 相位调制研究 [R59]，均支持脑干系统参与步态控制。
+
+不过，干预结果明显不一致：
+
+- [R44]：PPN 刺激在某些长期冻结指标中有潜在获益，双盲阶段未建立稳定疗效。
+- [R45]：5 人前瞻性研究报告部分持续获益。
+- [R49]：9 人随机交叉研究提示较低频 PPN 刺激在部分患者中更好。
+- [R47]：6 人 PPN/CuN 随机双盲试验，主要终点阴性。
+- [R48]：相同队列长期随访未证实稳定临床获益。
+- [R59]：4 人研究发现 CuN 和 PPN 的步态作用不同，刺激效果也不一致。
+
+因此，**脑干系统参与 FOG 的证据强于“直接刺激某一个脑干核团就能可靠解除冻结”的证据。**
+
+### 5.3 下肢肌肉协调与感觉反馈
+
+[R37] 同时记录 STN、下肢肌肉和运动学，发现冻结前 STN—肌肉耦合异常，并伴随拮抗肌协同失效。
+
+这提供了从神经活动到实际运动输出的候选机制链，但并不能确定异常信号是下降运动指令，还是异常肌肉活动导致的上行感觉反馈。
+
+[R40] 的 STN 功能连接研究进一步提示，药物反应性不同的 FOG 涉及不同感觉—运动网络。胆碱能 PET 研究 [R53] 则支持 PD 步态和平衡障碍具有超出多巴胺系统的神经基础。
+
+这些方向说明，即使发现 STN 信号发生改变，也需要认真考虑共同病因及代偿性改变。
+
+---
+
+## 六、六个竞争性机制模型
+
+下面的模型刻意采用较强的形式，确保可以通过实验区分，而不是让所有结果都被解释为“网络异常”。
+
+### H1：STN 病理性 beta 同步导致运动阻断
+
+**机制：** 在运动状态需要切换时，STN 的低 beta 或异常长 beta burst 造成过度稳定的运动抑制状态，妨碍生成有效迈步。
+
+**主要证据：** [R3]、[R5]、[R31]、[R34]。
+
+**最强反例：** [R1]、[R8]；[R24] 未证实专门追踪 beta burst 的刺激优于匹配对照。
+
+**可区分预测：**
+
+- 冻结前应有高于正常行走和主动停止的长 beta burst 占用时间。
+- 若该活动是真正介质，对其进行提前、选择性干预应减少 FOG。
+- 临床改善程度应与病理 beta 活动的变化相对应。
+
+**证伪条件：** 在预先指定的 FOG 亚型、记录位点和时间窗中，大量可确认的冻结没有相应 beta 异常；或者有效消除目标异常后，冻结概率不发生预期下降。
+
+**状态：** 有支持，但强形式受到反证约束。
+
+### H2：步态周期相位编码失稳
+
+**机制：** STN 及相关皮层区域不能在正确的姿势调整、支撑相或摆动相生成适当的神经活动。问题不一定是振荡过强，而可能是正确活动出现于错误时间。
+
+**主要证据：** [R6]、[R25]、[R26]、[R35]、[R36]、[R59]。
+
+**预测：**
+
+- 步态周期对齐的神经指标应比整段平均功率更能预测实际冻结。
+- 冻结前可观察到 beta/theta 相位调制减弱、时序漂移或错误相位的同步增强。
+- 相位锁定刺激应优于脉冲数及总刺激负荷匹配的随机刺激。
+
+**证伪条件：** 控制步速、步幅和步态阶段后，相位特征不再具有独立预测价值，且针对相位的干预不优于相应匹配对照。
+
+**状态：** 生理基础较强，针对 FOG 的特异性因果验证不足。
+
+### H3：认知控制不足—运动阻断的双阶段模型
+
+**机制：** 冲突、门口或双任务先导致控制信号募集失败，随后异常 STN 抑制/同步活动参与运动阻断。
+
+**主要证据：** [R3]、[R30]、[R38]、[R39]。
+
+**预测：**
+
+- 冲突线索之后首先出现任务相关 theta 调制不足。
+- 真正冻结开始附近随后出现 STN 放电或某些振荡活动异常增强。
+- 同一人的成功双任务试次不应出现完整的异常双阶段序列。
+
+**证伪条件：** 在足够的同一人冻结事件中，两个阶段的先后关系不稳定，或在控制普通认知错误与运动迟缓后不具备 FOG 特异性。
+
+**状态：** 能解释 theta 结果冲突，但尚未经完整的同一实验验证。
+
+### H4：皮层—STN 网络解耦
+
+**机制：** 步态状态转换依赖多个网络之间的动态通信，FOG 发生于某些必要的跨区域耦合关系突然瓦解。
+
+**主要证据：** [R8]、[R38]、[R50]，以及 [R5] 所显示的其他频段耦合异常。
+
+**预测：**
+
+- 冻结前低频皮层—STN 耦合异常比 STN 局部功率更稳定。
+- 这种变化能够区别 FOG、主动停止和普通运动减慢。
+- 恢复适当跨网络时序的干预应改善 FOG。
+
+**证伪条件：** 在控制共同输入、速度、运动伪迹及非平稳信号影响后，解耦现象消失；或针对该耦合的干预改变了信号却不能改变冻结。
+
+**状态：** 具有重要的直接人体证据，但信息流方向和必要性未定。
+
+### H5：STN—SNr—MLR 输出门控失灵
+
+**机制：** STN 的异常活动通过基底节输出系统影响 SNr、PPN/CuN 及下降运动控制通路，使计划中的步态转换无法转化为有效肌肉活动。
+
+**主要证据：** [R15–R23]、[R37]、[R44–R49]、[R58]、[R59]。
+
+**预测：**
+
+- 具有特定 SNr/MLR 纤维连接模式的患者更可能对相应网络刺激有反应。
+- STN、脑干活动及拮抗肌控制变化之间存在可重复的时间次序。
+- 精准通路刺激应该比单纯依靠解剖核团中心的刺激更具特异性。
+
+**证伪条件：** 在确认刺激实际募集目标通路的前提下，通路调节既不能改变预测的生理中介，也不能改变冻结。
+
+**状态：** 网络解剖合理，部分干预有支持，但群体治疗效应仍有争议。
+
+### H6：STN 信号主要是共同失稳的读出或代偿反应
+
+**机制：** FOG 主要起始于皮层感觉—运动整合、注意控制、脑干或脊髓系统。STN 活动随网络状态变化，并非所有冻结的关键致病节点。
+
+**主要证据：** [R1]、[R8]、[R24]、[R40]、[R50]、[R53]、[R59]。
+
+**预测：**
+
+- STN 信号可能具有预测能力，但特异性地改变它不一定比非特异刺激有效。
+- 某些皮层、脑干或肌肉协调异常可能早于 STN 信号变化。
+- FOG 不同亚型可能具有不同的主要致病网络。
+
+**证伪条件：** 在适当控制其他网络变化后，证明 STN 某一特定信号对某一 FOG 亚型具有稳定的必要性，并通过选择性干预确认其因果中介作用。
+
+**状态：** 必须保留的竞争性替代解释；并非已验证机制。
+
+### 模型之间真正有区分力的比较
+
+| 实验观察 | 较符合的模型 | 受到限制的模型 |
+|---|---|---|
+| 局部 beta 不变，冻结前低频跨网络解耦 | H4、H6 | 强形式 H1 |
+| 先 theta 下降、后 beta/放电异常增强 | H3 | 单阶段统一振荡模型 |
+| 相位锁定刺激明显优于等负荷随机刺激 | H2 | 纯平均功率模型 |
+| 只有特定脑干纤维募集可改善 FOG | H5 | 与空间无关的 STN 局部模型 |
+| STN 生物标志物改变，却未出现相应 FOG 改善 | H6 或非介质性标志物模型 | 对应强因果模型 |
+| 相同 FOG 表型存在多种互不相同的神经特征 | H6 或多亚型机制 | 单一普遍机制 |
+
+必须注意：**多个模型可能共同作用。** 这里的竞争性不是声称 H1–H6 在生物学上完全互斥，而是通过预先指定的必要性、时间顺序、交互作用和干预中介预测来形成真正可检验的差异。
+
+---
+
+## 七、优先推荐的判别性研究
+
+### 7.1 总体设计
+
+建议采用两阶段、多中心、患者内重复随机的机制试验。
+
+**第一阶段：自然步态观察及标志物发现。**
+
+在同一患者中同步记录：
+
+- 双侧 STN LFP。
+- 适合的皮层 EEG/ECoG（取决于临床植入与安全条件）。
+- 下肢拮抗肌 EMG。
+- IMU、足底压力和同步视频。
+- 精确的药物时间、剂量及 DBS 参数。
+
+采用多种冻结诱发任务：步态启动、直线行走、360° 转身、通过门口、双任务和障碍物任务。
+
+主动停止必须作为预先指定的负对照。
+
+按照新 FOG 定义进行双盲视频标注。自动检测只用于辅助，不作为未经验证的唯一金标准。[R54–R57]
+
+**第二阶段：预先锁定标志物的干预检验。**
+
+在第一阶段结束后锁定模型，不在测试数据上重新选择最佳频段或阈值。
+
+随机比较：
+
+- Beta burst 触发刺激。
+- 步态相位触发刺激。
+- 网络异常触发刺激（只有在实时可靠测量可行时实施）。
+- 连续 DBS。
+- 与各闭环模式刺激负荷相匹配的随机时序刺激。
+
+具体刺激参数必须由临床安全范围、设备能力及独立伦理审查决定；研究不应假定提高刺激强度就能更好地验证机制。
+
+### 7.2 主要终点
+
+首要临床终点应采用视频确认的实际冻结事件，而不是仅以 FOG 问卷替代：
+
+1. 每单位有效暴露时间的冻结发生率。
+2. 冻结时间百分比。
+3. 每次冻结的持续时间。
+4. 冻结前预警的灵敏度、误报率及提前量。
+5. 非冻结行走时的步态性能和刺激副作用。
+
+每项终点需要预先规定优先级和多重比较策略。
+
+### 7.3 统计结构
+
+数据至少具有四级相关结构：
+
+**患者 → 访视/刺激阶段 → 行走试次 → 步态周期/冻结事件。**
+
+因此，分析应采用适当的多层模型、广义混合模型或生存/重复事件模型，并考虑：
+
+- 患者随机效应。
+- 任务类型与药物亚型的交互作用。
+- 刺激顺序及潜在 carryover。
+- 同一人的重复冻结事件。
+- 不同刺激模式的总负荷。
+- 电极位置和有效刺激场。
+- 运动伪迹、步速及运动幅度。
+- 基于患者而非事件的交叉验证。
+
+需要先由先导数据估计患者内和患者间效应方差，再进行功效分析；目前不能从既往小样本研究合理推导一个通用样本量。
+
+### 7.4 关键判别：相关性与介导效应
+
+仅观察到：
+
+“刺激改变 beta，同时 FOG 改善”
+
+不足以证明 beta 是治疗机制。
+
+更强的证据应包括：
+
+1. 干预确实改变了预先指定的神经标志物。
+2. 标志物变化发生在运动行为改善之前。
+3. 标志物变化程度与冻结改善存在合理的剂量—反应关系。
+4. 具有相同总刺激负荷、但不匹配该神经标志物的刺激疗效更弱。
+5. 预设中介分析在合理的未测量混杂假设下支持机制路径。
+
+即使满足上述条件，也需要谨慎解释，因为 DBS 可以同时改变多个神经网络。
+
+---
+
+## 八、证据系统的自我审计与可持续更新
+
+### 8.1 本次研究发现并纠正的问题
+
+| 问题 | 审计前的风险 | 已实施的改进 | 复核结果 |
+|---|---|---|---|
+| 统一 beta 增高叙事 | 忽略反方向及阴性研究 | 纳入 [R1]、[R8]、[R26] | 强形式命题降级为 contested |
+| 误把易感性当作实际冻结 | 错误扩大直接证据范围 | 对 [R2]、[R7]、[R32] 重新标记实验条件 | 表型关联与发作关联分离 |
+| 重复计算患者 | 夸大独立研究支持度 | 标记预印本、正式论文、同一队列随访及潜在重叠 | 已明确 [R47]/[R48] 不是独立队列 |
+| DBS 机制过度推断 | 治疗有效即认为其通过 beta 发挥作用 | 加入随机调制对照及中介判断标准 | [R24] 不再被解释为 beta 病因验证 |
+| Meta 分析结论不一致 | 按显著性或发表时间选择结论 | 检查交叉试验依赖结构及效应异质性 | 保留 [R28]/[R29] 冲突，不强行合并 |
+| FOG 自动标注不可靠 | 标注误差造成虚假神经特征 | 加入外部验证研究 [R54]、[R55] | 不把模型检测率当作机制证据 |
+| 新脑干证据遗漏 | 将 PPN/CuN 视为单一功能节点 | 纳入 2026 年原始研究 [R59] | 更正“FOG 必须伴随 MLR alpha 降低”的过强解释 |
+
+本次完成的是**证据结构和推断逻辑的改进与交叉核验**，不是通过新临床数据证明某一机制模型更准确。
+
+### 8.2 应建立的长期证据维护规则
+
+每条证据以 `eid` 作为可追溯最小单位，文献以 `ref` 去重，跨研究结论以 `cid` 保存，竞争性假说以 `hid` 保存。
+
+当出现新研究时：
+
+- 如果新研究支持旧结论，增加证据链接，但不自动提高确定性。
+- 如果新研究直接反驳必要性主张，将该结论标记为 contested 并重新限定适用范围。
+- 如果新研究采用更严格的随机设计，应重新评价此前仅凭观察研究建立的因果主张。
+- 如果发现样本重叠，须重新计算独立证据数量。
+- 如果 FOG 定义、事件标注或分析频段改变，旧结果应按新标准重新审查可比性。
+- 如果研究数据或摘要存在内部不一致，应保留原始不一致记录，待原作者澄清。
+
+本研究的一个具体质量问题是：[R52] 的摘要与正文对冻结事件检测数量分别报告 24/29 和 24/30。附录保留该不一致，而不是未经核实就选取其中一个数字。
+
+### 8.3 结构化附录的使用边界
+
+附录中的 `status` 代表本研究对证据确定性的定性评价，不是通过 GRADE 全套程序独立计算的正式评级。
+
+`relation=contradicts` 表示某研究对特定主张构成限制或反例，不意味着两个研究在所有实验条件下绝对互斥。
+
+对于没有足够信息判断患者级独立性的研究，不能依赖附录将患者数简单相加。
+
+---
+
+## 九、最终综合结论
+
+### 9.1 可以较有把握保留的结论
+
+STN 参与步态的运动执行、状态转换及神经信息编码。STN 的振荡活动具有明显的运动、药物、时间及空间依赖性。[R4, R6, R26, R35, R36]
+
+部分 FOG 与 STN beta/theta 增强相关，但不存在可靠证据表明所有 FOG 都需要局部 beta 增强。[R1–R8, R30–R34]
+
+FOG 与皮层—STN、STN—脑干及感觉—运动网络之间的异常协调有关。该结论作为跨研究综合具有支持，但各网络的具体因果方向尚未确定。[R8, R25, R37, R38, R50, R59]
+
+DBS 可以改善或加重 FOG，刺激频率、触点位置、募集的纤维网络和患者临床亚型都会改变干预效果。[R9–R24]
+
+### 9.2 尚不能成立的强主张
+
+目前不能声称：
+
+- STN beta 增强是所有 FOG 的必要或充分原因。
+- STN theta 的某一个固定变化方向能够统一解释 FOG。
+- 某个 STN 亚区是所有 FOG 的最优刺激位置。
+- 60 Hz STN-DBS 普遍优于 130 Hz。
+- STN+SNr、PPN 或 CuN 刺激具有已经确立的普遍额外疗效。
+- 高性能 FOG 检测算法已经证实其使用的神经特征具有因果意义。
+
+### 9.3 最值得优先研究的方向
+
+综合现有证据，最有前景的是把以下三个维度结合，而不是继续孤立地测量平均 beta 功率：
+
+**第一，状态转换。** 确认异常发生在认知冲突、步态启动、有效行走、冻结还是恢复阶段。
+
+**第二，空间与网络。** 确认异常来自 STN 的哪一亚区、哪一侧以及哪些皮层或脑干连接。
+
+**第三，时间编码。** 确认是平均功率、burst 持续时间、步态相位耦合、跨网络同步，还是神经—肌肉时序出现异常。
+
+最终需要解决的是：
+
+**某一 STN 活动究竟是冻结的前置原因、参与放大过程的中介、患者尝试恢复运动时的代偿信号，还是整个步态网络失稳的伴随读出？**
+
+这才是未来神经电生理研究和新型 DBS 机制试验需要真正区分的问题。
+
+---
+
+## 结构化附录：可追溯证据、结论与竞争性假说
+
+以下 JSON 保留前述研究的原始编号。`references` 是文献身份层，`evidence` 是单项研究证据层，`claims` 是发现与综合判断层，`hypotheses` 是可检验机制层。空字符串表示未确认的信息，而非断言该信息不存在。
+
+```json
+{
+  "references": [
+    {
+      "ref": "R1",
+      "pmid": "28890315",
+      "doi": "10.1016/j.nbd.2017.09.002",
+      "title": "Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease",
+      "year": 2017
+    },
+    {
+      "ref": "R2",
+      "pmid": "31494286",
+      "doi": "10.1016/j.nbd.2019.104605",
+      "title": "Subthalamic nucleus oscillations correlate with vulnerability to freezing of gait in patients with Parkinson's disease",
+      "year": 2019
+    },
+    {
+      "ref": "R3",
+      "pmid": "31665229",
+      "doi": "10.1093/brain/awz325",
+      "title": "Hitting the brakes: pathological subthalamic nucleus activity in Parkinson's disease gait freezing",
+      "year": 2019
+    },
+    {
+      "ref": "R4",
+      "pmid": "36730026",
+      "doi": "10.1093/brain/awad006",
+      "title": "Subthalamic and nigral neurons are differentially modulated during parkinsonian gait",
+      "year": 2023
+    },
+    {
+      "ref": "R5",
+      "pmid": "35310098",
+      "doi": "10.3389/fnins.2022.795417",
+      "title": "Synchronized Intracranial Electrical Activity and Gait Recording in Parkinson's Disease Patients With Freezing of Gait",
+      "year": 2022
+    },
+    {
+      "ref": "R6",
+      "pmid": "40709562",
+      "doi": "10.1002/ana.70003",
+      "title": "Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease",
+      "year": 2025
+    },
+    {
+      "ref": "R7",
+      "pmid": "39884164",
+      "doi": "10.1016/j.clinph.2025.01.005",
+      "title": "Alpha and high beta subthalamic intermittent activity correlates with freezing of gait severity in Parkinson's disease",
+      "year": 2025
+    },
+    {
+      "ref": "R8",
+      "pmid": "31505548",
+      "doi": "10.1093/brain/awz141",
+      "title": "Freezing of gait in Parkinson's disease reflects a sudden derangement of locomotor network dynamics",
+      "year": 2019
+    },
+    {
+      "ref": "R9",
+      "pmid": "18420482",
+      "doi": "10.1212/01.wnl.0000303972.16279.46",
+      "title": "STN-DBS frequency effects on freezing of gait in advanced Parkinson disease",
+      "year": 2008
+    },
+    {
+      "ref": "R10",
+      "pmid": "22696586",
+      "doi": "10.1136/jnnp-2011-302091",
+      "title": "Effect of stimulation frequency on immediate freezing of gait in newly activated STN DBS in Parkinson's disease",
+      "year": 2012
+    },
+    {
+      "ref": "R11",
+      "pmid": "24165197",
+      "doi": "10.1111/ner.12131",
+      "title": "60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulation",
+      "year": 2014
+    },
+    {
+      "ref": "R12",
+      "pmid": "24449169",
+      "doi": "",
+      "title": "Low-frequency subthalamic nucleus stimulation in Parkinson's disease: a randomized clinical trial",
+      "year": 2014
+    },
+    {
+      "ref": "R13",
+      "pmid": "25540305",
+      "doi": "10.1212/WNL.0000000000001184",
+      "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD",
+      "year": 2015
+    },
+    {
+      "ref": "R14",
+      "pmid": "29654112",
+      "doi": "10.1136/jnnp-2018-318060",
+      "title": "Long-term effect of low frequency stimulation of STN on dysphagia, freezing of gait and other motor symptoms in PD",
+      "year": 2018
+    },
+    {
+      "ref": "R15",
+      "pmid": "23757762",
+      "doi": "10.1093/brain/awt122",
+      "title": "Nigral stimulation for resistant axial motor impairment in Parkinson's disease? A randomized controlled trial",
+      "year": 2013
+    },
+    {
+      "ref": "R16",
+      "pmid": "39957196",
+      "doi": "10.1177/1877718X241292315",
+      "title": "Subthalamic and nigral stimulation for freezing of gait in Parkinson's disease: Randomized pilot trial",
+      "year": 2025
+    },
+    {
+      "ref": "R17",
+      "pmid": "40760816",
+      "doi": "10.1177/1877718X251359241",
+      "title": "DBS-STN&SNr combined stimulation versus DBS-STN monotarget stimulation for Parkinson's disease freezing: A comparative efficacy study",
+      "year": 2025
+    },
+    {
+      "ref": "R18",
+      "pmid": "42860886",
+      "doi": "10.1002/mdc3.70813",
+      "title": "Disease Duration Differentiates Freezing of Gait Response to Subthalamic and Nigral Stimulation for Parkinson's Disease in an Exploratory Multicenter Controlled Trial",
+      "year": 2026
+    },
+    {
+      "ref": "R19",
+      "pmid": "35431262",
+      "doi": "10.3233/JPD-212997",
+      "title": "Structural Connectivity of Subthalamic Nucleus Stimulation for Improving Freezing of Gait",
+      "year": 2022
+    },
+    {
+      "ref": "R20",
+      "pmid": "36242900",
+      "doi": "10.1016/j.parkreldis.2022.10.002",
+      "title": "Freezing of gait depends on cortico-subthalamic network recruitment following STN-DBS in PD patients",
+      "year": 2022
+    },
+    {
+      "ref": "R21",
+      "pmid": "37701817",
+      "doi": "10.1093/braincomms/fcad238",
+      "title": "Optimal subthalamic stimulation sites and related networks for freezing of gait in Parkinson's disease",
+      "year": 2023
+    },
+    {
+      "ref": "R22",
+      "pmid": "39475137",
+      "doi": "10.1002/ana.27099",
+      "title": "Directional Subthalamic Deep Brain Stimulation Better Improves Gait and Balance Disorders in Parkinson's Disease Patients: A Randomized Controlled Study",
+      "year": 2025
+    },
+    {
+      "ref": "R23",
+      "pmid": "40408848",
+      "doi": "10.1016/j.parkreldis.2025.107871",
+      "title": "Probabilistic mapping of gait changes after STN-DBS for Parkinson's disease",
+      "year": 2025
+    },
+    {
+      "ref": "R24",
+      "pmid": "40677701",
+      "doi": "10.1093/braincomms/fcaf266",
+      "title": "Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease",
+      "year": 2025
+    },
+    {
+      "ref": "R25",
+      "pmid": "42571859",
+      "doi": "10.1016/j.nbd.2026.107571",
+      "title": "Gait-cycle-locked cortico-subthalamic signatures underlying freezing of gait and their modulation in Parkinson's disease",
+      "year": 2026
+    },
+    {
+      "ref": "R26",
+      "pmid": "41388789",
+      "doi": "10.1093/brain/awaf464",
+      "title": "Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping",
+      "year": 2026
+    },
+    {
+      "ref": "R27",
+      "pmid": "35295883",
+      "doi": "10.3389/fnhum.2022.812954",
+      "title": "Combined Subthalamic and Nigral Stimulation Modulates Temporal Gait Coordination and Cortical Gait-Network Activity in Parkinson's Disease",
+      "year": 2022
+    },
+    {
+      "ref": "R28",
+      "pmid": "42909654",
+      "doi": "10.1007/s10072-026-09479-2",
+      "title": "STN-SNr co-stimulation in Parkinson's disease: a systematic review and meta-analysis of motor and freezing-of-gait outcomes",
+      "year": 2026
+    },
+    {
+      "ref": "R29",
+      "pmid": "42968793",
+      "doi": "10.1136/bmjcsurg-2026-000033",
+      "title": "Superiority of dual-target STN-SNr deep brain stimulation towards gait in Parkinson's disease: a meta-analysis and meta-regression of randomised trials",
+      "year": 2026
+    },
+    {
+      "ref": "R30",
+      "pmid": "37226972",
+      "doi": "10.1002/mds.29455",
+      "title": "Subthalamic Nucleus Activity during Cognitive Load and Gait Dysfunction in Parkinson's Disease",
+      "year": 2023
+    },
+    {
+      "ref": "R31",
+      "pmid": "",
+      "doi": "10.1016/j.baga.2012.10.002",
+      "title": "Freezing of gait-related oscillatory activity in the human subthalamic nucleus",
+      "year": 2013
+    },
+    {
+      "ref": "R32",
+      "pmid": "24361601",
+      "doi": "10.1016/j.nbd.2013.12.005",
+      "title": "High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease",
+      "year": 2014
+    },
+    {
+      "ref": "R33",
+      "pmid": "28892573",
+      "doi": "10.1002/ana.25047",
+      "title": "Bicycling suppresses abnormal beta synchrony in the Parkinsonian basal ganglia",
+      "year": 2017
+    },
+    {
+      "ref": "R34",
+      "pmid": "30196050",
+      "doi": "10.1016/j.nbd.2018.09.004",
+      "title": "Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's disease",
+      "year": 2018
+    },
+    {
+      "ref": "R35",
+      "pmid": "29760182",
+      "doi": "10.1523/JNEUROSCI.3596-17.2018",
+      "title": "Alternating Modulation of Subthalamic Nucleus Beta Oscillations during Stepping",
+      "year": 2018
+    },
+    {
+      "ref": "R36",
+      "pmid": "36070366",
+      "doi": "10.1126/scitranslmed.abo1800",
+      "title": "Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease",
+      "year": 2022
+    },
+    {
+      "ref": "R37",
+      "pmid": "39470410",
+      "doi": "10.1093/brain/awae223",
+      "title": "Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease",
+      "year": 2024
+    },
+    {
+      "ref": "R38",
+      "pmid": "24142148",
+      "doi": "10.1093/brain/awt272",
+      "title": "Freezing of gait in Parkinson's disease is associated with functional decoupling between the cognitive control network and the basal ganglia",
+      "year": 2013
+    },
+    {
+      "ref": "R39",
+      "pmid": "23831480",
+      "doi": "10.1016/j.parkreldis.2013.06.002",
+      "title": "Using virtual reality to explore the role of conflict resolution and environmental salience in freezing of gait in Parkinson's disease",
+      "year": 2013
+    },
+    {
+      "ref": "R40",
+      "pmid": "38101024",
+      "doi": "10.1016/j.parkreldis.2023.105952",
+      "title": "Subthalamic functional connectivity associated with freezing of gait dopa-response",
+      "year": 2024
+    },
+    {
+      "ref": "R41",
+      "pmid": "22262741",
+      "doi": "10.1212/WNL.0b013e3182477ec0",
+      "title": "\"On\" state freezing of gait in Parkinson disease: a paradoxical levodopa-induced complication",
+      "year": 2012
+    },
+    {
+      "ref": "R42",
+      "pmid": "31799377",
+      "doi": "10.1038/s41531-019-0099-z",
+      "title": "Freezing of Gait can persist after an acute levodopa challenge in Parkinson's disease",
+      "year": 2019
+    },
+    {
+      "ref": "R43",
+      "pmid": "32417798",
+      "doi": "10.3233/JPD-201997",
+      "title": "Biphasic Levodopa-Induced Freezing of Gait in Parkinson's Disease",
+      "year": 2020
+    },
+    {
+      "ref": "R44",
+      "pmid": "19773356",
+      "doi": "10.1093/brain/awp229",
+      "title": "Effects of pedunculopontine nucleus area stimulation on gait disorders in Parkinson's disease",
+      "year": 2010
+    },
+    {
+      "ref": "R45",
+      "pmid": "21725254",
+      "doi": "10.1227/NEU.0b013e31822b6f71",
+      "title": "Pedunculopontine nucleus stimulation improves gait freezing in Parkinson disease",
+      "year": 2011
+    },
+    {
+      "ref": "R46",
+      "pmid": "22232591",
+      "doi": "10.1093/brain/awr315",
+      "title": "Alpha oscillations in the pedunculopontine nucleus correlate with gait performance in parkinsonism",
+      "year": 2012
+    },
+    {
+      "ref": "R47",
+      "pmid": "34744048",
+      "doi": "10.3233/JPD-212793",
+      "title": "Pedunculopontine and Cuneiform Nuclei Deep Brain Stimulation for Severe Gait and Balance Disorders in Parkinson's Disease: Interim Results from a Randomized Double-Blind Clinical Trial",
+      "year": 2022
+    },
+    {
+      "ref": "R48",
+      "pmid": "35121249",
+      "doi": "10.1016/j.parkreldis.2022.01.010",
+      "title": "Stimulation of the pedunculopontine and cuneiform nuclei for freezing of gait and falls in Parkinson disease: Cross-over single-blinded study and long-term follow-up",
+      "year": 2022
+    },
+    {
+      "ref": "R49",
+      "pmid": "25185212",
+      "doi": "10.1136/jnnp-2013-307511",
+      "title": "Low-frequency versus high-frequency stimulation of the pedunculopontine nucleus area in Parkinson's disease: a randomised controlled trial",
+      "year": 2015
+    },
+    {
+      "ref": "R50",
+      "pmid": "41760132",
+      "doi": "10.1002/mds.70230",
+      "title": "Aberrant Beta-Band Network Alteration Preceding Freezing of Gait in Parkinson's Disease",
+      "year": 2026
+    },
+    {
+      "ref": "R51",
+      "pmid": "42778807",
+      "doi": "10.1007/s00415-026-14149-6",
+      "title": "Frequency-Specific EEG burst dynamics in Parkinson's Disease and freezing of gait",
+      "year": 2026
+    },
+    {
+      "ref": "R52",
+      "pmid": "42239677",
+      "doi": "10.3389/fneur.2026.1793291",
+      "title": "An initial machine learning model applied to local field potential data from the subthalamic nucleus to detect freezing of gait in Parkinson's disease",
+      "year": 2026
+    },
+    {
+      "ref": "R53",
+      "pmid": "39252998",
+      "doi": "10.1093/braincomms/fcae286",
+      "title": "Dynamic balance and gait impairments in Parkinson's disease: novel cholinergic patterns",
+      "year": 2024
+    },
+    {
+      "ref": "R54",
+      "pmid": "",
+      "doi": "10.1186/s12984-024-01320-1",
+      "title": "Freezing of gait assessment with inertial measurement units and deep learning: effect of tasks, medication states, and stops",
+      "year": 2024
+    },
+    {
+      "ref": "R55",
+      "pmid": "42230618",
+      "doi": "10.1038/s41531-026-01407-7",
+      "title": "Deep learning for freezing of gait assessment using inertial measurement units: a multicentre validation study",
+      "year": 2026
+    },
+    {
+      "ref": "R56",
+      "pmid": "41513745",
+      "doi": "10.1038/s41582-025-01179-3",
+      "title": "An updated definition of freezing of gait",
+      "year": 2026
+    },
+    {
+      "ref": "R57",
+      "pmid": "39121137",
+      "doi": "10.3233/JPD-240134",
+      "title": "Which Gait Tasks Produce Reliable Outcome Measures of Freezing of Gait in Parkinson's Disease?",
+      "year": 2024
+    },
+    {
+      "ref": "R58",
+      "pmid": "24386308",
+      "doi": "10.1371/journal.pone.0083919",
+      "title": "Pedunculopontine nucleus area oscillations during stance, stepping and freezing in Parkinson's disease",
+      "year": 2013
+    },
+    {
+      "ref": "R59",
+      "pmid": "42522567",
+      "doi": "10.1093/brain/awag259",
+      "title": "Distinct roles of the human cuneiform and pedunculopontine nuclei in gait and freezing of gait",
+      "year": 2026
+    }
+  ],
+  "evidence": [
+    {
+      "eid": "E1",
+      "ref": "R1",
+      "design": "慢性植入式STN-LFP与自由步态运动学同步记录",
+      "population": "PD患者，Freezer与Non-Freezer",
+      "n": "14人；Freezer 8人",
+      "condition": "OFF药物、OFF DBS；静息、行走、转弯、障碍物、原地踏步",
+      "measure": "STN beta功率、Sample Entropy、alpha entropy、步态指标",
+      "finding": "Freezer未冻结行走时beta功率较低而beta entropy较高；冻结时alpha entropy较高",
+      "limitations": "小样本；患者间和患者内效应需区分；与R34存在潜在队列重叠；不能推断因果"
+    },
+    {
+      "eid": "E2",
+      "ref": "R2",
+      "design": "STN-LFP与运动学相关性分析",
+      "population": "接受STN-DBS的PD患者",
+      "n": "未在本次核验中确认可独立复核的完整人数",
+      "condition": "单任务及双任务行走；FOG易感性评估",
+      "measure": "STN低beta 15–21 Hz、theta 5–8 Hz、iFOG",
+      "finding": "低beta与theta功率和FOG易感性相关；theta空间分布偏腹侧STN/SNr区域",
+      "limitations": "主要是易感指标而非视频确认的实际冻结；没有证明因果方向"
+    },
+    {
+      "eid": "E3",
+      "ref": "R3",
+      "design": "术中STN微电极多单位活动记录",
+      "population": "PD-FOG患者",
+      "n": "8人",
+      "condition": "虚拟现实步态任务；冻结发生前后",
+      "measure": "STN多单位放电、theta和beta活动、下肢运动表现",
+      "finding": "虚拟冻结时STN病理性多单位活动及theta/beta振荡增强",
+      "limitations": "非真实负重自由行走；术中状态可能影响结果；不能从时间关联单独推断因果"
+    },
+    {
+      "eid": "E4",
+      "ref": "R4",
+      "design": "术中STN和黑质神经元微电极记录",
+      "population": "中度PD患者",
+      "n": "12人",
+      "condition": "仰卧踏步、注意性提示和冻结相关运动异常",
+      "measure": "单神经元放电率、放电模式和beta振荡",
+      "finding": "STN和黑质神经元具有不同任务调制；踏步时STN beta下降，冻结时增加",
+      "limitations": "仰卧模拟步态与自然行走不同；不能直接对应慢性LFP"
+    },
+    {
+      "eid": "E5",
+      "ref": "R5",
+      "design": "同步皮层ECoG、STN-LFP和TUG步态记录",
+      "population": "接受STN-DBS手术的PD-FOG患者",
+      "n": "8人；41次行走测试；30次测试出现冻结",
+      "condition": "实际步态冻结与非冻结比较",
+      "measure": "STN beta功率、ECoG功率、皮层-STN相干性",
+      "finding": "冻结期STN beta增强；高beta和gamma皮层-STN相干性出现异常",
+      "limitations": "小患者样本；多个试次不独立；记录质量和运动伪迹需控制"
+    },
+    {
+      "eid": "E6",
+      "ref": "R6",
+      "design": "步态启动运动学、STN-LFP及空间分区分析",
+      "population": "PD患者及健康对照",
+      "n": "PD 38人，健康对照24人；12名PD患者在实验中出现263次冻结",
+      "condition": "OFF和ON多巴胺；步态启动；后部感觉运动STN与中央联合STN",
+      "measure": "低beta、高beta、步态节律和运动学指标",
+      "finding": "接近冻结时低beta与步态参数的关联失调，出现不同的高beta空间-行为关系；药物可部分改善",
+      "limitations": "冻结集中于患者子集；重复事件非独立；电生理关联不等于因果控制"
+    },
+    {
+      "eid": "E7",
+      "ref": "R7",
+      "design": "静息STN-LFP横断面比较",
+      "population": "PD Freezer及Non-Freezer",
+      "n": "23人；FOG 14人，非FOG 9人",
+      "condition": "静息记录；临床FOG严重程度比较",
+      "measure": "alpha功率、alpha burst、高beta burst",
+      "finding": "FOG组alpha功率和burst幅度较高；高beta burst幅度与冻结严重程度及POMA表现相关",
+      "limitations": "没有同步观察实际冻结；不能确定这些活动是否是发作机制"
+    },
+    {
+      "eid": "E8",
+      "ref": "R8",
+      "design": "慢性STN-LFP、皮层电活动、运动学及分子影像",
+      "population": "自由行走PD-FOG患者",
+      "n": "7人",
+      "condition": "有效行走、通过门口、主动停止、实际冻结及恢复",
+      "measure": "局部STN功率、beta burst、皮层-STN 4–13 Hz耦合",
+      "finding": "冻结时没有一致的局部beta功率或burst持续时间变化；皮层-STN低频解耦在冻结前出现并与多巴胺缺损不对称性相关",
+      "limitations": "小样本；耦合指标不能确定方向性信息传递；长期电极记录具有空间采样限制"
+    },
+    {
+      "eid": "E9",
+      "ref": "R9",
+      "design": "盲法DBS频率和电压参数比较",
+      "population": "存在严重步态问题的晚期PD患者",
+      "n": "13人",
+      "condition": "60 Hz、130 Hz、不同电压及刺激关闭",
+      "measure": "冻结次数和运动评分",
+      "finding": "等能量60 Hz高电压条件冻结较少；130 Hz高电压条件可加重冻结",
+      "limitations": "频率、电压与组织募集同时变化；特定晚期样本；短期观察"
+    },
+    {
+      "eid": "E10",
+      "ref": "R10",
+      "design": "病例内即时DBS频率切换",
+      "population": "新启用STN-DBS后立即出现FOG的PD患者",
+      "n": "2人",
+      "condition": "其他刺激参数不变，比较130 Hz和60 Hz",
+      "measure": "即时FOG表现",
+      "finding": "频率从130 Hz降低到60 Hz后冻结迅速缓解",
+      "limitations": "极小病例数；频率变化同时改变单位时间的刺激脉冲数"
+    },
+    {
+      "eid": "E11",
+      "ref": "R11",
+      "design": "随机盲法交叉比较",
+      "population": "STN-DBS后报告步态变化的PD患者",
+      "n": "20人",
+      "condition": "保持电压等参数不变比较60 Hz和130 Hz",
+      "measure": "主要终点为步幅；兼顾其他步态表现",
+      "finding": "主要步幅终点没有显著差异；低频下震颤控制较差",
+      "limitations": "未专门选择顽固性高频FOG；相同电压不等于相同刺激能量"
+    },
+    {
+      "eid": "E12",
+      "ref": "R12",
+      "design": "随机双盲交叉临床试验",
+      "population": "接受STN-DBS的PD患者",
+      "n": "本次核验未确认完整样本数",
+      "condition": "分别优化60 Hz和130 Hz触点后比较",
+      "measure": "UPDRS运动评分及轴性症状",
+      "finding": "优化后的60 Hz改善部分运动和轴性指标；低频最佳触点相对更腹侧",
+      "limitations": "频率和最佳触点共同改变；不等同于纯频率因果效应"
+    },
+    {
+      "eid": "E13",
+      "ref": "R13",
+      "design": "随机双盲交叉试验",
+      "population": "130 Hz和药物治疗下仍有FOG的PD患者",
+      "n": "7人",
+      "condition": "药物ON；比较130 Hz、60 Hz和DBS OFF",
+      "measure": "吞咽检查、FOG及轴性运动评估",
+      "finding": "60 Hz相比常规130 Hz改善FOG和部分吞咽、轴性指标",
+      "limitations": "样本量小；吞咽为主要关注终点；短期效果"
+    },
+    {
+      "eid": "E14",
+      "ref": "R14",
+      "design": "随机序列交叉及长期随访",
+      "population": "常规130 Hz下存在顽固性FOG的PD患者",
+      "n": "11人完成初访；10人完成长期随访",
+      "condition": "60 Hz相对130 Hz；平均随访14.5个月",
+      "measure": "FOG、吞咽、UPDRS",
+      "finding": "60 Hz的部分FOG和轴性症状改善延续至长期，但效应有所减弱",
+      "limitations": "小样本；选择性纳入；与早期研究方向及研究团队关联，独立性需核查"
+    },
+    {
+      "eid": "E15",
+      "ref": "R15",
+      "design": "随机双盲交叉试验",
+      "population": "STN刺激下仍有轴性障碍的PD患者",
+      "n": "12人",
+      "condition": "优化STN与STN+SNr刺激",
+      "measure": "主要综合轴性UPDRS终点及次要FOG-AC",
+      "finding": "主要轴性终点阴性；FOG次要终点提示潜在改善",
+      "limitations": "小样本、次要终点阳性；不能当作联合刺激确证性试验"
+    },
+    {
+      "eid": "E16",
+      "ref": "R16",
+      "design": "随机交叉先导试验",
+      "population": "接受STN-DBS且存在FOG的PD患者",
+      "n": "15名患者进入联合刺激测试",
+      "condition": "常规STN、STN+高频SNr、STN+低频SNr；每种模式约1个月",
+      "measure": "NFOG-Q及临床响应",
+      "finding": "主要NFOG-Q终点没有显著组间优势；部分患者达到临床重要改善",
+      "limitations": "小样本及多刺激条件；亚组结果探索性；正式论文在线发表于2025年"
+    },
+    {
+      "eid": "E17",
+      "ref": "R17",
+      "design": "多中心前瞻性随机交叉比较",
+      "population": "存在显著FOG的PD患者",
+      "n": "24人入组；20人完成随访",
+      "condition": "STN单靶点与STN+SNr联合刺激，每模式6个月",
+      "measure": "FOG-Q、生活质量评分",
+      "finding": "报告联合刺激比单纯STN改善更多FOG-Q和生活质量评分",
+      "limitations": "样本少；交叉研究需考虑顺序及延迟效应；部分研究报告细节需要进一步质量复核"
+    },
+    {
+      "eid": "E18",
+      "ref": "R18",
+      "design": "探索性多中心随机双盲对照试验",
+      "population": "已接受STN-DBS且持续FOG的PD患者",
+      "n": "45人进入改良意向治疗分析；STN 23人，STN+SNr 22人",
+      "condition": "优化STN对比STN+SNr，随访90天",
+      "measure": "主要终点FOG-AC；临床应答及病程关联",
+      "finding": "主要终点无显著差异，P=0.692；应答者分别为7人与8人；联合刺激应答可能与较短病程有关",
+      "limitations": "亚组探索性；刺激位置由已有电极限制；未专门植入独立SNr靶点"
+    },
+    {
+      "eid": "E19",
+      "ref": "R19",
+      "design": "回顾性刺激场和结构连接分析",
+      "population": "术前存在FOG的STN-DBS患者",
+      "n": "47人；18人有标准化诱发冻结测试",
+      "condition": "术前术后6个月；刺激场及规范性连接组",
+      "measure": "FOG-Q、结构连接、刺激体积",
+      "finding": "有利刺激连接涉及运动皮层、前额叶、苍白球和部分脑干相关纤维；刺激豆状束与加重有关",
+      "limitations": "结构连接为模型推断，不能证明实际轴突募集或因果传导"
+    },
+    {
+      "eid": "E20",
+      "ref": "R20",
+      "design": "术前术后临床评估与刺激场连接分析",
+      "population": "STN-DBS患者",
+      "n": "19人",
+      "condition": "比较不同皮层-STN纤维募集与FOG结局",
+      "measure": "FOG、步态运动学、前额叶及感觉运动连接",
+      "finding": "右前额叶相关募集与较差FOG结局相关，右感觉运动连接与较好结局相关",
+      "limitations": "小样本、回顾性连接分析；不能建立半球和纤维因果特异性"
+    },
+    {
+      "eid": "E21",
+      "ref": "R21",
+      "design": "回顾性刺激sweet spot及连接组映射",
+      "population": "双侧STN-DBS且术前有FOG的PD患者",
+      "n": "76人",
+      "condition": "术后FOG改善、无明显变化及加重分组",
+      "measure": "FOG评分、刺激体积、结构连接",
+      "finding": "42人改善、22人变化较小、12人加重；背外侧及部分运动相关网络与改善相关",
+      "limitations": "回顾性；结构影像连接和真实刺激效应不同；存在患者选择混杂"
+    },
+    {
+      "eid": "E22",
+      "ref": "R22",
+      "design": "随机双盲方向性刺激交叉研究",
+      "population": "术前有严重FOG的PD患者",
+      "n": "10人",
+      "condition": "中央STN、后部感觉运动STN和ring-mode",
+      "measure": "客观步态、姿势控制和冻结次数",
+      "finding": "中央STN刺激优于后部STN刺激，且冻结事件更少",
+      "limitations": "样本量小；刺激方向改变同时募集多个纤维系统；短期评估"
+    },
+    {
+      "eid": "E23",
+      "ref": "R23",
+      "design": "回顾性概率刺激场映射和交叉验证",
+      "population": "STN-DBS的PD患者",
+      "n": "98人",
+      "condition": "术后一年的步态改善与恶化",
+      "measure": "MDS-UPDRS III步态项目、刺激位置、概率映射",
+      "finding": "42人步态改善、7人恶化；恶化组有效触点相对更腹侧；预测模型LOOCV R²约0.45",
+      "limitations": "结局非纯FOG；恶化患者数少；回顾性预测可能受选择偏差影响"
+    },
+    {
+      "eid": "E24",
+      "ref": "R24",
+      "design": "植入式STN beta burst驱动自适应DBS可行性研究",
+      "population": "PD患者",
+      "n": "7人",
+      "condition": "DBS OFF、连续DBS、自适应DBS、随机间歇调制",
+      "measure": "冻结、原地踏步、转弯及运动学",
+      "finding": "实时burst驱动刺激可行并有短期运动获益，但未证明对FOG优于连续或随机调制刺激",
+      "limitations": "小样本；设备和算法限制；先导试验统计效能不足"
+    },
+    {
+      "eid": "E25",
+      "ref": "R25",
+      "design": "步态周期对齐的皮层-STN同步LFP及刺激调制研究",
+      "population": "PD-FOG患者",
+      "n": "本次核验未确认摘要之外可独立复核的人数",
+      "condition": "冻结试次与非冻结试次；高/低频DBS及左旋多巴",
+      "measure": "S1、SPL低beta；S1-STN theta相干性；步态相位",
+      "finding": "冻结易感步态周期存在皮层低beta相位异常；DBS与药物分别改变部分频谱及耦合指标",
+      "limitations": "具体低beta效应主要来自皮层，不能误称为STN局部功率；仍缺少针对相位机制的独立因果验证"
+    },
+    {
+      "eid": "E26",
+      "ref": "R26",
+      "design": "STN-LFP、下肢EMG与药物状态比较",
+      "population": "PD患者",
+      "n": "14人",
+      "condition": "坐位、站立、踏步、左旋多巴ON/OFF",
+      "measure": "STN低beta、高beta、步态周期调制和肌肉活动",
+      "finding": "踏步使低beta增强而高beta减弱；左旋多巴具有相反的频段调制方向",
+      "limitations": "主要研究一般踏步而非实际FOG发作；频段定义与部分其他研究不同"
+    },
+    {
+      "eid": "E27",
+      "ref": "R27",
+      "design": "STN与STN+SNr刺激期间高密度EEG及踏步研究",
+      "population": "PD患者及健康对照",
+      "n": "PD 12人，健康对照12人",
+      "condition": "药物ON；刺激OFF、STN、STN+SN",
+      "measure": "皮层振荡、冻结及踏步时间变异",
+      "finding": "联合刺激改善部分踏步时间变异；不同刺激模式下冻结伴随不同皮层频谱空间模式",
+      "limitations": "头皮EEG而非STN直接记录；步态变异改善不等于日常FOG必然改善"
+    },
+    {
+      "eid": "E28",
+      "ref": "R28",
+      "design": "系统综述及Meta分析",
+      "population": "STN+SNr与STN比较的PD研究",
+      "n": "10项研究，109名可评价患者；FOG分析6项、86人",
+      "condition": "截至2026-05-01的研究",
+      "measure": "FOG效应量、UPDRS、异质性和GRADE",
+      "finding": "FOG Hedges' g=-0.23，95% CI -1.04至0.59；未证明额外获益，证据确定性极低",
+      "limitations": "高度异质；小样本；汇总既有试验而不是独立患者实验；尚未纳入2026年10月发表的R18"
+    },
+    {
+      "eid": "E29",
+      "ref": "R29",
+      "design": "随机研究Meta分析与Meta回归",
+      "population": "STN+SNr比较研究中的PD患者",
+      "n": "8项试验，97人",
+      "condition": "检索至2025-10",
+      "measure": "FOG标准化效应量及异质性",
+      "finding": "报告SMD=-0.39，95% CI -0.73至-0.04，提示联合刺激统计学优势",
+      "limitations": "交叉试验采用平行组近似；同研究多个比较共享对照；与R28纳入研究存在重叠"
+    },
+    {
+      "eid": "E30",
+      "ref": "R30",
+      "design": "术中微电极记录与虚拟双任务",
+      "population": "PD患者",
+      "n": "8人；33次认知线索试次",
+      "condition": "认知提示后正常运动、虚拟冻结或严重减慢",
+      "measure": "STN theta及多单位放电率",
+      "finding": "导致冻结或严重减慢的认知负荷试次中theta减弱，伴短暂放电率增加",
+      "limitations": "冻结和严重减慢合并分析；虚拟运动与自然步行不同；与R3有潜在团队及队列关联"
+    },
+    {
+      "eid": "E31",
+      "ref": "R31",
+      "design": "术后STN-LFP与跑步机步态比较",
+      "population": "PD患者",
+      "n": "6人；3人存在严重步态犹豫或冻结",
+      "condition": "坐位、站立和跑步机行走",
+      "measure": "低beta 12–22 Hz和广义beta 12–35 Hz",
+      "finding": "无冻结者行走时广泛beta抑制；有冻结者低beta异常增强",
+      "limitations": "极小样本；步态犹豫与严格FOG分类可能不同"
+    },
+    {
+      "eid": "E32",
+      "ref": "R32",
+      "design": "STN-LFP与皮层EEG横断面比较",
+      "population": "PD Freezer与Non-Freezer",
+      "n": "22人；FOG 14人，非FOG 8人",
+      "condition": "静息及左旋多巴状态",
+      "measure": "STN高beta 22–35 Hz功率、皮层-STN相干性",
+      "finding": "FOG患者高beta较高；左旋多巴降低相关活动并伴随FOG改善",
+      "limitations": "主要是表型及药物状态比较；不能证明实际冻结前高beta升高"
+    },
+    {
+      "eid": "E33",
+      "ref": "R33",
+      "design": "运动状态STN电活动比较",
+      "population": "PD Freezer与Non-Freezer",
+      "n": "13人；Freezer 5人、Non-Freezer 8人",
+      "condition": "行走与骑车",
+      "measure": "beta广泛抑制及约18 Hz狭窄同步活动",
+      "finding": "Freezer运动时可见狭窄低beta增强，即使没有当时实际冻结",
+      "limitations": "小样本；运动相关异常不能直接解释冻结触发"
+    },
+    {
+      "eid": "E34",
+      "ref": "R34",
+      "design": "慢性STN-LFP、步态与DBS频率实验",
+      "population": "PD Freezer与Non-Freezer",
+      "n": "12人；8名Freezer、4名Non-Freezer",
+      "condition": "OFF药物；刺激OFF、60 Hz、140 Hz",
+      "measure": "beta burst持续时间、双侧不对称性、冻结及步态指标",
+      "finding": "Freezer长beta burst更明显；DBS缩短病理长burst并改善步态",
+      "limitations": "小样本；与R1有潜在队列重叠；DBS的多重网络作用无法排除"
+    },
+    {
+      "eid": "E35",
+      "ref": "R35",
+      "design": "STN-LFP与有节律踏步",
+      "population": "PD患者",
+      "n": "16人",
+      "condition": "交替下肢踏步",
+      "measure": "STN beta随踏步周期的动态变化",
+      "finding": "正常踏步时beta活动存在左右交替和相位相关调制",
+      "limitations": "非FOG专门研究；主要支持生理步态编码"
+    },
+    {
+      "eid": "E36",
+      "ref": "R36",
+      "design": "神经机器人平台与STN-LFP运动编码研究",
+      "population": "PD患者",
+      "n": "18人",
+      "condition": "控制下肢运动、肌肉激活及运动状态转换",
+      "measure": "STN信号和下肢运动/肌肉激活参数",
+      "finding": "STN包含运动启动、终止及肌肉激活幅度等可解码信息",
+      "limitations": "解码能力不是生成运动的因果证明；平台不同于自然FOG"
+    },
+    {
+      "eid": "E37",
+      "ref": "R37",
+      "design": "实际FOG中的STN-LFP、肌电与步态同步记录",
+      "population": "存在FOG的PD患者",
+      "n": "本次核验未确认可独立复核的完整人数",
+      "condition": "行走、实际冻结及主动停止",
+      "measure": "STN-下肢肌肉相干性、拮抗肌活动、共同收缩",
+      "finding": "冻结前STN-肌肉耦合异常，冻结时拮抗肌抑制失效及共同收缩增加",
+      "limitations": "相干性不能区分下降驱动、上行反馈与共同输入"
+    },
+    {
+      "eid": "E38",
+      "ref": "R38",
+      "design": "虚拟步态功能磁共振网络研究",
+      "population": "PD-FOG相关人群",
+      "n": "本次核验未确认可独立复核的完整人数",
+      "condition": "虚拟任务中的冻结和认知控制负荷",
+      "measure": "额顶认知控制网络与基底节BOLD功能连接",
+      "finding": "冻结与认知控制网络和基底节功能解耦有关",
+      "limitations": "BOLD时间分辨率有限；虚拟冻结不等于真实自由步行；非STN电生理"
+    },
+    {
+      "eid": "E39",
+      "ref": "R39",
+      "design": "虚拟现实行为实验",
+      "population": "PD Freezer、Non-Freezer及健康对照",
+      "n": "Freezer 36人、Non-Freezer 37人、健康对照18人",
+      "condition": "认知冲突、狭窄门口和环境线索转换",
+      "measure": "虚拟步态反应延迟及运动中断",
+      "finding": "Freezer对抑制控制需求及视觉环境挑战表现出更显著运动延迟",
+      "limitations": "行为模型不能直接证明STN的具体神经活动机制"
+    },
+    {
+      "eid": "E40",
+      "ref": "R40",
+      "design": "静息态功能连接与左旋多巴反应分析",
+      "population": "不同多巴胺反应性的PD-FOG患者和非FOG患者",
+      "n": "55人；FOG 38人，其中反应性22人、无反应性16人",
+      "condition": "按药物反应性分组",
+      "measure": "STN与小脑、视觉和躯体感觉皮层BOLD连接",
+      "finding": "药物反应性不同的FOG具有不同STN功能连接模式",
+      "limitations": "静息BOLD关联；不能推断具体电生理频段或连接因果方向"
+    },
+    {
+      "eid": "E41",
+      "ref": "R41",
+      "design": "多药物剂量状态病例系列",
+      "population": "怀疑左旋多巴诱发FOG的PD患者",
+      "n": "4人",
+      "condition": "OFF、ON、Supra-ON",
+      "measure": "FOG与其他帕金森运动症状",
+      "finding": "提高左旋多巴剂量可以使FOG加重，同时改善其他运动症状",
+      "limitations": "病例数极少；不涉及同步STN神经记录"
+    },
+    {
+      "eid": "E42",
+      "ref": "R42",
+      "design": "急性左旋多巴挑战及血药浓度检测",
+      "population": "PD患者",
+      "n": "55人完成挑战；45人符合充分ON标准",
+      "condition": "OFF到充分药物ON",
+      "measure": "MDS-UPDRS III、冻结表型及血清左旋多巴",
+      "finding": "45人中19人为ONOFF-FOG，11人为OFF-FOG，15人为NO-FOG",
+      "limitations": "挑战研究不是STN电生理；临床表型划分仍受诱发任务影响"
+    },
+    {
+      "eid": "E43",
+      "ref": "R43",
+      "design": "病例报告",
+      "population": "具有双相左旋多巴诱发FOG的PD患者",
+      "n": "病例报告",
+      "condition": "不同药物作用阶段",
+      "measure": "冻结与药物时间-反应关系",
+      "finding": "FOG可能呈现非单调双相药物反应",
+      "limitations": "个案证据；不能推断群体比例或STN活动规律"
+    },
+    {
+      "eid": "E44",
+      "ref": "R44",
+      "design": "PPN区刺激临床研究，含双盲交叉评估",
+      "population": "药物和STN刺激下仍严重冻结的PD患者",
+      "n": "6人",
+      "condition": "双侧PPN区刺激及一年随访",
+      "measure": "FOG问卷、冻结时间及步态临床指标",
+      "finding": "长期部分冻结指标改善，但盲法比较没有建立稳定的主要临床获益",
+      "limitations": "小样本；电极位置差异；刺激效应可能存在延迟与持续效应"
+    },
+    {
+      "eid": "E45",
+      "ref": "R45",
+      "design": "PPN刺激前瞻性研究",
+      "population": "严重顽固性FOG及平衡障碍PD患者",
+      "n": "5人",
+      "condition": "双侧PPN刺激及长期观察",
+      "measure": "步态与跌倒相关问卷、UPDRS",
+      "finding": "报告部分FOG及跌倒相关表现的持续改善",
+      "limitations": "样本极小；缺乏充分随机同期对照；可能存在刺激延迟洗脱"
+    },
+    {
+      "eid": "E46",
+      "ref": "R46",
+      "design": "PPN区LFP与真实步态记录",
+      "population": "接受PPN区电极植入的帕金森综合征患者",
+      "n": "多个患者及电极；冻结前分析主要受少量患者事件限制",
+      "condition": "静息、自然行走、冻结",
+      "measure": "PPN alpha和beta功率、行走速度",
+      "finding": "PPN alpha与较好行走表现相关，冻结时减弱；alpha与beta具有不同空间分布",
+      "limitations": "冻结事件的患者级重复有限；多电极不等于独立患者"
+    },
+    {
+      "eid": "E47",
+      "ref": "R47",
+      "design": "随机双盲PPN/CuN临床刺激试验中期分析",
+      "population": "严重步态及平衡障碍PD患者",
+      "n": "6人",
+      "condition": "PPN、CuN及假刺激",
+      "measure": "姿势准备、步态运动学和临床结局",
+      "finding": "主要终点未证实显著获益；CuN改善部分步态指标，PPN结果不稳定",
+      "limitations": "极小样本；刺激区域异质；与R48属于相同研究队列"
+    },
+    {
+      "eid": "E48",
+      "ref": "R48",
+      "design": "PPN/CuN刺激交叉研究与长期随访",
+      "population": "R47相关PD队列",
+      "n": "6人；非新的独立六人队列",
+      "condition": "长期刺激、临床随访",
+      "measure": "FOG、跌倒及步态表现",
+      "finding": "长期随访未确定持续可靠的总体临床获益",
+      "limitations": "队列与R47重叠；小样本；长期疾病进展等混杂"
+    },
+    {
+      "eid": "E49",
+      "ref": "R49",
+      "design": "随机双盲交叉PPN频率研究",
+      "population": "严重步态障碍的PD患者",
+      "n": "9人",
+      "condition": "PPN区10–25 Hz与60–80 Hz",
+      "measure": "运动不能、步态问题及日间嗜睡",
+      "finding": "7/9患者在较低频率下表现较好，另有患者加重",
+      "limitations": "极小样本；观察时间短；PPN区定位及频率反应异质"
+    },
+    {
+      "eid": "E50",
+      "ref": "R50",
+      "design": "真实步行EEG网络与主动停止对照",
+      "population": "PD-FOG患者",
+      "n": "18人",
+      "condition": "冻结与主动停止前2秒",
+      "measure": "皮层beta相位锁定、低频连接和网络模块度",
+      "finding": "冻结前局部beta连接增强，部分额叶到后部皮层的低频连接减弱",
+      "limitations": "皮层EEG不是STN直接记录；网络推断易受体积传导与运动伪迹影响"
+    },
+    {
+      "eid": "E51",
+      "ref": "R51",
+      "design": "三中心静息头皮EEG burst分析",
+      "population": "PD患者及健康对照",
+      "n": "237人；PD 149人、健康对照88人",
+      "condition": "PD患者药物ON；FOG分型",
+      "measure": "低beta burst频率、持续时间及theta burst幅度",
+      "finding": "PD总体低beta burst更频繁且较短；调整后Freezer与Non-Freezer的低beta差异不稳健；theta幅度与FOG严重程度相关",
+      "limitations": "头皮EEG而非STN；静息而非冻结；药物给药时间跨中心不完全统一"
+    },
+    {
+      "eid": "E52",
+      "ref": "R52",
+      "design": "STN-LFP特征机器学习FOG检测先导研究",
+      "population": "慢性植入电极的PD患者",
+      "n": "5人；测试集8次行走试验",
+      "condition": "步态任务中的FOG窗口检测",
+      "measure": "多频段LFP、burst、窗口级F1及事件检测率",
+      "finding": "报告weighted F1约0.67、macro F1约0.62；摘要24/29与正文24/30事件检测数量不一致",
+      "limitations": "小样本、个体化标记依赖、研究内部数字不一致；检测不证明因果"
+    },
+    {
+      "eid": "E53",
+      "ref": "R53",
+      "design": "胆碱能PET与动态平衡研究",
+      "population": "PD患者",
+      "n": "125人",
+      "condition": "不同动态平衡与步态任务",
+      "measure": "胆碱能神经末梢PET、平衡功能分域",
+      "finding": "步态与动态平衡障碍涉及多个皮层、丘脑和小脑相关胆碱能网络",
+      "limitations": "非直接FOG发作或STN电生理；影像相关不证明致病通路"
+    },
+    {
+      "eid": "E54",
+      "ref": "R54",
+      "design": "IMU与深度学习FOG检测方法研究",
+      "population": "PD-FOG患者",
+      "n": "12人",
+      "condition": "不同任务、药物状态、主动停止",
+      "measure": "自动FOG标注泛化与停止事件混淆",
+      "finding": "模型对任务、状态及主动停止的处理会影响FOG判定表现",
+      "limitations": "与STN机制无直接关系；主要用于解释行为标签误差"
+    },
+    {
+      "eid": "E55",
+      "ref": "R55",
+      "design": "多中心IMU冻结自动标注外部验证",
+      "population": "来自多个中心的PD-FOG患者",
+      "n": "本地85人、外部256人",
+      "condition": "本地训练、六个外部队列及少量外部数据微调",
+      "measure": "冻结时间百分比与人工视频的一致性ICC",
+      "finding": "ICC本地0.886，外部平均0.562，微调后0.732",
+      "limitations": "不同中心采集与标注异质；算法结果不可直接替代人工金标准"
+    },
+    {
+      "eid": "E56",
+      "ref": "R56",
+      "design": "国际专家共识及定义更新",
+      "population": "FOG临床和研究评价",
+      "n": "共识文献，非独立实验队列",
+      "condition": "临床与视频冻结定义",
+      "measure": "冻结表现、有效迈步尝试及事件起止规则",
+      "finding": "强调存在迈步尝试却无法产生有效步伐，并明确不同冻结类型及视频判定原则",
+      "limitations": "共识不是神经机制实验；不能替代数据验证"
+    },
+    {
+      "eid": "E57",
+      "ref": "R57",
+      "design": "FOG诱发任务敏感性和重测研究",
+      "population": "确诊Freezer",
+      "n": "63人；26人完成重测",
+      "condition": "OFF及ON药物；转弯、TUG、门口和双任务",
+      "measure": "冻结发生率、冻结时间百分比、ICC及最小可检测变化",
+      "finding": "360度转身尤其敏感；OFF更容易诱发；多任务组合提高检出率，但严重程度测量误差仍较大",
+      "limitations": "临床任务研究，不直接证明STN机制；冻结的日内及跨访视波动较大"
+    },
+    {
+      "eid": "E58",
+      "ref": "R58",
+      "design": "PPN区LFP与踏步、药物状态同步研究",
+      "population": "接受PPN区电极植入的PD-FOG患者",
+      "n": "7人",
+      "condition": "OFF及ON左旋多巴；静止、站立、原地踏步",
+      "measure": "PPN区alpha、beta、gamma及冻结时间",
+      "finding": "左旋多巴显著减少踏步冻结，伴PPN alpha增强、beta和gamma减弱",
+      "limitations": "不能确定频谱变化是药物直接作用还是运动改善的结果；触点不是独立患者"
+    },
+    {
+      "eid": "E59",
+      "ref": "R59",
+      "design": "PPN与CuN同步LFP、步态启动运动学和刺激比较",
+      "population": "药物抵抗性FOG的PD患者",
+      "n": "4人；38次冻结试次、115次非冻结试次",
+      "condition": "APA、步态启动、FOG及PPN/CuN/假刺激",
+      "measure": "CuN alpha、PPN beta及alpha、步态节律和推进",
+      "finding": "CuN与PPN有不同步态相位编码；冻结前出现错误时序的MLR alpha同步及PPN beta异常；刺激效应因核团而异",
+      "limitations": "仅4名患者；事件数不能等同独立样本；与既往同中心研究存在潜在队列关联"
+    }
+  ],
+  "claims": [
+    {
+      "cid": "C1",
+      "text": "在部分真实或虚拟冻结事件中，STN beta及theta活动升高。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "结果取决于冻结任务、信号记录方式和时间窗；不是全部FOG的普遍规律。",
+      "evidence": [
+        {"eid": "E3", "relation": "supports"},
+        {"eid": "E5", "relation": "supports"},
+        {"eid": "E4", "relation": "supports"},
+        {"eid": "E8", "relation": "qualifies"},
+        {"eid": "E30", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C2",
+      "text": "FOG易感患者的STN beta平均功率持续高于非FOG患者。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "静息、运动及冻结前状态的不同比较产生相反方向结果；广义beta与低/高beta也不可直接合并。",
+      "evidence": [
+        {"eid": "E32", "relation": "supports"},
+        {"eid": "E31", "relation": "supports"},
+        {"eid": "E2", "relation": "supports"},
+        {"eid": "E1", "relation": "contradicts"},
+        {"eid": "E33", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C3",
+      "text": "STN局部beta增强不是现有研究已经确立的所有FOG事件的必要条件。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "直接反例样本较小；不能排除特定STN微区或时间窗口存在尚未被记录的异常。",
+      "evidence": [
+        {"eid": "E8", "relation": "supports"},
+        {"eid": "E1", "relation": "qualifies"},
+        {"eid": "E3", "relation": "qualifies"},
+        {"eid": "E5", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C4",
+      "text": "STN beta burst持续时间及活动熵可能提供平均beta功率之外的FOG相关信息。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "时间结构指标的独立预测效应尚未在充分规模的多中心患者级外部验证中确认。",
+      "evidence": [
+        {"eid": "E34", "relation": "supports"},
+        {"eid": "E1", "relation": "supports"},
+        {"eid": "E7", "relation": "supports"},
+        {"eid": "E8", "relation": "qualifies"},
+        {"eid": "E24", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C5",
+      "text": "FOG相关STN theta可以升高也可以降低，其方向受认知任务及时间阶段影响。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "双阶段解释尚未在同一患者内直接验证；可能还涉及不同FOG亚型。",
+      "evidence": [
+        {"eid": "E3", "relation": "supports"},
+        {"eid": "E2", "relation": "supports"},
+        {"eid": "E30", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C6",
+      "text": "部分FOG在发生前出现皮层-STN低频耦合异常，而局部STN功率可以不出现同步变化。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "核心直接证据来自小样本；耦合指标不能确认信号传递方向。",
+      "evidence": [
+        {"eid": "E8", "relation": "supports"},
+        {"eid": "E25", "relation": "qualifies"},
+        {"eid": "E5", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C7",
+      "text": "STN及相关皮层和脑干区域具有步态阶段特异的神经活动组织。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "该判断支持生理性步态编码；其中哪些异常对FOG具有因果性尚不明确。",
+      "evidence": [
+        {"eid": "E35", "relation": "supports"},
+        {"eid": "E36", "relation": "supports"},
+        {"eid": "E26", "relation": "supports"},
+        {"eid": "E6", "relation": "supports"},
+        {"eid": "E25", "relation": "supports"},
+        {"eid": "E59", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C8",
+      "text": "STN-DBS对FOG的作用受到刺激空间位置和募集网络影响。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "结构连接研究主要是相关性；方向性刺激试验患者人数有限；尚无统一最优空间靶点。",
+      "evidence": [
+        {"eid": "E19", "relation": "supports"},
+        {"eid": "E20", "relation": "supports"},
+        {"eid": "E21", "relation": "supports"},
+        {"eid": "E22", "relation": "supports"},
+        {"eid": "E23", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C9",
+      "text": "60 Hz STN-DBS可能改善某些常规高频刺激下持续存在的FOG，但并非所有患者均优于130 Hz。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "患者选择、频率、电压、总能量、触点及随访时长共同影响结果。",
+      "evidence": [
+        {"eid": "E9", "relation": "supports"},
+        {"eid": "E10", "relation": "supports"},
+        {"eid": "E13", "relation": "supports"},
+        {"eid": "E14", "relation": "supports"},
+        {"eid": "E11", "relation": "qualifies"},
+        {"eid": "E12", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C10",
+      "text": "STN+SNr联合刺激是否总体优于优化后的单纯STN刺激，目前尚无稳定确证。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "阳性与阴性研究共存；个体反应异质性大；两个Meta分析因方法不同得出不同结论。",
+      "evidence": [
+        {"eid": "E15", "relation": "qualifies"},
+        {"eid": "E16", "relation": "supports"},
+        {"eid": "E17", "relation": "contradicts"},
+        {"eid": "E18", "relation": "supports"},
+        {"eid": "E28", "relation": "supports"},
+        {"eid": "E29", "relation": "contradicts"}
+      ]
+    },
+    {
+      "cid": "C11",
+      "text": "PPN/CuN和其他脑干步态网络参与FOG，但直接刺激这些核团的临床效应高度异质。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "人体样本小，核团定位困难；部分研究队列重复；生理机制与临床疗效不能直接等同。",
+      "evidence": [
+        {"eid": "E46", "relation": "supports"},
+        {"eid": "E58", "relation": "supports"},
+        {"eid": "E59", "relation": "supports"},
+        {"eid": "E44", "relation": "qualifies"},
+        {"eid": "E45", "relation": "supports"},
+        {"eid": "E47", "relation": "qualifies"},
+        {"eid": "E48", "relation": "qualifies"},
+        {"eid": "E49", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C12",
+      "text": "FOG具有至少部分可区分的多巴胺反应亚型。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "亚型间边界仍受测量任务、给药时间和剂量影响；双相FOG主要来自病例证据。",
+      "evidence": [
+        {"eid": "E41", "relation": "supports"},
+        {"eid": "E42", "relation": "supports"},
+        {"eid": "E43", "relation": "supports"},
+        {"eid": "E40", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C13",
+      "text": "FOG诱发任务、标注规则及自动检测的泛化误差可显著影响神经电生理研究结论。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "特定误差对具体STN研究效应量的影响需要重分析原始数据才能定量确定。",
+      "evidence": [
+        {"eid": "E56", "relation": "supports"},
+        {"eid": "E57", "relation": "supports"},
+        {"eid": "E54", "relation": "supports"},
+        {"eid": "E55", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C14",
+      "text": "实际FOG涉及STN-下肢肌肉耦合变化及拮抗肌协调失效。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "已观察到关联，但尚未确定是下降因果驱动、共同输入还是感觉反馈。",
+      "evidence": [
+        {"eid": "E37", "relation": "supports"},
+        {"eid": "E26", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C15",
+      "text": "认知冲突、视觉环境和额顶网络组织异常与FOG易感及发作有关。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "认知任务和影像研究不能直接指定STN为最初因果来源。",
+      "evidence": [
+        {"eid": "E39", "relation": "supports"},
+        {"eid": "E38", "relation": "supports"},
+        {"eid": "E50", "relation": "supports"},
+        {"eid": "E30", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C16",
+      "text": "目前不能仅凭STN信号的预测能力将其判定为FOG致病介质。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "这是因果推断约束，而不是证明STN信号只具有伴随意义。",
+      "evidence": [
+        {"eid": "E52", "relation": "supports"},
+        {"eid": "E36", "relation": "supports"},
+        {"eid": "E24", "relation": "supports"},
+        {"eid": "E8", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C17",
+      "text": "基于STN beta burst的实时自适应DBS已证明技术可行，但其改善FOG的特异性机制尚未确立。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "目前可行性研究样本量及统计效能不足，不能据此断言闭环刺激无优势。",
+      "evidence": [
+        {"eid": "E24", "relation": "supports"},
+        {"eid": "E34", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C18",
+      "text": "将STN-F0G定义为单一脑区、单一频段、单一方向的异常活动模型，不足以解释全部观察结果。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "多维度描述更符合证据，但具体统一机制及因果结构尚未确立。",
+      "evidence": [
+        {"eid": "E1", "relation": "supports"},
+        {"eid": "E3", "relation": "supports"},
+        {"eid": "E8", "relation": "supports"},
+        {"eid": "E25", "relation": "supports"},
+        {"eid": "E26", "relation": "supports"},
+        {"eid": "E30", "relation": "supports"},
+        {"eid": "E59", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C19",
+      "text": "步态相位编码失稳可能是FOG的重要近端机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "尚缺乏充分规模的相位锁定随机干预试验来证明特异性因果作用。",
+      "evidence": [
+        {"eid": "E35", "relation": "supports"},
+        {"eid": "E25", "relation": "supports"},
+        {"eid": "E6", "relation": "supports"},
+        {"eid": "E59", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C20",
+      "text": "部分FOG可能由认知控制募集失败后出现的STN运动阻断状态引起。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "需要在同一冻结事件中确认早期theta异常与后续同步增强的时间序列。",
+      "evidence": [
+        {"eid": "E30", "relation": "supports"},
+        {"eid": "E3", "relation": "supports"},
+        {"eid": "E39", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C21",
+      "text": "皮层-STN低频解耦可能参与FOG发生前的运动状态转换失败。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "目前直接电生理支持主要来自小样本，不能区分因果输入、共同网络状态与下游响应。",
+      "evidence": [
+        {"eid": "E8", "relation": "supports"},
+        {"eid": "E38", "relation": "supports"},
+        {"eid": "E50", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C22",
+      "text": "STN通过SNr及MLR相关输出门控参与某些冻结事件。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "结构及生理证据支持相关网络，但随机干预尚未确立特异性中介和普遍临床效应。",
+      "evidence": [
+        {"eid": "E37", "relation": "supports"},
+        {"eid": "E19", "relation": "supports"},
+        {"eid": "E59", "relation": "supports"},
+        {"eid": "E18", "relation": "qualifies"},
+        {"eid": "E47", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C23",
+      "text": "FOG可以由STN之外的多网络异常主导，STN局部信号在部分情况下可能是代偿或下游读出。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "缺少足以确认最初病理节点的正交干预与同时多网络记录。",
+      "evidence": [
+        {"eid": "E8", "relation": "supports"},
+        {"eid": "E40", "relation": "supports"},
+        {"eid": "E53", "relation": "qualifies"},
+        {"eid": "E24", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C24",
+      "text": "不同研究中的低beta和高beta不能视为同一功能变量。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "不同论文频段边界不统一，尚需要患者个体频谱峰值的统一重新分析。",
+      "evidence": [
+        {"eid": "E26", "relation": "supports"},
+        {"eid": "E32", "relation": "supports"},
+        {"eid": "E33", "relation": "supports"},
+        {"eid": "E31", "relation": "supports"}
+      ]
+    },
+    {
+      "cid": "C25",
+      "text": "PPN/MLR alpha在冻结时可能出现不同方向的变化，时空组织比统一的功率方向更有解释力。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "早期研究和2026年研究在脑干采样位置、时间对齐及患者数量上存在差异。",
+      "evidence": [
+        {"eid": "E46", "relation": "supports"},
+        {"eid": "E59", "relation": "qualifies"},
+        {"eid": "E58", "relation": "qualifies"}
+      ]
+    },
+    {
+      "cid": "C26",
+      "text": "R52对冻结事件检测数量的摘要与正文存在24/29和24/30的不一致。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "需要原作者澄清；在澄清前不将任一数字作为确定的患者级检测准确率。",
+      "evidence": [
+        {"eid": "E52", "relation": "supports"}
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "hid": "H1",
+      "name": "STN病理性beta同步运动阻断模型",
+      "text": "在特定FOG亚型中，过强、持续时间过长或错误运动阶段出现的STN beta同步直接妨碍运动程序切换。该模型应限定神经来源、频段和时间窗，不能声称所有FOG必然具有相同beta变化。",
+      "claims": [
+        {"cid": "C1", "relation": "supports"},
+        {"cid": "C4", "relation": "supports"},
+        {"cid": "C3", "relation": "contradicts"},
+        {"cid": "C17", "relation": "contradicts"},
+        {"cid": "C24", "relation": "supports"}
+      ],
+      "predictions": [
+        "预先指定的FOG亚型中，长beta burst占用时间在实际冻结之前显著增加。",
+        "异常beta应优于普通运动迟缓和主动停止时的beta变化预测冻结。",
+        "准确锁定异常beta的刺激优于脉冲数、总刺激负荷匹配的随机刺激。",
+        "神经beta异常的降低应在时间上先于冻结风险下降。"
+      ],
+      "falsifiers": [
+        "在足够数量的独立患者中，严格确认的冻结没有预定的beta异常。",
+        "特异性削弱目标beta活动后，FOG发生率和持续时间不变。",
+        "预测效应完全由步速、肌肉活动或运动伪迹解释。"
+      ]
+    },
+    {
+      "hid": "H2",
+      "name": "步态周期相位编码失稳模型",
+      "text": "STN及其相关网络不能在正确的步态周期阶段维持或切换神经活动，导致预期姿势调整、支撑、摆动与迈步程序之间的时间协调失败。异常可以表现为同步过强、过弱或相位失配。",
+      "claims": [
+        {"cid": "C7", "relation": "supports"},
+        {"cid": "C19", "relation": "supports"},
+        {"cid": "C24", "relation": "supports"},
+        {"cid": "C3", "relation": "supports"}
+      ],
+      "predictions": [
+        "步态周期对齐的STN和皮层特征比整段平均beta功率更好预测实际冻结。",
+        "冻结试次中的异常首先表现为相位调制减弱、错误相位增强或跨周期时序漂移。",
+        "在控制步速和步幅之后，相位指标仍具有独立预测信息。",
+        "相位锁定刺激在相同刺激总负荷条件下优于非相位锁定刺激。"
+      ],
+      "falsifiers": [
+        "在独立患者中，相位指标的预测能力不优于非相位特异指标。",
+        "运动学混杂调整后，相位异常消失。",
+        "正确相位与随机相位刺激在冻结改善及生理中介上没有可重复差异。"
+      ]
+    },
+    {
+      "hid": "H3",
+      "name": "认知控制不足到运动阻断的双阶段模型",
+      "text": "复杂环境或双任务首先导致STN相关控制网络的认知募集不足，随后在运动执行层面出现异常同步或放电增加，使冻结发生。该模型提出两个具有明确顺序的机制阶段。",
+      "claims": [
+        {"cid": "C5", "relation": "supports"},
+        {"cid": "C15", "relation": "supports"},
+        {"cid": "C20", "relation": "supports"},
+        {"cid": "C1", "relation": "supports"}
+      ],
+      "predictions": [
+        "认知冲突提示后应先出现STN任务相关theta调制不足。",
+        "只有随后发展为实际冻结的试次才出现第二阶段的异常运动阻断活动。",
+        "同一患者的成功双任务试次应保留较正常的早期theta响应。",
+        "降低认知冲突或改善任务提示应优先改变第一阶段，而非只改变最终肌肉共同收缩。"
+      ],
+      "falsifiers": [
+        "同一患者中找不到可重复的早期和晚期神经异常时间顺序。",
+        "正常认知错误与普通运动减慢出现完全相同的两阶段序列。",
+        "校正运动及任务难度后，theta时间变化与冻结没有独立关联。"
+      ]
+    },
+    {
+      "hid": "H4",
+      "name": "皮层-STN网络解耦模型",
+      "text": "FOG的近端原因是皮层和STN之间与步态状态转换有关的动态耦合失败，而不是必须存在某种STN局部功率增强。异常耦合可以影响运动计划更新和有效迈步的维持。",
+      "claims": [
+        {"cid": "C6", "relation": "supports"},
+        {"cid": "C21", "relation": "supports"},
+        {"cid": "C15", "relation": "supports"},
+        {"cid": "C3", "relation": "supports"}
+      ],
+      "predictions": [
+        "冻结前4–13 Hz或个体化低频皮层-STN耦合异常优于局部STN功率预测FOG。",
+        "耦合变化应能够区别冻结、主动停止、门口通过和普通步态减慢。",
+        "耦合异常应在有效步态恢复时消失或恢复正常组织。",
+        "通过时序特异性干预恢复目标耦合时，冻结风险应相应下降。"
+      ],
+      "falsifiers": [
+        "共同输入、体积传导、运动伪迹和信号非平稳性控制后，耦合异常消失。",
+        "耦合异常出现于所有主动停止事件而没有FOG特异性。",
+        "干预有效改变目标耦合但不改变相应冻结风险。"
+      ]
+    },
+    {
+      "hid": "H5",
+      "name": "STN-SNr-MLR输出门控模型",
+      "text": "部分FOG来自STN对基底节输出和脑干步态网络的异常调制，使计划中的迈步无法形成正确的下降运动信号及下肢拮抗肌协调。疗效取决于实际募集的通路和病程阶段，而非仅取决于刺激是否位于STN。",
+      "claims": [
+        {"cid": "C8", "relation": "supports"},
+        {"cid": "C11", "relation": "supports"},
+        {"cid": "C14", "relation": "supports"},
+        {"cid": "C22", "relation": "supports"},
+        {"cid": "C10", "relation": "contradicts"}
+      ],
+      "predictions": [
+        "特定STN-SNr-MLR纤维连接特征能够前瞻性预测通路刺激对FOG的改善。",
+        "STN与脑干网络改变应在部分冻结中先于拮抗肌共同收缩和无效迈步。",
+        "精准刺激靶通路应优于未募集该通路的等负荷刺激。",
+        "药物反应性、病程和脑干通路完整性应与刺激疗效发生交互作用。"
+      ],
+      "falsifiers": [
+        "确认有效募集目标通路后，冻结和预先指定的下降运动中介均未改善。",
+        "目标通路连接强度对独立样本中的刺激疗效没有预测价值。",
+        "STN-肌肉时序异常完全由周围感觉反馈解释。"
+      ]
+    },
+    {
+      "hid": "H6",
+      "name": "共同网络失稳与STN下游读出模型",
+      "text": "FOG首先发生于皮层认知控制、感觉整合、脑干或其他神经网络。STN的功率、burst和耦合异常可作为网络状态读出、反馈响应或代偿活动，因而可能具有预测价值却未必是全部FOG的因果介质。",
+      "claims": [
+        {"cid": "C16", "relation": "supports"},
+        {"cid": "C17", "relation": "supports"},
+        {"cid": "C23", "relation": "supports"},
+        {"cid": "C12", "relation": "supports"},
+        {"cid": "C3", "relation": "supports"}
+      ],
+      "predictions": [
+        "不同FOG亚型可能具有不同的最早异常脑网络，而不共享一种必要的STN频谱变化。",
+        "部分皮层、脑干或神经肌肉指标应先于STN局部异常。",
+        "STN标志物可能实现FOG检测，但专门抑制它不一定优于随机或连续刺激。",
+        "改变非STN网络的有效干预可改善冻结，而不一定同步改变特定STN功率指标。"
+      ],
+      "falsifiers": [
+        "在严格控制其他网络变量后，确定某种STN神经活动对指定FOG亚型具有必要性。",
+        "针对该STN活动的选择性随机干预稳定、特异地预防FOG，且中介分析支持其因果作用。",
+        "跨网络高时间分辨率记录反复证明STN特定异常是独立于外部触发的最早病理事件。"
+      ]
+    }
+  ]
+}
+```
+
+【完成】

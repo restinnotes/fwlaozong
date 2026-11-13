@@ -1,0 +1,342 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:41557560; DOI:10.1159/000550545; PMCID:PMC12952862",
+    "title": "Local Field Potentials in Movement Disorders: A Narrative Review",
+    "publication_status": "review",
+    "version_of_candidate": null,
+    "study_id_candidate": "review_PMID41557560",
+    "cohort_id_candidate": "not_applicable_secondary_review",
+    "cohort_relation_basis": "该论文为2026年发表的叙述性综述，不包含独立的原始患者队列。综述纳入72篇文献，引用[31] Telkes et al. 2018（PMID:30131429）、[32] Farokhniaee et al. 2024（PMID:38509158）和[33] Chen et al. 2019（PMID:31494286）。三篇原始研究应分别建立研究候选ID，不得将综述及其引用研究视为独立重复验证。综述未提供这些原始研究之间患者队列重叠的确认依据。",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+
+    {
+      "eid_local": "PMID41557560_E01",
+      "design": "叙述性综述；二次证据；引用[33] Chen et al. 2019，PMID:31494286，DOI:10.1016/j.nbd.2019.104605",
+      "population": "帕金森病患者；综述未提供原始队列人口学特征及分母。引用[33]为STN-LFP与FOG易感性研究。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：二次综述，没有独立患者队列，也未提供该项研究的样本分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "未报告；综述没有区分akinetic、trembling-in-place或其他FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述此处未报告。",
+      "DBS_state_and_parameters": "unknown；综述此处未报告。",
+      "task": "综述未说明具体任务、冻结诱发方式及事件标记方法。",
+      "recording_location": "STN；综述将该发现归于STN beta活动，但没有在此处提供具体触点定位。",
+      "measure": "短暂beta bursts；综述声称其发生时间与FOG发作前或发作期间相关。没有报告burst amplitude、duration、rate、occupancy或threshold。",
+      "frequency_and_analysis_window": "Beta频段；具体频率边界、时间窗、burst定义、归一化方法均未报告。",
+      "finding": "综述报告FOG与发作前或发作期间的短暂beta bursts相关，但指出该现象在患者间不一致。重要核查：综述引用的原始研究[33]实际上是Chen et al. 2019。该原始研究分析的是STN区域15–21 Hz低beta和5–8 Hz theta平均LFP功率与FOG易感步态的关系，并未报告beta burst持续时间、发生率或事件前后burst分析。因此，综述所述brief beta bursts不能视为已被其引用原始研究直接证实的发现。",
+      "effect_estimate": "综述未提供效应量、置信区间或P值。引用的原始研究[33]报告的是高iFOG与低iFOG步态比较中的频带功率差异，而非beta burst效应。",
+      "statistical_unit_and_method": "综述未报告。原始研究[33]采用加速度计计算iFOG，并以患者内高低iFOG步态时段进行比较，使用重复测量ANOVA；并非事件级beta burst统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "叙述性综述方法学初评；adapted_not_validated。AMSTAR 2/ROBIS并非针对该叙述性综述正式实施。",
+        "domains": [
+          {
+            "domain": "文献检索完整性",
+            "judgement": "some_concerns",
+            "reason": "检索PubMed和Embase至2025年10月，但未在方法中提供完整可复现的检索式。",
+            "source_locator": "Methods，HTML lines 238–245"
+          },
+          {
+            "domain": "研究筛选",
+            "judgement": "some_concerns",
+            "reason": "报告914条初始记录、175篇全文审查及72篇最终纳入，但未明确独立筛选者人数、双人筛选及分歧解决程序。",
+            "source_locator": "Methods，HTML lines 243–245"
+          },
+          {
+            "domain": "原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "未报告系统性的原始研究偏倚风险评价，也未提供该项FOG证据的正式质量分级。",
+            "source_locator": "Methods，HTML lines 239–245"
+          },
+          {
+            "domain": "证据综合及引用准确性",
+            "judgement": "some_concerns",
+            "reason": "采用叙述性综合，且FOG beta burst描述与其明确引用的Chen et al. 2019原始研究所报告的分析指标不一致。",
+            "source_locator": "Results—LFPs in PD，HTML lines 341–343；References，参考文献33"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是二次转述，不能作为独立患者队列或重复验证。核查原始文献[33]发现：Chen et al. 2019纳入15例患者，实际步态分析为13例，只有3例在测试期间出现经运动障碍专家确认的FOG。研究采用3秒窗口iFOG作为易感性指标，而不是将全部实际FOG事件作为事件级分析对象。原始研究测量的是15–21 Hz低beta和5–8 Hz theta功率，不是短暂beta burst。因此，不能据本综述将该研究编码为pre-FOG beta burst或during-FOG beta burst的直接证据。原始研究：PMID:31494286；DOI:10.1016/j.nbd.2019.104605。",
+      "quote": "FOG has also been correlated with brief beta bursts just before or during episodes.",
+      "source_locator": {
+        "section": "Results—LFPs in PD，PIGD及FOG讨论段",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41557560_E02",
+      "design": "叙述性综述；二次证据；引用[31] Telkes et al. 2018，PMID:30131429，DOI:10.1073/pnas.1810589115。",
+      "population": "帕金森病PIGD表型患者；综述未提供该项功率变化比较的具体样本数。PIGD是临床运动亚型，不等同于经事件确认的FOG患者。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：二次综述未建立独立队列，也未提供此项比较的原始样本分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "未报告；PIGD不能直接编码为FOG阳性或实际冻结事件。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述未报告。",
+      "DBS_state_and_parameters": "unknown；综述未提供本项比较的具体刺激状态和参数。",
+      "task": "unknown；综述未报告具体行为任务。",
+      "recording_location": "综述称STN和GPi；但其引用的Telkes et al. 2018原始研究主要报告STN微电极LFP记录，并非STN和GPi双靶点比较。",
+      "measure": "频带平均LFP功率：beta、theta和alpha。综述未报告功率估计的具体分析窗口及归一化方法。",
+      "frequency_and_analysis_window": "Theta 4–8 Hz；alpha 8–13 Hz；beta具体边界及分析窗口在该处未报告。",
+      "finding": "综述称PIGD相关LFP结果具有异质性，beta与PIGD症状的相关性较弱，并报告STN和GPi中beta功率降低以及theta、alpha低频活动降低。该结果描述的是PIGD表型关联，不是实际FOG事件级神经活动证据。",
+      "effect_estimate": "综述未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述未报告该项比较的统计单位及方法。引用[31]原始研究采用TD与PIGD患者表型比较，但其主要报告内容为STN高频振荡及beta-HFO耦合。",
+      "risk_of_bias": {
+        "tool_or_framework": "叙述性综述方法学初评；adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "文献检索完整性",
+            "judgement": "some_concerns",
+            "reason": "检索数据库及截止日期已报告，但未提供完整检索式。",
+            "source_locator": "Methods，HTML lines 238–245"
+          },
+          {
+            "domain": "研究筛选",
+            "judgement": "some_concerns",
+            "reason": "未报告双人独立筛选及分歧解决流程。",
+            "source_locator": "Methods，HTML lines 243–245"
+          },
+          {
+            "domain": "原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "未报告对原始电生理研究进行正式偏倚风险评价。",
+            "source_locator": "Methods，HTML lines 239–245"
+          },
+          {
+            "domain": "证据综合及引用准确性",
+            "judgement": "some_concerns",
+            "reason": "该段所述STN和GPi低频功率变化与参考文献[31]的主要研究设计及报告指标存在对应关系不充分的问题。",
+            "source_locator": "Results—LFPs in PD，HTML lines 341–342；References，参考文献31"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该发现不能直接外推为FOG事件级证据。引用[31]为Telkes et al. 2018，原始研究纳入24例PD患者，TD组13例、PIGD组11例，采用STN多轨迹微电极记录，重点研究200–260 Hz慢高频振荡、260–450 Hz快速高频振荡及其与beta相位的耦合。原始研究不能直接支持综述在此处对GPi、theta/alpha降低的概括。原始研究：PMID:30131429；DOI:10.1073/pnas.1810589115。",
+      "quote": "beta oscillations are less directly correlated to PIGD symptoms and decreased beta power and lower frequency oscillations in the theta (4–8 Hz) and alpha (8–13 Hz) bands have been reported in the STN and GPi.",
+      "source_locator": {
+        "section": "Results—LFPs in PD，PIGD段",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41557560_E03",
+      "design": "叙述性综述；二次证据；引用[31] Telkes et al. 2018，PMID:30131429，DOI:10.1073/pnas.1810589115。",
+      "population": "PD患者PIGD表型；综述未提供具体人数。该表型不能等同于FOG患者。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：二次综述，无独立样本分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "未报告；没有具体FOG表现或实际冻结事件记录。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "unknown",
+      "task": "运动相关活动；具体是步行、启动、其他运动任务还是术中任务，综述未说明。",
+      "recording_location": "STN；综述所述beta desynchronization属于PIGD相关电生理描述。",
+      "measure": "运动期间beta功率下降，即beta event-related desynchronization（ERD）。",
+      "frequency_and_analysis_window": "Beta频段；具体边界、ERD时间窗、基线及归一化方式均未报告。",
+      "finding": "综述称PIGD患者运动期间正常的beta功率下降（desynchronization）减弱，并将其解释为神经灵活性下降，可能影响姿势反应和步态启动。该结论是PIGD运动表型层面的描述，不是同一试次实际发生FOG之前的事件关联证据。",
+      "effect_estimate": "综述未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "unknown；综述未报告患者级、试次级或事件级统计单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "叙述性综述方法学初评；adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "文献检索完整性",
+            "judgement": "some_concerns",
+            "reason": "未提供完整、可复现的数据库检索式。",
+            "source_locator": "Methods，HTML lines 238–245"
+          },
+          {
+            "domain": "研究筛选",
+            "judgement": "some_concerns",
+            "reason": "筛选者人数及独立筛选程序未报告。",
+            "source_locator": "Methods，HTML lines 243–245"
+          },
+          {
+            "domain": "原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "没有报告原始研究层面的正式偏倚风险评价。",
+            "source_locator": "Methods，HTML lines 239–245"
+          },
+          {
+            "domain": "证据综合及引用准确性",
+            "judgement": "some_concerns",
+            "reason": "引用[31]的原始研究主要为术中STN空间频谱及高频振荡分析，并未报告步行期间beta ERD的比较，存在引文与具体结论不匹配的问题。",
+            "source_locator": "Results—LFPs in PD，HTML lines 342–343；References，参考文献31"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不可将PIGD患者运动相关beta ERD减弱直接编码为FOG发生前的beta异常。引用[31]的Telkes et al. 2018研究不是自然行走事件级研究，其主要记录和分析方法为术中多轨迹STN微电极LFP及高频振荡空间分布。该原始文献不能直接核实本综述所述运动期间beta desynchronization减弱。需要后续核查真正报告该指标的原始文献。",
+      "quote": "physiologic decrease in beta activity during movement (desynchronization) is blunted in PIGD patients.",
+      "source_locator": {
+        "section": "Results—LFPs in PD，PIGD段",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41557560_E04",
+      "design": "叙述性综述；二次证据；引用[32] Farokhniaee et al. 2024，PMID:38509158，DOI:10.1038/s41598-024-57252-2。",
+      "population": "综述描述为PIGD患者相关记录；未提供具体样本量及表型分组。引用的原始研究为PD患者STN-LFP步态研究，但综述未在此处报告其样本特征。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：二次综述未提供独立样本分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "未报告；未说明akinetic、trembling-in-place或其他冻结表现。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；本段未报告。",
+      "DBS_state_and_parameters": "unknown；本段未报告。",
+      "task": "综述未提供具体任务。引用[32]原始研究包括直立静站和自然步行，但没有报告FOG事件分析。",
+      "recording_location": "STN-LFP；具体原始研究为双侧STN记录。",
+      "measure": "跨频耦合（CFC），包括beta与gamma及其他低频振荡之间的相互作用。综述未明确指出此处是phase-amplitude coupling、phase-phase coupling还是其他CFC指标。",
+      "frequency_and_analysis_window": "Beta、gamma及低频振荡；具体频带边界、窗口、归一化和统计单位未在综述该段报告。",
+      "finding": "综述称PIGD相关记录显示beta与较高频gamma或较低频振荡之间的CFC紊乱。该发现被引用至Farokhniaee et al. 2024。然而，原始研究的主要发现是站立至步行过程中STN beta-gamma PAC增加，而不是PIGD患者发生FOG时CFC普遍减弱。原始研究没有报告FOG事件或PIGD与非PIGD分组比较。因此，综述此处的PIGD特异性及CFC紊乱表述需要谨慎对待。",
+      "effect_estimate": "综述未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述未报告。引用[32]原始研究采用PAC及重复测量的步行与静站比较，具体原始统计结果不属于本综述独立数据。",
+      "risk_of_bias": {
+        "tool_or_framework": "叙述性综述方法学初评；adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "文献检索完整性",
+            "judgement": "some_concerns",
+            "reason": "未报告完整检索式及数据库检索的可复现细节。",
+            "source_locator": "Methods，HTML lines 238–245"
+          },
+          {
+            "domain": "研究筛选",
+            "judgement": "some_concerns",
+            "reason": "未报告双人独立筛选及冲突解决过程。",
+            "source_locator": "Methods，HTML lines 243–245"
+          },
+          {
+            "domain": "原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "未报告针对CFC研究的正式偏倚风险评价。",
+            "source_locator": "Methods，HTML lines 239–245"
+          },
+          {
+            "domain": "证据综合及引用准确性",
+            "judgement": "some_concerns",
+            "reason": "综述所称PIGD患者CFC紊乱与引用[32]原始研究的研究人群和实际报告的PAC方向不完全对应。",
+            "source_locator": "Results—LFPs in PD，HTML line 342；References，参考文献32"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是二次证据。核查原始研究Farokhniaee et al. 2024发现，其纳入8例PD患者，分析双侧STN-LFP，研究直立静站与自然步行。该研究没有PIGD与非PIGD组间比较，也没有分析实际FOG事件。其主要发现是步行时beta-gamma PAC较静站增加。因此，不能将本综述该句直接作为PIGD患者FOG期间CFC下降的原始证据。原始研究：PMID:38509158；DOI:10.1038/s41598-024-57252-2。",
+      "quote": "Recordings of PIGD cases also show disrupted cross-frequency coupling (CFC) – defined as the structured, non-random interaction between different brain frequency bands – among beta and either higher (gamma) and lower frequency bands.",
+      "source_locator": {
+        "section": "Results—LFPs in PD，PIGD段",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41557560_E05",
+      "design": "叙述性综述；二次证据；引用[32] Farokhniaee et al. 2024，PMID:38509158，DOI:10.1038/s41598-024-57252-2。",
+      "population": "PD患者；综述未提供原始研究样本分母。引用[32]原始研究为8例接受慢性STN-DBS的患者。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：该证据是综述对原始研究的二次转述；8例患者属于被引用的独立原始研究，不能填入本综述的患者分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "未报告；引用的原始研究明确排除了受FOG或其他步态障碍影响的步行试次。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述未报告。引用[32]原始研究为停药超过12小时。",
+      "DBS_state_and_parameters": "综述未报告。引用[32]原始研究在关闭刺激至少2小时的条件下记录；使用Activa PC+S系统。",
+      "task": "自然直立步行；综述未详细描述。引用[32]原始研究比较upright quiet standing与unperturbed walking。",
+      "recording_location": "双侧STN-LFP；原始研究使用慢性植入DBS电极记录。",
+      "measure": "STN beta-gamma phase-amplitude coupling（PAC）：beta相位与gamma振幅的耦合。此指标不同于平均beta功率，也不同于beta burst duration。",
+      "frequency_and_analysis_window": "综述未报告频带边界和分析窗口。引用[32]原始研究采用beta相位10–30 Hz、gamma振幅40–100 Hz，PAC分析窗口12.5秒；分别计算低beta 13–20 Hz及高beta 20–30 Hz相关PAC。",
+      "finding": "综述称Farokhniaee等提供了直接证据，表明PD患者步行时STN内出现不同的beta-gamma PAC模式，并据此提出步态状态特异性aDBS的研究方向。该证据属于自然步行中的非冻结神经活动，不是FOG事件相关证据。原始研究报告步行相对于静站的STN beta-gamma PAC增加，而不是FOG期间PAC下降。",
+      "effect_estimate": "综述未提供数值效应量。引用[32]原始研究报告STN-总PAC步行与静站比较p=0.002，STN+比较p=0.003；低、高beta PAC均有显著变化，低beta的PAC调制更明显。原始研究报告Pearson相关：STN-步行PAC与支撑相及双支撑时间增加相关，但Spearman相关未发现显著结果。",
+      "statistical_unit_and_method": "综述未报告统计细节。引用[32]原始研究以8例患者为患者级分析单位，采用Kullback-Leibler modulation index计算PAC，配对t检验比较站立与步行，并使用Pearson和Spearman相关分析步态参数。不能将患者级数据与步态周期或试次数混为一谈。",
+      "risk_of_bias": {
+        "tool_or_framework": "叙述性综述方法学初评；adapted_not_validated。",
+        "domains": [
+          {
+            "domain": "文献检索完整性",
+            "judgement": "some_concerns",
+            "reason": "检索数据库与截止时间明确，但完整检索策略不可复现。",
+            "source_locator": "Methods，HTML lines 238–245"
+          },
+          {
+            "domain": "研究筛选",
+            "judgement": "some_concerns",
+            "reason": "没有明确报告独立筛选人数及筛选一致性。",
+            "source_locator": "Methods，HTML lines 243–245"
+          },
+          {
+            "domain": "原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "未报告针对小样本步态电生理研究的正式偏倚风险评价。",
+            "source_locator": "Methods，HTML lines 239–245"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "将步态相关PAC证据用于支持任务特异性神经调控方向，但未提供FOG事件级验证或临床预测效能。",
+            "source_locator": "Results—Clinical Applications，HTML lines 448–449"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究不能作为FOG事件级神经证据。原始研究明确只分析未受FOG或其他步态障碍影响的步行试次。所有8例患者具有稳定的左旋多巴和STN-DBS治疗反应，且研究在停药超过12小时、停刺激至少2小时条件下进行。原始结果支持步行相关的beta-gamma PAC动态变化，以及PAC与支撑相、双支撑时间的关系，但不能直接证明该耦合预测或导致FOG。另一个重要限制是患者数量较少，且Pearson与Spearman相关分析结果不一致。原始研究：PMID:38509158；DOI:10.1038/s41598-024-57252-2。",
+      "quote": "Farokhniaee et al. provided direct evidence that gait elicits distinct beta-gamma phase-amplitude coupling patterns within the STN of PD patients.",
+      "source_locator": {
+        "section": "Results—Clinical Applications，aDBS and Personalized Therapy",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

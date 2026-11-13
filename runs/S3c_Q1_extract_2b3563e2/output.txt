@@ -1,0 +1,401 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40677701; PMCID:PMC12268161; DOI:10.1093/braincomms/fcaf266",
+    "title": "Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": "possible_match/high-confidence likely version_of: PMID:38978669; DOI:10.1101/2024.06.26.24309418. The latter is a 2024 medRxiv preprint titled 'Beta Burst-Driven Adaptive Deep Brain Stimulation Improves Gait Impairment and Freezing of Gait in Parkinson's Disease'. The two publications have matching authors, sample size (n=7), bilateral STN Summit RC+S implantation, beta-burst-driven adaptive DBS architecture, and gait tasks. The preprint describes the randomized control as intermittent DBS (iDBS), whereas the final publication uses randomly adapting DBS (rDBS). These differences are consistent with manuscript revision, not evidence of an independent replication. Patient-level overlap should nevertheless be confirmed by bibliographic/version audit.",
+    "study_id_candidate": "candidate_same_study_PMID40677701_PMID38978669",
+    "cohort_id_candidate": "candidate_Stanford_Summit_RCS_PD_n7",
+    "cohort_relation_basis": "Likely the same Stanford University research cohort reported in the 2024 preprint. Supporting evidence: identical author group and institutional center; seven participants with PD; bilateral STN model 3389 leads; investigational Summit RC+S neurostimulator; PC-in-the-loop beta-burst-driven aDBS; harnessed stepping-in-place and free-walking turning/barrier course. The published paper reports four initial IPG recipients and three IPG replacements. No explicit participant-level crosswalk between preprint and final publication was independently established. The preprint and published paper must not be counted as independent cohorts pending audit.",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "40677701_E01",
+      "design": "单中心、随机刺激强度滴定的急性实验性DBS研究。此条提取的是Figure 2中P03的一例个体校准结果，而非独立病例研究或队列级统计结果。",
+      "population": "P03，七名PD受试者之一。全队列7人，5男2女，平均年龄63.7±4.9岁，平均病程14.0±2.5年；6/7依据FOG-Q或nFOG-Q被归类为freezer。P03在harnessed stepping-in-place任务中出现冻结。",
+      "n_enrolled": 7,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 2,
+      "missing_reason": "n_FOG_events：全文未报告P03在各刺激强度下的独立冻结事件总数。n_trials：全文未报告各刺激强度下独立重复试次数。n_electrodes_contacts记录P03双侧植入的2根STN DBS lead；图中仅展示一个STN的LFP信号，未明确给出该示例的全部记录contact数量。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；原文使用freezing of gait/FOG，未进一步区分akinetic、trembling-in-place或其他表型。",
+      "medication_phenotype": "unknown；研究未明确报告P03属于临床OFF-FOG、ONOFF-FOG、ON-FOG或biphasic。",
+      "experimental_medication_state": "Med-Off。实验前停用长效多巴胺激动剂至少48小时，多巴胺激动剂及控释carbidopa/levodopa至少24小时，短效药物至少12小时。",
+      "DBS_state_and_parameters": "P03接受个体化刺激强度滴定。图示包括0%（OFF）、25%、50%以及75%至110%临床刺激幅度。研究的ON刺激条件使用相同active contacts、140.1 Hz频率和60 μs脉宽。P03的个体化治疗窗口在75%至110%临床刺激幅度之间。具体各侧触点配置见Table 2。",
+      "task": "100秒harnessed stepping-in-place任务，自主交替踏步，双侧力台记录。该任务为模拟/替代性冻结诱发任务，不等同于自然直立前行或转弯行走。",
+      "recording_location": "双侧sensorimotor STN植入DBS lead（Medtronic model 3389）。Figure 2C-D展示与P03行为记录对应的一个STN的LFP数据，具体侧别在该图文字说明中未明确。",
+      "measure": "行为结局：percent time freezing。采用力台数据识别冻结事件。Figure 2C-D同时展示该患者STN beta peak和beta burst duration随刺激强度的变化，但本条仅提取冻结时间结局，不将其与神经信号合并为一个效应量。",
+      "frequency_and_analysis_window": "力台采样率1000 Hz。冻结识别算法检测足部未充分离开力台的情况，依据垂直地面反作用力峰值低于体重15%及高于体重85%的条件识别冻结。结局为整个100秒任务中的冻结时间百分比。未报告神经信号与冻结事件的时间锁定窗口。",
+      "finding": "P03在0%和25%临床刺激幅度下整个试次均处于冻结状态；在50%刺激幅度下大部分时间处于冻结状态；刺激提高至75%后出现明显改善，并随刺激提高至110%继续改善。对应Figure 2C-D显示该患者STN beta峰约15 Hz，随刺激增加而衰减，beta burst duration也逐渐缩短。上述行为和神经变化是同一患者的并行观察，不构成事件级神经-行为相关性分析。",
+      "effect_estimate": "仅报告定性变化。正文没有给出P03各刺激强度下percent time freezing的精确数值、组间效应量、置信区间或P值。Figure 2B提供百分比图示，但未在正文逐点列出数值。",
+      "statistical_unit_and_method": "患者级单例描述性观察；同一患者在不同刺激幅度下重复测试。未对该单例报告独立统计检验，也未报告患者内beta burst duration与FOG百分比的相关系数或回归模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机刺激强度滴定研究的适配性初评；该条为单例图示，不是独立随机试验效应估计）",
+        "domains": [
+          {
+            "domain": "Randomization process",
+            "judgement": "some_concerns",
+            "reason": "正文报告随机化刺激强度滴定，但没有充分说明随机序列生成方法和分配隐藏。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "some_concerns",
+            "reason": "主要刺激条件采用双盲设计，但没有明确说明该个体校准滴定过程中的参与者和操作者盲法及其成功程度。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Missing outcome data",
+            "judgement": "unclear",
+            "reason": "图示仅展示一个患者的代表性校准过程，各刺激强度下重复次数及未完成试次情况未报告。",
+            "source_locator": "Results—Calibration of aDBS; Figure 2"
+          },
+          {
+            "domain": "Measurement of the outcome",
+            "judgement": "some_concerns",
+            "reason": "使用经过验证的力台冻结识别算法，但未报告由视频或临床评审者对该患者每次冻结进行独立确认。",
+            "source_locator": "Materials and methods—Kinetic and kinematic data analysis—Stepping-in-place"
+          },
+          {
+            "domain": "Selection of the reported result",
+            "judgement": "some_concerns",
+            "reason": "仅展示P03作为校准示例，未说明该个体被选作图示代表的预设标准；不能据此推断整个队列具有相同的剂量反应。",
+            "source_locator": "Results—Calibration of aDBS; Figure 2A-B"
+          },
+          {
+            "domain": "Neural signal quality and artifact（补充域）",
+            "judgement": "some_concerns",
+            "reason": "作者明确报告刺激幅度改变后存在LFP伪迹；P03的右侧STN未用于神经自适应控制，原因是beta burst duration调制不足。",
+            "source_locator": "Materials and methods—Ramp rate; Results—Calibration of aDBS; Table 2"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是单患者校准示例，不是队列级结果。精确冻结百分比及独立试次数未报告。尽管同一校准任务中beta burst duration和FOG表现均随刺激幅度改善，研究没有对同一冻结事件进行神经时间锁定，也没有检验beta burst持续时间能否预测下一次冻结。因此不能将并行变化解释为直接的事件级神经关联或因果机制。",
+      "quote": "The participant is frozen for the entirety of the trial both at 0% (OFF) stimulation and at 25% of their clinical stimulation amplitude, and for the majority of the trial at 50% clinical stimulation.",
+      "source_locator": {
+        "section": "Results—Calibration of aDBS",
+        "page": null,
+        "figure_table": "Figure 2A-B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40677701_E02",
+      "design": "单中心、随机刺激幅度滴定、重复测量的急性STN电生理研究。第一次访问（first visit）队列级beta burst duration分析。",
+      "population": "7名PD患者，5男2女，平均年龄63.7±4.9岁，平均病程14.0±2.5年；6/7依据FOG-Q或nFOG-Q被分类为freezers。均植入双侧STN DBS lead（model 3389）并连接Summit RC+S。",
+      "n_enrolled": 7,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 7,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 14,
+      "missing_reason": "n_patients_with_FOG：全文未报告该神经分析中实际发生FOG的患者数，也未按freezer与non-freezer分别分析。全队列有6/7临床表型分类为freezer。n_FOG_events：全文未报告事件数。n_trials：全文未报告校准滴定的独立试次数。n_electrodes_contacts记录14根双侧植入lead；实际用于第一次访问aDBS控制的STN侧别为11个（4人双侧、3人单侧），不是14个独立有效神经记录通道。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；没有按akinetic、trembling-in-place或其他FOG亚型分层。",
+      "medication_phenotype": "unknown；虽然6/7被归类为freezers，但未报告临床FOG的具体药物反应表型。",
+      "experimental_medication_state": "Med-Off。长效多巴胺激动剂停用至少48小时，多巴胺激动剂及控释carbidopa/levodopa停用至少24小时，短效药物停用至少12小时。",
+      "DBS_state_and_parameters": "第一次访问的随机刺激幅度滴定为临床刺激幅度的25%-125%，用于确定治疗窗口和个体化beta burst duration阈值。研究ON刺激条件采用相同active contacts、140.1 Hz、60 μs。第一次访问中4名患者使用双侧aDBS，3名使用单侧aDBS。全队列平均Imin为2.8±1.1 mA（78.1±16.8%临床幅度），平均Imax为3.8±1.2 mA（107.8±10.0%临床幅度）。",
+      "task": "第一次访问的harnessed stepping-in-place校准任务，并包括静息及步态状态下的校准运行。本文报告的是刺激幅度对beta burst duration的整体影响，而不是FOG事件发生前、发生中或恢复期的神经活动比较。",
+      "recording_location": "双侧sensorimotor STN。Medtronic Summit RC+S记录LFP，每侧STN一个通道，采样率500 Hz。使用sense-friendly配置，记录触点位于刺激触点两侧（0-2、1-3或0-3）。第一次访问有11个STN侧别实际用于aDBS控制。整个队列中3个STN侧别因刺激伪迹或beta burst duration调制不足而不可用。",
+      "measure": "STN LFP beta burst duration。使用患者特异性的beta频带，而不是单纯平均beta功率。Figure 2C-D还描述了代表性患者beta peak attenuation，但队列统计结局为beta burst duration。",
+      "frequency_and_analysis_window": "患者特异性6 Hz频带，位于13-30 Hz beta范围内并以个体beta peak为中心。LFP经128阶FIR带通滤波，平方后生成beta envelope，依据阈值交叉确定burst起止。阈值参考OFF记录中45-65 Hz频带线性envelope的平均trough power。离线PSD使用Welch方法、1秒Hanning窗口、50%重叠。未报告FOG事件锁定的神经分析窗口。",
+      "finding": "第一次访问期间，随着刺激幅度增加，STN beta burst duration在队列层面显著缩短。该结果说明beta burst duration对STN刺激强度具有调制反应，但研究没有进一步检验缩短的burst是否发生在FOG消失之前或是否与单次FOG事件的持续时间相关。",
+      "effect_estimate": "第一次访问：t=4.16，P=1.4×10^-4。未报告该神经效应的置信区间或标准化效应量。Imin=2.8±1.1 mA，Imax=3.8±1.2 mA为全队列参数描述，不应视为beta burst duration的效应量。",
+      "statistical_unit_and_method": "线性混合效应模型；固定效应为stimulation amplitude，随机效应为participant嵌套于STN side。统计观察包含不同患者、STN侧别及刺激幅度下的重复测量。不是FOG事件级模型，也没有患者级beta-FOG相关系数。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机刺激幅度滴定及重复测量神经生理实验的适配性初评）",
+        "domains": [
+          {
+            "domain": "Randomization process",
+            "judgement": "some_concerns",
+            "reason": "刺激强度滴定被描述为随机化，但随机序列产生方法和分配隐藏细节未报告。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "some_concerns",
+            "reason": "患者特异性校准、刺激窗口及阈值由行为表现和信号调制情况共同决定；未充分报告校准过程中的操作者盲法。",
+            "source_locator": "Materials and methods—Therapeutic window; Threshold determination"
+          },
+          {
+            "domain": "Missing outcome data",
+            "judgement": "some_concerns",
+            "reason": "全队列14个STN侧别中有3个因刺激伪迹或beta burst调制不足无法用于神经自适应控制。虽然7名患者均有至少一侧可用信号，但双侧数据不完整。",
+            "source_locator": "Results—Limitations; Table 2"
+          },
+          {
+            "domain": "Measurement of the outcome",
+            "judgement": "some_concerns",
+            "reason": "beta burst采用患者特异性频带及阈值定义；刺激变化可能产生LFP伪迹。作者采用较慢ramp rate降低伪迹，但未报告独立盲态信号质量评审。",
+            "source_locator": "Materials and methods—Neural adaptive DBS control policy algorithm; Ramp rate"
+          },
+          {
+            "domain": "Selection of the reported result",
+            "judgement": "unclear",
+            "reason": "正文未提供预注册分析计划或完整预设神经终点列表；补充材料未能独立检查。",
+            "source_locator": "Statistical analysis; Results—Calibration of aDBS"
+          },
+          {
+            "domain": "Neural signal quality and artifact（补充域）",
+            "judgement": "some_concerns",
+            "reason": "3个STN侧别无法用于aDBS，原因包括刺激伪迹及beta burst duration调制不足；另有触点配置调整以满足sense-friendly条件。",
+            "source_locator": "Results—Limitations; Table 2"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是刺激幅度对beta burst duration的调制证据，而非beta burst与FOG事件的直接关联证据。没有比较FOG与非FOG步态阶段的burst持续时间，没有pre-FOG、during-FOG或offset-recovery分段，也没有检验患者级或事件级预测性能。论文引言关于freezer的beta burst更长且在FOG期间进一步延长的背景论述引用了Anidi等2018年的独立原始研究（PMID:30196050；DOI:10.1016/j.nbd.2018.09.004），不能作为本研究新队列的重复验证。",
+      "quote": "increasing levels of stimulation amplitude led to a significant reduction in beta burst durations during calibration for both the first visit",
+      "source_locator": {
+        "section": "Results—Calibration of aDBS; Materials and methods—Offline neural data analysis; Statistical analysis",
+        "page": null,
+        "figure_table": "Figure 2C-D; Table 2; Supplementary Fig. 2",
+        "supplement": "Supplementary Fig. 2被正文引用，但补充文件未能独立获取和核查"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40677701_E03",
+      "design": "单中心、随机刺激幅度滴定、重复测量的急性STN电生理研究。第二次访问（second visit）队列级beta burst duration分析。",
+      "population": "原始队列7名PD患者；第二次访问神经校准分析包括6名患者。原始队列5男2女，平均年龄63.7±4.9岁，平均病程14.0±2.5年。第二次访问在第一次访问约3±1个月后进行。",
+      "n_enrolled": 7,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 6,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 12,
+      "missing_reason": "第二次访问分析6名患者；原文没有按该6人重新报告临床FOG患者数。n_FOG_events全文未报告。校准独立试次数未报告。12为6名患者的双侧植入lead数；第二次访问有3人双侧aDBS、3人单侧aDBS，即9个STN侧别用于神经自适应控制。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；没有报告akinetic、trembling-in-place或其他FOG亚型。",
+      "medication_phenotype": "unknown；临床FOG的ON/OFF药物反应表型未明确。",
+      "experimental_medication_state": "Med-Off。长效多巴胺激动剂停用至少48小时，多巴胺激动剂及控释carbidopa/levodopa停用至少24小时，短效药物停用至少12小时。",
+      "DBS_state_and_parameters": "第二次访问的随机刺激幅度滴定用于确定turning and barrier course环境下的个体化神经控制参数。aDBS在患者特异性Imin-Imax治疗窗口内调整刺激。研究ON刺激条件使用相同active contacts、140.1 Hz、60 μs。第二次访问中3人使用双侧aDBS，3人使用单侧aDBS。",
+      "task": "第二次访问的free-walking turning and barrier course校准及步态任务，包括绕椭圆形路径、figure-eight转弯及通过模拟狭窄通道的障碍。此条的神经结果是刺激幅度与beta burst duration的整体关系，不是FOG事件分段分析。",
+      "recording_location": "双侧sensorimotor STN，Medtronic Summit RC+S。每侧STN一个LFP通道，采样率500 Hz。第二次访问有9个STN侧别用于aDBS神经控制。具体每位患者使用的contact配置、中心beta频率和burst duration阈值列于Table 2。",
+      "measure": "STN LFP beta burst duration。使用患者特异性6 Hz beta频带内的envelope阈值交叉计算burst duration。该结局不是beta burst占据率、burst熵、平均beta功率或跨区coherence。",
+      "frequency_and_analysis_window": "患者特异性6 Hz频带，位于13-30 Hz beta范围内，以个体beta peak为中心。128阶FIR带通滤波，平方后生成envelope；阈值依据OFF记录中45-65 Hz频带envelope trough power确定。PSD采用Welch方法、1秒Hanning窗口、50%重叠。没有pre-FOG/during-FOG事件锁定窗口。",
+      "finding": "第二次访问中，随着刺激幅度增加，STN beta burst duration同样显著缩短。该结果在free-walking任务的校准环境中重复观察到，但研究未证明burst缩短与自然FOG事件减少之间存在直接时间或统计关联。",
+      "effect_estimate": "第二次访问：t=3.09，P=4.3×10^-3。未报告置信区间及标准化效应量。",
+      "statistical_unit_and_method": "线性混合效应模型；固定效应为stimulation amplitude，随机效应为participant嵌套于STN side。第二次访问6名患者、9个用于aDBS的STN侧别。未报告事件级模型或患者级beta-FOG相关分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机刺激幅度滴定及重复测量神经生理实验的适配性初评）",
+        "domains": [
+          {
+            "domain": "Randomization process",
+            "judgement": "some_concerns",
+            "reason": "刺激强度滴定报告为随机化，但随机序列生成及分配隐藏方式没有充分说明。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "some_concerns",
+            "reason": "第二次访问的神经阈值和治疗窗口经过个体化调整，操作者盲法和校准过程中潜在偏离没有完整报告。",
+            "source_locator": "Materials and methods—Therapeutic window; Threshold determination"
+          },
+          {
+            "domain": "Missing outcome data",
+            "judgement": "some_concerns",
+            "reason": "第二次访问仅6人完成；另有3个STN侧别在整个队列中因伪迹或信号调制不足无法用于神经自适应控制。",
+            "source_locator": "Results—Calibration of aDBS; Results—Limitations; Table 2"
+          },
+          {
+            "domain": "Measurement of the outcome",
+            "judgement": "some_concerns",
+            "reason": "burst duration使用患者特异性阈值，且刺激变化可能造成LFP伪迹。研究没有提供独立信号质量评估者的盲态结果。",
+            "source_locator": "Materials and methods—Neural adaptive DBS control policy algorithm; Ramp rate"
+          },
+          {
+            "domain": "Selection of the reported result",
+            "judgement": "unclear",
+            "reason": "没有在正文提供预注册分析计划或完整的预设神经结局列表。",
+            "source_locator": "Statistical analysis; Results—Calibration of aDBS"
+          },
+          {
+            "domain": "Neural signal quality and artifact（补充域）",
+            "judgement": "some_concerns",
+            "reason": "第二次访问有9个STN侧别用于aDBS；部分未使用STN受到刺激伪迹、beta调制不足或治疗性触点配置限制。",
+            "source_locator": "Results—Limitations; Table 2"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果说明STN beta burst duration可以随刺激幅度变化，但没有报告beta burst持续时间在FOG与非FOG阶段之间的直接差异，也没有验证其预测下一次冻结的能力。不能将第一次访问和第二次访问视为两个独立患者队列或独立重复研究。引言中的FOG事件相关beta burst背景证据来自Anidi等2018年研究（PMID:30196050；DOI:10.1016/j.nbd.2018.09.004），而不是本研究第二次访问的新发现。",
+      "quote": "Overall, increasing levels of stimulation amplitude led to a significant reduction in beta burst durations during calibration for both the first visit ... and second visit (t = 3.09, P = 4.3e−3) across the participants.",
+      "source_locator": {
+        "section": "Results—Calibration of aDBS",
+        "page": null,
+        "figure_table": "Table 2（TBC行）；Results中第二次访问beta burst duration统计",
+        "supplement": "Supplementary Materials被引用，但未独立核查"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40677701_E04",
+      "design": "单中心、随机顺序、双盲、重复测量的急性DBS干预研究。第一次访问采用harnessed stepping-in-place任务，比较OFF DBS、adaptive DBS（aDBS）、continuous DBS（cDBS）和randomly adapting DBS（rDBS）四种刺激条件。",
+      "population": "7名PD患者，5男2女，平均年龄63.7±4.9岁，平均病程14.0±2.5年；6/7依据FOG-Q或nFOG-Q被分类为freezers。7人均完成第一次访问的step-in-place FOG结局分析。5人曾在OFF条件下表现出任务内冻结，另外2人在所有条件下均未观察到冻结。",
+      "n_enrolled": 7,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 7,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 14,
+      "missing_reason": "n_FOG_events：全文报告percent time freezing及统计结果，但没有给出独立冻结事件总数。n_trials：Figure 4报告28个participant-condition datapoints（每人每种刺激条件一个数据点），但未明确将其定义为独立trial总数。14为7人双侧植入lead数；第一次访问实际用于aDBS控制的STN侧别为11个。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；使用原文FOG/freezing表述，没有区分akinetic、trembling-in-place或其他冻结表现。",
+      "medication_phenotype": "unknown；临床FOG是否为OFF-FOG、ONOFF-FOG或其他药物表型没有明确报告。",
+      "experimental_medication_state": "Med-Off。长效多巴胺激动剂停用至少48小时，多巴胺激动剂及控释carbidopa/levodopa至少24小时，短效药物至少12小时。每个刺激条件在测试前进行20分钟wash-in。",
+      "DBS_state_and_parameters": "临床DBS参数已由临床医生优化。测试条件包括OFF DBS、aDBS、cDBS和rDBS。三个ON刺激条件使用相同active contacts、140.1 Hz、60 μs。aDBS在个体化Imin-Imax治疗窗口内根据STN beta burst duration调节；cDBS保持固定幅度；rDBS随机打乱aDBS的适应模式，使总电能输送（TEED）和适应模式相近，但与beta生物标志物脱钩。全队列平均Imin为2.8±1.1 mA，Imax为3.8±1.2 mA。",
+      "task": "100秒harnessed stepping-in-place，自主交替踏步，双侧力台记录。该任务是经验证的FOG诱发替代任务，但不是自然前行、转弯或障碍行走。",
+      "recording_location": "双侧sensorimotor STN LFP，由Summit RC+S记录并作为aDBS控制输入。LFP采样率500 Hz。第一次访问4名患者使用双侧aDBS，3名使用单侧aDBS，共11个STN侧别参与神经控制。本文未报告冻结事件发生时的STN LFP单事件分析。",
+      "measure": "主要结局为percent time freezing，即100秒step-in-place任务中被识别为冻结的时间百分比。冻结事件依据力台垂直地面反作用力识别，而非直接由STN beta burst指标定义。",
+      "frequency_and_analysis_window": "力台采样率1000 Hz。算法检测足部未充分离开力台的情况，依据力台峰值低于体重15%及高于体重85%的阈值识别冻结。统计结局为整个任务中的percent time freezing。没有报告beta burst duration在冻结前、冻结中和恢复期的分段频谱分析。",
+      "finding": "刺激条件对percent time freezing有显著总体效应。与OFF DBS相比，aDBS和cDBS显著降低冻结时间；rDBS仅表现为降低趋势，未达到统计学显著。ON刺激条件之间没有观察到显著差异。OFF条件下5名出现冻结的患者在aDBS和cDBS下均有改善，其中3人OFF时整个试次冻结，aDBS下冻结时间改善25%-100%；另外2人所有条件下均未出现冻结。",
+      "effect_estimate": "总体刺激条件效应：F(3,18)=4.53，P=0.016，ηp²=0.42。aDBS vs OFF：t=3.22，P=0.022；cDBS vs OFF：t=3.01，P=0.035；rDBS vs OFF：t=2.72，P=0.062。ON条件比较：aDBS-cDBS，t=0.22，P=1.00；aDBS-rDBS，t=0.51，P=0.96；cDBS-rDBS，t=0.29，P=0.99。未报告置信区间。",
+      "statistical_unit_and_method": "行为结局采用线性混合效应模型，固定效应为stimulation condition，随机效应为participant。N=7，28个participant-condition datapoints，每人每种条件一个数据点。事后比较采用estimated marginal means及Tukey方法。统计单位是患者重复测量数据，而不是独立FOG事件。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机、双盲、重复测量DBS刺激条件比较的适配性初评）",
+        "domains": [
+          {
+            "domain": "Randomization process",
+            "judgement": "some_concerns",
+            "reason": "刺激条件顺序报告为随机，但没有详细说明随机序列生成和分配隐藏方法。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "some_concerns",
+            "reason": "参与者对刺激条件盲法；MDS-UPDRS III由盲态认证评估者完成。但其他实验人员盲法及盲法成功程度没有完整说明。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Missing outcome data",
+            "judgement": "low",
+            "reason": "FOG percent time freezing分析包括全部7名患者和四种条件的28个数据点；未报告该主要FOG结局有缺失。其他IMU步态指标存在单个数据缺失，但不等同于本条FOG结局缺失。",
+            "source_locator": "Results—Stimulation improves stepping in harnessed gait task; Figure 4"
+          },
+          {
+            "domain": "Measurement of the outcome",
+            "judgement": "some_concerns",
+            "reason": "使用此前验证过的力台冻结识别算法，但正文没有报告视频或临床人员对每次冻结事件的独立确认。",
+            "source_locator": "Materials and methods—Kinetic and kinematic data analysis—Stepping-in-place"
+          },
+          {
+            "domain": "Selection of the reported result",
+            "judgement": "unclear",
+            "reason": "正文没有提供完整预注册统计分析计划；研究同时报告多种运动学和临床结局，无法核查所有预设结局是否完整报告。",
+            "source_locator": "Statistical analysis; Results—Stimulation improves stepping in harnessed gait task"
+          },
+          {
+            "domain": "Neural signal quality and artifact（补充域）",
+            "judgement": "some_concerns",
+            "reason": "aDBS需要可用的STN beta信号；3个STN侧别不能用于神经控制。刺激变化本身可能产生LFP伪迹，可能影响干预实施的普遍适用性。",
+            "source_locator": "Materials and methods—Ramp rate; Results—Limitations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该任务为harnessed stepping-in-place，属于C类模拟/替代性FOG终点，不能与自然前行或转弯中的FOG直接等同。冻结由力台算法客观识别，但没有报告视频或临床确认。最重要的是，rDBS在不与beta biomarker关联的情况下也表现出冻结改善趋势，且aDBS、cDBS和rDBS之间没有显著差异。研究没有证明beta-burst触发机制优于维持最低治疗刺激幅度或匹配TEED的随机适应刺激。无显著差异不等同于正式等效性检验。",
+      "quote": "Post-hoc pairwise comparisons showed significant reductions in percent time freezing compared to OFF stimulation for aDBS (t = 3.22, P = 0.022) and cDBS (t = 3.01, P = 0.035)",
+      "source_locator": {
+        "section": "Results—Stimulation improves stepping in harnessed gait task",
+        "page": null,
+        "figure_table": "Figure 4A-E",
+        "supplement": "Supplementary Table 3（步态个体数据被正文引用）"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "40677701_E05",
+      "design": "单中心、随机顺序、双盲、重复测量的急性DBS干预研究。第二次访问采用free-walking turning and barrier course，比较OFF DBS、aDBS、cDBS和rDBS。",
+      "population": "原始队列7名PD患者。实际完成turning and barrier course的患者为5名。P05因在临床刺激状态下不能安全地独立完成该任务而未参加该测试；P07因个人原因提前退出研究。5名完成测试者中，3名在OFF DBS时出现冻结，另外2名在所有条件下均未出现冻结。",
+      "n_enrolled": 7,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 10,
+      "missing_reason": "P05因安全原因未完成turning and barrier course；P07提前退出研究，因此该结局仅分析5人。Figure 5报告35个participant-timepoint datapoints（OFF=5，cDBS=10，aDBS=10，rDBS=10），但没有明确将数据点定义为独立trial总数。n_FOG_events全文未报告。10为5名分析患者的双侧植入lead数；具体记录contact数量没有按该5人单独汇总。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；未区分akinetic、trembling-in-place、kinetic-no-trembling或mixed表型。",
+      "medication_phenotype": "unknown；没有报告患者的FOG是否为OFF-FOG、ONOFF-FOG或其他药物反应表型。",
+      "experimental_medication_state": "Med-Off。长效多巴胺激动剂停用至少48小时，多巴胺激动剂及控释carbidopa/levodopa至少24小时，短效药物至少12小时。ON刺激条件在60分钟wash-in后测试，并在额外60分钟后（120分钟时间点）重复；OFF条件仅测试一次。",
+      "DBS_state_and_parameters": "临床DBS参数已优化。比较OFF DBS、aDBS、cDBS和rDBS。三个ON刺激条件使用相同active contacts、140.1 Hz频率和60 μs脉宽。aDBS根据个体化STN beta burst duration阈值在Imin-Imax范围内调整刺激；cDBS保持固定刺激幅度；rDBS随机打乱aDBS适应模式，保持类似TEED和刺激适应模式，但与beta biomarker脱钩。第二次访问中3人双侧aDBS、3人单侧aDBS。",
+      "task": "自然直立free walking turning and barrier course。患者沿两个椭圆形路径及figure-eight路径行走，并通过模拟狭窄走廊和门口的障碍。任务旨在诱发FOG。ON刺激条件在60分钟和120分钟时间点重复测试；OFF条件只测试一次。",
+      "recording_location": "双侧sensorimotor STN，Medtronic Summit RC+S记录LFP并用于aDBS控制。每侧STN一个LFP通道，采样率500 Hz。第二次访问整体有9个STN侧别用于aDBS控制；但论文没有单独汇总本条5名实际完成walking course患者对应的有效记录contact总数。",
+      "measure": "主要结局为percent time freezing，即turning and barrier course中被算法识别为冻结的时间比例。该结局来自穿戴式IMU和步态运动学模型，而不是STN LFP直接计算，也没有报告视频或临床评审者对每个冻结事件的确认。",
+      "frequency_and_analysis_window": "IMU三轴陀螺仪采样率128 Hz。胫骨角速度采用9 Hz低通Butterworth滤波，并提取矢状面角速度。冻结通过此前验证的logistic regression模型逐步态周期识别：使用过去6步的arrhythmicity和asymmetry，以及最近一步的stride time和swing angular range计算freeze probability；概率超过0.7定义为freeze。结局为任务期间percent time freezing。没有报告beta burst与冻结事件的时间锁定窗口。",
+      "finding": "刺激条件对free-walking任务中的percent time freezing具有显著总体效应。与OFF DBS相比，aDBS、cDBS和rDBS均显著降低冻结时间。三种ON刺激条件之间均未观察到显著差异。3名在OFF条件下出现冻结的患者中，2名在aDBS和cDBS下出现冻结改善；讨论部分进一步指出，第三名患者在两个评估时间点中的一个时间点也出现改善。另有2名患者在所有条件下均没有冻结。",
+      "effect_estimate": "总体刺激条件效应：F(3,27)=4.73，P=0.0089，ηp²=0.34。aDBS vs OFF：t=2.95，P=0.031；cDBS vs OFF：t=3.25，P=0.013；rDBS vs OFF：t=3.52，P=0.0080。ON条件比较：aDBS-cDBS，t=0.47，P=0.97；aDBS-rDBS，t=0.70，P=0.90；cDBS-rDBS，t=0.24，P=1.00。未报告置信区间。",
+      "statistical_unit_and_method": "线性混合效应模型，固定效应为stimulation condition，随机效应为participant。N=5，35个participant-timepoint datapoints：OFF=5，cDBS=10，aDBS=10，rDBS=10；OFF每人一个时间点，ON条件每人两个时间点。事后比较使用estimated marginal means及Tukey校正。统计单位为患者重复测量数据，不是独立FOG事件。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机、双盲、重复测量DBS刺激条件比较的适配性初评）",
+        "domains": [
+          {
+            "domain": "Randomization process",
+            "judgement": "some_concerns",
+            "reason": "刺激条件顺序报告为随机，但随机序列生成、分配隐藏方法没有充分描述。",
+            "source_locator": "Materials and methods—Experimental protocol"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "some_concerns",
+            "reason": "参与者对刺激条件盲法，但实验人员盲法及盲法成功程度没有充分报告。aDBS参数为患者特异性校准，存在个体间实施差异。",
+            "source_locator": "Materials and methods—Experimental protocol; Neural adaptive DBS control policy algorithm"
+          },
+          {
+            "domain": "Missing outcome data",
+            "judgement": "some_concerns",
+            "reason": "7名入组患者中仅5名完成free-walking FOG分析。P05因不能安全完成任务而未参加，P07提前退出；虽然缺失原因明确，但缺失比例较高且样本较小。",
+            "source_locator": "Results—Stimulation improves gait in free walking task"
+          },
+          {
+            "domain": "Measurement of the outcome",
+            "judgement": "some_concerns",
+            "reason": "采用此前验证的logistic regression冻结识别算法，具有客观量化优势，但没有报告视频或临床评审确认每个事件。模型阈值为freeze probability >0.7。",
+            "source_locator": "Materials and methods—Kinetic and kinematic data analysis—Turning and barrier course"
+          },
+          {
+            "domain": "Selection of the reported result",
+            "judgement": "unclear",
+            "reason": "没有完整预注册统计分析计划，且同时分析多个运动学、FOG及临床结局，无法核查所有预设终点是否完整报告。",
+            "source_locator": "Statistical analysis; Results—Stimulation improves gait in free walking task"
+          },
+          {
+            "domain": "Neural signal quality and artifact（补充域）",
+            "judgement": "some_concerns",
+            "reason": "3个STN侧别在研究中无法用于神经自适应控制；LFP刺激伪迹和sense-friendly触点配置限制了双侧aDBS的普遍可行性。",
+            "source_locator": "Results—Limitations; Table 2"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该任务属于自然直立行走中的客观识别冻结，较harnessed stepping-in-place更接近日常FOG，但仍属于B类而非视频/临床确认的A类。第二次访问只有5人完成任务，样本量小。最重要的机制限制是：rDBS在与beta biomarker脱钩的情况下仍然显著改善FOG，与aDBS和cDBS之间没有显著差异。因此，不能仅凭aDBS优于OFF DBS就推断beta burst-triggered反馈具有特异性治疗机制。作者指出rDBS使用相同Imin-Imax治疗窗口且维持相似TEED，可能解释其疗效。研究没有检验单次FOG前后的STN beta burst持续时间，也没有直接检验beta burst是否预测下一次冻结。没有正式等效性检验，因此ON条件无显著差异不能解释为严格等效。",
+      "quote": "Post-hoc pairwise comparisons showed significant reductions compared to OFF stimulation for aDBS (t = 2.95, P = 0.031) cDBS (t = 3.25, P = 0.013), and rDBS (t = 3.52, P = 0.0080).",
+      "source_locator": {
+        "section": "Results—Stimulation improves gait in free walking task",
+        "page": null,
+        "figure_table": "Figure 5E-F",
+        "supplement": "Supplementary Table 3（步态个体数据被正文引用）"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

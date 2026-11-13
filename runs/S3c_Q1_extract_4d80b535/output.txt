@@ -1,0 +1,495 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:30262859; DOI:10.1038/s41598-018-32161-3; PMCID:PMC6160461",
+    "title": "Frequency-dependent effects of subthalamic deep brain stimulation on motor symptoms in Parkinson's disease: a meta-analysis of controlled trials",
+    "publication_status": "review",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:30262859",
+    "cohort_id_candidate": "not_applicable_secondary_meta_analysis",
+    "cohort_relation_basis": "本研究是纳入10项既往研究、共132名患者的Meta-analysis，不存在新招募的单一患者队列。FOG-SWS事件数分析涉及Moreau 2008（n=13）和Xie 2018（n=11）；FOG问卷分析涉及Xie 2015（n=7）和Xie 2018（n=11）。Xie 2015与Xie 2018是不同正式发表论文，但具有相同第一作者Tao Xie及University of Chicago Medicine研究背景，可能存在患者队列重叠；本综述没有报告招募时间、患者去重或明确的不重叠声明，因此标记为possible_overlap/unknown，不应直接视为独立重复验证。Moreau 2008来自另一研究团队，未发现本综述提供的队列重叠证据。讨论中引用的Blumenfeld 2015和Blumenfeld 2017来自同一Stanford研究团队，可能存在队列重叠，但本综述未报告相关信息。原始研究标识：Moreau 2008 PMID:18420482，DOI:10.1212/01.wnl.0000303972.16279.46；Xie 2015 PMID:25540305，DOI:10.1212/WNL.0000000000001184；Xie 2018 PMID:29654112，DOI:10.1136/jnnp-2018-318060。",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "30262859_E01_SWS_FOG_count",
+      "design": "二手来源：随机效应Meta-analysis。FOG-SWS事件数的森林图纳入两项原始研究：Moreau et al. 2008（PMID:18420482；DOI:10.1212/01.wnl.0000303972.16279.46）和Xie et al. 2018（PMID:29654112；DOI:10.1136/jnnp-2018-318060）。两项研究均比较STN-DBS不同刺激频率。森林图报告各频率条件的患者数，但本综述没有说明配对数据的协方差处理方法。原始研究标识已核对：【turn488835search2】【turn488835search0】。",
+      "population": "帕金森病患者，接受双侧STN-DBS。Moreau 2008纳入13人，药物洗脱状态；Xie 2018纳入11人，药物ON状态。综述未报告两项研究中满足明确FOG诊断标准的患者人数，也未提供冻结表型亚型。",
+      "n_enrolled": null,
+      "n_analyzed": 24,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本研究为二手Meta-analysis，没有新招募患者。n_analyzed=24依据Figure 5c中两项研究的患者数13和11相加得到，表示该终点涉及的独立患者数，不是LFS与HFS两组人数相加。原始研究的enrolled与endpoint-specific analyzed分母没有分别报告。FOG阳性患者总数未报告；原始FOG事件总数未报告，森林图仅提供组均值和标准差；每名患者完成的SWS试次数未报告。该终点没有神经记录，n_patients_with_valid_neural_data和n_electrodes_contacts不适用。",
+      "endpoint_class": "unclear",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；报告SWS期间FOG数量，但未区分akinetic、trembling-in-place、kinetic-no-trembling或mixed。",
+      "medication_phenotype": "unknown；未将患者按临床OFF-FOG、ONOFF-FOG或ON-FOG分类。",
+      "experimental_medication_state": "Figure 5c标注both on and off，表示药物ON和OFF状态混合分析。Table 1显示Moreau 2008为washed out，Xie 2018为on。未提供该FOG终点按药物状态分层的独立效应量。",
+      "DBS_state_and_parameters": "两项原始研究均为双侧STN-DBS。比较LFS与HFS：LFS定义为<100 Hz，主要为60或80 Hz；HFS定义为>100 Hz，主要为130或150 Hz。Moreau 2008采用constant TEED及constant pulse width；Xie 2018采用usual voltage and pulse-width。具体刺激触点、方向性、幅度、脉宽及两项研究各自的全部频率参数未在本综述中完整列出。",
+      "task": "Stand-walk-sit（SWS）测试，评估站立、行走和坐下过程中发生的FOG数量。",
+      "recording_location": "无神经活动记录。STN是DBS刺激靶点，不是本Meta-analysis的神经记录位置。",
+      "measure": "SWS测试期间FOG数量；比较LFS与HFS条件下的FOG计数。",
+      "frequency_and_analysis_window": "LFS<100 Hz（主要60或80 Hz）与HFS>100 Hz（主要130或150 Hz）。Table 1报告刺激参数调整后至评估的时间：Moreau 2008为60分钟，Xie 2018为30分钟。没有STN神经信号分析窗口。",
+      "finding": "LFS条件下SWS测试期间FOG数量低于HFS。Figure 5c的研究级数据：Moreau 2008，LFS 0.69±0.36、HFS 1.875±1.502；Xie 2018，LFS 0.1±0.2、HFS 3.0±3.8。合并分析支持LFS条件下FOG数量较少。该发现是刺激频率与临床FOG结局之间的干预比较，不是STN神经活动与FOG事件的直接相关性证据。",
+      "effect_estimate": "合并均数差MD（LFS-HFS）=-1.71，95% CI [-3.26,-0.16]，p=0.03。异质性Q=1.96，df=1，p=0.16，I²=49%。森林图采用IV random-effects。Moreau 2008单项MD约-1.19；Xie 2018单项MD=-2.90，95% CI [-5.15,-0.65]。",
+      "statistical_unit_and_method": "患者条件下的SWS FOG计数；先计算研究级LFS-HFS均数差，再通过inverse-variance random-effects Meta-analysis合并。只有两项研究，患者数为13和11。没有事件级混合效应模型，也未在本综述中说明配对相关性或重复测量协方差的处理方式。统计推断单位是研究级效应量，而非独立FOG事件。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（基于全文的研究者适配初评，并非正式ROBIS认证评分）。原作者另使用Cochrane Collaboration risk-of-bias tool评价纳入研究。",
+        "domains": [
+          {
+            "domain": "ROBIS Domain 1：研究问题与纳入标准",
+            "judgement": "some_concerns",
+            "reason": "明确规定人类PD患者、STN靶点、前瞻性研究、LFS/HFS比较和结局指标，但限制英文发表文献，可能产生语言选择偏倚。",
+            "source_locator": "Methods > Eligibility criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 2：文献检索与研究选择",
+            "judgement": "some_concerns",
+            "reason": "检索PubMed、Embase、Cochrane Library和Web of Science，并追溯引用文献；但检索式报告较简略，排除会议论文，未见充分的灰色文献检索说明。",
+            "source_locator": "Methods > Search criteria及Eligibility criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 3：数据提取与原始研究质量评价",
+            "judgement": "some_concerns",
+            "reason": "两名医生分别独立完成质量评价和数据提取，但没有充分说明分歧解决程序；FOG事件识别方式及配对数据处理细节未报告。",
+            "source_locator": "Methods > Quality evaluation and data collection，p.4；Figure 2，p.3"
+          },
+          {
+            "domain": "ROBIS Domain 4：证据综合与结果解释",
+            "judgement": "some_concerns",
+            "reason": "提供合并效应量、95% CI和异质性指标，但FOG事件数仅有两项研究，I²为49%；事件识别标准、药物状态混合影响及重复测量处理不充分。",
+            "source_locator": "Results > Freezing of gait，p.6；Figure 5c，p.6"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "some_concerns",
+            "reason": "作者明确表示由于纳入研究数量少，没有进行发表偏倚分析。",
+            "source_locator": "Methods > Statistical analysis，p.4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "FOG计数仅来自两项研究，样本较小。综述未说明FOG事件由视频/临床评审确认，还是由运动学或其他客观方法识别，因此不能严格归入A_actual_natural或B_objective_natural。药物ON/OFF状态混合。Methods称由于药物ON研究数量有限，仅分析药物OFF数据，但Figure 5c又明确标注both on and off，存在方法与结果报告不一致。该研究没有记录STN LFP、单单位活动或皮层-STN耦合，因此不能支持FOG事件与STN神经信号之间的直接关联。",
+      "quote": "the number of FOG during SWS tests ... were lower after the LFS intervention than HFS",
+      "source_locator": {
+        "section": "Results > Freezing of gait；Table 1提供贡献研究的刺激参数和评估时间",
+        "page": "6；Table 1位于p.3",
+        "figure_table": "Figure 5c（SWS number of FOG）；Table 1。Results正文将该结果交叉引用为Fig.6e，但实际森林图位于Figure 5。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E02_FOG_questionnaire",
+      "design": "二手来源：Meta-analysis中的FOG questionnaire score合并分析。Figure 5d纳入Xie et al. 2015（PMID:25540305；DOI:10.1212/WNL.0000000000001184）和Xie et al. 2018（PMID:29654112；DOI:10.1136/jnnp-2018-318060）。两项研究均在药物ON条件下进行频率比较。原始研究标识：【turn488835search1】【turn488835search0】。",
+      "population": "PD患者，接受双侧STN-DBS。Xie 2015样本7人，Xie 2018样本11人。综述未报告每项研究中满足明确FOG诊断标准的患者人数，也未给出FOG亚型。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "二手Meta-analysis，无新招募。n_analyzed=18根据Figure 5d两项研究的患者数7和11相加。enrolled与endpoint-specific analyzed分母未分别报告。FOG阳性患者人数未在该综述中明确给出；问卷评分不是原始FOG事件计数，因此n_FOG_events不适用。该结局没有神经记录，神经数据和电极分母不适用。问卷评估次数未报告。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；使用FOG questionnaire score，未区分akinetic、trembling-in-place、kinetic-no-trembling或mixed。",
+      "medication_phenotype": "unknown；综述没有明确分类患者临床FOG的药物反应表型。",
+      "experimental_medication_state": "Med-On。Figure 5d标注FOG questionnaire score (on)；Table 1中Xie 2015和Xie 2018均为药物ON。",
+      "DBS_state_and_parameters": "双侧STN-DBS，LFS与HFS比较。LFS<100 Hz，主要60或80 Hz；HFS>100 Hz，主要130或150 Hz。Table 1显示两项研究均采用usual voltage and pulse-width。具体触点、方向性、幅度、脉宽及全部单项频率设置未在本综述中完整报告。",
+      "task": "FOG questionnaire评估。没有将问卷评分作为同一试次内实际冻结事件的时间标记。",
+      "recording_location": "无神经活动记录；STN为刺激靶点。",
+      "measure": "FOG questionnaire score，比较LFS与HFS条件下的问卷评分。",
+      "frequency_and_analysis_window": "LFS<100 Hz与HFS>100 Hz。Table 1显示两项研究均在刺激参数调整后30分钟评估。无神经信号频段或神经分析窗口。",
+      "finding": "LFS条件下FOG questionnaire score低于HFS。Xie 2015：LFS 2.29±4.42，HFS 9.57±6.8；Xie 2018：LFS 3.0±3.7，HFS 9.3±4.1。两项研究的合并问卷评分差异支持LFS条件下FOG严重程度评分较低。",
+      "effect_estimate": "合并MD（LFS-HFS）=-6.52，95% CI [-9.39,-3.66]，p<0.00001。异质性Q=0.08，df=1，p=0.78，I²=0%。Xie 2015单项MD=-7.28，95% CI [-13.9,-1.27]；Xie 2018单项MD=-6.30，95% CI [-9.56,-3.04]。Figure 5d标注IV fixed-effect。",
+      "statistical_unit_and_method": "患者级FOG问卷评分；研究级均数差合并。Figure 5d采用inverse-variance fixed-effect model。两项研究样本分别为7和11人。是否完整考虑同一患者接受不同刺激频率所产生的配对相关性，综述没有报告。需要注意Methods总体描述为random-effects model，而该具体森林图标注为fixed-effect model。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（基于全文的研究者适配初评，并非正式ROBIS认证评分）。原作者另使用Cochrane Collaboration risk-of-bias tool评价纳入研究。",
+        "domains": [
+          {
+            "domain": "ROBIS Domain 1：研究问题与纳入标准",
+            "judgement": "some_concerns",
+            "reason": "纳入条件明确，但仅纳入英文发表研究，可能限制证据代表性。",
+            "source_locator": "Methods > Eligibility criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 2：文献检索与研究选择",
+            "judgement": "some_concerns",
+            "reason": "检索四个主要数据库并追溯参考文献，但未充分展示完整检索策略和灰色文献检索过程。",
+            "source_locator": "Methods > Search criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 3：数据提取与研究评价",
+            "judgement": "some_concerns",
+            "reason": "两名医生独立提取和评价，但未报告分歧解决流程及配对问卷数据的完整处理细节。",
+            "source_locator": "Methods > Quality evaluation and data collection，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 4：证据综合与结果解释",
+            "judgement": "some_concerns",
+            "reason": "仅两项研究、18名患者；Figure 5d使用fixed-effect，而Methods称采用random-effect；此外，Xie 2015与Xie 2018可能存在患者队列重叠，未见去重说明。",
+            "source_locator": "Methods > Statistical analysis，p.4；Results > Freezing of gait，p.6；Figure 5d，p.6"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "some_concerns",
+            "reason": "由于研究数量较少，未进行发表偏倚分析。",
+            "source_locator": "Methods > Statistical analysis，p.4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结局属于问卷表型评分，不是实际冻结事件的事件级记录，不能据此判断FOG发生前、发生中或恢复期的STN活动。仅纳入两项研究。Xie 2015和Xie 2018具有相同第一作者及研究机构背景，存在可能的患者队列重叠，不能未经核查就作为两次完全独立的重复验证。Figure 5d使用固定效应模型，与Methods对随机效应模型的总体描述不一致。Methods中关于只分析药物OFF数据的描述也与本结果明确标注的药物ON条件不一致。",
+      "quote": "the scores of FOG questionnaires ... were lower after the LFS intervention than HFS",
+      "source_locator": {
+        "section": "Results > Freezing of gait；Table 1",
+        "page": "6；Table 1位于p.3",
+        "figure_table": "Figure 5d（FOG questionnaire score, on）；Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E03_Xie2015_SWS_zero_FOG",
+      "design": "二手来源对原始研究的定性转述。原始研究为Xie et al. 2015，PMID:25540305，DOI:10.1212/WNL.0000000000001184。该研究在本Meta-analysis的FOG-SWS事件数量合并分析中未被纳入，原因是作者报告LFS条件下没有出现FOG症状，导致该指标为零。该研究同时出现在Figure 5d的FOG questionnaire合并分析中。原始研究标识：【turn488835search1】。",
+      "population": "PD患者，Table 1报告7名参与者，双侧STN-DBS，药物ON。综述报告LFS后未出现FOG症状，但未在该段落中进一步说明患者级FOG诊断人数、事件识别方法或FOG表型。",
+      "n_enrolled": null,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Table 1报告研究参与者7人，但未分别给出enrolled和该SWS终点实际分析分母。综述报告LFS条件下FOG症状为零，但没有明确给出全组原始事件总数、每名患者试次数或具体事件记录方式，因此n_FOG_events不直接填写0。没有神经记录，valid neural data及电极分母不适用。",
+      "endpoint_class": "unclear",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported；仅报告LFS条件下没有FOG症状，未区分冻结亚型。",
+      "medication_phenotype": "unknown；未按临床药物反应类型分类。",
+      "experimental_medication_state": "Med-On，Table 1明确标注on。",
+      "DBS_state_and_parameters": "双侧STN-DBS；比较LFS和HFS；Table 1列出usual voltage and pulse-width。综述没有在该结果处完整列出具体刺激频率、触点、幅度和脉宽。",
+      "task": "SWS测试；本条提取的是LFS条件下没有FOG症状的报告，而不是FOG questionnaire评分。",
+      "recording_location": "无神经活动记录；STN为刺激靶点。",
+      "measure": "SWS测试期间的FOG症状或事件计数；LFS条件下报告为零。",
+      "frequency_and_analysis_window": "LFS与HFS比较。Table 1报告刺激调整后30分钟评估。没有神经信号分析窗口。",
+      "finding": "综述报告Xie 2015研究中，LFS后患者没有表现出FOG症状，因此相关FOG指标为零，未能用于FOG-SWS事件数量的Meta-analysis。作者同时认为该结果与LFS减少FOG的总体方向一致。需要区分：该研究并非完全没有进入FOG证据分析，因为Figure 5d仍将其FOG questionnaire score纳入合并分析。",
+      "effect_estimate": "LFS条件下FOG指标报告为零；本综述没有在该段落提供对应HFS条件的原始事件数、均数差、95% CI或P值，因此不能计算该项SWS结果的效应量。",
+      "statistical_unit_and_method": "本综述仅提供定性描述，未报告该零值的具体患者级或试次级统计方法，也未报告对应的比较检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（基于全文的研究者适配初评）；原作者另使用Cochrane Collaboration risk-of-bias tool评价纳入研究。",
+        "domains": [
+          {
+            "domain": "ROBIS Domain 1：研究问题与纳入标准",
+            "judgement": "some_concerns",
+            "reason": "纳入标准明确，但限制英文研究。",
+            "source_locator": "Methods > Eligibility criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 2：检索与研究选择",
+            "judgement": "some_concerns",
+            "reason": "检索四个数据库，但完整检索策略和灰色文献检索说明有限。",
+            "source_locator": "Methods > Search criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 3：数据提取与评价",
+            "judgement": "some_concerns",
+            "reason": "两名医生独立提取和评价，但没有报告分歧解决程序；零事件数据的具体处理方法没有充分说明。",
+            "source_locator": "Methods > Quality evaluation and data collection，p.4；Limitations，p.8"
+          },
+          {
+            "domain": "ROBIS Domain 4：结果综合与解释",
+            "judgement": "some_concerns",
+            "reason": "零事件研究未进入SWS事件计数合并，但同一研究进入FOG问卷合并；不同结局的纳入情况需要分别理解。",
+            "source_locator": "Results > Freezing of gait，p.6；Limitations，p.8"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "some_concerns",
+            "reason": "未进行发表偏倚分析。",
+            "source_locator": "Methods > Statistical analysis，p.4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "零事件不能自动解释为不存在刺激频率效应，也可能反映特定测试条件下的地板效应。综述没有说明零值究竟来自每名患者均无冻结，还是汇总后得到零，也没有提供视频或临床评审方法。该研究的SWS结果与FOG问卷结果必须分开记录：前者未进入事件数合并，后者进入Figure 5d。该研究不是STN神经信号与FOG的事件级关联研究。",
+      "quote": "after the LFS, people perform no any FOG symptom, and thus the scores of FOG were zero",
+      "source_locator": {
+        "section": "Limitations",
+        "page": "8",
+        "figure_table": "Table 1（Xie 2015，n=7，药物ON）；Figure 5d（该研究的FOG questionnaire score被纳入）",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E04_Ricchi2012_no_FOG",
+      "design": "二手来源对原始研究的定性转述。原始研究为Ricchi et al. 2012，PMID:21824834，DOI:10.1016/j.brs.2011.07.001。该研究被纳入整体Meta-analysis，但综述明确说明没有参与者表现出FOG，因此没有进入FOG相关合并分析。原始研究标识：【turn581325search0】。",
+      "population": "PD患者，Table 1报告11名参与者，药物ON；研究涉及STN-DBS和SWS测试。综述明确报告该研究中没有参与者表现出FOG。Mono/Bi字段在Table 1中未提供。",
+      "n_enrolled": null,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 0,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Table 1报告参与者11人，但没有分别提供enrolled与各结局analyzed人数。综述明确报告n_patients_with_FOG=0。没有报告原始FOG事件总数、SWS试次数和事件识别方式。该研究没有被本Meta-analysis作为神经生理记录研究分析，valid neural data及电极分母不适用。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "无患者表现出FOG；亚型不适用。综述未说明FOG评分工具的具体名称。",
+      "medication_phenotype": "unknown；没有提供患者FOG药物反应表型。",
+      "experimental_medication_state": "Med-On，Table 1标注on。",
+      "DBS_state_and_parameters": "STN-DBS频率比较；Table 1显示constant TEED。Mono/Bi未报告；具体触点、方向性、幅度、脉宽及频率设置未在该Meta-analysis表格中完整列出。",
+      "task": "SWS测试、UPDRS-II和UPDRS-III评估；综述称测量了FOG score，但没有明确该评分工具。",
+      "recording_location": "无神经记录；STN为DBS靶点。",
+      "measure": "FOG评分或FOG相关指标；综述明确报告该研究没有参与者表现出FOG。",
+      "frequency_and_analysis_window": "Table 1报告刺激参数调整后180分钟进行运动评估。具体FOG评分的单独评估窗口没有报告。",
+      "finding": "Ricchi 2012研究中虽然测量了FOG评分，但没有参与者表现出FOG。因此，该研究不能提供FOG阳性患者中LFS与HFS的有效冻结事件比较，并被排除在FOG相关合并分析之外。",
+      "effect_estimate": "n_patients_with_FOG=0；没有可供解释的FOG阳性患者效应量。不能将该结果解释为LFS与HFS对FOG没有差异。",
+      "statistical_unit_and_method": "本综述没有报告该FOG阴性结果的具体统计单位、评分分布、比较检验或效应量。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（基于全文的研究者适配初评）；原作者使用Cochrane Collaboration risk-of-bias tool评价纳入研究。",
+        "domains": [
+          {
+            "domain": "ROBIS Domain 1：研究问题与纳入标准",
+            "judgement": "some_concerns",
+            "reason": "纳入标准明确，但存在英文语言限制。",
+            "source_locator": "Methods > Eligibility criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 2：检索与研究选择",
+            "judgement": "some_concerns",
+            "reason": "四数据库检索和引用追溯有报告，但灰色文献检索及完整检索策略说明有限。",
+            "source_locator": "Methods > Search criteria，p.4"
+          },
+          {
+            "domain": "ROBIS Domain 3：数据提取与研究评价",
+            "judgement": "some_concerns",
+            "reason": "两名医生独立完成提取和质量评价，但FOG评分工具及零FOG的判断方法没有充分说明。",
+            "source_locator": "Methods > Quality evaluation and data collection，p.4；Limitations，p.8"
+          },
+          {
+            "domain": "ROBIS Domain 4：结果综合与解释",
+            "judgement": "some_concerns",
+            "reason": "该研究没有FOG阳性患者，不能用于估计FOG患者中的刺激频率效应；综述在Limitations中说明了这一点。",
+            "source_locator": "Limitations，p.8"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "some_concerns",
+            "reason": "没有进行发表偏倚分析。",
+            "source_locator": "Methods > Statistical analysis，p.4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究的FOG阴性样本不能被解释为低频或高频刺激对FOG无效。没有FOG患者意味着该研究对FOG治疗效应的可估计性受到地板效应限制。综述未报告FOG评分工具、冻结事件确认方式或事件级数据，因此不能将其归类为实际冻结事件的阴性验证。",
+      "quote": "no participants presented FOG though the FOG score was measured",
+      "source_locator": {
+        "section": "Limitations；Table 1",
+        "page": "8；Table 1位于p.3",
+        "figure_table": "Table 1（Ricchi et al.，n=11）；Limitations中的排除原因说明",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E05_Blumenfeld2015_STN_LFP",
+      "design": "二手来源：Discussion引用Blumenfeld et al. 2015的原始人类STN神经生理研究，报告术中STN局部场电位（LFP）比较。原始研究PMID:25807463，DOI:10.1371/journal.pone.0121067。【turn912885search0】",
+      "population": "PD患者；本综述仅说明为术中STN LFP记录，没有报告该项原始研究的患者人数、有效LFP人数或FOG表型。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "该研究仅在本Meta-analysis的Discussion中被二手引用，没有列入本Meta-analysis的10项临床频率比较研究。当前综述没有报告原始研究样本量、有效神经记录患者数、电极/触点数、FOG患者人数、任务试次数或FOG事件数。本次记录不从未独立全文核查的原始研究补入额外分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；该二手转述没有提供FOG结局或冻结亚型。",
+      "medication_phenotype": "unknown；没有报告FOG药物反应表型。",
+      "experimental_medication_state": "本综述没有报告该原始神经生理研究的实验药物状态。",
+      "DBS_state_and_parameters": "术中STN-DBS，比较HFS与LFS；综述特别指出在equivalent power条件下进行比较。具体频率、幅度、脉宽和触点未在该段二手转述中完整列出。",
+      "task": "术中STN神经生理记录；本综述未说明是否同时进行行走、转弯或FOG诱发任务。",
+      "recording_location": "STN局部场电位（LFP）。",
+      "measure": "STN alpha和beta频段基线振荡活动；比较不同刺激频率下的振荡变化。",
+      "frequency_and_analysis_window": "比较HFS与LFS，条件为equivalent power。该二手转述没有给出具体刺激频率、alpha/beta精确边界、功率归一化方式或时间分析窗口。",
+      "finding": "综述转述称，与等效功率LFS相比，HFS降低STN基线alpha和beta频段振荡活动。这是刺激频率对STN神经振荡的影响证据，但本综述没有将该信号变化与同一患者的FOG事件进行时间锁定或相关性分析。",
+      "effect_estimate": "本综述没有提供该比较的定量效应量、置信区间或P值。",
+      "statistical_unit_and_method": "当前综述未报告原始研究的统计单位、LFP功率估计方法、患者级与STN级分析关系或统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "该神经生理研究仅作为Discussion中的二手引用，没有在本Meta-analysis的纳入临床研究质量评价中单独提供其偏倚风险。当前无法完成该原始研究的正式观察性电生理偏倚评价。",
+        "domains": [
+          {
+            "domain": "样本选择与患者代表性",
+            "judgement": "not_assessable",
+            "reason": "本综述没有提供原始研究的招募标准和患者级样本信息。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "信号质量与伪迹处理",
+            "judgement": "not_assessable",
+            "reason": "没有报告原始LFP信号质量、伪迹剔除和信号处理细节。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "混杂与重复测量",
+            "judgement": "not_assessable",
+            "reason": "没有提供患者级、STN级和刺激条件重复测量的统计处理信息。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "FOG行为标签有效性",
+            "judgement": "not_assessable",
+            "reason": "该二手转述没有报告FOG事件级行为标签或FOG终点。",
+            "source_locator": "Discussion，p.7"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "这是综述对原始STN神经生理研究的二手转述，不是本Meta-analysis直接记录的神经数据。没有FOG事件终点、事件前窗口、冻结期间窗口或恢复期窗口。因此，不能从HFS降低STN alpha/beta振荡直接推断其改善或恶化FOG。原始研究全文没有在本条证据提取中独立核查。",
+      "quote": "HFS decreased the baseline STN alpha- and beta-band oscillations compared to LFS with equivalent power",
+      "source_locator": {
+        "section": "Discussion，STN pathological oscillations段落",
+        "page": "7",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E06_Blumenfeld2017_STN_spectral_power",
+      "design": "二手来源：Discussion引用Blumenfeld et al. 2017原始研究，报告60 Hz与140 Hz刺激条件下STN振荡功率的频段特异性变化。原始研究PMID:27859579，DOI:10.1002/mds.26837。【turn441937search0】",
+      "population": "PD患者；本综述未在该Discussion段落报告该原始研究的患者人数、有效神经记录人数或FOG表型。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "该研究在本Meta-analysis中属于Discussion引用的机制性研究，而非本综述10项临床频率比较研究之一。综述未报告原始研究的样本分母、神经记录有效人数、电极/触点数、FOG阳性患者数、行为试次数或FOG事件数。本次仅提取综述明确转述的频段及方向，不从原始研究补入未在本综述中报告的字段。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；该二手转述没有FOG终点或冻结亚型。",
+      "medication_phenotype": "unknown；没有报告FOG药物反应表型。",
+      "experimental_medication_state": "本综述未报告该原始神经生理研究的药物测试状态。",
+      "DBS_state_and_parameters": "比较60 Hz和140 Hz STN-DBS。其他刺激参数、触点、方向性、幅度和脉宽未在本综述的该段二手转述中报告。",
+      "task": "本综述未报告该神经生理研究的具体行为任务；没有报告FOG诱发任务。",
+      "recording_location": "STN振荡活动；该段综述主要转述频谱功率变化，没有进一步说明该原始研究的信号采集细节。",
+      "measure": "频段特异性振荡功率：alpha/low-beta（11–15 Hz）、high-beta（19–27 Hz）及beta（15–30 Hz）。",
+      "frequency_and_analysis_window": "60 Hz DBS：alpha/low-beta 11–15 Hz功率增强，high-beta 19–27 Hz功率降低；140 Hz DBS：beta 15–30 Hz功率广泛降低。分析窗口、基线定义和归一化方式未在本综述中报告。",
+      "finding": "综述转述的频谱结果显示，60 Hz刺激并非简单地全面抑制beta活动，而呈现频段特异性变化：11–15 Hz alpha/low-beta增强，19–27 Hz high-beta降低；140 Hz刺激则广泛降低15–30 Hz beta功率。该发现提示不同刺激频率可能产生不同的STN频谱调制模式，但本综述没有报告这些频谱变化与FOG事件的直接关联。",
+      "effect_estimate": "本综述没有提供该研究各频段变化的定量效应量、95% CI或P值。原始研究的定量统计不在本条二手证据中补入。",
+      "statistical_unit_and_method": "本综述未报告原始研究的患者级或STN级统计单位、功率谱估计方法、重复测量模型及多重比较校正情况。",
+      "risk_of_bias": {
+        "tool_or_framework": "该研究仅作为Discussion中的二手机制引用，没有在本Meta-analysis中进行独立的研究级偏倚风险评价。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "本综述未提供原始研究的详细纳入标准及患者分母。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有提供信号质量控制、伪迹处理和频谱估计细节。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "混杂与重复测量",
+            "judgement": "not_assessable",
+            "reason": "没有提供原始研究的药物状态、患者内重复测量处理及多重比较方法。",
+            "source_locator": "Discussion，p.7"
+          },
+          {
+            "domain": "FOG行为标签及事件关联",
+            "judgement": "not_assessable",
+            "reason": "本综述没有报告该研究中的实际FOG事件或事件级STN信号关联。",
+            "source_locator": "Discussion，p.7"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "该证据是频段特异性神经调制结果，不是FOG事件相关神经活动证据。尤其不能将11–15 Hz增强、19–27 Hz降低及15–30 Hz广泛降低合并成笼统的beta抑制。综述没有提供FOG事件级行为标签、冻结前后时间窗或神经活动预测能力。该原始研究的样本和统计细节未在本次二手证据中独立核查。",
+      "quote": "60-Hz DBS amplified alpha/low-beta power (11–15 Hz) and attenuated high-beta power (19–27 Hz), whereas 140 Hz DBS broadly attenuated beta power (15–30 Hz)",
+      "source_locator": {
+        "section": "Discussion，STN pathological oscillations段落",
+        "page": "7",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "30262859_E07_Sitti2016_PPN_entrainment",
+      "design": "二手来源：Discussion引用Sitti et al. 2016动物神经生理研究，报告STN刺激对PPN神经元放电活动的影响。原始研究PMID:26977617，DOI:10.1159/000442892。原始研究标识：【turn488835search4】。",
+      "population": "动物实验；本综述只称animal studies，没有在Discussion中报告物种、动物数量、有效神经记录数量或具体实验分组。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "当前综述仅在Discussion中定性引用该动物研究，没有报告动物样本分母、有效神经记录数量、试次数或电极/触点数量。n_patients_with_FOG及n_FOG_events不适用于该神经生理机制研究，因为综述没有报告FOG行为终点。本次不从未独立全文核查的原始动物研究补入样本信息。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_applicable；该二手转述没有报告FOG行为表型。",
+      "medication_phenotype": "not_applicable；动物神经生理研究，没有报告临床FOG药物反应表型。",
+      "experimental_medication_state": "unknown；本综述未报告动物实验中的药物条件。",
+      "DBS_state_and_parameters": "STN刺激频率比较包括10 Hz、60 Hz和130 Hz。具体刺激幅度、脉宽、触点、方向性和电流参数未在本综述中报告。",
+      "task": "动物神经电生理实验；本综述没有报告运动任务、步行任务或FOG诱发任务。",
+      "recording_location": "PPN（pedunculopontine nucleus）神经活动；不是STN LFP记录。",
+      "measure": "PPN神经元放电模式及其对不同STN刺激频率的entrainment反应。",
+      "frequency_and_analysis_window": "比较STN刺激10 Hz、60 Hz和130 Hz。综述没有报告放电频率分析窗口、统计时间段或基线归一化方法。",
+      "finding": "综述转述动物研究结果：与10 Hz或130 Hz刺激相比，只有60 Hz STN-DBS产生PPN神经元放电模式的entrainment。作者将其作为低频STN刺激可能影响脑干步行相关网络的机制依据，但该实验结果本身并不等同于观察到FOG改善。",
+      "effect_estimate": "定性报告60 Hz条件下出现PPN放电entrainment；本综述没有提供效应量、置信区间、P值或组间定量差异。",
+      "statistical_unit_and_method": "本综述没有报告动物数、神经元数、放电记录单位、重复测量处理或统计检验方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "该动物神经生理研究仅作为Discussion中的二手引用，没有在本Meta-analysis的10项临床研究中进行质量评价。",
+        "domains": [
+          {
+            "domain": "动物样本选择与分组",
+            "judgement": "not_assessable",
+            "reason": "本综述未报告动物物种、样本量、随机分组和盲法信息。",
+            "source_locator": "Discussion，p.8"
+          },
+          {
+            "domain": "神经信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有报告电极位置验证、信号质量、伪迹处理或神经元放电识别方法。",
+            "source_locator": "Discussion，p.8"
+          },
+          {
+            "domain": "刺激参数与混杂",
+            "judgement": "not_assessable",
+            "reason": "仅报告10、60和130 Hz，没有充分报告其他刺激参数及潜在混杂。",
+            "source_locator": "Discussion，p.8"
+          },
+          {
+            "domain": "FOG行为终点",
+            "judgement": "not_assessable",
+            "reason": "本综述没有报告该动物研究中是否测量FOG样行为、步行行为或行为学事件。",
+            "source_locator": "Discussion，p.8"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "该结果是动物PPN神经生理证据，不是人类PD患者STN神经活动与FOG的直接关联证据。记录位置为PPN，而非STN。综述提出的电流扩散或STN-PPN往返连接可能解释低频刺激的作用，但这是作者提出的机制假说，不能视为已验证的因果路径。没有FOG事件、事件前神经活动或事件恢复期数据，也没有证明PPN entrainment与实际冻结改善同步发生。",
+      "quote": "only 60Hz STN-DBS produced entrainment of the neural firing pattern in the PPN",
+      "source_locator": {
+        "section": "Discussion，PPN与步态/FOG机制段落",
+        "page": "8",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

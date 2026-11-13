@@ -1,0 +1,1080 @@
+<escape>{
+  "publication": {
+    "ref": "DOI:10.64898/2025.12.17.25342333; medRxiv; posted 2025-12-27",
+    "title": "Low-Frequency Adaptive Deep Brain Stimulation for Parkinson’s Disease",
+    "publication_status": "preprint",
+    "version_of_candidate": null,
+    "study_id_candidate": "Negi_2025_LowFrequencyAdaptiveDBS_STN_60Hz",
+    "cohort_id_candidate": "Stanford_STN_SummitRCplusS_PD_cohort_n8",
+    "cohort_relation_basis": "本研究报告Stanford University招募的8名PD患者，均植入双侧STN DBS电极（Medtronic model 3389）及Summit RC+S系统。6人能够耐受60Hz刺激并进入LFP校准和随机测试。作者引用Wilkins等2025年Brain Communications论文（DOI:10.1093/braincomms/fcaf266）作为既往高频beta-burst-driven aDBS方法依据。两篇论文作者团队、机构、设备平台和beta-burst控制技术相似，因此存在可能的队列重叠，但本PDF没有报告患者身份对应关系、招募日期或明确的队列重叠声明。暂定possible_overlap，不能认定为独立重复验证，也不能认定为同一队列。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "E01",
+      "design": "Secondary-source background statement；本论文引言转述既往研究，不是本研究新采集的数据。引用Anidi et al., 2018, DOI:10.1016/j.nbd.2018.09.004，以及O’Day et al., 2020, DOI:10.1371/journal.pone.0231984。",
+      "population": "既往研究中的PD freezers与non-freezers；当前论文没有提供被引用研究的具体样本分母。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "被引用研究的患者数、电极数、事件数及试次数均未在本论文引言中转述；原始研究未在本次提取中独立核查。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "Freezer versus non-freezer；具体akinetic、trembling-in-place等亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；本论文未转述原始研究的药物状态。",
+      "DBS_state_and_parameters": "unknown；本论文未转述原始研究的刺激状态和参数。",
+      "task": "non-freezing gait；具体自然行走任务及实验条件未在当前论文中说明。",
+      "recording_location": "STN；具体核内位置、记录触点及单侧/双侧配置未在当前论文中说明。",
+      "measure": "STN beta band activity；当前论文仅称freezers具有更显著的beta活动，未说明此处是平均功率、burst持续时间或其他beta指标。",
+      "frequency_and_analysis_window": "Beta频段；具体频率边界、分析窗口、归一化方式未在当前论文转述。",
+      "finding": "既往研究报告：与non-freezers相比，freezers在非冻结步态期间也表现出更明显的STN beta band activity。这是易感性/患者表型层面的差异，不等同于冻结事件发生时的事件级神经变化。",
+      "effect_estimate": "仅报告方向；当前论文未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "当前论文没有转述原始统计模型、患者级或试次级统计单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "not_assessed；二次文献转述，未检查原始研究。",
+        "domains": [
+          {
+            "domain": "原始研究方法及偏倚风险",
+            "judgement": "not_assessable",
+            "reason": "当前论文只提供背景性概述，不能据此判断原始研究的样本选择、行为标签、信号质量、混杂及统计分析质量。",
+            "source_locator": "Introduction, p.3；References 16–17, pp.17–18"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "该发现来自Anidi et al. 2018和O’Day et al. 2020的二次转述，不是Negi等本研究的独立患者证据。需要查阅原始论文确认beta指标、实验任务和样本是否与其他研究重叠。",
+      "quote": "freezers exhibited more exaggerated beta band activity in STN than nonfreezers, even during non-freezing gait.",
+      "source_locator": {
+        "section": "Introduction",
+        "page": "3",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E02",
+      "design": "Secondary-source background statement；转述Anidi et al., 2018，DOI:10.1016/j.nbd.2018.09.004。",
+      "population": "既往研究中出现FOG的PD患者及非冻结步行阶段；具体人数未在当前论文中报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "当前论文未转述原始研究的样本量、FOG事件数量、电极数量和试次数；原始研究未在本次提取中独立核查。",
+      "endpoint_class": "unclear",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；当前论文没有转述FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "unknown；当前论文未转述该比较的刺激条件。",
+      "task": "FOG episodes versus non-freezing walking；自然步行或其他任务类型未在此处明确说明。",
+      "recording_location": "STN；具体记录位置未转述。",
+      "measure": "STN beta burst duration。",
+      "frequency_and_analysis_window": "Beta burst；具体频段边界、阈值、时间窗及基线未在当前论文转述。",
+      "finding": "既往研究报告FOG发作期间的STN beta burst持续时间长于非冻结步行期间。该结果属于事件阶段关联，比freezer/non-freezer表型比较更接近事件级证据，但当前论文没有提供原始分析细节。",
+      "effect_estimate": "方向为during_FOG > non-freezing walking；无效应量、置信区间或P值。",
+      "statistical_unit_and_method": "当前论文未转述原始研究采用的患者级、事件级或步态周期级统计方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "not_assessed；二次文献转述。",
+        "domains": [
+          {
+            "domain": "行为标签有效性",
+            "judgement": "not_assessable",
+            "reason": "当前论文没有说明原始研究如何确认FOG、是否采用视频或临床评审，以及是否使用运动学算法。",
+            "source_locator": "Introduction, p.3"
+          },
+          {
+            "domain": "神经信号质量与分析",
+            "judgement": "not_assessable",
+            "reason": "未转述原始信号质量、伪迹处理、burst阈值和时间窗。",
+            "source_locator": "Introduction, p.3"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "该结果引用Anidi et al. 2018，不是当前研究队列的结果。不能将其视为Negi等本研究的独立事件级验证。原始研究需要进一步核查。",
+      "quote": "beta bursts were longer during episodes of FOG compared to during non-freezing walking.",
+      "source_locator": {
+        "section": "Introduction",
+        "page": "3",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E03",
+      "design": "Secondary-source background statement；转述Anidi et al., 2018，DOI:10.1016/j.nbd.2018.09.004。",
+      "population": "既往接受STN DBS的PD患者；具体样本分母未转述。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "原始研究样本和分析分母未在当前论文中转述；原始研究全文未在本次提取中核查。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "Low-frequency continuous STN-DBS；当前论文没有完整转述原始研究的频率、幅度、脉宽和触点参数。",
+      "task": "当前论文没有转述原始研究的具体步态任务。",
+      "recording_location": "STN LFP或STN neural activity；具体记录配置未转述。",
+      "measure": "STN pathological beta burst duration。",
+      "frequency_and_analysis_window": "Beta burst；具体频段和burst检测方法未转述。",
+      "finding": "当前论文引用既往研究，报告低频连续STN DBS能够缩短STN pathological beta burst duration。该结果属于刺激对神经指标的影响，不能单独证明beta burst变化介导了FOG改善。",
+      "effect_estimate": "方向为低频刺激后burst duration缩短；效应量和P值未转述。",
+      "statistical_unit_and_method": "未转述。",
+      "risk_of_bias": {
+        "tool_or_framework": "not_assessed；secondary-source summary。",
+        "domains": [
+          {
+            "domain": "原始研究质量",
+            "judgement": "not_assessable",
+            "reason": "当前论文未提供原始研究方法、样本分母和统计结果。",
+            "source_locator": "Introduction, p.3；Reference 16, p.17"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "原始来源为Anidi et al. 2018，DOI:10.1016/j.nbd.2018.09.004。该证据不能与当前研究的8名患者合并为同一项患者队列或重复验证。",
+      "quote": "low-frequency continuous (c)DBS shortened pathological beta burst durations in the STN",
+      "source_locator": {
+        "section": "Introduction",
+        "page": "3",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E04",
+      "design": "Secondary-source background statement；转述Anidi et al., 2018，DOI:10.1016/j.nbd.2018.09.004。",
+      "population": "既往接受低频STN连续刺激的PD患者；具体样本分母未转述。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "当前论文未报告原始研究的样本量、FOG事件数量和刺激参数；原始研究未在本次提取中独立核查。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "Low-frequency continuous STN-DBS；具体刺激频率和其他参数未在此处完整转述。",
+      "task": "未转述。",
+      "recording_location": "STN；具体记录位置未转述。",
+      "measure": "FOG症状。",
+      "frequency_and_analysis_window": "不适用；当前论文未提供原始研究的FOG测量时间窗。",
+      "finding": "当前论文引用既往研究，报告低频连续STN DBS改善FOG。当前转述没有说明改善是否针对自然步行中视频确认的冻结事件，还是量表或其他替代任务。",
+      "effect_estimate": "仅报告改善方向；无效应量、置信区间和P值。",
+      "statistical_unit_and_method": "未转述。",
+      "risk_of_bias": {
+        "tool_or_framework": "not_assessed；secondary-source summary。",
+        "domains": [
+          {
+            "domain": "FOG结局测量有效性",
+            "judgement": "not_assessable",
+            "reason": "当前论文没有转述原始研究采用的FOG定义、确认方式及统计单位。",
+            "source_locator": "Introduction, p.3；Reference 16, p.17"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "该FOG改善结论来自Anidi et al. 2018的二次转述。不能据此推断自然直立行走中实际冻结事件的改善幅度，也不能将其视为当前研究的独立队列。",
+      "quote": "improved FOG",
+      "source_locator": {
+        "section": "Introduction",
+        "page": "3",
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E05",
+      "design": "Primary source；前瞻性、被试内刺激幅度滴定研究；随机刺激幅度滴定；STN-LFP电生理分析。",
+      "population": "8名入组患者中的6名60Hz cDBS急性耐受者。6人均完成LFP设置和aDBS校准，其中5人按FOG-Q或New FOG-Q属于freezers；3人在OFF DBS的SIP任务中实际出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": 6,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：不适用，该分析没有按照FOG事件分层；n_trials：全文未报告每名患者具体的滴定试次数及burst总数；n_electrodes_contacts：全文未报告独立触点数量。6名患者均有至少一侧可用LFP，但不是所有双侧STN均有可靠记录。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "5/6为问卷定义的freezers；冻结亚型未报告。该神经分析不是FOG事件级比较。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；所有研究评估均在停药状态完成。具体washout方案见Supplementary Material，未包含在本次上传的19页PDF中。",
+      "DBS_state_and_parameters": "研究前临床优化刺激为140Hz cDBS。神经滴定阶段比较OFF DBS与60Hz cDBS不同幅度。刺激幅度从临床幅度的50%开始，最高不超过临床幅度的125%。OFF DBS至少15分钟后开始基线任务。该分析不是随机aDBS与cDBS之间的beta burst直接比较。",
+      "task": "100秒连续、自主速度、原地交替踏步（stepping-in-place, SIP）；参与者在OFF DBS和60Hz cDBS不同幅度条件下完成任务。",
+      "recording_location": "双侧STN LFP，采用sandwiching configuration，感知触点位于刺激触点两侧。4名患者双侧配置，2名患者单侧配置。P4右STN有刺激伪迹，P5右STN无法实施sandwiching。6名患者均至少有一侧可用神经数据。",
+      "measure": "STN beta burst duration。不是平均beta功率，也不是FOG事件期间的beta burst持续时间。研究使用每侧STN的患者特异性beta频率追踪burst。",
+      "frequency_and_analysis_window": "LFP采样500Hz。先在13–30Hz beta范围内确定功率最大且随刺激幅度变化最明显的中心频率，再采用中心频率±3Hz的6Hz频带。患者特异性中心频率为12.7–25.4Hz。信号采用zero-phase 8th-order band-pass filter，平方后形成power envelope；阈值为45–65Hz gamma envelope波谷中位功率的4倍。burst duration定义为beta envelope跨越阈值的时间间隔。PSD采用Welch方法，1秒Hanning window，50% overlap。各STN独立设置burst duration threshold，表2报告阈值90–700ms。",
+      "finding": "随着60Hz cDBS刺激幅度增加，STN beta burst duration显著缩短。该结果证明刺激幅度与beta burst duration之间存在剂量相关关系，但本研究没有报告同一FOG事件前、事件中及恢复期的beta burst变化。",
+      "effect_estimate": "β=-0.005，95% CI=[-0.007,-0.003]，p<0.001，partial η²=0.19。作者未在该处明确β系数的具体单位。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应为stimulation titration level，随机效应为participant和STN side。统计考虑了患者及STN侧的重复测量。具体纳入的burst总数未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性电生理/刺激滴定研究领域清单。不是经验证的正式偏倚评价工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "8人入组但只有6人耐受60Hz并进入神经分析；研究对象本身具有步态障碍或FOG，且不能耐受者被排除于后续滴定。",
+            "source_locator": "Methods—Participants, p.4；Results—Tolerability, p.8"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "SIP为既往验证的FOG诱发任务，但本项beta burst剂量反应分析没有将burst按实际冻结事件与非冻结事件分层。",
+            "source_locator": "Methods—Gait Assessment, p.4；Data Analysis, p.7"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "P4右STN存在刺激诱发伪迹，P5右STN不能使用sandwiching configuration，因此双侧有效记录不完整。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "所有测试均在Med-Off状态，减少了药物状态混杂；但患者疾病持续时间、既往140Hz暴露时间和临床刺激幅度不同。未见这些因素的独立调整分析。",
+            "source_locator": "Methods—Experimental Protocol, p.4；Table 1, p.8"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "some_concerns",
+            "reason": "模型纳入participant和STN side随机效应，是对重复测量的适当处理；但具体burst数量、患者内burst相关性及各滴定水平的有效观测数未报告。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "unclear",
+            "reason": "报告了刺激幅度对burst duration的总体模型结果，但没有充分说明所有幅度层级比较及其他神经指标的多重检验控制方案。",
+            "source_locator": "Methods—Statistical Analysis, p.7；Results, p.9"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "该分析是刺激幅度与burst duration的关联模型，不是经过训练和验证的FOG预测模型；没有独立外部验证队列。",
+            "source_locator": "Methods—Data Analysis and Statistical Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "上传主文没有提供可核对的预注册分析计划，无法判断所有神经分析是否按预设方案报告。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是刺激幅度对STN beta burst duration的神经生理效应，不是beta burst与FOG事件的直接关联检验。不能据此认定burst缩短是FOG改善的中介机制。论文没有提供随机aDBS与cDBS条件下的独立beta burst duration比较结果，也没有事件锁定分析。",
+      "quote": "increased levels of 60 Hz stimulation amplitude led to decreased beta burst durations",
+      "source_locator": {
+        "section": "Results—60 Hz aDBS Calibration",
+        "page": "9",
+        "figure_table": "Figure 2B–C; Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E06",
+      "design": "Primary source；随机、双盲、被试内刺激条件比较；基线SIP中实际冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，均在OFF DBS的SIP任务中出现冻结。3人均属于问卷定义的freezers。",
+      "n_enrolled": 8,
+      "n_analyzed": 3,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_FOG_events：全文未报告冻结事件总数；n_trials：未报告每种条件下的独立重复试次数；n_electrodes_contacts：未报告触点总数。P3有双侧可用LFP，P4和P5主要使用左侧LFP驱动aDBS。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "问卷定义freezers；3人均在OFF DBS SIP中出现冻结。akinetic、trembling-in-place或其他具体亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off；所有研究测试在停药状态完成。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz aDBS。aDBS频率60Hz、pulse width 60μs，刺激幅度由单阈值beta burst duration controller调节。cDBS对照设置为与aDBS平均刺激幅度匹配TEED。P4右STN因伪迹、P5右STN因无法实施sandwiching而在aDBS条件下保持临床幅度cDBS。",
+      "task": "100秒连续原地交替踏步SIP，使用静止视觉背景以减少optic flow。FOG由经过验证的自定义算法识别。",
+      "recording_location": "STN LFP；aDBS由可用STN侧的beta burst duration驱动。P4、P5不是双侧完全自适应刺激。",
+      "measure": "SIP任务中的percent time freezing。",
+      "frequency_and_analysis_window": "aDBS控制器追踪患者特异性6Hz beta频带中的burst duration。论文未报告FOG事件发生前、事件期间及恢复期间的独立LFP功率或burst统计。",
+      "finding": "在OFF DBS时出现冻结的3名患者（P3、P4、P5），ON 60Hz aDBS后percent time freezing均呈下降方向。该结果是患者级描述性亚组结果，而不是经独立统计检验确认的亚组治疗效应。",
+      "effect_estimate": "方向为percent time freezing下降；未报告该3人亚组的精确均值、差值、置信区间或P值。全体6人的三条件总体比较不显著，见E12。",
+      "statistical_unit_and_method": "3名患者的描述性个体比较；未报告该亚组独立统计模型。全体6人另采用participant为随机效应的linear mixed-effects model。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机、双盲、被试内刺激条件比较的初步评价。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "论文报告随机刺激顺序，但没有充分说明随机序列生成和分配隐藏方法。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "患者和MDS-UPDRS评分者盲法；但P4和P5的部分STN侧在aDBS条件下实际维持cDBS。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "8人中仅6人进入随机测试；另外2人不能耐受60Hz，限制结果的适用人群。",
+            "source_locator": "Results—Tolerability to 60 Hz, p.8"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "采用经过验证的SIP任务和FOG算法，但不是自然直立行走中的视频/临床确认FOG。",
+            "source_locator": "Methods—Gait Assessment and Data Analysis, pp.4,7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未在所提供主文中发现可核对的预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是SIP替代任务，不属于自然直立行走实际冻结事件。3人亚组的改善没有单独的统计显著性检验，不能与全体6人总体无显著差异的结果混为一谈。该研究没有报告beta burst变化与每次FOG事件之间的时间锁定关系。",
+      "quote": "All three participants who froze OFF DBS showed improvement ON both 60 Hz cDBS and aDBS",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10",
+        "figure_table": "Figure 3，percent time freezing指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E07",
+      "design": "Primary source；随机、双盲、被试内刺激条件比较；基线SIP冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，均在OFF DBS的SIP任务中出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 3,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数、各条件重复试次数及电极触点总数均未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "P3、P4、P5在OFF DBS SIP中出现冻结；具体FOG运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz cDBS；60Hz，pulse width 60μs；刺激电极与aDBS条件相同，cDBS幅度设为匹配aDBS校准期间的平均幅度以匹配TEED。",
+      "task": "100秒连续SIP；FOG由经过验证的自定义算法识别。",
+      "recording_location": "STN LFP可用于部分患者的神经感知；cDBS本身为连续刺激，不由实时burst触发。",
+      "measure": "SIP任务中的percent time freezing。",
+      "frequency_and_analysis_window": "FOG事件由SIP算法识别；本条件没有报告事件锁定的beta burst分析。",
+      "finding": "3名OFF DBS时出现冻结的患者在ON 60Hz cDBS后percent time freezing均呈下降方向。",
+      "effect_estimate": "方向为percent time freezing下降；没有单独的亚组效应量、置信区间或P值。",
+      "statistical_unit_and_method": "患者级描述性比较；全体6人的总体三条件模型另行分析，见E12。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激条件比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机顺序，但随机序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "患者及评分者盲法；但部分STN侧在aDBS配置中保持cDBS，限制双侧自适应刺激的完整性。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "仅6/8人进入随机测试，存在60Hz耐受性筛选。",
+            "source_locator": "Results—Tolerability to 60 Hz, p.8"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "SIP和FOG算法经过验证，但不能直接等同于自然行走中的临床确认FOG。",
+            "source_locator": "Methods—Gait Assessment and Data Analysis, pp.4,7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "无法通过所提供主文核实预注册分析方案。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "描述性改善不能被解释为全体患者的显著治疗效应。全体6人的percent time freezing总体比较没有达到统计显著。自然步行FOG的外推受到SIP任务性质限制。",
+      "quote": "reduced percent time freezing",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10",
+        "figure_table": "Figure 3，percent time freezing指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E08",
+      "design": "Primary source；随机、双盲、被试内刺激比较；基线SIP冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，OFF DBS时在SIP任务中出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文称3人表现出改善，但Figure 3图注明确指出P5无法在OFF DBS时行走，因此该试次没有gait arrhythmicity数据。完整配对分析的实际人数没有单独报告，不能将3人全部视为具有完整配对数据。FOG事件数、重复试次数和触点数未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "P3、P4、P5为OFF DBS SIP冻结者；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz aDBS；60Hz，pulse width 60μs，burst-duration-driven amplitude control。P4和P5的右STN在aDBS期间维持cDBS。",
+      "task": "100秒连续SIP。",
+      "recording_location": "步态指标来自运动学数据；双侧小腿段IMU，采样128Hz。STN LFP用于aDBS控制，但本结局不是STN神经信号指标。",
+      "measure": "Gait arrhythmicity，定义为stride time coefficient of variation的自然对数变换。",
+      "frequency_and_analysis_window": "不适用神经频段分析。IMU采样128Hz；陀螺仪信号低通滤波9Hz；步态周期由小腿角速度峰值识别。",
+      "finding": "结果文字报告基线冻结者在60Hz aDBS后gait arrhythmicity降低。但Figure 3图注同时明确指出P5无法在OFF DBS条件下行走，因此该患者没有OFF条件下的arrhythmicity数据。实际完整配对比较人数不能从正文确定。",
+      "effect_estimate": "方向性报告为降低；没有亚组均值差、置信区间或P值。完整配对分母未报告。",
+      "statistical_unit_and_method": "亚组描述性比较；全体患者的gait arrhythmicity采用participant随机效应的linear mixed-effects model。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "刺激顺序随机，但随机序列生成和分配隐藏未充分说明。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "部分STN侧在aDBS条件下保持连续刺激，未实现完整双侧自适应控制。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "P5无法完成OFF DBS步态，因此缺失OFF条件下的arrhythmicity；完整配对人数未报告。",
+            "source_locator": "Figure 3 caption, p.11"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "使用客观IMU运动学信号计算stride time CV，但该指标不是视频确认的冻结事件本身。",
+            "source_locator": "Methods—Data Acquisition and Data Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有可核对的预注册统计分析方案。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "结果文字中的3人改善描述与P5缺失OFF条件arrhythmicity的数据说明需要同时保留。不能把P5视为具有完整OFF与ON配对数据。该指标是整体步态节律性，不是FOG事件级神经指标。",
+      "quote": "Participant 5 could not ambulate OFF DBS, therefore no gait arrhythmicity obtained for that trial.",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10–11",
+        "figure_table": "Figure 3，gait arrhythmicity指标及图注",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E09",
+      "design": "Primary source；随机、双盲、被试内刺激比较；基线SIP冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，OFF DBS时在SIP任务中出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "P5无法在OFF DBS时完成步态任务，Figure 3图注明确指出没有该试次的arrhythmicity数据。完整配对分析分母未报告。其他缺失计数同样未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "P3、P4、P5在OFF DBS SIP中出现冻结；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz cDBS；60Hz，pulse width 60μs；cDBS刺激幅度匹配aDBS校准期平均幅度以匹配TEED。",
+      "task": "100秒连续SIP。",
+      "recording_location": "双侧小腿IMU；该结局是运动学指标，不是STN神经信号。",
+      "measure": "Gait arrhythmicity，即stride time CV的自然对数变换。",
+      "frequency_and_analysis_window": "IMU采样128Hz；陀螺仪信号低通滤波9Hz；stride time由小腿角速度峰值识别。没有神经频段分析。",
+      "finding": "作者报告基线冻结者在60Hz cDBS下gait arrhythmicity降低。但P5的OFF DBS arrhythmicity缺失，因此无法确认3人全部具有完整配对比较。",
+      "effect_estimate": "方向性降低；没有患者亚组的具体效应量或P值。",
+      "statistical_unit_and_method": "患者级描述性比较；总体模型采用participant随机效应的linear mixed-effects model。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机刺激顺序有报告，但随机序列生成细节不充分。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "aDBS条件中部分STN侧未能实施自适应刺激。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "P5没有OFF DBS arrhythmicity数据，完整配对分母未明确。",
+            "source_locator": "Figure 3 caption, p.11"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "采用IMU客观运动学测量，但该指标不是实际冻结事件的临床确认。",
+            "source_locator": "Methods—Data Acquisition and Data Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供可核对的预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "P5的OFF DBS arrhythmicity缺失是解释该亚组结果时的重要限制。不能把arrhythmicity改善直接解释为STN beta burst变化或FOG事件消失。",
+      "quote": "reduced gait arrhythmicity",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10–11",
+        "figure_table": "Figure 3，gait arrhythmicity指标及图注",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E10",
+      "design": "Primary source；随机、双盲、被试内刺激比较；基线SIP冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，OFF DBS时在SIP任务中出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 3,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件次数、各条件重复试次数和触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "P3、P4、P5为OFF DBS SIP冻结者；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz aDBS；60Hz，pulse width 60μs；单阈值beta burst duration控制刺激幅度。",
+      "task": "100秒连续SIP。",
+      "recording_location": "双侧小腿段IMU；STN LFP仅作为aDBS控制输入。",
+      "measure": "Peak shank angular velocity，使用小腿段陀螺仪测量。",
+      "frequency_and_analysis_window": "IMU采样128Hz；陀螺仪低通滤波9Hz；小腿角速度峰值超过10deg/s用于识别shank swing。不是神经频段分析。",
+      "finding": "在OFF DBS时出现冻结的3名患者中，60Hz aDBS条件下peak shank angular velocity增加。",
+      "effect_estimate": "方向为增加；没有该亚组具体均值差、置信区间或P值。",
+      "statistical_unit_and_method": "3名患者的描述性比较；总体6人使用participant随机效应的linear mixed-effects model。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机顺序，未充分描述序列生成和分配隐藏。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "部分STN侧未能实施aDBS。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "仅6/8人进入随机测试；P5的OFF DBS步态表现也存在缺失。",
+            "source_locator": "Results, pp.8,11"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "采用客观IMU测量shank angular velocity，但该指标不等同于FOG事件本身。",
+            "source_locator": "Methods—Data Acquisition and Data Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是整体步态运动学改善，不是冻结事件数量或持续时间的直接统计。没有报告该亚组的显著性检验，也没有证明其与beta burst缩短之间存在中介关系。",
+      "quote": "increased shank angular velocity",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10–11",
+        "figure_table": "Figure 3，peak shank swing angular velocity指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E11",
+      "design": "Primary source；随机、双盲、被试内刺激比较；基线SIP冻结者的描述性亚组分析。",
+      "population": "P3、P4、P5，OFF DBS时在SIP任务中出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 3,
+      "n_patients_with_FOG": 3,
+      "n_patients_with_valid_neural_data": 3,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件数、重复试次数和具体触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "P3、P4、P5在OFF DBS SIP中出现冻结；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS对比60Hz cDBS；60Hz，pulse width 60μs；cDBS幅度匹配aDBS平均刺激幅度。",
+      "task": "100秒连续SIP。",
+      "recording_location": "双侧小腿段IMU；不是STN神经信号记录。",
+      "measure": "Peak shank angular velocity。",
+      "frequency_and_analysis_window": "IMU采样128Hz；陀螺仪低通滤波9Hz；shank swing识别阈值10deg/s。",
+      "finding": "在OFF DBS时出现冻结的3名患者中，60Hz cDBS条件下peak shank angular velocity增加。",
+      "effect_estimate": "方向为增加；没有亚组效应量、置信区间或P值。",
+      "statistical_unit_and_method": "患者级描述性比较；总体模型为participant随机效应的linear mixed-effects model。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序有报告，但随机序列生成和分配隐藏不充分。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "部分STN侧未能实施完整自适应刺激。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "两名患者因60Hz耐受性问题未进入随机比较。",
+            "source_locator": "Results—Tolerability to 60 Hz, p.8"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "采用客观IMU步态测量，但不是FOG事件的直接临床确认。",
+            "source_locator": "Methods—Data Acquisition, p.6"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有可核对的预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果反映步态速度学指标，而不是直接的FOG事件效应。与aDBS相比，cDBS的亚组改善没有独立统计检验。",
+      "quote": "increased shank angular velocity",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "10–11",
+        "figure_table": "Figure 3，peak shank swing angular velocity指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E12",
+      "design": "Primary source；随机、双盲、被试内三条件比较；全体可耐受60Hz的患者。",
+      "population": "6名完成随机测试的患者。P3、P4、P5在OFF DBS时出现SIP冻结；P6在OFF DBS时未冻结，但在60Hz aDBS和cDBS条件下出现冻结。P1和P7在所测试条件中未出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 6,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数、各患者独立重复试次数和电极触点总数未报告。n_patients_with_FOG按文中事件描述计数：3人OFF DBS冻结，另有P6在刺激条件下冻结。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "7/8入组者按问卷属于freezers；但随机测试中只有3人OFF DBS时出现SIP冻结，另有P6在刺激条件下出现冻结。具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "三个条件：OFF DBS、60Hz aDBS、60Hz cDBS。aDBS与cDBS均为60Hz、60μs pulse width；cDBS匹配aDBS平均幅度以控制TEED。每种刺激条件经过至少20分钟wash-in后完成SIP任务。",
+      "task": "100秒连续SIP；FOG episodes由经过验证的自定义算法识别。",
+      "recording_location": "STN LFP用于aDBS控制；步态FOG指标来自SIP任务的运动学/动力学测量。",
+      "measure": "Percent time freezing。",
+      "frequency_and_analysis_window": "FOG事件由SIP算法识别并计算整个任务中的冻结时间百分比。论文未报告事件级STN beta burst与冻结时间的同步分析。",
+      "finding": "全体6名患者在OFF DBS、60Hz aDBS及60Hz cDBS三条件间的percent time freezing没有统计学显著差异。该总体结果与P3、P4、P5描述性改善的亚组结果并存。",
+      "effect_estimate": "F(2,8.8)=1.45，p=0.286，partial η²=0.25。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应stimulation condition，随机效应participant；三条件总体比较。不是FOG事件数的独立泊松或事件级模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机、双盲、被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机顺序，但没有充分说明随机序列生成和分配隐藏。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "患者和评分者盲法，但部分STN侧在aDBS条件下维持cDBS。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "仅6/8患者进入随机测试；60Hz耐受性决定是否进入后续测试。",
+            "source_locator": "Results—Tolerability to 60 Hz, p.8"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FOG由验证过的SIP算法识别，但没有报告视频/临床评审确认；SIP属于替代任务。",
+            "source_locator": "Methods—Gait Assessment and Data Analysis, pp.4,7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供可核对的预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是本研究最重要的总体FOG统计结果。总体三条件比较不显著，不能把3名基线冻结者的描述性改善表述为全体患者的统计学显著改善。患者数量很小，且FOG发生具有明显个体异质性。P6在刺激条件下新出现冻结，进一步说明患者级反应并不一致。",
+      "quote": "On the group level, no statistically significant differences were found across the three conditions",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "11",
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E13",
+      "design": "Primary source；随机被试内刺激条件比较中的单患者描述性事件观察。",
+      "population": "P6；NFOG-Q评分14，属于问卷定义的freezer。P6在OFF DBS的SIP基线任务中没有出现冻结，但在60Hz aDBS条件下出现冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未报告P6在该条件下的具体冻结事件数量、事件持续时间及独立重复试次数；触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "问卷定义freezer（NFOG-Q=14）；SIP中观察到的冻结具体运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS基线对比60Hz aDBS；60Hz、pulse width 60μs，刺激幅度根据STN beta burst duration实时调节。",
+      "task": "100秒连续SIP。",
+      "recording_location": "P6双侧STN LFP；步态表现由SIP任务动力学和IMU记录。",
+      "measure": "SIP中的FOG发生情况及percent time freezing。",
+      "frequency_and_analysis_window": "aDBS使用患者特异性beta burst duration阈值；没有报告该患者FOG发生前后STN beta burst的独立事件锁定统计。",
+      "finding": "P6在OFF DBS的基线SIP中没有冻结，但在60Hz aDBS条件下出现冻结。作者明确指出，这不一定意味着60Hz DBS导致FOG，因为该患者OFF DBS仅进行了一次SIP测试。",
+      "effect_estimate": "方向为OFF DBS无冻结、60Hz aDBS出现冻结；具体percent time freezing、FOG事件数和事件持续时间未在文字中报告。",
+      "statistical_unit_and_method": "单患者描述性比较；没有患者级推断统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机刺激条件比较，但本条证据是单患者事件观察，推断能力非常有限。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "整体研究采用随机刺激顺序，但本患者只有一次OFF DBS SIP基线，无法充分控制基线事件变异。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6；Discussion, p.13"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "患者和评估者盲法，但不能排除刺激条件下的其他时间变化或任务表现差异。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "该患者只有一次OFF DBS SIP基线，缺乏重复基线数据。",
+            "source_locator": "Discussion, p.13"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "采用验证过的SIP任务和算法，但没有报告该单次事件的视频或临床独立确认。",
+            "source_locator": "Methods—Gait Assessment and Data Analysis, pp.4,7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "无法核对该患者事件分析是否为预先指定的亚组分析。",
+            "source_locator": "Results, pp.10–11"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者自己明确警告不能据此认定60Hz aDBS导致FOG。单患者、单次OFF基线、问卷易感性与SIP实际冻结表现不一致，是解释该结果的关键限制。",
+      "quote": "one freezer (P6) froze ON both 60 Hz cDBS and aDBS",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG；Discussion",
+        "page": "11；13",
+        "figure_table": "Figure 3C",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E14",
+      "design": "Primary source；随机被试内刺激条件比较中的单患者描述性事件观察。",
+      "population": "P6；NFOG-Q评分14，属于问卷定义的freezer；OFF DBS基线SIP中未观察到冻结。",
+      "n_enrolled": 8,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "具体FOG事件数、持续时间和独立重复试次数未报告；触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "问卷定义freezer；NFOG-Q=14；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS基线对比60Hz cDBS；60Hz，pulse width 60μs；连续刺激，刺激幅度与aDBS平均幅度匹配TEED。",
+      "task": "100秒连续SIP。",
+      "recording_location": "P6双侧STN LFP用于神经记录；FOG行为由SIP任务测量。",
+      "measure": "SIP中的FOG发生情况及percent time freezing。",
+      "frequency_and_analysis_window": "无事件锁定STN beta burst分析；本证据记录的是刺激条件下FOG行为变化。",
+      "finding": "P6在OFF DBS基线SIP中没有冻结，但在60Hz cDBS条件下出现冻结，并伴随gait arrhythmicity增加。",
+      "effect_estimate": "方向为OFF DBS无冻结、60Hz cDBS出现冻结；具体冻结比例和事件数未报告。",
+      "statistical_unit_and_method": "单患者描述性比较；没有单患者推断统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机被试内刺激比较，单患者事件观察。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "整体测试随机，但P6只有一次OFF DBS基线，不能充分估计其自然冻结波动。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6；Discussion, p.13"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "整体采用盲法，但不能排除单次任务中的非刺激因素。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "OFF DBS基线只有一次SIP测试，缺少重复基线。",
+            "source_locator": "Discussion, p.13"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "采用SIP和验证过的FOG识别算法，但没有报告视频/临床独立确认。",
+            "source_locator": "Methods—Gait Assessment and Data Analysis, pp.4,7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未能核对该单患者事件分析的预注册状态。",
+            "source_locator": "Results, pp.10–11"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不能根据单患者一次OFF基线和一次刺激条件观察推断60Hz cDBS具有致冻结作用。作者明确指出该现象不必然由60Hz DBS引起。该结果与P3、P4、P5的方向性改善形成个体间异质性。",
+      "quote": "one freezer (P6) froze ON both 60 Hz cDBS and aDBS",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG；Discussion",
+        "page": "11；13",
+        "figure_table": "Figure 3C",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E15",
+      "design": "Primary source；随机、双盲、被试内三条件比较；全体可耐受60Hz患者。",
+      "population": "6名完成随机测试的患者；包括3名OFF DBS时在SIP中出现冻结者，以及P6在刺激条件下出现冻结者。",
+      "n_enrolled": 8,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 6,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "具体冻结事件数量、每条件重复试次数和电极触点数量未报告；P5在OFF DBS时缺少arrhythmicity数据。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "患者问卷定义freezer与实际SIP冻结表现不完全一致；具体运动学亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS、60Hz aDBS、60Hz cDBS三条件；aDBS和cDBS均为60Hz、60μs pulse width；aDBS根据beta burst duration调节刺激幅度。",
+      "task": "100秒连续SIP。",
+      "recording_location": "双侧小腿IMU；该结局不是STN神经信号指标。",
+      "measure": "Gait arrhythmicity，即stride time coefficient of variation的自然对数变换。",
+      "frequency_and_analysis_window": "IMU采样128Hz；陀螺仪低通滤波9Hz；stride time由小腿角速度峰值识别。",
+      "finding": "全体6名患者在OFF DBS、60Hz aDBS和60Hz cDBS三条件间的gait arrhythmicity没有统计学显著差异。",
+      "effect_estimate": "F(2,8.1)=0.35，p=0.712，partial η²=0.08。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应为stimulation condition，随机效应为participant。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机、双盲、被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序有报告，但序列生成和分配隐藏方法不充分。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "部分STN侧在aDBS条件下维持cDBS，双侧干预不完全一致。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "仅6/8患者进入随机测试，且P5的OFF DBS arrhythmicity缺失。",
+            "source_locator": "Results—Tolerability, p.8；Figure 3 caption, p.11"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "使用客观IMU运动学数据，但该指标不是FOG事件本身。",
+            "source_locator": "Methods—Data Acquisition and Data Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供可核对的预注册分析计划。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "总体arrhythmicity指标不显著，与基线冻结者亚组的描述性改善并存。P5缺失OFF DBS arrhythmicity可能影响比较。不能将步态节律性变化直接等同于FOG事件发生率变化。",
+      "quote": "arrhythmicity: F2,8.1= 0.35, p = 0.712",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "11",
+        "figure_table": "Figure 3，gait arrhythmicity指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E16",
+      "design": "Primary source；随机、双盲、被试内三条件比较；全体可耐受60Hz患者。",
+      "population": "6名完成随机测试的患者。",
+      "n_enrolled": 8,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": 6,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FOG事件总数、重复试次数和电极触点数未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "问卷freezer分类与SIP实际冻结事件并不完全一致；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-Off。",
+      "DBS_state_and_parameters": "OFF DBS、60Hz aDBS、60Hz cDBS三条件；aDBS和cDBS均为60Hz，pulse width 60μs。",
+      "task": "100秒连续SIP。",
+      "recording_location": "双侧小腿IMU；不是STN神经信号指标。",
+      "measure": "Peak shank angular velocity。",
+      "frequency_and_analysis_window": "IMU采样128Hz；陀螺仪低通滤波9Hz；小腿角速度峰值超过10deg/s用于识别shank swing。",
+      "finding": "全体6名患者在OFF DBS、60Hz aDBS和60Hz cDBS三条件间的peak shank angular velocity总体比较没有达到统计学显著性。",
+      "effect_estimate": "F(2,10)=3.47，p=0.072，partial η²=0.41。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应stimulation condition，随机效应participant。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2；随机、双盲、被试内刺激比较。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机刺激顺序有报告，但序列生成及分配隐藏细节不充分。",
+            "source_locator": "Methods—Randomized Blinded Testing, p.6"
+          },
+          {
+            "domain": "偏离预定干预",
+            "judgement": "some_concerns",
+            "reason": "部分STN侧在aDBS条件下保持cDBS。",
+            "source_locator": "Results—60 Hz aDBS Calibration, pp.8–9"
+          },
+          {
+            "domain": "缺失结局数据",
+            "judgement": "some_concerns",
+            "reason": "8人中仅6人完成随机测试。",
+            "source_locator": "Results—Tolerability to 60 Hz, p.8"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "low",
+            "reason": "采用客观IMU角速度测量，但不是直接的FOG事件测量。",
+            "source_locator": "Methods—Data Acquisition and Data Analysis, pp.6–7"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册统计分析方案，无法确认全部分析均按预先计划报告。",
+            "source_locator": "Methods—Statistical Analysis, p.7"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "p=0.072，未达到预设的p<0.05标准。虽然partial η²=0.41，但不能将其解释为统计学显著的总体改善。该指标反映步态摆动速度，不是冻结事件的直接结局。",
+      "quote": "peak shank angular velocity: F2,10= 3.47, p = 0.072",
+      "source_locator": {
+        "section": "Results—60 Hz cDBS and aDBS on Gait and FOG",
+        "page": "11",
+        "figure_table": "Figure 3，peak shank swing angular velocity指标",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

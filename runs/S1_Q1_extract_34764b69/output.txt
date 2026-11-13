@@ -1,0 +1,95 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:38636820",
+      "design": "临床任务态神经电生理研究；STN局部场电位（LFP）记录，采用隐马尔可夫模型（HMM）识别瞬态神经活动状态。",
+      "population": "帕金森病患者；摘要未报告是否按照FOG状态分组。",
+      "n": "8",
+      "condition": "患者执行步进任务，比较有无听觉提示条件下的STN神经活动。药物状态及刺激状态未在摘要中说明。",
+      "measure": "STN LFP；HMM识别低β和高β振荡burst及α瞬态，分析各状态的fractional occupancy和state lifetime。",
+      "finding": "听觉提示期间及提示结束后，STN低β和高β burst的出现受到抑制，表现为状态占据率和持续时间下降。相反，α瞬态的占据率和持续时间增加。研究表明，促进步进运动的听觉提示伴随STN β活动减弱和α活动增强，但没有直接报告FOG发作或freezer与non-freezer之间的差异。",
+      "effect": "低β和高β burst的fractional occupancy及state lifetime下降；α瞬态的fractional occupancy及state lifetime增加。摘要未提供具体效应量。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：样本量较小（n=8）；没有FOG患者分组或FOG严重程度指标；没有报告药物状态；步进任务不能直接等同于FOG诱发任务。因此，β burst减少是否直接对应FOG缓解尚不能从该研究确定。",
+      "quote": "The occurrence of low and high β bursts was suppressed during and after auditory cues.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:38135193",
+      "design": "术中神经电生理记录研究；采用微电极单神经元记录和局部场电位记录。",
+      "population": "接受STN或GPi DBS手术的帕金森病患者；摘要没有报告STN和GPi各自的样本量。",
+      "n": "24",
+      "condition": "执行听觉提示下的节律性双足踏动任务，依次使用1、1.5、2、2.5和3 Hz五种提示频率。药物状态未在摘要中说明。",
+      "measure": "STN和GPi单神经元放电率及13-30 Hz β频段LFP；分析运动起始和提示起始后的神经活动，同时测量踏动时序准确性。",
+      "finding": "STN β功率在运动之后表现出增强的β同步，并且与踏动速率相关。随着提示频率增加，STN和GPi神经元放电率均下降，踏动时序准确性也下降。GPi β功率在快速提示下持续受到抑制，在慢速提示下呈现相位性调制，与STN的运动后β同步增强表现不同。研究没有直接测量FOG。",
+      "effect": "STN β同步在运动后增强；STN β功率与踏动速率相关，但摘要未报告相关系数及相关方向。提示频率增加伴随STN和GPi放电率下降及踏动时序准确性降低。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：24例患者包含STN和GPi手术患者，STN特异性样本量不明确；研究采用踏动而非实际行走或FOG诱发任务；没有报告freezer与non-freezer分组、FOG评分及药物状态。踏动速率与β功率的相关性不能直接解释为β活动与FOG的相关性。",
+      "quote": "STN beta power showed enhanced beta synchronization following movement. STN beta power also correlated with rate of pedaling.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:38509158",
+      "design": "临床观察性神经电生理研究；基于慢性植入DBS电极的STN LFP进行步态相关交叉频率耦合分析。",
+      "population": "慢性植入双侧STN DBS电极的帕金森病患者。",
+      "n": "8",
+      "condition": "比较直立安静站立与无外部干扰的行走状态，研究多巴胺相关调节。具体药物ON/OFF状态及DBS刺激状态未在摘要中明确说明。",
+      "measure": "双侧STN LFP；使用Kullback-Leibler方法及modulation index计算β-γ相位-振幅耦合（PAC），并与临床指标、步态运动学指标及分子脑成像结果进行相关分析。",
+      "finding": "从站立转变为行走时，STN β-γ PAC出现与多巴胺相关的增加。PAC调节能力较差、行走期间PAC较低的患者，在步态周期中花费于支撑期（stance phase）和双支撑期（double support phase）的时间显著更多。结果提示STN β-γ PAC的步态相关调节与步态时空特征有关，但摘要没有报告PAC与FOG发作或FOG严重程度之间的直接相关。",
+      "effect": "站立至行走期间β-γ PAC增加；PAC调节较差及行走期间PAC较低与支撑期、双支撑期时间增加相关。摘要未提供具体效应量和相关系数。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：样本量仅8例；没有明确的freezer与non-freezer比较；未报告FOG发生频率或FOG严重程度；PAC与步态参数之间的关联不能证明因果关系；具体药物及刺激条件不明确，限制了不同研究之间的直接比较。",
+      "quote": "Patients with poor PAC modulation and low PAC during walking spent significantly more time in the stance and double support phase of the gait cycle.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:37888906",
+      "design": "单病例神经电生理研究；使用外置DBS电极记录STN局部场电位。",
+      "population": "一名帕金森病患者。",
+      "n": "1",
+      "condition": "比较四种条件：OFF、MEDS、DBS和MEDS+DBS。MEDS包括左旋多巴和普拉克索。各条件下评估STN神经活动及临床运动症状。",
+      "measure": "外置STN DBS电极记录的β频段（13-35 Hz）LFP功率，以及临床运动症状改善情况。",
+      "finding": "该患者在服用左旋多巴和普拉克索后，STN β功率出现反常增加；而DBS单独治疗和MEDS+DBS条件下，β功率均受到抑制。值得注意的是，尽管MEDS条件下β功率增加，三种治疗条件（MEDS、DBS、MEDS+DBS）均伴随至少50%的临床改善。这提示STN β功率变化与临床运动改善并非在所有治疗条件下保持一致的对应关系。研究没有报告FOG特异性结果。",
+      "effect": "MEDS后β功率增加；DBS及MEDS+DBS后β功率降低；三种治疗条件下临床改善均达到或超过50%。摘要未报告β功率变化的具体数值。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：单病例研究，不能判断该现象的普遍性；没有FOG专项评分或FOG分组；没有报告不同治疗条件下FOG变化；个体性治疗反应可能限制β功率作为统一临床状态指标的适用性。",
+      "quote": "paradoxical increase in β power following administration of levodopa and pramipexole (MEDS)",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:37970314",
+      "design": "单中心、开放标签、纵向临床研究。",
+      "population": "接受STN-DBS治疗且存在步态障碍的帕金森病患者；平均术后时间为3.73 ± 2.82年。",
+      "n": "15；6个月时13人能够完成步态测试。",
+      "condition": "在药物ON状态下，比较60、90、130、180 Hz及刺激OFF五种条件。电压保持不变。在基线和6个月时分别进行评估。",
+      "measure": "Stand-Walk-Sit（SWS）测试和冻结步态（FOG）评分；根据不同刺激频率下的步态和FOG反应确定个体最佳刺激频率。未记录STN神经活动或LFP。",
+      "finding": "改善步态及FOG的最佳STN-DBS频率存在明显个体差异，低频和高频刺激均可能有效。基线时，患者的最佳反应频率分布于60、90、130和180 Hz等条件。6个月时，在13名完成测试的患者中，仅4人保持与基线相同的最佳频率，11人出现最佳频率变化。该结果表明，STN刺激参数与FOG改善之间存在个体差异及时间依赖性，但不能直接说明哪种STN神经活动变化介导了FOG改善。",
+      "effect": "基线时最佳反应频率：180 Hz为5人，130 Hz为5人，90 Hz为1人，60 Hz为2人，60/90 Hz均有效为1人，90/180 Hz均有效为1人。6个月时，13人中4人维持原频率，11人改变最佳频率。摘要未报告具体FOG评分变化量。",
+      "limitations": "研究设计为单中心、开放标签纵向研究，样本量较小（n=15）；6个月时有2人未能完成测试；仅在药物ON状态评估；没有STN LFP或其他神经活动记录，无法建立刺激频率、STN神经活动和FOG变化三者之间的直接关系。",
+      "quote": "Optimal frequency for gait varies in patients-both low and high frequency may be useful.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:38363617",
+      "design": "双盲交叉干预研究；结合临床运动学评估和电极刺激体积建模。",
+      "population": "存在步态障碍的帕金森病患者。",
+      "n": "10",
+      "condition": "比较STN DBS、联合STN+SNr DBS和DBS OFF三种条件；每次重新编程后30分钟进行临床和运动学评估。研究确认刺激体积与背外侧SNr存在重叠。",
+      "measure": "UPDRS III、转身和动作转换过程中的FOG评分、步幅、步速、肢体及躯干活动范围、转身峰值速度和转身持续时间。没有直接记录STN神经活动。",
+      "finding": "与DBS OFF相比，单独STN DBS改善了转身和动作转换过程中的冻结步态评分，并改善步幅、步速及多项运动学指标。队列整体水平上，联合STN+背外侧SNr DBS没有产生进一步改善，但部分个体的时空步态参数出现额外改善。该研究支持STN刺激能够改善部分FOG相关临床表现，但不能确定这种改善对应何种STN神经活动变化。",
+      "effect": "STN DBS相较OFF改善转身及动作转换时的冻结评分；联合STN+SNr DBS没有显示队列整体层面的额外获益，部分个体出现步态时空参数的附加改善。摘要未提供具体效应量。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：样本量较小（n=10）；评估集中在重新编程后30分钟，主要反映短期刺激效应；FOG评估集中于转身和动作转换；没有STN LFP或单神经元记录，不能将临床改善与特定神经振荡变化建立直接联系。作者指出，刺激间隔、频率、患者选择及SNr靶区仍需进一步优化。",
+      "quote": "On cohort level, no further improvement was observed with combined STN+SNr DBS but additive improvement of spatiotemporal gait parameters was observed in individual subjects.",
+      "basis": "abstract"
+    },
+    {
+      "pid": "PMID:37932548",
+      "design": "非人灵长类模型研究结合单病例临床报告。",
+      "population": "非人灵长类帕金森病运动障碍模型；另有一名62岁男性患者，患帕金森病30年，存在严重步态障碍和频繁跌倒，常规治疗效果不佳。",
+      "n": "人类病例1例；非人灵长类模型的具体样本量摘要未报告。",
+      "condition": "使用闭环脊髓神经假体，靶向支配腰骶脊髓节段的背根进入区，以重建步行期间脊髓的时空激活模式。临床病例中联合STN DBS及多巴胺替代治疗。",
+      "measure": "步态不对称性、步长、平衡能力及冻结步态表现。摘要没有报告STN LFP、β功率或其他STN神经活动测量。",
+      "finding": "在人类病例中，脊髓神经假体与STN DBS及多巴胺替代治疗表现出协同作用，改善步态不对称性、增加步长、改善平衡并减少FOG。非人灵长类模型中，该神经假体也改善了运动障碍并恢复了熟练行走。该研究提供了STN DBS参与FOG改善的联合干预证据，但没有直接揭示STN神经活动与FOG之间的关系。",
+      "effect": "联合治疗后步态不对称性减轻、步长增加、平衡改善、FOG减少；摘要未提供具体效应量或FOG评分变化数值。",
+      "limitations": "摘要未报告作者明确承认的局限。方法学问题：人类证据仅来自单病例，不能确定普遍疗效；脊髓神经假体、STN DBS和多巴胺替代治疗同时发挥作用，无法单独分离STN DBS对FOG改善的贡献；没有STN神经活动记录，不能推断β振荡或其他STN神经信号的变化。",
+      "quote": "We found that the neuroprosthesis interacted synergistically with deep brain stimulation of the subthalamic nucleus and dopaminergic replacement therapies to alleviate asymmetry and promote longer steps, improve balance and reduce freezing of gait.",
+      "basis": "abstract"
+    }
+  ]
+}</escape>

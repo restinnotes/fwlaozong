@@ -1,0 +1,448 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:39475137
+题目: Directional Subthalamic Deep Brain Stimulation Better Improves Gait and Balance Disorders in Parkinson's Disease Patients: A Randomized Controlled Study.
+年份: 2025
+全文：
+# Directional Subthalamic Deep Brain Stimulation Better Improves Gait and Balance Disorders in Parkinson's Disease Patients: A Randomized Controlled Study
+
+## Abstract
+To investigate the effects of directional subthalamic deep brain stimulation (STN‐dDBS) on gait and balance disorders, including freezing of gait (FOG), in patients with advanced Parkinson's disease (PD). We included 10 participants who underwent STN‐DBS and presented severe preoperative FOG, in a randomized, double‐blind, crossover study. We used segmented DBS electrodes to investigate whether directing the predicted volume of tissue activated (VTA) to overlap the central STN preferentially improved gait and balance disorders compared to directional DBS applied in the more posterior STN (sensorimotor). We also assessed non‐directional (ring‐mode) STN‐DBS. Our primary outcome was gait and balance control measured using instrumented gait recordings. Each patient had a pre‐operative structural and diffusion‐weighted imaging to model individual VTAs and to examine cortico‐subthalamic connectivity. We used linear mixed‐effects models to contrast the effects of central STN‐dDBS, posterior STN‐dDBS, and ring‐mode STN‐DBS. Central STN‐dDBS produced significantly better improvement in gait and balance control compared to posterior STN‐dDBS (p = 0.027), with fewer FOG episodes (p < 0.001). Conversely, ring‐mode STN‐DBS resulted in worsened postural control compared to central STN‐dDBS (p = 0.009). The cortico‐subthalamic connectivity with the STN VTAs involved mostly primary sensorimotor, premotor, and medial frontal cortices, with a higher overall cortico‐STN connectivity with ring‐mode STN‐DBS. Central STN‐dDBS represents the best option to improve gait and balance disorders in PD patients, including FOG. Our findings raise the possibility of reprogramming STN‐DBS toward the central area in selected patients with disabling FOG and/or postural instability after surgery. ANN NEUROL 2025;97:149–162
+
+Gait and balance disorders represent the main motor disabilities in advanced stages of Parkinson's disease (PD), with freezing of gait (FOG) episodes and falls reported in 50 to 70% of patients after 10 years of disease duration.
+1
+ FOG and falls show only partial and inconsistent improvement with dopamine replacement therapy and become increasingly resistant to pharmacological interventions as the disease progresses.
+1
+ This results in a significant burden on patients, impacting their quality of life and increasing the rates of institutionalization, morbidity, and mortality.
+2
+, 
+3
+ Although the neural underlying mechanisms of FOG and falls are not yet fully understood, recent studies have reported structural and functional anomalies in a number of brain regions including the supplementary motor area (SMA) and dorsolateral prefrontal cortex (DLPF), as well as the basal ganglia, cerebellum, and mesencephalic locomotor region (MLR).
+4
+, 
+5
+, 
+6
+
+Deep brain stimulation (DBS) of the subthalamic nucleus (STN) is an effective treatment for alleviating motor and non‐motor symptoms of PD.
+7
+ On average, STN‐DBS improves significantly FOG.
+8
+, 
+9
+, 
+10
+ However, approximately 1 of 3 PD patients show residual, worsened, or de novo FOG after surgery.
+10
+, 
+11
+, 
+12
+, 
+13
+ Advanced age, dysexecutive syndrome, prior FOG (OFF‐DOPA), and specific DBS parameter settings have been linked to an increased risk of post‐operative FOG.
+10
+, 
+14
+, 
+15
+, 
+16
+ However, the precise factors contributing to post‐operative FOG for individual patients remain incompletely identified. In a prior retrospective cohort study we showed that the best FOG alleviation with STN‐DBS is achieved when stimulating contacts are positioned within the central part of the STN.
+10
+ Another retrospective study showed that FOG improvement was obtained when stimulating contacts were preferentially localized in the posterior‐central two‐thirds of the STN.
+13
+ Such FOG improvement was also related to the recruitment by the STN‐DBS of the right primary sensorimotor, premotor, and SMA cortico‐subthalamic streamlines while avoiding prefrontal cortices.
+13
+, 
+17
+, 
+18
+
+These data raise the possibility that targeting the central STN area could potentially better improve FOG. This could be achieved by the means of directional DBS (dDBS) for more precise targeting through current shaping, which could also bring supplemental benefits through optimization of the therapeutic window, reducing dopaminergic medications, energy consumption, and side effects.
+19
+, 
+20
+, 
+21
+, 
+22
+
+In this study, we evaluated the impact of directional STN‐DBS on gait and balance disorders, including FOG, in a randomized double‐blind cross‐over controlled trial. We used segmented electrodes to specifically direct predicted volume of tissue activated (VTAs) to target the central associative part of the STN, or the posterior sensorimotor part of the STN usually considered to be the ideal target for akinesia and rigidity.
+23
+, 
+24
+, 
+25
+, 
+26
+ We hypothesized that central STN‐dDBS would yield superior improvements in gait and postural control, with fewer FOG episodes compared to posterior STN‐dDBS, while achieving improvements in overall motor disability similar to usual non‐directional (ring‐mode) STN‐DBS. We measured changes in gait and balance control using kinetic and kinematic parameters derived from instrumental gait recordings.
+27
+ We focused on gait initiation, because alterations in this process are associated with a predisposition for FOG and are reliable indicators of this gait complication.
+28
+, 
+29
+, 
+30
+ We also examined individual brain diffusion tractography to determine whether clinical differences between STN‐DBS conditions could be explained by differences in cortico‐subthalamic connectivity profiles.
+
+## Patients and Methods
+
+### Participants
+
+In this study, we recruited participants from the Pitié‐Salpêtrière Hospital and Rouen University Hospital, using the following inclusion criteria: (1) age between 18 and 70 years, (2) diagnosis of idiopathic PD according to the United Kingdom Parkinson's Disease Society Brain Bank criteria, (3) eligibility for bilateral STN‐DBS, including a >50% improvement in motor disability with l‐dopa treatment, (4) FOG in the OFF‐DOPA condition (item 2.13 of the Movement‐Disorders Society‐Unified Parkinson's Disease Rating Scale [MDS‐UPDRS] >0), (5) stability of other medical disorders and that do not interfere with the research, and (6) social insurance coverage. Non‐inclusion criteria included: (1) active and severe psychiatric or neurological disorders; (2) dementia (Mini‐Mental State <24/30); (3) any contraindication for the research magnetic resonance imaging (MRI); or (4) for surgery; (5) hypersensitivity to contrasts agents; (6) individuals under guardianship, tutorship, or any other legal deprivation of rights and liberty; (7) ongoing exclusion from other research studies; and (8) pregnancy, lactation, or a lack of documented and effective contraception according to the World Health Organization definition.
+
+We performed the study in accordance with the declaration of Helsinki and Good clinical practice guidelines. The local ethics committee approved the study, and all patients signed written informed consent to participate (N° 2019‐A01717‐50). The study was registered on a clinical trial website (ClinicalTrials.gov: NCT04223427).
+
+### Surgical Procedure and Stimulation Parameters
+
+Patients underwent a comprehensive assessment at the time of enrollment (baseline), followed by bilateral STN‐DBS implantation (Fig 1). As part of the baseline evaluation, all patients had a 3 Tesla (T) MRI at the Paris Brain Institute (see Supplemental Methods). The 2 segmented electrodes (Boston Scientific Neuromodulation Vercise system, Marlborough, MA) were implanted the same day, as previously reported,
+10
+ with direct targeting of the STN using 3 dimensional (3D) T2 fluid attenuated inversion recovery weighted images on preoperative 3 T MRI, and an additional indirect targeting using the basal ganglia atlas for patients operated at the Salpêtrière hospital.
+7
+, 
+31
+ The electrodes were connected to the programmable pulse generator (Boston Scientific Neuromodulation Vercise system) and a post‐operative computed tomography (CT)‐scan was performed to confirm the absence of early surgical complications and localization of the leads. Another scan was done 2 months later to ascertain the definitive electrode position.
+
+[fig ana27099-fig-0001] Study design. DBS, deep brain stimulation; Dopa, dopamine medication; M, month; PREOP, preoperative assessment; STN, subthalamic nucleus. [Color figure can be viewed at www.annalsofneurology.org]
+
+Following surgery, the parameters for DBS were initially established based on patient's clinical examination using non‐directional (ring‐mode) DBS and further refined during outpatient visits over the subsequent 6 months.
+
+Six months after surgery (M7), patients were allocated to central and posterior sensorimotor STN‐dDBS conditions applied in a randomized order and in a double‐blind fashion (OFF‐DOPA, ≥12 hours since their last administration of their PD medication). Each STN‐DBS condition was applied for 30 minutes with a 30‐minute wash‐out period between each (see Fig 1). Non‐directional (ring‐mode) and OFF‐DBS conditions (1 hour after switching off the stimulator) were also tested. We also examined outside STN‐dDBS condition with VTAs directed away from the STN. Randomization was done using block randomization in RedCap using a randomization sequence that was revealed only to the unblinded clinical expert responsible for programming the DBS parameters.
+
+### Electrode Locations and DBS Programming for STN‐dDBS
+
+At month 7, for each patient, we determined the placement and rotation of the electrodes on the CT images performed 2 months after surgery using Guide XT software (Brain Lab, Boston Scientific). The CT images were then co‐registered with the pre‐surgical T1‐weighted MRI to visualize the electrode location within the STN area using our in‐house basal ganglia atlas (Fig 2).
+31
+ We determined the parameters for each STN‐DBS condition using the Vercise software, with a standard pulse width of 60μs and a frequency of 130Hz. The current was set to generate a VTA including the target of interest (ie, the posterior STN and central STN),
+10
+ whereas minimizing overlap between targets, and visualized using lead DBS
+32
+ (see Fig 2A–D, Fig S2). The unblinded neurologist set DBS parameters below the threshold for side effects.
+
+[fig ana27099-fig-0002] Leads locations and volume of tissue activated (VTAs) for ring‐mode, directional central and posterior subthalamic deep brain stimulation (STN‐DBS). (A–C) Coronal, axial, sagittal, and 3 dimensional (3D) posterior views of the VTAs of the 10 Parkinson's disease (PD) patients with central (C, green) and posterior (D, purple) STN‐directional DBS (dDBS), and ring‐mode STN‐DBS (E, orange), for the right and left electrodes. (D) The graph reports the VTAs included in (IN) and outside (OUT) the STN, and the total volumes (SUM), for the central (green) and posterior (purple) STN‐dDBS, and ring‐mode STN‐DBS (orange), for the right (R) and left (L) sides. (E) Individual electrode positions illustrated in a posterior 3D view (Montreal Neurological Institute [MNI] space). The central STN target is shown in color for the STN of each hemisphere. The different subregions of the STN are represented in light green (posterior‐motor), pink (central‐associative), and yellow (anterior‐limbic). (F) Posterior 3D view of the location of the barycenter of each VTA with central (green) and posterior (purple) STN‐dDBS, and ring‐mode STN‐DBS (orange), within the 3D atlas of the basal ganglia in MNI space. Each sphere represents 1 barycenter of 1 individual patient and for 1 side. (G) The graphs report the anteroposterior (Y_axis) and depth (Z_Axis) coordinates of the barycenter of each individual VTAs for ring‐mode (RING) STN‐DBS, and central (CENT), and posterior (POST) STN‐dDBS. *p < 0.05. [Color figure can be viewed at www.annalsofneurology.org]
+
+After this first assessment of central STN‐dDBS at month 7, all patients received central STN‐dDBS for the following months in an open‐label manner (see Fig 1). Central STN‐dDBS parameters were adjusted as necessary and patients underwent reassessments at month 8 and month 13 (ie, after 6 months with central STN‐dDBS) (see Fig 1).
+
+### Gait and Balance Disorders Assessment
+
+All participants underwent complete gait recordings and comprehensive clinical scales to assess the severity of gait and balance disorders, including FOG.
+
+The primary outcome measure was gait and balance control measured using kinetic parameters during gait initiation using a force platform (0.9 × 1.8 m, AMTI, Advanced Mechanical Technology. Watertown, MA). Patients were instructed to commence walking for 6 to 8 meters following a visual cue, make half‐turn, and return to their initial position (Fig S1).
+27
+ Patients performed on average 20 trials per treatment condition. The following parameters of gait initiation were calculated using MATLAB R2018b: (1) antero‐posterior and lateral displacements of the center of foot pressure (CoP) during the anticipatory postural adjustment phase (APAs, occurring between t0 and the first foot‐off), (2) duration of APAs and double stance phases, and (3) length, width and velocity of the first step (Fig S1). We then applied principal component analysis (PCA) on these measures to reduce dimensionality and distinguish the different components of gait initiation. For this, we rescaled each variable to zero mean and unit standard deviation, and selected the number of principal components (PC) to retain using a parallel analysis with 200 resamples.
+33
+ We included 1,188 gait trials in the PCA analysis. We summarized data across retained PCs using the Euclidean distance of the PC scores relative to the mean PC scores measured in a cohort of 10 healthy controls matched for age (mean age [SD] = 55.3 [4.1] years, 4 females [F]/6 males [M]).
+34
+
+Kinematic parameters during straight‐ahead walking and turn were also recorded using a motion capture system using 32 markers (Vicon, Oxford, England), and the following parameters calculated: velocity, stride length, double stance and turn durations, and the number and duration of FOG episodes (Fig S1).
+
+Additional prespecified secondary outcomes included clinical scales to assess the severity of gait and balance disorders and motor disability: the MDS‐UPDRS part III (motor disability) with the “axial” subscore (“speech,” “arising from chair,” “gait,” “freezing of gait,” “postural stability,” and “posture” items); the Gait and Balance Scale (GABS) and the FOG Questionnaire (FOG‐Q) (see Supplemental references).
+
+Gait parameters and clinical scales were assessed both in the OFF‐DOPA condition (withdrawal of 12 hours of antiparkinsonian treatment) and in the ON‐DOPA condition (after administering a suprathreshold dose of l‐dopa) at baseline, month 8, and month 13.
+
+### Cortico‐Subthalamic Connectivity
+
+We assessed the cortico‐subthalamic streamlines encompassed by the individual VTAs for each STN‐DBS condition for each hemisphere of each patient, as previously reported (Fig 2E, F, see Supplemental methods).
+18
+ Each VTA was modeled using the Lead‐DBS toolbox,
+32
+ by computing the electrical fields using the Simbio/Fieldtrip technique
+35
+ and thresholding at 0.2V/mm. We, then, extracted the connectivity of each VTA with the 39 cortical Brodmann areas (BA) from the whole brain tractography, and segmented using the Brodmann atlas included in MRIcro (https://www.mccauslandcenter.sc.edu/crnl/mricro). We used the normalized sum of streamline weights involved in tracks of interest and the fiber bundle capacity (FBC),
+18
+ as a quantitative measure of connectivity (see Fig 2).
+
+### Statistical Analysis
+
+We used linear mixed‐effects models to test the planned comparison between central STN‐dDBS, posterior STN‐dDBS and ring‐mode STN‐DBS (all conditions OFF‐DOPA) at month (randomized double‐blind period). Treatment condition was coded as a factor and included as a fixed effect as well as a random slope, where patient identification was used as the grouping factor in the random effects. Separate models were fit for the Euclidean distance of the PC scores and individual PC scores derived from gait initiation data, as well as clinical scores at month 7. We used linear mixed‐effects models with the same fixed and random effects structures to compare data collected before surgery in the OFF‐DOPA and ON‐DOPA states, and between central STN‐dDBS at month 7, month 8, and month 13 (OFF‐DOPA). We used a binomial generalized linear mixed model to examine the probability of experiencing FOG during a gait trial.
+
+We performed a repeated measures analysis of variances to analyze the differences between STN‐DBS conditions (ring‐mode, central, and posterior) at month 7, for the VTAs, both within and outside the STN, the total electrical energy delivered (TEED), the coordinates of the barycenter of the VTAs (laterality_X axis, antero‐posteriority_Y axis, depth_Z axis, relative to the horizontal plane connecting the anterior and posterior commissures [AC‐PC]), and the FBC for cortico‐STN connectivity profile. Mauchly's tests were used to check the assumption of sphericity. To assess variations in the connectivity profile, in line with previous studies,
+13
+, 
+18
+, 
+36
+ we separated VAT connectivity into 2 large clusters: a “prefrontal” cluster (including predominantly BA 8, 9, 10, 11, 32) and a “sensorimotor” cluster (including predominantly BA 1–2‐3, 4, 6). Post hoc Wilcoxon rank sum tests were performed to identify differences between conditions.
+
+Additionally, the effects of the outside STN‐DBS conditions were examined as exploratory outcomes (see Supplemental materials).
+
+We performed statistical analyses using R (version 4.3.1) with the following packages: lme4 (version 1.1–35), GLMMadaptive (0.9–1), lmerTest (3.1–3), emmeans (1.10.0), and JASP (version 0.18.3). We adjusted p‐values for post hoc comparisons to control the false discovery rate, and we considered a significance level of p < 0.05.
+
+## Results
+
+### Cohort Analysis
+
+Between December 2019 and April 2022, we enrolled 11 PD patients in the study. All patients underwent surgery, but 1 patient (P02‐07) had to be withdrawn before randomization because of relocation abroad, which prevented the planned assessments. The remaining 10 patients (8 M/2F) were randomly allocated and successfully completed the study (Table 1), with 1 patient (P02‐03) declining to perform the OFF‐DOPA assessment at month 13.
+
+[table-wrap ana27099-tbl-0001] Demographic and Clinical Characteristics of PD Patients at Inclusion
+
+At baseline, all patients exhibited gait and balance disorders, with disabling FOG, that were responsive to l‐dopa treatment, with a 70% and 82% decrease in the axial and GABS scores, respectively (Table 1).
+
+### Electrode Locations, Stimulation Parameters, VTAs, and Cortico‐Subthalamic Connectivity
+
+The implanted electrodes were accurately positioned within the STN in all patients (see Fig 2). For each patient, we were able to adjust the current to generate a VTA targeting the central and the posterior STN areas, with minimal or no overlap between these 2 dDBS conditions (see Fig 2, Fig S2). The stimulation parameters used for each STN‐DBS condition are reported in the Table S1. The mean TEED was significantly higher for ring‐mode STN‐DBS relative to both central (p = 0.013) and posterior (p = 0.016) STN‐dDBS, with no significant differences between central and posterior STN‐dDBS (p = 0.43) (Table S2, Fig S3).
+
+The VTAs were significantly different between STN‐DBS conditions (F [4, 36] = 4.99, p = 0.003) (see Fig 2A–D). The VTAs both within and outside the STN were significantly larger for ring‐mode STN‐DBS compared to both central and posterior STN‐dDBS (p = 0.002), with no significant differences between central and posterior STN‐dDBS. The coordinates of the barycenter of the VTAs were significantly different between conditions (F [9, 18] = 12.337, p < 0.001). The VTAs from central STN‐dDBS were significantly more anterior and ventral within the STN compared to VTAs from posterior STN‐dDBS (see Fig 2E–G), with no significant differences for the laterality (Table S3). The VTA barycenter for ring‐mode STN‐DBS was more anterior compared to posterior STN‐dDBS, with no significant differences with VTA barycenter for central STN‐dDBS (Table S3). Looking at overlaps and differences between ring‐mode and directional STN‐DBS conditions, we found that ring‐mode overlapped with both central and posterior STN‐dDBS, and ring‐mode VTAs outside the STN were predominantly located either medially or laterally to the STN (see Fig 2A–C, Fig S2).
+
+Tractography analyses showed that VTAs of central and posterior STN‐dDBS included mainly cortico‐STN streamlines from primary sensorimotor, premotor, SMA, and medial frontal cortices (see Fig 3A, B, Fig S4). Ring‐mode STN‐DBS produced VTAs with a similar relative distribution across these cortico‐STN streamlines, but exhibited significant overall higher connectivity with both prefrontal and sensorimotor networks (F [2, 18] = 5.815, p = 0.011), and relative to both central and posterior STN‐dDBS (vs central, p = 0.026; vs posterior, p = 0.05). We found no significant differences between central and posterior STN‐dDBS (p = 1.00) (see Fig 3, Fig S4).
+
+[fig ana27099-fig-0003] Cortico‐subthalamic streamlines included in the volume of tissue activated (VTAs) for ring‐mode, central and posterior subthalamic deep brain stimulation (STN‐DBS). (A) Visualization of the cortico‐subthalamic streamlines included in the central (green) and posterior (purple) STN‐dDBS, and ring‐mode STN‐DBS (orange) for the right VTAs in 1 Parkinson's disease (PD) patient. (B) Three dimensional (3D) representation of the cortico‐subthalamic streamlines included in the central (green) and posterior (purple) STN‐directional DBS (dDBS), and ring‐mode STN ‐DBS (orange), in the 2 STN in 1 PD patient. 3D view of the cortico‐STN connectivity with all VTAs for the ring‐mode (left) and directional central (middle) and posterior (right) STN‐DBS conditions (high connectivity = yellow, low connectivity = purple). (C) The graph reports the mean and standard error (SE) of the fiber bundle counts (FBC) for the sensorimotor (SM) and prefrontal (Pf) networks fiber tracts included in the VTAs for central (green dots) and posterior (purple dots) STN‐dDBS and ring‐mode STN‐DBS (orange squares). (D) The graph reports the mean FBC between each of the 48 Brodmann areas included in the VTAs for central (green) and posterior (purple) STN‐dDBS, and ring‐mode STN‐DBS (orange), for the right and left sides. [Color figure can be viewed at www.annalsofneurology.org]
+
+Regarding the outside STN DBS condition, the TEED, and VTAs were lower compared to all other STN‐DBS conditions (Figs S2 and S3, Tables S2 and S3).
+
+### Effects of Directional STN‐DBS on Gait and Balance Disorders during the Randomized Period
+
+We applied PCA to reduce gait initiation measures (Fig 4A), which yielded 3 significant PC accounting for 73% of the data variance (see Fig 4B). The first PC (PC1) correlated positively with anteroposterior and mediolateral APAs, step length, maximal velocity, and step swing duration, and negatively with APAs and double stance durations, and vertical velocities (V1 and V2). PC1, therefore, reflected forward propulsive forces, with higher scores indicating better propulsion. The second PC (PC2) correlated positively with APAs, double stance and swing phases durations, vertical velocities, step length and velocity, and negatively with step width, anteroposterior and mediolateral APAs. PC2, therefore, reflected mainly dynamic postural control. The third PC (PC3) correlated positively with the durations of APAs and double stance, and step width, and negatively with the vertical velocities (V1 and V2), and anteroposterior and mediolateral APAs. PC3 mainly reflected static postural control during gait initiation, with lower and negative scores indicating better postural control.
+
+[fig ana27099-fig-0004] Gait initiation parameters, principal component analysis, effects of l‐dopa and subthalamic deep brain stimulation (STN‐DBS) on gait initiation performance. (A) Gait initiation parameters extracted from the mediolateral (ML) and anteroposterior (AP) displacements of the center of foot pressure (CoP); and AP and vertical (V) velocities of the center of mass (CoM). Included are the width (W), length (L), maximal velocity (Vm) of the first step, the minimal vertical velocity (V1) during the anticipatory postural adjustments (APA) phase (V1) and at the time of foot‐contact (FC, V2). The duration of the APA phase was the delay between the first biomechanical event (t0) and the foot‐off of the limb (FO1). The double‐stance duration (DS) is the delay between the FC and the second foot‐off (FO2). (B) Results of the principal component analysis performed on gait parameters, and correlation values for the parameters included in the first 3 principal components. Blue colors reflect negative correlations whereas purple colors reflect positive correlations. (C) The effects of l‐dopa treatment before surgery on gait initiation. Left most panel represents the Euclidean distance summarizing the 3 significant PC scores compared to PC scores measured in 10 healthy age‐matched controls (blue horizontal line). The 3 remaining panels illustrate the scores for each individual principal component. Small unfilled circles represent the mean distance or PC scores for each patient. The rectangles represent the estimated marginal mean for each condition with 95% confidence intervals (vertical line). The blue lines represent the distance or PC scores obtained in healthy controls (mean of individual control means). *p < 0.05, **p < 0.01, ***p < 0.001. (D) The effects of STN‐DBS on gait initiation during the randomized period (month 7). Formatting as for C. [Color figure can be viewed at www.annalsofneurology.org]
+
+We examined the overall effect of dopaminergic treatment before surgery using the Euclidean distance of the PC scores compared to PC scores measured in 10 healthy age‐matched controls (see Fig 4C). l‐Dopa significantly improved gait initiation, reducing the average distance for patients close to that obtained for healthy controls. Both forward propulsive forces (PC1) and dynamic postural control (PC2) were significantly lower in PD patients compared to controls, and significantly improved by the l‐dopa treatment (PC1: p = 0.00032, PC2: p = 0.0019). PC3 was not different in PD patients compared to controls and not significantly modified by l‐dopa treatment (p = 0.13) (see Fig 4C) (Table S2).
+
+### Effects of Directional STN‐DBS on Gait Initiation Parameters
+
+At month 7, the mean Euclidian distance for gait initiation PC scores was significantly lower for all STN‐DBS conditions compared to OFF‐DBS (see Fig 4D).
+
+The mean Euclidian distance was the greatest deviation from healthy controls with posterior STN‐dDBS, and significantly worse compared to central STN‐dDBS (see Fig 4D, p = 0.027). Ring‐mode STN‐DBS (p = 0.027) resulted in gait initiation scores closest to healthy controls, followed by central STN‐dDBS, with no significant differences between the 2 (see Fig 4, p = 0.85).
+
+Forward propulsive forces (PC1) were significantly higher and closer to healthy controls with STN‐DBS compared to OFF‐DBS (see Fig 4, Table 2). We found no significant differences in the PC1 between central and posterior STN‐dDBS (Table 2). PC1 was higher with ring‐mode relative to posterior STN‐dDBS, with no significant differences between ring‐mode and central STN‐dDBS (see Fig 4D, Table 2). Dynamic postural control (PC2) did not significantly differ between OFF‐DBS and directional STN‐dDBS conditions, nor between central and posterior STN‐dDBS conditions, and was closer to scores for healthy controls (Table 2). Conversely, PC2 scores were significantly reduced with ring‐mode STN‐DBS compared to OFF‐DBS, as well as compared to central and posterior STN‐dDBS, indicating poorer dynamic postural control. Last, PC3 scores did not show significant differences between DBS conditions, although central STN‐dDBS produced scores that were the closest to healthy controls, indicating a better static postural control (Table 2).
+
+[table-wrap ana27099-tbl-0002] Linear Mixed Effects Models of Gait Initiation Principal components with Directional Central STN, Posterior STN, and Ring‐Mode DBS
+
+### Effects of Directional STN‐DBS on Freezing of Gait, Gait and Balance Disorders, and Motor Disability
+
+During straight‐ahead walking and turns, the probability of experiencing at least 1 FOG episode per walking trial was significantly lower with central STN‐dDBS compared to both posterior STN‐dDBS and OFF‐DBS (Fig 5). Additionally, the probability was significantly lower with ring‐mode relative to posterior STN‐dDBS, with no significant differences between ring‐mode and central STN‐dDBS (see Fig 5). In straight‐ahead walking, although not statistically significant, step length tended to be longer and turn duration shorter with central compared to posterior STN‐dDBS (Fig S5).
+
+[fig ana27099-fig-0005] Effects of ring‐mode, directional central and posterior subthalamic (STN) deep brain stimulation (DBS) on freezing of gait (FOG) episodes during forward walking, and clinical gait and balance disorders and motor disability. Small unfilled circles represent the mean for each patient of the measure indicated by the ordinate label. The rectangles represent the estimated marginal mean for each condition with 95% confidence intervals (vertical line). *p < 0.05, **p < 0.01, ***p < 0.001. GABS, Gait and Balance Scale; MDS‐UPDRS, Movement Disorders Society‐Unified Parkinson's Disease Rating Scale. [Color figure can be viewed at www.annalsofneurology.org]
+
+The axial and GABS scores were significantly improved for all STN‐DBS conditions compared to OFF‐DBS, with a significantly greater improvement for central compared to posterior STN‐dDBS (see Fig 5, Table S4). There were no significant differences in axial and GABS scores between ring‐mode and either central or posterior STN‐dDBS. The MDS‐UPDRS III score was significantly improved for all DBS conditions compared to OFF‐DBS (see Fig 5, Table S4). The MDS‐UPDRS III score was lower with central compared to posterior STN‐dDBS, and with ring‐mode compared to posterior STN‐dDBS, with no significant differences between ring‐mode and central STN‐dDBS (Table S4). Last, the MDS‐UPDRS III score was higher with outside STN‐dDBS relative to all other STN‐DBS conditions (Fig S6).
+
+### Effects of Chronic Directional STN‐DBS on Gait and Balance Disorders during the Open Label Period
+
+During the open‐label follow‐up period (M7 to M13), parameters settings were adjusted in response to the resurgence of PD motor signs, including motor fluctuations, akinesia, or gait difficulties observed in 8 patients. This adjustment involved increasing stimulation intensity, resulting in a significant rise in the TEED at month 13 relative to month 7 (Table S2, Fig S3). Central STN‐dDBS was maintained in all patients except 1 (P02‐04), who preferred ring‐mode STN‐DBS with reports of better motor improvement.
+
+When stimulating 6 months with central STN‐dDBS (month 13), we observed a significant increase in PC1 scores compared to the acute central STN‐dDBS condition at month 7, with no significant changes in PC2 and PC3 scores (see Fig 6, Table 2), indicating improved propulsive forces without degradation in dynamic and static postural control during the 6‐month application of central STN‐dDBS.
+
+[fig ana27099-fig-0006] Effects of chronic central subthalamic (STN) directional deep brain stimulation (dDBS) on kinetic gait parameters, and clinical gait and balance disorders and motor disability. Left 3 panels indicate mean scores for the 3 principal components of gait initiation with central STN‐dDBS at M7 (green dark), M8 (green light), and M13 (green). Small unfilled circles represent the mean for each patient of the measure indicated by the ordinate label. The rectangles represent the estimated marginal mean for each condition with 95% confidence intervals (vertical line). *p < 0.05. Right 3 panels illustrate the parkinsonian disability (MDS‐UPDRS part III), axial, and GABS scores obtained in the same STN‐DBS conditions. Symbol formatting as for left panels. GABS, Gait and Balance Scale; MDS‐UPDRS, Movement Disorders Society‐Unified Parkinson's Disease Rating Scale. [Color figure can be viewed at www.annalsofneurology.org]
+
+Clinically, there were no significant changes in the MDS‐UPDRS part III, axial, and GABS scores with chronic central STN‐dDBS at month 8 and month 13 compared to month 7 with acute central STN‐dDBS (see Fig 6). For FOG‐Q scores, although not statistically significant, scores were lower at month 8 and month 13 with chronic central STN‐dDBS compared to month 7 with chronic ring‐mode STN‐DBS (Fig S7).
+
+### Side Effects
+
+We did not observe any adverse events during the randomized phase of the study. During the follow‐up period, in addition to the resurgence of PD signs in some patients, 5 non‐serious adverse events were reported in 4 patients, including primarily rheumatological issues such as lombosciatalgia and knee arthrosis. Additionally, 3 serious adverse events were also reported. One patient (P01‐03) had an unexpected neurostimulator arrest because of a complete discharge that occurred between 2 scheduled visits. One patient (P02‐02) experienced a fall during the night, resulting in a minor scalp wound. One patient (P01‐02) exhibited transient mild confusion the day following the STN‐DBS surgery, which resolved spontaneously.
+
+## Discussion
+
+In this randomized study in PD patients, we provide new evidence that central dDBS offers superior improvements in gait and postural disorders, with reduced FOG episodes compared to dDBS oriented toward the posterior STN. Moreover, central STN‐dDBS relative to non‐directional ring‐mode STN‐DBS yielded better postural control. The advantages of central STN‐dDBS were even more apparent when applied over a longer period during the open‐label follow‐up, showing superior improvements in forward performance, with efficient static and dynamic postural control, and a sustained clinical improvement in FOG severity.
+
+### Central STN‐dDBS Better Improves Gait, Balance, and FOG
+
+We included PD patients with severe FOG before surgery, and both directional central and posterior STN‐dDBS yielded remarkable improvements in gait and balance disorders, with mean reductions of 61 and 51% decreases in the GABS score relative to OFF‐DBS, respectively. This benefit could be linked to the modulation of the premotor and motor hyperdirect cortico‐STN pathways.
+18
+, 
+24
+, 
+37
+ However, stimulating the central STN was superior to posterior STN‐dDBS for treating gait and balance disorders, as measured by better outcomes in gait initiation, straight‐ahead walking and turns, and fewer FOG episodes. These findings also align with previous retrospective studies conducted in large cohorts where FOG relief post‐surgery was associated with DBS located in a more central part of the STN.
+10
+, 
+13
+ The superiority of STN‐dDBS applied in the more central part of the STN could be attributed to different factors that are not necessarily mutually exclusive, and suggests that gait and balance outcomes do not solely rely on the modulation of hyperdirect cortico‐STN pathway, but may also depend on the modulation of other STN subparts or afferent/efferent fiber tracts. First, this could be because of the selective modulation of lower limb‐related neurons shown to be located at the ventro‐central portion of the STN.
+38
+, 
+39
+ Second, in line with previous anatomical and histological studies performed in non‐human primates, this could reflect the preferential modulation of the associative contingents of the STN‐external globus pallidus (GPe) network located within the more central area,
+40
+, 
+41
+ with better cognitive adaptation for effective gait and an improvement in the loss of automaticity.
+1
+ It is also possible that central STN‐dDBS modulates other key structures for gait and balance control, such as the MLR, as recently reported in a retrospective study,
+13
+, 
+17
+ and the cerebellum, the STN being interconnected with these 2 structures shown to be altered in PD patients with FOG.
+42
+, 
+43
+, 
+44
+, 
+45
+, 
+46
+, 
+47
+
+Ultimately, the combination of modulation of hyperdirect premotor‐STN and possibly STN‐MLR pathways, with minimal impact on prefrontal cortico‐STN pathway, together with the modulation of the center of the STN, appears to be the best pattern to improve PD gait, balance disorders, and FOG.
+13
+, 
+18
+
+### Long‐Term Central STN‐dDBS May Prevent Postural Instability and FOG
+
+We observed that FOG continued to be improved when chronically stimulating the central STN, with a 52 and 55% reduction in the FOG‐Q score 7 and 12 months after surgery, and a 72 and 61% reduction in the GABS and axial scores, respectively, 12 months after surgery. With central STN‐dDBS applied for a 6‐month period, gait recordings revealed continued and supplemental improvement in forward propulsive forces. Additionally, we observed no deterioration in postural control (PC2 and PC3), whereas the TEED increased at a level similar to the ones used with ring‐mode STN‐DBS. This indicates that ring‐mode STN‐DBS does not only fail to improve postural control,
+48
+ but it appears to worsen it, which aligns with results from prior studies.
+10
+, 
+12
+, 
+49
+ This decline in postural control associated with the ring‐mode DBS could potentially contribute to the exacerbation of FOG after surgery as reported in approximately one‐third of patients, as well as postural instability and falls.
+10
+, 
+13
+ This phenomenon might be linked to the spread of current affecting other neuronal pathways beyond the STN. When comparing the VTAs cortical connectivity profile, we observed increased connectivity in all cortico‐STN fiber tracts with ring‐mode compared to the central STN‐dDBS, including the left prefrontal and temporal cortico‐STN fiber tracts (44–48 Brodmann areas). Increased connectivity with prefrontal areas has previously been linked to FOG
+4
+, 
+6
+ and less improvement with STN‐DBS.
+13
+, 
+18
+ It is, therefore, possible that ring‐mode STN‐DBS disrupts a frontally mediated compensatory mechanism, potentially worsening FOG or falls. Another possibility is that ring‐mode DBS influences other descending pathways or closed structures. Comparing the VTAs location between ring‐mode and directional STN‐DBS, higher VTAs were found in more medial areas, and also laterally close to the STN, with possible modulation of the red nucleus or the ponto‐cerebellar tracts,
+13
+, 
+44
+ known to impact postural control. In line with this hypothesis, decreased metabolic activity
+44
+ and increased effective connectivity between the putamen and the cerebellum have been reported after STN‐DBS,
+50
+ with increased metabolism in the reticular pontine formation and right motor cerebellum suggested to contribute to gait disorders after STN‐DBS.
+51
+
+## Limitations
+
+Several limitations should be acknowledged. First, the small sample size restricts the generalizability of our findings. However, we selected a relatively homogeneous group of patients, all with severe FOG before surgery. Additionally, we conducted a randomized double‐blind study, incorporating quantitative instrumented gait recordings and comprehensive clinical assessments. We used a histological and deformable atlas registered to individual patient preoperative MRIs. We used personalized VTAs instead of using normative brain atlases. This method may pose inaccuracies, especially in patients with larger third ventricles, and electrode locations and subsequent VTA modeling may vary slightly between patients. However, normative brain atlases may not accurately reflect individual brain anatomy, and we endeavored to maintain consistency by selecting similar current orientations and quantities for dDBS, with posterior orientation for sensorimotor STN and anterior one for central. Similarly, we conducted individual whole‐brain tractography to examine cortico‐STN streamlines for each patient, rather than relying on brain connectomes derived from larger patient groups that necessitate a common space brain. Although this approach may introduce a higher signal‐to‐noise ratio, our primary focus was on accounting for individual cortico‐STN streamlines.
+
+## Conclusion
+
+Our study demonstrates that PD patients with severe FOG can benefit from directional STN‐DBS, in particular individualized current shaping toward the central region of the STN. This approach may help mitigate potential side effects associated with standard ring‐mode STN‐DBS, especially on postural control. Future investigation is warranted to explore the potential clinical benefit of reprogramming STN‐DBS toward the central STN in PD patients who continue to experience disabling FOG post‐surgery. Additionally, further research is also needed to explore the relationship between FOG improvement and the individual connectivity profiles of the generated VTAs, encompassing not only hyperdirect cortical pathways, but also smaller fiber tracts, such as the STN‐GPe, STN‐MLR, or cerebellar networks, which are challenging to reconstruct.
+
+## Potential Conflicts of Interest
+
+S.C., N.T., M.Y., G.T., J.P., D.Z., M.R., S.D., D.M., S.F.V., E.B., B.L., and M.L.W. have nothing to report. E.H. and C.K. report honoraria and consultation fees from Boston Scientific who manufactures the medical devices used in the study.
+
+## Authors Contributions
+
+M.L.W., C.K., B.L., and E.B. contributed to the conception and design of the study; S.C., N.T., M.Y., J.P., G.T., E.H., D.Z., M.R., D.M., S.D., S.F.V., E.B., B.L., C.K., and M.L.W. contributed to the acquisition and analysis of the data; S.C., N.T., M.Y., E.B., B.L., C.K., and M.L.W. contributed to the drafting the text or preparing figures.
+
+## Supporting information
+
+## Acknowledgments
+
+We express sincere gratitude for the dedication demonstrated by our patients in participating in this research, and for funding from Boston Scientific, Agence nationale de la recherche and La Fondation de France. We are also grateful to Sabine Leger and Anais Hervé for their assistance in organizing the research program, to Nicolas Maling for his help in VTAs programming, and to Dorian Banier, Willy Bertucchi, Claire Olivier, Julie Bourilhon, and Edward Soundaravelou for their help in gait recordings and clinical assessments.
+
+## Data Availability Statement
+
+All relevant data are within the article. Requests for anonymized data should be sent to M.L.W. at the Paris Brain Institute, 75,013 Paris, France.
+
+## References
+
+## Associated Data
+
+### Supplementary Materials
+
+### Data Availability Statement
+
+All relevant data are within the article. Requests for anonymized data should be sent to M.L.W. at the Paris Brain Institute, 75,013 Paris, France.

@@ -1,0 +1,162 @@
+下面是检索得到的一批文献，只有题目、年份和文献类型。请做题目初筛：判断每篇是否**可能**和研究问题有关，值得再看摘要。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+规则：宁可多留，不要误删。只有题目明显和研究问题无关（例如完全不同的疾病、器官或技术领域，或者 FOG 指的不是冻结步态）才 drop；拿不准一律 keep。
+
+只输出一个 JSON：{"keep":["pid", ...]}，只列要保留的 pid（照抄），不列的就是 drop。
+
+【文献】
+PMID:38734464 | 2024 | Introductory Journal Article; Editorial | Neuromodulation: Update on current practice and future developments.
+PMID:38737010 | 2024 | review-article; Review; Journal Article | Manganese in autism spectrum disorder and attention deficit hyperactivity disorder: The state of the art.
+PMID:38739074 | 2024 | Comparative Study; Journal Article | Comparative analysis of uninduced and neuronally-induced human dental pulp stromal cells in a 6-OHDA model of Parkinson's disease.
+PMID:38743312 | 2024 | review-article; Review; Journal Article | Pharmacotherapies for the Treatment of Progressive Supranuclear Palsy: A Narrative Review.
+PMID:38743389 | 2024 | research-article; Randomized Controlled  | Effects of motor and cognitive complex training on obstacle walking and brain activity in people with Parkinson's disease: a randomized controlled trial.
+PMID:38743775 | 2024 | Research Support, Non-U.S. Gov't; resear | Spiking activity in the visual thalamus is coupled to pupil dynamics across temporal scales.
+PMID:38745935 | 2024 | review-article; Review; Journal Article | Defining the concept of reserve in the motor domain: a systematic review.
+PMID:38746656 | 2024 | research-article; Journal Article | Hypo-connectivity of the primary somatosensory cortex in Parkinson's disease: a resting-state functional MRI study.
+PMID:38747234 | 2024 | research-article; Journal Article | Levodopa-Induced Dyskinesias are Frequent and Impact Quality of Life in Parkinson's Disease: A 5-Year Follow-Up Study.
+PMID:38747563 | 2024 | research-article; Journal Article | Functional diversity of dopamine axons in prefrontal cortex during classical conditioning.
+PMID:38750368 | 2024 | Research Support, Non-U.S. Gov't; resear | GLP-1-directed NMDA receptor antagonism for obesity treatment.
+PMID:38751156 | 2024 | Research Support, Non-U.S. Gov't; resear | Gastrointestinal Incomplete Degradation Exacerbates Neurotoxic Effects of PLA Microplastics via Oligomer Nanoplastics Formation.
+PMID:38755164 | 2024 | Research Support, Non-U.S. Gov't; resear | Gut microbiota produces biofilm-associated amyloids with potential for neurodegeneration.
+PMID:38756440 | 2024 | research-article; Journal Article | Neurotransmitter accumulation and Parkinson's disease-like phenotype caused by anion channelrhodopsin opto-controlled astrocytic mitochondrial depolarization in substantia nigra pars compacta.
+PMID:38757260 | 2024 | Journal Article; Case Reports; case-repo | Psychomotor Symptoms, Cognitive Impairments, and Suicidal Thoughts after COVID-19 Infection: A Case Report and Possible Allostatic Mechanism.
+PMID:38758903 | 2024 | research-article; Journal Article | Deep brain stimulation in Parkinson's disease: A scientometric and bibliometric analysis, trends, and research hotspots.
+PMID:38759649 | 2024 | research-article; Journal Article | Bidirectional regulation of levodopa-induced dyskinesia by a specific neural ensemble in globus pallidus external segment.
+PMID:38769203 | 2024 | research-article; Journal Article | The Cerebellum Modulates Mood with Movement.
+PMID:38773350 | 2024 | research-article; Journal Article | Orexin neurons track temporal features of blood glucose in behaving mice.
+PMID:38774424 | 2024 | research-article; Journal Article | Brain abnormalities in survivors of COVID-19 after 2-year recovery: a functional MRI study.
+PMID:38777243 | 2024 | Research Support, Non-U.S. Gov't; Journa | Iron and neuromelanin imaging in basal ganglia circuitry in Parkinson's disease with freezing of gait.
+PMID:38778886 | 2024 | research-article; Journal Article | Self-treatment of freezing of gait in Parkinson's disease patients using silicone pads to apply Thai acupressure to plantar acupoints: A randomised, controlled trial.
+PMID:38779029 | 2024 | Journal Article; Case Reports; case-repo | Late-stage borreliosis and substance abuse.
+PMID:38784001 | 2024 | research-article; Journal Article | Systemic phospho-defective and phospho-mimetic Drp1 mice exhibit normal growth and development with altered anxiety-like behavior.
+PMID:38786584 | 2024 | research-article; Journal Article | Optimization of the Preparation Process of Glucuronomannan Oligosaccharides and Their Effects on the Gut Microbiota in MPTP-Induced PD Model Mice.
+PMID:38786652 | 2024 | other; Journal Article | Seeing without a Scene: Neurological Observations on the Origin and Function of the Dorsal Visual Stream.
+PMID:38787603 | 2024 | Research Support, Non-U.S. Gov't; resear | Evaluation of the Parkinson's Remote Interactive Monitoring System in a Clinical Setting: Usability Study.
+PMID:38788087 | 2024 | Systematic Review; systematic-review; Jo | The Effectiveness of Inpatient Rehabilitation in Parkinson's Disease: A Systematic Review of Recent Studies.
+PMID:38788090 | 2024 | Research Support, Non-U.S. Gov't; review | If Art Were a Drug: Implications for Parkinson's Disease.
+PMID:38789492 | 2024 | research-article; Journal Article | Tango and physiotherapy interventions in Parkinson's disease: a pilot study on efficacy outcomes on motor and cognitive skills.
+PMID:38790307 | 2024 | research-article; Journal Article | Unveiling the Unpredictable in Parkinson's Disease: Sensor-Based Monitoring of Dyskinesias and Freezing of Gait in Daily Life.
+PMID:38790443 | 2024 | research-article; Journal Article | Interactions between Lateral Hypothalamic Orexin and Dorsal Raphe Circuitry in Energy Balance.
+PMID:38790495 | 2024 | review-article; Review; Journal Article | Dual-Task vs. Single-Task Gait Training to Improve Spatiotemporal Gait Parameters in People with Parkinson's Disease: A Systematic Review and Meta-Analysis.
+PMID:38791229 | 2024 | research-article; Journal Article | Effects of Intracerebral Aminophylline Dosing on Catalepsy and Gait in an Animal Model of Parkinson's Disease.
+PMID:38792737 | 2024 | Journal Article; Case Reports; case-repo | Combining Double-Dose and High-Dose Pulsed Dapsone Combination Therapy for Chronic Lyme Disease/Post-Treatment Lyme Disease Syndrome and Co-Infections, Including Bartonella: A Report of 3 Cases and a Literature Review.
+PMID:38793957 | 2024 | research-article; Journal Article | Enhanced Water Surface Object Detection with Dynamic Task-Aligned Sample Assignment and Attention Mechanisms.
+PMID:38794185 | 2024 | review-article; Review; Journal Article | Substance Addiction Rehabilitation Drugs.
+PMID:38799988 | 2024 | review-article; Review; Journal Article | New clues for the role of cerebellum in schizophrenia and the associated cognitive impairment.
+PMID:38800085 | 2024 | review-article; Review; Journal Article | Progressive Supranuclear Palsy Syndrome: An Overview.
+PMID:38802334 | 2024 | Research Support, Non-U.S. Gov't; resear | Glioblastoma disrupts cortical network activity at multiple spatial and temporal scales.
+PMID:38804604 | 2024 | research-article; Journal Article | Genetic analysis and natural history of Parkinson's disease due to the LRRK2 G2019S variant.
+PMID:38808265 | 2024 | research-article; Journal Article | Nordic walking and arm swing asymmetry in people with Parkinson's disease: protocol for a randomised clinical trial.
+PMID:38811857 | 2024 | research-article; Journal Article | A bistable inhibitory optoGPCR for multiplexed optogenetic control of neural circuits.
+PMID:38812966 | 2024 | research-article; Journal Article | Parkinson's disease patients show delayed hemodynamic changes in primary motor cortex in fine motor tasks and decreased resting-state interhemispheric functional connectivity: a functional near-infrared spectroscopy study.
+PMID:38813528 | 2024 | research-article; Journal Article | Nicotine-mediated therapy for Parkinson's disease in transgenic Caenorhabditis elegans model.
+PMID:38813534 | 2024 | research-article; Journal Article | Comparison of externally and internally guided dance movement to address mobility, cognition, and psychosocial function in people with Parkinson's disease and freezing of gait: a case series.
+PMID:38813872 | 2025 | Validation Study; Journal Article | Validity, reliability, and measurement error of the Japanese version of the Freezing of Gait Questionnaire for patients with Parkinson's disease.
+PMID:38814761 | 2024 | Research Support, Non-U.S. Gov't; Journa | Development, Validation, and Limits of Freezing of Gait Detection Using a Single Waist-Worn Device.
+PMID:38815196 | 2024 | research-article; Journal Article | Peripherally restricted cannabinoid and mu-opioid receptor agonists synergistically attenuate neuropathic mechanical hypersensitivity in mice.
+PMID:38819059 | 2025 | other; Journal Article | Movement analysis in the diagnosis and management of Parkinson's disease.
+PMID:38819068 | 2025 | research-article; Journal Article | Additive neurorestorative effects of exercise and docosahexaenoic acid intake in a mouse model of Parkinson's disease.
+PMID:38819436 | 2024 | research-article; Journal Article | Genetically defined nucleus incertus neurons differ in connectivity and function.
+PMID:38820562 | 2024 | Research Support, Non-U.S. Gov't; resear | Estimating receptive fields of simple and complex cells in early visual cortex: A convolutional neural network model with parameterized rectification.
+PMID:38821913 | 2024 | Research Support, U.S. Gov't, P.H.S.; Re | Deep brain stimulation of symptom-specific networks in Parkinson's disease.
+PMID:38825007 | 2024 | review-article; Review; Journal Article; | Three dimensional and four dimensional live imaging to study mechanisms of progressive neurodegeneration.
+PMID:38827705 | 2024 | Journal Article; Case Reports; case-repo | Parkinsonism following bilateral chronic subdural hematoma that presented as orthostatic headache: Highlighting clinical pearls for family physicians and physiotherapists.
+PMID:38828625 | 2024 | Review; Journal Article | Freezing of gait: pharmacological and surgical options.
+PMID:38834145 | 2024 | Research Support, Non-U.S. Gov't; Journa | Cognitive driven gait freezing phase detection and classification for neuro-rehabilitated patients using machine learning algorithms.
+PMID:38836819 | 2024 | research-article; Journal Article | Treatment of Parkinson's disease by deep brain stimulation: a bibliometric analysis.
+PMID:38838841 | 2024 | research-article; Journal Article | Presynaptic and Postsynaptic Mesolimbic Dopamine D&lt;sub&gt;3&lt;/sub&gt; Receptors Play Distinct Roles in Cocaine Versus Opioid Reward in Mice.
+PMID:38838978 | 2024 | Research Support, Non-U.S. Gov't; Journa | Phasic Stimulation of Dopaminergic Neurons of the Lateral Substantia Nigra Increases Open Field Exploratory Behaviour and Reduces Habituation Over Time.
+PMID:38842948 | 2024 | Research Support, Non-U.S. Gov't; resear | Distinct glutamatergic projections of the posteroventral medial amygdala play different roles in arousal and anxiety.
+PMID:38844449 | 2024 | Research Support, Non-U.S. Gov't; resear | A machine learning contest enhances automated freezing of gait detection and reveals time-of-day effects.
+PMID:38844758 | 2024 | research-article; Journal Article | Modulation of response times in early-stage Parkinson's disease during emotional processing of embodied and non-embodied stimuli.
+PMID:38845753 | 2024 | research-article; Journal Article | Too little or too much nocturnal movements in Parkinson's disease: A practical guide to managing the unseen.
+PMID:38846136 | 2024 | research-article; Journal Article | Hypoperfusion in Supramarginal and Orbital Gyrus, Position Discrimination Test, and Microsaccades as a Predictor of Pisa Syndrome in Parkinson's Disease.
+PMID:38848217 | 2024 | research-article; Journal Article | Representation of rhythmic chunking in striatum of mice executing complex continuous movement sequences.
+PMID:38849869 | 2024 | research-article; Journal Article | Citrobacter rodentium infection impairs dopamine metabolism and exacerbates the pathology of Parkinson's disease in mice.
+PMID:38850765 | 2024 | Journal Article | Effect of disease, freezing of gait, and dopaminergic medication in the biomechanics of trunk and upper limbs in the gait of Parkinson's disease.
+PMID:38852537 | 2024 | research-article; Journal Article | Preliminary analysis: Effect of a rotary generator of hydrodynamic cavitation on rheology and methane yield of wastewater sludge.
+PMID:38852752 | 2024 | Research Support, Non-U.S. Gov't; Journa | Cortical modulations before lower limb motor blocks are associated with freezing of gait in Parkinson's disease: an EEG source localization study.
+PMID:38857283 | 2024 | Research Support, Non-U.S. Gov't; resear | Shared behavioural impairments in visual perception and place avoidance across different autism models are driven by periaqueductal grey hypoexcitability in Setd5 haploinsufficient mice.
+PMID:38860093 | 2024 | review-article; Review; Journal Article | A Comprehensive Review on Navigating the Neurological Landscape of COVID-19: Insights Into Etiopathogenesis and Clinical Management.
+PMID:38861996 | 2024 | research-article; Journal Article; Resea | Identifying behavioral links to neural dynamics of multifiber photometry recordings in a mouse social behavior network.
+PMID:38863325 | 2024 | Research Support, Non-U.S. Gov't; resear | Engineered Graphene Material Improves the Performance of Intraneural Peripheral Nerve Electrodes.
+PMID:38865966 | 2024 | Research Support, Non-U.S. Gov't; resear | Challenges and opportunities in long COVID research.
+PMID:38868283 | 2024 | review-article; Review; Journal Article | Navigating the Long Haul: A Comprehensive Review of Long-COVID Sequelae, Patient Impact, Pathogenesis, and Management.
+PMID:38870241 | 2024 | research-article; Journal Article | Non-invasive brain stimulation as treatment for motor impairment in people with Parkinson's disease: Protocol for an umbrella review.
+PMID:38871365 | 2024 | research-article; Journal Article | Usefulness of Olfactory Bulb Measurement in 3D-FIESTA in Differentiating Parkinson Disease from Atypical Parkinsonism.
+PMID:38872812 | 2024 | research-article; Journal Article | Remotely prescribed, monitored, and tailored home-based gait-and-balance exergaming using augmented reality glasses: a clinical feasibility study in people with Parkinson's disease.
+PMID:38874708 | 2024 | review-article; Review; Journal Article | Subcutaneous Levodopa: A New Engine for the Vintage Molecule.
+PMID:38875006 | 2024 | Research Support, Non-U.S. Gov't; resear | GWAS Identifies DPP6 as Risk Gene of Cognitive Decline in Parkinson's Disease.
+PMID:38875243 | 2024 | research-article; Randomized Controlled  | Effects of activity-oriented physiotherapy with and without eye movement training on dynamic balance, functional mobility, and eye movements in patients with Parkinson's disease: An assessor-blinded randomised controlled pilot trial.
+PMID:38876485 | 2024 | research-article; Review; Journal Articl | Modeling neurodegenerative and neurodevelopmental disorders in the &lt;i&gt;Drosophila&lt;/i&gt; mushroom body.
+PMID:38877316 | 2024 | research-article; Journal Article | DART.2: bidirectional synaptic pharmacology with thousandfold cellular specificity.
+PMID:38877772 | 2024 | Letter; Research Support, Non-U.S. Gov't | Effects of Trans-Spinal Magnetic Stimulation on DBS' Induced Freezing of Gait in a Patient with Generalized Dystonia.
+PMID:38882698 | 2024 | review-article; Review; Journal Article | Research progress on the application of anti-gravity treadmill in the rehabilitation of Parkinson's disease patients: a mini review.
+PMID:38884790 | 2024 | research-article; Journal Article | No evidence for effects of low-intensity vestibular noise stimulation on mild-to-moderate gait impairments in patients with Parkinson's disease.
+PMID:38885129 | 2025 | Systematic Review; review-article; Journ | Targeting the cholinergic and endocannabinoid systems as a therapeutic intervention for core and associated phenotypes in the autism model; a systematic review.
+PMID:38886854 | 2024 | Research Support, Non-U.S. Gov't; resear | Alpha-synuclein-induced stress sensitivity renders the Parkinson's disease brain susceptible to neurodegeneration.
+PMID:38886932 | 2025 | review-article; Journal Article | From single to combinatorial therapies in spinal cord injuries for structural and functional restoration.
+PMID:38887205 | 2024 | Research Support, Non-U.S. Gov't; resear | Mapping of afferent and efferent connections of phenylethanolamine N-methyltransferase-expressing neurons in the nucleus tractus solitarii.
+PMID:38887342 | 2024 | review-article; Review; Journal Article | The Neurological Implications of COVID-19: A Comprehensive Narrative Review.
+PMID:38890614 | 2024 | research-article; Journal Article | Exploring the lived experiences of individuals with Parkinson's disease and their relatives: insights into care provision experiences, disease management support, self-management strategies, and future needs in Germany (qualitative study).
+PMID:38891288 | 2024 | research-article; Journal Article | In Vivo Study of Moringa oleifera Seed Extracts as Potential Sources of Neuroprotection against Rotenone-Induced Neurotoxicity.
+PMID:38891832 | 2024 | brief-report; Journal Article | Activation of Pedunculopontine Tegmental Nucleus Alleviates the Pain Induced by the Lesion of Midbrain Dopaminergic Neurons.
+PMID:38891944 | 2024 | research-article; Journal Article | Structural Variants and Implicated Processes Associated with Familial Tourette Syndrome.
+PMID:38894941 | 2024 | review-article; Review; Journal Article | Spinocerebellar ataxias: from pathogenesis to recent therapeutic advances.
+PMID:38895631 | 2024 | review-article; Review; Journal Article | Exploring orphan GPCRs in neurodegenerative diseases.
+PMID:38898235 | 2024 | research-article; Journal Article | User-centred design, validation and clinical testing of an anti-choking mug for people with Parkinson's disease.
+PMID:38898687 | 2024 | review-article; Review; Journal Article | Gut Microbiota Metabolite Messengers in Brain Function and Pathology at a View of Cell Type-Based Receptor and Enzyme Reaction.
+PMID:38902275 | 2024 | research-article; Journal Article | In vivo brain estrogen receptor density by neuroendocrine aging and relationships with cognition and symptomatology.
+PMID:38905989 | 2024 | Journal Article | AiCarePWP: Deep learning-based novel research for Freezing of Gait forecasting in Parkinson.
+PMID:38906479 | 2024 | research-article; Review; Journal Articl | Adeno-associated virus vector delivery to the brain: Technology advancements and clinical applications.
+PMID:38907669 | 2024 | review-article; Review; Journal Article | Topography of mutational signatures in non-small cell lung cancer: emerging concepts, clinical applications, and limitations.
+PMID:38908072 | 2024 | review-article; Review; Journal Article | Ferroptosis in health and disease.
+PMID:38911458 | 2024 | research-article; Journal Article | Reactive Inhibitory Control Precedes Overt Stuttering Events.
+PMID:38912426 | 2024 | research-article; Journal Article | ﻿Advances in Legume Systematics 14. Classification of Caesalpinioideae. Part 2: Higher-level classification.
+PMID:38915103 | 2024 | Research Support, Non-U.S. Gov't; resear | A gamified virtual environment intervention for gait rehabilitation in Parkinson's Disease: co-creation and feasibility study.
+PMID:38918305 | 2024 | Journal Article | The effects of laser cane cues on the freezing of gait of Parkinson's disease patients: can increasing the laser light beam width play a role?
+PMID:38920422 | 2024 | Scoping Review; review-article; Journal  | Telerehabilitation by Videoconferencing for Balance and Gait in People with Parkinson's Disease: A Scoping Review.
+PMID:38920740 | 2024 | Conference Proceedings; meeting-report | Abstracts of the 39th Annual CAPO Conference-Building Hope: Integrating Sustainable, Innovative and Accessible Care in Psychosocial Oncology 6 to 7 June 2024.
+PMID:38921025 | 2024 | review-article; Review; Journal Article | Unlocking the Potential: Semaglutide's Impact on Alzheimer's and Parkinson's Disease in Animal Models.
+PMID:38925117 | 2024 | research-article; Journal Article | Dopamine neurons drive spatiotemporally heterogeneous striatal dopamine signals during learning.
+PMID:38926876 | 2024 | Research Support, Non-U.S. Gov't; resear | Wearable biofeedback device to assess gait features and improve gait pattern in people with parkinson's disease: a case series.
+PMID:38927430 | 2024 | research-article; Journal Article | SARS-CoV-2 Spike Protein 1 Causes Aggregation of α-Synuclein via Microglia-Induced Inflammation and Production of Mitochondrial ROS: Potential Therapeutic Applications of Metformin.
+PMID:38928178 | 2024 | research-article; Journal Article | Impact of Serotonin Deficiency on Circadian Dopaminergic Rhythms.
+PMID:38928592 | 2024 | review-article; Review; Journal Article | Endocannabinoid System Changes throughout Life: Implications and Therapeutic Potential for Autism, ADHD, and Alzheimer's Disease.
+PMID:38929721 | 2024 | review-article; Review; Journal Article | Electrophysiology Methods for Assessing of Neurodegenerative and Post-Traumatic Processes as Applied to Translational Research.
+PMID:38931468 | 2024 | research-article; Journal Article | Oral Administration of Efavirenz Dysregulates the Tph2 Gene in Brain Serotonergic Areas and Alters Weight and Mood in Mice.
+PMID:38931530 | 2024 | research-article; Journal Article | Efficient Haze Removal from a Single Image Using a DCP-Based Lightweight U-Net Neural Network Model.
+PMID:38931563 | 2024 | research-article; Journal Article | Synchronization of Neurophysiological and Biomechanical Data in a Real-Time Virtual Gait Analysis System (GRAIL): A Proof-of-Principle Study.
+PMID:38931743 | 2024 | Meta-Analysis; Review; Journal Article | Insights into Parkinson's Disease-Related Freezing of Gait Detection and Prediction Approaches: A Meta Analysis.
+PMID:38932763 | 2024 | review-article; Review; Journal Article | Imaging Procedure and Clinical Studies of [18F]FP-CIT PET.
+PMID:38935062 | 2025 | Meta-Analysis; research-article; Systema | Efficacy of Repetitive Transcranial Magnetic Stimulation Over the Supplementary Motor Area on Motor Function in Parkinson's Disease: A Meta-analysis.
+PMID:38941135 | 2024 | abstract; Journal Article | Special Issue: Abstracts of the 10th Congress of the European Academy of Neurology, Helsinki, Finland.
+PMID:38942474 | 2024 | research-article; Journal Article | Acetylcholine Neurons Become Cholinergic during Three Time Windows in the Developing Mouse Brain.
+PMID:38944332 | 2024 | research-article; Journal Article | Moderate intensity aerobic exercise alleviates motor deficits in 6-OHDA lesioned rats and reduces serum levels of biomarkers of Parkinson's disease severity without recovery of striatal dopamine or tyrosine hydroxylase.
+PMID:38945302 | 2024 | Journal Article | Using microdialysis to monitor dopaminergic support of limb-use control following mesencephalic neurosphere transplantation in a rodent model of Parkinson's Disease.
+PMID:38947508 | 2024 | research-article; Journal Article | ARBUR, a machine learning-based analysis system for relating behaviors and ultrasonic vocalizations of rats.
+PMID:38953082 | 2024 | review-article; Review; Journal Article | Artificial Intelligence and Machine Learning in Neuroregeneration: A Systematic Review.
+PMID:38956066 | 2024 | research-article; Journal Article | Myricetin mitigates motor disturbance and decreases neuronal ferroptosis in a rat model of Parkinson's disease.
+PMID:38956130 | 2024 | research-article; Journal Article | Loss of dysbindin-1 in excitatory neurons in mice impacts NMDAR-dependent behaviors, neuronal morphology and synaptic transmission in the ventral hippocampus.
+PMID:38957401 | 2024 | research-article; Journal Article | Chst9 marks a spatially and transcriptionally unique population of Oprm1-expressing neurons in the nucleus accumbens.
+PMID:38957949 | 2024 | review-article; Review; Journal Article | Chemogenetic Tools and their Use in Studies of Neuropsychiatric Disorders.
+PMID:38958681 | 2024 | research-article; Journal Article | Noradrenergic cardiac denervation is associated with gait velocity in Parkinson disease: a dual ligand PET study.
+PMID:38959873 | 2024 | Journal Article | A method for the synchronization of inertial sensor signals and local field potentials from deep brain stimulation systems.
+PMID:38959877 | 2024 | research-article; Journal Article; Resea | Beta-band power modulation in the human amygdala differentiates between go/no-go responses in an arm-reaching task.
+PMID:38960136 | 2024 | Research Support, U.S. Gov't, P.H.S.; re | Limitations and potential of κOR biased agonists for pain and itch management.
+PMID:38960719 | 2024 | Research Support, Non-U.S. Gov't; resear | Human Cervical Epidural Spinal Electrogram Topographically Maps Distinct Volitional Movements.
+PMID:38962394 | 2024 | research-article; Journal Article | Cognitive Symptoms in Cross-Sectional Parkinson Disease Cohort Evaluated by Human-in-the-Loop Machine Learning and Natural Language Processing.
+PMID:38962477 | 2024 | brief-report; Journal Article | Motor improvement of remote programming in patients with Parkinson's disease after deep brain stimulation: a 1-year follow-up.
+PMID:38964222 | 2024 | Research Support, Non-U.S. Gov't; resear | Validation of fNIRS measurement of executive demand during walking with and without dual-task in younger and older adults and people with Parkinson's disease.
+PMID:38965287 | 2024 | research-article; Journal Article | A neurotherapeutic approach with Lacticaseibacillus rhamnosus E9 on gut microbiota and intestinal barrier in MPTP-induced mouse model of Parkinson's disease.
+PMID:38966084 | 2024 | review-article; Review; Journal Article | An analysis of stimulation methods used in rehabilitation equipment for children with cerebral palsy.
+PMID:38974034 | 2024 | review-article; Review; Journal Article | Gut-directed therapy in Parkinson's disease.
+PMID:38974902 | 2024 | research-article; Journal Article | Golexanolone reduces glial activation in the striatum and improves non-motor and some motor alterations in a rat model of Parkinson's disease.
+PMID:38976650 | 2024 | research-article; Journal Article | Gba1 E326K renders motor and non-motor symptoms with pathological α-synuclein, tau and glial activation.
+PMID:38977300 | 2024 | research-article; Journal Article; Resea | Generation and Characterization of a Novel &lt;i&gt;Prkcd-&lt;/i&gt;Cre Rat Model.
+PMID:38978807 | 2023 | research-article; Journal Article | Aging, Parkinson's Disease, and Models: What Are the Challenges?

@@ -1,0 +1,121 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:40926219",
+      "design": "人体术中神经生理研究（本文引述的既往研究，非本研究直接实施）",
+      "population": "帕金森病（PD）患者；本文未进一步报告病程、FOG表型及患者特征",
+      "n": "本文未报告",
+      "condition": "术中改变刺激频率，观察刺激对STN及SNr神经活动的抑制作用",
+      "measure": "STN神经活动的频率依赖性抑制",
+      "finding": "本文引述的既往人体研究报告：STN活动在刺激频率超过20 Hz时开始受到抑制，在100 Hz时完全受到抑制。相比之下，SNr神经活动在超过3 Hz时开始减弱，在超过50 Hz时完全受到抑制。提示STN与SNr的刺激诱发神经活动抑制具有不同的频率阈值，但该研究未在本文中报告STN活动变化与FOG严重程度之间的直接关联。",
+      "effect": "STN活动抑制起始频率超过20 Hz，100 Hz时完全抑制；SNr对应阈值较低。",
+      "limitations": "这是本文引述的既往研究，并非本研究的直接实验结果。本文未提供该研究的样本量、具体药物状态、FOG分组及FOG临床量表结果。神经活动抑制阈值不能直接等同于FOG改善阈值，也不能据此确定STN活动与FOG之间的相关方向。",
+      "quote": "Attenuation of STN activity began at stimulation frequencies above 20 Hz, and activity was completely suppressed at 100 Hz.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机、双盲、受试者内对照试验",
+      "population": "晚期特发性PD患者，存在持续性FOG，尽管接受多巴胺替代治疗和常规STN-DBS仍有冻结步态；平均年龄69.4±6.6岁，平均病程20.2±6.7年。",
+      "n": "10（11人入组，1人因药物OFF状态下无法行走而未纳入即时评估）",
+      "condition": "即时评估V1a，隔夜停用多巴胺能药物至少12小时；随机、双盲比较刺激关闭（StimOFF）与单靶点STN刺激119 Hz（STN119）。每次调整刺激参数后至少等待20分钟。",
+      "measure": "Freezing of Gait Assessment Course（FoG-AC），主要结局指标，评分范围0–36分，分数越高表示FOG越严重。",
+      "finding": "STN119刺激条件下FoG-AC中位数为19.0分（范围9–32），StimOFF条件下为34.5分（范围17–36）。两条件差异具有统计学意义（事后比较P=0.009）。说明在该晚期PD持续性FOG人群中，常规119 Hz STN刺激相较于关闭刺激能够改善FOG临床评分。",
+      "effect": "FoG-AC中位数：StimOFF 34.5，STN119 19.0；P=0.009。",
+      "limitations": "本研究通过改变STN刺激状态观察临床效果，没有直接记录STN神经元放电、局部场电位或神经振荡，因此不能证明特定STN神经活动模式与FOG之间的直接关系。样本量仅10人，且研究对象为晚期、常规STN-DBS效果仍不充分的患者，不能直接推广至早期PD或未接受DBS的人群。作者指出样本量为经验性设定，没有进行正式样本量估算。",
+      "quote": "Post-hoc tests identified significant differences between StimOFF and STN119 (P = 0.009)",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机、双盲、受试者内对照试验",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "10",
+      "condition": "药物OFF状态，STN始终采用119 Hz刺激，同时在SNr增加71 Hz刺激（STN119+SNr71），与StimOFF比较；SNr刺激参数通过调整振幅使不同频率条件下的总电能输送量（TEED）近似恒定。",
+      "measure": "FoG-AC主要临床评分",
+      "finding": "STN119+SNr71条件下FoG-AC中位数为16.5分（范围11–36），StimOFF条件下为34.5分（范围17–36），两者差异显著（P=0.001）。但与STN119单靶点刺激相比，STN119+SNr71并没有显示统计学显著的额外优势。",
+      "effect": "StimOFF与STN119+SNr71比较：FoG-AC中位数34.5 vs 16.5，P=0.001；STN119与STN119+SNr71之间无显著差异。",
+      "limitations": "该结果支持双靶点刺激能够改善FOG，但无法将效果归因于STN神经活动的特定变化，因为STN刺激始终固定为119 Hz，研究未直接记录STN活动。TEED恒定是基于刺激阻抗稳定的假设计算振幅，设备不能实时测量治疗阻抗；作者承认频率改变可能造成阻抗变化，不能完全排除不同条件间实际TEED存在差异。此外，样本量较小，无法充分分析电极位置差异。",
+      "quote": "Post-hoc tests identified significant differences between StimOFF and STN119 + SNr71 (P = 0.001).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机、双盲、受试者内对照试验",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "10",
+      "condition": "药物OFF状态；STN固定119 Hz，SNr分别采用119 Hz、71 Hz和30 Hz，与STN119单靶点刺激及StimOFF比较。",
+      "measure": "FoG-AC及不同刺激方案的个体最佳反应",
+      "finding": "STN119+SNr119条件下FoG-AC中位数为18.5分，StimOFF为34.5分，但差异仅呈趋势（P=0.058），未达到统计学显著性。不同主动刺激条件之间的FoG-AC比较均未发现显著差异。个体层面，4名患者的最佳方案为STN119，6名患者的最佳方案为双靶点STN+SNr刺激，其中2名偏好SNr119 Hz、3名偏好SNr71 Hz、1名偏好SNr30 Hz。",
+      "effect": "不同主动刺激条件之间无显著总体差异；个体最佳方案分布为STN单靶点4人、双靶点6人，提示明显的个体间反应异质性。",
+      "limitations": "研究样本量仅10人，统计效能有限，不能排除真实的频率差异因样本量不足而未达到显著性。个体最佳方案是根据本次有限条件下的即时FoG-AC表现确定的，不代表长期最优参数。作者还指出，电极在STN和SNr内的位置差异可能影响疗效，但由于样本量较小，未能进行充分分析，也没有进行刺激组织激活体积（VTA）建模。",
+      "quote": "There were no significant differences when comparing different StimON conditions.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机、双盲、受试者内对照试验",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "10",
+      "condition": "药物OFF状态；7米定时步行测试（CAPSIT-PD）；比较STN119单靶点与STN119+SNr30双靶点刺激。",
+      "measure": "7米定时步行测试完成时间",
+      "finding": "STN119+SNr30条件下步行时间中位数为19秒（范围14–187），STN119条件下为17秒（范围12–41）。双靶点30 Hz SNr刺激条件下的步行时间显著长于STN单靶点刺激（P=0.001），提示30 Hz SNr刺激在该测试中未表现出额外步行获益，且可能伴随步行表现恶化。",
+      "effect": "STN119+SNr30 vs STN119：步行时间中位数19秒 vs 17秒，P=0.001。",
+      "limitations": "这是步行时间指标，而非直接的FOG发作频率或STN神经活动指标。SNr30条件下步行时间范围较宽（14–187秒），提示个体反应差异较大。研究未证明30 Hz刺激导致步行恶化的具体神经生理机制。作者还指出，低频条件下维持相同TEED依赖阻抗稳定假设，实际刺激能量可能存在偏差。",
+      "quote": "When comparing the stimulation StimON conditions, STN119 + SNr30 (median 19 [min 14, max 187]) was significantly worse than STN119 (P = 0.001).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机对照试验中的探索性Spearman相关分析",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "8（仅8人具有可用于分析的完整步态运动学数据）",
+      "condition": "药物OFF状态即时评估V1a；对比StimOFF与每名患者个体最佳刺激方案StimBEST。计算两种条件之间FoG-AC改善幅度与步态参数改善幅度的相关性。",
+      "measure": "FoG-AC改善与步幅长度（stride length）改善之间的Spearman相关；同时分别计算患侧、非患侧及双侧平均值。",
+      "finding": "FoG-AC改善与步幅长度改善呈高度正相关。双侧平均步幅长度、患侧步幅长度及非患侧步幅长度的Spearman相关系数均为0.878，P=0.004，且经过FDR多重比较校正后仍显著。",
+      "effect": "双侧平均、患侧及非患侧步幅长度改善与FoG-AC改善的相关系数均为ρ=0.878，P=0.004。",
+      "limitations": "样本量仅8人，属于探索性相关分析。两名患者未能提供完整运动学数据，一人因步幅过小无法分析，另一人因系统错误未能记录。该结果反映临床FOG改善与步态运动学改善之间的相关性，不是STN神经活动与FOG之间的直接相关性。StimBEST为根据同一组刺激条件下的个体临床反应选出的最佳方案，不能据此确定特定STN刺激参数或神经活动模式的独立贡献。",
+      "quote": "Together, better improvements in stride length, swing and range of motion at shank very highly correlated with better FoG-AC outcomes.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机对照试验中的探索性Spearman相关分析",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "8",
+      "condition": "药物OFF状态即时评估V1a；比较StimOFF与个体最佳刺激方案StimBEST下的步态运动学改善和FoG-AC改善。",
+      "measure": "步态摆动期（swing）改善与FoG-AC改善之间的Spearman相关。",
+      "finding": "双侧平均摆动期改善与FoG-AC改善呈正相关（ρ=0.805，P=0.016）；患侧摆动期改善也呈正相关（ρ=0.830，P=0.011）。两项结果经过FDR校正后仍具有统计学显著性。非患侧摆动期相关性未达到显著性（ρ=0.610，P=0.108）。",
+      "effect": "双侧平均swing：ρ=0.805，P=0.016；患侧swing：ρ=0.830，P=0.011；非患侧swing：ρ=0.610，P=0.108。",
+      "limitations": "仅8人参与相关分析，样本量小。摆动期与FOG改善的关系存在患侧与非患侧差异，不能将双侧步态参数视为完全一致的指标。该研究没有同步测量STN神经活动，不能据此推断STN神经活动通过摆动期变化影响FOG的具体机制。",
+      "quote": "Together, better improvements in stride length, swing and range of motion at shank very highly correlated with better FoG-AC outcomes.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机对照试验中的探索性Spearman相关分析",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "8",
+      "condition": "药物OFF状态即时评估V1a；比较StimOFF与个体最佳刺激方案StimBEST下的步态运动学改善和FoG-AC改善。",
+      "measure": "小腿（shank）关节活动范围（ROM）改善与FoG-AC改善之间的Spearman相关。",
+      "finding": "小腿ROM改善与FoG-AC改善呈高度正相关。双侧平均值及患侧的相关系数均为0.878（P=0.004），非患侧相关系数为0.805（P=0.016）；经过FDR校正后均仍显著。",
+      "effect": "双侧平均shank ROM：ρ=0.878，P=0.004；患侧：ρ=0.878，P=0.004；非患侧：ρ=0.805，P=0.016。",
+      "limitations": "样本量仅8人，属于探索性相关分析。该结果支持步态运动学参数与FOG临床改善存在关联，但没有测量STN放电、局部场电位或其他STN神经活动指标，因此不能确定小腿ROM变化是否由STN神经活动改变所介导。膝关节ROM与FoG-AC改善的相关性未达到显著性（双侧平均ρ=0.586，P=0.127），提示并非所有运动学参数都与FOG改善具有相同的关联。",
+      "quote": "Together, better improvements in stride length, swing and range of motion at shank very highly correlated with better FoG-AC outcomes.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40926219",
+      "design": "随机对照试验中的探索性Spearman相关分析",
+      "population": "晚期特发性PD伴持续性FOG、已接受STN-DBS的患者",
+      "n": "8",
+      "condition": "药物OFF状态即时评估V1a；计算StimOFF至StimBEST之间步态运动学参数改善幅度与FoG-AC改善幅度的相关性。",
+      "measure": "步态速度、步频、步态周期时间及其他运动学参数与FoG-AC改善之间的Spearman相关。",
+      "finding": "并非所有步态参数都与FOG改善显著相关。步态速度改善与FoG-AC改善的相关系数为0.610（P=0.108）；步频及步态周期时间的相关系数均为0.146（P=0.729）；摆动时间不对称性相关系数为-0.147（P=0.728）。上述相关均未达到统计学显著性。",
+      "effect": "stride velocity：ρ=0.610，P=0.108；cadence及GCT：ρ=0.146，P=0.729；swing time asymmetry：ρ=-0.147，P=0.728。",
+      "limitations": "样本量仅8人，可能限制检出相关性的统计效能。该结果不能证明上述参数与FOG完全无关，只能说明本研究样本中未观察到统计学显著相关。所有指标均为步态运动学参数，而非STN神经活动的直接测量。",
+      "quote": "Other kinematic parameters and gait variability parameters did not show significant differences between the different stimulation conditions.",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

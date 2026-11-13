@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:36070366 Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease. (2022)
+报告的说法：第3.2节称，Thenaisie等对4名患者进行了双侧STN-LFP记录；结构化附录又将该研究标注为尚未经过同行评审的medRxiv预印本。
+指控者认为原文的说法：原研究总体纳入18名PD患者，其中4名患者出现了实际冻结事件。4人是FOG事件分析的患者子集，并非整个研究的总样本量。该研究已于2022年正式发表于Science Translational Medicine，DOI为10.1126/scitranslmed.abo1800，并非尚未经过同行评审的预印本。报告存在样本量分母不清和发表状态标注错误。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

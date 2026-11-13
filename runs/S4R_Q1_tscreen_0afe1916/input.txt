@@ -1,0 +1,162 @@
+下面是检索得到的一批文献，只有题目、年份和文献类型。请做题目初筛：判断每篇是否**可能**和研究问题有关，值得再看摘要。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+规则：宁可多留，不要误删。只有题目明显和研究问题无关（例如完全不同的疾病、器官或技术领域，或者 FOG 指的不是冻结步态）才 drop；拿不准一律 keep。
+
+只输出一个 JSON：{"keep":["pid", ...]}，只列要保留的 pid（照抄），不列的就是 drop。
+
+【文献】
+PMID:20881948 | 2011 | Research Support, Non-U.S. Gov't; review | Opponency revisited: competition and cooperation between dopamine and serotonin.
+PMID:20886327 | 2011 | Research Support, Non-U.S. Gov't; resear | Loss of intrinsic organization of cerebellar networks in spinocerebellar ataxia type 1: correlates with disease severity and duration.
+PMID:20888914 | 2011 | Research Support, Non-U.S. Gov't; resear | A behavioral genetics approach to understanding D1 receptor involvement in phasic dopamine signaling.
+PMID:20921515 | 2010 | review-article; Journal Article | A meta-regression of the long-term effects of deep brain stimulation on balance and gait in PD.
+PMID:20923682 | 2011 | research-article; Review; Journal Articl | Serotonin 5-HT7 receptor agents: Structure-activity relationships and potential therapeutic applications in central nervous system disorders.
+PMID:20923852 | 2011 | Comparative Study; research-article; Jou | Expression of functional human α6β2β3* acetylcholine receptors in Xenopus laevis oocytes achieved through subunit chimeras and concatamers.
+PMID:20931247 | 2011 | Research Support, N.I.H., Intramural; re | Transgenic animal models of neurodegeneration based on human genetic studies.
+PMID:20933584 | 2010 | Research Support, Non-U.S. Gov't; resear | A1 receptors self-regulate adenosine release in the striatum: evidence of autoreceptor characteristics.
+PMID:20936418 | 2011 | research-article; Review; Journal Articl | The pedunculopontine tegmental nucleus: from basic neuroscience to neurosurgical applications: arousal from slices to humans: implications for DBS.
+PMID:20937306 | 2011 | research-article; Review; Journal Articl | The unipolar brush cell: a remarkable neuron finally receiving deserved attention.
+PMID:20937936 | 2011 | Research Support, Non-U.S. Gov't; resear | Deep brain stimulation for Parkinson disease: an expert consensus and review of key issues.
+PMID:20946640 | 2010 | research-article; Research Support, U.S. | Reduction of freezing of gait in Parkinson's disease by repetitive robot-assisted treadmill training: a pilot study.
+PMID:20954431 | 2010 | research-article; Review; Journal Articl | Beyond the dopamine receptor: novel therapeutic targets for treating schizophrenia.
+PMID:20959812 | 2011 | Research Support, Non-U.S. Gov't; resear | Delayed dominant-negative TNF gene therapy halts progressive loss of nigral dopaminergic neurons in a rat model of Parkinson's disease.
+PMID:20967255 | 2010 | Research Support, Non-U.S. Gov't; resear | Neuroanatomical study of the A11 diencephalospinal pathway in the non-human primate.
+PMID:20969957 | 2011 | research-article; Review; Journal Articl | Synaptic dysfunction in genetic models of Parkinson's disease: a role for autophagy?
+PMID:20971124 | 2011 | Research Support, Non-U.S. Gov't; resear | The sensitizing effect of acute nicotine on amphetamine-stimulated behavior and dopamine efflux requires activation of β2 subunit-containing nicotinic acetylcholine receptors and glutamate N-methyl-D-aspartate receptors.
+PMID:20973974 | 2010 | Comparative Study; Research Support, Non | Assessment of fall-related self-efficacy and activity avoidance in people with Parkinson's disease.
+PMID:20974269 | 2011 | research-article; Journal Article; Resea | Probabilistic analysis of activation volumes generated during deep brain stimulation.
+PMID:20976094 | 2010 | other; Journal Article | Evaluating the contributions of dynamic flow to freezing of gait in Parkinson's disease.
+PMID:21036182 | 2011 | research-article; Review; Journal Articl | Metabotropic glutamate receptors: from the workbench to the bedside.
+PMID:21039631 | 2011 | research-article; Journal Article | Increased ethanol consumption and preference in mice lacking neurotensin receptor type 2.
+PMID:21039949 | 2010 | Research Support, Non-U.S. Gov't; resear | Restoration of locomotive function in Parkinson's disease by spinal cord stimulation: mechanistic approach.
+PMID:21047426 | 2010 | Research Support, Non-U.S. Gov't; resear | Charting the progression of disability in Parkinson disease: study protocol for a prospective longitudinal cohort study.
+PMID:21049310 | 2010 | calendar; Overall; Conference Proceeding | Abstracts of the 2nd European Headache and Migraine Trust International Congress (EHMTIC). October 28-31, 2010. Nice, France.
+PMID:21050138 | 2011 | research-article; Journal Article; Resea | Inhaled hydrogen sulfide prevents neurodegeneration and movement disorder in a mouse model of Parkinson's disease.
+PMID:21051678 | 2010 | research-article; Journal Article; Resea | The role of inflammatory cytokines in cognition and other non-motor symptoms of Parkinson's disease.
+PMID:21056184 | 2011 | Research Support, Non-U.S. Gov't; resear | Neurobiology of waking and sleeping.
+PMID:21060884 | 2010 | Research Support, Non-U.S. Gov't; resear | Balanced dopamine is critical for pattern completion during associative memory recall.
+PMID:21060893 | 2010 | Research Support, Non-U.S. Gov't; resear | Essential role of NMDA receptor channel ε4 subunit (GluN2D) in the effects of phencyclidine, but not methamphetamine.
+PMID:21073466 | 2011 | Research Support, Non-U.S. Gov't; Journa | Regulation of dopaminergic neuron firing by heterogeneous dopamine autoreceptors in the substantia nigra pars compacta.
+PMID:21073468 | 2011 | research-article; Review; Journal Articl | The emerging role of trace amine-associated receptor 1 in the functional regulation of monoamine transporters and dopaminergic activity.
+PMID:21073741 | 2010 | Research Support, Non-U.S. Gov't; resear | Nigrostriatal neuronal death following chronic dichlorvos exposure: crosstalk between mitochondrial impairments, α synuclein aggregation, oxidative damage and behavioral changes.
+PMID:21075199 | 2011 | research-article; Journal Article; Resea | Ascending caudal medullary catecholamine pathways drive sickness-induced deficits in exploratory behavior: brain substrates for fatigue?
+PMID:21076988 | 2010 | review-article; Review; Journal Article | Postsynaptic nigrostriatal dopamine receptors and their role in movement regulation.
+PMID:21079923 | 2011 | research-article; Journal Article; Resea | Blockade of 5-HT2A receptors in the medial prefrontal cortex attenuates reinstatement of cue-elicited cocaine-seeking behavior in rats.
+PMID:21085664 | 2010 | Research Support, Non-U.S. Gov't; resear | Inhibiting α-synuclein oligomerization by stable cell-penetrating β-synuclein fragments recovers phenotype of Parkinson's disease model flies.
+PMID:21091047 | 2011 | Comparative Study; Research Support, Non | Measuring participation in individuals with Parkinson disease: relationships with disease severity, quality of life, and mobility.
+PMID:21092260 | 2010 | research-article; Journal Article | Combining nitric oxide release with anti-inflammatory activity preserves nigrostriatal dopaminergic innervation and prevents motor impairment in a 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine model of Parkinson's disease.
+PMID:21093598 | 2011 | research-article; Journal Article; Resea | Functional interaction of mGlu5 and NMDA receptors in aversive learning in rats.
+PMID:21104390 | 2009 | Research Support, N.I.H., Intramural; Re | Drug addiction.
+PMID:21107539 | 2011 | research-article; Journal Article | Social instigation and aggression in postpartum female rats: role of 5-Ht1A and 5-Ht1B receptors in the dorsal raphé nucleus and prefrontal cortex.
+PMID:21108236 | 2011 | Research Support, Non-U.S. Gov't; resear | Regional sensitivity to neuroinflammation: in vivo and in vitro studies.
+PMID:21108771 | 2012 | research-article; Review; Journal Articl | Neurocardiology: therapeutic implications for cardiovascular disease.
+PMID:21115033 | 2011 | research-article; Journal Article; Resea | SA 4503 attenuates cocaine-induced hyperactivity and enhances methamphetamine substitution for a cocaine discriminative stimulus.
+PMID:21115823 | 2010 | Research Support, Non-U.S. Gov't; resear | Inhibition of Ras-guanine nucleotide-releasing factor 1 (Ras-GRF1) signaling in the striatum reverts motor symptoms associated with L-dopa-induced dyskinesia.
+PMID:21123567 | 2010 | Comparative Study; research-article; Res | Phosphorylation promotes neurotoxicity in a Caenorhabditis elegans model of TDP-43 proteinopathy.
+PMID:21126990 | 2011 | Research Support, Non-U.S. Gov't; Journa | Gait-related cerebral alterations in patients with Parkinson's disease with freezing of gait.
+PMID:21131268 | 2011 | Comparative Study; research-article; Jou | Effect of methamphetamine self-administration on neurotensin systems of the basal ganglia.
+PMID:21140541 | 2010 | Overall; Conference Proceedings; meeting | Abstracts of the ACNP (American College of Neuropsychopharmacology) 49th Annual Conference. December 5-9, 2010. Miami, Florida, USA.
+PMID:21143600 | 2011 | research-article; Journal Article; Resea | β1-Adrenergic receptors activate two distinct signaling pathways in striatal neurons.
+PMID:21144620 | 2012 | research-article; Research Support, U.S. | Enhanced dopamine transporter activity in middle-aged Gdnf heterozygous mice.
+PMID:21151379 | 2010 | review-article; Journal Article | Role of Basal Ganglia in sleep-wake regulation: neural circuitry and clinical significance.
+PMID:21161749 | 2010 | research-article; Review; Journal Articl | Dopamine signaling in the nucleus accumbens of animals self-administering drugs of abuse.
+PMID:21165178 | 2010 | research-article; Journal Article | The dopaminergic system in the aging brain of Drosophila.
+PMID:21165972 | 2011 | research-article; Journal Article; Resea | Brain expression and song regulation of the cholecystokinin gene in the zebra finch (Taeniopygia guttata).
+PMID:21167502 | 2011 | Journal Article; Case Reports | Nigrostriatal dysfunction in patients with amyotrophic lateral sclerosis and parkinsonism.
+PMID:21172606 | 2010 | research-article; Review; Journal Articl | Sleep state switching.
+PMID:21173838 | 2010 | review-article; Journal Article | Recent advances in the assessment and treatment of falls in Parkinson's disease.
+PMID:21177942 | 2011 | research-article; Review; Research Suppo | The biological control of voluntary exercise, spontaneous physical activity and daily energy expenditure in relation to obesity: human and rodent perspectives.
+PMID:21179339 | 2010 | research-article; Journal Article | Acute administration of clozapine and risperidone altered dopamine metabolism more in rat caudate than in nucleus accumbens: a dose-response relationship.
+PMID:21179604 | 2010 | review-article; Journal Article | Pharmacotherapy in Parkinson's disease: case studies.
+PMID:21180627 | 2009 | research-article; Journal Article | Deep brain stimulation in Parkinson's disease.
+PMID:21185387 | 2011 | Research Support, N.I.H., Intramural; Re | Quantitative pharmacologic MRI: mapping the cerebral blood volume response to cocaine in dopamine transporter knockout mice.
+PMID:21188269 | 2010 | review-article; Journal Article | The disturbance of gaze in progressive supranuclear palsy: implications for pathogenesis.
+PMID:21188437 | 2011 | research-article; Journal Article | Commentary: the pedunculopontine nucleus: clinical experience, basic questions and future directions.
+PMID:21195751 | 2011 | Research Support, Non-U.S. Gov't; resear | Genetic disruption of Met signaling impairs GABAergic striatal development and cognition.
+PMID:21199769 | 2011 | Research Support, N.I.H., Intramural; Re | Monoamine transporters: vulnerable and vital doorkeepers.
+PMID:21203458 | 2010 | research-article; Journal Article | Carbocyanine dye usage in demarcating boundaries of the aged human red nucleus.
+PMID:21205916 | 2011 | Comparative Study; research-article; Jou | Differences in methylphenidate dose response between periadolescent and adult rats in the familiar arena-novel alcove task.
+PMID:21209197 | 2011 | Research Support, N.I.H., Intramural; re | Dopamine D2 receptor overexpression alters behavior and physiology in Drd2-EGFP mice.
+PMID:21210060 | 2011 | research-article; Review; Journal Articl | Insights from Caenorhabditis elegans on the role of metals in neurodegenerative diseases.
+PMID:21212857 | 2010 | review-article; Journal Article | PINK1 and Parkin to control mitochondria remodeling.
+PMID:21218688 | 2010 | Journal Article | Challenges facing quantification of rat locomotion along beams of varying widths.
+PMID:21228155 | 2011 | Research Support, Non-U.S. Gov't; resear | Nucleolar disruption in dopaminergic neurons leads to oxidative damage and parkinsonism through repression of mammalian target of rapamycin signaling.
+PMID:21228157 | 2011 | research-article; Journal Article | Activation of dorsal raphe serotonin neurons underlies waiting for delayed rewards.
+PMID:21232042 | 2011 | Research Support, Non-U.S. Gov't; resear | Stable expression and functional characterization of a human nicotinic acetylcholine receptor with α6β2 properties: discovery of selective antagonists.
+PMID:21234365 | 2010 | review-article; Journal Article | Lead, manganese, and methylmercury as risk factors for neurobehavioral impairment in advanced age.
+PMID:21242290 | 2011 | Research Support, Non-U.S. Gov't; resear | Neural integrity is maintained by dystrophin in C. elegans.
+PMID:21243444 | 2011 | calendar; Overall; Conference Proceeding | Abstracts of the Israel Society for Neuroscience 19th Annual Meeting. Eilat, Israel. December 12-14, 2010.
+PMID:21246047 | 2011 | Research Support, Non-U.S. Gov't; resear | Adult raphe-specific deletion of Lmx1b leads to central serotonin deficiency.
+PMID:21259327 | 2011 | Research Support, Non-U.S. Gov't; resear | Low-dose 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine causes inflammatory activation of astrocytes in nuclear factor-κB reporter mice prior to loss of dopaminergic neurons.
+PMID:21261759 | 2011 | research-article; Journal Article; Resea | Activation of D₂-like receptors in rat ventral tegmental area inhibits cocaine-reinstated drug-seeking behavior.
+PMID:21264196 | 2010 | review-article; Journal Article | Seniors with Parkinson's disease: initial medical treatment.
+PMID:21264319 | 2011 | Research Support, N.I.H., Intramural; Re | Striatal pre- and postsynaptic profile of adenosine A(2A) receptor antagonists.
+PMID:21269601 | 2011 | Research Support, Non-U.S. Gov't; resear | Antipsychotic-induced catalepsy is attenuated in mice lacking the M4 muscarinic acetylcholine receptor.
+PMID:21272013 | 2011 | research-article; Review; Journal Articl | VMAT2: a dynamic regulator of brain monoaminergic neuronal function interacting with drugs of abuse.
+PMID:21273402 | 2011 | Research Support, Non-U.S. Gov't; resear | Differential electrophysiological changes in striatal output neurons in Huntington's disease.
+PMID:21294155 | 2011 | Letter; Research Support, Non-U.S. Gov't | The man who could not walk backward: an unusual presentation of neuroferritinopathy.
+PMID:21297628 | 2011 | research-article; Journal Article; Resea | The neural substrates of rapid-onset Dystonia-Parkinsonism.
+PMID:21303547 | 2011 | research-article; Journal Article | Gene expression profiling of oxidative stress response of C. elegans aging defective AMPK mutants using massively parallel transcriptome sequencing.
+PMID:21304957 | 2011 | Research Support, Non-U.S. Gov't; resear | Resistance to MPTP-neurotoxicity in α-synuclein knockout mice is complemented by human α-synuclein and associated with increased β-synuclein and Akt activation.
+PMID:21318261 | 2011 | review-article; Review; Journal Article | The waking brain: an update.
+PMID:21319493 | 2010 | research-article; Journal Article | Brain serotonergic circuitries.
+PMID:21319997 | 2011 | Research Support, Non-U.S. Gov't; review | Adeno-associated viral vectors for mapping, monitoring, and manipulating neural circuits.
+PMID:21321333 | 2011 | Research Support, N.I.H., Intramural; re | Intermittent theta-burst transcranial magnetic stimulation for treatment of Parkinson disease.
+PMID:21325435 | 2011 | research-article; Journal Article; Resea | Requirement of dopamine signaling in the amygdala and striatum for learning and maintenance of a conditioned avoidance response.
+PMID:21338248 | 2011 | research-article; Review; Journal Articl | Cardiac and neuroprotection regulated by α(1)-adrenergic receptor subtypes.
+PMID:21338876 | 2011 | Research Support, Non-U.S. Gov't; resear | How addictive drugs disrupt presynaptic dopamine neurotransmission.
+PMID:21339905 | 2011 | review-article; Journal Article | The effects of deep brain stimulation on sleep in Parkinson's disease.
+PMID:21355132 | 2011 | Overall; Conference Proceedings; researc | Abstracts of the 13th International Congress on Schizophrenia Research (ICOSR). April 2-6, 2011. Colorado Springs, Colorado, USA.
+PMID:21356112 | 2011 | Clinical Trial; Research Support, Non-U. | Causes and consequences of cerebral small vessel disease. The RUN DMC study: a prospective cohort study. Study rationale and protocol.
+PMID:21370271 | 2011 | Clinical Trial; Journal Article | Modulation of gait coordination by subthalamic stimulation improves freezing of gait.
+PMID:21373196 | 2011 | Research Support, Non-U.S. Gov't; resear | Traditions in spider monkeys are biased towards the social domain.
+PMID:21373792 | 2011 | Research Support, Non-U.S. Gov't; resear | Increased cocaine self-administration in M4 muscarinic acetylcholine receptor knockout mice.
+PMID:21377635 | 2011 | Research Support, Non-U.S. Gov't; resear | Watching worms whither: modeling neurodegeneration in C. elegans.
+PMID:21382449 | 2011 | Comparative Study; Research Support, Non | Walking patterns in Parkinson's disease with and without freezing of gait.
+PMID:21395868 | 2011 | research-article; Journal Article; Resea | Independent neural coding of reward and movement by pedunculopontine tegmental nucleus neurons in freely navigating rats.
+PMID:21397548 | 2011 | Letter; Case Reports | Acute induction of levodopa-resistant freezing of gait upon subthalamic nucleus electrode implantation.
+PMID:21403896 | 2011 | review-article; Journal Article | VMAT2-Deficient Mice Display Nigral and Extranigral Pathology and Motor and Nonmotor Symptoms of Parkinson's Disease.
+PMID:21403909 | 2011 | review-article; Journal Article | Manganese-Induced Parkinsonism due to Ephedrone Abuse.
+PMID:21411979 | 2011 | Research Support, Non-U.S. Gov't; Review | Molecular chaperones and associated cellular clearance mechanisms against toxic protein conformers in Parkinson's disease.
+PMID:21415127 | 2011 | Research Support, Non-U.S. Gov't; review | Remote control of neuronal signaling.
+PMID:21423589 | 2011 | review-article; Journal Article | Efficacy, safety, and patient preference of monoamine oxidase B inhibitors in the treatment of Parkinson's disease.
+PMID:21425400 | 2012 | Research Support, Non-U.S. Gov't; resear | Hemispheric specialization during mental imagery of brisk walking.
+PMID:21427702 | 2011 | research-article; Journal Article; Resea | Two types of chloride transporters are required for GABA(A) receptor-mediated inhibition in C. elegans.
+PMID:21431472 | 2012 | research-article; Journal Article; Resea | Murine motor and behavior functional evaluations for acute 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine (MPTP) intoxication.
+PMID:21436393 | 2011 | Research Support, Non-U.S. Gov't; Random | Effect of step training and rhythmic auditory stimulation on functional performance in Parkinson patients.
+PMID:21439347 | 2011 | Research Support, N.I.H., Intramural; re | Gene-environment interactions: key to unraveling the mystery of Parkinson's disease.
+PMID:21441978 | 2011 | research-article; Journal Article | Effects of glutamate receptor agonists on the p13 auditory evoked potential and startle response in the rat.
+PMID:21441994 | 2011 | research-article; Journal Article | The arbitration-extension hypothesis: a hierarchical interpretation of the functional organization of the Basal Ganglia.
+PMID:21445247 | 2011 | Research Support, Non-U.S. Gov't; resear | Embryonic stem cell-derived L1 overexpressing neural aggregates enhance recovery after spinal cord injury in mice.
+PMID:21447538 | 2012 | Research Support, N.I.H., Intramural; Re | CNS effects of CB2 cannabinoid receptors: beyond neuro-immuno-cannabinoid activity.
+PMID:21448675 | 2011 | Historical Article; Research Support, No | Pedunculopontine stimulation from primate to patient.
+PMID:21453768 | 2011 | Research Support, Non-U.S. Gov't; resear | Parallel declines in cognition, motivation, and locomotion in aging mice: association with immune gene upregulation in the medial prefrontal cortex.
+PMID:21454572 | 2011 | Research Support, Non-U.S. Gov't; resear | Alternative mitochondrial electron transfer as a novel strategy for neuroprotection.
+PMID:21461368 | 2011 | review-article; Journal Article | Mitochondrial dysfunction in Parkinson's disease.
+PMID:21464430 | 2011 | Controlled Clinical Trial; Comparative S | Methylphenidate for gait impairment in Parkinson disease: a randomized clinical trial.
+PMID:21468092 | 2011 | Research Support, Non-U.S. Gov't; resear | Brain energization in response to deep brain stimulation of subthalamic nuclei in Parkinson's disease.
+PMID:21469212 | 2011 | Research Support, Non-U.S. Gov't; Journa | Internal pallidum and substantia nigra control different parts of the mesopontine reticular formation in primate.
+PMID:21477305 | 2011 | Research Support, Non-U.S. Gov't; resear | Aggravated stuttering following subthalamic deep brain stimulation in Parkinson's disease--two cases.
+PMID:21481303 | 2011 | Research Support, Non-U.S. Gov't; review | Role of netrin-1 in the organization and function of the mesocorticolimbic dopamine system.
+PMID:21486280 | 2011 | Research Support, Non-U.S. Gov't; review | Translational approaches to obsessive-compulsive disorder: from animal models to clinical treatment.
+PMID:21486284 | 2011 | Research Support, Non-U.S. Gov't; review | Animal models of Parkinson's disease: a source of novel treatments and clues to the cause of the disease.
+PMID:21486294 | 2011 | Research Support, Non-U.S. Gov't; resear | Bayesian models: the structure of the world, uncertainty, behavior, and the brain.
+PMID:21494628 | 2011 | Research Support, Non-U.S. Gov't; resear | Genetic analysis of the neurosteroid deoxycorticosterone and its relation to alcohol phenotypes: identification of QTLs and downstream gene regulation.
+PMID:21499253 | 2011 | Research Support, Non-U.S. Gov't; resear | Activation of dopamine neurons is critical for aversive conditioning and prevention of generalized anxiety.
+PMID:21503154 | 2011 | review-article; Journal Article | Topographical organization of the pedunculopontine nucleus.
+PMID:21503590 | 2011 | Research Support, Non-U.S. Gov't; Journa | Contamination of mesenchymal stem-cells with fibroblasts accelerates neurodegeneration in an experimental model of Parkinson's disease.
+PMID:21505263 | 2011 | research-article; Journal Article | Identification of a low-molecular weight TrkB antagonist with anxiolytic and antidepressant activity in mice.
+PMID:21508235 | 2011 | Research Support, Non-U.S. Gov't; resear | Power fluctuations in beta and gamma frequencies in rat globus pallidus: association with specific phases of slow oscillations and differential modulation by dopamine D1 and D2 receptors.
+PMID:21524335 | 2012 | Research Support, Non-U.S. Gov't; resear | Modulation of haloperidol-induced patterns of the transcription factor Nur77 and Nor-1 expression by serotonergic and adrenergic drugs in the mouse brain.
+PMID:21527290 | 2011 | Research Support, Non-U.S. Gov't; resear | Psychopathological aspects of dopaminergic gene polymorphisms in adolescence and young adulthood.
+PMID:21532928 | 2011 | research-article; Journal Article | In vivo brain microdialysis: advances in neuropsychopharmacology and drug discovery.
+PMID:21534957 | 2011 | Research Support, Non-U.S. Gov't; resear | Microdialysis and mass spectrometric monitoring of dopamine and enkephalins in the globus pallidus reveal reciprocal interactions that regulate movement.
+PMID:21541811 | 2011 | Research Support, Non-U.S. Gov't; resear | Electrical stimulation of the mesencephalic ventral tegmental area evokes skeletal muscle vasodilatation in the cat and rat.
+PMID:21546381 | 2011 | Research Support, Non-U.S. Gov't; resear | Neuron-specific proteotoxicity of mutant ataxin-3 in C. elegans: rescue by the DAF-16 and HSF-1 pathways.
+PMID:21547149 | 2011 | other; Journal Article | Gait and equilibrium in subcortical vascular dementia.
+PMID:21547711 | 2009 | research-article; Journal Article | The pathophysiology of restricted repetitive behavior.
+PMID:21549604 | 2011 | Research Support, Non-U.S. Gov't; resear | C. elegans Notch signaling regulates adult chemosensory response and larval molting quiescence.

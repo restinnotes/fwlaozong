@@ -1,0 +1,265 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:30637270; PMCID:PMC6207106; DOI:10.1002/mdc3.12658",
+    "title": "Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:30637270",
+    "cohort_id_candidate": "possible_match: PMID:26467485 (unconfirmed cohort overlap); otherwise unknown",
+    "cohort_relation_basis": "本文报告4例在Tsinghua University Hospital入组的双侧STN-DBS患者。参考文献包括Jia et al. 2015, PMID:26467485, Variable frequency stimulation of subthalamic nucleus for freezing of gait in Parkinson's disease。两篇论文具有相同第一作者，并涉及STN可变频刺激与FOG，但本文没有说明两篇研究是否使用相同患者，也没有提供可用于核对的患者编号、招募时间或队列重叠声明。因此仅标记possible_match，不认定为同一队列或同一研究。Jia et al. 2017, PMID:28392298，是VFS rationale and hypothesis文章，不据此认定队列重叠。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID30637270_E01",
+      "design": "Pilot safety and feasibility study；4例患者的非随机、非盲、患者内重复测量干预比较。比较OFF medication/OFF DBS基线、HFS和VFS条件。研究没有采用平衡的刺激顺序，也没有进行统计学推断。FOG结局为TUG过程中记录的实际冻结发作次数。",
+      "population": "4例帕金森病患者，均接受双侧STN DBS，且在常规HFS优化治疗后仍报告持续性FOG。3男1女，年龄40–69岁。患者在中国北京Tsinghua University Hospital接受研究。4例均有临床FOG表型。",
+      "n_enrolled": 4,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_patients_with_valid_neural_data：不适用，研究未采集STN或其他脑区神经活动数据。n_electrodes_contacts：不适用，虽然患者植入双侧STN DBS电极，但没有神经记录电极或记录触点。n_FOG_events：全文未报告独立的总体事件样本分母；Table 1报告了每位患者在HFS和VFS下的冻结次数。n_trials：全文未报告每种条件下TUG的重复试次数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "Freezing of gait (FOG)；报告了TUG中的实际freezing episodes，但未区分akinetic、trembling-in-place、kinetic-no-trembling或mixed等亚型。原文使用freezing of gait和freezing episodes。",
+      "medication_phenotype": "unknown；患者有持续性FOG，且在常规HFS优化治疗后仍存在，但未明确分类为OFF-FOG、ONOFF-FOG、ON-FOG或biphasic。",
+      "experimental_medication_state": "OFF medication。方法部分描述UPDRS III和10 m TUG在off medications-off DBS条件下进行，随后在HFS和VFS编程后各1小时进行评估。药物停用的具体时长及HFS/VFS测试时的药物状态确认细节未报告。",
+      "DBS_state_and_parameters": "所有患者均接受双侧STN DBS。比较临床刺激关闭基线、HFS和VFS。HFS参数为患者特异性设置：P1右侧8-C+，3.3 V，90 μs，185 Hz；左侧4-3-C+，3.5 V，90 μs，185 Hz。P2右侧5-C+，1.5 V，60 μs，130 Hz；左侧1-C+，1.8 V，60 μs，130 Hz。P3右侧6-C+，1.7 V，60 μs，130 Hz；左侧3-C+，3.0 V，60 μs，130 Hz。P4右侧4-2-C+，2.7 V，90 μs，150 Hz；左侧7-C+，2.5 V，80 μs，150 Hz。VFS保持HFS的电压和脉宽不变，交替使用HFS与60 Hz LFS。P1：10秒train，185-60-185-130-60 Hz；P2：10秒train，130-60-130-60-130 Hz；P3：30秒train，130-130-130-60-60 Hz；P4：30秒train，150-150-150-60-60 Hz。每个VFS模式由5个train组成。研究未报告方向性DBS电极或神经记录参数。",
+      "task": "10 m timed up and go (TUG) task。分别在OFF medication/OFF DBS基线、HFS和VFS条件下评估。报告TUG期间的freezing episodes。未报告每次TUG的重复次数及FOG事件识别操作标准。",
+      "recording_location": "无神经活动记录。STN是DBS刺激靶点，不是本研究的神经记录位置。全文未报告STN LFP、单单位、多单位、皮层-STN coherence或其他脑电生理信号采集。",
+      "measure": "10 m TUG过程中记录的freezing episodes数量。该指标为临床行为结局，不是STN神经活动指标。Table 1提供每位患者HFS和VFS条件下的冻结次数。",
+      "frequency_and_analysis_window": "无神经信号频段、神经信号分析窗口、功率归一化或神经信号基线分析。刺激频率见DBS_state_and_parameters。TUG评估在HFS和VFS编程后1小时进行。未报告冻结事件前、冻结期间及恢复阶段的神经信号时间锁定分析。",
+      "finding": "与HFS相比，VFS减少了TUG期间记录的冻结发作次数。Table 1患者级原始数据：P1，HFS 2次，VFS 1次；P2，HFS 0次，VFS 0次；P3，HFS 4次，VFS 1次；P4，HFS 4次，VFS 2次。作者报告VFS相对HFS的freezing episodes平均变化为58%，并明确将这一结果归于患者1、3和4。患者2在两种刺激条件下均没有记录到冻结事件。",
+      "effect_estimate": "作者报告：VFS相对HFS减少freezing episodes，mean change 58%（patients 1, 3, and 4）。患者级原始次数：P1 2→1；P2 0→0；P3 4→1；P4 4→2。无置信区间、标准误或P值。由Table 1计算的跨患者事件总数不作为作者直接报告的总体效应量。",
+      "statistical_unit_and_method": "患者级描述性组内比较，n=4。冻结次数以每位患者在不同刺激条件下的TUG表现记录。作者没有进行统计学比较，并在讨论中明确说明样本量太小，不能进行统计学比较。没有事件级神经信号统计模型，也没有报告以事件或试次为独立样本的推断分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I domain-informed preliminary assessment；针对非随机干预研究的初步领域级评估，不等同于完整正式ROBINS-I评定。",
+        "domains": [
+          {
+            "domain": "Confounding",
+            "judgement": "high",
+            "reason": "刺激条件没有平衡顺序，HFS与VFS之间间隔较短，作者承认不能排除前一刺激条件的残留获益。未采用充分的washout设计，存在刺激顺序和残留效应混杂。",
+            "source_locator": "Methods，研究流程段落；Discussion，limitations段落。"
+          },
+          {
+            "domain": "Selection of participants",
+            "judgement": "some_concerns",
+            "reason": "样本仅4例，均为双侧STN DBS且常规HFS治疗后仍有持续FOG的选择性患者。单中心研究，未报告完整招募流程及样本代表性。",
+            "source_locator": "Methods，Four PD patients段落；Results，Table 1。"
+          },
+          {
+            "domain": "Classification of interventions",
+            "judgement": "low",
+            "reason": "HFS和VFS的刺激参数、患者个体化频率模式、脉宽及电压均在Table 1中明确报告，刺激条件分类相对清楚。",
+            "source_locator": "Methods，VFS programming段落；Table 1。"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "unclear",
+            "reason": "患者没有对刺激状态实施盲法，但全文没有充分报告实际执行偏离预定刺激方案的情况。",
+            "source_locator": "Discussion，limitations段落。"
+          },
+          {
+            "domain": "Missing data",
+            "judgement": "unclear",
+            "reason": "Table 1提供全部4例患者的主要结果，但没有详细报告缺失数据处理、患者退出流程或各条件下未完成测试的情况。",
+            "source_locator": "Results，Table 1。"
+          },
+          {
+            "domain": "Measurement of outcomes",
+            "judgement": "some_concerns",
+            "reason": "报告了TUG中的冻结事件次数，但没有充分说明FOG操作定义、评估者、视频判读程序或评估者盲法。患者未对刺激状态设盲。",
+            "source_locator": "Methods，TUG assessment段落；Results，Table 1；Discussion，limitations段落。"
+          },
+          {
+            "domain": "Selection of reported results",
+            "judgement": "unclear",
+            "reason": "报告多个运动结局，但全文未提供可用于核查预先注册分析计划的充分信息。无法确认是否存在选择性结果报告。",
+            "source_locator": "Abstract，Results；Results，Table 1；Discussion。"
+          },
+          {
+            "domain": "Repeated measures and dependence",
+            "judgement": "some_concerns",
+            "reason": "研究采用患者内重复测量，但未报告每个条件下的TUG重复试次数，也没有提供事件级数据结构。样本量仅4例，无法充分估计患者间变异。",
+            "source_locator": "Methods，研究流程段落；Discussion，limitations段落。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是4例患者的探索性研究，非随机、非盲，刺激顺序不平衡，HFS和VFS之间的短间隔可能导致残留效应。作者明确指出无法进行统计学比较，且没有长期随访。冻结事件的具体识别标准和评估者信息不足。尤其重要的是，本研究没有采集STN神经活动，不能用于证明STN theta、beta、gamma功率或其他神经指标与FOG事件之间存在关联。Discussion中提到FOG可能与5–7 Hz theta oscillations的阵发性增加有关，但这是对既往文献的转述，而非本研究的患者数据；相关参考文献为Levy et al. 2002（PMID:12023310）和Heimer et al. 2006（PMID:17017503）。这些文献不能被视为本研究的独立神经证据。",
+      "quote": "reduced the number of freezing episodes (mean change 58%)",
+      "source_locator": {
+        "section": "Abstract - Results；Results，VFS programming及临床结局段落。",
+        "page": null,
+        "figure_table": "Table 1，TUG task, freezing episodes行。",
+        "supplement": "Video S1，作者描述VFS相较HFS改善gait speed和freezing episodes。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30637270_E02",
+      "design": "Pilot safety and feasibility study；4例双侧STN DBS患者的非随机、非盲、患者内重复测量干预比较。比较HFS与VFS下的TUG完成时间及作者报告的gait speed变化。",
+      "population": "4例帕金森病患者，均有FOG并接受双侧STN DBS。3男1女，年龄40–69岁。全部患者均有HFS和VFS条件下的TUG数据。",
+      "n_enrolled": 4,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "未采集神经信号，因此n_patients_with_valid_neural_data和n_electrodes_contacts不适用。该证据的主要结局为TUG时间，不是FOG事件计数，因此n_FOG_events不适用。全文未报告各条件下TUG重复试次数。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "患者均有FOG，但本项结局为总体TUG表现和gait speed，未将运动时间分解为FOG期间与非冻结步态期间，也未报告FOG运动表型亚型。",
+      "medication_phenotype": "unknown；研究对象有持续性FOG，但没有明确区分OFF-FOG、ONOFF-FOG、ON-FOG或biphasic。",
+      "experimental_medication_state": "OFF medication。方法部分说明UPDRS III和TUG在off medications-off DBS基线及随后HFS、VFS编程后进行；具体药物停用时长未报告。",
+      "DBS_state_and_parameters": "双侧STN DBS。HFS与VFS患者个体化参数见Table 1。HFS频率130–185 Hz；VFS将HFS频率与60 Hz LFS交替。VFS维持HFS电压和脉宽。P1和P2采用10秒train，P3和P4采用30秒train。具体接触点、电压、脉宽及频率序列见E01的DBS_state_and_parameters。",
+      "task": "10 m timed up and go (TUG)。在HFS和VFS编程后1小时评估TUG表现。未报告独立直线步行、转弯或启动子任务的分段时间。",
+      "recording_location": "无神经记录。STN仅为DBS刺激靶点，未采集STN LFP、单/多单位活动或皮层-STN coherence。",
+      "measure": "TUG完成时间（秒）及作者根据TUG表现报告的gait speed变化。该指标是总体运动表现，不是事件锁定的FOG神经生理指标。",
+      "frequency_and_analysis_window": "没有神经活动频段、神经信号分析窗口或归一化处理。TUG在HFS和VFS编程后1小时测量。刺激频率为患者特异性HFS及VFS模式，具体参数见Table 1。",
+      "finding": "作者报告，与HFS相比，VFS提高gait speed，平均变化45%，涉及患者1、2和3。Table 1中的TUG时间（HFS→VFS）分别为：P1 35→20秒；P2 48→24秒；P3 43→24秒；P4 30→31秒。P4在VFS下的TUG时间比HFS增加1秒，说明该结局并非所有患者均改善。作者报告的45%平均变化明确涉及患者1、2和3。",
+      "effect_estimate": "作者报告gait speed mean change 45%（patients 1, 2, and 3）。原始TUG完成时间：HFS为35、48、43、30秒；VFS为20、24、24、31秒。未报告置信区间、标准误或P值。",
+      "statistical_unit_and_method": "患者级描述性组内比较，n=4。作者报告患者1、2、3的平均gait speed变化45%，未提供明确的计算公式或统计模型。作者说明研究样本量太小，不能进行统计学比较。TUG时间没有报告患者级推断统计结果。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I domain-informed preliminary assessment；非随机干预研究的初步领域级评估。",
+        "domains": [
+          {
+            "domain": "Confounding",
+            "judgement": "high",
+            "reason": "刺激条件顺序不平衡，HFS与VFS间隔较短，可能存在前一刺激条件的残留效应；没有随机化刺激顺序。",
+            "source_locator": "Methods，研究流程；Discussion，limitations。"
+          },
+          {
+            "domain": "Selection of participants",
+            "judgement": "some_concerns",
+            "reason": "仅纳入4例单中心、HFS后仍存在FOG的双侧STN DBS患者，样本选择性较强。",
+            "source_locator": "Methods，患者入组段落；Table 1。"
+          },
+          {
+            "domain": "Classification of interventions",
+            "judgement": "low",
+            "reason": "HFS与VFS的刺激设置和患者特异性参数在Table 1中有明确描述。",
+            "source_locator": "Methods，VFS programming；Table 1。"
+          },
+          {
+            "domain": "Deviations from intended interventions",
+            "judgement": "unclear",
+            "reason": "患者没有对刺激状态设盲，但未充分报告干预执行偏离情况。",
+            "source_locator": "Discussion，limitations。"
+          },
+          {
+            "domain": "Missing data",
+            "judgement": "unclear",
+            "reason": "4例患者均有表格数据，但未提供详细缺失数据或退出分析。",
+            "source_locator": "Results，Table 1。"
+          },
+          {
+            "domain": "Measurement of outcomes",
+            "judgement": "some_concerns",
+            "reason": "报告TUG时间，但没有充分说明计时方式、评估者盲法及重复测量程序；患者未对刺激状态设盲。",
+            "source_locator": "Methods，TUG assessment；Results，Table 1；Discussion。"
+          },
+          {
+            "domain": "Selection of reported results",
+            "judgement": "unclear",
+            "reason": "同时报告多个运动结局，未提供足以核对预先规定分析计划的信息。",
+            "source_locator": "Abstract，Results；Results，Table 1。"
+          },
+          {
+            "domain": "Repeated measures and dependence",
+            "judgement": "some_concerns",
+            "reason": "患者内重复比较，但未报告TUG重复次数，也未提供可用于评估重复测量变异的详细数据。",
+            "source_locator": "Methods，研究流程；Discussion，limitations。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "作者报告的是gait speed和TUG完成时间，而不是单独的FOG事件前后步态速度。TUG时间可能受到冻结、启动困难及其他运动表现影响，不能直接等同于无冻结步态速度。患者4的TUG时间在VFS下反而略有增加。研究样本量很小，没有统计学推断，刺激顺序不平衡且可能存在残留效应。没有任何STN神经活动数据，因此不能将gait speed变化归因于特定STN振荡频段或神经活动变化。",
+      "quote": "VFS increased gait speed (mean change 45%, patients 1, 2, and 3)",
+      "source_locator": {
+        "section": "Abstract - Results；Results，VFS programming及临床结局段落。",
+        "page": null,
+        "figure_table": "Table 1，TUG task, time in sec行。",
+        "supplement": "Video S1，VFS与HFS下gait speed比较。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID30637270_E03",
+      "design": "Pilot safety and feasibility study；4例双侧STN DBS患者的基线临床表型描述。此证据是UPDRS II item 14的患者级临床症状评估，不是事件级步态实验。",
+      "population": "4例帕金森病患者，均有FOG且接受双侧STN DBS。3男1女，年龄40–69岁。患者在常规HFS治疗后仍报告持续性FOG。",
+      "n_enrolled": 4,
+      "n_analyzed": 4,
+      "n_patients_with_FOG": 4,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "未采集神经活动，n_patients_with_valid_neural_data和n_electrodes_contacts不适用。UPDRS II item 14是临床症状评分，不涉及事件级FOG计数，因此n_FOG_events和n_trials不适用。未报告每位患者完整的UPDRS II item 14分数分布。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "Freezing of gait；作者报告2例患者UPDRS II item 14评分为3，属于作者描述的significant freezing。没有报告akinetic、trembling-in-place、kinetic-no-trembling或mixed等具体冻结表型。",
+      "medication_phenotype": "unknown；未说明患者FOG是否仅发生于OFF药物、ON药物或两种状态。",
+      "experimental_medication_state": "该症状评分的具体评估时间及药物状态未明确报告，不能将其直接归类为实验中的OFF medication或ON medication评分。",
+      "DBS_state_and_parameters": "患者均植入双侧STN DBS，且在常规HFS下优化了震颤、僵直和运动迟缓，但仍有持续性FOG。该UPDRS II item 14评分与具体HFS/VFS测试条件之间的时间关系未明确报告。",
+      "task": "UPDRS II item 14临床症状评估；不是实际步行任务或事件级FOG诱发实验。",
+      "recording_location": "无神经活动记录。未采集STN LFP、单/多单位活动或其他神经生理信号。",
+      "measure": "Unified Parkinson's Disease Rating Scale (UPDRS) part II, item 14，freezing相关临床评分。",
+      "frequency_and_analysis_window": "无神经信号频段或分析窗口。UPDRS II item 14评分的具体评估时间及药物/刺激状态未报告。",
+      "finding": "作者报告4例患者中有2例在UPDRS II item 14上获得3分，描述为significant freezing。该结果仅用于描述患者的临床FOG严重程度，不代表2例患者均在TUG中发生了相同数量或相同类型的冻结事件。",
+      "effect_estimate": "2/4患者（50%）UPDRS II item 14评分为3。未报告全部4例的完整评分分布、均值、标准差或置信区间。",
+      "statistical_unit_and_method": "患者级描述性临床评分。没有进行组间比较或统计学推断。没有事件级分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I domain-informed preliminary assessment；非随机临床研究的初步领域级评估。",
+        "domains": [
+          {
+            "domain": "Confounding",
+            "judgement": "unclear",
+            "reason": "该临床评分的具体评估时间以及药物和DBS状态没有明确报告，无法判断评分与实验条件之间的关系。",
+            "source_locator": "Results，患者特征描述段落。"
+          },
+          {
+            "domain": "Selection of participants",
+            "judgement": "some_concerns",
+            "reason": "仅包括4例单中心、双侧STN DBS且持续存在FOG的患者，样本代表性有限。",
+            "source_locator": "Methods，患者入组段落；Table 1。"
+          },
+          {
+            "domain": "Measurement of outcomes",
+            "judgement": "some_concerns",
+            "reason": "UPDRS II item 14是临床症状评分，但没有报告具体评估者、评估时间、盲法及完整患者级分数。",
+            "source_locator": "Results，患者特征描述段落。"
+          },
+          {
+            "domain": "Missing data",
+            "judgement": "unclear",
+            "reason": "仅报告2例评分为3，没有完整报告其他2例的评分，无法判断是否存在选择性缺失或仅选择性报告高评分患者。",
+            "source_locator": "Results，患者特征描述段落。"
+          },
+          {
+            "domain": "Selection of reported results",
+            "judgement": "unclear",
+            "reason": "没有预先规定的临床表型分析计划可供核查，且未报告全部患者的UPDRS II item 14评分。",
+            "source_locator": "Results；Discussion。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果仅反映UPDRS II item 14临床评分，不能替代实际自然步行中的FOG事件确认，也不能用于推断FOG发生前、冻结期间或恢复阶段的神经活动。作者仅报告2例患者评分为3，没有提供完整的患者级评分分布，也没有说明评分时的药物和DBS状态。不能由此推断其他2例患者没有FOG，因为4例患者均被纳入为有FOG的患者。",
+      "quote": "Two patients had significant freezing with a score of three on item 14 of the UPDRS II scale.",
+      "source_locator": {
+        "section": "Results，患者特征及临床结局描述段落。",
+        "page": null,
+        "figure_table": "正文患者特征描述；Table 1为Demographics and Clinical Profile。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

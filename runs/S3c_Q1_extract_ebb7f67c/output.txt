@@ -1,0 +1,461 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:42239677",
+    "title": "An initial machine learning model applied to local field potential data from the subthalamic nucleus to detect freezing of gait in Parkinson's disease.",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "NCT05103384_CCVHE_STN_LFP_FOG_detection",
+    "cohort_id_candidate": "Cleveland_Clinic_CCVHE_PD_bilateral_STN_Percept_n5_candidate",
+    "cohort_relation_basis": "本文报告临床试验注册号NCT05103384，研究在Cleveland Clinic开展，纳入5名既往接受双侧STN DBS植入、使用Medtronic Percept平台的PD患者。所有参与者完成Physical、Anxiety和Cognitive三个CC-VHE模块。该注册号及中心信息可作为同一研究和队列的候选识别依据。本文未提供与其他已发表研究患者队列重叠的直接证据，跨论文队列关系仍需进一步核查。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID42239677_E01",
+      "design": "单中心观察性、重复测量的STN-LFP与步态行为同步记录研究，结合深度学习进行FOG检测。采用leave-one-trial-out cross-validation（LOTOCV），并在每个留出试次中使用前40秒数据进行transfer learning，再在剩余数据上测试。属于机器学习检测可行性研究，不是DBS刺激干预试验。",
+      "population": "5名PD患者，均既往接受双侧STN DBS手术超过3个月；能够独立或借助辅助设备行走至少10分钟；Freezing of Gait Questionnaire评分≥1。所有参与者在OFF-medication和OFF-DBS状态下完成CC-VHE任务。15个已完成试次中，8个满足训练、调优和测试所要求的冻结事件条件，作为留出测试试次。",
+      "n_enrolled": null,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": 30,
+      "n_trials": 8,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：全文未报告筛查人数及独立入组流程；5名参与者完成了数据采集。n_patients_with_FOG：全文报告测试集有30次FOG事件，但未报告发生实际FOG事件的独立患者人数。n_electrodes_contacts：全文未报告物理电极触点总数；报告双侧STN电极、每侧3组输出LFP通道对及12个分析通道，不能将通道数替代触点数。n_FOG_events：Results报告30次，而Abstract报告24/29次，存在分母不一致；本条采用Results中的30次。n_trials：8为留出测试试次数，全文另报告总共完成15个试次。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "研究操作性定义为akinesia或trembling导致的non-functional steps；FOG终止定义为连续出现两个functional steps。Discussion另外提及akinetic、trembling及festinating表现，但未提供本队列各表现的独立人数或事件数。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "OFF-medication：停止抗帕金森药物超过12小时；OFF-DBS：测试前关闭刺激约1小时。所有LFP采集均在OFF-therapy条件下进行。",
+      "DBS_state_and_parameters": "既往双侧STN DBS植入超过3个月；Medtronic Percept DBS平台。测试期间DBS刺激关闭约1小时。未报告测试刺激频率、幅度、脉宽及具体活动触点；本研究没有ON-DBS刺激比较条件。采用Indefinite Streaming Mode连续记录LFP。",
+      "task": "Cleveland Clinic-Virtual Home Environment（CC-VHE），使用全向跑台和沉浸式VR环境。包括Physical模块（不同地面图案、狭窄门道、走廊及多次转弯，约30米行走）、Anxiety模块（模拟高空狭窄木板行走，约30米）和Cognitive模块（围绕厨房岛行走并执行图片文字一致性判断双任务，连续行走2分钟）。每名参与者完成每个模块一个试次。三个模块的测试结果在本条中汇总。",
+      "recording_location": "双侧STN。每侧记录三个输出通道对：LFP0–2、LFP0–3、LFP1–3；通过线性组合进一步构建每侧三个衍生通道，最终得到12个分析通道。使用Medtronic Percept记录。作者根据OFF-DBS/OFF-Med与ON-DBS/ON-Med条件下MDS-UPDRS III评分改善约38%推断电极位于sensorimotor STN区域；未在所提供正文中报告逐触点影像定位结果。",
+      "measure": "STN局部场电位（LFP），250 Hz采样。模型整合原始时序、canonical频段功率、个体化custom频段功率、滚动均值/最小值/最大值/标准差以及alpha-beta burst duration。初始特征1020个，剔除高度相关特征后保留970个。使用深度学习模型输出每个时间点的FOG概率。主要结局为模型检测FOG的性能，而非单独某一频段功率的患者级统计差异。",
+      "frequency_and_analysis_window": "LFP采样率250 Hz，硬件滤波范围1–100 Hz。Canonical频段：delta 1–4 Hz、theta 4–8 Hz、alpha 8–13 Hz、beta 13–30 Hz、gamma 30–100 Hz；Welch方法计算功率谱密度。Custom频段为围绕每名参与者每侧STN的alpha-beta峰值频率设置的6、10和20 Hz带宽。滚动统计窗口为0.125、0.5和2秒。Alpha-beta burst分析采用8–30 Hz范围内、以个体峰值频率为中心的6 Hz带宽；burst阈值根据静息数据计算。原始12通道数据按参与者跨三个试次进行Z-score标准化。模型输入为3秒重叠窗口，步长0.5秒，每个窗口最后一个时间点被分类。每个留出试次前40秒用于调优，其余部分用于测试。图示的预测时间分辨率为0.5秒。作者报告burst阈值的静息基线计算采用五个连续6 Hz频带、覆盖45–63 Hz的数据处理方法。",
+      "finding": "在8个留出测试试次中，转移学习模型对30次测试集FOG事件成功检测24次，Results报告事件级检测比例为80%。26/30次事件至少出现过一次阳性预测。转移学习后平均weighted F1 score为0.67，macro F1 score为0.62；未进行转移学习的基础模型分别为0.57和0.51。Results前段报告specificity为55%，随后报告8个试次的平均specificity为0.69，平均precision为0.55、recall/sensitivity为0.59。测试集共902个3秒输入窗口，其中38%的窗口最后一个时间点被临床标记为FOG。结果支持在VR行走过程中使用STN-LFP进行FOG状态检测的可行性，但未证明某一统一频段变化是FOG的稳定神经标志。",
+      "effect_estimate": "转移学习模型：weighted F1=0.67，macro F1=0.62；基础模型：weighted F1=0.57，macro F1=0.51。事件级检测：24/30=80%；至少一次阳性预测：26/30=87%。Results报告specificity=55%；另报告跨8个试次平均specificity=0.69、precision=0.55、recall=0.59。事件级检测定义为真实FOG事件持续期间至少25%的预测时间点达到概率阈值0.5。作者通过ROC分析最大化Youden index，并要求specificity≥0.5以选择25%的事件检测阈值。Abstract另报告24/29（80%），与Results的24/30不一致。未报告置信区间或主要性能指标的显著性检验P值。",
+      "statistical_unit_and_method": "LOTOCV，按试次留出而非按患者留出。每轮留出试次分为前40秒调优集及后续测试集。测试集共902个3秒输入窗口，窗口步长0.5秒。报告weighted F1、macro F1、precision、recall、specificity及事件级检测比例。事件级成功标准为单次真实FOG事件中至少25%的预测时间点概率≥0.5。F1等指标涉及窗口/时间点预测及试次层面的性能汇总；24/30和26/30为事件级计数。不是30名患者，也不是独立患者级统计推断。未报告置信区间、患者级混合效应模型或事件级独立性校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理与机器学习预测研究偏倚评估清单；不是经过验证的正式风险评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "样本仅5名既往接受双侧STN DBS的PD患者，并要求FOG-Q≥1及能够行走至少10分钟。研究对象属于具有特定手术史和步行能力的选择性人群；未报告筛查、拒绝参与及排除后的完整患者流程，外部代表性有限。",
+            "source_locator": "Materials and methods：Participants eligibility criteria；Results：Five participants completed three modules"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "由一名具有15年以上PD临床和研究经验的物理治疗师实时标记FOG起止，并由同一治疗师进行事后视频复核；还对shank IMU数据进行视觉检查。FOG操作性定义较明确，但未报告独立评审者、盲法或评审者间一致性，且Discussion承认临床视觉判断可能存在主观性。",
+            "source_locator": "Materials and methods：Data synchronization and freezing of gait detection；Discussion：FOG identification"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "报告250 Hz采样、1–100 Hz滤波、TENS同步及LFP与EEG时间同步误差在50 ms以内，具有一定质量控制。但未详细报告运动伪迹剔除标准、信号质量阈值、异常通道处理及伪迹对各频段的影响。",
+            "source_locator": "Materials and methods：Local field potential recording；Data synchronization and freezing of gait detection"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "所有测试均处于OFF-medication/OFF-DBS状态，没有药物或刺激状态对照。Physical、Anxiety和Cognitive模块同时改变环境、认知负荷及心理压力，可能影响LFP与FOG之间的关系。未报告对这些因素进行独立混杂调整的统计模型。",
+            "source_locator": "Materials and methods：OFF-therapy condition；Cleveland clinic–virtual home environment paradigm"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "high",
+            "reason": "仅5名患者产生15个试次和多个FOG事件；测试集包含902个高度重叠的3秒窗口，步长仅0.5秒。同一患者贡献多个试次、事件及窗口。LOTOCV按试次而不是患者划分，训练数据仍可能包括留出测试患者的其他试次；测试试次的前40秒还用于模型调优。因此窗口和事件不能视为相互独立的患者级验证样本。",
+            "source_locator": "Materials and methods：Data processing；Results：902 windows and eight held-out trials"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "初始构建1020个特征，最终保留970个，并对12个通道、多个频段和不同滚动指标进行SHAP特征重要性分析。虽然剔除了高度相关特征，但未报告多重比较校正或对探索性特征关联进行独立验证。",
+            "source_locator": "Materials and methods：Data feature engineering；Feature importance；Results：Figure 4"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "high",
+            "reason": "5名患者、8个测试试次对应970个模型特征，且每个3秒窗口包含727500个输入值。使用同一留出试次前40秒进行个体化调优，可能提高当前试次内预测表现，但不等同于新患者或新试次的独立泛化验证。未报告独立外部验证队列。",
+            "source_locator": "Materials and methods：Data processing；Model design；Model training；Results"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "报告ClinicalTrials.gov注册号NCT05103384，但所提供全文未提供注册方案、预设主要终点及统计分析计划，无法核查模型指标和探索性分析是否完全按照预先设定的方案报告。",
+            "source_locator": "Abstract：ClinicalTrials.gov identifier NCT05103384；全文未提供注册方案与统计分析计划"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "小样本、单中心、仅5名患者。FOG发生于VR与全向跑台结合的模拟环境，不能直接等同于自然环境中的直立行走FOG。模型通过同一测试试次前40秒进行调优，测试性能不代表完全独立的新患者预测性能。测试指标存在不同汇总口径：specificity报告55%及跨试次平均0.69；Abstract的24/29与Results的24/30也不一致。未提供置信区间或独立外部验证。研究验证的是LFP辅助检测可行性，不是STN某一频段异常导致FOG的因果机制，也没有验证aDBS治疗效果。",
+      "quote": "The model successfully detected 24 (80%) of the 30 freezes across the cohort with a specificity of 55%.",
+      "source_locator": {
+        "section": "Results：Model performance and FOG detection",
+        "page": null,
+        "figure_table": "Table 2；Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42239677_E02",
+      "design": "观察性STN-LFP机器学习特征归因分析；使用Figure 4A–B的SHAP partial-dependence结果比较两名参与者在相同Cognitive模块中的特征与模型预测FOG概率之间的方向关系。",
+      "population": "来自原研究5名PD患者中的两名参与者（Subject 1和Subject 3）。两人均接受双侧STN DBS，均在OFF-medication/OFF-DBS条件下完成Cognitive模块。该证据是原研究队列内的探索性亚组比较，不构成独立队列。",
+      "n_enrolled": null,
+      "n_analyzed": 2,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 2,
+      "n_FOG_events": null,
+      "n_trials": 2,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：全文未报告独立入组流程。n_patients_with_FOG：未报告Subject 1和Subject 3各自的实际FOG事件总数。n_FOG_events：Figure 4未提供这两个试次各自的事件分母。n_electrodes_contacts：未报告物理触点数。Figure 4图注报告每个面板包含105–132个窗口范围，但未提供每个面板的准确窗口数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "原研究操作性定义为akinesia或trembling导致的non-functional steps；本图未分别标注每个窗口属于akinetic、trembling或其他FOG表现。Figure 4总体涉及preceding and during freezing，但未提供可独立核查的事件阶段分层。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "OFF-medication，停药超过12小时；OFF-DBS，测试前关闭约1小时。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic Percept；测试时刺激关闭约1小时。未报告刺激频率、幅度、脉宽和具体触点。",
+      "task": "Cognitive模块：参与者围绕大型厨房岛行走，同时执行图片与文字一致性判断的认知干扰双任务。Subject 1和Subject 3各有一个Cognitive模块试次。该比较固定任务类型，但参与者不同。",
+      "recording_location": "左侧STN，Figure 4A–B使用衍生分析通道LFP0_2_Left。该通道来自原始LFP通道的线性组合。",
+      "measure": "SHAP partial-dependence分析。绘制每个时间点的canonical频段功率、custom频段功率及其滚动指标的聚合原始特征值与对应SHAP值之间的关系。特征组包括delta、theta、alpha、beta、gamma功率，以及个体化6、10、20 Hz带宽功率和相应滚动指标。Alpha-beta burst duration用于图中点颜色编码。结果反映特征对模型预测概率的贡献方向，不等同于独立统计检验得到的生理因果效应。",
+      "frequency_and_analysis_window": "原始LFP采样250 Hz，滤波1–100 Hz。Canonical频段为delta 1–4 Hz、theta 4–8 Hz、alpha 8–13 Hz、beta 13–30 Hz、gamma 30–100 Hz；custom频段为围绕个体alpha-beta峰值设置的6、10、20 Hz带宽。滚动窗口0.125、0.5、2秒。模型采用3秒重叠输入窗口，步长0.5秒。Z-score标准化按参与者跨三个试次进行。Figure 4每个面板涉及105–132个窗口，图注未提供逐面板确切数值。",
+      "finding": "在相同Cognitive任务条件下，两名参与者呈现方向相反的模型特征关联。Subject 1（Figure 4A）：特征值增加与模型预测FOG概率增加相关。Subject 3（Figure 4B）：特征值增加与模型预测FOG概率降低相关。作者将该结果解释为不同个体之间FOG相关神经特征存在异质性。该结果说明同一任务下不存在可直接从这两个个体概括出的统一特征方向。",
+      "effect_estimate": "Subject 1：特征值与SHAP贡献呈正向关系；Subject 3：呈负向关系。未报告相关系数、回归斜率、效应量、置信区间或P值。属于图示的模型归因方向比较。",
+      "statistical_unit_and_method": "SHAP局部归因值按输入窗口中的时间点计算，并按通道及特征组汇总。Figure 4A–B比较两名参与者各自Cognitive试次中的特征值与SHAP值；每个面板涉及105–132个窗口。没有患者级组间统计检验，不能将窗口数作为独立患者数或独立事件数。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理与机器学习预测研究偏倚评估清单；不是经过验证的正式风险评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只展示5名研究参与者中的两名，属于探索性示例。未报告这两名参与者是否代表全部患者的特征分布。",
+            "source_locator": "Materials and methods：Participants eligibility criteria；Results：Figure 4A–B"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用临床治疗师实时标记及同一治疗师事后视频复核的FOG标签，但没有独立评审者一致性数据，且图中未按不同冻结表现分别分析。",
+            "source_locator": "Materials and methods：Data synchronization and freezing of gait detection；Results：Figure 4"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "记录采样及滤波方法有报告，但未详细报告运动伪迹剔除、异常通道质量控制及不同活动对信号的影响。",
+            "source_locator": "Materials and methods：Local field potential recording"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "两名参与者完成相同Cognitive模块，减少了任务类型差异，但个体疾病特征、步态能力及个体化模型均可能影响SHAP方向，未进行患者级混杂调整。",
+            "source_locator": "Results：Figure 4A–B；Discussion：Individual variability"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "high",
+            "reason": "每名参与者包含大量重叠时间窗口，但实际独立患者只有两名。图示窗口并非独立生物学重复，且模型训练及调优涉及同一研究队列。",
+            "source_locator": "Materials and methods：Data processing；Results：Figure 4 legend"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对多个频段、滚动指标及通道进行特征归因分析，未报告多重比较校正或独立验证。",
+            "source_locator": "Materials and methods：Data feature engineering；Feature importance；Results：Figure 4"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "high",
+            "reason": "分析依赖个体化模型和大量特征，仅展示两个患者的方向性结果，没有独立患者队列验证，也没有证明SHAP方向可以推广至其他患者。",
+            "source_locator": "Materials and methods：Model design；Results：Figure 4；Discussion"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "注册号NCT05103384已报告，但没有预先指定的SHAP分析方案或完整统计分析计划供核查。",
+            "source_locator": "Abstract：ClinicalTrials.gov identifier NCT05103384；Results：Figure 4"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "只有两名参与者的Cognitive试次被用于该图示比较，不能据此估计整个患者群体的效应方向。SHAP反映模型如何利用特征生成预测，不等于神经活动对FOG具有因果作用。图中聚合了多个频段和滚动指标，不能从该分析确定究竟是beta功率、theta功率或burst duration中的哪一个独立驱动了预测差异。未报告效应量、显著性检验或独立验证。任务属于VR模拟环境中的跑台行走。",
+      "quote": "The inverse relationship between Figures 4A,B illustrates the between-subject variability in neural signatures across individuals.",
+      "source_locator": {
+        "section": "Results：Feature importance and Figure 4A–B；Discussion：Individual variability",
+        "page": null,
+        "figure_table": "Figure 4A–B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42239677_E03",
+      "design": "观察性STN-LFP机器学习特征归因分析；使用Figure 4C–D对同一参与者在两种不同FOG诱发模块中的SHAP特征方向进行自身比较。",
+      "population": "原研究5名PD患者中的Subject 5。该参与者完成Cognitive及Anxiety两个模块。属于单名患者内的任务条件比较，不构成独立患者队列。",
+      "n_enrolled": null,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 2,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：全文未报告独立入组流程。n_patients_with_FOG：未报告Subject 5在两个指定试次中的独立患者级FOG事件统计。n_FOG_events：Figure 4C–D未报告具体事件数。n_electrodes_contacts：未报告物理触点总数。每个图示面板涉及105–132个窗口，但未提供准确的逐面板窗口数量。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "原研究操作性定义为akinesia或trembling导致的non-functional steps；Figure 4C–D未分别报告具体冻结表现。作者描述的分析涉及preceding and during freezing，但未提供事件阶段分层数据。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "OFF-medication，停药超过12小时；OFF-DBS，测试前关闭约1小时。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic Percept；测试时刺激关闭约1小时。未报告刺激频率、幅度、脉宽及具体活动触点。",
+      "task": "同一参与者Subject 5完成两个不同CC-VHE模块。Cognitive模块：围绕大型厨房岛行走并执行图片文字一致性判断双任务。Anxiety模块：在模拟高空悬空的狭窄木板上行走，以诱发压力和焦虑。两个模块各一个试次。",
+      "recording_location": "右侧STN，Figure 4C–D使用衍生分析通道LFP2_3_Right。",
+      "measure": "SHAP partial-dependence分析。比较canonical及custom频段功率、对应滚动指标的聚合原始特征值与聚合SHAP贡献之间的方向关系。Alpha-beta burst duration以颜色编码。模型输出为预测FOG概率。",
+      "frequency_and_analysis_window": "LFP采样250 Hz，硬件滤波1–100 Hz。Canonical频段为delta 1–4 Hz、theta 4–8 Hz、alpha 8–13 Hz、beta 13–30 Hz、gamma 30–100 Hz。Custom频段为围绕个体峰值的6、10、20 Hz带宽。滚动窗口0.125、0.5、2秒；3秒重叠模型输入窗口，步长0.5秒。参与者数据按跨三个试次的Z-score进行标准化。Figure 4每个面板包含105–132个窗口，未报告每个面板的确切窗口数。",
+      "finding": "Subject 5在Cognitive模块中，特征值增加与模型预测FOG概率降低呈负向关系；在Anxiety模块中，特征值增加与模型预测FOG概率升高呈正向关系。也就是说，同一参与者在不同FOG诱发情境下，模型所利用的LFP特征与FOG预测概率之间呈相反方向关系。作者认为FOG相关神经特征具有trigger-specific heterogeneity。",
+      "effect_estimate": "Cognitive：特征值与SHAP贡献呈负向关系。Anxiety：特征值与SHAP贡献呈正向关系。未报告相关系数、斜率、置信区间或P值。",
+      "statistical_unit_and_method": "同一患者内两个不同模块试次的SHAP特征归因比较。以模型输入窗口及其中的时间点为分析单位，对通道相关特征贡献进行分组汇总。没有患者级或试次级显著性检验；两个试次不是独立患者重复。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理与机器学习预测研究偏倚评估清单；不是经过验证的正式风险评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "该分析只展示5名参与者中的Subject 5，且只比较其两个模块试次，不能确定其代表性。",
+            "source_locator": "Materials and methods：Participants eligibility criteria；Results：Figure 4C–D"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "采用临床治疗师实时FOG标记及事后视频确认，但没有独立评审者间一致性数据，亦未对两种模块下的冻结表型分别报告。",
+            "source_locator": "Materials and methods：Data synchronization and freezing of gait detection"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "报告了采样、滤波及同步方法，但没有详细说明运动伪迹的排除、不同任务活动引起的信号变化及异常通道处理。",
+            "source_locator": "Materials and methods：Local field potential recording"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "同一患者内比较降低了固定患者特征的混杂，但Cognitive和Anxiety模块同时改变认知负荷、环境刺激和心理压力，无法将特征方向差异单独归因于FOG诱发机制。",
+            "source_locator": "Materials and methods：CC-VHE paradigm；Results：Figure 4C–D"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "high",
+            "reason": "仅一名患者和两个试次，却包含多个重叠时间窗口。窗口不能视为独立患者或独立事件，无法据此建立总体人群层面的任务效应。",
+            "source_locator": "Materials and methods：Data processing；Results：Figure 4 legend"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "分析涉及多频段功率、个体化频带、滚动特征及多个信号通道，没有报告多重比较校正。",
+            "source_locator": "Materials and methods：Data feature engineering；Feature importance"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "high",
+            "reason": "单患者的两个试次用于探索模型特征重要性，且采用个体化转移学习。没有在独立患者或独立中心验证该方向性关系。",
+            "source_locator": "Materials and methods：Model design；Data processing；Results：Figure 4C–D"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "虽然报告NCT05103384注册号，但无法从所提供全文核查Figure 4的探索性SHAP比较是否预先指定。",
+            "source_locator": "Abstract：ClinicalTrials.gov identifier NCT05103384；Results：Figure 4"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "该证据仅来自一名患者的两个试次，不能证明所有患者均存在相同的情境依赖性变化。Cognitive和Anxiety任务同时改变多个环境及行为因素，不能把方向变化直接解释为特定神经机制的切换。SHAP值代表模型预测贡献，而不是神经信号对FOG的因果效应。未报告统计显著性、定量效应量或独立重复验证。",
+      "quote": "The difference in neural signature is unique not only between individuals, but also across FOG triggers within individuals.",
+      "source_locator": {
+        "section": "Results：Feature importance and Figure 4C–D；Discussion：Individual and trigger-specific neural signatures",
+        "page": null,
+        "figure_table": "Figure 4C–D",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42239677_E04",
+      "design": "观察性电生理机器学习预测研究中的事件前时间点分析。分析测试集内模型阳性预测与随后临床确认FOG起始之间的时间关系。",
+      "population": "原研究5名PD患者，双侧STN DBS植入，Medtronic Percept平台。分析范围为8个留出测试试次中的模型预测。所有测试均在OFF-medication/OFF-DBS条件下进行。",
+      "n_enrolled": null,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": 30,
+      "n_trials": 8,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：全文未报告独立筛查及入组流程。n_patients_with_FOG：没有报告30次事件涉及多少名独立患者。n_electrodes_contacts：未报告物理触点总数。n_FOG_events：使用Results报告的30次测试集事件；Abstract另报告29次，存在不一致。41次为假阳性预测时间点计数，不是41次独立FOG事件。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "pre_FOG_event_associated",
+      "freezing_phenotype": "FOG起始定义为akinesia或trembling导致non-functional steps。本文没有报告这41个事件前预测所对应的具体冻结表型分布。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "OFF-medication，停药超过12小时；OFF-DBS，测试前关闭约1小时。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic Percept；测试期间刺激关闭约1小时。未报告频率、幅度、脉宽及活动触点。",
+      "task": "CC-VHE三个VR步行模块（Physical、Anxiety、Cognitive）的8个留出测试试次。模型输出在临床确认的FOG起始前后与临床事件时间进行比较。",
+      "recording_location": "双侧STN LFP，原始三组通道对/侧，并构建12个分析通道。",
+      "measure": "STN-LFP多特征深度学习模型输出的FOG预测概率。该模型综合canonical频段功率、个体化频段功率、滚动统计量和alpha-beta burst duration。这里的观察指标是临床FOG起始前模型产生的阳性预测，而不是直接检验某个频段在FOG前的平均功率差异。",
+      "frequency_and_analysis_window": "LFP采样250 Hz，1–100 Hz滤波。Canonical频段delta 1–4 Hz、theta 4–8 Hz、alpha 8–13 Hz、beta 13–30 Hz、gamma 30–100 Hz；另含围绕个体峰值的6、10、20 Hz custom带宽。滚动窗口0.125、0.5、2秒。模型输入窗口3秒，步长0.5秒，预测阈值0.5。每个时间点的分类依据此前3秒LFP数据，且只使用截至该时间点可获得的数据。作者报告临床FOG起始前2秒范围内出现连续阳性预测。",
+      "finding": "166次假阳性预测中，41次（25%）发生在临床确认FOG起始前2秒内，并且阳性预测连续延伸至随后冻结事件的临床起始。作者认为这部分预测可能反映早期检测，而非完全错误的FOG识别。Figure 3还展示了模型预测概率在临床确认冻结前逐渐变化的示例。该发现表明模型输出可能包含事件前的信息，但没有证明其具有独立、稳定的提前预测能力。",
+      "effect_estimate": "41/166次假阳性预测（25%）位于临床确认FOG起始前2秒内，并连续延伸至冻结起始。未报告对应的独立FOG事件数、事件级提前检出率、平均提前时间或置信区间。",
+      "statistical_unit_and_method": "单位为模型阳性预测时间点，而不是患者或FOG事件。预测以0.5秒时间步长产生，输入窗口为此前3秒数据。作者在166次假阳性预测中统计起始前2秒内的预测数量。没有报告41次预测对应多少个独立事件，也没有进行事件级提前预测时间的统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理与机器学习预测研究偏倚评估清单；不是经过验证的正式风险评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅5名既往接受双侧STN DBS的PD患者，要求FOG-Q≥1且具备持续行走能力；没有完整筛查及排除流程。",
+            "source_locator": "Materials and methods：Participants eligibility criteria"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG起始由经验丰富的治疗师实时标记，并通过事后视频复核；同一人员完成标记和复核，没有独立评审者一致性报告。",
+            "source_locator": "Materials and methods：Data synchronization and freezing of gait detection"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "LFP采样、滤波及同步方法已报告，但运动伪迹和异常信号剔除细节不充分，不能排除步态运动相关信号对预测的影响。",
+            "source_locator": "Materials and methods：Local field potential recording；Data synchronization"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "全部在OFF-therapy状态下采集，但不同模块涉及不同环境、认知及压力条件，未对这些因素进行独立混杂调整。",
+            "source_locator": "Materials and methods：OFF-therapy condition；CC-VHE paradigm"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "high",
+            "reason": "41次预测是时间点级计数，可能在同一患者及同一事件内连续发生，不能作为独立事件。模型使用重叠窗口和试次级交叉验证，且训练集包含同一患者其他试次。",
+            "source_locator": "Materials and methods：Data processing；Results：False positive predictions"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用大量LFP特征和多个预测时间点，并对假阳性预测与事件起止的时间邻近关系进行探索；没有报告多重比较校正。",
+            "source_locator": "Materials and methods：Data feature engineering；Results：Model performance"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "high",
+            "reason": "只有5名患者及8个测试试次，测试试次前40秒参与转移学习调优；没有独立患者或外部中心验证事件前预测表现。",
+            "source_locator": "Materials and methods：Data processing；Model training；Results"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "报告NCT05103384注册号，但无法从所提供全文确认事件前2秒分析是否为预设终点或事后探索。",
+            "source_locator": "Abstract：ClinicalTrials.gov identifier NCT05103384；Results：False positive predictions"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "41次是模型假阳性预测时间点，不是41个独立FOG事件。未报告这些预测涉及的独立事件数量、事件级提前检出敏感度及平均提前时间。由于预测窗口重叠，连续阳性时间点可能代表同一预测过程。作者将其解释为可能的早期检测，但尚不足以证明存在可用于aDBS控制的可靠pre-FOG神经标志。研究场景为VR跑台行走。",
+      "quote": "Of 166 total false positive predictions, 41 (25%) occurred within 2 seconds of the beginning of a clinician identified FOG with continuous positive prediction through the onset of the ensuing freeze.",
+      "source_locator": {
+        "section": "Results：False positive predictions and temporal alignment；Discussion：Model performance interpretation",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42239677_E05",
+      "design": "观察性电生理机器学习预测研究中的FOG终止后时间点分析。分析模型阳性预测在临床确认FOG结束后的持续情况。",
+      "population": "原研究5名PD患者，双侧STN DBS植入，Medtronic Percept平台。分析8个留出测试试次。所有测试均在OFF-medication/OFF-DBS状态下进行。",
+      "n_enrolled": null,
+      "n_analyzed": 5,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": 5,
+      "n_FOG_events": 30,
+      "n_trials": 8,
+      "n_electrodes_contacts": null,
+      "missing_reason": "n_enrolled：全文未报告独立筛查及入组流程。n_patients_with_FOG：未报告30次测试集事件涉及的独立患者数。n_electrodes_contacts：未报告物理触点总数。n_FOG_events采用Results中的30次，Abstract报告29次，存在不一致。41次是假阳性预测数量，不是41次独立FOG事件。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "offset_recovery",
+      "freezing_phenotype": "FOG起始定义为akinesia或trembling导致non-functional steps；FOG offset定义为连续出现两个functional steps。未报告这41次offset邻近预测对应的具体冻结表型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "OFF-medication，停药超过12小时；OFF-DBS，测试前关闭约1小时。",
+      "DBS_state_and_parameters": "双侧STN DBS，Medtronic Percept；测试时刺激关闭约1小时。未报告频率、幅度、脉宽及活动触点。",
+      "task": "CC-VHE三个VR步行模块（Physical、Anxiety、Cognitive）中的8个留出测试试次。模型预测时间点与临床治疗师确认的FOG结束时间进行比较。",
+      "recording_location": "双侧STN LFP；每侧记录三个输出通道对，并构建12个分析通道。",
+      "measure": "基于STN-LFP多特征深度学习模型的FOG概率预测。该模型包含canonical频段功率、个体化频段功率、滚动统计量和alpha-beta burst duration。当前结果反映模型阳性预测在临床确认FOG结束后的持续情况。",
+      "frequency_and_analysis_window": "LFP采样250 Hz，滤波1–100 Hz。Canonical频段delta 1–4 Hz、theta 4–8 Hz、alpha 8–13 Hz、beta 13–30 Hz、gamma 30–100 Hz；custom频带为围绕个体峰值的6、10、20 Hz带宽。滚动窗口0.125、0.5、2秒。模型输入3秒重叠窗口，步长0.5秒，预测概率阈值0.5。FOG offset定义为两个连续functional steps。作者统计临床FOG结束后2秒内持续的模型阳性预测。",
+      "finding": "166次假阳性预测中，另外41次（25%）是假阳性预测在真实FOG事件结束后2秒内持续延伸的情况，属于真实阳性预测的连续延长。作者将其归为模型预测在临床事件结束附近的时间性过度延伸，而不是独立的新FOG事件。",
+      "effect_estimate": "41/166次假阳性预测（25%）为临床确认FOG结束后2秒内真实阳性预测的连续延伸。未报告涉及的独立FOG事件数、每个事件的延伸时长分布或置信区间。",
+      "statistical_unit_and_method": "单位为模型假阳性预测时间点，非患者或独立FOG事件。预测步长0.5秒，输入窗口3秒。作者在总共166次假阳性预测中统计结束后2秒内的连续延伸预测数量。未报告事件级结束后延伸时长的统计分布。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性电生理与机器学习预测研究偏倚评估清单；不是经过验证的正式风险评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅5名既往接受双侧STN DBS的PD患者，要求FOG-Q≥1且具备持续行走能力，未报告完整筛查流程。",
+            "source_locator": "Materials and methods：Participants eligibility criteria"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG offset由经验丰富的物理治疗师实时标记并经事后视频复核，定义为连续两个functional steps；未报告独立评审者一致性。",
+            "source_locator": "Materials and methods：Data synchronization and freezing of gait detection"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "报告了LFP采样率、滤波及同步方法，但未充分说明运动伪迹排除和不同步态活动对信号的影响。",
+            "source_locator": "Materials and methods：Local field potential recording；Data synchronization"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "测试全部在OFF-therapy状态下完成，没有ON状态对照；不同任务情境及恢复步态可能影响模型预测，但没有独立混杂调整。",
+            "source_locator": "Materials and methods：OFF-therapy condition；CC-VHE paradigm"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "high",
+            "reason": "41次连续预测可能集中在少数患者或少数事件中，不能作为独立观察。采用重叠窗口及试次级交叉验证，且训练集可能包括同一患者其他试次。",
+            "source_locator": "Materials and methods：Data processing；Results：False positive predictions"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用多个频段、滚动指标及通道，且对预测与FOG结束的时间邻近关系进行探索，未报告多重比较校正。",
+            "source_locator": "Materials and methods：Data feature engineering；Results：Model performance"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "high",
+            "reason": "模型基于5名患者、8个测试试次进行评估，采用同一试次前40秒转移学习调优，未在独立患者队列验证offset恢复阶段的预测表现。",
+            "source_locator": "Materials and methods：Data processing；Model training；Results"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "虽然报告NCT05103384注册号，但没有预先指定的offset恢复阶段分析方案，无法判断该分析是否预先设定。",
+            "source_locator": "Abstract：ClinicalTrials.gov identifier NCT05103384；Results：False positive predictions"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "41次预测是时间点级假阳性预测数量，不能理解为41次独立FOG结束事件。研究没有报告结束后预测持续时间的完整分布，也没有分析这些预测是否与真实步态恢复的神经生理过程相关。模型预测延长可能源于时间窗口重叠及分类器时间响应特征，不能直接解释为FOG结束后的持续病理性STN活动。研究环境为VR跑台行走。",
+      "quote": "An additional 41 (25%) of the 166 false positives were continuous extensions of true positive predictions within 2 seconds of the end of a clinician identified FOG.",
+      "source_locator": {
+        "section": "Results：False positive predictions and temporal alignment",
+        "page": null,
+        "figure_table": "Results：Model performance paragraph；Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

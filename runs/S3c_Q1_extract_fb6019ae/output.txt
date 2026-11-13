@@ -1,0 +1,1627 @@
+<escape>{
+  "papers": [
+    {
+      "publication": {
+        "ref": "PMID:34643338",
+        "title": "Effect of deep brain stimulation on brain network and white matter integrity in Parkinson's disease.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告15例PD患者接受STN-DBS前后多模态影像评估，但未提供研究中心、招募时间及与其他论文队列重叠的信息。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:34814237",
+        "title": "The Supplementary Motor Complex in Parkinson's Disease.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述纳入63篇文章，摘要未列出与本次其他论文对应的原始研究PMID/DOI，亦未提供可识别的独立患者队列。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:34858125",
+        "title": "Differential Effects of Pathological Beta Burst Dynamics Between Parkinson's Disease Phenotypes Across Different Movements.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告14例PD患者，6例震颤优势型、8例少动强直型，使用Activa PC+S记录STN-LFP。未报告研究中心、招募时间或与其他论文患者队列重叠情况。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "34858125-E01",
+          "design": "观察性、患者内重复运动任务电生理研究；比较震颤优势型与少动强直型PD患者在运动期间的STN beta burst dynamics。",
+          "population": "14例PD患者；6例tremor-dominant，8例akinetic-rigid。",
+          "n_enrolled": null,
+          "n_analyzed": 14,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 14,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "n_enrolled、FOG患者数、总运动试次数和电极/触点总数均为摘要未提及。摘要没有报告FOG分组或FOG事件记录，不能将akinetic-rigid组等同于FOG患者。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported；原文分组为tremor-dominant和akinetic-rigid，并非FOG亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "OFF medication。",
+          "DBS_state_and_parameters": "OFF STN-DBS；使用Medtronic Activa PC+S sensing neurostimulator记录LFP；测试刺激参数不适用或未报告。",
+          "task": "每项任务持续30秒，包括重复交替手指敲击、腕屈伸、原地踏步和自由行走；覆盖精细运动、肢体运动和轴向运动。",
+          "recording_location": "双侧或单侧STN的具体侧别未在摘要说明；STN局部场电位（LFP），具体触点未报告。",
+          "measure": "STN beta burst power和burst duration；比较low-beta与high-beta频段及不同运动表型。",
+          "frequency_and_analysis_window": "总体beta频段13–30 Hz；low-beta和high-beta的具体边界未在摘要报告。各运动任务30秒。使用自定义算法识别beta power peaks和burst dynamics；基线、归一化、burst阈值及具体分析窗口未报告。",
+          "finding": "运动期间，akinetic-rigid组的high-beta burst power和burst duration显著高于tremor-dominant组；low-beta频段没有显著组间差异。该结果是运动表型之间的电生理差异，并非FOG事件相关发现。",
+          "effect_estimate": "方向：akinetic-rigid > tremor-dominant，仅在high-beta burst power和duration达到显著差异。具体效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "患者表型组间比较，6例对8例；具体统计检验、模型单位以及是否处理同一患者内多个任务/试次的重复测量，摘要未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（观察性电生理研究领域级初评）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "仅报告14例及表型构成，未报告招募方式、排除标准和代表性。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "not_assessable",
+                "reason": "研究比较运动表型，但摘要未报告FOG识别或冻结事件标签。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "报告使用植入式感知设备记录LFP，但未报告信号质量控制、运动伪迹处理和丢失数据。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "比较不同疾病运动表型，但摘要未说明疾病严重程度、病程等潜在混杂因素的调整。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "多个运动任务和movement trials重复采样，但统计单位和患者内相关性处理未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个运动任务、频段和burst指标，摘要未报告多重比较校正。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "not_assessable",
+                "reason": "摘要未报告预测模型或外部验证分析。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法通过摘要判断预设分析指标与实际报告指标是否一致。",
+                "source_locator": "Abstract"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "研究直接记录STN-LFP并覆盖原地踏步和自由行走，但摘要没有记录或分层FOG患者、冻结事件及事件时间。因此不能将high-beta burst差异解释为FOG特异性神经标志物，也不能推断其与pre-FOG或during-FOG的关系。",
+          "quote": "Burst power and duration were significantly larger in the high beta band, but not in the low beta band, in the akinetic-rigid group compared to the tremor-dominant group.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:34858126",
+        "title": "Controlling Clinical States Governed by Different Temporal Dynamics With Closed-Loop Deep Brain Stimulation: A Principled Framework.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "概念性框架文章，摘要描述多目标闭环DBS的理论组织方式，没有报告独立患者队列或原始电生理实验数据。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35017551",
+        "title": "Gaps and roadmap of novel neuromodulation targets for treatment of gait in Parkinson's disease.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述讨论PD步态障碍及多种神经调控靶点，摘要未提供被转述原始研究的PMID/DOI或患者队列对应信息。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35104499",
+        "title": "Machine learning based brain signal decoding for intelligent adaptive deep brain stimulation.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述机器学习与侵入性神经生理信号解码，摘要没有提供特定FOG患者队列或可识别的原始STN-FOG研究PMID/DOI。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35173666",
+        "title": "Non-motor Adverse Effects Avoided by Directional Stimulation in Parkinson's Disease: A Case Report.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "单中心或其他中心信息未在摘要报告；仅有一名44岁女性PD患者，摘要没有说明与其他病例或队列存在重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "35173666-E01",
+          "design": "单病例报告；术中STN-LFP记录结合术后不同刺激模式和方向性触点的临床比较。",
+          "population": "1名44岁女性PD患者，诊断PD 6年，术前存在运动波动、异动症及FOG episodes。",
+          "n_enrolled": 1,
+          "n_analyzed": 1,
+          "n_patients_with_FOG": 1,
+          "n_patients_with_valid_neural_data": 1,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "总电极及触点数未报告；摘要只明确提及触点2、3、4。FOG事件总数及事件同步神经数据未报告。",
+          "endpoint_class": "unclear",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported；原文仅称freezing of gait episodes，未报告akinetic、trembling-in-place等亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "术中LFP记录和术后刺激模式比较时的药物状态未在摘要报告。",
+          "DBS_state_and_parameters": "术中记录LFP。术后比较左STN ring mode与directional mode；3-C+触点刺激时出现不可控制的欣快性大笑，而2-C+和4-C+在相同参数下未出现该表现。具体频率、幅度和脉宽未报告。",
+          "task": "术中电生理记录；摘要未报告步行、转弯、启动或FOG诱发任务。",
+          "recording_location": "左侧STN局部场电位；方向性电极触点2、3、4。",
+          "measure": "不同STN触点的beta-band LFP活动空间分布；不是FOG事件锁定的信号分析。",
+          "frequency_and_analysis_window": "beta频段；具体频率边界、记录窗口、功率归一化和统计时间窗未在摘要报告。",
+          "finding": "触点4和触点2显示最高beta-band活动，而触点3的beta power非常少。虽然该患者具有FOG病史，但摘要没有报告这些触点的beta活动与实际FOG事件、FOG发生概率或严重程度之间的关联。",
+          "effect_estimate": "定性触点比较：contact 4和2的beta activity最高，contact 3较少；没有数值效应量、置信区间或P值。",
+          "statistical_unit_and_method": "单患者、触点级描述性比较；摘要未报告统计检验或患者级推断。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（单病例神经电生理研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "high",
+                "reason": "仅报告单名患者，不能评估样本代表性或选择过程。",
+                "source_locator": "Abstract, Patient and methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "not_assessable",
+                "reason": "虽报告患者有FOG病史，但没有事件级FOG标签或与LFP同步的冻结记录。",
+                "source_locator": "Abstract, Patient and methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "报告术中LFP记录，但没有描述伪迹处理、信号质量或频谱分析验证。",
+                "source_locator": "Abstract, Patient and methods; Results"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "触点位置、纤维连接和刺激模式同时涉及，摘要没有系统描述这些因素的独立作用。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "not_assessable",
+                "reason": "单病例描述性研究，摘要未报告可进行重复测量推断的试次或事件数据。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "比较多个方向性触点，但没有报告预设比较或多重比较处理。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "not_assessable",
+                "reason": "未报告预测模型。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "单病例摘要不能判断全部预设电生理指标是否均已报告。",
+                "source_locator": "Abstract"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "该研究提供了PD合并FOG患者的STN-LFP触点差异，但记录为术中LFP，未提供FOG发生期间或发生前的同步记录。beta活动与触点空间位置的关联不能直接解释为FOG神经机制。病例中的主要刺激结局为非运动性欣快性大笑，而非FOG改善。",
+          "quote": "LFP recordings showed the highest beta-band activity over contacts 4 and 2, and very scarce beta power over contact 3.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:35309576",
+        "title": "Corrigendum: Neural Correlates of Freezing of Gait in Parkinson's Disease: An Electrophysiology Mini-Review.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "possible_match:DOI:10.3389/fneur.2020.571086",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "摘要明确说明该条目更正DOI为10.3389/fneur.2020.571086的文章。属于更正记录，不是新的患者队列或独立电生理研究。更正对象为综述，不应计为独立原始证据。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35418844",
+        "title": "Subthalamic Deep Brain Stimulation Lead Asymmetry Impacts the Parkinsonian Gait Disorder.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "单中心回顾性分析66例PD患者，术后评估时间平均8.45±4.2个月。摘要未提供中心名称、招募时间和设备序列号，无法确认与其他STN-DBS研究的队列重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "35418844-E01",
+          "design": "单中心回顾性术前后临床结局研究；比较STN-DBS术后MED OFF状态下的运动、平衡和FOG评分。",
+          "population": "66例PD患者；24名女性；平均年龄63±7岁。",
+          "n_enrolled": null,
+          "n_analyzed": 66,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要报告66例接受评估，但未报告术前实际存在FOG的患者人数。未采集直接神经电生理数据；电极位置通过影像重建获得。事件数、试次数及触点总数均未报告。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported；使用FoG score和Giladi's gait and falls questionnaire，未报告FOG临床亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "MED OFF。",
+          "DBS_state_and_parameters": "术后STN-DBS临床评估；测试时刺激开关状态、频率、幅度、脉宽和触点未在摘要报告。术后随访时间8.45±4.2个月。",
+          "task": "术前及术后临床量表评估；未报告标准化实际FOG诱发步行任务。",
+          "recording_location": "无神经电生理记录。STN-DBS电极位置使用影像重建软件SureTune进行坐标分析。",
+          "measure": "Freezing of gait score、Giladi's gait and falls questionnaire及Berg balance scale；本条证据关注FOG评分。",
+          "frequency_and_analysis_window": "不适用；没有神经振荡频段分析。临床评估时间为术前和术后，术后平均8.45±4.2个月。",
+          "finding": "MED OFF条件下，STN-DBS术后运动、平衡和FOG评分均改善。摘要未提供FOG评分的具体改善幅度。",
+          "effect_estimate": "方向：FOG评分改善；无具体均值差、效应量、95% CI或P值。",
+          "statistical_unit_and_method": "患者级术前后临床结局比较；研究使用binomial generalized linear mixed models。具体随机效应结构和该项FOG结局的模型系数未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（非随机回顾性研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "模型考虑药物、年龄、亚型及临床DBS变化等因素，但回顾性研究仍可能存在疾病严重程度、病程和治疗选择等残余混杂。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "患者选择",
+                "judgement": "unclear",
+                "reason": "未报告连续入组、排除标准或失访情况。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "干预分类",
+                "judgement": "unclear",
+                "reason": "明确为STN-DBS术后队列，但刺激参数及具体测试刺激状态未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "摘要未报告缺失量表数据及失访处理。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "FOG结局来自临床评分及问卷，而不是事件级视频或运动学确认。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法通过摘要判断全部预设结局和模型分析是否完整报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是临床结局研究而非STN神经活动研究。FOG主要通过评分和问卷表征，没有实际冻结事件的神经同步记录，因此不能用于确定STN振荡与FOG发生时序的关系。",
+          "quote": "Subthalamic nucleus-deep brain stimulation improved all motor, balance and FoG scores in MED OFF condition.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35418844-E02",
+          "design": "单中心回顾性术前后临床结局研究；独立记录MED ON测试条件下的FOG结局。",
+          "population": "66例PD患者；24名女性；平均年龄63±7岁。",
+          "n_enrolled": null,
+          "n_analyzed": 66,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告MED ON条件下实际FOG患者数、事件数和试次数；未采集直接神经电生理数据。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported；未提供FOG亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "MED ON。",
+          "DBS_state_and_parameters": "术后STN-DBS；具体测试刺激状态和频率、幅度、脉宽、触点未在摘要报告。",
+          "task": "术后临床量表评估；未报告事件级冻结诱发任务。",
+          "recording_location": "无直接神经信号记录；影像重建的STN电极位置。",
+          "measure": "FoG score及相关步态、平衡临床结局。",
+          "frequency_and_analysis_window": "不适用；无神经信号频段或分析窗口。",
+          "finding": "MED ON条件下，术后临床结果存在异质性。摘要没有提供MED ON条件下FOG改善与恶化的具体患者人数或效应量。",
+          "effect_estimate": "定性结果：heterogeneous；无数值效应量、置信区间或P值。",
+          "statistical_unit_and_method": "患者级临床结局；使用binomial generalized linear mixed models。具体MED ON条件下的FOG模型参数未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（非随机回顾性研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "药物状态与DBS临床反应可能共同影响FOG，模型考虑部分协变量，但残余混杂无法排除。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "患者选择",
+                "judgement": "unclear",
+                "reason": "未报告入组及排除流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "干预分类",
+                "judgement": "unclear",
+                "reason": "未提供MED ON条件下具体DBS参数和刺激测试安排。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "未报告MED ON临床评分的缺失情况。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "使用FOG评分和问卷，没有报告事件级行为确认。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "没有报告异质性结果的患者分布和预设亚组分析。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "摘要仅指出MED ON状态下临床结局异质，没有给出FOG具体分布。不能据此推断MED ON-FOG或biphasic-FOG表型，也不能建立神经活动机制。",
+          "quote": "STN-DBS improved all motor, balance and FoG scores in MED OFF condition, however there were heterogeneous results in MED ON condition.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35418844-E03",
+          "design": "回顾性影像电极定位与临床FOG反应的观察性关联分析。",
+          "population": "66例PD患者；24名女性；平均年龄63±7岁。",
+          "n_enrolled": null,
+          "n_analyzed": 66,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告FOG responder和non-responder人数；未报告神经电生理数据及事件数。电极触点总数未报告。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未明确该坐标关联分析使用MED ON还是MED OFF结果。",
+          "DBS_state_and_parameters": "术后STN-DBS；使用影像重建坐标评估电极位置，刺激参数未报告。",
+          "task": "术后FOG及步态临床结局评估；无事件同步步行神经记录。",
+          "recording_location": "影像重建的STN电极坐标；本研究分析的是刺激电极空间位置，不是STN神经活动。",
+          "measure": "STN电极坐标的内外侧位置；FOG和balance responder与non-responder之间的空间位置比较。",
+          "frequency_and_analysis_window": "不适用；无神经振荡频率分析。",
+          "finding": "FOG和balance responders的STN电极坐标相较non-responders略偏内侧。",
+          "effect_estimate": "方向：responders的电极位置更medial；具体坐标差、效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "患者级responders与non-responders比较；使用binomial generalized linear mixed models，具体坐标模型系数未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（回顾性影像与临床结局关联研究）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "研究考虑年龄、亚型、药物及电极不对称性，但不能排除其他影响临床反应的因素。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "患者选择",
+                "judgement": "unclear",
+                "reason": "没有提供患者选择和排除流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "暴露测量",
+                "judgement": "some_concerns",
+                "reason": "使用影像重建坐标，但摘要没有提供定位精度、重建误差和盲法验证。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "没有报告缺失影像或临床结局的患者数量。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "FOG反应基于临床评分，未提供事件级冻结确认。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要没有提供预设空间坐标分析和全部模型结果。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该发现支持刺激电极内侧位置与FOG临床反应之间存在关联，但并不测量STN神经活动，也不能确定是特定纤维通路、刺激体积或其他解剖因素造成该关联。",
+          "quote": "FoG and balance responders showed slightly more medially located STN electrode coordinates.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35418844-E04",
+          "design": "回顾性影像电极定位与临床FOG反应的观察性关联分析。",
+          "population": "66例PD患者；24名女性；平均年龄63±7岁。",
+          "n_enrolled": null,
+          "n_analyzed": 66,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告FOG responder具体人数和电极触点总数；未报告直接神经信号。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未明确该坐标关联分析的MED ON或MED OFF状态。",
+          "DBS_state_and_parameters": "术后STN-DBS；电极坐标通过影像重建获得，刺激参数未报告。",
+          "task": "术后FOG临床评分及步态、平衡评估。",
+          "recording_location": "双侧STN电极重建坐标；分析的是左右半球电极位置不对称性。",
+          "measure": "电极medio-lateral asymmetry；与FOG responder/non-responder状态的关联。",
+          "frequency_and_analysis_window": "不适用；无神经振荡频率分析。",
+          "finding": "FOG和balance responders在左右半球STN电极重建坐标之间表现出较小的medio-lateral asymmetry。",
+          "effect_estimate": "方向：responders的medio-lateral asymmetry较小；具体差值、效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "患者级电极位置和临床反应关联；使用binomial generalized linear mixed models，具体模型系数未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（回顾性影像与临床结局关联研究）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "模型纳入部分临床因素，但回顾性设计存在残余混杂可能。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "患者选择",
+                "judgement": "unclear",
+                "reason": "摘要未报告入组和排除流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "暴露测量",
+                "judgement": "some_concerns",
+                "reason": "影像重建方法已说明，但摘要没有报告坐标测量可靠性。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "没有报告影像及临床数据缺失情况。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "FOG responder分类依据及事件级确认方法未在摘要说明。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法判断所有预设坐标不对称性指标是否均已报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "电极不对称性属于结构和刺激位置特征，不是STN神经振荡或神经放电。不能将其直接解释为FOG相关beta不对称性。",
+          "quote": "less medio-lateral asymmetry of the electrode reconstructed coordinates across hemispheres compared to non-responders.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:35431262",
+        "title": "Structural Connectivity of Subthalamic Nucleus Stimulation for Improving Freezing of Gait.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "研究包含47例术前有FOG的PD患者，其中18例接受标准化步行课程诱发FOG评估。摘要未提供研究中心、招募日期、植入设备及与其他论文队列重叠信息。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "35431262-E01",
+          "design": "术后临床结局观察性研究；评估STN-DBS术后6个月FOG变化，并使用FOG-Q作为主要评价工具。",
+          "population": "47例术前存在FOG的PD患者；其中18例在标准化步行课程中接受诱发FOG评估。",
+          "n_enrolled": null,
+          "n_analyzed": 47,
+          "n_patients_with_FOG": 47,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告最初筛选人数及失访人数。n_patients_with_FOG=47依据术前FOG入组条件。18例是患者子集而非试次数。未采集直接STN神经电生理数据；FOG事件数和步行试次数未报告。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported；术前FOG患者，未报告akinetic、trembling-in-place或其他亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告MED ON/OFF测试状态。",
+          "DBS_state_and_parameters": "术后STN-DBS，术后6个月评估；刺激频率、幅度、脉宽、触点和方向性参数未报告。",
+          "task": "主要使用Freezing of Gait Questionnaire（FOG-Q）；18例患者接受标准化步行课程诱发FOG评估。摘要未明确两种结局各自的具体统计结果。",
+          "recording_location": "无直接神经电生理记录；通过STN刺激体积和基底节结构通路模型分析。",
+          "measure": "FOG-Q及冻结频率、持续时间相关临床结局；另有标准化步行课程诱发FOG评估。",
+          "frequency_and_analysis_window": "不适用；没有STN-LFP或其他神经振荡频段分析。临床随访为术后6个月。",
+          "finding": "术后6个月，FOG的严重程度显著改善，并表现为冻结发作频率和持续时间降低。摘要未明确这些变化分别来自FOG-Q还是18例步行诱发评估，不能将其归为已确认的事件级神经电生理结果。",
+          "effect_estimate": "术后6个月FOG显著改善；冻结频率和持续时间降低。具体差值、效应量、置信区间及P值未在摘要报告。",
+          "statistical_unit_and_method": "患者级术前后临床结局；结构连接分析使用公开基底节通路模型和疾病特异性normative connectome。具体临床结局检验方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（观察性术后结局研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "摘要未充分报告药物状态、疾病进展、刺激参数及其他影响术后FOG的协变量。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "报告47例术前FOG患者，但未报告筛选、排除和失访流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "干预分类",
+                "judgement": "unclear",
+                "reason": "研究分析STN刺激体积及连接，但刺激参数和具体刺激条件未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "摘要未报告随访缺失和18例步行评估子集的选择机制。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "主要FOG结局使用FOG-Q；18例步行诱发评估的事件确认和评估者盲法未在摘要报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "报告leave-one-out cross-validation，但没有报告独立外部患者队列验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要未说明全部预设FOG亚型和结局是否完整报告。",
+                "source_locator": "Abstract"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该研究支持STN-DBS与FOG临床改善之间的关系，但主要结局为FOG-Q，且18例步行诱发子集的具体事件级结果没有在摘要中独立呈现。研究分析的是结构连接而非STN神经活动。",
+          "quote": "Freezing of gait significantly improved six months postoperatively, marked by reduced frequency and duration of freezing episodes.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35431262-E02",
+          "design": "术后FOG临床结局与STN刺激体积结构连接之间的观察性关联分析。",
+          "population": "47例术前存在FOG的PD患者；其中18例接受标准化步行课程评估。",
+          "n_enrolled": null,
+          "n_analyzed": 47,
+          "n_patients_with_FOG": 47,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告原始入组人数、FOG事件总数、试次数及触点总数。没有患者STN神经电生理记录；使用公开通路模型和normative connectome。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "STN-DBS术后刺激体积；频率、幅度、脉宽和具体触点参数未报告。",
+          "task": "FOG-Q为主要FOG评价；18例患者另接受标准化步行课程诱发FOG评估。",
+          "recording_location": "STN刺激体积的结构连接；使用公开基底节通路模型及疾病特异性normative connectome。",
+          "measure": "刺激依赖性结构连接；与术后FOG改善程度的关联。重点涉及运动皮层、前额叶皮层和globus pallidus。",
+          "frequency_and_analysis_window": "不适用；没有神经振荡频段、LFP窗口或相位分析。",
+          "finding": "与运动皮层、前额叶皮层及globus pallidus具有结构连接的最优刺激体积，与术后FOG改善相关。",
+          "effect_estimate": "方向：与上述区域结构连接的刺激体积关联较好的FOG改善。未报告连接强度效应量、置信区间和P值；连接特征在leave-one-out cross-validation中表现稳健。",
+          "statistical_unit_and_method": "患者级刺激体积结构连接与术后FOG变化关联；使用基底节通路模型和疾病特异性normative connectome，报告leave-one-out cross-validation。模型具体系数和独立验证情况未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（观察性连接组学研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "刺激位置与疾病严重程度、药物状态和临床编程因素之间的混杂无法通过摘要判断。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "未提供47例患者的筛选及排除流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "暴露测量与分类",
+                "judgement": "some_concerns",
+                "reason": "使用公开通路模型和normative connectome，不能等同于每位患者实际测得的个体结构连接。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "缺失数据",
+                "judgement": "unclear",
+                "reason": "没有报告影像、刺激体积和FOG结局缺失情况。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "主要FOG评价为FOG-Q，事件级步行评估仅在18例子集中实施。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "使用leave-one-out cross-validation，但摘要未报告独立外部验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法判断所有预设通路和ROI是否均已报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该结果属于刺激体积与结构连接的关联证据，不是STN-LFP、单单位放电、beta burst或皮层-STN coherence证据。normative connectome不能证明患者实际神经活动发生了相应变化。",
+          "quote": "Optimal stimulation volumes for improving FOG structurally connected to motor areas, the prefrontal cortex and to the globus pallidus.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35431262-E03",
+          "design": "术后FOG结局与STN刺激体积结构连接之间的观察性关联分析。",
+          "population": "47例术前存在FOG的PD患者。",
+          "n_enrolled": null,
+          "n_analyzed": 47,
+          "n_patients_with_FOG": 47,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告患者事件数、试次数、触点数或直接神经数据；连接分析采用normative connectome。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "术后STN-DBS；刺激体积与lenticular fasciculus结构连接分析，刺激参数未报告。",
+          "task": "FOG-Q主要评价术后FOG变化；未报告该通路分析与某一特定步行任务的对应关系。",
+          "recording_location": "STN刺激体积与lenticular fasciculus的结构连接。",
+          "measure": "lenticular fasciculus结构连接与FOG术后变化的关联。",
+          "frequency_and_analysis_window": "不适用；无神经振荡频段和时间窗口。",
+          "finding": "刺激lenticular fasciculus与FOG恶化相关，与其他有利于FOG改善的结构连接方向不同。",
+          "effect_estimate": "方向：lenticular fasciculus stimulation-associated connectivity与FOG worsening相关；具体效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "患者级刺激体积连接与术后FOG变化关联；使用疾病特异性normative connectome和leave-one-out cross-validation。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（观察性连接组学研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "无法从摘要判断lenticular fasciculus关联是否独立于刺激位置、病情及临床编程因素。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "未提供患者筛选和排除流程。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "暴露测量",
+                "judgement": "some_concerns",
+                "reason": "基于模型化刺激体积和normative connectome，而非个体直接测量的神经活动。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "主要FOG结局使用FOG-Q，实际事件验证方法未在摘要报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型验证",
+                "judgement": "some_concerns",
+                "reason": "报告leave-one-out cross-validation，但没有报告独立外部验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法通过摘要判断全部通路分析结果是否均已报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该关联不能证明lenticular fasciculus本身产生了异常神经活动，也不能推断其与特定FOG冻结阶段的关系。结构连接结果不等于功能连接或神经放电结果。",
+          "quote": "Stimulation of the lenticular fasciculus was associated with worsening of FOG.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35431262-E04",
+          "design": "术后FOG结局与STN刺激体积结构连接之间的观察性关联分析。",
+          "population": "47例术前存在FOG的PD患者。",
+          "n_enrolled": null,
+          "n_analyzed": 47,
+          "n_patients_with_FOG": 47,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告事件数、步行试次数及触点总数；没有直接STN神经电生理记录。",
+          "endpoint_class": "E_questionnaire_rest",
+          "event_phase": "not_applicable",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "STN-DBS术后；分析STN刺激体积与脑干相关区域的结构连接，具体刺激参数未报告。",
+          "task": "术后FOG临床评价；未报告与特定步行任务或冻结事件时间阶段的关联。",
+          "recording_location": "STN刺激体积与pedunculopontine nucleus（PPN）、substantia nigra（SN）相关纤维的结构连接。",
+          "measure": "刺激依赖性结构连接与术后FOG改善之间的关联。",
+          "frequency_and_analysis_window": "不适用；没有神经振荡频段或事件时间窗口。",
+          "finding": "在皮层下区域，穿过pedunculopontine nucleus和substantia nigra的纤维受到刺激与术后FOG改善相关。",
+          "effect_estimate": "方向：PPN和SN相关纤维连接与FOG改善相关；未报告具体效应量、置信区间或P值。",
+          "statistical_unit_and_method": "患者级结构连接与术后FOG变化关联；使用疾病特异性normative connectome及leave-one-out cross-validation。",
+          "risk_of_bias": {
+            "tool_or_framework": "ROBINS-I相关域（观察性连接组学研究，摘要级初评）",
+            "domains": [
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "无法判断PPN/SN纤维连接的效应是否独立于其他同时受到刺激的通路。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "患者筛选和排除流程未在摘要报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "暴露测量",
+                "judgement": "some_concerns",
+                "reason": "使用normative connectome推断结构连接，而非直接测量个体患者神经信号。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "结局测量",
+                "judgement": "some_concerns",
+                "reason": "主要FOG结局依赖FOG-Q，事件级确认信息不足。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型验证",
+                "judgement": "some_concerns",
+                "reason": "报告leave-one-out cross-validation，但未报告外部独立验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "摘要无法确认全部预设皮层下ROI结果是否均被报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是结构通路与FOG改善的间接证据，不能等同于PPN、SN或STN神经活动被直接记录，也不能证明某一通路的振荡变化介导FOG改善。",
+          "quote": "Subcortically, stimulation of fibers crossing the pedunculopontine nucleus and the substantia nigra correlated with postoperative improvement.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:35441231",
+        "title": "Cortical phase-amplitude coupling is key to the occurrence and treatment of freezing of gait.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "16例自由行走PD患者接受STN-DBS手术并同步记录皮层ECoG和步态。摘要未提供研究中心、招募时间、设备型号及与其他研究患者队列的重叠声明。不能仅凭研究主题推断与其他STN-DBS论文属于同一队列。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "35441231-E01",
+          "design": "患者内重复测量观察性神经电生理研究；比较含FOG与不含FOG的步行试次中的M1 phase-amplitude coupling。",
+          "population": "16例接受STN-DBS手术的PD患者，研究期间自由行走。",
+          "n_enrolled": null,
+          "n_analyzed": 16,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 16,
+          "n_FOG_events": null,
+          "n_trials": 451,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要报告451次timed up-and-go trials、7073秒稳定行走和3384秒冻结，但3384秒不是FOG事件数量。未报告有FOG患者的具体人数、FOG事件数和ECoG触点总数。",
+          "endpoint_class": "B_objective_natural",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported；原文使用gait freezing/freezing trials，未报告akinetic、trembling-in-place或其他FOG亚型。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告MED ON/OFF状态。",
+          "DBS_state_and_parameters": "接受STN-DBS手术的患者；测试包括STN-DBS on/off-stimulation条件；刺激频率、幅度、脉宽和触点未在摘要报告。",
+          "task": "自由行走和451次timed up-and-go walking trials；包含with dual-task和without dual-task条件。通过optoelectronic motion-tracking systems同步记录步态冻结。",
+          "recording_location": "初级运动皮层（primary motor cortex, M1）的subdural electrocorticography（ECoG）；不是STN-LFP。",
+          "measure": "M1 beta-gamma phase-amplitude coupling（PAC）。比较含冻结试次和不含冻结试次的PAC。",
+          "frequency_and_analysis_window": "high beta-gamma频段；beta和gamma的具体边界未在摘要报告。研究量化7073秒稳定行走和3384秒冻结；具体PAC计算窗口、相位和振幅频带边界、归一化及基线未报告。",
+          "finding": "M1中的high beta-gamma PAC在含FOG的步行试次中升高，而在不含FOG的试次中没有检测到相同的异常升高。作者报告该差异不能由dual-tasking或缺乏运动本身解释。",
+          "effect_estimate": "方向：freezing trials的PAC高于non-freezing trials；具体PAC数值、效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "451次步行试次嵌套于16名患者；患者级、试次级或片段级统计单位及重复测量模型未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（观察性步态神经电生理研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "报告16名接受手术患者，但未报告筛选、排除和数据质量失效人数。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "使用optoelectronic motion-tracking识别冻结，但摘要未说明视频或临床评审确认标准。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "报告同步ECoG和运动追踪，但未报告运动伪迹、电极信号质量和剔除标准。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "研究控制了dual-tasking和缺乏运动的影响，但药物状态、疾病严重程度等潜在混杂因素未在摘要说明。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "some_concerns",
+                "reason": "451次试次来自16名患者，若忽略患者内相关性可能产生伪重复；摘要未报告统计模型处理方式。",
+                "source_locator": "Abstract, Methods; Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个刺激、双任务和步态状态比较，摘要未报告多重比较校正。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "提出bandwidth model，但摘要未报告独立外部验证或跨队列泛化。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法判断全部预设PAC频段和行为条件是否完整报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "直接FOG相关的神经信号是M1皮层ECoG，而不是STN神经活动。trial-level freezing标签不等同于PAC在冻结发生瞬间升高；摘要没有提供事件锁定的具体窗口，因此不能将该结果直接解释为STN pre-FOG或during-FOG beta变化。",
+          "quote": "high beta-gamma phase-amplitude coupling in the primary motor cortex was detected in freezing trials (i.e. walking trials that contained freezing), but not non-freezing trials",
+          "source_locator": {
+            "section": "Abstract",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35441231-E02",
+          "design": "患者内重复测量观察性神经电生理研究；分析含FOG试次内非冻结步行片段的皮层PAC与FOG严重程度关联。",
+          "population": "16例接受STN-DBS手术的PD患者。",
+          "n_enrolled": null,
+          "n_analyzed": 16,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 16,
+          "n_FOG_events": null,
+          "n_trials": 451,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告患者级FOG人数、事件总数及ECoG触点数；3384秒冻结时长不能转换为事件数。451是步行试次数。",
+          "endpoint_class": "B_objective_natural",
+          "event_phase": "non_event_gait",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "研究包含STN-DBS on/off-stimulation条件；该特定非冻结片段分析所使用的刺激状态及参数未在摘要明确。",
+          "task": "自由行走和timed up-and-go walking；分析含FOG试次中的non-freezing episodes。",
+          "recording_location": "M1 subdural ECoG，不是STN-LFP。",
+          "measure": "M1 beta-gamma phase-amplitude coupling；非冻结步行片段中的PAC与FOG严重程度的关联。",
+          "frequency_and_analysis_window": "high beta-gamma频段；具体频率边界、片段长度、PAC计算窗口和归一化方法未在摘要报告。",
+          "finding": "即使在含FOG试次中的非冻结步行片段，PAC仍表现为异常升高，并且与FOG严重程度相关或能够预测FOG严重程度。",
+          "effect_estimate": "方向：非冻结片段中的PAC越异常，FOG严重程度越高；具体相关系数、预测误差、效应量、置信区间和P值未在摘要报告。",
+          "statistical_unit_and_method": "患者内非冻结片段与FOG严重程度的关联；具体模型、患者级聚类处理及预测统计方法未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（观察性步态神经电生理及预测研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "16例患者的招募和可用片段筛选过程未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "通过运动追踪识别冻结，但非冻结片段是否经过视频或临床独立确认未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "没有报告ECoG信号质量、伪迹处理及PAC稳定性验证。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "摘要未说明疾病严重程度、药物状态和其他可能影响PAC及FOG严重程度的因素是否调整。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "some_concerns",
+                "reason": "多片段嵌套于16名患者，统计分析是否处理患者内相关性未报告。",
+                "source_locator": "Abstract, Methods; Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "PAC与多个步态和刺激条件相关，校正方法未报告。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "摘要提到预测FOG严重程度，但没有给出独立测试集或外部验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法判断所有预测指标和分析窗口是否完整报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "非冻结片段位于含FOG的试次内，但摘要没有说明这些片段是否紧接FOG发生。因此不能将其标为pre_FOG_event_associated。该发现支持试次内非冻结步态期间的皮层异常耦合与FOG严重程度有关，但不证明其为STN神经活动的直接前兆。",
+          "quote": "non-freezing episodes within freezing trials also demonstrated abnormally high couplings, which predicted freezing severity",
+          "source_locator": {
+            "section": "Abstract",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35441231-E03",
+          "design": "患者内STN-DBS on/off-stimulation条件比较；同步测量皮层PAC和步态冻结结局。",
+          "population": "16例接受STN-DBS手术的PD患者。",
+          "n_enrolled": null,
+          "n_analyzed": 16,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 16,
+          "n_FOG_events": null,
+          "n_trials": 451,
+          "n_electrodes_contacts": null,
+          "missing_reason": "摘要未报告FOG事件数和有FOG患者人数；3384秒为冻结累计时长而非事件数。未报告ECoG触点总数。",
+          "endpoint_class": "B_objective_natural",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "STN-DBS on-stimulation与off-stimulation条件；频率、幅度、脉宽及具体触点未报告。",
+          "task": "自由行走及timed up-and-go；测试包含with/without dual-task条件。",
+          "recording_location": "M1 subdural ECoG；刺激靶点为STN。",
+          "measure": "M1 beta-gamma phase-amplitude coupling；同时评估FOG严重程度。",
+          "frequency_and_analysis_window": "high beta-gamma PAC；具体频率边界、分析窗口、基线和归一化方法未在摘要报告。",
+          "finding": "STN-DBS刺激降低M1异常PAC，并同时改善FOG。该结果显示STN刺激与皮层耦合及FOG变化存在同步关联，但记录信号来自M1而非STN。",
+          "effect_estimate": "方向：STN-DBS使M1异常PAC降低，并伴随FOG改善；具体PAC变化幅度、FOG改善效应量、置信区间及P值未在摘要报告。",
+          "statistical_unit_and_method": "患者内刺激条件比较；451次步行试次嵌套于16名患者，具体重复测量统计模型未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（观察性神经调控与电生理研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "患者招募、排除及可用数据筛选过程未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "冻结通过运动追踪捕获，但独立视频或临床评审信息未在摘要报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "ECoG与步态同步记录，但信号伪迹控制和数据质量指标未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "刺激与药物、活动状态等因素可能共同影响FOG，摘要没有充分描述混杂调整。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "some_concerns",
+                "reason": "451次试次来自16例患者，患者内相关性处理方法未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "多个刺激、双任务和步态状态条件的多重比较校正未报告。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "提出皮层耦合机制模型，但没有报告外部独立验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法判断所有刺激条件和PAC分析指标是否完整报告。",
+                "source_locator": "Abstract"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "该结果支持STN-DBS能够调节皮层PAC，但不能证明STN自身PAC或STN beta活动是FOG改善的直接介质。摘要没有提供STN同步神经记录或中介效应的具体量化结果。",
+          "quote": "deep brain stimulation of subthalamic nucleus reduced these abnormal couplings and simultaneously improved freezing",
+          "source_locator": {
+            "section": "Abstract",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        },
+        {
+          "eid_local": "35441231-E04",
+          "design": "患者内刺激条件比较；在相近皮层PAC水平下比较STN-DBS刺激与非刺激试次的FOG严重程度。",
+          "population": "16例接受STN-DBS手术的PD患者。",
+          "n_enrolled": null,
+          "n_analyzed": 16,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": 16,
+          "n_FOG_events": null,
+          "n_trials": 451,
+          "n_electrodes_contacts": null,
+          "missing_reason": "未报告匹配后试次数、事件数及触点总数；3384秒冻结时间不能替代FOG事件数。",
+          "endpoint_class": "B_objective_natural",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告。",
+          "DBS_state_and_parameters": "STN-DBS on/off-stimulation条件；具体刺激参数未报告。",
+          "task": "timed up-and-go walking trials；自由行走，包含有无双任务条件。",
+          "recording_location": "M1 subdural ECoG；STN为刺激靶点。",
+          "measure": "相近M1 beta-gamma PAC水平下比较刺激与非刺激试次的FOG severity。",
+          "frequency_and_analysis_window": "high beta-gamma PAC；具体频率边界、匹配窗口、基线和归一化方式未报告。",
+          "finding": "在PAC水平相近的试次中，STN-DBS刺激试次仍表现出低于无刺激试次的FOG严重程度。",
+          "effect_estimate": "方向：相近PAC水平下，STN-DBS条件的FOG severity较低；具体差值、效应量、置信区间和P值未报告。",
+          "statistical_unit_and_method": "试次或片段层面的PAC匹配比较；具体匹配算法、匹配后样本数、患者内相关性处理和统计模型未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（观察性神经电生理与条件匹配研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "16例患者的筛选和数据纳入过程未报告。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "some_concerns",
+                "reason": "使用运动追踪记录FOG，但摘要未报告独立临床或视频评审标准。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "未报告ECoG信号质量和运动伪迹控制。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "some_concerns",
+                "reason": "PAC匹配不能排除药物、运动状态、刺激条件及其他未测量混杂。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "some_concerns",
+                "reason": "多次试次来自相同患者，摘要没有报告患者内聚类及匹配后重复测量处理。",
+                "source_locator": "Abstract, Methods; Results"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "摘要没有报告多种匹配和刺激条件分析的多重比较校正。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "some_concerns",
+                "reason": "匹配分析和bandwidth model未在摘要中提供独立外部验证。",
+                "source_locator": "Abstract, Results"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "未报告匹配过程全部参数及预设分析结果。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "some_concerns"
+          },
+          "limitations": "这是区分STN-DBS作用机制的重要结果：刺激条件下FOG改善并不完全由降低皮层PAC解释，提示可能还存在提高皮层对异常耦合抵抗力的机制。但摘要没有提供匹配细节和因果中介分析，不能确定具体机制。",
+          "quote": "in trials that were at similar coupling levels, stimulation trials still demonstrated lower freezing severity than no-stimulation trials",
+          "source_locator": {
+            "section": "Abstract",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:35456362",
+        "title": "Combined Stimulation of the Substantia Nigra and the Subthalamic Nucleus for the Treatment of Refractory Gait Disturbances in Parkinson's Disease: A Preliminary Study.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "前瞻性初步研究，10例晚期PD患者接受STN及SN联合刺激或单独STN刺激比较。摘要未提供研究中心、招募时间和其他队列重叠信息。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35652005",
+        "title": "Troubleshooting Gait Disturbances in Parkinson's Disease With Deep Brain Stimulation.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述性文章，摘要讨论DBS后步态障碍及临床处理，没有提供独立患者队列或可识别的STN神经活动与FOG原始数据。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35786442",
+        "title": "Therapeutic deep brain stimulation disrupts movement-related subthalamic nucleus activity in parkinsonian mice.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "动物实验研究，使用帕金森样小鼠及STN-DBS；摘要未报告动物品系、数量和与其他研究的样本重叠情况。没有人类患者队列。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "35786442-E01",
+          "design": "动物机制实验；结合GCaMP fiber photometry、电生理记录和靶向光学刺激，研究帕金森样小鼠STN-DBS对运动相关神经活动的影响。",
+          "population": "帕金森样小鼠；摘要未报告品系、数量、性别、年龄和帕金森模型诱导方式。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "动物研究，不适用患者人数和患者FOG分母。动物数量、有效神经记录数量、试次数和电极/记录位置数量均为摘要未提及。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported；摘要未报告FOG或FOG-like行为。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "摘要未报告动物药物处理状态。",
+          "DBS_state_and_parameters": "实施STN电刺激DBS；另使用靶向光学DBS协议进行机制验证。电刺激频率、幅度、脉宽和具体刺激参数未在摘要报告。",
+          "task": "运动相关神经活动；具体运动行为任务、运动阶段和FOG-like任务未在摘要报告。",
+          "recording_location": "基底节多个核团；重点为STN活动。使用GCaMP fiber photometry及电生理记录，具体细胞类型和记录坐标未报告。",
+          "measure": "运动相关STN活动；GCaMP钙信号及电生理活动。不是FOG事件级神经指标。",
+          "frequency_and_analysis_window": "未报告beta、gamma或其他振荡频段边界；GCaMP信号分析窗口和电生理分析窗口未在摘要报告。",
+          "finding": "STN-DBS的治疗作用与运动相关STN活动的破坏或扰乱有关，而不是通过简单抑制STN或逆向激活运动皮层实现。摘要没有报告该机制是否涉及FOG。",
+          "effect_estimate": "定性机制结果；摘要未报告活动变化的数值效应量、置信区间或P值。",
+          "statistical_unit_and_method": "动物层面及神经活动记录层面的实验比较；具体动物数量、统计单位、模型及重复测量处理未在摘要报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "adapted_not_validated（动物神经生理机制研究）",
+            "domains": [
+              {
+                "domain": "样本选择",
+                "judgement": "unclear",
+                "reason": "摘要未报告动物数量、品系、纳入标准和排除情况。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "行为标签有效性",
+                "judgement": "not_assessable",
+                "reason": "摘要未报告FOG或冻结样行为结局，不能评估FOG行为标签。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "信号质量与伪迹",
+                "judgement": "unclear",
+                "reason": "研究采用artifact-free GCaMP fiber photometry，但摘要没有报告具体信号质量控制和数据剔除标准。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "混杂",
+                "judgement": "unclear",
+                "reason": "摘要未报告动物运动状态、疾病严重程度等因素的系统控制。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "重复测量与伪重复",
+                "judgement": "unclear",
+                "reason": "没有报告动物数量与记录次数之间的关系以及重复测量统计处理。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "多重比较",
+                "judgement": "unclear",
+                "reason": "涉及多个基底节核团及不同刺激协议，摘要未报告多重比较处理。",
+                "source_locator": "Abstract, Methods"
+              },
+              {
+                "domain": "模型过拟合与外部验证",
+                "judgement": "not_assessable",
+                "reason": "摘要未报告预测模型。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "unclear",
+                "reason": "无法通过摘要判断全部神经活动指标和刺激实验是否完整报告。",
+                "source_locator": "Abstract, Results"
+              }
+            ],
+            "overall": "unclear"
+          },
+          "limitations": "该研究为动物机制证据，支持STN-DBS可能通过扰乱运动相关STN活动发挥作用，但没有FOG行为结局，不能直接外推为人类PD冻结步态的机制。也没有报告beta burst或特定FOG阶段的信号。",
+          "quote": "STN DBS exerts its therapeutic effect through the disruption of movement-related STN activity, rather than inhibition or antidromic activation.",
+          "source_locator": {
+            "section": "Abstract, Results",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    },
+    {
+      "publication": {
+        "ref": "PMID:35848860",
+        "title": "Towards adaptive deep brain stimulation for freezing of gait.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "摘要缺失；文章类型为Comment/Editorial。没有可核查的患者队列或原始实验信息，不能仅凭题目判断其对应哪项原始研究。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35917720",
+        "title": "Imaging the neural underpinnings of freezing of gait in Parkinson's disease.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述整合静息态fMRI、任务态MRI和fNIRS研究，摘要没有列出可与本次原始研究逐一对应的PMID/DOI，也没有提供单一患者队列信息。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35976323",
+        "title": "Deep brain stimulation in Parkinson's disease: state of the art and future perspectives.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述PD-DBS临床应用和未来发展，摘要未提供特定STN-FOG电生理原始研究的PMID/DOI或独立患者队列。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:35979336",
+        "title": "Case report: Combined therapy of bilateral subthalamic nucleus deep brain stimulation and spinal cord stimulation significantly improves motor function in a patient with multiple system atrophy with predominant parkinsonism.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "单病例报告，患者诊断为multiple system atrophy with predominant parkinsonism（MSA-P），而非特发性PD。摘要没有说明与其他队列重叠情况。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:36069345",
+        "title": "The effect of age and disease duration on the efficacy of subthalamic nuclei deep brain stimulation in Parkinson's disease patients.",
+        "publication_status": "published",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "unknown",
+        "cohort_relation_basis": "摘要报告51例双侧STN-DBS患者并进行术前、早期和慢性期临床评估；没有研究中心、招募日期或设备信息，无法判断与其他STN-DBS队列重叠。",
+        "source_type": "primary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": []
+    },
+    {
+      "publication": {
+        "ref": "PMID:36110462",
+        "title": "Deep Brain Stimulation and Microelectrode Recording for the Treatment of Parkinson's Disease.",
+        "publication_status": "review",
+        "version_of_candidate": null,
+        "study_id_candidate": "unknown",
+        "cohort_id_candidate": "not_applicable",
+        "cohort_relation_basis": "综述性文章，摘要转述MER和STN刺激相关神经放电结果，但没有识别相应原始研究的PMID/DOI。因此不能将其作为独立患者队列或独立重复验证。",
+        "source_type": "secondary",
+        "basis": "abstract",
+        "fulltext_checked": false
+      },
+      "evidence": [
+        {
+          "eid_local": "36110462-E01",
+          "design": "综述性二手证据；摘要转述STN高频刺激与振荡性神经元放电变化的关系，未提供原始实验设计。",
+          "population": "原始研究的患者数量、诊断特征、样本来源和临床表型未在综述摘要报告。",
+          "n_enrolled": null,
+          "n_analyzed": null,
+          "n_patients_with_FOG": null,
+          "n_patients_with_valid_neural_data": null,
+          "n_FOG_events": null,
+          "n_trials": null,
+          "n_electrodes_contacts": null,
+          "missing_reason": "二手综述摘要未识别原始研究及其患者样本；所有原始分母均为摘要未提及。该研究没有报告FOG结局。",
+          "endpoint_class": "unclear",
+          "event_phase": "unclear",
+          "freezing_phenotype": "not_reported；摘要没有提及FOG患者或冻结事件。",
+          "medication_phenotype": "unknown",
+          "experimental_medication_state": "原始研究的药物状态未在摘要报告。",
+          "DBS_state_and_parameters": "综述摘要报告STN高频刺激；原文参数表达为“140<”，单位和阈值方向不完整，不能据此确定准确频率。其他刺激参数未报告。",
+          "task": "原始研究是否在静息、术中或特定运动任务期间记录，摘要未报告。",
+          "recording_location": "STN；综述摘要提及microelectrode recording（MER），但没有给出具体记录轨迹、解剖亚区和原始研究定位信息。",
+          "measure": "STN振荡性神经元放电；属于MER相关放电指标。摘要未明确其是否为平均放电率、振荡功率或其他指标。",
+          "frequency_and_analysis_window": "刺激频率原文表述为“140<”，单位和具体边界不明确；神经放电振荡频段、分析窗口和基线未报告。",
+          "finding": "综述摘要称，STN高频刺激使振荡性神经元放电降低67%。该发现没有与FOG患者表型、实际冻结事件或冻结时间阶段建立关联。",
+          "effect_estimate": "原文报告振荡性神经元放电降低67%；原始样本数、比较条件、效应量定义、置信区间和P值均未在摘要报告。",
+          "statistical_unit_and_method": "二手综述转述；原始研究的患者级或神经元级统计单位、统计检验和模型未报告。",
+          "risk_of_bias": {
+            "tool_or_framework": "AMSTAR 2/ROBIS相关域；仅凭摘要无法判断该综述的完整系统检索和偏倚评价程序。",
+            "domains": [
+              {
+                "domain": "原始研究检索与识别",
+                "judgement": "not_assessable",
+                "reason": "摘要没有提供检索策略、纳入研究清单或该67%结果对应的原始文献。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "原始研究偏倚风险评估",
+                "judgement": "not_assessable",
+                "reason": "摘要没有说明是否使用标准化工具评估被纳入研究的偏倚风险。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "结果综合",
+                "judgement": "not_assessable",
+                "reason": "摘要没有提供67%结果的原始研究设计、统计方法或综合过程。",
+                "source_locator": "Abstract"
+              },
+              {
+                "domain": "选择性报告",
+                "judgement": "not_assessable",
+                "reason": "没有全文和原始研究引用，无法判断是否存在选择性报告。",
+                "source_locator": "Abstract"
+              }
+            ],
+            "overall": "not_assessed"
+          },
+          "limitations": "该结果为综述摘要中的二手转述，不应视为新的独立患者队列或独立重复验证。摘要没有说明67%降低的原始研究出处，也没有将该神经放电变化与FOG联系起来。原文“140<”的频率表达不完整，不能擅自改写为确定的刺激频率。",
+          "quote": "Using MER, stimulation of the STN at high frequencies (140<) decreased oscillatory neuronal firing by 67%.",
+          "source_locator": {
+            "section": "Abstract",
+            "page": null,
+            "figure_table": null,
+            "supplement": null
+          },
+          "basis": "abstract"
+        }
+      ]
+    }
+  ]
+}</escape>

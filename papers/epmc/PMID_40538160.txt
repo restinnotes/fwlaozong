@@ -1,0 +1,146 @@
+# Unveiling the neural network of freezing of gait in Parkinson's disease: A coordinate-based network study
+
+## Abstract
+Freezing of gait (FoG) is a debilitating symptom in Parkinson's disease (PD), yet its pathophysiological mechanisms remain poorly understood. Several studies have investigated the FoG neuroimaging correlates, with heterogeneous results. This study investigated in a large PD cohort whether the disparate neuroimaging findings may converge to a common brain network. T1-weighted MRI scans of 500 PD patients (90 with FoG [PD-FoG] and 410 without FoG [PD-nFoG]) were acquired from the Parkinson's Progression Markers Initiative. A voxel-based morphometry (VBM) analysis was conducted to identify clusters of decreased grey matter (GM) in PD-FoG patients. Subsequently, VBM coordinates of significant clusters were used as seed regions to generate connectivity network maps using a large functional normative connectome, and these maps were overlapped to identify regions connected with most VBM clusters. PD-FoG patients showed GM atrophy in cerebellar lobes, hippocampus, putamen, insula, inferior temporal gyrus and lateral orbitofrontal gyrus compared with PD-nFoG patients. Network analysis revealed that these regions colocalized within a specific brain network focused on midbrain, substantia nigra, subthalamic nucleus, globus pallidus, inferior putamen and dorsal medial cerebellum. These findings were confirmed by using coordinates from previous VBM studies for the network analysis, validating our results. This study revealed a brain network underlying FoG in PD, reducing the heterogeneity of previous neuroimaging evidence on FoG. These results may represent a significant step forward in the understanding of FoG and may be relevant for optimized targeted neuro-modulatory treatments to reduce FoG in PD patients.
+
+## Introduction
+
+Freezing of gait (FoG) is a common and debilitating symptom in Parkinson's disease (PD), that contributes to falls and subsequent fractures or other complications, significantly impacting patients’ quality of life.
+1
+ It is characterized by the sudden inability to initiate movement or continue walking, often described as having “a foot glued to the floor”.
+2
+ These episodes typically occur during turns (especially tight turns in confined spaces), when initiating gait, while walking through narrow passages such as doorways, or when performing other task while walking.3,4 This phenomenon is particularly prevalent in advanced stages of PD, and affects approximately 50 to 80% of patients.
+5
+ FoG not only impairs motor function but also significantly reduces quality of life, contributing to greater social isolation, anxiety, and frustration, regardless of disease severity.
+6
+ Despite its relatively high prevalence in PD patients, the pathophysiological mechanisms underlying FoG remained poorly understood so far, and effective therapeutic strategies are lacking. Current evidence suggests that FoG does not originate from a single brain region, but rather results from impaired communication within brain circuits, particularly involving the mesencephalic locomotor region (MLR).
+2
+ Other clinical and experimental studies suggested the prominent role of cortical structures, such as the medial fronto-parietal cortex and particularly the supplementary motor area (SMA), with alterations in basal ganglia-SMA connectivity observed in PD patients with FoG.
+7
+
+However, the specific neurobiological substrates contributing to FoG in PD are still subject to debate, and effective therapeutic strategies are lacking. Several structural magnetic resonance imaging (MRI) studies
+8
+ have revealed grey matter (GM) atrophy in PD patients with FoG, though the specific brain regions implicated often differed across studies, leading to inconsistent and heterogeneous findings. Such discrepancies may result from variations in protocols and analytical methods within voxel-based morphometry (VBM) analyses, or to the small sample size of patients enrolled in most previous studies. Moreover, it is possible that these heterogeneous findings may localize to a common brain network. To test this hypothesis, a technique termed “coordinate-based network mapping” has been recently developed aiming to establish whether different brain regions may share a common functional neural network. This technique leverages large normative connectomes to build connectivity maps for specific seed regions (i.e., previously identified VBM clusters of decreased GM), and thus may allow to identify a common brain network sharing connectivity with multiple seed regions. This approach has been successfully employed to identify a specific network in several neurological diseases, such as Alzheimer's disease,
+9
+ frontotemporal dementia
+10
+ or migraine,
+11
+ and also to identify the neural network associated with specific symptoms in neurodegenerative diseases, including cognitive decline and hallucinations in PD,
+12
+ and alien limb in cortico-basal syndrome.
+13
+ No study, however, investigated the brain network underlying FoG in PD.
+
+In the current study, we carried out a two-step analysis in a large cohort of around 500 PD patients from the Parkinson's Progression Markers Initiative (PPMI), first identifying VBM clusters of decreased GM in PD patients with FoG, in comparison with those without this symptom, and then performing a modern coordinate-based network mapping analysis on VBM-derived clusters, aiming to investigate whether the identified clusters may converge within a common brain network.
+
+## Methods
+
+### Study population
+
+Data used in the preparation of this article were obtained on 15 March 2024 from the PPMI database (www.ppmi-info.org/access-data-specimens/download-data), RRID: SCR_006431. For up-to-date information on the study, visit www.ppmi-info.org.
+
+We included 609 PD patients with available volumetric T1-weighted MRI at baseline visit. Age, sex, disease duration, Movement Disorders Society–Unified Parkinson's Disease Rating Scale (MDS–UPDRS), and other relevant clinical information at baseline visit were extracted.
+
+The presence and severity of FoG was scored by summing the item 2.13 “freezing” and item 3.11 “Freezing of gait” scores of the MDS–UPDRS.
+14
+ Scores (item 2.13 + 3.11) of 0 were indicative of no freezing (PD-nFoG, n = 410), while scores greater than or equal to 2 indicated the presence of freezing (PD-FoG, n = 90); scores of 1 were considered ambiguous and these patients were excluded from the analyses (n = 109). Ethics approval was obtained at each site from the local ethics committee, and all participants gave written informed consent.
+
+### Preprocessing data
+
+Volumetric T1 images of PD patients were aligned to a DARTEL template space and segmented into GM, white matter (WM), and cerebrospinal fluid (CSF) using Computational Anatomy Toolbox (CAT12).
+15
+ Normalized bias-corrected volumes were checked to ensure that the segmentation and normalization procedures yielded reasonable results. Modulated and normalized GM segments were smoothed using an 8 mm Full Width at Half Maximum (FWHM) Gaussian kernel and checked for sample homogeneity. Patients with higher quartic mean Z-score (above two standard deviations) were discarded as they were identified as outliers (4 PD-FoG and 16 PD-nFoG patients).
+
+### VBM analysis
+
+A whole brain VBM analysis was performed using Statistical Parametric Mapping (SPM12) toolbox
+16
+ to identify voxel clusters of decreased GM associated with FoG. We conducted a statistical group-level analysis comparing PD patients with and without FoG using a full factorial model (for a 1 × 2 ANOVA) with age, sex, education, disease duration, MDS-UPDRS-III, Montreal Cognitive Assessment (MoCA), and total intracranial volume (TIV) as covariates. For each group, we defined two sample t-test contrast with [−1, 1, 0] for PD-FoG < PD-nFoG and [1, −1, 0] for PD-FoG > PD-nFoG. Results were assessed at p < 0.05 Family Wise Error (FWE)-corrected for multiple comparisons, as no prior hypotheses were made concerning specific regions of interest. According to the Expected Number of Voxels per Cluster value, only clusters with an extent threshold >59.457 were reported. Coordinates obtained from the VBM analysis comparing PD patient groups with and without FoG were selected as input for the coordinate-based network mapping analysis. First, all VBM-derived coordinates were included; subsequently, we also performed a sensitivity analysis including only the most significant coordinates, automatically selected by SPM12 as described in the Supplemental Material (note to Supplemental Table 1), to test the stability of the coordinate-based network mapping analysis by using a more restrictive set of coordinates, ensuring that the results were not driven by less significant VBM coordinates.
+
+### Coordinate-based network mapping
+
+Following VBM analysis, a coordinate-based network mapping approach
+9
+ was applied to identify a common functional brain network associated with these regions. To this aim, we employed a publicly available functional normative connectome (showing functional relationships across brain regions based on resting state fMRI) to identify functional networks involving the brain structures identified by the structural VBM analysis. Our protocol adopted the same methodology outlined in recent studies.9,12 In detail, spherical seeds of 4 mm were created centered at each VBM coordinate; we then leveraged the functional normative connectome of 1000 healthy subjects derived from data acquired by the Brain Genomics Superstruct Project (GSP) (https://dataverse.harvard.edu/dataverse/GSP),
+17
+ to generate connectivity network maps from each coordinate-based sphere using the Lead Mapper Connectome toolbox (Supplemental Figure 1).
+18
+ The GSP dataset consists of resting-state fMRI data from young adults (ages 18–35) primarily recruited from the Boston area, who were screened for psychiatric and neurological disorders to ensure a normative sample and underwent high-quality neuroimaging at 3 T.
+19
+ This connectome, which has been widely used in previous studies applying the same technique,9,11,12 provides a robust reference for coordinate-based network mapping analyses.
+
+Network maps of each coordinate were thresholded at conservative thresholds (T ≥ 5 or T ≥ 7, corresponding to FWE-corrected p < 0.05 and p < 10−6, respectively) and subsequently overlapped, to identify regions connected to cluster regions derived from the VBM analysis. Connectivity maps shared across more than 75% of VBM coordinates were then identified.
+
+### Validation of the results
+
+Finally, to validate our findings, we selected VBM coordinates from previous studies comparing PD patients with and without FoG; these previous studies were selected from those analyzed in a recent systematic review on this topic,
+8
+ including all studies reporting coordinates of VBM clusters significantly different between PD-FoG and PD-nFoG (n = 4)7,20–22;in addition, coordinates extracted from a more recent study not mentioned in the systematic review were also included.
+23
+ None of these previous studies included patients from the PPMI dataset.
+
+As a first step, we performed an activation likelihood estimation (ALE) meta-analysis24,25 using GingerALE 2.3.6 software (http://brainmap.org/ale). All selected coordinates were converted from Talairach space to MNI space, and a 3D Gaussian probability distribution was generated centered on each individual focus. These distributions were adjusted by the sample size from each study to account for spatial uncertainty surrounding each focus. The distributions were then aggregated across all studies to produce activation likelihood estimate (ALE) maps. Significance was assessed through cluster-level inference, where the observed convergence in ALE values was tested against a null distribution generated from 1000 simulated datasets. Each simulated dataset matched the original in terms of number of foci, studies, and participants but with randomly positioned foci. The cluster-forming threshold was set at FDR-corrected p < 0.001, and the cluster-level inference threshold was at FDR-corrected p < 0.05.
+9
+ Subsequently, we performed a coordinate-based network mapping approach as described above and compared the findings obtained using VBM coordinates identified in our study with those obtained using VBM coordinates from previous reports.
+
+## Results
+
+### Demographic and clinical data
+
+Our final cohort included 480 PD patients from the PPMI dataset, stratified into 86 PD patients with FoG and 394 without FoG. No significant differences in age, education, disease duration or MoCA score were found between groups. On the other hand, as expected, PD-FoG patients showed significantly higher scores in MDS-UPDRS II and III sections, indicating greater motor impairment and disability compared to patients without freezing (p < 0.001). Demographic and clinical data for all participants are provided in Table 1.
+
+[table-wrap table1-1877718X251348669] Demographic and clinical data of patients with Parkinson's disease stratified according to the presence or absence of freezing of gait.
+
+### VBM analysis results between PD patients with and without FoG
+
+VBM analysis revealed 21 coordinates of GM volume reduction in PD-FoG compared with PD-nFoG groups at a threshold of p < 0.05, FWE-corrected, including the bilateral cerebellar lobes, left and right hippocampus, right putamen, left insula, left inferior temporal gyrus, and left lateral orbitofrontal gyrus. A complete list of the VBM coordinates can be found in Supplemental Table 1. No significant clusters of GM volume reduction were found in the opposite comparison (PD-nFoG < PD-FoG groups).
+
+### Coordinate-based network mapping
+
+We first conducted a coordinate-based network mapping using all the 21 coordinates obtained from the VBM analysis, applying a threshold of T ≥ 5 and setting the overlap of binarized maps to 75% of clusters (16/21 coordinates [76.2%]) (Supplemental Figure 2). Subsequently, as per sensitivity analysis, the coordinate-based network mapping was repeated using only the 9 most statistically significant coordinates and a more conservative threshold of T ≥ 7 with an overlay of 75% of clusters (7/9 coordinates [77.8%]), and we obtained the same results (Figure 1). Thresholded connectivity network maps from each of these 9 VBM coordinates are shown in Supplemental Figure 1. In both analyses, the overlapping procedure identified a network comprising the midbrain (including substantia nigra), subthalamic nucleus (STN), bilateral globus pallidus, right inferior putamen, temporal poles, and bilateral dorsal medial cerebellum (Figure 2 and Supplemental Figure 3).
+
+[fig fig1-1877718X251348669] The figure shows the functional coordinate-based network obtained by overlaying at least 75% of thresholded connectivity maps derived using the large normative connectome from the 9 most statistically significant VBM coordinates of GM volume reduction in PD-FoG compared with PD-nFoG from the PPMI cohort.
+
+[fig fig2-1877718X251348669] The figure shows images from the functional coordinate-based network presented in detail in Figure 1. The colored regions represent the overlay of the masks of the substantia nigra (a) and subthalamic nucleus (b) from the Nigral organization atlas 26 and Subthalamic nucleus atlas 27 respectively, are overlaid on the coordinate-based network to highlight the presence of the substantia nigra and subthalamic nucleus within our network.
+
+### Validation of our findings based on available data from other cohorts
+
+We selected five previous VBM studies7,20–22 which compared PD-FoG and PD-nFoG patients; this process yielded a total of 18 VBM coordinates we used as input for our analyses. The corresponding brain regions included the midbrain, bilateral thalamus, bilateral putamen, left posterior cingulate, left cuneus and pre-cuneus, left lingual gyrus, left inferior frontal and parietal gyrus, and bilateral cerebellum. A list of the selected studies, with patient cohort information and derived coordinates is shown in Supplemental Table 2. First, we performed a VBM meta-analysis using a standard ALE approach, but this analysis did not reveal any significant clusters. Subsequently, we performed a coordinate-based network mapping approach as described above by using these 18 coordinates derived from previous studies, and we identified a network comprising the midbrain, STN, globus pallidus, inferior putamen, thalamus, Rolandic gyrus and cerebellum (Supplemental Figure 4). This network was very similar to that identified by using VBM coordinates from our patient cohort, as shown in Figure 3, despite using a different set of coordinates. This finding confirmed the involvement of the midbrain, STN, basal ganglia, and dorsal medial cerebellum in FoG, thus validating our results.
+
+[fig fig3-1877718X251348669] The figure shows a visual representation of the similar findings across the functional network based on the 9 coordinates obtained from the PD-FoG < PD-nFoG from the PPMI cohort and the network based on the coordinates from previous studies. Both networks involved the bilateral dorsal medial cerebellum, midbrain, subthalamic nucleus, globus pallidus and right inferior putamen.
+
+## Discussion
+
+This study demonstrated that heterogeneous neuroimaging findings related to FoG in PD, which seem poorly reproducible across studies,
+28
+ localized within a common brain network identified using a recent technique known as coordinate-based network mapping.
+9
+ Notably, this network was identified using data from a large PD cohort from the PPMI dataset and validated using data from previous studies, and encompasses key regions involved in motor control and coordination, including the midbrain, globus pallidus, inferior putamen, STN, and dorsal medial cerebellum.
+
+In the current study, to explore the structural neuroimaging alterations associated with FoG, we performed a VBM analysis in a large international cohort of nearly 500 PD patients from the PPMI, comparing PD patients with and without FoG, well matched for age, sex and disease duration. We identified several significant FWE-corrected clusters of reduced GM volume in PD-FoG patients, including the bilateral cerebellar lobes, bilateral hippocampus, right putamen, left insula, left inferior temporal gyrus and left lateral orbitofrontal gyrus. However, when comparing our results with those from previous smaller VBM studies,7,20–23 we observed heterogeneous findings, making it challenging to draw definitive conclusions about the specific neural substrates underlying FoG in PD. This is indeed a common issue with VBM studies, which may be due to different methodology (more or less strict correction, variable study design, different covariates), or heterogeneous and small patient groups. To address this issue in neuroimaging, a technique termed “coordinate-based network mapping” has been recently developed aiming to establish whether different brain regions may functionally localize within a common functional neural network. This approach is based on publicly available functional normative connectomes (showing functional relationships across brain regions based on resting state fMRI) and it has successfully been employed to identify the brain networks functionally connected with brain regions identified by VBM analysis. In the current study, we used the VBM coordinates as seed regions to perform coordinate-based network mapping as a more effective approach to elucidate the neural underpinnings of FoG in PD. Unlike traditional VBM or other region-focused analyses, coordinate-based network mapping provides several advantages. First, it allows for a network-level perspective, where distributed patterns of connectivity can be assessed, capturing how multiple brain regions interact as a cohesive unit. This is particularly relevant for complex symptoms like FoG, which likely arise from dysfunctions across an entire network rather than from isolated areas. Furthermore, it enables network analyses bypassing the need for extensive, often unavailable, resting-state fMRI data from large patient cohorts, while still providing network-based insights. It leverages instead normative connectomes, allowing us to map clinical findings onto standardized connectivity templates. Finally, this approach may lead to more robust results, reducing heterogeneity across studies, which is a common issue in the neuroimaging field. In line with this hypothesis, our coordinate-based network approach identified a network of regions functionally connected with most of the coordinates resulting from the VBM comparison between PD patients with and without FoG, and this network was confirmed also when coordinates from previous studies were employed. The involvement of midbrain, globus pallidus, inferior putamen, subthalamic nucleus, and dorsal medial cerebellum was indeed evident in both network analyses, despite a different set of VBM coordinates was employed, demonstrating the existence of a network underlying FoG in PD robustly observed across datasets.
+
+These findings are of relevance since FoG is a debilitating symptom and an essential target for therapeutic intervention.
+29
+ To date, however, standard medical treatments for PD such as dopamine replacement therapy has shown limited benefit.
+4
+ For this reason, invasive and non-invasive neuromodulation techniques are increasingly being utilized, making it of pivotal importance to get a precise understanding of the involved network and the brain structures to target for effectively addressing this symptom.
+30
+ The structures identified by our network analysis are biologically plausible and well in line with previous findings on FoG in PD patients. For example, the cerebellar regions identified in the current study perfectly overlap with a previous important lesion-based network mapping study,
+31
+ which also identified the dorsal medial region of the cerebellum as a critical player in FoG. The authors found that coordinates of neoplastic or cerebrovascular lesions in various brain areas producing FoG were all functionally connected to a focal region in the dorsal medial cerebellum, a part of the cerebellar locomotor region (CLR), which is implicated in locomotion and is closely linked to the leg area of the primary motor cortex (M1). Our findings do corroborate the involvement of this cerebellar subregion in FoG, and suggest that this may be symptom-specific rather than associated with a particular disease, given that this brain area seems related to FoG in PD patients in our study and to FoG due to brain lesions in the previous report. This overlap between lesion network mapping and coordinate-based network mapping highlights a potential therapeutic target within the cerebellum for alleviating FoG symptoms, needing further research. While direct cerebellar stimulation through invasive approaches presents practical and tolerability challenges, recent studies
+32
+ suggested that non-invasive cerebellar stimulation (NICS) may offer in the future a feasible alternative to improve motor symptoms in PD. Specifically, NICS has been explored as a promising approach to modulate motor networks in PD patients, with preliminary findings indicating its potential to improve gait and motor symptoms.
+33
+ Future studies should explore the potential of NICS for treating FoG potentially in combination with motor-cognitive training programs are warranted. In addition to the cerebellum, our coordinate-based network identified without any a-priori hypothesis the globus pallidus and the STN, which have been used as stimulation targets for deep brain stimulation (DBS) in recent studies attempting to treat FoG in PD patients.28,34–36 Some authors reported that DBS targeting the STN can alleviate FoG,37,38 and the improvement was related to stimulation of STN portions structurally connected to motor areas and globus pallidus.
+39
+ Moreover, in another study, DBS was more effective when targeted both the STN and substantia nigra pars reticulata (SNr), which was also identified by our network analysis and is functionally associated with globus pallidus internus, reinforcing the hypothesis of a network dysfunction involving these regions as pathophysiological basis of FoG in PD patients.
+35
+ Our study has several strengths that enhance the validity and relevance of our findings. First, this is the largest neuroimaging study on FoG and we included a large, multicentric PD cohort, thus enhancing the generalizability of our findings. Second, PD groups with and without FoG were well matched for demographic variables and for disease duration and cognitive scores, which were also included as covariates, thus minimizing the influence of confounding factors in the VBM analysis. Third, we validated our coordinate-based network results by using data from two independent sources, namely the PPMI cohort included in the current study and available data from the existing “non-PPMI” literature, overcoming VBM heterogeneity and allowing us to draw more reliable conclusions about the neural substrates associated with FoG across diverse patient populations. While this study provides valuable insights into the neuroimaging findings related to a FoG network in PD, some limitations must be acknowledged. First, the study primarily involved patients with early-stage PD, and the observed FoG symptoms were relatively mild. Future studies are needed to better explore the neuroimaging correlates of FoG severity in more advanced stages of the disease. Second, our study did not include a healthy control group. We primarily focused on a specific symptom (FoG), and we thus compared PD patients with and without FoG, rather than exploring the broader anatomical bases of PD. Future research may compare PD versus HC to investigate the presence of a PD-specific network in comparison with healthy controls and expand current knowledge on this topic. Third, our approach utilized a normative connectome to link heterogeneous neuroimaging findings, similar to prior works.40,41 Although this methodology is well established, it may be hypothesized that using a connectome derived from PD patients could yield more informative results in linking neuroimaging findings specifically within this population. However, connectomes from patients are usually created on a small number of subjects, potentially bringing uncertainty into the results,
+42
+ and available data suggest that employing such connectomes has minimal impact on network mapping outcomes.
+43
+
+In conclusion, this study represents a significant step forward in unraveling the brain network related to FoG in PD. By leveraging coordinate-based network mapping, this work unified previously heterogeneous neuroimaging findings into a cohesive brain network, identifying key regions such as the midbrain, subthalamic nucleus, inferior putamen, globus pallidus, and dorsal medial cerebellar lobules, that collectively contribute to FoG. This network-oriented approach highlights potential therapeutic targets for interventions like DBS, suggesting a path forward for refining treatments to alleviate this disabling symptom, ultimately improving patient outcomes and quality of life.
+
+## Supplemental Material

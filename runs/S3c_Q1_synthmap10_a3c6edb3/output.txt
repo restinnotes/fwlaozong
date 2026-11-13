@@ -1,0 +1,450 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P10_C1",
+      "text": "人体术中电生理观察提示，STN beta振荡可能呈现与冻结阶段相关的双向变化：在仰卧踏步的非冻结运动阶段，beta振荡下降；在研究报告的freezing episodes期间，beta振荡升高。这是本部分最直接的STN局部神经活动与冻结事件相关证据，提示beta活动可能具有运动阶段依赖性，而非在整个步态过程中持续升高。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究纳入12名男性PD患者，但冻结结果仅为定性报告，缺少冻结事件数量、患者级分布、beta频段具体边界、效应量和统计检验。任务是仰卧踏步而非自然直立行走，冻结事件定义及表型不明确。因此只能支持替代任务中STN beta与冻结阶段的关联，不能确立自然FOG的普遍神经标志物。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36730026_5",
+          "relation": "supports",
+          "note": "直接报告仰卧踏步冻结发作期间STN beta振荡升高，是本研究最直接的冻结阶段观察。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_4",
+          "relation": "supports",
+          "note": "报告非冻结踏步期间STN beta振荡下降，支持冻结与非冻结阶段可能具有不同的beta活动方向。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_1",
+          "relation": "qualifies",
+          "note": "运动相关神经元放电调制是一般踏步相关现象，不能将全部运动相关STN活动解释为冻结特异性活动。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C2",
+      "text": "在仰卧VR认知双任务中，STN MUA的3–8 Hz theta调制活动在步态受影响试次中降低。受影响试次包括VR freezing和显著VR gait slowing，因此该结果支持认知负荷下STN theta活动与异常步态反应相关，但尚不能证明theta下降是FOG特异性神经信号。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究仅纳入8名患者、33个试次，其中15个受影响试次由8个冻结试次和7个步态减慢试次合并构成。分析以认知线索而非实际冻结起始时刻对齐，测量的是MUA theta调制包络而非LFP theta功率。尽管采用非参数置换检验及多重比较校正，但患者内重复测量和患者聚类处理不充分明确，且未提供效应量及置信区间。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "supports",
+          "note": "直接报告受影响试次相较未受影响试次出现持续且显著的STN theta调制活动降低。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_2",
+          "relation": "qualifies",
+          "note": "同一研究显示受影响试次还存在短暂MUA放电率增加，提示不同STN活动指标可能呈现不同时间动态。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C3",
+      "text": "认知双任务中的步态受影响试次可能伴随STN MUA瞬时放电率增加，但该增加与theta调制下降并不矛盾，因为两者测量的是不同信号特征和时间尺度。现有观察更适合解释为认知线索处理至运动响应之间存在复杂的STN活动动态，而不是简单的整体神经活动升高或降低。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "MUA放电率增加仅为描述性时间序列观察，没有独立统计检验、效应量或置信区间。分析时间以认知线索为起点，而非冻结起始时刻。受影响组混合冻结和步态减慢，不能确定瞬时增加是否区别于未受影响试次，也不能确认其是否直接参与FOG发生。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37226972_2",
+          "relation": "supports",
+          "note": "报告从认知线索出现到第一个线索后足踏板动作之间，受影响试次出现STN MUA firing rate短暂增加。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "qualifies",
+          "note": "同一研究中theta调制包络表现为降低，说明不能将瞬时放电率增加等同于所有频段或全部神经活动同步增强。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C4",
+      "text": "在仰卧VR认知双任务研究中，STN MUA的alpha、beta和gamma频段调制活动均未显示受影响试次与未受影响试次之间的显著差异。这构成当前研究中与其他研究beta升高结果不同的阴性发现，也提示冻结相关STN振荡异常可能依赖任务范式、信号类型和分析时间对齐方式。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "三个频段的阴性结果来自同一项8人研究，不是三项独立重复验证。研究没有提供各频段完整效应量、置信区间及精确P值，不能将未达到统计学显著性解释为两组等效或不存在生理变化。受影响试次混合冻结与显著步态减慢，统计单位和患者级聚类处理也存在不确定性。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37226972_3",
+          "relation": "supports",
+          "note": "报告STN MUA alpha频段9–12 Hz调制未发现显著组间差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_4",
+          "relation": "supports",
+          "note": "报告STN MUA beta频段13–30 Hz调制未发现显著组间差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_5",
+          "relation": "supports",
+          "note": "报告STN MUA gamma频段40–150 Hz调制未发现显著组间差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "qualifies",
+          "note": "同一数据集中theta调制存在显著组间差异，说明阴性结果具有频段特异性，而不是所有STN活动均无变化。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C5",
+      "text": "现有综述提出，正常行走时STN与皮层之间存在神经活动耦合，而FOG期间相关活动呈去同步化。这提示FOG可能涉及STN-皮层网络协调关系的改变，而不只是STN局部振荡功率变化。局部STN beta增强与跨区域STN-皮层去同步化属于不同层次的神经生理指标，可以同时存在。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "依据为叙述性综述，未提供对应原始研究的可追溯引文、患者数量、频段、耦合计算方法、效应量及统计检验。无法判断去同步化发生于冻结前、冻结中还是恢复阶段，也不能确定其因果方向。不能将该结果直接解释为STN局部beta功率下降。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37304345_1",
+          "relation": "supports",
+          "note": "综述摘要明确概括正常行走时STN-皮层活动耦合、FOG期间去同步化。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_5",
+          "relation": "qualifies",
+          "note": "冻结阶段STN局部beta振荡升高属于局部振荡观察，不能直接与跨区域同步性指标进行方向上的等同比较。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C6",
+      "text": "STN神经活动受到一般运动执行及注意性任务成分的调制。仰卧踏步研究报告24%的STN神经元出现运动相关放电率增加，8%的神经元对注意性start/stop提示产生活动调制，并观察到踏步期间放电模式规律化及beta振荡下降。这表明STN活动具有明显的神经元和任务成分异质性，不能将一般运动相关调制直接视为FOG相关活动。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "以上发现均来自同一项12名男性患者的术中研究。24%和8%是神经元比例，不是患者比例；神经元总数、患者聚类校正和详细统计方法未报告。任务是仰卧踏步，且未报告冻结特异性分析，不能推断这些神经元活动直接参与自然FOG。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36730026_1",
+          "relation": "supports",
+          "note": "24%的STN神经元出现运动相关放电率增加。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_2",
+          "relation": "supports",
+          "note": "8%的STN神经元对注意性start/stop提示表现出活动调制。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_3",
+          "relation": "supports",
+          "note": "观察到踏步表现期间STN神经元放电模式规律化。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_4",
+          "relation": "supports",
+          "note": "报告非冻结踏步期间STN beta振荡下降，进一步说明STN活动依赖运动阶段。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C7",
+      "text": "听觉提示可以在短时间尺度上改变PD患者踏步时的STN振荡状态：提示期间及提示后，beta burst fractional occupancy和state lifetimes下降，而alpha transient fractional occupancy和state lifetimes增加。这说明不同振荡成分可能以相反方向响应外部感觉提示，提示相关活动变化不应简单归类为统一的STN振荡增强或抑制。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究仅纳入8名患者，采用原地踏步任务，没有报告实际FOG事件。刺激状态和药物状态不明确，alpha频段边界及具体分析时间窗未报告。beta burst动态与MUA beta调制功率也不是相同指标。该研究不能证明听觉提示通过抑制STN beta而减少FOG。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.10.31.565053_1",
+          "relation": "supports",
+          "note": "报告听觉提示期间及提示后STN beta burst fractional occupancy和state lifetimes减少。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.10.31.565053_2",
+          "relation": "supports",
+          "note": "报告听觉提示期间及提示后STN alpha transient fractional occupancy和state lifetimes增加。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C8",
+      "text": "不同频率STN-DBS可改变与下肢运动有关的运动皮层振荡，但这些结果不能直接作为STN神经活动的证据。在13名双侧STN-DBS患者中，4 Hz VLF-DBS和120–175 Hz HF-DBS均增加准备阶段运动皮层theta和beta活动；运动期间theta增加仅在PDFOG+亚组观察到，而运动相关beta没有显著变化。这提示FOG表型可能调节刺激后的皮层运动准备和执行反应，但尚无事件级FOG证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "记录位置是运动皮层EEG，不是STN-LFP。FOG+和FOG-为患者分组而非实际冻结事件分组，亚组人数和具体效应量未报告。准备阶段与运动阶段的theta、beta结果不能混为同一神经现象。刺激参数及测试药物状态也不完整。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37092236_1",
+          "relation": "supports",
+          "note": "报告VLF-DBS和HF-DBS均增加准备阶段运动皮层theta活动。"
+        },
+        {
+          "eid": "S3c_E_PMID_37092236_2",
+          "relation": "supports",
+          "note": "报告两种刺激条件均增加准备阶段运动皮层beta活动。"
+        },
+        {
+          "eid": "S3c_E_PMID_37092236_3",
+          "relation": "supports",
+          "note": "报告运动期间运动皮层theta增加仅出现在PDFOG+亚组。"
+        },
+        {
+          "eid": "S3c_E_PMID_37092236_4",
+          "relation": "qualifies",
+          "note": "运动相关运动皮层beta在不同刺激条件下未显示显著差异，提示刺激诱导的振荡改变具有频段和阶段特异性。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C9",
+      "text": "STN-DBS对下肢运动表现的影响不一定表现为运动能力改善。替代性pedaling任务中，4 Hz VLF-DBS和HF-DBS均降低线性运动速度，且HF-DBS相关速度下降在PDFOG+和PDFOG-亚组均出现。这提示刺激条件可能通过改变运动速度影响步态替代任务中的神经信号和行为表现，构成解释FOG相关活动时需要考虑的运动学混杂因素。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究测量的是pedaling速度，不是自然行走速度或FOG发生率、持续时间。缺少具体速度变化量、置信区间和P值，不能据此认定DBS加重FOG，也不能将速度下降解释为冻结。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37092236_5",
+          "relation": "supports",
+          "note": "报告VLF-DBS和HF-DBS均降低pedaling线性速度，HF-DBS的速度下降出现在两个FOG分组。"
+        },
+        {
+          "eid": "S3c_E_PMID_37092236_3",
+          "relation": "qualifies",
+          "note": "运动皮层theta的FOG分组差异说明刺激诱导的神经反应与运动表现变化需要分别分析。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C10",
+      "text": "STN beta活动不能被视为单一、同质的生理指标。单病例双侧STN-LFP研究显示，high-beta峰在DBS开启时受到抑制，并随血浆L-dopa浓度增加而增强；low-beta峰则呈现不同且不一致的刺激反应。这提示beta子频段可能具有不同的治疗状态依赖性，解释FOG相关beta结果时需要区分low-beta、high-beta、整体beta功率和beta burst动态。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究仅有一名患者，没有FOG分组或冻结事件分析，频段边界和分析时间窗未完整报告。刺激和药物状态可能同时影响beta峰，因此不能将单病例的变化推广为FOG患者群体规律，也不能确定high-beta与low-beta在FOG中的具体作用。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37273691_1",
+          "relation": "supports",
+          "note": "报告DBS开启时high-beta峰受到抑制，而low-beta仅表现出部分且不一致的刺激反应。"
+        },
+        {
+          "eid": "S3c_E_PMID_37273691_2",
+          "relation": "supports",
+          "note": "报告high-beta峰随血浆L-dopa浓度增加而增强，提示药物状态影响beta峰幅度。"
+        },
+        {
+          "eid": "S3c_E_PMID_37273691_3",
+          "relation": "qualifies",
+          "note": "作者报告运动任务也可能影响beta峰行为，但具体运动指标和变化方向未量化。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C11",
+      "text": "STN非周期谱指数aperiodic exponent可能反映与神经元兴奋/抑制平衡有关的生理状态，并受到治疗条件影响。多巴胺耗竭大鼠中，较高aperiodic exponent与较低STN神经元放电水平相伴，符合偏向抑制的E/I平衡解释；清醒PD患者中，较高aperiodic exponent则与多巴胺能药物治疗及STN-DBS相伴。这为解释STN频谱变化提供了不同于周期性beta振荡的机制维度。",
+      "level": "mechanism",
+      "status": "weak",
+      "uncertainty": "动物结果没有FOG行为，人类结果没有FOG分组或事件级分析。患者数量、频率拟合范围、分析时间窗和效应量均未报告。aperiodic exponent不能与周期性beta功率或beta burst指标直接互换。动物E/I机制向人类FOG的外推仍属推断。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36810199_1",
+          "relation": "supports",
+          "note": "多巴胺耗竭大鼠中较高aperiodic exponent与较低STN神经元放电相伴，支持其与E/I平衡有关的解释。"
+        },
+        {
+          "eid": "S3c_E_PMID_36810199_2",
+          "relation": "supports",
+          "note": "清醒PD患者中较高aperiodic exponent与多巴胺治疗及STN-DBS相伴，提示治疗状态是该指标的重要影响因素。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C12",
+      "text": "beta频段LFP特征与PD运动症状严重程度存在一定关联，但现有综述报告的约17%个体症状严重程度变异解释量针对运动迟缓和肌强直，而非FOG。因此，beta可能是一般运动症状的生理标志物，但不能仅凭该结果认定其能够解释冻结步态的发生或严重程度。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "该结果来自系统综述摘要，未报告纳入原始研究数量、患者总数、具体统计定义及置信区间，也没有明确所有结果均来自STN记录。属于二次证据，不能作为独立患者队列或FOG特异性证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36209243_1",
+          "relation": "supports",
+          "note": "综述报告beta频谱特征解释约17%的运动迟缓和肌强直症状严重程度个体变异。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C13",
+      "text": "多巴胺耗竭可能通过促进不同基底节环路之间的beta同步化，形成病理性网络协调状态。计算模型显示，STN-GPe环路和纹状体相关环路均可在beta范围共振，并在多巴胺逐渐耗竭时同步至共同beta频率。这提供了STN beta异常可能具有网络环路来源的机制解释，但尚未建立该同步化与FOG之间的直接联系。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "这是计算模型结果，不包含患者或动物FOG行为，也没有实际神经电生理验证。摘要未报告同步强度、参数敏感性及模型外部验证。该机制不能直接解释冻结发生的时间、临床表型或因果关系。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37104542_1",
+          "relation": "supports",
+          "note": "模型显示多巴胺耗竭促进STN-GPe与纹状体相关基底节环路的beta同步化。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C14",
+      "text": "FoG相关皮层-皮质下网络模型预测，DBS对网络活动传播的影响具有投射特异性，不能简单概括为联合STN+SNr刺激全面优于单独STN刺激。STN+SNr DBS在整体coactivation matrix接近健康网络方面表现出优势，且在LC→PRF、PRF→LC、PRF→PPN及LC→Ctx四条投射的活动传播正常化方面优于单独STN DBS；但两种刺激配置均表现出总体活动传播正常化趋势，并且部分未明确命名的投射在单独STN DBS条件下反而更接近健康状态。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "所有结果均来自同一项12节点SER计算模型研究的不同分析，不是独立重复证据。模型通过删除目标节点输出连接模拟DBS，没有真实患者、神经记录或临床FOG终点。1-norm距离和coactivation matrix接近健康状态不能解释为beta功率正常化，也不能证明联合刺激具有临床优势。具体投射效应量及统计不确定性未报告。",
+      "evidence": [
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_9",
+          "relation": "supports",
+          "note": "STN+SNr DBS模型的coactivation matrix相较PD配置更接近健康配置，单独STN DBS没有显示同样的整体结果。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_10",
+          "relation": "supports",
+          "note": "STN DBS与STN+SNr DBS两种配置均表现出总体网络投射活动传播正常化趋势。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_11",
+          "relation": "supports",
+          "note": "联合刺激在LC-PRF、PRF-LC、PRF-PPN及LC-Ctx四条投射上表现出单独STN DBS未达到的正常化优势。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_12",
+          "relation": "qualifies",
+          "note": "部分未明确命名的投射在单独STN DBS模型下反而更接近健康状态，反对将联合刺激解释为所有网络投射上的全面优势。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C15",
+      "text": "单患者自身对照研究提示，STN-DBS刺激策略可以改变替代步行任务中的冻结表现。该患者在OFF DBS、open-loop DBS、intermittent open-loop DBS及kinematic adaptive DBS条件下，冻结时间百分比分别为76.1%、7.4%、14.9%和0%，自动检测的冻结事件数量分别为1、3、4和0。这支持刺激策略与冻结行为之间可能存在干预关系，但不构成STN神经活动与FOG之间的直接机制证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "仅有一名患者，四种条件不是四个独立患者样本。任务为SIP替代步行，冻结事件依赖自动算法且缺乏独立视频或临床验证。KaDBS未同步报告STN-LFP、神经元放电或皮层-STN耦合，因此不能确定行为改善是否由某种特定STN神经活动变化介导。刺激能量差异也可能影响结果。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37429355_1",
+          "relation": "supports",
+          "note": "报告四种DBS条件下冻结时间百分比分别为76.1%、7.4%、14.9%和0%。"
+        },
+        {
+          "eid": "S3c_E_PMID_37429355_2",
+          "relation": "supports",
+          "note": "报告四种条件下自动检测冻结事件分别为1、3、4和0次。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C16",
+      "text": "本部分beta相关结果存在值得重视但尚不能判定为真正生理矛盾的差异：仰卧踏步研究报告冻结期间STN beta振荡升高，而仰卧VR认知双任务研究未观察到受影响与未受影响试次之间显著的STN MUA beta调制差异。两者的任务、信号定义和事件对齐方式均不同，因此不能简单以结果方向相反认定其中一项研究否定另一项。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "第一项研究关注仰卧踏步中的冻结阶段振荡，第二项研究关注认知线索对齐的MUA beta调制包络，且将冻结与显著步态减慢合并。两项研究样本分别为12名和8名男性/未明确性别的患者，具体性别资料不完整；第二项研究还存在患者内重复测量统计不充分的问题。两项任务的冻结定义、药物状态和分析窗口不同，不能排除这些因素造成差异。第二项研究可能与其作者团队此前的VR冻结研究存在队列重叠，但不能确认。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36730026_5",
+          "relation": "supports",
+          "note": "报告冻结阶段STN beta振荡升高。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_4",
+          "relation": "contradicts",
+          "note": "报告STN MUA beta调制在受影响试次与未受影响试次之间没有显著差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_36730026_4",
+          "relation": "qualifies",
+          "note": "非冻结踏步期间beta振荡下降，说明36730026研究本身也支持活动方向具有事件阶段依赖性。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "qualifies",
+          "note": "VR研究中显著变化集中于theta调制，而不是beta调制，提示频段选择及任务认知成分可能影响观察结果。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_2",
+          "relation": "qualifies",
+          "note": "VR研究还观察到短暂MUA放电率增加，说明不同信号特征的时间动态不能相互替代。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C17",
+      "text": "STN theta与冻结的关系可能受到事件阶段和认知任务影响。当前VR研究观察到认知线索后步态受影响试次的theta调制降低，同时作者指出这一结果与其既往冻结前theta活动增加的报告存在差异。就本部分证据而言，theta活动不能被简单定义为FOG发生前必然升高或冻结期间必然降低。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "本部分没有提供作者所引用的既往theta升高研究的独立证据条目，因此无法直接比较两项研究的原始数据、患者队列和效应量。当前可核查的下降结果以认知线索对齐，且合并冻结与步态减慢；此前报告则被描述为冻结前theta升高。事件对齐方式、认知负荷、分析窗口及MUA信号处理均可能造成差异。不能把作者对既往研究的引用当成新的独立重复证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "supports",
+          "note": "报告当前VR受影响试次中STN theta调制活动降低，并在讨论中指出与既往冻结前theta升高报告存在差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_2",
+          "relation": "qualifies",
+          "note": "认知线索后存在短暂MUA放电率增加，提示theta下降不能代表所有STN活动指标均下降。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C18",
+      "text": "STN局部振荡幅度与STN-皮层跨区域同步性必须作为不同层次的指标解释。冻结期间局部STN beta振荡升高与综述所述STN-皮层去同步化并不必然矛盾，因为局部振荡功率增加并不意味着两个脑区之间的相位或活动耦合增强。FOG可能同时涉及局部异常振荡与网络协调关系改变，但目前尚缺乏同一患者、同一冻结事件中同步测量两类指标的直接证据。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "局部beta升高来自仰卧踏步替代任务中的人体观察，跨区域去同步化来自方法信息不足的叙述性综述。两者没有在同一研究或同一患者中联合验证，不能据此证明局部功率与跨区域耦合存在特定因果关系。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36730026_5",
+          "relation": "supports",
+          "note": "提供冻结阶段STN局部beta振荡升高的观察。"
+        },
+        {
+          "eid": "S3c_E_PMID_37304345_1",
+          "relation": "supports",
+          "note": "提供FOG期间STN-皮层活动去同步化的二级证据。"
+        }
+      ]
+    },
+    {
+      "cid": "P10_C19",
+      "text": "本部分证据尚不能证明STN神经活动变化是FOG的直接原因。人体电生理研究主要提供活动与冻结阶段或异常步态试次之间的观察性关联；单患者DBS研究虽显示刺激策略与冻结行为变化相伴，但没有测量相应STN神经活动；计算模型提出网络机制，却没有临床患者验证。因此目前应将STN活动视为潜在的FOG相关生理标志物或网络机制组成部分，而不是已经确立的致病因素。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "观察性关联不能确定时间先后和因果方向；刺激改变行为也不能在缺乏同步神经记录时证明特定神经活动介导了行为改变。计算模型的干预操作化和外部验证存在较高不确定性。当前缺少具有足够样本量、自然行走事件标注、冻结前中后连续STN记录及患者内随机化神经干预的直接证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_36730026_5",
+          "relation": "qualifies",
+          "note": "冻结期间beta升高是观察性关联，没有通过独立神经干预证明因果。"
+        },
+        {
+          "eid": "S3c_E_PMID_37226972_1",
+          "relation": "qualifies",
+          "note": "认知负荷相关theta变化是观察性试次比较，不能区分认知处理异常与冻结本身的贡献。"
+        },
+        {
+          "eid": "S3c_E_PMID_37429355_1",
+          "relation": "qualifies",
+          "note": "DBS条件改变冻结行为，但没有同步STN神经活动记录，无法识别神经中介机制。"
+        },
+        {
+          "eid": "S3c_E_PMID_37429355_2",
+          "relation": "qualifies",
+          "note": "单患者自动检测冻结事件的条件差异不能建立群体层面的神经活动因果关系。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_9",
+          "relation": "qualifies",
+          "note": "网络共激活矩阵正常化是模型预测，不是临床患者神经活动或FOG因果证据。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_10",
+          "relation": "qualifies",
+          "note": "活动传播正常化同样是计算模型层面的结果。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_11",
+          "relation": "qualifies",
+          "note": "脑干投射优势没有患者级神经信号和临床FOG事件验证。"
+        },
+        {
+          "eid": "S3c_E_DOI_10.1101_2023.02.27.529710_12",
+          "relation": "qualifies",
+          "note": "特定投射的模型差异不能证明单独或联合刺激对临床冻结的因果效应。"
+        }
+      ]
+    }
+  ]
+}</escape>

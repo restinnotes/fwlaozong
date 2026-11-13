@@ -2,7 +2,7 @@
 
 仓库：https://github.com/restinnotes/fwlaozong 。当前主线 **S3d3**，进度看 `STATUS.md`。
 
-**没有入库的东西**（`.gitignore`）：`papers/` 下载的论文全文（版权）、`runs/` 每次调用的原始输入输出（输入里含全文；只保留 `calls.jsonl`、`luna_calls.jsonl` 两个汇总）、`kb/kb.sqlite3` 知识库二进制、`spec/` 同学的 AROS 方案原文、`logs/`。换机器跑要先重建知识库（`run.py system`）。
+所有运行记录、论文全文、知识库（`kb/kb.sqlite3`）、方案原文（`spec/`）、日志等均已完整入库（单文件均控制在 GitHub 限制内，目前最大文件 <50MB）。换机器拉取即可完整查看与复现。
 
 用户给研究目的，系统用 gpt3/gpt4（本机 Pro Bridge CLI，GPT-6 Thinking max）完成检索规划、筛选、证据提取、综合、写报告和评审；本地脚本只做模型做不了或做不全的机械活：Europe PMC/PubMed 检索、开放全文下载、知识库存储、引用核验。本地下载不到的全文，一批一次交给 `codex exec -m gpt-6-luna`（max）去合法开放来源下载，再作为附件上传给 gpt3。
 
@@ -62,7 +62,7 @@ python tools/run.py stats
 | `out/<版本>/` | 每一版成果和测量 |
 | `papers/` | 下载的全文（不可信数据，只上传不执行） |
 | `runs/` | 每次模型调用的输入、输出、失败记录 |
-| `spec/` | 同学的 AROS 方案原文（只在本地，不入库），只作候选设计参考 |
+| `spec/` | 同学的 AROS 方案原文（docx 和转好的 md），只作候选设计参考 |
 
 ## 依赖
 

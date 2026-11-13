@@ -1,0 +1,15 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文判断指控是否成立。
+
+论文：PMID:42239677 An initial machine learning model applied to local field potential data from the subthalamic nucleus to detect freezing of gait in Parkinson's disease. (2026)
+报告的说法：报告X正文称，深度学习模型成功检测了24/30次冻结步态（FOG）事件。
+指控者认为原文的说法：原文摘要报告的是24/29次（80%），而不是24/30次。报告X正文的分母与原文摘要不一致。评委指出，X虽然在后续审计中发现了这一数字冲突，但主文没有统一修正。
+
+判定：
+- report_correct：全文支持报告的说法，指控不成立；
+- judge_correct：全文支持指控者的说法，报告确实读错；
+- both_partly：两者各对一部分；
+- cannot_tell：全文里找不到足够信息。
+
+必须引用全文中的原句（英文原文）作为依据。
+
+只输出一个 JSON：{"verdict":"","quotes":[""],"why":""}

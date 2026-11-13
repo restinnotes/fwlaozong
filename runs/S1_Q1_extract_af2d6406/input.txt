@@ -1,0 +1,403 @@
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+pid: PMID:40709562
+题目: Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease.
+年份: 2025
+全文：
+# Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease
+
+## Abstract
+The objective of this study was to investigate the relationships among subthalamic nucleus (STN) activity, gait initiation (GI), and freezing of gait (FOG) in patients with Parkinson's disease (PD). We recorded GI and STN local field potentials (LFPs) via externalized cables in 38 patients with PD (35 reporting FOG in daily life), both OFF‐ and ON‐dopamine (DOPA). GI was also recorded in 24 age‐matched controls. GI scores related to pace, rhythm, and balance were derived from kinetics, and FOG was identified using kinematics. We compared GI performance related to FOG and DOPA, and GI‐LFP relationships between posterior‐sensorimotor versus central‐associative STN regions. DOPAOFF, 12 patients with PD had FOG observed (FOG‐OBS, 263 episodes), occurring at a mean of 8 steps after GI, and 26 had no FOG observed (NOBS; FOG‐NOBS). GI pace scores were worse in FOG‐OBS than in FOG‐NOBS patients with PD, even when not followed by FOG, with weaker association with alpha/low‐beta activity in the posterior STN. Although rhythm/balance scores were similar between groups, their association with low‐beta activity was stronger in FOG‐OBS patients, with rhythm correlating more in the central STN and balance in the posterior STN. GI was worse preceding imminent FOG, with disrupted low‐beta GI‐LFP associations and emergent high‐beta correlations with reversed spatial distribution (pace/rhythm‐posterior STN, balance‐central). Dopamine improved pace, rhythm, and FOG, and partially restored STN activity. Our results reveal 3 distinct GI patterns in patients with PD associated with absence, predisposition to, or imminent occurrence of FOG, with STN neuronal modulations differing dynamically between the posterior and central subregions. These markers could support developing adaptive DBS strategies tailored for episodic gait impairments. ANN NEUROL 2025;98:977–990
+
+Freezing of gait (FOG) – a sudden inability to lift the feet during walking – is a debilitating motor symptom in people with Parkinson's disease (PD).
+1
+ It can be precipitated or relieved by various environmental cues and is highly sensitive to the cognitive and emotional state. It typically occurs during gait initiation (GI), turning, navigating tight spaces, or multitasking, such as carrying objects or talking while walking.
+1
+ Its episodic nature suggests transient disruption of the locomotor circuit within the same individual, with alternating periods of occurrence and absence – indicating a predisposition rather than a constant motor deficit. Affecting 50 to 70% of people with PD after a decade of disease progression, FOG severely impacts mobility, increases fall risk, morbidity, mortality, and health care costs. FOG is inconsistently improved by dopaminergic therapy, worsens over time, and leaves patients with PD with limited treatment options.
+1
+
+Deep brain stimulation (DBS) of the subthalamic nucleus (STN) effectively improves parkinsonian motor signs, but its effects on gait and FOG vary. Approximately one‐third of patients with PD develop new or worsened FOG within a year following surgery.
+2
+ This variability may be due to individual differences in STN physiology and anatomy. Beta band (13–35 hertz [Hz]) activity in the STN has been extensively studied in patients with PD, in relationship with motor/premotor cortical activity.
+3
+, 
+4
+ Exaggerated and prolonged bursts of low‐beta activity are associated with motor impairment, with dopaminergic treatment or STN‐DBS reducing it
+5
+, 
+6
+, 
+7
+ in correlation with improved motor symptoms.
+8
+, 
+9
+ During stepping in place, beta band dynamics can be fractioned, with alternation between low (13–20 Hz) and high (21–35 Hz) beta band activity.
+10
+ FOG has also been linked to elevated STN beta activity, at rest,
+11
+ during stepping,
+7
+ and while performing virtual
+12
+, 
+13
+ or real walking tasks.
+14
+, 
+15
+, 
+16
+, 
+17
+, 
+18
+, 
+19
+, 
+20
+, 
+21
+, 
+22
+ Loss of movement‐related alpha and beta desynchronization, along with low‐frequency cortico‐STN decoupling, has also been reported preceding and during FOG episodes.
+21
+, 
+23
+ Anatomically, beta oscillatory activity predominantly occurs in the posterior‐dorsal STN,
+24
+ and is associated with bradykinesia and rigidity.
+9
+ However, high‐beta activity may also be more widely distributed within the STN,
+24
+, 
+25
+ with stronger cross‐frequency coupling with high‐gamma oscillations (260–450 Hz) in the inferior‐anterior STN linked to postural instability and gait difficulty (PIGD).
+25
+ Notably, directional STN‐DBS targeting the anterior‐central rather than the posterior‐dorsal STN provides better outcomes for gait disorders and FOG.
+26
+ This effect may involve the recruitment of fiber pathways connected to the premotor and sensorimotor cortices,
+27
+, 
+28
+ and the mesencephalic locomotor region (MLR).
+27
+
+These findings underscore the critical role of STN dysfunction in gait and postural disabilities, including FOG, in patients with PD.
+7
+, 
+17
+ Abnormalities in beta band dynamics and their anatomic distribution within the STN may vary based on the severity of gait and balance disorders. This highlights the need for a deeper understanding of STN neural dynamics to guide the development of adaptive DBS strategies and improve FOG treatment.
+29
+, 
+30
+
+Here, we investigated the link between STN neuronal activity in the posterior and central STN regions and gait and postural abilities, including FOG, in 38 patients with PD. We recorded STN local field potentials (LFPs) using externalized cables together with gait kinetics and kinematics and identified the occurrence of FOG episodes. We focused our analysis on GI parameters, previously shown to be a good proxy for studying the FOG state, which allow differentiating various components of gait and balance control.
+26
+ We hypothesized that beta band activity at GI differs depending on the eventual occurrence of FOG during walking,
+17
+, 
+22
+ and that pathological beta modulation would differ between the posterior and central STN regions.
+2
+, 
+24
+, 
+26
+
+## Materials and Methods
+
+### Participants
+
+We recruited 38 patients with PD (mean age [SD] = 57.6 [9.2] years, 27 M/11 F; Supplementary Table S1) scheduled for STN‐DBS at Pitié‐Salpêtrière and Rouen University Hospitals, between February 2013 and September 2021. Patients with PD were included in 2 clinical trials: the GB‐MOV study (INSERM sponsor, n = 29) and the MAGIC study (CHU ROUEN sponsor, n = 9).
+2
+, 
+26
+ For both trials, the inclusion criteria were: (1) PD diagnosis based on the UK brain bank criteria; (2) age between 18 and 70 years; (3) validation of the indication of STN‐DBS according to the local staff,
+26
+, 
+28
+ including high responsiveness of motor disability to levodopa treatment, existence of levodopa‐related motor complications, no ongoing psychiatric disorders or dementia (Mini‐Mental Status score greater than 24), and no contraindication to surgical intervention for DBS implantation; (4) voluntarily agreed to participate in the study and signed a written consent, and (5) had social insurance. For the MAGIC study, additional inclusion criteria were: (1) FOG in the DOPAOFF condition (item 2.13 of the Movement Disorders Society‐Unified Parkinson's Disease Rating Scale [MDS‐UPDRS] > 0 in usual life), (2) stability of others medical condition, and (3) effective contraception for woman of childbearing potential. Twenty‐four healthy age‐matched controls (HCs) were recruited in the GB‐MOV study (mean age [SD] = 52.9 [6.6] years, 14 M/10 F; Supplementary Table S2).
+
+All studies complied with the Declaration of Helsinki and Good Clinical Practice guidelines. Ethics approval was obtained (GB‐MOV: No. 2012‐A00225‐38 and MAGIC: 2019‐A01717‐50), and trials were registered on a clinical website (ClinicalTrials.gov: NCT01682668 and NCT04223427). All participants provided signed written informed consent.
+
+### Surgical Procedure and Anatomical Localization of Recording Dipoles
+
+Patients with PD underwent comprehensive preoperative assessment (baseline), followed by bilateral STN‐DBS implantation. The 2 electrodes were implanted within the STN on the same day with direct 1.5 T or 3 T magnetic resonance imaging (MRI) targeting and indirect targeting using a basal ganglia atlas.
+2
+, 
+26
+ Nineteen patients with PD received quadripolar unsegmented electrodes (Medtronic 33‐89, 4 contacts, Minneapolis, MN, USA) and 19 received segmented electrodes (Boston Scientific Cartesia DB‐2202, 8 contacts, Marlborough, MA, USA). The electrodes were temporarily connected to externalized cables for LFP recordings performed 1 to 4 days postoperatively, prior to neurostimulator implantation (Fig 1A, B).
+
+[fig ana70003-fig-0001] Recordings of subthalamic local field potentials and gait. (A) Schematic representation of instrumented gait recordings using a force plate and an optical motion capture system with reflective markers positioned on all 4 limbs, together with STN‐LFP recording using an amplifier positioned in a small backpack. (B) STN‐LFP recorded through implanted DBS electrodes during a walking trial, aligned on gait initiation, with the cue, the delay (reaction time [RT]) between the cue and the start of the APA phase, and stepping. (C) Average power spectra across DOPAOFF and DOPAON conditions, at baseline, and the average low‐beta band power (inset). (D) Location of the recording sites within the posterior‐sensorimotor (blue) and central‐associative (red) regions of the right and left STN. The different STN territories are represented in blue (posterior‐motor), red (central‐associative), and green (anterior‐limbic). (E) Classification of the 38 patients with PD depending on FOG occurrence during gait recordings in the DOPAOFF condition, with patients with FOG observed during recordings (FOG‐OBS) and those without (FOG‐NOBS). (F) Reconstruction of leg kinematics in one individual FOG‐OBS patient for one trial without FOG (FOG‐OBS‐negative trial, upper panel) and one with FOG occurring after gait initiation (FOG‐OBS‐positive trial, bottom panel, orange). (G) Distribution of the onset time (after gait initiation) of the first FOG episode in trials with FOG. In FOG‐OBS patients, we recorded 99 gait trials containing FOG episodes (FOG‐OBS‐positive trials), in which 263 FOG episodes were detected. APA = anticipatory postural adjustment; DBS = deep brain stimulation; DOPA = dopamine; FOG = freezing of gait; LFP = local field potential; NOBS = not observed; OBS = observed; PD = Parkinson's disease; STN = subthalamic nucleus. [Color figure can be viewed at www.annalsofneurology.org]
+
+A 3D helical computed tomography (CT) scan was performed following surgery and co‐registered with the preoperative T1‐weighted MRI to visualize the electrodes and contact locations within the STN for each individual patient. Recordings sites (dipoles) were defined as the midpoint between each contact pair forming a bipolar montage. Dipoles were categorized into posterior‐sensorimotor and central‐associative STN subregions, using a deformable 3D atlas based on divisions inferred from external globus pallidus afferents to the STN.
+2
+, 
+26
+ All the dipoles were registered in the common brain space with visualization of the STN anatomo‐functional territories.
+2
+ Only dipoles fully located within the STN were retained (267 of 454), with 139 dipoles located in the posterior STN and 128 dipoles in the central STN (Fig 1D).
+
+### Experimental Protocol
+
+Patients with PD and HCs underwent biomechanical and physiological recordings while barefoot on an instrumented gait platform. Each walking trial began with the subjects standing still on a force platform (0.9 × 1.8 m; AMTI, Advanced Mechanical Technology Inc. Watertown, MA, USA). Following a visual cue, the subjects initiated their gait, walked 6 to 8 m, made a 180‐degree turn, and returned to the starting position (Supplementary Fig S1). Ground reaction forces and moments of GI were recorded and sampled at 1,000 Hz. Full‐body kinematics of straight‐ahead walking and turning were recorded using a 32‐marker motion capture system (Vicon, Oxford, UK) (Fig 1A). Electromyographic activity (EMG) of the soleus and tibialis anterior muscles were recorded using surface electrodes and sampled at 2,000 Hz.
+
+Patients with PD were assessed DOPAOFF following a 12‐hour interruption of antiparkinsonian medication, and DOPAON after the administration of the participant's usual morning levodopa dose +50 mg. Clinical motor severity was assessed via MDS‐UPDRS part 3 (total) and “axial” (sum of the items: “speech,” “arising from chair,” “gait,” “freezing of gait,” “postural stability,” and “posture”) scores, and the Gait and Balance Scale (GABS). The GABS is designed to assess gait, FOG, the gait cycle, balance, and posture, comprising measurement of 14 gait parameters during examination (see Supplementary Table S1).
+
+### STN LFP Recordings
+
+LFPs were recorded from adjacent contact pairs, using externalized cables connected to an amplifier (Porti 32; TMS International, Enschede, The Netherlands) placed in a small backpack worn by the patient (see Fig 1A). The Medtronic 389 electrode has 4 contacts (1.27 mm diameter, 1.5 mm height, separated by 0.5 mm; the most ventral labeled 0 and the most dorsal 3) yielding 3 recording sites (0–1, 1–2, and 2–3). The Cartesia DB‐2202 lead has 2 ring contacts (contacts 1 and 8, most ventral and dorsal, respectively) and 2 segmented contacts (2‐3‐4 and 5‐6‐7) allowing the recording of 9 dipoles (1.5 mm
+2
+ surface area, 1.3 mm diameter, 1.5 mm high, separated of 0.5 mm). The segmented contacts cover 90 degrees each and are separated by 30 degrees. LFPs signals were filtered (band‐pass filter = 0.25–300 Hz), sampled at 512 Hz, and transmitted via Bluetooth to the recording computer.
+
+GI kinetics and LFP signals were simultaneously recorded, synchronized, and exported for off‐line analyses using MATLAB (MathWorks Inc.) toolbox (http://biomechanical-toolkit.github.io).
+
+### Signal Processing and Analysis
+
+#### Gait Initiation Parameters and FOG Events
+
+Gait initiation was segmented into 2 phases: anticipatory postural adjustments (APAs), from the initial biomechanical event (t0) to foot‐off (FO1), and step execution, from FO1 to foot‐contact (FC; Fig 2A, B). We extracted ground reaction forces and moments with respect to the mediolateral (x), anteroposterior (y), and vertical (z) axes from the force platform data and calculated the displacements of the center of foot pressure (CoP) and accelerations of the center of mass (CoM) using Nexus software (version 10.2; NEXUS Software, Chesterland, OH, USA). Seventeen GI parameters were computed: (1) APAs duration, (2) antero‐posterior, (3) medio‐lateral, and (4) vertical displacements of the CoP; (5) CoM forward velocity at FO; (6) first step speed, (7) length, (8) width; durations of (9) first step, (10) double stance, (11) second step; (12) cadence based on the first 2 steps; CoM vertical velocity at (13) foot strike, and (14) foot‐contact with CoM braking.
+26
+ Finally, we computed during stepping (15) the maximum antero‐posterior CoM speed and (16) its timing, and (17) the maximum medio‐lateral displacement (see Fig 2B).
+
+[fig ana70003-fig-0002] Decomposition of gait initiation using principal components. (A) Gait initiation was recorded using a force plate, with calculation of the CoP anteroposterior and mediolateral displacements, and CoM velocities in the 3 axes. (B) GI includes 3 phases: (1) APAs, corresponding to the time between the first biomechanical event (APAs onset) and the FO1 and (2) the first step execution, corresponding to the delay between the FO1 (start of the swing 1) and the FC1 (end of the swing 1 and start of the double stance period). (C) Results of the PCA, including the 17 GI parameters, with correlation (r scores) for each RPC. (D) Scores for pace (RPC1), rhythm (RPC2), and balance (RPC5) obtained in the DOPAOFF (purple) and DOPAON (green) conditions for FOG‐NOBS (black) and FOG‐OBS patients with PD, separating trials without (FOG‐OBS‐negative, blue) and with FOG (FOG‐OBS‐positive, orange). Each dot represents one individual patient with PD and the full lines the means. The dashed horizontal line shows the mean score obtained in healthy aged‐matched controls. *p < 0.05; **p < 0.01; ***p < 0.001. (E) Correlation analysis between RPC scores in the DOPAOFF condition for FOG‐NOBS (black), FOG‐OBS‐negative (blue) and FOG‐OBS‐positive (orange) trials. Ellipses show mean ± SD of correlation scores projected onto pairs of RPCs. The light‐green ellipse is the correlation score obtained in healthy aged‐matched controls. APAs = anticipatory postural adjustment; CoM = center of mass; CoP = center of foot pressure; DOPA = dopamine; FC1 = first foot contact; FO1 = first foot off; FOG = freezing of gait; GI = gait initiation; NOBS = not observed; OBS = observed; PCA = principal component analysis; PD = Parkinson's disease; RPC = rotated principal component. [Color figure can be viewed at www.annalsofneurology.org]
+
+Trials with missing or corrupted force data were excluded, yielding 1,229 valid GI trials in DOPAOFF and 1,251 in DOPAON conditions for patients with PD (average of 24 trials per patient with PD and DOPA condition) and 2,720 trials in HCs (see Fig 1E).
+
+In patients with PD, motion capture was used to annotate FOG episodes, characterized by an arrest in walking with failure to initiate or continue stepping. Each FOG episode was marked online and verified offline by 2 independent reviewers (see Supplementary Fig S1). We labeled patients with PD with FOG observed during recordings as FOG‐OBS and those without as FOG‐NOBS.
+
+### Electrophysiological Data Processing
+
+STN‐LFPs data were first high‐pass filtered at 1 Hz, notch filtered at 50 Hz, and epoched from 2 seconds before the cue to the end of the second swing phase. Time‐frequency decomposition was performed with a multi‐taper estimation algorithm (Chronux library in Matlab, http://chronux.org/) using 3 orthogonal tapers and a 500 ms window stepped by 30 ms. Power (0–100 Hz) was normalized against an 800 ms pre‐trial baseline and converted to decibels (10 × log10).
+
+In our experiment, we recorded LFP signals at rest, while standing, and during GI. Time‐frequency representations were analyzed to detect transient artifacts. Trials with any average power increase exceeding 5.7 times (peak power >7.5 decibels [dB]) above baseline were excluded (−0.5 and + 0.5 seconds from cue, in 1–100 Hz). Each trial was also visually reviewed for saturation, spectral smearing, and movement‐related or cable‐induced artifacts, by at least 2 independent examiners (authors M.L.W., C.O., and M.Y.).
+
+### Statistical Analyses
+
+#### Gait Initiation Performance in Patients With PD and Effects of Levodopa Treatment
+
+We applied Principal Component Analysis (PCA) to the 17 GI parameters, capturing the main axes of variability across trials. Components with eigenvalue ≥ 1 were retained (Supplementary Fig S2), followed by varimax rotation to extract orthogonal dimensions (rotated principal components [RPCs]). Each RPC score was interpreted based on correlation with the original GI parameters using a Pearson's correlation test (Fig 2C).
+
+We analyzed the effects of group (FOG‐OBS vs FOG‐NOBS), treatment (DOPAOFF vs DOPAON), and their interaction, using 2‐way ANOVA on RPC scores and clinical metrics, followed by post hoc paired t tests (RPCs) or Wilcoxon rank‐sum tests (clinical scores). Correlations between RPCs were evaluated using Pearson's correlation tests.
+
+#### Correlation Between GI Performance and STN LFP Activity
+
+We examined the relationship between STN spectral power and GI RPC scores using linear mixed models (LMMs). The model included spectral power as the dependent variable, 3 categorical predictors: (1) group (FOG‐OBS vs FOG‐NOBS), (2) STN regions (posterior vs central), and (3) treatment condition (DOPAOFF vs DOPAON) and the RPC score as the continuous predictor. We added an interaction term across all predictors. The model included random intercepts nested by dipole within subjects. Separate LMMs were also run for comparisons within each STN subregion. Models were fit in R software using the lme4 package, and we estimated the slope between “RPC score” and “Spectral power” with the emtrends function of the emmeans package.
+
+Frequency time‐courses analyses were performed by regressing RPC scores onto time‐resolved LFP power to assess how specific aspects of GI related to STN neuronal activity and FOG states. For each time point, we report estimated regression coefficient (β) ± standard error, t‐statistics (testing that the coefficient is equal to 0) and p values.
+
+All statistical were performed in R software version 4.2.2. The p values were adjusted to control for the false discovery rate. We considered adjusted p values statistically significant when p < 0.05, with a stricter threshold (p < 0.001) used for time‐frequency plots.
+
+## Results
+
+### Gait Initiation Performance Relates to FOG Predisposition and Occurrence
+
+Among the 38 patients with PD, 35 reported experiencing FOG in daily life, and 3 reported none (see Supplementary Table S1). During the DOPAOFF recording session (1,229 trials), we observed FOG episodes in 12 of these 35 patients with PD during straight‐ahead walking or turning (FOG‐OBS), whereas 23 patients with PD had no FOG episodes (FOG‐NOBS) (Fig 1E‐G). In FOG‐OBS patients with PD, we found more severe gait and balance disorders (higher axial and GABS scores) compared with FOG‐NOBS patients (see Supplementary Table S1 and Fig 3), with no other significant differences for age, disease duration, levodopa equivalent daily dosage (mg/d), severity of motor disability (MDS‐UPDRS part 3, DOPAOFF, and DOPAON) or FOG in daily life (MDS‐UPDRS part 2.13; see Supplementary Table S1 and Fig 3). Dopaminergic treatment significantly improved parkinsonian motor signs and gait in both groups to similar levels (see Supplementary Table S1 and Fig 3).
+
+[fig ana70003-fig-0003] Parkinsonian motor disability and gait and balance disorders severity in patients with PD. Comparison of parkinsonian motor disability (A; MDS‐UPDRS part 3), axial (B), and GABS (C) scores between patients with FOG during recordings (FOG‐OBS, blue) and those without (FOG‐NOBS, black), in the DOPAOFF (purple) and DOPAON (green) conditions. ***p < 0.01, ANOVA repeated measures and Mann–Whitney post hoc analysis (Bonferroni correction). Each graph reports the mean and 95% confidence intervals. n.s. = non‐significant. DOPA = dopamine; FOG = freezing of gait; GABS = gait and balance scale; MDS‐UPDRS = Movement Disorders Society‐Unified Parkinson's Disease Rating Scale; NOBS = not observed; OBS = observed; PD = Parkinson's disease. [Color figure can be viewed at www.annalsofneurology.org]
+
+In the 12 FOG‐OBS patients with PD, we recorded 99 trials where a FOG event occurred in the DOPAOFF condition (FOG‐OBS+ trials), with a median onset of 8 steps (interquartile range [IQR] = 6–11.5) after GI, and a total of 263 FOG episodes (Fig 1E–G). These FOG‐OBS patients also completed 212 walking trials without FOG (FOG‐OBS− trials; see Fig 1E). In the 26 remaining patients with PD for which we observed no FOG episode, 918 trials were recorded (FOG‐NOBS, DOPAOFF; see Fig 1E). During the DOPAON session, FOG was fully resolved in all patients with PD except one (patient M_0102; see Supplementary Table S1), who experienced FOG in a few trials. These trials were excluded from further analyses. In total, 1,251 trials were recorded during the DOPAON condition (FOG‐OBS patients  = 349 trials and FOG‐NOBS patients = 902 trials).
+
+PCA with varimax rotation of GI parameters from trials without FOG (1,130 trials) revealed 5 orthogonally RPC accounting for 73% of variance (see Fig 2C and Supplementary Fig S2). Scores for RPCs 1, 2, and 5 were significantly modified by dopaminergic medication (DOPAON–DOPAOFF estimate [SE] for RPC1 = 0.72 [0.11], p < 1.17e‐07; RPC2 = 0.55 [0.14], p = 4.64e‐04; RPC5 = –0.62 [0.12], p = 1.35e‐05; Fig 2D), whereas RPC3 and RPC4 scores showed no significant changes (RPC3 = 0.039 [0.14], p = 0.813; RPC4 = 0.31 [0.17], p = 0.322; see Supplementary Fig S2). RPC1 captured swing speed and other variables related to forward stepping vigor and propulsion, which we labeled “pace” (see Fig 2C, D). RPC2 reflected step times and cadence, which we labeled “rhythm.” RPC5 represented step width and lateral CoM speed, indicating lateral balance control or body sway, which we labeled “balance” (see Fig 2C, D). RPC3 included CoM fall and braking index, and RPC4 included APAs duration, double stance time, and posterior CoP displacement (see Fig 2C and Supplementary Fig S2).
+
+In the DOPAOFF condition, FOG‐OBS patients exhibited significantly lower scores for pace (RPC1) than FOG‐NOBS patients (estimate [SE] = 0.75 [0.30], p = 0.025; see Fig 2D). Rhythm (RPC2) and balance (RPC5) scores showed no significant differences (RPC2 = 0.70 [0.40], p = 0.138; RPC5 = 0.25 [0.19], p = 0.406). In FOG‐OBS patients, we found significantly lower scores for rhythm when an FOG event will occurred (FOG‐OBS+ trials compared to FOG‐OBS− trials; RPC2, estimate [SE] = −0.243 [0.102], p = 0.035; see Fig 2D), indicating degraded stepping rhythm at GI, with no significant differences in pace or balance scores (estimate [SE] RPC1 = –0.102 [0.089], p = 0.246; RPC5 = –0.099 [0.179], p = 0.585).
+
+Dopaminergic medication improved pace (RPC1) and rhythm (RPC2) in both patients with PD groups, eliminating significant differences between patientsgroups (DOPAON condition, FOG‐NOBS – FOG‐OBS estimate [SE] for RPC1 = 0.30 [0.30], p = 0.391; RPC2 = 0.42 [0.26], p = 0.14; see Fig 2D). Conversely, balance scores (RPC5) worsened in both groups (DOPAON – DOPAOFF estimate [SE] for FOG‐NOBS = 0.39 [0.13], p = 0.013; FOG‐OBS: estimate [SE] = 0.85 [0.21], p = 6.16e‐04), with a significantly greater worsening in FOG‐OBS compared to FOG‐NOBS patients (RPC5 estimate [SE] = 0.71 [0.28], p = 0.022; see Fig 2D). We found no significant differences in RPC3 and RPC4 scores among patients groups, and across dopaminergic treatment condition, thus these scores were not included in further analyses (see Supplementary Fig S2).
+
+To investigate the differences and behavioral strategies for successful GI between FOG‐NOBS and FOG‐OBS patients in the DOPAOFF condition, we explored the link among pace, rhythm, and balance scores (Fig 2E). Pace (RPC1) and balance (RPC5) scores were positively correlated in FOG‐NOBS patients (r = 0.27, t(916) = 8.44, pc < 0.001), but this correlation was absent in FOG‐OBS patients (r = −0.04, t(210) = 0.61, pc = 0.54). Instead, FOG‐OBS patients displayed a significant negative correlation between rhythm and pace (r = −0.22, t(210) = 3.19, pc = 0.0022) and a significant positive correlation between rhythm and balance (r = 0.38, t(210) = 6.06, pc < 0.001). These relationships degraded further when an FOG event occurred (FOG‐OBS+ vs FOG‐OBS− trials; see Fig 2E).
+
+### Subthalamic Activity Correlates with FOG Predisposition and Is Spatially Distributed
+
+We first examined the relationship between LFP spectral power and GI RPC scores in trials without FOG, in the DOPAOFF condition, in both patients with PD groups (Supplementary Fig S3). The analysis included data from 267 dipoles located within the STN (139 and 128 in the posterior and central STN, respectively), comprising 946 traces (725 in FOG‐NOBS and 221 in FOG‐OBS patients; see Figs 1D and 4). Dipoles from both regions were obtained in 30 patients with PD (209 dipoles); 6 had only posterior (42 dipoles) and 2 had only central (16 dipoles) recordings. Dipoles classified as central were significantly more anterior, medial, and ventral compared with posterior dipoles (see Fig 1D, Fig S4).
+
+[fig ana70003-fig-0004] Relationship between subthalamic neuronal activity and gait initiation parameters in the DOPAOFF condition. (A) Time‐frequency maps illustrating associations between STN LFP and pace (RPC1), rhythm (RPC2), and balance (RPC5) scores in the DOPAOFF condition, for both FOG‐NOBS patients with PD (658 trials, left panel) and FOG‐OBS patients with PD in the absence of FOG episodes (FOG‐OBS‐negative, 233 trials, right panel). The white dashed line indicates the start of the APAs phase. Inset in grey and blue above are the distributions of FO1 time for all trials. Black contours outline regions of significance. (B) Comparison between trials obtained in FOG‐NOBS and FOG‐OBS patients with PD in the absence of FOG episode (FOG‐OBS‐negative trials, difference in slopes). (C) Mean associations between LFOs (theta‐alpha [4–12 Hz] bands) and pace (RPC1, upper panel), for FOG‐NOBS (black trace) and FOG‐OBS‐negative trials (blue trace). The black bars illustrate significant differences between trials. Middle and bottom graphs report the same analysis for low‐beta band (13–20 Hz) power associated with rhythm (RPC2) and balance (RPC5) scores. DOPA = dopamine; FO1 = first foot off; FOG = freezing of gait; Hz = hertz; LFOs = low frequency oscillations; LFP = local field potential; NOBS = not observed; OBS = observed; PD = Parkinson's disease; RPC = rotated principal component; STN = subthalamic nucleus. [Color figure can be viewed at www.annalsofneurology.org]
+
+We observed transient positive associations between GI RPC scores and theta/alpha (4–12 Hz) and gamma bands (> 35 Hz) power, and transient negative associations with beta band power (13–35 Hz; see Fig 4A). Comparing the 2 patients with PD groups, we found that FOG‐OBS patients exhibited weaker positive associations between theta/alpha and gamma band powers and pace (RPC1) scores, and stronger negative associations between low‐beta band power and rhythm (RPC2) or balance (RPC5) scores following GI. These associations were absent or weaker in FOG‐NOBS patients (see Fig 4B, C). The negative beta band associations extended into the high‐beta band, further distinguishing the 2 patients groups (see Fig 4A, B).
+
+Examining LFP modulations and associations across posterior‐sensorimotor and central‐associative STN subregions (see Fig 1D, Supplementary Fig S5), we found that FOG‐OBS patients exhibited: (1) stronger negative associations between low‐beta power and pace (RPC1) score in the posterior STN (Fig 5A–C, see Supplementary Fig S5); (2) negative associations between low‐beta power and rhythm (RPC2) score in both the posterior and central STN subregions, contrasting with positive associations in the central STN for FOG‐NOBS patients (Fig 5D–F and see Supplementary Fig S5); and (3) negative associations between low‐beta power and balance (RPC5) scores in both STN subregions, with stronger effects in the posterior STN, differing from positive associations observed in FOG‐NOBS patients (Fig 5G–I and see Supplementary Fig S5). FOG‐OBS patients were further distinguished by a pronounced positive correlation between beta band activity and balance (RPC5) score starting before GI, which was significantly larger in the posterior STN (see Fig 5G–I and Supplementary Fig S5).
+
+[fig ana70003-fig-0005] Low‐beta modulation during gait initiation is spatially distributed within the STN and differently affected between FOG‐NOBS and FOG‐OBS patients with PD. Same legends as Fig 4 with the comparison between posterior and central STN on both patients with PD groups (A) Time‐frequency maps illustrating associations between STN‐LFPs recorded within the posterior (upper panel) and central (bottom panel) STN and pace (RPC1) in the DOPAOFF condition, in FOG‐NOBS (left panel) and FOG‐OBS‐negative trials (right panel). Inset in grey and blue above are the distributions of FO1 time for all trials. (B) Comparison between trials (difference in slopes). (C) Mean associations between low‐beta band (13–20 Hz) and pace (RPC1). (D–F) Same analysis as in (A–C) for associations with rhythm (RPC2) scores, and (G–I) for associations with balance (RPC5) scores. DOPA = dopamine; FO1 = first foot off; FOG = freezing of gait; Hz = hertz; LFP = local field potential; NOBS = not observed; OBS = observed; PD = Parkinson's disease; RPC = rotated principal component; STN = subthalamic nucleus. [Color figure can be viewed at www.annalsofneurology.org]
+
+### Predictive Patterns of FOG Occurrence
+
+To explore STN dysfunction linked to FOG, we compared trials with freezing (FOG‐OBS+ trials) to those without (FOG‐OBS‐ trials) in FOG‐OBS patients with PD (DOPAOFF condition; Fig 6). We observed stronger negative associations between high‐beta band power and pace (RPC1) score in FOG‐OBS‐positive versus FOG‐OBS‐negative trials, significant only in the posterior STN (see Fig 6A–C and Supplementary Fig S6). In contrast, positive association between rhythm (RPC2) and both high‐beta and theta band activity emerged in the posterior STN for FOG‐OBS‐positive trials but were absent or reversed in FOG‐OBS‐negative trials (see Fig 6D–F). For the balance (RPC5) score, we found a stronger negative association between high‐beta band power in the central STN and positive association with gamma band power in the posterior STN for FOG‐OBS‐positive compared to FOG‐OBS‐negative trials (see Fig 6G–I).
+
+[fig ana70003-fig-0006] Subthalamic signature at gait initiation correlates with imminent FOG. (A–C) Same analysis as for Fig 5 but restricted to trials from patients with PD experiencing FOG during recordings, comparing between trials without FOG (FOG‐OBS‐negative trials) and those with FOG episode occurrence (FOG‐OBS‐positive trials), and association with high beta band (21–35 Hz) for pace, (D–F) rhythm and (G–I) balance. Inset in blue and orange above the panels in A, D, and G are the distributions of FO1 time. Legends are the same as for Figs 4 and 5. DOPA = dopamine; FO1 = first foot off; FOG = freezing of gait; OBS = observed; PD = Parkinson's disease. [Color figure can be viewed at www.annalsofneurology.org]
+
+### Dopaminergic Medication Improves Gait Disability and Reestablishes STN Activity
+
+In the DOPAON condition, we analyzed 875 LFP traces (633 from FOG‐NOBS patients and 242 from FOG‐OBS patients ). We found positive associations between low‐beta band power and pace (RPC1) scores in FOG‐NOBS patients with PD, with minimal changes between DOPAOFF and DOPAON condition (Fig 7A, B and Supplementary Fig S7). In FOG‐OBS patients with PD, dopamine treatment shifted associations between low‐beta band power and pace from negative (DOPAOFF) toward positive, aligning more closely with FOG‐NOBS patients patterns (Fig 7C, D). For the rhythm (RPC2) score, the negative association with beta band power observed in FOG‐OBS patients was reduced with dopamine treatment (see Fig 7C, D). For the balance (RPC5) score, dopaminergic treatment mitigated the negative association between low‐beta power observed in the DOPAOFF condition in FOG‐OBS patients, resembling associations seen in FOG‐NOBS patients (see Fig 7A, B).
+
+[fig ana70003-fig-0007] Effects of dopaminergic medication on the STN activity at gait initiation. (A, B) Same analysis as Fig 4 for the DOPAON condition, and the contrast between DOPAON (green) and DOPAOFF (purple) conditions in FOG‐NOBS patients with PD, and (C, D) in FOG‐OBS patients with PD, and associations with low‐beta band for pace, rhythm, and balance. Legends as for Fig 4. DOPA = dopamine; FOG = freezing of gait; NOBS = not observed; OBS = observed; PD = Parkinson's disease; STN = subthalamic nucleus. [Color figure can be viewed at www.annalsofneurology.org]
+
+## Discussion
+
+This study distinguishes 3 distinct FOG states in PD—absence, predisposition, and occurrence—each characterized by distinct GI strategies and STN activity patterns. Patients with PD who experienced FOG during recordings showed reduced pace linked to decreased associations with alpha/low‐beta band STN activity, even for GI that was not followed by FOG. In these patients, LFP associations with rhythm and balance were exaggerated in the low‐beta band of the posterior and central STN, respectively. FOG was preceded by further degraded stepping rhythm at gait initiation, with dramatically altered theta and high‐beta associations in the posterior STN. Balance was also further degraded prior to FOG, which occurred with phasically disrupted high‐beta associations in the central STN. Dopaminergic treatment improved GI patterns and reduced the differences in STN‐LFPs between patients with PD groups.
+
+### Behavioral Encoding of FOG Predisposition Correlates with STN Activity
+
+FOG‐OBS patients with PD exhibited altered GI strategies, with weaker or even reversed theta‐alpha band associations compared to FOG‐NOBS patients with PD. In healthy individuals, cortical alpha rhythms appear to improve movement selection.
+31
+ In patients with PD, STN alpha synchronization was associated with movement initiation,
+32
+ and found coupled with temporo‐parietal cortices, brainstem, and cerebellum.
+33
+, 
+34
+ Cortico‐STN theta‐alpha coupling has been observed
+21
+, 
+23
+ particularly before and during contralateral leg swing.
+35
+ Alpha synchronization was found preferentially distributed in the anterior‐medial STN,
+4
+, 
+36
+ and linked to non‐motor cognitive and emotional processing.
+36
+ Alpha synchronization was also found in the pedunculopontine nucleus, correlating with walking speed and inversely with FOG.
+37
+ The reduced STN alpha band associations with pace observed in FOG‐OBS patients with PD may thus reflect a broader dysfunction in the cortico‐STN‐MLR pathway.
+34
+, 
+38
+ In contrast, FOG‐NOBS patients with PD showed stronger alpha band associations during GI, suggesting preserved automatic gait control during the experiment.
+
+Additionally, FOG‐OBS patients exhibited more extensive low‐beta band associations than FOG‐NOBS patients. Beta desynchronization was previously reported during gait in PD,
+17
+, 
+18
+, 
+19
+, 
+35
+ encoding volitional commands for leg muscle activation and vigor.
+17
+ In FOG‐OBS patients, low‐beta activity was broadly modulated in relation to rhythm and balance, extending into central STN region, which may reflect increased cortical recruitment (ie, prefrontal and medial cortices) to compensate for deficits in gait automaticity and postural control.
+34
+, 
+39
+, 
+40
+ This is consistent with the role of dopaminergic loss in basal ganglia (BG) dysfunction.
+5
+, 
+6
+ Dopaminergic treatment improved pace and stepping rhythm,
+6
+, 
+41
+ and reduced these excessive beta associations, in both patients groups. Conversely, dopaminergic treatment further worsened balance
+42
+ in both patients groups, particularly in FOG‐OBS, in which balance was also linked to altered dynamics in low‐beta associations in the posterior STN. This worsening with dopaminergic treatment might reflect additional cholinergic deficits
+43
+ affecting attentional, sensory, and postural control.
+43
+ Recent work has also linked beta band modulation in the STN to proprioceptive integration,
+17
+ supporting a potential role for sensory‐targeted neuromodulation therapies.
+44
+
+### STN Activity Preceding FOG Episodes
+
+FOG episodes were preceded by further deterioration in stepping rhythm, with increased cadence and shorter step durations,
+45
+ as reported during obstacle avoidance or door passage.
+46
+, 
+47
+ These changes were evident as early as the GI phase, prior to the observable FOG onset. At GI, the relationship between GI and STN activity also dynamically shifted – both in terms of frequency bands and spatial distribution within the STN. Notably, high beta power in the posterior STN showed a positive correlation with stepping rhythm and a negative correlation with pace, whereas in the central STN, high‐beta power negatively correlated with balance. These findings suggest a breakdown in the compensatory gait‐related dynamics observed when FOG is absent. Prior studies have linked FOG with increased STN beta entropy,
+15
+ elevated low‐ or high‐beta power,
+14
+, 
+17
+, 
+21
+, 
+22
+ prolonged low‐beta burst durations,
+7
+ cortico‐STN decoupling,
+23
+ and high‐beta‐gamma phase‐amplitude coupling in the primary motor cortex.
+48
+ These patterns likely reflect a functional decoupling or conflict between the posterior STN, primarily connected with motor and premotor cortical areas, and the central STN, linked to associative and prefrontal cortices.
+49
+ High‐beta STN power is considered a pathological marker of the hyperdirect cortico‐STN pathway,
+33
+ and is less influenced by dopaminergic medication.
+33
+, 
+39
+ Its elevation may increase surround inhibition within BG pathways,
+50
+ interfering with the direct pathway's facilitation of movement.
+51
+, 
+52
+ This could lead to a failure in resolving competing motor commands,
+50
+, 
+52
+ resulting in an over‐inhibition of the “center‐facilitated” gait initiation and triggering FOG.
+
+### Gait Pattern and STN Neuronal Modulations: Potential Biomarkers for Adaptive Deep Brain Stimulation to Treat FOG
+
+FOG‐OBS patients with PD show early, identifiable changes in GI and STN activity patterns up to 19 seconds before FOG. These early markers offer a potential window for preventive interventions using adaptive DBS (aDBS). Recent studies have demonstrated the feasibility of aDBS, potentially reducing side effects and enhancing efficacy by minimizing unnecessary stimulation.
+53
+ Pilot studies using kinetic parameters,
+54
+ beta‐band power, or burst duration as control signals have shown efficacy in treating tremor, rigidity, and bradykinesia in patients with PD.
+29
+, 
+55
+ However, applying aDBS to FOG remains challenging due to the variability and unpredictability of FOG events. Reliable detection
+56
+ may require individualized algorithms trained on both controlled structured
+17
+, 
+23
+, 
+57
+ and ecological walking tasks.
+58
+ Advances in sensing‐enabled neurostimulators could eventually support at‐home, real‐time aDBS for gait management.
+58
+, 
+59
+
+### Study Limitations
+
+Several limitations of this study should be noted. First, this study was conducted under controlled experimental conditions, which may not fully capture the variability of FOG in everyday life. However, it includes a large dataset of STN‐LFP recordings during both FOG and non‐FOG trials in the same patients. Second, the absence of long‐term follow‐up limits our understanding of the durability of STN modulation changes and their relationship to long‐term gait outcomes post‐STN‐DBS. Third, we used a 3D co‐registered to each patient's MRI to localize electrode contacts, which may introduce some inaccuracies, particularly in patients with anatomic variations. However, electrode locations were carefully verified, and only dipoles within the STN were included. Last, whereas the FOG events were primarily detected using motion capture, each trial was verified online and reviewed offline by independent raters, although video recordings were not used. Future studies should incorporate video‐based validation to improve rater reliability and analysis of exact FOG onset.
+
+## Conclusions
+
+Our results support the existence of a predisposed state for FOG at gait initiation, which may be partially mitigated through compensatory mechanisms involving widespread low‐beta modulations within the STN; and an actual occurrence of FOG, marked by an early modulation in high‐beta activity in the posterior STN. These findings underscore the STN's critical role in encoding GI dynamics and provide a refined rationale for aDBS strategies. Targeted modulation of low‐beta activity in the central STN and high‐beta in the posterior STN may represent a dual‐site approach for preventing FOG. With ongoing advancements in sensing technologies and adaptive algorithms, personalized aDBS that dynamically respond to neural and behavioral markers could potentially transform the management of FOG in patients with PD.
+
+## Author Contributions
+
+M.L.W., A.V.H., C.K., and B.L. contributed to the conception and design of the study. A.C.C., M.Y., A.V.H., A.D., C.O., H.B., D.Z., S.D., S.F.‐V., K.L., B.L., and M.L.W. contributed to the acquisition and analysis of data. A.C.C., M.Y., B.L., and M.L.W. contributed to drafting the text or preparing the figures.
+
+## Potential Conflicts of Interest
+
+Nothing to report.
+
+## Supporting information

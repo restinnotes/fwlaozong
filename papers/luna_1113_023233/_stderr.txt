@@ -1,0 +1,1679 @@
+OpenAI Codex v0.167.2
+--------
+workdir: D:\fwlaozong\papers\luna_1113_023233
+model: gpt-6-luna
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: max
+reasoning summaries: detailed
+session id: 01a1d3d2-b153-7460-b974-7045783ab242
+--------
+user
+你只做一件事：把下面列出的论文全文下载到当前目录。不要阅读、总结或分析论文内容。
+
+规则：
+1. 只用合法的开放来源：Europe PMC、PubMed Central、出版社的开放获取页面、Unpaywall 指向的开放版本、作者或机构仓库、bioRxiv/medRxiv/arXiv 等预印本服务器。禁止使用 Sci-Hub、LibGen、Anna's Archive 之类来源，也不要尝试绕过付费墙或登录。
+2. 每篇保存为 <key>.pdf（拿不到 PDF、只有完整 HTML 全文时保存为 <key>.html）。key 见列表。
+3. 保存后自己检查：PDF 要以 %PDF 开头、大于 50KB；HTML 要包含正文（Methods/Results 等），不能是验证码页、登录页或只有摘要的页面。不合格的删掉，换来源再试；确实没有开放版本就记 not_open。
+4. 可以用 curl、Python、浏览器自动化等任何你需要的手段；可以并行。
+5. 最后写 manifest.json：一个 JSON 数组，每篇一项 {"key","status"(ok/not_open/failed),"file","source_url","note"}。
+6. 最后一条消息只输出一行：完成 N 篇 / 共 M 篇。
+
+论文列表（JSON）：
+[
+ {
+  "key": "DOI_10.1101_2023.02.27.529710",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2023.02.27.529710",
+  "title": "The effect of deep brain stimulation on cortico-subcortical networks in Parkinson’s disease patients with freezing of gait: Exhaustive exploration of a basic model",
+  "year": 2023,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2024.06.26.24309418",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2024.06.26.24309418",
+  "title": "Beta Burst-Driven Adaptive Deep Brain Stimulation Improves Gait Impairment and Freezing of Gait in Parkinson’s Disease",
+  "year": 2024,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2025.01.10.632393",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2025.01.10.632393",
+  "title": "Subthalamic Signature of Freezing of Gait in Parkinson’s Disease",
+  "year": 2025,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "DOI_10.1101_2025.04.22.650006",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.1101/2025.04.22.650006",
+  "title": "Deep neurobehavioral phenotyping uncovers neural fingerprints of locomotor deficits in Parkinson’s disease",
+  "year": 2025,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "DOI_10.21203_rs.3.rs-9617843_v1",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "title": "Subthalamic Signatures of Freezing while Turning in Parkinson’s Disease",
+  "year": 2026,
+  "journal": "Research Square"
+ },
+ {
+  "key": "DOI_10.64898_2025.12.17.25342333",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.64898/2025.12.17.25342333",
+  "title": "Low-Frequency Adaptive Deep Brain Stimulation for Parkinson’s Disease",
+  "year": 2025,
+  "journal": "medRxiv"
+ },
+ {
+  "key": "DOI_10.64898_2026.08.13.744293",
+  "pmid": null,
+  "pmcid": null,
+  "doi": "10.64898/2026.08.13.744293",
+  "title": "Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson’s disease",
+  "year": 2026,
+  "journal": "bioRxiv"
+ },
+ {
+  "key": "PMID_18420482",
+  "pmid": "18420482",
+  "pmcid": null,
+  "doi": "10.1212/01.wnl.0000303972.16279.46",
+  "title": "STN-DBS frequency effects on freezing of gait in advanced Parkinson disease.",
+  "year": 2008,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_19815246",
+  "pmid": "19815246",
+  "pmcid": null,
+  "doi": "10.1016/j.neurol.2009.07.018",
+  "title": "[Deep brain stimulation and gait disorders in Parkinson disease].",
+  "year": 2010,
+  "journal": "Revue neurologique"
+ },
+ {
+  "key": "PMID_21777828",
+  "pmid": "21777828",
+  "pmcid": "PMC7293393",
+  "doi": "10.1016/s1474-4422(11)70143-0",
+  "title": "Freezing of gait: moving forward on a mysterious clinical phenomenon.",
+  "year": 2011,
+  "journal": "The Lancet. Neurology"
+ },
+ {
+  "key": "PMID_24165197",
+  "pmid": "24165197",
+  "pmcid": "PMC3999304",
+  "doi": "10.1111/ner.12131",
+  "title": "60-Hz frequency effect on gait in Parkinson's disease with subthalamic nucleus deep brain stimulation.",
+  "year": 2014,
+  "journal": "Neuromodulation : journal of the International Neuromodulation Society"
+ },
+ {
+  "key": "PMID_24361601",
+  "pmid": "24361601",
+  "pmcid": null,
+  "doi": "10.1016/j.nbd.2013.12.005",
+  "title": "High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease.",
+  "year": 2014,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_25540305",
+  "pmid": "25540305",
+  "pmcid": "PMC4336001",
+  "doi": "10.1212/wnl.0000000000001184",
+  "title": "Low-frequency stimulation of STN-DBS reduces aspiration and freezing of gait in patients with PD.",
+  "year": 2015,
+  "journal": "Neurology"
+ },
+ {
+  "key": "PMID_26887333",
+  "pmid": "26887333",
+  "pmcid": null,
+  "doi": "10.1002/mds.26545",
+  "title": "Subthalamic stimulation may inhibit the beneficial effects of levodopa on akinesia and gait.",
+  "year": 2016,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_27766724",
+  "pmid": "27766724",
+  "pmcid": null,
+  "doi": "10.1111/ene.13167",
+  "title": "Effect of high-frequency subthalamic neurostimulation on gait and freezing of gait in Parkinson's disease: a systematic review and meta-analysis.",
+  "year": 2017,
+  "journal": "European journal of neurology"
+ },
+ {
+  "key": "PMID_28890315",
+  "pmid": "28890315",
+  "pmcid": "PMC6386531",
+  "doi": "10.1016/j.nbd.2017.09.002",
+  "title": "Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease.",
+  "year": 2017,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_30196050",
+  "pmid": "30196050",
+  "pmcid": "PMC6422345",
+  "doi": "10.1016/j.nbd.2018.09.004",
+  "title": "Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's disease.",
+  "year": 2018,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_30637270",
+  "pmid": "30637270",
+  "pmcid": "PMC6207106",
+  "doi": "10.1002/mdc3.12658",
+  "title": "Deep Brain Stimulation at Variable Frequency to Improve Motor Outcomes in Parkinson's Disease.",
+  "year": 2018,
+  "journal": "Movement disorders clinical practice"
+ },
+ {
+  "key": "PMID_31494286",
+  "pmid": "31494286",
+  "pmcid": "PMC6764839",
+  "doi": "10.1016/j.nbd.2019.104605",
+  "title": "Subthalamic nucleus oscillations correlate with vulnerability to freezing of gait in patients with Parkinson's disease.",
+  "year": 2019,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_31647540",
+  "pmid": "31647540",
+  "pmcid": "PMC6938035",
+  "doi": "10.1093/brain/awz314",
+  "title": "Freezing of gait: understanding the complexity of an enigmatic phenomenon.",
+  "year": 2020,
+  "journal": "Brain : a journal of neurology"
+ },
+ {
+  "key": "PMID_31665229",
+  "pmid": "31665229",
+  "pmcid": null,
+  "doi": "10.1093/brain/awz325",
+  "title": "Hitting the brakes: pathological subthalamic nucleus activity in Parkinson's disease gait freezing.",
+  "year": 2019,
+  "journal": "Brain : a journal of neurology"
+ },
+ {
+  "key": "PMID_32634599",
+  "pmid": "32634599",
+  "pmcid": "PMC8189032",
+  "doi": "10.1016/j.brs.2020.06.018",
+  "title": "Neural closed-loop deep brain stimulation for freezing of gait.",
+  "year": 2020,
+  "journal": "Brain stimulation"
+ },
+ {
+  "key": "PMID_33368872",
+  "pmid": "33368872",
+  "pmcid": "PMC8233405",
+  "doi": "10.1111/ner.13347",
+  "title": "Freezing of Gait in Parkinson's Disease: Invasive and Noninvasive Neuromodulation.",
+  "year": 2021,
+  "journal": "Neuromodulation : journal of the International Neuromodulation Society"
+ },
+ {
+  "key": "PMID_36070366",
+  "pmid": "36070366",
+  "pmcid": null,
+  "doi": "10.1126/scitranslmed.abo1800",
+  "title": "Principles of gait encoding in the subthalamic nucleus of people with Parkinson's disease.",
+  "year": 2022,
+  "journal": "Science translational medicine"
+ },
+ {
+  "key": "PMID_36242900",
+  "pmid": "36242900",
+  "pmcid": null,
+  "doi": "10.1016/j.parkreldis.2022.10.002",
+  "title": "Freezing of gait depends on cortico-subthalamic network recruitment following STN-DBS in PD patients.",
+  "year": 2022,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_37860957",
+  "pmid": "37860957",
+  "pmcid": null,
+  "doi": "10.1002/mds.29632",
+  "title": "Active and Passive Cycling Decrease Subthalamic β Oscillations in Parkinson's Disease.",
+  "year": 2024,
+  "journal": "Movement disorders : official journal of the Movement Disorder Society"
+ },
+ {
+  "key": "PMID_38101024",
+  "pmid": "38101024",
+  "pmcid": "PMC10872230",
+  "doi": "10.1016/j.parkreldis.2023.105952",
+  "title": "Subthalamic functional connectivity associated with freezing of gait dopa-response.",
+  "year": 2024,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_39223361",
+  "pmid": "39223361",
+  "pmcid": null,
+  "doi": "10.1007/s10143-024-02761-x",
+  "title": "Efficacy of subthalamic deep brain stimulation programming strategies for gait disorders in Parkinson's disease: a systematic review and meta-analysis.",
+  "year": 2024,
+  "journal": "Neurosurgical review"
+ },
+ {
+  "key": "PMID_39470410",
+  "pmid": "39470410",
+  "pmcid": null,
+  "doi": "10.1093/brain/awae223",
+  "title": "Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease.",
+  "year": 2024,
+  "journal": "Brain : a journal of neurology"
+ },
+ {
+  "key": "PMID_39884164",
+  "pmid": "39884164",
+  "pmcid": null,
+  "doi": "10.1016/j.clinph.2025.01.005",
+  "title": "Alpha and high beta subthalamic intermittent activity correlates with freezing of gait severity in Parkinson's disease.",
+  "year": 2025,
+  "journal": "Clinical neurophysiology : official journal of the International Federation of Clinical Neurophysiology"
+ },
+ {
+  "key": "PMID_40759323",
+  "pmid": "40759323",
+  "pmcid": null,
+  "doi": "10.1016/j.brs.2025.07.020",
+  "title": "Spinal cord stimulation restores locomotion in a Parkinson's disease patient and rodents.",
+  "year": 2025,
+  "journal": "Brain stimulation"
+ },
+ {
+  "key": "PMID_40992964",
+  "pmid": "40992964",
+  "pmcid": "PMC12487760",
+  "doi": "10.1016/j.parkreldis.2025.108062",
+  "title": "Subthalamic deep brain stimulation alleviates the gait sequence effect and freezing of gait in Parkinson's disease.",
+  "year": 2026,
+  "journal": "Parkinsonism & related disorders"
+ },
+ {
+  "key": "PMID_41105567",
+  "pmid": "41105567",
+  "pmcid": null,
+  "doi": "10.1159/000548468",
+  "title": "Efficacy of Unilateral Deep Brain Stimulation for Gait Enhancement in Parkinson's Disease: A Systematic Review and Meta-Analysis.",
+  "year": 2026,
+  "journal": "Stereotactic and functional neurosurgery"
+ },
+ {
+  "key": "PMID_41448344",
+  "pmid": "41448344",
+  "pmcid": null,
+  "doi": "10.1016/j.neuroscience.2025.12.058",
+  "title": "Alterations of functional connectivity between hyperdirect pathway regions and outside regions in Parkinson's disease patients with freezing of gait.",
+  "year": 2026,
+  "journal": "Neuroscience"
+ },
+ {
+  "key": "PMID_41553951",
+  "pmid": "41553951",
+  "pmcid": null,
+  "doi": "10.1159/000549859",
+  "title": "Simultaneous High-Frequency Subthalamic and Ultra-Low-Frequency Nigral Deep Brain Stimulation Improved Motor Symptoms and Freezing of Gait in Parkinson's Disease.",
+  "year": 2026,
+  "journal": "Stereotactic and functional neurosurgery"
+ },
+ {
+  "key": "PMID_42098512",
+  "pmid": "42098512",
+  "pmcid": null,
+  "doi": "10.1007/s10143-026-04312-y",
+  "title": "Deep brain stimulation for freezing of gait in Parkinson's disease: An updated systematic review, meta-analysis, and a single-center clinical experience.",
+  "year": 2026,
+  "journal": "Neurosurgical review"
+ },
+ {
+  "key": "PMID_42236313",
+  "pmid": "42236313",
+  "pmcid": null,
+  "doi": "10.1111/ejn.70570",
+  "title": "Cognitive and Emotional Determinants of Subthalamic Oscillations During Freezing While Turning in Parkinson's Disease.",
+  "year": 2026,
+  "journal": "The European journal of neuroscience"
+ },
+ {
+  "key": "PMID_42571859",
+  "pmid": "42571859",
+  "pmcid": null,
+  "doi": "10.1016/j.nbd.2026.107571",
+  "title": "Gait-cycle-locked cortico-subthalamic signatures underlying freezing of gait and their modulation in Parkinson's disease.",
+  "year": 2026,
+  "journal": "Neurobiology of disease"
+ },
+ {
+  "key": "PMID_42860886",
+  "pmid": "42860886",
+  "pmcid": null,
+  "doi": "10.1002/mdc3.70813",
+  "title": "Disease Duration Differentiates Freezing of Gait Response to Subthalamic and Nigral Stimulation for Parkinson's Disease in an Exploratory Multicenter Controlled Trial.",
+  "year": 2026,
+  "journal": "Movement disorders clinical practice"
+ },
+ {
+  "key": "PMID_42909654",
+  "pmid": "42909654",
+  "pmcid": null,
+  "doi": "10.1007/s10072-026-09479-2",
+  "title": "STN-SNr co-stimulation in Parkinson's disease: a systematic review and meta-analysis of motor and freezing-of-gait outcomes.",
+  "year": 2026,
+  "journal": "Neurological sciences : official journal of the Italian Neurological Society and of the Italian Society of Clinical Neurophysiology"
+ }
+]
+2026-11-13T07:32:43.281169Z ERROR codex_api::endpoint::responses_websocket: failed to connect to Responses WebSocket stage=Unknown
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (C:\Users\zuoyi\.codex\config.toml): `features.remote_connections` is ignored.
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (C:\Users\zuoyi\.codex\config.toml): `features.remote_connections` is ignored.
+**Preparing article downloads**
+**Checking article access routes**
+**Preparing download script**
+codex
+我会按允许的开放来源逐篇查找并下载到当前目录，完成后用程序检查 PDF 文件头和大小；HTML 则检查是否含有正文部分标记。不会打开或解读论文内容。
+**Counting 40 references**
+**Checking metadata APIs**
+**Testing PMC access**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; u='https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML'; r=requests.get(u,timeout=20); print(r.status_code,r.headers.get('content-type'),len(r.content),r.url); print(r.text[:100])\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 1429ms:
+500 application/json 150 https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML
+{"timestamp":"2026-11-13T07:33:13.919+00:00","status":500,"error":"Internal Server Error","path":"/e
+
+**Checking paper availability**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "python -c \"import requests; urls=['https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/','https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf','https://www.medrxiv.org/content/10.1101/2024.06.26.24309418v1.full.pdf'];\\nfor u in urls:\\n try:\\n  r=requests.get(u,timeout=25); print(r.status_code,r.headers.get('content-type'),len(r.content),r.url, r.content[:8])\\n except Exception as e: print(type(e).__name__,e)\"" in D:\fwlaozong\papers\luna_1113_023233
+ exited 1 in 82ms:
+  File "<string>", line 1
+    import requests; urls=['https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/','https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf','https://www.medrxiv.org/content/10.1101/2024.06.26.24309418v1.full.pdf'];\nfor u in urls:\n try:\n  r=requests.get(u,timeout=25); print(r.status_code,r.headers.get('content-type'),len(r.content),r.url, r.content[:8])\n except Exception as e: print(type(e).__name__,e)
+                                                                                                                                                                                                                                                                                                                                                           ^
+SyntaxError: unexpected character after line continuation character
+
+**Testing script setup**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+urls=['https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/','https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf','https://www.medrxiv.org/content/10.1101/2024.06.26.24309418v1.full.pdf']
+for u in urls:
+ try:
+  r=requests.get(u,timeout=25)
+  print(r.status_code,r.headers.get('content-type'),len(r.content),r.url, r.content[:8])
+ except Exception as e:
+  print(type(e).__name__,e)
+'@ | python -" in D:\fwlaozong\papers\luna_1113_023233
+ exited 1 in 128ms:
+  File "<stdin>", line 1
+    ﻿import requests
+    ^
+SyntaxError: invalid non-printable character U+FEFF
+
+**Writing temporary Python script**
+**Testing Python script execution**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+urls=['https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/','https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf','https://www.medrxiv.org/content/10.1101/2024.06.26.24309418v1.full.pdf']
+for u in urls:
+ try:
+  r=requests.get(u,timeout=25)
+  print(r.status_code,r.headers.get('content-type'),len(r.content),r.url, r.content[:8])
+ except Exception as e:
+  print(type(e).__name__,e)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 11829ms:
+404 text/html; charset=ISO-8859-1 1584 https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001 b'<!DOCTYP'
+200 text/html; charset=utf-8 21311 https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/ b'<!doctyp'
+200 text/html; charset=utf-8 21298 https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/ b'<!doctyp'
+429 text/html; charset=UTF-8 11535 https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf b'<!DOCTYP'
+200 application/pdf 5974999 https://www.medrxiv.org/content/10.1101/2024.06.26.24309418v1.full.pdf b'%PDF-1.4'
+
+**Scraping metadata links**
+**Fetching PMC metadata**
+**Checking open-access download links**
+**Preparing DOI lookup**
+**Planning full-text validation**
+**Probing full-text URLs**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re
+from html.parser import HTMLParser
+urls=['https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/?pdf=1','https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC4336001','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/','https://europepmc.org/articles/PMC4336001','https://api.unpaywall.org/v2/10.1016/j.nbd.2013.12.005?email=oa-atlas@example.org','https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf?download=true','https://api.biorxiv.org/details/biorxiv/2023-02-27/2023-02-27/0/json']
+for u in urls:
+ try:
+  r=requests.get(u,timeout=30,headers={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open access retrieval)'})
+  print('\\n',r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+  if 'text/html' in r.headers.get('content-type',''):
+   for key in ['citation_pdf_url','citation_fulltext_html_url','citation_title']:
+    m=re.search(r'<meta["'^>]+name=["'"\\']'+key+r'[\"\\']["'^>]+content=["'"\\'](["'^"'"\\']+)',r.text,re.I)
+    if m: print(key,m.group(1))
+   print('pdf links', re.findall(r'href=[\"\\'](["'^"'"\\']+\\.pdf["'^"'"\\']*)',r.text,re.I)[:3])
+ except Exception as e: print(type(e).__name__,e)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 11329ms:
+
+ 200 text/html; charset=utf-8 21444 https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/?pdf=1 b'<!doctyp'
+pdf links []
+
+ 404 text/html; charset=utf-8 48716 https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC4336001 b'\n\n<!DOCT'
+pdf links []
+
+ 200 text/html; charset=utf-8 21398 https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/ b'<!doctyp'
+pdf links []
+
+ 403 text/html; charset=UTF-8 5599 https://europepmc.org/articles/PMC4336001 b'<!DOCTYP'
+pdf links []
+
+ 200 application/json 6857 https://api.unpaywall.org/v2/10.1016/j.nbd.2013.12.005?email=oa-atlas@example.org b'{"best_o'
+
+ 200 application/pdf 1646962 https://www.biorxiv.org/content/10.1101/2023.02.27.529710v1.full.pdf?download=true b'%PDF-1.5'
+
+ 200 application/json 64339 https://api.biorxiv.org/details/biorxiv/2023-02-27/2023-02-27/0/json b'{"messag'
+
+**Inspecting PMC page links**
+**Inspecting page HTML**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re
+u='https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/'
+t=requests.get(u,timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text
+print(t[:1200])
+print('pdf token snippets:')
+for m in re.finditer('pdf',t,re.I): print(t[max(0,m.start()-150):m.start()+200].replace('\\n',' ')[:350])
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 639ms:
+<!doctype html><html lang="en-US" dir="ltr"><head><base href="https://www.google.com/recaptcha/challengepage/"><link rel="preconnect" href="//www.gstatic.com"><meta name="referrer" content="origin"><script nonce="qqBITVVMLFn_nkpyK_-9TQ">window['ppConfig'] = {productName: 'RecaptchaChallengePageUi', deleteIsEnforced:  true , sealIsEnforced:  true , heartbeatRate:  0.5 , periodicReportingRateMillis:  60000.0 , disableAllReporting:  false };(function(){'use strict';function k(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}function l(a){var b=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if(typeof a.length=="number")return{next:k(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}function m(a,b){var c;b&&!b.done&&(c=a["return"])&&c.call(a)}
+var n=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,c){if(a==Array.prototype||a==Object.prototype)return a;a[b]=c.value;return a};function p(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==
+pdf token snippets:
+
+**Checking PMC OA mapping**
+**Inspecting OA endpoint error**
+**Checking DOI PDF links**
+**Checking Unpaywall links**
+**Preparing the access manifest**
+**Preparing access checks**
+**Checking bioRxiv version**
+**Checking alternate article sources**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,concurrent.futures
+urls={
+'epmc_search':'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:18420482&format=json',
+'epmc_xml':'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML',
+'epmc_xml_format':'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML?format=xml',
+'ncbi_efetch':'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC4336001&rettype=full&retmode=xml',
+'bioc':'https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC4336001/unicode',
+'oa_api':'https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001&format=xml',
+'oa_api_pmc':'https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC4336001',
+}
+def f(x):
+ k,u=x
+ try:
+  r=requests.get(u,timeout=35,headers={'User-Agent':'OpenAccessArticleDownloader/1.0 (open scholarly content)'})
+  return k,r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:40]
+ except Exception as e:return k,'ERR',str(e)
+with concurrent.futures.ThreadPoolExecutor(max_workers=7) as ex:
+ for x in ex.map(f,urls.items()): print(x)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 15546ms:
+('epmc_search', 200, 'application/json;charset=UTF-8', 915, 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:18420482&format=json', b'{"version":"6.9","hitCount":1,"request":')
+('epmc_xml', 500, 'application/json', 150, 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML', b'{"timestamp":"2026-11-13T07:35:49.990+00')
+('epmc_xml_format', 500, 'application/json', 150, 'https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4336001/fullTextXML?format=xml', b'{"timestamp":"2026-11-13T07:36:04.034+00')
+('ncbi_efetch', 200, 'text/xml; charset=UTF-8', 33579, 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC4336001&rettype=full&retmode=xml', b'<?xml version="1.0"  ?><!DOCTYPE pmc-art')
+('bioc', 200, 'text/html', 6140, 'https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_json/PMC4336001/unicode', b'[Error] : No result can be found. <BR><H')
+('oa_api', 404, 'text/html; charset=ISO-8859-1', 1644, 'https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=PMC4336001&format=xml', b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML')
+('oa_api_pmc', 404, 'text/html; charset=utf-8', 48716, 'https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC4336001', b'\n\n<!DOCTYPE html>\n<html lang="en" >\n    ')
+
+**Checking open PDF availability**
+**Converting JATS to HTML**
+**Testing parsed JATS text**
+**Validating JATS body fields**
+**Preparing DOI retrieval**
+**Checking existing files**
+**Preparing source retrieval**
+**Checking article metadata**
+**Retrieved PMC article**
+**Checking PMC full-text access**
+**Preparing the retrieval script**
+**Checking existing output files**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command 'Get-ChildItem -Force | Select-Object Mode,Length,Name' in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 225ms:
+
+Mode   Length Name       
+----   ------ ----       
+-a----  13432 _prompt.txt
+
+
+
+**Building the retrieval script**
+**Preparing source checks**
+**Defining HTML checks**
+**Defining full-text criteria**
+**Converting JATS into HTML**
+**Mapping HTML tags**
+**Writing HTML renderer**
+**Using Europe PMC fallback**
+**Checking Unpaywall response shape**
+**Running a parallel script**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+for d in ['10.1212/wnl.0000000000001184','10.21203/rs.3.rs-9617843/v1','10.1016/j.parkreldis.2023.105952','10.1126/scitranslmed.abo1800']:
+ r=requests.get('https://api.unpaywall.org/v2/'+d,params={'email':'oa-atlas@example.org'},timeout=30)
+ print(d,r.status_code)
+ if r.ok:
+  j=r.json();print('oa',j.get('is_oa'),'best',j.get('best_oa_location')); print('locs',j.get('oa_locations',[])[:2])
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 1258ms:
+10.1212/wnl.0000000000001184 200
+oa True best {'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'publisher', 'is_best': True, 'license': None, 'oa_date': '2014-12-25', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'url_for_landing_page': 'https://doi.org/10.1212/wnl.0000000000001184', 'url_for_pdf': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'version': 'publishedVersion'}
+locs [{'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'publisher', 'is_best': True, 'license': None, 'oa_date': '2014-12-25', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'url_for_landing_page': 'https://doi.org/10.1212/wnl.0000000000001184', 'url_for_pdf': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'version': 'publishedVersion'}, {'endpoint_id': 'ac9de7698155b820de7', 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': False, 'license': None, 'oa_date': '2014-12-25', 'pmh_id': 'oai:pubmedcentral.nih.gov:4336001', 'repository_institution': 'National Institutes of Health', 'updated': 'deprecated', 'url': 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/', 'url_for_landing_page': 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/', 'url_for_pdf': None, 'version': 'publishedVersion'}]
+10.21203/rs.3.rs-9617843/v1 200
+oa True best {'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': True, 'license': 'cc-by', 'oa_date': '2026-05-06', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://www.researchsquare.com/article/rs-9617843/latest.pdf', 'url_for_landing_page': 'https://doi.org/10.21203/rs.3.rs-9617843/v1', 'url_for_pdf': 'https://www.researchsquare.com/article/rs-9617843/latest.pdf', 'version': 'submittedVersion'}
+locs [{'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': True, 'license': 'cc-by', 'oa_date': '2026-05-06', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://www.researchsquare.com/article/rs-9617843/latest.pdf', 'url_for_landing_page': 'https://doi.org/10.21203/rs.3.rs-9617843/v1', 'url_for_pdf': 'https://www.researchsquare.com/article/rs-9617843/latest.pdf', 'version': 'submittedVersion'}]
+10.1016/j.parkreldis.2023.105952 200
+oa True best {'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'publisher', 'is_best': True, 'license': None, 'oa_date': '2023-12-09', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'http://www.prd-journal.com/article/S1353802023010313/pdf', 'url_for_landing_page': 'https://doi.org/10.1016/j.parkreldis.2023.105952', 'url_for_pdf': 'http://www.prd-journal.com/article/S1353802023010313/pdf', 'version': 'acceptedVersion'}
+locs [{'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'publisher', 'is_best': True, 'license': None, 'oa_date': '2023-12-09', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'http://www.prd-journal.com/article/S1353802023010313/pdf', 'url_for_landing_page': 'https://doi.org/10.1016/j.parkreldis.2023.105952', 'url_for_pdf': 'http://www.prd-journal.com/article/S1353802023010313/pdf', 'version': 'acceptedVersion'}, {'endpoint_id': 'ac9de7698155b820de7', 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': False, 'license': None, 'oa_date': '2023-12-09', 'pmh_id': 'oai:pubmedcentral.nih.gov:10872230', 'repository_institution': 'National Institutes of Health', 'updated': 'deprecated', 'url': 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10872230/pdf/nihms-1954173.pdf', 'url_for_landing_page': 'https://www.ncbi.nlm.nih.gov/pmc/articles/10872230', 'url_for_pdf': 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10872230/pdf/nihms-1954173.pdf', 'version': 'acceptedVersion'}]
+10.1126/scitranslmed.abo1800 200
+oa True best {'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': True, 'license': 'cc-by-nc-nd', 'oa_date': '2022-09-07', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://www.medrxiv.org/content/medrxiv/early/2022/02/15/2022.02.08.22270370.full.pdf', 'url_for_landing_page': 'https://doi.org/10.1101/2022.02.08.22270370', 'url_for_pdf': 'https://www.medrxiv.org/content/medrxiv/early/2022/02/15/2022.02.08.22270370.full.pdf', 'version': 'submittedVersion'}
+locs [{'endpoint_id': None, 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': True, 'license': 'cc-by-nc-nd', 'oa_date': '2022-09-07', 'pmh_id': None, 'repository_institution': None, 'updated': 'deprecated', 'url': 'https://www.medrxiv.org/content/medrxiv/early/2022/02/15/2022.02.08.22270370.full.pdf', 'url_for_landing_page': 'https://doi.org/10.1101/2022.02.08.22270370', 'url_for_pdf': 'https://www.medrxiv.org/content/medrxiv/early/2022/02/15/2022.02.08.22270370.full.pdf', 'version': 'submittedVersion'}, {'endpoint_id': '7760ae59248d04d82fd', 'evidence': 'deprecated', 'host_type': 'repository', 'is_best': False, 'license': 'cc-by-nc-nd', 'oa_date': '2022-09-07', 'pmh_id': 'oai:infoscience.epfl.ch:299880', 'repository_institution': 'École Polytechnique Fédérale de Lausanne', 'updated': 'deprecated', 'url': 'https://infoscience.epfl.ch/handle/20.500.14299/194489', 'url_for_landing_page': 'https://infoscience.epfl.ch/handle/20.500.14299/194489', 'url_for_pdf': None, 'version': 'submittedVersion'}]
+
+**Validating direct PDF links**
+**Preparing the 40-record list**
+**Planning retry handling**
+**Building article candidates**
+**Adding full article HTML**
+**Parsing article XML**
+**Validating full-text XML**
+**Checking PMC availability**
+**Preparing XML fallback**
+**Building retrieval script**
+**Coding retrieval script**
+codex
+已确认当前目录没有同名论文文件。现在按 Unpaywall 和各预印本服务器的开放链接尝试 PDF；遇到可公开访问但没有可用 PDF 的 PMC 全文时，会转换成完整 HTML，并把逐篇结果写入 manifest.json。
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import os, re, json, time, html, requests, concurrent.futures
+from xml.etree import ElementTree as ET
+from html.parser import HTMLParser
+
+DATA = [
+('DOI_10.1101_2023.02.27.529710',None,None,'10.1101/2023.02.27.529710','bio'),
+('DOI_10.1101_2024.06.26.24309418',None,None,'10.1101/2024.06.26.24309418','med'),
+('DOI_10.1101_2025.01.10.632393',None,None,'10.1101/2025.01.10.632393','bio'),
+('DOI_10.1101_2025.04.22.650006',None,None,'10.1101/2025.04.22.650006','bio'),
+('DOI_10.21203_rs.3.rs-9617843_v1',None,None,'10.21203/rs.3.rs-9617843/v1','rs'),
+('DOI_10.64898_2025.12.17.25342333',None,None,'10.64898/2025.12.17.25342333','med'),
+('DOI_10.64898_2026.08.13.744293',None,None,'10.64898/2026.08.13.744293','bio'),
+('PMID_18420482','18420482',None,'10.1212/01.wnl.0000303972.16279.46',None),
+('PMID_19815246','19815246',None,'10.1016/j.neurol.2009.07.018',None),
+('PMID_21777828','21777828','PMC7293393','10.1016/s1474-4422(11)70143-0',None),
+('PMID_24165197','24165197','PMC3999304','10.1111/ner.12131',None),
+('PMID_24361601','24361601',None,'10.1016/j.nbd.2013.12.005',None),
+('PMID_25540305','25540305','PMC4336001','10.1212/wnl.0000000000001184',None),
+('PMID_26887333','26887333',None,'10.1002/mds.26545',None),
+('PMID_27766724','27766724',None,'10.1111/ene.13167',None),
+('PMID_28890315','28890315','PMC6386531','10.1016/j.nbd.2017.09.002',None),
+('PMID_30196050','30196050','PMC6422345','10.1016/j.nbd.2018.09.004',None),
+('PMID_30637270','30637270','PMC6207106','10.1002/mdc3.12658',None),
+('PMID_31494286','31494286','PMC6764839','10.1016/j.nbd.2019.104605',None),
+('PMID_31647540','31647540','PMC6938035','10.1093/brain/awz314',None),
+('PMID_31665229','31665229',None,'10.1093/brain/awz325',None),
+('PMID_32634599','32634599','PMC8189032','10.1016/j.brs.2020.06.018',None),
+('PMID_33368872','33368872','PMC8233405','10.1111/ner.13347',None),
+('PMID_36070366','36070366',None,'10.1126/scitranslmed.abo1800',None),
+('PMID_36242900','36242900',None,'10.1016/j.parkreldis.2022.10.002',None),
+('PMID_37860957','37860957',None,'10.1002/mds.29632',None),
+('PMID_38101024','38101024','PMC10872230','10.1016/j.parkreldis.2023.105952',None),
+('PMID_39223361','39223361',None,'10.1007/s10143-024-02761-x',None),
+('PMID_39470410','39470410',None,'10.1093/brain/awae223',None),
+('PMID_39884164','39884164',None,'10.1016/j.clinph.2025.01.005',None),
+('PMID_40759323','40759323',None,'10.1016/j.brs.2025.07.020',None),
+('PMID_40992964','40992964','PMC12487760','10.1016/j.parkreldis.2025.108062',None),
+('PMID_41105567','41105567',None,'10.1159/000548468',None),
+('PMID_41448344','41448344',None,'10.1016/j.neuroscience.2025.12.058',None),
+('PMID_41553951','41553951',None,'10.1159/000549859',None),
+('PMID_42098512','42098512',None,'10.1007/s10143-026-04312-y',None),
+('PMID_42236313','42236313',None,'10.1111/ejn.70570',None),
+('PMID_42571859','42571859',None,'10.1016/j.nbd.2026.107571',None),
+('PMID_42860886','42860886',None,'10.1002/mdc3.70813',None),
+('PMID_42909654','42909654',None,'10.1007/s10072-026-09479-2',None),
+]
+HEADERS={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval; contact: oa-atlas@example.org)'}
+
+def get(url, timeout=40):
+    last=None
+    for attempt in range(3):
+        try:
+            r=requests.get(url,timeout=timeout,headers=HEADERS,allow_redirects=True)
+            if (r.status_code==429 or r.status_code>=500) and attempt<2:
+                time.sleep(1.2*(attempt+1)); continue
+            return r
+        except Exception as e:
+            last=e
+            if attempt<2: time.sleep(1.0*(attempt+1))
+    return None
+
+def localname(tag): return tag.rsplit('}',1)[-1] if '}' in tag else tag
+
+def text_content(raw):
+    s=re.sub(r'(?is)<(script|style|noscript|svg)\\b["'^>]*>.*?</'"\\1\\s*>',' ',raw)
+    s=re.sub(r'(?s)<["'^>]+>'"',' ',s)
+    return re.sub(r'\\s+',' ',html.unescape(s)).strip()
+
+def valid_html(raw):
+    low=raw[:30000].lower()
+    if not re.search(r'(?i)<"'!doctype'"\\s+html|<html\\b',raw): return False
+    if any(x in low for x in ['recaptcha challenge','verify you are human','captcha-container','access denied','sign in to access','log in to view']): return False
+    txt=text_content(raw)
+    return len(txt)>3500 and bool(re.search(r'\\b(methods?|materials and methods|results?|discussion|study design|patients and methods|clinical features)\\b',txt,re.I))
+
+def render_jats(node, depth=0):
+    name=localname(node.tag)
+    mapping={'article':'article','front':'header','article-meta':'section','article-title':'h1','abstract':'section','body':'main','back':'section','sec':'section','title':'h2','p':'p','italic':'em','bold':'strong','monospace':'code','sup':'sup','sub':'sub','ext-link':'a','uri':'a','list':'ol','list-item':'li','disp-quote':'blockquote','fig':'figure','caption':'figcaption','table-wrap':'section','table':'table','thead':'thead','tbody':'tbody','tfoot':'tfoot','tr':'tr','td':'td','th':'th','label':'span','ref-list':'section','ref':'p','def-list':'dl','def-item':'div','term':'dt','def':'dd','fn':'aside','ack':'section','sec-meta':'div'}
+    tag=mapping.get(name,'span')
+    attrs=''
+    if name in ('ext-link','uri'):
+        href=node.attrib.get('{http://www.w3.org/1999/xlink}href') or node.attrib.get('href')
+        if href: attrs=' href=\"'+html.escape(href,quote=True)+'\"'
+    if name=='list' and node.attrib.get('list-type') in ('bullet','simple'): tag='ul'
+    if name=='list' and node.attrib.get('list-type')=='order': tag='ol'
+    parts=[]
+    if node.text: parts.append(html.escape(node.text))
+    for child in list(node):
+        parts.append(render_jats(child,depth+1))
+        if child.tail: parts.append(html.escape(child.tail))
+    return '<'+tag+attrs+'>'+''.join(parts)+'</'+tag+'>'
+
+def pmc_xml_html(data):
+    try: root=ET.fromstring(data)
+    except Exception: return None
+    body=next((x for x in root.iter() if localname(x.tag)=='body'),None)
+    if body is None: return None
+    body_text=' '.join(t.strip() for t in body.itertext() if t and t.strip())
+    if len(body_text)<1800: return None
+    article_title=''
+    for x in root.iter():
+        if localname(x.tag)=='article-title':
+            article_title=' '.join(x.itertext()).strip(); break
+    converted=render_jats(root)
+    doc='<"'!doctype html><html lang="en"><head><meta charset="utf-8"><title>'"'+html.escape(article_title)+'</title><meta name=\"source-format\" content=\"NCBI PMC full-text JATS XML rendered as HTML\"></head><body>'+converted+'</body></html>'
+    if len(text_content(doc))<3500: return None
+    return doc
+
+def add_candidate(cands,url,source_kind):
+    if url and url.startswith(('https://','http://')) and all(x[0]"'!=url for x in cands): cands.append((url,source_kind))
+
+def candidate_pdf(r):
+    return r.status_code==200 and r.content.startswith(b'"'%PDF') and len(r.content)>50*1024
+
+def try_html_response(r):
+    if r.status_code"'!=200: return None
+    ct=r.headers.get('"'content-type','').lower()
+    if 'html' not in ct and not r.text.lstrip().lower().startswith(('<"'!doctype html'"','<html')): return None
+    return r.text if valid_html(r.text) else None
+
+def work(item):
+    key,pmid,pmcid,doi,platform=item
+    cands=[]; unpaywall_ok=False; unpaywall_checked=False; ePMC_pmcid=pmcid
+    if platform in ('bio','med'):
+        server='biorxiv' if platform=='bio' else 'medrxiv'
+        domain='www.biorxiv.org' if platform=='bio' else 'www.medrxiv.org'
+        for v in (1,2,3,4):
+            add_candidate(cands,f'https://{domain}/content/{doi}v{v}.full.pdf?download=true','preprint PDF')
+        api=get(f'https://api.biorxiv.org/details/{server}/{doi}/na/json',timeout=25)
+        if api and api.status_code==200:
+            try:
+                msgs=api.json().get('collection',[])
+                if msgs:
+                    versions=sorted({str(x.get('version','')) for x in msgs if x.get('version')},reverse=True)
+                    for v in versions:
+                        add_candidate(cands,f'https://{domain}/content/{doi}v{v}.full.pdf?download=true','preprint PDF')
+            except Exception: pass
+    if platform=='rs':
+        m=re.search(r'rs-(\\d+)',doi)
+        if m: add_candidate(cands,f'https://www.researchsquare.com/article/rs-{m.group(1)}/latest.pdf','Research Square PDF')
+    # Unpaywall supplies only locations explicitly indexed as open access.
+    u=get('https://api.unpaywall.org/v2/'+doi+'?email=oa-atlas%40example.org',timeout=35)
+    if u and u.status_code==200:
+        unpaywall_checked=True
+        try:
+            uj=u.json(); unpaywall_ok=bool(uj.get('is_oa'))
+            if unpaywall_ok:
+                locs=uj.get('oa_locations') or []
+                best=uj.get('best_oa_location')
+                if best and best not in locs: locs=[best]+locs
+                for loc in locs:
+                    add_candidate(cands,loc.get('url_for_pdf'),'Unpaywall OA PDF')
+                    add_candidate(cands,loc.get('url'),'Unpaywall OA URL')
+                    add_candidate(cands,loc.get('url_for_landing_page'),'Unpaywall OA landing page')
+        except Exception: pass
+    for url,kind in cands:
+        r=get(url)
+        if not r: continue
+        if candidate_pdf(r):
+            fn=key+'.pdf'
+            with open(os.path.join(os.getcwd(),fn),'wb') as f: f.write(r.content)
+            return {'key':key,'status':'ok','file':fn,'source_url':url,'note':'PDF validated: %PDF header and size > 50 KB.'}
+        h=try_html_response(r)
+        if h is not None:
+            fn=key+'.html'
+            with open(os.path.join(os.getcwd(),fn),'w',encoding='utf-8',newline='') as f: f.write(h)
+            return {'key':key,'status':'ok','file':fn,'source_url':r.url,'note':'Full-text HTML validated for body length and article sections.'}
+    # Resolve an available PMC full-text identifier through Europe PMC if none was supplied.
+    if not ePMC_pmcid and pmid:
+        sr=get(f'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:{pmid}&format=json&resultType=core',timeout=25)
+        if sr and sr.status_code==200:
+            try:
+                rr=sr.json().get('resultList',{}).get('result',[])
+                for rec in rr:
+                    if rec.get('pmcid'): ePMC_pmcid=rec['pmcid']; break
+            except Exception: pass
+    if ePMC_pmcid:
+        efetch=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={ePMC_pmcid}&rettype=full&retmode=xml'
+        xr=get(efetch,timeout=50)
+        if xr and xr.status_code==200:
+            doc=pmc_xml_html(xr.content)
+            if doc:
+                fn=key+'.html'
+                with open(os.path.join(os.getcwd(),fn),'w',encoding='utf-8',newline='') as f: f.write(doc)
+                return {'key':key,'status':'ok','file':fn,'source_url':efetch,'note':'Full-text PMC JATS converted to HTML and validated; no valid PDF was retrieved.'}
+    if unpaywall_checked and not unpaywall_ok:
+        return {'key':key,'status':'not_open','file':None,'source_url':None,'note':'Unpaywall reports no open-access location; no permitted full-text source found.'}
+    attempted=cands[0][0] if cands else None
+    return {'key':key,'status':'failed','file':None,'source_url':attempted,'note':'An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.'}
+
+results=[]
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:
+    futs={ex.submit(work,x):x for x in DATA}
+    for fut in concurrent.futures.as_completed(futs):
+        item=futs[fut]
+        try: res=fut.result()
+        except Exception as e: res={'key':item[0],'status':'failed','file':None,'source_url':None,'note':'Download or validation error: '+type(e).__name__}
+        results.append(res)
+        print(res['key']+'\\t'+res['status']+'\\t'+(res['file'] or ''),flush=True)
+results.sort(key=lambda x: next(i for i,d in enumerate(DATA) if d[0]==x['key']))
+with open(os.path.join(os.getcwd(),'manifest.json'),'w',encoding='utf-8') as f:
+    json.dump(results,f,ensure_ascii=False,indent=2)
+    f.write('\\n')
+print('TOTAL',sum(x['status']=='ok' for x in results),'/',len(DATA),'not_open',sum(x['status']=='not_open' for x in results),'failed',sum(x['status']=='failed' for x in results),flush=True)
+'@ | python -u -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 29701ms:
+DOI_10.21203_rs.3.rs-9617843_v1	ok	DOI_10.21203_rs.3.rs-9617843_v1.pdf
+DOI_10.1101_2023.02.27.529710	ok	DOI_10.1101_2023.02.27.529710.pdf
+DOI_10.1101_2025.01.10.632393	ok	DOI_10.1101_2025.01.10.632393.pdf
+DOI_10.1101_2025.04.22.650006	ok	DOI_10.1101_2025.04.22.650006.pdf
+PMID_18420482	not_open	
+DOI_10.64898_2026.08.13.744293	ok	DOI_10.64898_2026.08.13.744293.pdf
+DOI_10.64898_2025.12.17.25342333	ok	DOI_10.64898_2025.12.17.25342333.pdf
+PMID_21777828	ok	PMID_21777828.html
+PMID_24165197	ok	PMID_24165197.html
+DOI_10.1101_2024.06.26.24309418	ok	DOI_10.1101_2024.06.26.24309418.pdf
+PMID_24361601	failed	
+PMID_19815246	failed	
+PMID_27766724	not_open	
+PMID_26887333	failed	
+PMID_25540305	failed	
+PMID_28890315	ok	PMID_28890315.html
+PMID_30196050	ok	PMID_30196050.html
+PMID_30637270	ok	PMID_30637270.html
+PMID_33368872	ok	PMID_33368872.html
+PMID_31647540	ok	PMID_31647540.html
+PMID_31665229	failed	
+PMID_32634599	ok	PMID_32634599.pdf
+PMID_36070366	ok	PMID_36070366.pdf
+PMID_36242900	ok	PMID_36242900.pdf
+PMID_39223361	not_open	
+PMID_31494286	ok	PMID_31494286.html
+PMID_39884164	not_open	
+PMID_38101024	ok	PMID_38101024.html
+PMID_37860957	ok	PMID_37860957.pdf
+PMID_41105567	not_open	
+PMID_40992964	ok	PMID_40992964.pdf
+PMID_41448344	not_open	
+PMID_41553951	not_open	
+PMID_42098512	not_open	
+PMID_39470410	failed	
+PMID_40759323	ok	PMID_40759323.pdf
+PMID_42236313	failed	
+PMID_42909654	not_open	
+PMID_42571859	failed	
+PMID_42860886	failed	
+TOTAL 22 / 40 not_open 9 failed 9
+
+**Inspecting failed manifest entries**
+**Reviewing failed manifest metadata**
+codex
+第一轮已取回 22 篇；其余 18 篇中有 9 篇标为无开放版本，另 9 篇的链接或格式校验未通过。我正在针对这 9 篇继续检查开放仓库和 PMC 的备用入口，再决定它们是成功、not_open 还是确实 failed。
+**Reading manifest details**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json
+m=json.load(open('manifest.json',encoding='utf-8'))
+for x in m:
+ if x['status']=='failed': print(x['key'],repr(x['source_url']),x['note'])
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 311ms:
+PMID_19815246 'https://archive-ouverte.unige.ch/unige:33248' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_24361601 'https://doaj.org/article/cf35c44fa5e142fd97522569383c1436' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_25540305 'https://n.neurology.org/content/neurology/84/4/415.full.pdf' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_26887333 'https://archive-ouverte.unige.ch/unige:89996' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_31665229 'https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_39470410 'https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_42236313 'https://doi.org/10.1111/ejn.70570' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_42571859 'https://doi.org/10.1016/j.nbd.2026.107571' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+PMID_42860886 'https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813' An open source was indicated or attempted, but no valid PDF/full-text HTML could be retrieved.
+
+**Checking URL metadata**
+**Checking OA endpoints**
+**Checking repository download links**
+**Checking OA route metadata**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,json
+failed=json.load(open('manifest.json',encoding='utf-8'))
+DOI={
+'PMID_19815246':'10.1016/j.neurol.2009.07.018','PMID_24361601':'10.1016/j.nbd.2013.12.005','PMID_25540305':'10.1212/wnl.0000000000001184','PMID_26887333':'10.1002/mds.26545','PMID_31665229':'10.1093/brain/awz325','PMID_39470410':'10.1093/brain/awae223','PMID_42236313':'10.1111/ejn.70570','PMID_42571859':'10.1016/j.nbd.2026.107571','PMID_42860886':'10.1002/mdc3.70813'}
+PMCID={'PMID_25540305':'PMC4336001'}
+h={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval; contact: oa-atlas@example.org)'}
+for key,doi in DOI.items():
+ print('\\n'+key,doi)
+ try:
+  j=requests.get('https://api.unpaywall.org/v2/'+doi,params={'email':'oa-atlas@example.org'},headers=h,timeout=25).json()
+  print('OA',j.get('is_oa'))
+  for loc in j.get('oa_locations',[]):
+   for typ in ['url_for_pdf','url','url_for_landing_page']:
+    u=loc.get(typ)
+    if not u: continue
+    try:
+     r=requests.get(u,headers=h,timeout=25,allow_redirects=True,stream=True)
+     print(typ,loc.get('host_type'),r.status_code,r.headers.get('content-type'),r.headers.get('content-length'),r.url)
+     r.close()
+    except Exception as e: print(typ,'ERR',type(e).__name__)
+ except Exception as e: print('UP ERR',type(e).__name__)
+ if key in PMCID:
+  u='https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id='+PMCID[key]+'&rettype=full&retmode=xml'
+  try:
+   r=requests.get(u,headers=h,timeout=35);print('PMC Efetch',r.status_code,r.headers.get('content-type'),len(r.content),r.content[:10])
+  except Exception as e:print('PMC Efetch ERR',type(e).__name__)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 19458ms:
+
+PMID_19815246 10.1016/j.neurol.2009.07.018
+OA True
+url repository 200 text/html; charset=utf-8 100285 https://archive-ouverte.unige.ch/unige:33248
+url_for_landing_page repository 200 text/html; charset=utf-8 100285 https://archive-ouverte.unige.ch/unige:33248
+
+PMID_24361601 10.1016/j.nbd.2013.12.005
+OA True
+url repository 403 text/html; charset=UTF-8 None https://doaj.org/article/cf35c44fa5e142fd97522569383c1436
+url_for_landing_page repository 403 text/html; charset=UTF-8 None https://doaj.org/article/cf35c44fa5e142fd97522569383c1436
+
+PMID_25540305 10.1212/wnl.0000000000001184
+OA True
+url_for_pdf publisher 403 text/html; charset=UTF-8 None https://n.neurology.org/content/neurology/84/4/415.full.pdf
+url publisher 403 text/html; charset=UTF-8 None https://n.neurology.org/content/neurology/84/4/415.full.pdf
+url_for_landing_page publisher 403 text/html; charset=UTF-8 None https://www.neurology.org/doi/10.1212/WNL.0000000000001184
+url repository 200 text/html; charset=utf-8 None https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/
+url_for_landing_page repository 200 text/html; charset=utf-8 None https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/
+PMC Efetch 200 text/xml; charset=UTF-8 33579 b'<?xml vers'
+
+PMID_26887333 10.1002/mds.26545
+OA True
+url repository 200 text/html; charset=utf-8 104012 https://archive-ouverte.unige.ch/unige:89996
+url_for_landing_page repository 200 text/html; charset=utf-8 104012 https://archive-ouverte.unige.ch/unige:89996
+
+PMID_31665229 10.1093/brain/awz325
+OA True
+url_for_pdf publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf
+url publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf
+url_for_landing_page publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article/142/12/3906/5609874
+
+PMID_39470410 10.1093/brain/awae223
+OA True
+url_for_pdf publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf
+url publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf
+url_for_landing_page publisher 403 text/html; charset=UTF-8 None https://academic.oup.com/brain/article/147/12/4056/7831184
+url repository 200 text/html;charset=utf-8 36139 https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560
+url_for_landing_page repository 200 text/html;charset=utf-8 36139 https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560
+
+PMID_42236313 10.1111/ejn.70570
+OA True
+url publisher 403 text/html; charset=UTF-8 None https://onlinelibrary.wiley.com/doi/10.1111/ejn.70570
+url_for_landing_page publisher 403 text/html; charset=UTF-8 None https://onlinelibrary.wiley.com/doi/10.1111/ejn.70570
+
+PMID_42571859 10.1016/j.nbd.2026.107571
+OA True
+url publisher 200 text/html;charset=UTF-8 2733 https://linkinghub.elsevier.com/retrieve/pii/S0969996126003165
+url_for_landing_page publisher 200 text/html;charset=UTF-8 2733 https://linkinghub.elsevier.com/retrieve/pii/S0969996126003165
+
+PMID_42860886 10.1002/mdc3.70813
+OA True
+url_for_pdf publisher 403 text/html; charset=UTF-8 None https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813
+url publisher 403 text/html; charset=UTF-8 None https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813
+url_for_landing_page publisher 403 text/html; charset=UTF-8 None https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mdc3.70813
+url_for_pdf repository 200 text/html; charset=utf-8 None https://pmc.ncbi.nlm.nih.gov/articles/PMC13655711/pdf/MDC3-9999-0.pdf
+url repository 200 text/html; charset=utf-8 1817 https://pmc.ncbi.nlm.nih.gov/articles/PMC13655711/pdf/MDC3-9999-0.pdf
+url_for_landing_page repository 200 text/html; charset=utf-8 None https://pmc.ncbi.nlm.nih.gov/articles/PMC13655711/
+
+**Checking PMC XML structure**
+**Checking ScienceDirect access**
+**Checking article availability**
+**Checking repository links**
+**Checking manuscript parsing**
+**Checking open-access sources**
+**Checking article access statuses**
+**Querying alternate access sources**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re,json
+from xml.etree import ElementTree as ET
+fails=json.load(open('manifest.json',encoding='utf-8'))
+D={'PMID_19815246':('19815246','10.1016/j.neurol.2009.07.018'),'PMID_24361601':('24361601','10.1016/j.nbd.2013.12.005'),'PMID_25540305':('25540305','10.1212/wnl.0000000000001184'),'PMID_26887333':('26887333','10.1002/mds.26545'),'PMID_31665229':('31665229','10.1093/brain/awz325'),'PMID_39470410':('39470410','10.1093/brain/awae223'),'PMID_42236313':('42236313','10.1111/ejn.70570'),'PMID_42571859':('42571859','10.1016/j.nbd.2026.107571'),'PMID_42860886':('42860886','10.1002/mdc3.70813'),
+'PMID_18420482':('18420482','10.1212/01.wnl.0000303972.16279.46'),'PMID_27766724':('27766724','10.1111/ene.13167'),'PMID_39223361':('39223361','10.1007/s10143-024-02761-x'),'PMID_39884164':('39884164','10.1016/j.clinph.2025.01.005'),'PMID_41105567':('41105567','10.1159/000548468'),'PMID_41448344':('41448344','10.1016/j.neuroscience.2025.12.058'),'PMID_41553951':('41553951','10.1159/000549859'),'PMID_42098512':('42098512','10.1007/s10143-026-04312-y'),'PMID_42909654':('42909654','10.1007/s10072-026-09479-2')}
+h={'User-Agent':'OpenAccessArticleDownloader/1.0 (open access research)'}
+for key,(pmid,doi) in D.items():
+ print('\\n'+key)
+ try:
+  e=requests.get(f'https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:{pmid}&format=json&resultType=core',timeout=25,headers=h).json()['resultList']['result']
+  if e: print('EPMC',e[0].get('pmcid'),e[0].get('isOpenAccess'),e[0].get('fullTextUrlList'))
+  else: print('EPMC no result')
+ except Exception as x: print('EPMC err',type(x).__name__)
+ try:
+  j=requests.get('https://api.openalex.org/works/https://doi.org/'+doi+'?select=doi,open_access,best_oa_location,locations',timeout=25,headers=h).json()
+  print('OpenAlex',j.get('open_access'),j.get('best_oa_location'))
+  for l in (j.get('locations') or []):
+   if l.get('is_oa'): print(' loc',l.get('landing_page_url'),l.get('pdf_url'),l.get('source',{}).get('display_name'))
+ except Exception as x: print('OpenAlex err',type(x).__name__)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+**Awaiting remaining results**
+ succeeded in 47680ms:
+
+PMID_19815246
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1016/j.neurol.2009.07.018'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'green', 'oa_url': 'https://archive-ouverte.unige.ch/unige:33248', 'any_repository_has_fulltext': True} {'id': 'pmh:oai:unige.ch:unige:33248', 'doi': None, 'is_oa': True, 'landing_page_url': 'https://archive-ouverte.unige.ch/unige:33248', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S4306402259', 'display_name': 'Archive ouverte UNIGE (University of Geneva)', 'issn_l': None, 'issn': None, 'is_oa': False, 'is_in_doaj': False, 'is_core': False, 'listed_in': [], 'host_organization': 'https://openalex.org/I114457229', 'host_organization_name': 'University of Geneva', 'host_organization_lineage': ['https://openalex.org/I114457229'], 'host_organization_lineage_names': [], 'type': 'repository'}, 'license': 'cc-by', 'license_id': 'https://openalex.org/licenses/cc-by', 'version': 'submittedVersion', 'is_accepted': False, 'is_published': False, 'raw_source_name': 'ISSN: 0035-3787', 'raw_type': 'info:eu-repo/semantics/article'}
+ loc https://archive-ouverte.unige.ch/unige:33248 None Archive ouverte UNIGE (University of Geneva)
+
+PMID_24361601
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1016/j.nbd.2013.12.005'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'green', 'oa_url': 'https://doaj.org/article/cf35c44fa5e142fd97522569383c1436', 'any_repository_has_fulltext': True} {'id': 'pmh:oai:doaj.org/article:cf35c44fa5e142fd97522569383c1436', 'doi': None, 'is_oa': True, 'landing_page_url': 'https://doaj.org/article/cf35c44fa5e142fd97522569383c1436', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S4306401280', 'display_name': 'DOAJ (DOAJ: Directory of Open Access Journals)', 'issn_l': None, 'issn': None, 'is_oa': False, 'is_in_doaj': False, 'is_core': False, 'listed_in': [], 'host_organization': None, 'host_organization_name': None, 'host_organization_lineage': [], 'host_organization_lineage_names': [], 'type': 'repository'}, 'license': 'cc-by-sa', 'license_id': 'https://openalex.org/licenses/cc-by-sa', 'version': 'submittedVersion', 'is_accepted': False, 'is_published': False, 'raw_source_name': 'Neurobiology of Disease, Vol 64, Iss , Pp 60-65 (2014)', 'raw_type': 'article'}
+ loc https://doaj.org/article/cf35c44fa5e142fd97522569383c1436 None DOAJ (DOAJ: Directory of Open Access Journals)
+
+PMID_25540305
+EPMC PMC4336001 N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1212/WNL.0000000000001184'}, {'availability': 'Free', 'availabilityCode': 'F', 'documentStyle': 'html', 'site': 'Europe_PMC', 'url': 'https://europepmc.org/articles/PMC4336001'}, {'availability': 'Free', 'availabilityCode': 'F', 'documentStyle': 'pdf', 'site': 'Europe_PMC', 'url': 'https://europepmc.org/articles/PMC4336001?pdf=render'}, {'availability': 'Free', 'availabilityCode': 'F', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1212/wnl.0000000000001184'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'bronze', 'oa_url': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'any_repository_has_fulltext': True} {'id': 'doi:10.1212/wnl.0000000000001184', 'doi': 'https://doi.org/10.1212/wnl.0000000000001184', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1212/wnl.0000000000001184', 'pdf_url': 'https://n.neurology.org/content/neurology/84/4/415.full.pdf', 'source': {'id': 'https://openalex.org/S79704628', 'display_name': 'Neurology', 'issn_l': '0028-3878', 'issn': ['0028-3878', '1526-632X'], 'is_oa': False, 'is_in_doaj': False, 'is_core': True, 'listed_in': ['anvur-scientific', 'cwts-core', 'dongbi-a', 'doyens', 'jufo-3', 'ki-jl-2', 'medline', 'norway-2', 'poland-140', 'russia-white-list-1', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310315671', 'host_organization_name': 'Lippincott Williams & Wilkins', 'host_organization_lineage': ['https://openalex.org/P4310315671', 'https://openalex.org/P4310318547'], 'host_organization_lineage_names': ['Lippincott Williams & Wilkins', 'Wolters Kluwer'], 'type': 'journal'}, 'license': None, 'license_id': None, 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'Neurology', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1212/wnl.0000000000001184 https://n.neurology.org/content/neurology/84/4/415.full.pdf Neurology
+ loc https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/ None PubMed Central
+
+PMID_26887333
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1002/mds.26545'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'green', 'oa_url': 'https://archive-ouverte.unige.ch/unige:89996', 'any_repository_has_fulltext': True} {'id': 'pmh:oai:unige.ch:aou:unige:89996', 'doi': None, 'is_oa': True, 'landing_page_url': 'https://archive-ouverte.unige.ch/unige:89996', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S4306402259', 'display_name': 'Archive ouverte UNIGE (University of Geneva)', 'issn_l': None, 'issn': None, 'is_oa': False, 'is_in_doaj': False, 'is_core': False, 'listed_in': [], 'host_organization': 'https://openalex.org/I114457229', 'host_organization_name': 'University of Geneva', 'host_organization_lineage': ['https://openalex.org/I114457229'], 'host_organization_lineage_names': [], 'type': 'repository'}, 'license': 'cc-by', 'license_id': 'https://openalex.org/licenses/cc-by', 'version': 'submittedVersion', 'is_accepted': False, 'is_published': False, 'raw_source_name': 'ISSN: 0885-3185', 'raw_type': 'info:eu-repo/semantics/article'}
+ loc https://archive-ouverte.unige.ch/unige:89996 None Archive ouverte UNIGE (University of Geneva)
+
+PMID_31665229
+EPMC None N {'fullTextUrl': [{'availability': 'Free', 'availabilityCode': 'F', 'documentStyle': 'pdf', 'site': 'Unpaywall', 'url': 'https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf'}, {'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1093/brain/awz325'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'bronze', 'oa_url': 'https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf', 'any_repository_has_fulltext': False} {'id': 'doi:10.1093/brain/awz325', 'doi': 'https://doi.org/10.1093/brain/awz325', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1093/brain/awz325', 'pdf_url': 'https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf', 'source': {'id': 'https://openalex.org/S118357697', 'display_name': 'Brain', 'issn_l': '0006-8950', 'issn': ['0006-8950', '1460-2156'], 'is_oa': False, 'is_in_doaj': False, 'is_core': True, 'listed_in': ['anvur-class-a', 'anvur-scientific', 'cwts-core', 'dongbi-a', 'doyens', 'jufo-3', 'ki-jl-3', 'medline', 'norway-2', 'poland-200', 'russia-white-list-1', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310311648', 'host_organization_name': 'Oxford University Press', 'host_organization_lineage': ['https://openalex.org/P4310311648', 'https://openalex.org/P4310311647'], 'host_organization_lineage_names': ['Oxford University Press', 'University of Oxford'], 'type': 'journal'}, 'license': None, 'license_id': None, 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'Brain', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1093/brain/awz325 https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf Brain
+
+PMID_39470410
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1093/brain/awae223'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'bronze', 'oa_url': 'https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf', 'any_repository_has_fulltext': True} {'id': 'doi:10.1093/brain/awae223', 'doi': 'https://doi.org/10.1093/brain/awae223', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1093/brain/awae223', 'pdf_url': 'https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf', 'source': {'id': 'https://openalex.org/S118357697', 'display_name': 'Brain', 'issn_l': '0006-8950', 'issn': ['0006-8950', '1460-2156'], 'is_oa': False, 'is_in_doaj': False, 'is_core': True, 'listed_in': ['anvur-class-a', 'anvur-scientific', 'cwts-core', 'dongbi-a', 'doyens', 'jufo-3', 'ki-jl-3', 'medline', 'norway-2', 'poland-200', 'russia-white-list-1', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310311648', 'host_organization_name': 'Oxford University Press', 'host_organization_lineage': ['https://openalex.org/P4310311648', 'https://openalex.org/P4310311647'], 'host_organization_lineage_names': ['Oxford University Press', 'University of Oxford'], 'type': 'journal'}, 'license': None, 'license_id': None, 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'Brain', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1093/brain/awae223 https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf Brain
+ loc https://doi.org/10.15496/publikation-106888 None Universitätsbibliothek Tübingen
+
+PMID_42236313
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1111/ejn.70570'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'hybrid', 'oa_url': 'https://doi.org/10.1111/ejn.70570', 'any_repository_has_fulltext': False} {'id': 'doi:10.1111/ejn.70570', 'doi': 'https://doi.org/10.1111/ejn.70570', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1111/ejn.70570', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S171130801', 'display_name': 'European Journal of Neuroscience', 'issn_l': '0953-816X', 'issn': ['0953-816X', '1460-9568'], 'is_oa': False, 'is_in_doaj': False, 'is_core': True, 'listed_in': ['anvur-class-a', 'anvur-scientific', 'cwts-core', 'dongbi-c', 'doyens', 'jufo-2', 'ki-jl-1', 'medline', 'norway-1', 'poland-100', 'russia-white-list-2', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310320595', 'host_organization_name': 'Wiley', 'host_organization_lineage': ['https://openalex.org/P4310320595'], 'host_organization_lineage_names': ['Wiley'], 'type': 'journal'}, 'license': 'cc-by', 'license_id': 'https://openalex.org/licenses/cc-by', 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'European Journal of Neuroscience', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1111/ejn.70570 None European Journal of Neuroscience
+
+PMID_42571859
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1016/j.nbd.2026.107571'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'gold', 'oa_url': 'https://doi.org/10.1016/j.nbd.2026.107571', 'any_repository_has_fulltext': False} {'id': 'doi:10.1016/j.nbd.2026.107571', 'doi': 'https://doi.org/10.1016/j.nbd.2026.107571', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1016/j.nbd.2026.107571', 'pdf_url': None, 'source': {'id': 'https://openalex.org/S35878148', 'display_name': 'Neurobiology of Disease', 'issn_l': '0969-9961', 'issn': ['0969-9961', '1095-953X'], 'is_oa': True, 'is_in_doaj': True, 'is_core': True, 'listed_in': ['cwts-core', 'doaj', 'dongbi-c', 'doyens', 'jufo-2', 'ki-jl-1', 'medline', 'norway-1', 'oarl', 'poland-100', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310320990', 'host_organization_name': 'Elsevier BV', 'host_organization_lineage': ['https://openalex.org/P4310320990'], 'host_organization_lineage_names': ['Elsevier BV'], 'type': 'journal'}, 'license': 'cc-by-nc', 'license_id': 'https://openalex.org/licenses/cc-by-nc', 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'Neurobiology of Disease', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1016/j.nbd.2026.107571 None Neurobiology of Disease
+
+PMID_42860886
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1002/mdc3.70813'}]}
+OpenAlex {'is_oa': True, 'oa_status': 'hybrid', 'oa_url': 'https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813', 'any_repository_has_fulltext': True} {'id': 'doi:10.1002/mdc3.70813', 'doi': 'https://doi.org/10.1002/mdc3.70813', 'is_oa': True, 'landing_page_url': 'https://doi.org/10.1002/mdc3.70813', 'pdf_url': 'https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813', 'source': {'id': 'https://openalex.org/S2764712647', 'display_name': 'Movement Disorders Clinical Practice', 'issn_l': '2330-1619', 'issn': ['2330-1619'], 'is_oa': False, 'is_in_doaj': False, 'is_core': True, 'listed_in': ['cwts-core', 'dongbi-c', 'doyens', 'jufo-1', 'ki-jl-1', 'medline', 'norway-1', 'poland-20', 'russia-white-list-2', 'vabb-shw'], 'host_organization': 'https://openalex.org/P4310320595', 'host_organization_name': 'Wiley', 'host_organization_lineage': ['https://openalex.org/P4310320595'], 'host_organization_lineage_names': ['Wiley'], 'type': 'journal'}, 'license': 'cc-by', 'license_id': 'https://openalex.org/licenses/cc-by', 'version': 'publishedVersion', 'is_accepted': True, 'is_published': True, 'raw_source_name': 'Movement Disorders Clinical Practice', 'raw_type': 'journal-article'}
+ loc https://doi.org/10.1002/mdc3.70813 https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mdc3.70813 Movement Disorders Clinical Practice
+ loc https://pmc.ncbi.nlm.nih.gov/articles/PMC13655711/ https://pmc.ncbi.nlm.nih.gov/articles/PMC13655711/pdf/MDC3-9999-0.pdf PubMed Central
+
+PMID_18420482
+EPMC None N {'fullTextUrl': [{'availability': 'Free', 'availabilityCode': 'F', 'documentStyle': 'abs', 'site': 'www.neurology.org', 'url': 'http://intl.neurology.org/cgi/content/abstract/71/2/80'}, {'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'html', 'site': 'www.neurology.org', 'url': 'http://intl.neurology.org/cgi/content/full/71/2/80'}, {'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1212/01.wnl.0000303972.16279.46'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_27766724
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1111/ene.13167'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_39223361
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1007/s10143-024-02761-x'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_39884164
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1016/j.clinph.2025.01.005'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_41105567
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1159/000548468'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_41448344
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1016/j.neuroscience.2025.12.058'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_41553951
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1159/000549859'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_42098512
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1007/s10143-026-04312-y'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+PMID_42909654
+EPMC None N {'fullTextUrl': [{'availability': 'Subscription required', 'availabilityCode': 'S', 'documentStyle': 'doi', 'site': 'DOI', 'url': 'https://doi.org/10.1007/s10072-026-09479-2'}]}
+OpenAlex {'is_oa': False, 'oa_status': 'closed', 'oa_url': None, 'any_repository_has_fulltext': False} None
+
+**Waiting for OpenAlex responses**
+**Checking repository access paths**
+**Parsing Unige page links**
+**Preparing batch XML checks**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+from xml.etree import ElementTree as E
+ids=['PMC4336001','PMC13655711']
+h={'User-Agent':'OpenAccessArticleDownloader/1.0 (open-access retrieval)'}
+for id in ids:
+ u=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={id}&rettype=full&retmode=xml'
+ r=requests.get(u,headers=h,timeout=40)
+ print(id,r.status_code,r.headers.get('content-type'),len(r.content),r.content[:8])
+ try:
+  root=E.fromstring(r.content)
+  names=lambda x: x.tag.rsplit('}',1)[-1]
+  bodies=[x for x in root.iter() if names(x)=='body']
+  print('roots',names(root),'body_count',len(bodies),'body_chars',[sum(len(t) for t in b.itertext()) for b in bodies], 'article_titles',sum(names(x)=='article-title' for x in root.iter()))
+ except Exception as e: print('parse',type(e).__name__)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 1110ms:
+PMC4336001 200 text/xml; charset=UTF-8 33579 b'<?xml ve'
+roots pmc-articleset body_count 0 body_chars [] article_titles 1
+PMC13655711 200 text/xml; charset=UTF-8 161680 b'<?xml ve'
+roots pmc-articleset body_count 1 body_chars [43914] article_titles 42
+
+**Inspecting JATS structure**
+**Inspecting XML tags**
+**Inspecting XML descendant names**
+**Inspecting XML tag counts**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re
+from html.parser import HTMLParser
+h={'User-Agent':'Mozilla/5.0 (compatible; open-access retrieval/1.0)'}
+urls=['https://europepmc.org/articles/PMC4336001?pdf=render','https://europepmc.org/articles/PMC4336001?pdf=render#','https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/','https://archive-ouverte.unige.ch/unige:33248','https://archive-ouverte.unige.ch/unige:89996','https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560','https://doi.org/10.1093/brain/awae223','https://www.sciencedirect.com/science/article/pii/S0969996126003165/pdfft?isDTMRedir=true&download=true']
+class P(HTMLParser):
+ def __init__(self):super().__init__();self.links=[]
+ def handle_starttag(self,t,a):
+  d=dict(a);u=d.get('href')
+  if t=='a' and u:self.links.append(u)
+for u in urls:
+ try:
+  r=requests.get(u,headers=h,timeout=35,allow_redirects=True)
+  print('\\nURL',u,'=>',r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+  if 'html' in r.headers.get('content-type','').lower():
+   p=P();p.feed(r.text)
+   links=[]
+   for v in p.links:
+    if re.search(r'pdf|bitstream|download|file|asset|handle|document',v,re.I):links.append(v)
+   print('relevant_links',links[:12])
+ except Exception as e:print('\\nURL',u,'ERROR',type(e).__name__,str(e)[:100])
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 4893ms:
+
+URL https://europepmc.org/articles/PMC4336001?pdf=render => 403 text/html; charset=UTF-8 5647 https://europepmc.org/articles/PMC4336001?pdf=render b'<!DOCTYP'
+relevant_links []
+
+URL https://europepmc.org/articles/PMC4336001?pdf=render# => 403 text/html; charset=UTF-8 5647 https://europepmc.org/articles/PMC4336001?pdf=render b'<!DOCTYP'
+relevant_links []
+
+URL https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/ => 200 text/html; charset=utf-8 21411 https://pmc.ncbi.nlm.nih.gov/articles/PMC4336001/pdf/ b'<!doctyp'
+relevant_links []
+
+URL https://archive-ouverte.unige.ch/unige:33248 => 200 text/html; charset=utf-8 660481 https://archive-ouverte.unige.ch/unige:33248 b'<!DOCTYP'
+relevant_links []
+
+URL https://archive-ouverte.unige.ch/unige:89996 => 200 text/html; charset=utf-8 694443 https://archive-ouverte.unige.ch/unige:89996 b'<!DOCTYP'
+relevant_links []
+
+URL https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560 => 200 text/html;charset=utf-8 36139 https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560 b'<?xml ve'
+relevant_links ['/xmlui/handle/10900/11221', '/xmlui/handle/10900/33644', '/xmlui/handle/10900/11221/browse?value=Klocke, Philipp&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/11221/browse?value=Löffler, Moritz A.&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/11221/browse?value=Müssler, Hannah&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/11221/browse?value=Breu, Maria-Sophie&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/11221/browse?value=Gharabaghi, Alireza&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/11221/browse?value=Weiss, Daniel&type=author\n\t\t\t\t\t\t\t\t\t\t', '/xmlui/handle/10900/165560?show=full', '/xmlui/handle/10900/33644', '/xmlui/handle/10900/35959', '/xmlui/handle/10900/11221/submit']
+
+URL https://doi.org/10.1093/brain/awae223 => 403 text/html; charset=UTF-8 5622 https://academic.oup.com/brain/article/147/12/4056/7831184 b'<!DOCTYP'
+relevant_links []
+
+URL https://www.sciencedirect.com/science/article/pii/S0969996126003165/pdfft?isDTMRedir=true&download=true => 403 text/html; charset=UTF-8 832979 https://www.sciencedirect.com/science/article/pii/S0969996126003165/pdfft?isDTMRedir=true&download=true b'<!DOCTYP'
+relevant_links []
+
+**Inspecting repository link metadata**
+**Inspecting repository metadata**
+**Listing document matches**
+**Checking metadata and links**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re,html
+from html.parser import HTMLParser
+class P(HTMLParser):
+ def __init__(self):super().__init__();self.links=[];self.meta=[]
+ def handle_starttag(self,t,a):
+  d=dict(a)
+  if t=='a' and d.get('href'):self.links.append(d['href'])
+  if t=='meta' and any(k in (d.get('name','')+' '+d.get('property','')).lower() for k in ['pdf','identifier','dc.','citation','fulltext']):self.meta.append(d)
+h={'User-Agent':'Mozilla/5.0'}
+for u in ['https://archive-ouverte.unige.ch/unige:33248','https://archive-ouverte.unige.ch/unige:89996','https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560']:
+ r=requests.get(u,headers=h,timeout=35);p=P();p.feed(r.text)
+ print('\\nPAGE',u,'metas',p.meta[:15])
+ print('links', [x for x in p.links if re.search(r'bitstream|pdf|download|file|sequence|content',x,re.I)][:40])
+ for pat in ['bitstream','citation_pdf_url','application/pdf','pdf_url','originalName','bundleName']:
+  m=re.search(pat,r.text,re.I)
+  if m:print('token',pat,repr(r.text[max(0,m.start()-100):m.start()+240]))
+r=requests.get('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC4336001&rettype=full&retmode=xml',headers=h,timeout=35)
+from xml.etree import ElementTree as ET
+root=ET.fromstring(r.content); names=[x.tag.rsplit('}',1)[-1] for x in root.iter()]
+from collections import Counter
+print('\\nPMC4336001',Counter(names).most_common(25))
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 3819ms:
+
+PAGE https://archive-ouverte.unige.ch/unige:33248 metas [{'name': 'citation_keywords', 'content': 'Deep Brain Stimulation/adverse effects/methods; Disease Progression; Gait/physiology; Gait Disorders, Neurologic/etiology/therapy; Globus Pallidus/physiopathology; Humans; Parkinson Disease/physiopathology/therapy; Subthalamic Nucleus/physiopathology; Treatment Outcome'}, {'name': 'citation_publication_date', 'content': '2010'}, {'name': 'citation_title', 'content': 'Stimulation cérébrale profonde et troubles de la marche dans la maladie de Parkinson'}, {'name': 'citation_pmid', 'content': '19815246'}, {'name': 'citation_year', 'content': '2010'}, {'name': 'citation_type', 'content': 'Article scientifique'}, {'name': 'citation_journal_title', 'content': 'Revue neurologique'}, {'name': 'citation_abstract', 'content': 'Gait disorders and freezing of gait (FOG) are seen in most patients with advanced Parkinson disease. Response to levodopa and deep brain stimulation is variable across patients.'}, {'name': 'citation_author', 'content': 'Ferraye, M-U'}, {'name': 'citation_author', 'content': 'Debû, B'}, {'name': 'citation_author', 'content': 'Pollak, Pierre'}, {'name': 'citation_date', 'content': '2010'}, {'name': 'citation_issue', 'content': '2'}, {'name': 'citation_cover_date', 'content': '2010'}, {'name': 'citation_authors', 'content': 'Ferraye, M-U; Debû, B; Pollak, Pierre'}]
+links []
+
+PAGE https://archive-ouverte.unige.ch/unige:89996 metas [{'name': 'citation_publication_date', 'content': '2016'}, {'name': 'citation_title', 'content': 'Subthalamic stimulation may inhibit the beneficial effects of levodopa on akinesia and gait'}, {'name': 'citation_pmid', 'content': '26887333'}, {'name': 'citation_year', 'content': '2016'}, {'name': 'citation_type', 'content': 'Article scientifique'}, {'name': 'citation_journal_title', 'content': 'Movement disorders'}, {'name': 'citation_abstract', 'content': 'Gait and akinesia deterioration in PD patients during the immediate postoperative period of DBS has been directly related to stimulation in the subthalamic region. The underlying mechanisms remain poorly understood. The aim of the present study was to clinically and anatomically describe this side effect.'}, {'name': 'citation_author', 'content': 'Fleury, Vanessa'}, {'name': 'citation_author', 'content': 'Pollak, Pierre'}, {'name': 'citation_author', 'content': 'Gere, Julien'}, {'name': 'citation_author', 'content': 'Tommasi, Giorgio'}, {'name': 'citation_author', 'content': 'Romito, Luigi'}, {'name': 'citation_author', 'content': 'Combescure, Christophe'}, {'name': 'citation_author', 'content': 'Bardinet, Eric'}, {'name': 'citation_author', 'content': 'Chabardes, Stephan'}]
+links []
+token application/pdf '>Fleury-2016.pdf\\u003C/name>\\n            \\u003Csize>658923\\u003C/size>\\n            \\u003Cmimetype>application/pdf\\u003C/mimetype>\\n        \\u003C/file>\\n    \\u003C/files>\\n    \\u003CadditionalMetadata>\\n        \\u003Cdiffusion>restrictedAccess\\u003C/diffusion>\\n        \\u003Cstructures>\\n            \\u003Cstructure>Faculté de médecine /'
+
+PAGE https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560 metas [{'name': 'DC.identifier', 'content': '0006-8950'}, {'name': 'DC.identifier', 'content': 'http://hdl.handle.net/10900/165560', 'scheme': 'DCTERMS.URI'}, {'name': 'DC.language', 'content': 'en', 'xml:lang': 'en', 'scheme': 'DCTERMS.RFC1766'}, {'name': 'DC.publisher', 'content': 'Oxford : Oxford Univ Press', 'xml:lang': 'de_DE'}, {'name': 'DC.relation', 'content': 'http://dx.doi.org/10.1093/brain/awae223', 'scheme': 'DCTERMS.URI'}, {'name': 'DC.subject', 'content': '610', 'xml:lang': 'de_DE', 'scheme': 'DCTERMS.DDC'}, {'name': 'DC.subject', 'content': '570', 'xml:lang': 'de_DE', 'scheme': 'DCTERMS.DDC'}, {'name': 'DC.title', 'content': "Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease", 'xml:lang': 'de_DE'}, {'name': 'DC.type', 'content': 'Article', 'xml:lang': 'de_DE'}, {'xml:lang': 'de_DE', 'content': 'Klocke, Philipp', 'name': 'DC.creator'}, {'xml:lang': 'de_DE', 'content': 'Loeffler, Moritz A.', 'name': 'DC.creator'}, {'xml:lang': 'de_DE', 'content': 'Muessler, Hannah', 'name': 'DC.creator'}, {'xml:lang': 'de_DE', 'content': 'Breu, Maria-Sophie', 'name': 'DC.creator'}, {'xml:lang': 'de_DE', 'content': 'Gharabaghi, Alireza', 'name': 'DC.creator'}, {'xml:lang': 'de_DE', 'content': 'Weiss, Daniel', 'name': 'DC.creator'}]
+links []
+
+PMC4336001 [('p', 384), ('title', 194), ('list', 189), ('list-item', 189), ('custom-meta', 17), ('meta-name', 17), ('meta-value', 17), ('contrib', 9), ('name', 9), ('surname', 9), ('given-names', 9), ('degrees', 9), ('author-comment', 9), ('journal-id', 7), ('article-id', 7), ('day', 6), ('month', 6), ('year', 6), ('date', 5), ('sec', 5), ('subject', 4), ('event', 3), ('issn', 2), ('subj-group', 2), ('self-uri', 2)]
+
+**Adapting PMC section parsing**
+**Adapting fallback section parser**
+**Inspecting file paths**
+**Inspecting archive metadata**
+**Inspecting file endpoints**
+**Examining Unige source**
+**Querying DOAJ API**
+**Preparing targeted repair script**
+**Inspecting Tübingen metadata**
+**Checking article access links**
+**Searching for article PDFs**
+**Searching repository PDF**
+web search: 
+web search: "10.1016/j.nbd.2013.12.005" PDF open access ...
+**Fetching and checking PDF**
+**Searching article PDFs**
+web search: 
+web search: "19815246" full text pdf archive ouverte Genève ...
+**Checking full-text access**
+**Locating the repository PDF**
+**Searching PDF metadata**
+**Checking OUP PDF access**
+**Preparing direct article download**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re,json
+from html.parser import HTMLParser
+h={'User-Agent':'Mozilla/5.0 (compatible; open-access retrieval/1.0)'}
+for u in ['https://doaj.org/api/search/articles/doi:10.1016%2Fj.nbd.2013.12.005','https://api.unpaywall.org/v2/10.1016/j.nbd.2013.12.005?email=oa-atlas%40example.org','https://archive-ouverte.unige.ch/api/records/unige:89996','https://archive-ouverte.unige.ch/api/records/89996','https://archive-ouverte.unige.ch/server/api/core/items/89996','https://archive-ouverte.unige.ch/server/api/core/items/unige%3A89996']:
+ try:
+  r=requests.get(u,headers=h,timeout=30); print('\\n',r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+  if 'json' in r.headers.get('content-type',''): print(r.text[:500])
+ except Exception as e: print('\\nERR',u,type(e).__name__)
+for u in ['https://archive-ouverte.unige.ch/unige:89996','https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560']:
+ r=requests.get(u,headers=h,timeout=30);print('\\nPAGE',u)
+ for pat in [r'["'^"'"\\s<>]{1,180}\\.pdf["'^"'"\\s<>]{0,100}',r'bitstream["'^"'"\\s<>]{0,240}',r'citation_pdf_url["'^>]{0,200}'"',r'application/pdf["'^>]{0,200}'"',r'files?["'^"'"\\s<>]{0,160}']:
+  vals=list(dict.fromkeys(re.findall(pat,r.text,re.I)))
+  if vals:print('PAT',pat,vals[:5])
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 5202ms:
+
+ 200 application/json 4818 https://doaj.org/api/search/articles/doi:10.1016%2Fj.nbd.2013.12.005 b'{"total"'
+{"total": 1, "page": 1, "pageSize": 10, "timestamp": "2026-11-13T07:45:59.022932Z", "query": "doi:10.1016/j.nbd.2013.12.005", "results": [{"last_updated": "2025-08-19T17:48:41Z", "bibjson": {"identifier": [{"id": "1095-953X", "type": "eissn"}, {"id": "10.1016/j.nbd.2013.12.005", "type": "doi"}], "journal": {"volume": "64", "number": "", "country": "US", "issns": ["0969-9961", "1095-953X"], "publisher": "Elsevier", "language": ["EN"], "title": "Neurobiology of Disease"}, "month": "04", "end_page"
+
+ 200 application/json 6857 https://api.unpaywall.org/v2/10.1016/j.nbd.2013.12.005?email=oa-atlas%40example.org b'{"best_o'
+{"best_oa_location":{"endpoint_id":"8e556f4518885d9a235","evidence":"deprecated","host_type":"repository","is_best":true,"license":"cc-by-sa","oa_date":"2013-12-17","pmh_id":"oai:doaj.org/article:cf35c44fa5e142fd97522569383c1436","repository_institution":null,"updated":"deprecated","url":"https://doaj.org/article/cf35c44fa5e142fd97522569383c1436","url_for_landing_page":"https://doaj.org/article/cf35c44fa5e142fd97522569383c1436","url_for_pdf":null,"version":"submittedVersion"},"data_standard":2,"
+
+ 404 text/html; charset=utf-8 51376 https://archive-ouverte.unige.ch/api/records/unige:89996 b'<!doctyp'
+
+ 404 text/html; charset=utf-8 51376 https://archive-ouverte.unige.ch/api/records/89996 b'<!doctyp'
+
+ 404 text/html; charset=utf-8 51376 https://archive-ouverte.unige.ch/server/api/core/items/89996 b'<!doctyp'
+
+ 404 text/html; charset=utf-8 51376 https://archive-ouverte.unige.ch/server/api/core/items/unige%3A89996 b'<!doctyp'
+
+PAGE https://archive-ouverte.unige.ch/unige:89996
+PAT [^"\s<>]{1,180}\.pdf[^"\s<>]{0,100} ['Fleury-2016.pdf', 'Fleury-2016.pdf\\u003C/name']
+PAT application/pdf[^>]{0,200} ['application/pdf\\u003C/mimetype', 'application/pdf","type":"Article (Published version)","resId":"86ec35c0-461a-4117-bd06-3aa529683418","isUnderEmbargo":false}],"contributors":[{"firstName":"Vanessa","lastName":"Fleury","role":"author","fullName":"Fl', 'application/pdf","type":"Article (Published version)","resId":"86ec35c0-461a-4117-bd06-3aa529683418","isUnderEmbargo":false}],"structuresWithParentsIds":[["61","50","3"],["64","50","3"]],"topStructuresNames":["Facul']
+PAT files?[^"\s<>]{0,160} ['files', 'files[_ngcontent-serverApp-c4205442573]{display:grid;border:2px', 'files[_ngcontent-serverApp-c4205442573]', 'files[_ngcontent-serverApp-c4205442573]{border-color:#434343}body[dark-mode=true]', 'file[_ngcontent-serverApp-c2855924609]{color:#000;display:grid;align-self:start}@media(max-width:1359px){[_nghost-serverApp-c2855924609]']
+
+PAGE https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560
+PAT files?[^"\s<>]{0,160} ['file']
+
+**Inspecting embedded file metadata**
+**Inspecting frontend API routes**
+**Checking DOAJ link URLs**
+**Checking DOAJ article links**
+**Inspecting page metadata**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests,re,json
+from html.parser import HTMLParser
+h={'User-Agent':'Mozilla/5.0'}
+r=requests.get('https://doaj.org/api/search/articles/doi:10.1016%2Fj.nbd.2013.12.005',headers=h,timeout=30).json()
+for x in r['results'][0]['bibjson'].get('link',[]): print('DOAJ_LINK',x)
+class P(HTMLParser):
+ def __init__(self):super().__init__();self.scripts=[];self.metas=[]
+ def handle_starttag(self,t,a):
+  d=dict(a)
+  if t=='script' and d.get('src'):self.scripts.append(d['src'])
+  if t=='meta':
+   n=(d.get('name','')+' '+d.get('property','')).lower()
+   if 'pdf' in n or n.startswith('dc.') or n.startswith('citation_'): self.metas.append((n,d.get('content')))
+for domain_url in ['https://archive-ouverte.unige.ch/unige:89996','https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560']:
+ r=requests.get(domain_url,headers=h,timeout=30); p=P();p.feed(r.text)
+ print('\\nPAGE',domain_url,'scripts',p.scripts[:10],'metas',p.metas[:40])
+ if 'unige' in domain_url:
+  for k in ['resId','Fleury-2016.pdf','api/','download','retrieve','fileUrl']:
+   ms=list(re.finditer(re.escape(k),r.text,re.I));print('KEY',k,'count',len(ms))
+   for m in ms[:2]:print(repr(r.text[max(0,m.start()-120):m.start()+250]))
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 2611ms:
+DOAJ_LINK {'type': 'fulltext', 'url': 'http://www.sciencedirect.com/science/article/pii/S0969996113003410'}
+
+PAGE https://archive-ouverte.unige.ch/unige:89996 scripts ['runtime.46088c12d22df66b.js', 'polyfills.f3eba90f71f39740.js', 'scripts.50223aa2943a5ec3.js', 'main.46ef290c9d0e5b5c.js'] metas [('citation_publication_date ', '2016'), ('citation_title ', 'Subthalamic stimulation may inhibit the beneficial effects of levodopa on akinesia and gait'), ('citation_pmid ', '26887333'), ('citation_year ', '2016'), ('citation_type ', 'Article scientifique'), ('citation_journal_title ', 'Movement disorders'), ('citation_abstract ', 'Gait and akinesia deterioration in PD patients during the immediate postoperative period of DBS has been directly related to stimulation in the subthalamic region. The underlying mechanisms remain poorly understood. The aim of the present study was to clinically and anatomically describe this side effect.'), ('citation_author ', 'Fleury, Vanessa'), ('citation_author ', 'Pollak, Pierre'), ('citation_author ', 'Gere, Julien'), ('citation_author ', 'Tommasi, Giorgio'), ('citation_author ', 'Romito, Luigi'), ('citation_author ', 'Combescure, Christophe'), ('citation_author ', 'Bardinet, Eric'), ('citation_author ', 'Chabardes, Stephan'), ('citation_author ', 'Momjian, Shahan Marc'), ('citation_author ', 'Krainik, Alexandre'), ('citation_author ', 'Burkhard, Pierre'), ('citation_author ', 'Yelnik, Jérôme'), ('citation_author ', 'Krack, Paul'), ('citation_date ', '2016'), ('citation_issue ', '9'), ('citation_cover_date ', '2016'), ('citation_authors ', 'Fleury, Vanessa; Pollak, Pierre; Gere, Julien; Tommasi, Giorgio; Romito, Luigi; Combescure, Christophe; Bardinet, Eric; Chabardes, Stephan; Momjian, Shahan Marc; Krainik, Alexandre; Burkhard, Pierre; Yelnik, Jérôme; Krack, Paul'), ('citation_firstpage ', '1389-1397'), ('citation_issn ', '0885-3185'), ('citation_doi ', '10.1002/mds.26545'), ('citation_language ', 'eng'), ('citation_volume ', '31')]
+KEY resId count 594
+'_ripple"></span><solidify-icon _ngcontent-serverapp-c494189493 class="icon fa-icon" _nghost-serverapp-c2810317318 icon="resId" ngh="4"><!----><fa-icon _ngcontent-serverapp-c2810317318 aria-hidden="true" class="ng-fa-icon icon fa-icon ng-star-inserted" ngh="3"><svg data-prefix="fas" data-icon="key" class="svg-inline--fa fa-key fa-undefined fa-pull-undefined" role="img"'
+'481203":{"b":{"R2":[{"contributorRoleId":"37d4398b-023a-41a8-a7fe-ff0237626043","labels":[{"text":"Author","language":{"resId":"EN","code":"en","iso6392":"eng","sortValue":20}},{"text":"Auteur-e","language":{"resId":"FR","code":"fr","iso6392":"fre","sortValue":10}}],"publicationSubtypeId":"R2","sortValue":10,"value":"author"},{"contributorRoleId":"cc6e3b26-47f5-4c83-9'
+KEY Fleury-2016.pdf count 7
+'serverapp-c2855924609 class="ng-star-inserted" ngh="39"><div _ngcontent-serverapp-c2855924609 class="image-file" title="Fleury-2016.pdf - 643.5 KB"><solidify-icon _ngcontent-serverapp-c2855924609 class="size-20 fa-icon" _nghost-serverapp-c2810317318 icon="filePdf" ngh="4"><!----><fa-icon _ngcontent-serverapp-c2810317318 aria-hidden="true" class="ng-fa-icon icon fa-ico'
+'le (Published version)\\u003C/type>\\n            \\u003CaccessLevel>Restricted\\u003C/accessLevel>\\n            \\u003Cname>Fleury-2016.pdf\\u003C/name>\\n            \\u003Csize>658923\\u003C/size>\\n            \\u003Cmimetype>application/pdf\\u003C/mimetype>\\n        \\u003C/file>\\n    \\u003C/files>\\n    \\u003CadditionalMetadata>\\n        \\u003Cdiffusion>restrictedAccess\\u003C'
+KEY api/ count 0
+KEY download count 50
+'-serverApp-c820536037]   .right-part[_ngcontent-serverApp-c820536037]   .statistics[_ngcontent-serverApp-c820536037]   .download-number[_ngcontent-serverApp-c820536037]{display:grid;grid-template-columns:max-content max-content max-content;grid-gap:8px;align-items:center;justify-content:center}[_nghost-serverApp-c820536037]   .main[_ngcontent-serverApp-c820536037]   .'
+'924609]{visibility:hidden}[_nghost-serverApp-c2855924609]   .button-wrapper[_ngcontent-serverApp-c2855924609]   .button-download[_ngcontent-serverApp-c2855924609]{line-height:25px;padding:0 10px}[_nghost-serverApp-c2855924609]   .button-wrapper[_ngcontent-serverApp-c2855924609]   .button-download[_ngcontent-serverApp-c2855924609]   .button-text[_ngcontent-serverApp-c2'
+KEY retrieve count 15
+'Prompt":"You can continue the discussion without having to repeat the details from the previous prompt.\\n\\nYou can also retrieve your previous prompt from the session using the up arrow.\\nThis may be useful if you wish to rephrase your initial prompt.","thought":"Here you can choose whether or not to enable the model’s reflection feature.\\n\\nIf it is disabled, this us'
+'ialog":{"message":"Not all publications could be imported correctly. Below is the list of identifiers that could not be retrieved:\\n\\n{{listIdentifiers}}\\n\\nIf you\'re lucky, you\'ll just have to run a multiple import again, but more likely you\'ll have to import them individually.","title":"Multiple import ended with errors"},"importFinishedSuccessfully":"Multiple impor'
+KEY fileUrl count 0
+
+PAGE https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560 scripts ['/xmlui/themes/hsbiblio/lib/js/modernizr-1.7.min.js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', '/xmlui/themes/hsbiblio/lib/js/jquery-ui-1.8.15.custom.min.js'] metas [('dc.identifier ', '0006-8950'), ('dc.identifier ', 'http://hdl.handle.net/10900/165560'), ('dc.language ', 'en'), ('dc.publisher ', 'Oxford : Oxford Univ Press'), ('dc.relation ', 'http://dx.doi.org/10.1093/brain/awae223'), ('dc.subject ', '610'), ('dc.subject ', '570'), ('dc.title ', "Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease"), ('dc.type ', 'Article'), ('dc.creator ', 'Klocke, Philipp'), ('dc.creator ', 'Loeffler, Moritz A.'), ('dc.creator ', 'Muessler, Hannah'), ('dc.creator ', 'Breu, Maria-Sophie'), ('dc.creator ', 'Gharabaghi, Alireza'), ('dc.creator ', 'Weiss, Daniel'), ('citation_keywords ', 'Article'), ('citation_title ', "Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease"), ('citation_issn ', '0006-8950'), ('citation_publisher ', 'Oxford : Oxford Univ Press'), ('citation_language ', 'en'), ('citation_journal_title ', 'Brain'), ('citation_author ', 'Klocke, Philipp'), ('citation_author ', 'Loeffler, Moritz A.'), ('citation_author ', 'Muessler, Hannah'), ('citation_author ', 'Breu, Maria-Sophie'), ('citation_author ', 'Gharabaghi, Alireza'), ('citation_author ', 'Weiss, Daniel'), ('citation_date ', '2024'), ('citation_volume ', '147'), ('citation_abstract_html_url ', 'https://publikationen.uni-tuebingen.de/xmlui/handle/10900/165560'), ('citation_issue ', '12')]
+
+**Checking ScienceDirect PDF access**
+**Checking DSpace bitstream links**
+**Searching remaining records**
+**Launching repository searches**
+web search: 
+web search: "10.1093/brain/awz325" filetype:pdf repository ...
+**Checking official PDF token**
+**Checking signed URL access**
+**Reclassifying unavailable records**
+**Preparing download validation**
+**Preparing JATS/PDF validation**
+**Checking bitstream links**
+**Repairing manifest records**
+**Checking Bern PDF access**
+**Checking candidate downloads**
+**Parsing article body**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import os,re,json,requests,html
+from xml.etree import ElementTree as ET
+from html.parser import HTMLParser
+M=json.load(open('manifest.json',encoding='utf-8'))
+H={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval; contact: oa-atlas@example.org)'}
+def fetch(url):
+ try:return requests.get(url,headers=H,timeout=45,allow_redirects=True)
+ except Exception:return None
+def pdf(url):
+ r=fetch(url)
+ if r and r.status_code==200 and r.content.startswith(b'%PDF') and len(r.content)>50*1024:
+  return r.content,r.url
+ return None
+
+def lname(t):return t.rsplit('}',1)[-1] if '}' in t else t
+def render(n):
+ name=lname(n.tag); mp={'article':'article','front':'header','article-meta':'section','article-title':'h1','abstract':'section','body':'main','back':'section','sec':'section','title':'h2','p':'p','italic':'em','bold':'strong','monospace':'code','sup':'sup','sub':'sub','ext-link':'a','uri':'a','list':'ul','list-item':'li','disp-quote':'blockquote','fig':'figure','caption':'figcaption','table-wrap':'section','table':'table','thead':'thead','tbody':'tbody','tfoot':'tfoot','tr':'tr','td':'td','th':'th','label':'span','ref-list':'section','ref':'p','def-list':'dl','def-item':'div','term':'dt','def':'dd','fn':'aside','ack':'section'}
+ tag=mp.get(name,'span');attrs=''
+ if name in ('ext-link','uri'):
+  href=n.attrib.get('{http://www.w3.org/1999/xlink}href') or n.attrib.get('href')
+  if href:attrs=' href=\"'+html.escape(href,quote=True)+'\"'
+ if name=='list' and n.attrib.get('list-type')=='order':tag='ol'
+ s=html.escape(n.text or '')
+ for c in list(n):s+=render(c)+html.escape(c.tail or '')
+ return '<'+tag+attrs+'>'+s+'</'+tag+'>'
+def plain(s):return re.sub(r'\\s+',' ',html.unescape(re.sub(r'(?s)<["'^>]+>'"',' ',s))).strip()
+def jats_html(pmcid):
+ u=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={pmcid}&rettype=full&retmode=xml'
+ r=fetch(u)
+ if not r or r.status_code"'!=200:return None
+ try:root=ET.fromstring(r.content)
+ except Exception:return None
+ article=next((x for x in root.iter() if lname(x.tag)=='"'article'),None)
+ body=next((x for x in root.iter() if lname(x.tag)=='body'),None)
+ if body is not None:
+  txt=' '.join(t.strip() for t in body.itertext() if t and t.strip())
+ else:
+  nodes=[x for x in list(article or root) if lname(x.tag) not in ('front','back','floats-group')]
+  txt=' '.join(t.strip() for n in nodes for t in n.itertext() if t and t.strip())
+  if not any(lname(n.tag) in ('sec','p') for n in nodes):return None
+ if len(txt)<1500:return None
+ title=''
+ for x in root.iter():
+  if lname(x.tag)=='article-title':title=' '.join(x.itertext()).strip();break
+ doc='<"'!doctype html><html lang="en"><head><meta charset="utf-8"><title>'"'+html.escape(title)+'</title><meta name=\"source-format\" content=\"NCBI PMC full-text JATS XML rendered as HTML\"></head><body>'+render(root)+'</body></html>'
+ if len(plain(doc))<3500:return None
+ return doc,u
+
+def write_pdf(key,content,url):
+ fn=key+'.pdf';open(fn,'wb').write(content)
+ x=next(v for v in M if v['key']==key);x.update(status='ok',file=fn,source_url=url,note='PDF validated: %PDF header and size > 50 KB.')
+def write_html(key,doc,url,note):
+ fn=key+'.html';open(fn,'w',encoding='utf-8',newline='').write(doc)
+ x=next(v for v in M if v['key']==key);x.update(status='ok',file=fn,source_url=url,note=note)
+
+# Retry public publisher PDF links and use the DOAJ-listed direct article as a legal alternative.
+for key,urls in [
+ ('PMID_24361601',['https://boris-portal.unibe.ch/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1/download','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdfft?isDTMRedir=true&download=true','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdf']),
+ ('PMID_42236313',['https://onlinelibrary.wiley.com/doi/epdf/10.1111/ejn.70570','https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ejn.70570'])]:
+ for u in urls:
+  got=pdf(u)
+  if got:
+   write_pdf(key,got[0],got[1]);print(key,'PDF_OK',got[1],len(got[0]));break
+  r=fetch(u);print(key,'RETRY',u,r.status_code if r else 'ERR',r.headers.get('content-type') if r else '',len(r.content) if r else '')
+# Rebuild full HTML from PMC JATS for the two PMCID records missed by the first parser.
+for key,pmcid in [('PMID_25540305','PMC4336001'),('PMID_42860886','PMC13655711')]:
+ res=jats_html(pmcid)
+ if res:
+  write_html(key,res[0],res[1],'Full-text PMC JATS converted to HTML and validated; no valid PDF was retrieved.')
+  print(key,'HTML_OK',len(res[0]))
+ else:print(key,'PMC_HTML_FAILED')
+# UNIGE records expose metadata but mark the files Restricted / do not provide a public file.
+for key,url in [('PMID_19815246','https://archive-ouverte.unige.ch/unige:33248'),('PMID_26887333','https://archive-ouverte.unige.ch/unige:89996')]:
+ x=next(v for v in M if v['key']==key)
+ x.update(status='not_open',file=None,source_url=url,note='Institutional repository page has no publicly downloadable full text; the available file is marked restricted or absent.')
+# Keep unresolved explicitly identified open versions as failed, documenting the blocked open endpoint.
+failed_notes={
+ 'PMID_31665229':('https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf','Unpaywall and Europe PMC identify the publisher PDF as free/open; the official PDF endpoint returned HTTP 403 and no accessible repository copy was found.'),
+ 'PMID_39470410':('https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf','The open publisher PDF endpoint returned HTTP 403; the University of Tübingen repository record exposed no downloadable full-text file.'),
+ 'PMID_42236313':('https://onlinelibrary.wiley.com/doi/epdf/10.1111/ejn.70570','Unpaywall identifies the publisher article as open access; Wiley landing/PDF endpoints returned HTTP 403 and no accessible repository copy was found.'),
+ 'PMID_42571859':('https://www.sciencedirect.com/science/article/pii/S0969996126003165/pdfft?isDTMRedir=true&download=true','OpenAlex identifies the publisher article as open access; the official ScienceDirect full-text/PDF endpoint returned HTTP 403.')}
+for key,(url,note) in failed_notes.items():
+ x=next(v for v in M if v['key']==key)
+ if x['status']"'!='"'ok':x.update(status='failed',file=None,source_url=url,note=note)
+M.sort(key=lambda x:next(i for i,k in enumerate([d[0] for d in [
+('DOI_10.1101_2023.02.27.529710',),('DOI_10.1101_2024.06.26.24309418',),('DOI_10.1101_2025.01.10.632393',),('DOI_10.1101_2025.04.22.650006',),('DOI_10.21203_rs.3.rs-9617843_v1',),('DOI_10.64898_2025.12.17.25342333',),('DOI_10.64898_2026.08.13.744293',),('PMID_18420482',),('PMID_19815246',),('PMID_21777828',),('PMID_24165197',),('PMID_24361601',),('PMID_25540305',),('PMID_26887333',),('PMID_27766724',),('PMID_28890315',),('PMID_30196050',),('PMID_30637270',),('PMID_31494286',),('PMID_31647540',),('PMID_31665229',),('PMID_32634599',),('PMID_33368872',),('PMID_36070366',),('PMID_36242900',),('PMID_37860957',),('PMID_38101024',),('PMID_39223361',),('PMID_39470410',),('PMID_39884164',),('PMID_40759323',),('PMID_40992964',),('PMID_41105567',),('PMID_41448344',),('PMID_41553951',),('PMID_42098512',),('PMID_42236313',),('PMID_42571859',),('PMID_42860886',),('PMID_42909654',)]) if k[0]==x['key']))
+with open('manifest.json','w',encoding='utf-8') as f:json.dump(M,f,ensure_ascii=False,indent=2);f.write('\\n')
+print('MANIFEST',len(M),'ok',sum(x['status']=='ok' for x in M),'not_open',sum(x['status']=='not_open' for x in M),'failed',sum(x['status']=='failed' for x in M))
+'@ | python -u -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ exited 1 in 147ms:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<string>", line 86
+    ('DOI_10.1101_2023.02.27.529710',),('DOI_10.1101_2024.06.26.24309418',),('DOI_10.1101_2025.01.10.632393',),('DOI_10.1101_2025.04.22.650006',),('DOI_10.21203_rs.3.rs-9617843_v1',),('DOI_10.64898_2025.12.17.25342333',),('DOI_10.64898_2026.08.13.744293',),('PMID_18420482',),('PMID_19815246',),('PMID_21777828',),('PMID_24165197',),('PMID_24361601',),('PMID_25540305',),('PMID_26887333',),('PMID_27766724',),('PMID_28890315',),('PMID_30196050',),('PMID_30637270',),('PMID_31494286',),('PMID_31647540',),('PMID_31665229',),('PMID_32634599',),('PMID_33368872',),('PMID_36070366',),('PMID_36242900',),('PMID_37860957',),('PMID_38101024',),('PMID_39223361',),('PMID_39470410',),('PMID_39884164',),('PMID_40759323',),('PMID_40992964',),('PMID_41105567',),('PMID_41448344',),('PMID_41553951',),('PMID_42098512',),('PMID_42236313',),('PMID_42571859',),('PMID_42860886',),('PMID_42909654',)]) if k[0]==x['key']))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '[' on line 85
+
+**Rerunning repaired script**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import os,re,json,requests,html
+from xml.etree import ElementTree as ET
+M=json.load(open('manifest.json',encoding='utf-8'))
+H={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval; contact: oa-atlas@example.org)'}
+def fetch(url):
+ try:return requests.get(url,headers=H,timeout=45,allow_redirects=True)
+ except Exception:return None
+def pdf(url):
+ r=fetch(url)
+ if r and r.status_code==200 and r.content.startswith(b'%PDF') and len(r.content)>50*1024:return r.content,r.url
+ return None
+def lname(t):return t.rsplit('}',1)[-1] if '}' in t else t
+def render(n):
+ name=lname(n.tag); mp={'article':'article','front':'header','article-meta':'section','article-title':'h1','abstract':'section','body':'main','back':'section','sec':'section','title':'h2','p':'p','italic':'em','bold':'strong','monospace':'code','sup':'sup','sub':'sub','ext-link':'a','uri':'a','list':'ul','list-item':'li','disp-quote':'blockquote','fig':'figure','caption':'figcaption','table-wrap':'section','table':'table','thead':'thead','tbody':'tbody','tfoot':'tfoot','tr':'tr','td':'td','th':'th','label':'span','ref-list':'section','ref':'p','def-list':'dl','def-item':'div','term':'dt','def':'dd','fn':'aside','ack':'section'}
+ tag=mp.get(name,'span');attrs=''
+ if name in ('ext-link','uri'):
+  href=n.attrib.get('{http://www.w3.org/1999/xlink}href') or n.attrib.get('href')
+  if href:attrs=' href=\"'+html.escape(href,quote=True)+'\"'
+ if name=='list' and n.attrib.get('list-type')=='order':tag='ol'
+ s=html.escape(n.text or '')
+ for c in list(n):s+=render(c)+html.escape(c.tail or '')
+ return '<'+tag+attrs+'>'+s+'</'+tag+'>'
+def plain(s):return re.sub(r'\\s+',' ',html.unescape(re.sub(r'(?s)<["'^>]+>'"',' ',s))).strip()
+def jats_html(pmcid):
+ u=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={pmcid}&rettype=full&retmode=xml'
+ r=fetch(u)
+ if not r or r.status_code"'!=200:return None
+ try:root=ET.fromstring(r.content)
+ except Exception:return None
+ article=next((x for x in root.iter() if lname(x.tag)=='"'article'),None)
+ body=next((x for x in root.iter() if lname(x.tag)=='body'),None)
+ if body is not None:txt=' '.join(t.strip() for t in body.itertext() if t and t.strip())
+ else:
+  nodes=[x for x in list(article or root) if lname(x.tag) not in ('front','back','floats-group')]
+  txt=' '.join(t.strip() for n in nodes for t in n.itertext() if t and t.strip())
+  if not any(lname(n.tag) in ('sec','p') for n in nodes):return None
+ if len(txt)<1500:return None
+ title=''
+ for x in root.iter():
+  if lname(x.tag)=='article-title':title=' '.join(x.itertext()).strip();break
+ doc='<"'!doctype html><html lang="en"><head><meta charset="utf-8"><title>'"'+html.escape(title)+'</title><meta name=\"source-format\" content=\"NCBI PMC full-text JATS XML rendered as HTML\"></head><body>'+render(root)+'</body></html>'
+ return (doc,u) if len(plain(doc))>=3500 else None
+def write_pdf(key,got):
+ fn=key+'.pdf';open(fn,'wb').write(got[0]);x=next(v for v in M if v['key']==key);x.update(status='ok',file=fn,source_url=got[1],note='PDF validated: %PDF header and size > 50 KB.')
+def write_html(key,res):
+ fn=key+'.html';open(fn,'w',encoding='utf-8',newline='').write(res[0]);x=next(v for v in M if v['key']==key);x.update(status='ok',file=fn,source_url=res[1],note='Full-text PMC JATS converted to HTML and validated; no valid PDF was retrieved.')
+for key,urls in [('PMID_24361601',['https://boris-portal.unibe.ch/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1/download','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdfft?isDTMRedir=true&download=true','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdf']),('PMID_42236313',['https://onlinelibrary.wiley.com/doi/epdf/10.1111/ejn.70570','https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ejn.70570'])]:
+ for u in urls:
+  got=pdf(u)
+  if got:write_pdf(key,got);print(key,'PDF_OK',got[1],len(got[0]));break
+  r=fetch(u);print(key,'RETRY',r.status_code if r else 'ERR',r.headers.get('content-type') if r else '',len(r.content) if r else '')
+for key,pmcid in [('PMID_25540305','PMC4336001'),('PMID_42860886','PMC13655711')]:
+ res=jats_html(pmcid)
+ if res:write_html(key,res);print(key,'HTML_OK',len(res[0]))
+ else:print(key,'PMC_HTML_FAILED')
+for key,url in [('PMID_19815246','https://archive-ouverte.unige.ch/unige:33248'),('PMID_26887333','https://archive-ouverte.unige.ch/unige:89996')]:
+ x=next(v for v in M if v['key']==key);x.update(status='not_open',file=None,source_url=url,note='Institutional repository page has no publicly downloadable full text; the available file is marked restricted or absent.')
+failed_notes={
+ 'PMID_31665229':('https://academic.oup.com/brain/article-pdf/142/12/3906/31499500/awz325.pdf','Unpaywall and Europe PMC identify the publisher PDF as free/open; the official PDF endpoint returned HTTP 403 and no accessible repository copy was found.'),
+ 'PMID_39470410':('https://academic.oup.com/brain/article-pdf/147/12/4056/60939489/awae223.pdf','The open publisher PDF endpoint returned HTTP 403; the University of Tübingen repository record exposed no downloadable full-text file.'),
+ 'PMID_42236313':('https://onlinelibrary.wiley.com/doi/epdf/10.1111/ejn.70570','Unpaywall identifies the publisher article as open access; Wiley landing/PDF endpoints returned HTTP 403 and no accessible repository copy was found.'),
+ 'PMID_42571859':('https://www.sciencedirect.com/science/article/pii/S0969996126003165/pdfft?isDTMRedir=true&download=true','OpenAlex identifies the publisher article as open access; the official ScienceDirect full-text/PDF endpoint returned HTTP 403.')}
+for key,(url,note) in failed_notes.items():
+ x=next(v for v in M if v['key']==key)
+ if x['status']"'!='"'ok':x.update(status='failed',file=None,source_url=url,note=note)
+with open('manifest.json','w',encoding='utf-8') as f:json.dump(M,f,ensure_ascii=False,indent=2);f.write('\\n')
+print('MANIFEST',len(M),'ok',sum(x['status']=='ok' for x in M),'not_open',sum(x['status']=='not_open' for x in M),'failed',sum(x['status']=='failed' for x in M))
+'@ | python -u -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 4585ms:
+PMID_24361601 RETRY 200 text/html; charset=utf-8 7348
+PMID_24361601 RETRY ERR  
+PMID_24361601 RETRY ERR  
+PMID_42236313 RETRY ERR  
+PMID_42236313 RETRY ERR  
+<string>:34: DeprecationWarning: Testing an element's truth value will always return True in future versions.  Use specific 'len(elem)' or 'elem is not None' test instead.
+PMID_25540305 PMC_HTML_FAILED
+PMID_42860886 HTML_OK 94099
+MANIFEST 40 ok 23 not_open 11 failed 6
+
+**Checking article node selection**
+**Inspecting response metadata**
+**Testing alternate DSpace endpoint**
+**Inspecting PMC4336001 XML**
+**Checking DOI candidates**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+from xml.etree import ElementTree as ET
+h={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval)'}
+def ln(x):return x.tag.rsplit('}',1)[-1] if '}' in x else x
+for pid in ['PMC4336001','PMC13655711']:
+ u=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={pid}&rettype=full&retmode=xml'
+ r=requests.get(u,headers=h,timeout=40);root=ET.fromstring(r.content)
+ print('\\n',pid,'root',ln(root.tag),'children',[(ln(x.tag),len(list(x)),sum(len(t) for t in x.itertext())) for x in list(root)])
+ for art in [x for x in root.iter() if ln(x.tag)=='article'][:1]:
+  print('article children',[(ln(x.tag),len(list(x)),sum(len(t) for t in x.itertext())) for x in list(art)])
+  for ch in list(art):
+   if ln(ch.tag) in ('front','body','back','sec','article-meta','abstract'):
+    print(' branch',ln(ch.tag),'children',[(ln(y.tag),len(list(y)),sum(len(t) for t in y.itertext())) for y in list(ch)[:8]])
+# Check public repository bitstream URLs
+id='a37019dd-1317-432a-8b2f-2d5196ed8dc1'
+for u in [f'https://boris-portal.unibe.ch/server/api/core/bitstreams/{id}/content',f'https://boris-portal.unibe.ch/server/api/core/bitstreams/{id}',f'https://boris-portal.unibe.ch/bitstreams/{id}/download?download=1']:
+ try:
+  r=requests.get(u,headers=h,timeout=35,allow_redirects=True);print('URL',u,'=>',r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+ except Exception as e:print('URL',u,'ERR',type(e).__name__)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ exited 1 in 1003ms:
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<string>", line 9, in <module>
+  File "<string>", line 4, in ln
+AttributeError: 'str' object has no attribute 'tag'
+
+ PMC4336001 root pmc-articleset children [('article', 1, 11386)]
+article children [('front', 2, 11386)]
+ branch front children [('journal-meta', 11, 106), ('article-meta', 25, 11280)]
+
+ PMC13655711 root pmc-articleset children [('article', 4, 61145)]
+
+**Checking retrieved text**
+**Checking PMC PDF routes**
+**Checking PMC access routes**
+**Retrying article endpoint**
+**Checking publisher URLs**
+**Retrying API endpoints**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+from xml.etree import ElementTree as ET
+h={'User-Agent':'OpenAccessArticleDownloader/1.0 (legal open-access retrieval)'}
+for pid in ['PMC4336001','PMC13655711']:
+ u=f'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={pid}&rettype=full&retmode=xml'
+ r=requests.get(u,headers=h,timeout=40);root=ET.fromstring(r.content)
+ def ln(x):return x.tag.rsplit('}',1)[-1] if '}' in x else x
+ art=next((x for x in root.iter() if ln(x.tag)=='article'),None)
+ print('\\n',pid,'article direct children',[(ln(x.tag),len(list(x)),sum(len(t) for t in x.itertext())) for x in list(art) if hasattr(x,'tag')])
+# Public DSpace 7 bitstream endpoint from the DOAJ-indexed institutional article record
+bid='a37019dd-1317-432a-8b2f-2d5196ed8dc1'
+for u in [f'https://boris-portal.unibe.ch/server/api/core/bitstreams/{bid}/content',f'https://boris-portal.unibe.ch/server/api/core/bitstreams/{bid}',f'https://boris-portal.unibe.ch/bitstreams/{bid}/download?download=1']:
+ try:
+  r=requests.get(u,headers=h,timeout=30,allow_redirects=True);print('URL',r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+ except Exception as e:print('URL ERR',type(e).__name__)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 4905ms:
+
+ PMC4336001 article direct children [('front', 2, 11386)]
+
+ PMC13655711 article direct children [('processing-meta', 1, 3), ('front', 2, 7023), ('body', 11, 43914), ('back', 3, 10205)]
+URL 200 text/html; charset=utf-8 7317 https://boris-portal.unibe.ch/server/api/core/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1/content b'<!doctyp'
+URL 200 text/html; charset=utf-8 7317 https://boris-portal.unibe.ch/server/api/core/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1 b'<!doctyp'
+URL 200 text/html; charset=utf-8 7315 https://boris-portal.unibe.ch/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1/download?download=1 b'<!doctyp'
+
+**Inspecting BERN API response**
+**Identifying official source URLs**
+**Checking direct article URLs**
+**Checking official links**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import requests
+h={'User-Agent':'Mozilla/5.0 (compatible; open-access retrieval/1.0)'}
+urls=['https://n.neurology.org/content/84/4/415.full.pdf','https://www.neurology.org/content/neurology/84/4/415.full.pdf','https://n.neurology.org/content/neurology/84/4/415.full.pdf?download=1','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdfft?isDTMRedir=true&download=true','https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdf?download=true','https://www.sciencedirect.com/science/article/pii/S0969996113003410']
+for u in urls:
+ try:
+  r=requests.get(u,headers=h,timeout=15,allow_redirects=True);print(r.status_code,r.headers.get('content-type'),len(r.content),r.url,r.content[:8])
+ except Exception as e:print('ERR',type(e).__name__,u)
+'@ | python -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 1753ms:
+403 text/html; charset=UTF-8 5619 https://n.neurology.org/content/84/4/415.full.pdf b'<!DOCTYP'
+403 text/html; charset=UTF-8 5672 https://www.neurology.org/content/neurology/84/4/415.full.pdf b'<!DOCTYP'
+403 text/html; charset=UTF-8 5718 https://n.neurology.org/content/neurology/84/4/415.full.pdf?download=1 b'<!DOCTYP'
+403 text/html; charset=UTF-8 832979 https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdfft?isDTMRedir=true&download=true b'<!DOCTYP'
+403 text/html; charset=UTF-8 832979 https://www.sciencedirect.com/science/article/pii/S0969996113003410/pdf?download=true b'<!DOCTYP'
+403 text/html; charset=UTF-8 832979 https://www.sciencedirect.com/science/article/pii/S0969996113003410 b'<!DOCTYP'
+
+**Checking manifest entries**
+**Validating HTML content**
+**Checking HTML section headings**
+**Checking HTML file statuses**
+**Validating manifest files**
+**Checking file criteria**
+**Updating source notes**
+codex
+备用来源又确认了几项：两篇可由 PMC 全文数据转成 HTML；另有机构仓库仅显示受限文件或元数据，不能作为全文下载。我正在做最后的逐文件校验，并确保 manifest 中区分“无开放版本”和“开放链接存在但下载失败”。
+**Updating validation notes**
+exec
+"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -Command "@'
+import json,os,re,html
+m=json.load(open('manifest.json',encoding='utf-8'))
+updates={
+'PMID_24361601':('https://boris-portal.unibe.ch/bitstreams/a37019dd-1317-432a-8b2f-2d5196ed8dc1/download','The DOAJ-indexed article and University of Bern repository were tried, but the repository endpoint returned HTML rather than a valid PDF; the publisher PDF endpoint returned HTTP 403.'),
+'PMID_25540305':('https://n.neurology.org/content/neurology/84/4/415.full.pdf','Unpaywall and Europe PMC identify free full text, but PMC EFetch returned metadata without the article body, and the official publisher PDF endpoint returned HTTP 403.')}
+for x in m:
+ if x['key'] in updates and x['status']=='failed':x['source_url'],x['note']=updates[x['key']]
+errs=[]
+for x in m:
+ if x['status']"'!='"'ok':
+  if x.get('file') is not None:errs.append((x['key'],'non-ok has file'))
+  continue
+ fn=x.get('file')
+ if not fn or not os.path.isfile(fn):errs.append((x['key'],'missing file'));continue
+ raw=open(fn,'rb').read()
+ if fn.lower().endswith('.pdf'):
+  if not raw.startswith(b'%PDF'):errs.append((x['key'],'bad PDF header'))
+  if len(raw)<=50*1024:errs.append((x['key'],'PDF <= 50KB'))
+ elif fn.lower().endswith('.html'):
+  s=raw.decode('utf-8','replace')
+  low=s[:30000].lower()
+  if not re.search(r'(?i)<"'!doctype'"\\s+html|<html\\b',s):errs.append((x['key'],'not HTML'))
+  if any(w in low for w in ['recaptcha challenge','verify you are human','captcha-container','access denied','sign in to access','log in to view']):errs.append((x['key'],'challenge/login page'))
+  text=re.sub(r'(?is)<(script|style|noscript)\\b["'^>]*>.*?</'"\\1\\s*>',' ',s)
+  text=re.sub(r'(?s)<["'^>]+>'"',' ',text);text=re.sub(r'\\s+',' ',html.unescape(text)).strip()
+  if len(text)<3500:errs.append((x['key'],'HTML body too short'))
+  if not re.search(r'\\b(methods?|materials and methods|results?|discussion|conclusions?|introduction|clinical features|study design)\\b',text,re.I):errs.append((x['key'],'no full-text section marker'))
+ else:errs.append((x['key'],'unsupported extension'))
+if len(m)"'!=40:errs.append(('"'manifest','item count '+str(len(m))))
+if len({x['key'] for x in m})"'!=40:errs.append(('"'manifest','duplicate/missing key'))
+with open('manifest.json','w',encoding='utf-8') as f:json.dump(m,f,ensure_ascii=False,indent=2);f.write('\\n')
+print('validation_errors',errs)
+print('count',len(m),'ok',sum(x['status']=='ok' for x in m),'not_open',sum(x['status']=='not_open' for x in m),'failed',sum(x['status']=='failed' for x in m))
+print('files',sum(1 for x in m if x['status']=='ok'))
+'@ | python -u -c \"import sys; exec(sys.stdin.read().lstrip('\\ufeff'))\"" in D:\fwlaozong\papers\luna_1113_023233
+ succeeded in 1209ms:
+validation_errors []
+count 40 ok 23 not_open 11 failed 6
+files 23
+
+codex
+完成 23 篇 / 共 40 篇
+tokens used
+158,937

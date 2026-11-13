@@ -1,0 +1,940 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:42058451; DOI:10.1016/j.prdoa.2026.100444; corrigendum DOI:10.1016/j.prdoa.2026.100448",
+    "title": "Gait and balance deterioration following deep brain stimulation in Parkinson’s disease: a counterfactual review",
+    "publication_status": "review",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:42058451",
+    "cohort_id_candidate": "not_applicable",
+    "cohort_relation_basis": "该文为结构化叙述性综述，不是独立临床队列。Methods及Results明确纳入29篇文献，其中18项原始研究和11篇综述。原始研究的患者队列不能视为本综述的新队列，也不能因被本综述多次引用而计为独立重复验证。本文的全文核查不等于已经逐篇核查所有被引原始研究全文。另发现2026年5月10日发表的正式Corrigendum，DOI:10.1016/j.prdoa.2026.100448，修正了部分参考文献映射及Table 1中的Meoni/Mei作者错误，提取时采用更正后的信息。",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "42058451_E01",
+      "design": "结构化叙述性综述；针对STN-DBS后PD患者的步态、平衡及FOG进行二级综合。",
+      "population": "综述纳入的PD合并STN-DBS患者；本文没有独立招募患者。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：本文没有独立患者队列。全文未报告纳入原始研究的神经电生理样本分母，也未逐项报告患者、FOG事件、试次及电极/触点数量。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "综述层面讨论Med-On/Med-Off对比，但未形成神经信号与药物状态的事件级分析。",
+      "DBS_state_and_parameters": "综述讨论STN-DBS ON/OFF、刺激频率、幅度、触点位置及术后时间；没有报告任何神经记录与刺激状态同步的数据。",
+      "task": "综述纳入临床步态评估和任务性FOG评估；未报告神经活动与实际FOG事件同步采集的具体任务。",
+      "recording_location": "全文未报告STN局部场电位、单单位、多单位或皮层-STN神经记录的解剖位置。",
+      "measure": "没有报告STN神经活动指标。未见STN LFP功率、beta/gamma burst持续时间或占据率、神经振荡熵、相位调制、皮层-STN coherence等可提取数据。本文提取的指标为临床FOG、步态、平衡、刺激参数、药物状态和随访时间。",
+      "frequency_and_analysis_window": "未报告神经信号频段边界、事件前分析窗口、事件期间窗口、基线归一化或神经信号统计。文中60–80 Hz指刺激频率，不是神经活动频段。",
+      "finding": "该综述不能提供STN神经活动与FOG之间的直接关联证据。其证据组织依据是临床刺激状态、药物状态、刺激参数和术后时间，而不是STN神经振荡或事件相关神经活动。此处是本综述未报告相关神经指标，不代表所有被引原始研究均未采集神经信号。",
+      "effect_estimate": "不适用。没有STN神经活动与FOG之间的效应量、方向、置信区间或P值。",
+      "statistical_unit_and_method": "结构化叙述性综合；没有神经信号层面的患者级、事件级或试次级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；作者未正式应用偏倚风险工具，以下为综述方法学的适配性初评，不代表对各原始研究完成了偏倚评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案、注册平台或预先制定的完整分析计划。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "检索PubMed/MEDLINE、Embase和Web of Science，覆盖数据库建立至2025年12月，但全文没有给出完整可复现的逐数据库检索式。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "研究筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "说明进行了标题摘要筛选和全文审查，但没有说明是否由至少两名研究者独立完成筛选和数据提取，以及分歧如何解决。",
+            "source_locator": "Methods—Information sources and search strategy; Methods—Data extraction"
+          },
+          {
+            "domain": "纳入研究偏倚风险评价",
+            "judgement": "some_concerns",
+            "reason": "作者明确说明没有应用正式风险偏倚评价工具，仅定性讨论方法学限制。因此无法判断纳入原始研究的混杂、选择偏倚和结局测量偏倚。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "采用叙述性综合处理研究异质性，但没有提供各原始研究的完整效应量、置信区间和统一的定量综合。",
+            "source_locator": "Methods—Attribution framework and synthesis; Results—Characteristics of included studies"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "没有报告正式的发表偏倚或小样本效应评估。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是临床结局及刺激归因综述，不是STN神经电生理研究。不能将刺激频率与神经振荡频段混为一谈，也不能据此推断beta异常、神经burst、相位调制或皮层-STN耦合与FOG的关系。",
+      "quote": "From each included study, data were extracted on study design, follow-up duration, gait and balance outcomes assessed, stimulation parameters, medication state during assessment, and temporal patterns of change.",
+      "source_locator": {
+        "section": "Methods—Data extraction",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E02",
+      "design": "二级来源转述Tommasi et al., 2007。综述Table 1称Case series。对应原始文献可识别为Tommasi G et al., Freezing and hypokinesia of gait induced by stimulation of the subthalamic region，PMID:17445832，DOI:10.1016/j.jns.2007.03.002。需要注意：原始文献摘要描述的是单病例，综述的Case series分类存在不一致。",
+      "population": "PD接受STN区域DBS的患者；原始研究的详细人口学特征及分母未在本综述中报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告该研究的患者、FOG事件、试次及电极/触点分母。不得用原始研究摘要或其他文献中的患者数替代本综述的提取值。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "未报告具体Med-On/Med-Off测试状态、左旋多巴剂量及给药时间。",
+      "DBS_state_and_parameters": "DBS ON/OFF比较；综述报告刺激诱发FOG，并可通过DBS调整逆转。具体频率、幅度、脉宽和触点在本综述中未报告。",
+      "task": "急性/早期FOG评估；具体直行、转弯、启动或其他任务未报告。",
+      "recording_location": "未报告STN神经电生理记录位置；该证据是临床刺激效应，不是STN LFP证据。",
+      "measure": "FOG临床表现及其与刺激状态的关系。",
+      "frequency_and_analysis_window": "未报告神经信号频段或分析窗口；没有神经活动功率、burst或相位分析。",
+      "finding": "综述报告急性STN刺激相关FOG，并称其可通过DBS调整逆转。这支持刺激状态敏感的临床FOG现象，但不能证明某一STN神经振荡指标导致FOG。",
+      "effect_estimate": "方向：刺激相关FOG出现，刺激调整后可逆。未报告数值效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述称原研究为Case series；原始文献摘要显示为单病例报告。没有报告事件级或患者级统计方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "综述未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "报告三个数据库和检索截止时间，但没有完整可复现检索式。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有报告独立双人筛选及数据提取流程。",
+            "source_locator": "Methods—Eligibility criteria and study selection; Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "作者明确未使用正式偏倚评价工具。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "以定性叙述总结急性刺激相关现象，没有提供原始病例的完整定量数据。",
+            "source_locator": "Results—Stimulation-related gait and balance worsening"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "没有报告发表偏倚评估。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "二级转述。综述没有给出事件级时间窗、FOG视频确认方法、具体刺激参数或神经记录。原始文献的单病例属性与综述Table 1的Case series标签不一致，应以原始文献核查为准。",
+      "quote": "Acute stimulation-induced freezing reversible with DBS adjustment",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies",
+        "page": null,
+        "figure_table": "Table 1—Tommasi et al., 2007 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E03",
+      "design": "二级来源转述Moreau et al., 2008。综述列为STN-DBS短期干预研究。原始文献：STN-DBS frequency effects on freezing of gait in advanced Parkinson disease，PMID:18420482，DOI:10.1212/01.wnl.0000303972.16279.46。",
+      "population": "接受STN-DBS且存在严重步态障碍/FOG的PD患者；样本分母未在本综述中报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告Moreau研究的各类样本分母；神经记录患者数和电极触点数亦未报告。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "未报告具体测试时Med-On/Med-Off状态、剂量及时间。",
+      "DBS_state_and_parameters": "高频与低频刺激比较。综述没有将具体Hz值逐项对应至本研究；其60–80 Hz描述属于综述对低频刺激文献的总体概括，不应直接作为本研究的已核实参数。",
+      "task": "FOG评估；具体任务和冻结事件判定方法未在综述中说明。",
+      "recording_location": "未报告STN神经记录位置；仅报告DBS刺激条件。",
+      "measure": "临床FOG改善情况；具体量表或事件计数方法未报告。",
+      "frequency_and_analysis_window": "比较刺激频率高与低；具体刺激Hz、神经信号频段及神经分析窗口未由本综述明确报告。",
+      "finding": "综述报告低频刺激相对于高频刺激改善FOG，归类为刺激相关效应。该发现属于临床刺激参数比较，而不是神经振荡频段比较。",
+      "effect_estimate": "方向：低频刺激改善FOG。未报告该研究的具体改善幅度、置信区间或P值。",
+      "statistical_unit_and_method": "综述列为短期Interventional研究；没有报告原始研究的统计单位、重复测量处理或统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "数据库和时间范围明确，但完整检索式未提供。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "未说明独立双人筛选和数据提取。",
+            "source_locator": "Methods—Eligibility criteria and study selection; Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "综述没有使用正式风险偏倚工具。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "低频刺激效果通过叙述性归纳报告，缺少逐研究效应量。",
+            "source_locator": "Results—Stimulation-related gait and balance worsening"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "没有报告发表偏倚评估。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "本综述没有给出Moreau研究的FOG事件数量、患者级分母、精确刺激参数、Med状态、任务细节或神经活动记录。不能把刺激频率60–80 Hz当成STN beta频段证据。",
+      "quote": "Low-frequency stimulation improved freezing of gait",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies",
+        "page": null,
+        "figure_table": "Table 1—Moreau et al., 2008 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E04",
+      "design": "二级来源转述Ferraye et al., 2008。综述列为急性Experimental研究。原始文献：Effects of subthalamic nucleus stimulation and levodopa on freezing of gait in Parkinson disease，PMID:18413568，DOI:10.1212/01.wnl.0000310416.90757.85。",
+      "population": "双侧STN刺激治疗的PD患者；具体分母未由本综述报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告Ferraye研究的患者、FOG事件、试次及电极触点分母；神经有效数据分母未报告。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "Med-On与Med-Off交叉比较；综述指出使用levodopa，但未提供具体剂量、给药时间和药物洗脱时间。",
+      "DBS_state_and_parameters": "DBS ON/OFF × Med ON/OFF四种组合条件；具体刺激频率、幅度、脉宽和触点未在本综述中报告。",
+      "task": "急性实验性FOG评估；具体任务、直行/转弯/启动条件及视频确认方法未在综述中报告。",
+      "recording_location": "未报告STN LFP或单/多单位记录；没有皮层-STN神经耦合数据。",
+      "measure": "不同DBS与levodopa组合条件下的FOG临床表现。",
+      "frequency_and_analysis_window": "没有神经信号频段或事件分析窗口；只有刺激ON/OFF与药物ON/OFF条件。",
+      "finding": "综述报告DBS与levodopa对FOG存在非加和效应，归类为刺激-药物相互作用。综述没有进一步给出各组合条件下FOG变化的定量方向和幅度。",
+      "effect_estimate": "定性结果：存在non-additive effects。具体效应方向、大小、CI和P值未在本综述报告。",
+      "statistical_unit_and_method": "综述列为急性Experimental研究；没有报告原始研究的患者级或事件级统计方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "数据库和检索截止时间明确，但缺少完整检索字符串。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "未说明独立双人筛选及提取。",
+            "source_locator": "Methods—Eligibility criteria and study selection; Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "作者明确未实施正式风险偏倚评价。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "报告非加和效应，但未给出不同条件的具体效应量和统计细节。",
+            "source_locator": "Results—Stimulation-medication interactions"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是本综述中与药物-刺激交互最直接相关的FOG研究之一，但它没有提供可用于STN神经活动分析的LFP、burst或跨区耦合指标。综述也没有给出各药物-刺激组合下的详细事件级结果，因此不能推断交互效应具体发生在哪个神经频段。",
+      "quote": "Non-additive effects of DBS and levodopa on freezing",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies; Results—Stimulation-medication interactions",
+        "page": null,
+        "figure_table": "Table 1—Ferraye et al., 2008 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E05",
+      "design": "二级来源转述Adams et al., 2011。综述Table 1列为Case series。原始文献：Acute induction of levodopa-resistant freezing of gait upon subthalamic nucleus electrode implantation，PMID:21397548，DOI:10.1016/j.parkreldis.2011.02.014。原始文献数据库类型为Case Reports，综述的Case series标签需要核对。",
+      "population": "接受STN电极植入的PD患者；具体分母未在本综述报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告该原始病例的患者分母、FOG事件数、试次或电极触点数量；没有神经记录分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "报告为levodopa-resistant FOG，但没有说明测试时的具体药物剂量、停药时长或挑战方案。Levodopa-resistant不能直接归入OFF-FOG或ON-FOG类别。",
+      "DBS_state_and_parameters": "电极植入后发生FOG；综述正文明确指出该现象独立于刺激激活。具体刺激ON/OFF参数及触点未报告。",
+      "task": "术后早期FOG观察；具体步行任务和冻结判定标准未报告。",
+      "recording_location": "没有报告STN神经信号记录；电极植入位置不能替代神经活动记录位置。",
+      "measure": "植入STN电极后出现的levodopa-resistant FOG。",
+      "frequency_and_analysis_window": "未报告神经信号频段、burst窗口或事件相关分析；没有STN电生理指标。",
+      "finding": "综述报告电极植入后立即出现levodopa-resistant FOG，且不依赖DBS刺激激活。这与单纯的刺激开启后即时诱发FOG不同，提示植入过程相关现象需要单独归类。",
+      "effect_estimate": "方向：植入后出现levodopa-resistant FOG；具体病例数量、发生率及效应量未报告。",
+      "statistical_unit_and_method": "综述列为早期术后Case series；原始文献为病例报告类型。未报告统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "没有报告综述预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "检索数据库明确，但没有完整可复现检索式。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有说明独立双人筛选和数据提取。",
+            "source_locator": "Methods—Eligibility criteria and study selection"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评价病例研究的选择和结局测量偏倚。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "以病例系列/病例报告的叙述性结果支持归因，没有给出病例级完整数据。",
+            "source_locator": "Results—Stimulation-related gait and balance worsening"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是植入相关FOG，不应与刺激激活诱发FOG合并。综述没有提供病例级FOG发生时间、视频确认、神经活动、植入损伤定位或刺激参数。原始研究类型与综述表格的Case series描述不一致。",
+      "quote": "Levodopa-resistant freezing after electrode implantation",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies; Results—Stimulation-related gait and balance worsening",
+        "page": null,
+        "figure_table": "Table 1—Adams et al., 2011 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E06",
+      "design": "二级来源转述Vercruysse et al., 2014。综述列为6–12个月Prospective controlled研究。原始文献：Effects of subthalamic nucleus deep brain stimulation on freezing of gait in Parkinson's disease: a prospective controlled study，PMID:24396010。",
+      "population": "接受STN-DBS或继续最佳药物治疗的PD患者；本综述未报告原始研究各组分母。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告该研究的各组患者分母、FOG事件数、试次数或电极触点数量。神经有效数据分母未报告。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "DBS与最佳药物治疗比较；综述指出术后药物减少在FOG改善中发挥中介作用，但未给出具体测试时Med-On/Med-Off状态、剂量或给药时间。",
+      "DBS_state_and_parameters": "STN-DBS与best medical therapy比较；刺激频率、幅度、脉宽和触点未在本综述报告。",
+      "task": "临床FOG结局评估；具体步行任务、视频评审和量表细节未由本综述逐项报告。",
+      "recording_location": "没有报告STN神经电生理记录位置。",
+      "measure": "FOG发生频率及严重程度。",
+      "frequency_and_analysis_window": "未报告神经信号频段及分析窗口；不是神经频率研究。",
+      "finding": "综述报告STN-DBS相较最佳药物治疗降低FOG频率和严重程度，但这种改善很大程度上由术后药物减少介导。该结果提示单独比较DBS与药物治疗时，术后药物剂量变化可能改变观察到的DBS效果。",
+      "effect_estimate": "方向：FOG频率和严重程度降低；综述未提供数值效应量、CI或P值。",
+      "statistical_unit_and_method": "Prospective controlled；本综述未报告具体模型、患者级或事件级统计方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "没有报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "报告三个数据库和检索时间范围，但没有完整检索字符串。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "未说明独立双人筛选及提取。",
+            "source_locator": "Methods—Eligibility criteria and study selection; Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评价原始研究的混杂和选择偏倚。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "报告药物减少的中介作用，但没有在综述中提供原始研究的完整效应量和模型结果。",
+            "source_locator": "Results—Stimulation-medication interactions"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不能把DBS治疗后的FOG改善全部归因于刺激本身。综述强调术后药物减少的中介作用，但没有提供可供独立核查的模型系数、调整变量、药物剂量或患者级交互结果。没有神经活动指标。",
+      "quote": "Reduced FOG frequency and severity, largely mediated by postoperative medication reduction",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies; Results—Stimulation-medication interactions",
+        "page": null,
+        "figure_table": "Table 1—Vercruysse et al., 2014 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E07",
+      "design": "二级来源转述Ramdhani et al., 2015。综述列为短期Interventional研究。原始文献：Early Use of 60 Hz Frequency Subthalamic Stimulation in Parkinson's Disease: A Case Series and Review，PMID:25833008，DOI:10.1111/ner.12288。原始研究属于病例系列并包含综述内容，不应等同于随机对照试验。",
+      "population": "接受STN-DBS的PD患者；本综述未提供该研究的患者人口学特征及分母。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告该研究的患者、FOG事件、试次和电极触点分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "本综述没有报告具体测试药物状态、左旋多巴剂量或测试时间。",
+      "DBS_state_and_parameters": "频率调整，低频刺激与常规刺激比较；综述没有提供该研究的具体Hz、幅度、脉宽和触点参数。",
+      "task": "短期临床FOG和步态评估；具体任务及冻结事件确认方法未由综述说明。",
+      "recording_location": "未报告STN LFP或其他神经信号记录。",
+      "measure": "FOG及步态障碍的临床改善。",
+      "frequency_and_analysis_window": "低频刺激参数调整；本综述没有给出该研究的精确Hz或任何神经活动频段、分析窗口。",
+      "finding": "综述报告低频STN刺激改善FOG，归类为刺激相关效应。",
+      "effect_estimate": "方向：低频刺激后FOG改善；未报告数值效应量、CI或P值。",
+      "statistical_unit_and_method": "综述列为短期Interventional；原始来源为Case Series and Review。综述未提供患者级统计和重复测量方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "数据库及截止时间明确，但完整检索式未报告。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "未报告独立双人筛选及数据提取流程。",
+            "source_locator": "Methods—Eligibility criteria and study selection"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评价纳入研究的偏倚风险。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "病例系列和综述内容未在本综述中分开呈现，缺少研究级定量结果。",
+            "source_locator": "Results—Characteristics of included studies"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "原始文献是病例系列兼综述，不能将其综述部分再次计为新的患者队列。当前综述没有提供具体患者分母、FOG事件计数或刺激参数。该研究属于刺激参数临床干预证据，不是神经活动证据。",
+      "quote": "Improvement in freezing with low-frequency stimulation",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies",
+        "page": null,
+        "figure_table": "Table 1—Ramdhani et al., 2015 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E08",
+      "design": "二级来源转述Jia et al., 2017。综述Table 1标为Interventional，但原始来源身份无法唯一确认。可能匹配A：2017年Movement Disorders会议摘要“A novel paradigm of variable frequency deep brain stimulation to improve freezing of gait in Parkinson's disease”，DOI:10.1212/WNL.88.16_supplement.P1.109，publication status为conference abstract。该摘要报告的是variable-frequency stimulation（VFS），不能直接等同于单纯低频刺激。可能匹配B：Jia et al., 2017，PMID:28392298，DOI:10.1016/j.parkreldis.2017.03.015，题为Variable frequency stimulation of subthalamic nucleus in Parkinson's disease: Rationale and hypothesis，数据库类型为Review。两者不能仅凭作者和年份合并，当前Table 1具体指向哪一篇仍为possible_match/unknown。",
+      "population": "综述仅写PD接受STN-DBS患者；具体来源、样本及队列无法从当前综述唯一确认。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告Jia条目的各类分母。由于原始来源身份尚未唯一确定，不能从可能匹配的会议摘要或其他研究移植样本数。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "本综述未报告具体药物状态。可能匹配的2017会议摘要包含停药测试，但不能在来源身份未确定时将该条件归入本条。",
+      "DBS_state_and_parameters": "综述Table 1称Frequency manipulation及low-frequency stimulation；但可能匹配的2017会议摘要研究的是VFS与HFS/LFS的比较，不能把其结果简化成低频刺激优于高频刺激。",
+      "task": "本综述没有给出对应Jia研究的具体任务。可能匹配的会议摘要使用步态相关任务，但该信息尚不能确认为当前表格条目的任务。",
+      "recording_location": "本综述未报告神经记录位置。",
+      "measure": "综述Table 1报告FOG改善，但具体FOG量表、事件数量和原始研究身份尚未核实。",
+      "frequency_and_analysis_window": "综述报告刺激频率操控，没有给出可确认的神经信号频段或分析窗口。可能匹配的会议摘要涉及VFS，而不是单一低频刺激。",
+      "finding": "当前综述Table 1将Jia et al., 2017描述为低频刺激改善FOG。然而原始文献映射存在歧义：一个可能来源是VFS会议摘要，另一个同年Jia论文属于Review。因此这一条只能记录为综述的二级转述，不能无条件认定为独立的低频刺激临床试验。",
+      "effect_estimate": "综述只报告改善方向，没有定量效应量、CI或P值。潜在匹配会议摘要中的结果不能直接作为本条效应量。",
+      "statistical_unit_and_method": "综述标为Interventional，但原始研究身份未确定。不能据此确认研究统计单位或方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "缺少完整检索字符串，无法独立重建原始来源筛选过程。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有报告独立双人筛选及提取，也没有解释Jia条目原始来源的对应关系。",
+            "source_locator": "Methods—Eligibility criteria and study selection; Results—Characteristics of included studies"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "综述没有正式评价原始研究的偏倚风险；且当前条目的来源身份存在不确定性。",
+            "source_locator": "Methods—Methodological considerations; Results—Characteristics of included studies"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "将可能的VFS研究概括为低频刺激改善FOG，可能造成干预类别不准确。",
+            "source_locator": "Results—Characteristics of included studies, Table 1"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "重要的来源身份问题。可能匹配的2017会议摘要属于conference_abstract；同年Jia et al.另一篇论文属于Review。当前综述没有提供足以唯一确认两者中哪一篇对应Table 1的引用信息。不能将该条直接计为独立的原始临床队列，也不能将VFS效应改写成LFS效应。与后续Jia团队VFS研究的队列重叠关系仍为unknown。",
+      "quote": "Low-frequency stimulation improved freezing",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies",
+        "page": null,
+        "figure_table": "Table 1—Jia et al., 2017 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E09",
+      "design": "二级来源转述Xie et al., 2017。综述Table 1标为Interventional，但可识别的同年对应文献为Effect of low versus high frequency stimulation on freezing of gait and other axial symptoms in Parkinson patients with bilateral STN DBS: a mini-review，PMID:28529730，DOI:10.1186/s40035-017-0083-7。该文为mini-review，不是新的独立患者干预队列。",
+      "population": "综述所引用的低频刺激文献中的PD患者；当前综述未说明Xie 2017对应的独立患者队列。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "当前综述全文未报告Xie条目的患者、事件、试次和电极分母；所识别的同年文献为综述，不能据此生成新的患者分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "本综述未提供具体药物测试条件。",
+      "DBS_state_and_parameters": "综述Table 1称Frequency manipulation及low-frequency stimulation；没有提供该条对应的独立干预参数。",
+      "task": "未报告具体任务。",
+      "recording_location": "未报告STN神经记录位置。",
+      "measure": "FOG临床改善的二级转述。",
+      "frequency_and_analysis_window": "报告刺激频率比较，没有神经信号频段或分析窗口。",
+      "finding": "综述Table 1称Xie et al., 2017报告低频刺激改善FOG。但同年可识别的Xie文献为mini-review，因此该结果不能作为独立临床队列或独立重复验证。",
+      "effect_estimate": "仅报告改善方向；没有该综述条目的独立效应量。",
+      "statistical_unit_and_method": "当前综述标为Interventional；可识别的同年Xie文献为mini-review，未确认独立实验样本和统计单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "没有报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "没有提供完整可复现的检索式。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "未说明双人独立筛选及来源核对过程。",
+            "source_locator": "Methods—Eligibility criteria and study selection"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评估原始研究偏倚，且该条存在二级综述被列作干预研究的问题。",
+            "source_locator": "Methods—Methodological considerations; Results—Characteristics of included studies"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "没有区分Xie mini-review与独立临床干预研究。",
+            "source_locator": "Results—Characteristics of included studies, Table 1"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "没有报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不应将Xie 2017 mini-review与其所引用的原始低频刺激研究重复计数。综述Table 1将其归为Interventional与可识别的文献类型不一致。当前没有充分依据认定存在一个独立的Xie 2017临床患者队列。",
+      "quote": "Improved freezing with low-frequency stimulation",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies",
+        "page": null,
+        "figure_table": "Table 1—Xie et al., 2017 row",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E10",
+      "design": "二级来源转述Kim et al., 2019。综述列为至少5年的Longitudinal cohort。原始文献：Long-term effect of subthalamic nucleus deep brain stimulation on freezing of gait in Parkinson's disease，PMID:30641837，DOI:10.3171/2018.8.JNS18350。该引用信息也由2026年Corrigendum明确更正。",
+      "population": "接受双侧STN-DBS的PD患者；本综述未提供该队列的详细人口学信息及分母。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述全文未报告Kim研究的患者分母、FOG患者分母、视频事件数量、试次或电极触点分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "明确比较Med-On与Med-Off；本综述未提供具体药物剂量和给药时间。",
+      "DBS_state_and_parameters": "STN-DBS；Table 1突出Med-On/Med-Off比较，没有逐项报告各刺激状态下的详细参数。",
+      "task": "长期FOG结局；本综述没有说明具体步行任务、视频评审方法或量表。",
+      "recording_location": "未报告STN神经电生理记录位置。",
+      "measure": "长期FOG获益在不同药物状态下的差异。",
+      "frequency_and_analysis_window": "没有神经信号频段或分析窗口；本条比较的是药物状态，而不是神经振荡。",
+      "finding": "综述报告长期STN-DBS对FOG的获益出现在Med-Off状态，而在Med-On状态下未观察到相同的长期获益。这是药物状态依赖的长期临床结局，不应直接解释为刺激对STN神经活动的相反调节。",
+      "effect_estimate": "方向：Med-Off存在长期获益，Med-On未见相同长期获益。综述未提供具体效应量、CI和P值。",
+      "statistical_unit_and_method": "Longitudinal cohort，至少5年随访；综述未提供患者级重复测量模型和统计细节。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告综述预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "检索数据库和时间范围明确，但缺少完整检索式。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有报告独立双人筛选及提取流程。",
+            "source_locator": "Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评价原始队列的失访、混杂和结局测量偏倚。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "综述只概括Med-On与Med-Off的方向差异，没有提供分层效应量和置信区间。",
+            "source_locator": "Results—Characteristics of included studies; Discussion—Time-dependent progression and late axial decline"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果支持药物状态影响长期FOG结局，但不能仅凭Med-On与Med-Off差异断定STN神经活动的特定方向。综述没有提供事件级冻结记录与神经活动的同步分析。原始队列不应与该综述的其他二级引用重复计算。",
+      "quote": "Long-term benefit OFF-medication, not ON-medication",
+      "source_locator": {
+        "section": "Results—Characteristics of included studies; Discussion—Time-dependent progression and late axial decline",
+        "page": null,
+        "figure_table": "Table 1—Kim et al., 2019 row; corrigendum reference 41 correction",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E11",
+      "design": "二级来源转述Mei et al., 2019。必须采用正式Corrigendum更正：原文Table 1错误写作Meoni et al., 2019，正确应为Mei et al., 2019；研究设计由Case series更正为Case report，主要发现由acute stimulation-induced gait worsening更正为new-onset on-medication FOG。原始文献：New Onset On-Medication Freezing of Gait After STN-DBS in Parkinson's Disease，PMID:31275238，DOI:10.3389/fneur.2019.00659。",
+      "population": "接受STN-DBS后出现新发ON-medication FOG的PD病例；本综述没有报告患者人口学特征和样本分母。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述及Corrigendum没有在更正表格中报告病例分母、事件数、试次数和电极触点分母；没有神经有效数据分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "ON-FOG",
+      "experimental_medication_state": "Corrigendum明确为on-medication FOG；本综述没有给出具体levodopa剂量、给药时间及药物挑战方案。",
+      "DBS_state_and_parameters": "STN-DBS；原Table 1列有DBS ON/OFF比较，但Corrigendum主要更正作者、研究设计和主要发现，没有在更正说明中补充具体频率、幅度、脉宽或触点。",
+      "task": "本综述未报告病例的具体步行任务和事件确认方式。",
+      "recording_location": "未报告STN LFP、单/多单位或皮层-STN神经记录。",
+      "measure": "新发on-medication FOG。",
+      "frequency_and_analysis_window": "未报告神经信号频段和事件分析窗口。",
+      "finding": "正式更正后的证据为STN-DBS后新发ON-medication FOG。Corrigendum将该研究归入刺激-药物相互作用，而不是简单的刺激激活诱发步态恶化。不得继续将其作为Meoni et al. 2019的独立病例系列。",
+      "effect_estimate": "病例级新发ON-FOG；没有患者群体效应量、CI或P值。",
+      "statistical_unit_and_method": "Case report；没有群体统计分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "数据库和时间范围明确，但完整检索式未报告。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有报告独立双人筛选及数据提取。",
+            "source_locator": "Methods—Data extraction"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "没有正式评估病例报告的测量和选择偏倚。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "原文存在作者和研究设计标签错误，后由Corrigendum更正，提示需核查引用映射。",
+            "source_locator": "Results—Characteristics of included studies; Corrigendum—Table 1 correction"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "未报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "必须使用更正后的Mei et al. 2019，而不是Meoni et al. 2019。该研究为病例报告，不能视为独立的Meoni病例系列。此证据支持ON-FOG和药物-刺激交互的临床现象，但综述未提供神经活动记录，也没有群体级推断。",
+      "quote": "New-onset on-medication freezing of gait after STN-DBS",
+      "source_locator": {
+        "section": "Corrigendum—corrections to Table 1 and attribution domain",
+        "page": null,
+        "figure_table": "Table 1 correction: Meoni et al., 2019 replaced by Mei et al., 2019; Table 2 attribution correction",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "42058451_E12",
+      "design": "综述层面的解剖学/刺激传播机制综合，不是单一原始实验。正文指出部分急性FOG与电极植入或刺激激活有关，并提出背侧STN及邻近纤维束受刺激可能导致网络干扰。相关原始引文包括正文引用[14]等，但用户提供的全文没有参考文献表，无法将该机制段落逐项唯一映射至PMID/DOI。",
+      "population": "PD接受STN-DBS患者；涉及的原始病例及队列没有在该机制综合段落中逐一列出。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本条是二级机制综合，不对应单一队列。全文没有报告该机制的独立患者、FOG事件或触点分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "相关机制段落没有给出统一的Med-On/Med-Off测试状态。",
+      "DBS_state_and_parameters": "背侧STN或向背侧扩散的刺激；涉及邻近纤维束募集。没有报告统一的触点、频率、幅度、脉宽或组织激活体积阈值。综述明确不支持普遍适用的上触点/下触点规则。",
+      "task": "原始研究任务未在机制综合段落中逐一说明。",
+      "recording_location": "未报告STN LFP或单/多单位记录位置。该解释基于刺激位置和邻近纤维束的解剖学解释，不是直接神经活动测量。",
+      "measure": "临床轴性症状/FOG与刺激传播位置之间的关系；不是STN神经活动指标。",
+      "frequency_and_analysis_window": "未报告神经振荡频段、分析窗口、burst指标或跨区耦合。这里的刺激传播和位置不能等同于神经振荡异常。",
+      "finding": "综述提出部分刺激相关FOG可能与电流向STN背侧及邻近纤维束扩散有关，涉及pallidofugal、zona incerta等邻近通路的募集。该机制是解剖学和网络传播解释，而不是已经由STN LFP或单元活动证实的机制。综述同时指出不存在适用于所有患者的统一触点阈值。",
+      "effect_estimate": "没有定量效应量、组织激活阈值、置信区间或P值。",
+      "statistical_unit_and_method": "多篇临床/机制研究的叙述性综合；没有单一统计单位或独立神经生理模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2 domain-informed qualitative appraisal；原始研究自身偏倚风险未由本综述正式评价。",
+        "domains": [
+          {
+            "domain": "预先方案及注册",
+            "judgement": "unclear",
+            "reason": "没有报告预注册方案。",
+            "source_locator": "Methods—Study design and scope"
+          },
+          {
+            "domain": "检索策略",
+            "judgement": "some_concerns",
+            "reason": "数据库和检索时间明确，但完整检索式未提供。",
+            "source_locator": "Methods—Information sources and search strategy"
+          },
+          {
+            "domain": "筛选及数据提取",
+            "judgement": "unclear",
+            "reason": "没有说明独立双人筛选及原始机制研究的逐项数据核对。",
+            "source_locator": "Methods—Eligibility criteria and study selection"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "some_concerns",
+            "reason": "作者未使用正式偏倚风险工具，无法判断机制研究的选择偏倚和定位误差。",
+            "source_locator": "Methods—Methodological considerations"
+          },
+          {
+            "domain": "证据综合",
+            "judgement": "some_concerns",
+            "reason": "解剖学机制由异质性研究叙述性综合，缺少统一的电极定位、组织激活和FOG事件级定量数据。",
+            "source_locator": "Results—Stimulation-related gait and balance worsening; Discussion—Stimulation-related gait and balance worsening"
+          },
+          {
+            "domain": "发表偏倚",
+            "judgement": "not_assessable",
+            "reason": "没有报告发表偏倚分析。",
+            "source_locator": "Methods—Methodological considerations"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是可能的刺激传播/邻近纤维募集机制，不是STN局部神经活动异常的直接证据。没有原始研究逐项PMID/DOI映射、神经记录、组织激活体积定量或事件级时间关系。不能把背侧刺激位置与beta功率升高、beta burst或STN-皮层耦合直接等同。",
+      "quote": "adverse axial effects have often been linked to dorsal or dorsally spreading stimulation above the intended STN motor territory",
+      "source_locator": {
+        "section": "Results—Stimulation-related gait and balance worsening; Discussion—Stimulation-related gait and balance worsening",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

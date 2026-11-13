@@ -1,0 +1,79 @@
+写报告输入改为附件： 写报告输入超长 417473 字（结论 21 条、证据 538 条），不静默截断
+[S3a_Q1_report_85336ee3] gpt3 gpt-6-thinking 完成 351s 38863 字
+附录：文献 150，证据 538，结论 21，假说 13
+S3a 报告 46963 字
+S3a 引用 150 条 {'ok': 150}
+[S3a_Q1_open_g56_e90fbc7e] gpt4 gpt-5-6-thinking 完成 474s 8045 字
+[S3a_Q1_open_g6_e90fbc7e] gpt3 gpt-6-thinking 完成 929s 8338 字
+[S3a_Q1_abs_g6_10f736ab] gpt4 gpt-6-thinking 完成 1426s 10907 字
+S3a open_g6: major 5，moderate 5
+    1 major 检索覆盖存在系统性截断，无法支持报告所要求的广泛证据覆盖。
+    2 major 尚未完成筛选的文献已经进入证据提取，且没有在证据数据库中保留明确的筛选状态。
+    3 major 将一项明确没有记录真实冻结事件的步态研究，作为冻结期间STN-EMG异常的证据，属于实质性引用错误。
+S3a open_g56: major 6，moderate 4
+    1 major 核心电生理证据存在明显的选择性整合，导致最重要的科学冲突没有被完整呈现。这是整份报告最严重的问题。
+    2 major 检索和筛选流程没有形成一个边界清晰、可审计的最终证据集，报告的覆盖能力不足以支撑其综合性结论。
+    3 major FOG、FOG易感性、冻结样步态异常和一般运动减速之间的操作性定义没有真正统一，跨研究比较存在构念混淆。
+S3a 绝对验收: severe 1，moderate 14，minor 3； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'partly'), (4, 'partly'), (5, 'partly'), (6, 'met'), (7, 'partly')]
+   抽查 {'consistent': 8}
+[blind_S2_vs_S3a_aX_g56_9b0417f2] gpt4 gpt-5-6-thinking 完成 330s 2454 字
+[blind_S2_vs_S3a_aX_g6_9b0417f2] gpt3 gpt-6-thinking 完成 330s 2450 字
+[blind_S2_vs_S3a_bX_g56_bd01352f] gpt4 gpt-5-6-thinking 完成 390s 2569 字
+[blind_S2_vs_S3a_bX_g6_bd01352f] gpt3 gpt-6-thinking 完成 448s 2531 字
+g6 aX 总体: S3a 分项: {'coverage': 'S3a', 'evidence': 'S3a', 'synthesis': 'S3a', 'structure': 'S3a', 'rigor': 'S3a'}
+g56 aX 总体: S3a 分项: {'coverage': 'S3a', 'evidence': 'S2', 'synthesis': 'S3a', 'structure': 'S2', 'rigor': 'S3a'}
+g6 bX 总体: S2 分项: {'coverage': 'tie', 'evidence': 'S2', 'synthesis': 'S2', 'structure': 'S2', 'rigor': 'tie'}
+g56 bX 总体: S3a 分项: {'coverage': 'tie', 'evidence': 'S3a', 'synthesis': 'S3a', 'structure': 'S2', 'rigor': 'S3a'}
+[fcx_S3a_65ad82d5] gpt3 gpt-6-thinking 完成 27s 815 字
+[fcx_S3a_61fa4767] gpt3 gpt-6-thinking 完成 12s 268 字
+[fcx_S3a_5eeb2cec] gpt4 gpt-6-thinking 完成 10s 289 字
+[fcx_S3a_ad9921f3] gpt3 gpt-6-thinking 完成 11s 35 字
+[fcx_S3a_1b7a69fe] gpt3 gpt-6-thinking 完成 54s 1895 字
+[fcx_S3a_f1e33e55] gpt4 gpt-6-thinking 完成 78s 3002 字
+[fcx_S3a_070f94cd] gpt3 gpt-6-thinking 完成 119s 2798 字
+指控来源 7 份，抽出指控 25 条
+[fcj_S3a_87c01b40] gpt4 gpt-6-thinking 完成 59s 1642 字
+[fcj_S3a_c39918b0] gpt3 gpt-6-thinking 完成 97s 2021 字
+[fcj_S3a_0d382380] gpt4 gpt-6-thinking 完成 124s 1999 字
+[fcj_S3a_a12f0734] gpt4 gpt-6-thinking 完成 65s 2339 字
+[fcj_S3a_823917f6] gpt3 gpt-6-thinking 完成 139s 3763 字
+[fcj_S3a_a754e6af] gpt4 gpt-6-thinking 完成 43s 1564 字
+[fcj_S3a_e6a658a2] gpt4 gpt-6-thinking 完成 51s 2597 字
+[fcj_S3a_87db50de] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 79s
+[fcj_S3a_e1efc278] gpt3 gpt-6-thinking 完成 93s 1212 字
+[fcj_S3a_15ffdd13] gpt3 gpt-6-thinking 完成 142s 2369 字
+[fcj_S3a_87db50de] gpt4 gpt-6-thinking 完成 83s 1864 字
+[fcj_S3a_4ab615ef] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 73s
+[fcj_S3a_ff581b58] gpt3 gpt-6-thinking 完成 255s 4017 字
+[fcj_S3a_c506a470] gpt3 gpt-6-thinking 完成 98s 1848 字
+[fcj_S3a_2cc996d3] gpt4 gpt-6-thinking 完成 30s 1043 字
+[fcj_S3a_b63c0348] gpt4 gpt-6-thinking 完成 54s 1641 字
+[fcj_S3a_958945b8] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 34s
+[fcj_S3a_4ab615ef] gpt3 gpt-6-thinking 完成 130s 2030 字
+[fcj_S3a_958945b8] gpt4 gpt-6-thinking 完成 92s 2353 字
+S3a 指控裁定 {'accusation_partly': 10, 'paper_not_in_kb': 2, 'accusation_rejected': 1, 'no_fulltext': 7, 'cannot_tell': 2, 'accusation_holds': 3}
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:41388789 | 指控：原研究纳入14名PD患者，记录坐位、站立和原地踏步时的STN-LFP及下肢EMG，没有记录真正的冻结事件。因此不能用它直接证明实际冻结期间或冻结前存在肌肉共同激
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:31505548 | 指控：原研究不仅报告了冻结期间theta-alpha皮层-STN耦合下降，还发现实际冻结期间STN低频功率、beta功率和beta burst持续时间与正常步行相比均
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:41131028 | 指控：原研究发现，TurnPre阶段增强的PMC-STN alpha coherence与更短的冻结持续时间相关。这一效应方向目前更支持H4所提出的代偿性解释，而不是
+  [accusation_partly] 报告有依据:partly 指控有依据:cannot_tell PMID:33240199 | 指控：PMID:40635563实际对应Disease-Modifying Trials in Treated Parkinson's Disease: Stable
+  [paper_not_in_kb] 报告有依据:None 指控有依据:None Moreau等，2008年，13例患者60 Hz低频STN-DBS原始研究 | 指控：PMID:28529730本身是低频与高频STN-DBS研究的mini-review，并不是纳入13例患者的原始试验论文。对应的原始Moreau等研究是PMID
+  [accusation_rejected] 报告有依据:yes 指控有依据:yes PMID:33240199 | 指控：PMID:33240199是一篇电生理mini-review，而不是原始研究。报告不能将综述对既有研究的总结等同于独立的原始实验结果。讨论具体beta降低现象时
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:40383539 | 指控：原研究是一项随机、双盲、短期研究，纳入15名PD患者。主要结局FoG-Course在整个患者样本中并未显示TBS-DBS优于连续DBS，只有7/15名患者主观评
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:41388789 | 指控：原研究纳入14名帕金森病患者，记录坐位、站立和踏步任务中的STN-LFP及下肢EMG，没有实际冻结事件分析，也没有FOG与非FOG患者分组。研究报告的是不同运动
+  [accusation_partly] 报告有依据:partly 指控有依据:cannot_tell PMID:33240199 | 指控：PMID:40635563实际对应Disease-Modifying Trials in Treated Parkinson's Disease: Stable
+  [paper_not_in_kb] 报告有依据:None 指控有依据:None 13例患者随机、双盲、交叉试验的原始研究 | 指控：PMID:28529730实际对应2017年的mini-review（二手综述），并非所描述的原始随机交叉试验。对应的原始研究是PMID:18420482。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:31494286 | 指控：原研究使用躯干加速度计计算iFOG指数，区分冻结易感步态与正常步态，并非直接分析实际冻结事件。其证据应归类为冻结易感性证据，不能直接等同于真实FOG发生期间的神
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:yes PMID:37226972 | 指控：原研究将8次VR冻结和7次显著步态减速合并为受影响试次。这些试次并非全部属于实际冻结事件，不能将其结果直接解释为真实FOG期间的神经生理变化。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:36730026 | 指控：原研究采用仰卧踏步任务，以步态振幅下降超过50%定义freezing-like irregularities。这种替代行为不能直接等同于自然直立行走中的真实FO
+  [accusation_partly] 报告有依据:partly 指控有依据:partly DOI:10.21203/rs.3.rs-9617843/v1 | 指控：该DOI对应Research Square预印本，并非已经完成同行评审的正式期刊论文。报告应明确标注其未经同行评审的出版状态，不能使读者将其与已发表的同行评审原
+  [accusation_partly] 报告有依据:partly 指控有依据:partly DOI:10.64898/2026.08.13.744293 | 指控：该DOI对应bioRxiv预印本，尚未经同行评审。研究只有4名独立患者，患者留一交叉验证不等于独立外部验证，因此AUC=0.825不能直接解释为已经获得稳定的跨
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40512756 | 指控：PMID:40635563实际对应另一篇文献Disease-Modifying Trials in Treated Parkinson's Disease: S
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:36070366 | 指控：原研究总体纳入18名患者，其中12名参加步态实验，只有4名在实验中实际发生冻结事件。4人是发生FOG的事件亚组，而不是整个研究的样本量。报告将FOG事件亚组人数
+  [accusation_holds] 报告有依据:no 指控有依据:yes PMID:41131028 | 指控：原论文定义的百分比变化为(Walk-Turn)/Walk，因此正系数可能表示转弯期相对于行走基线的下降。图注中PMC-STN coherence增加与较短冻结持
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:cannot_tell PMID:40677701 | 指控：这两个文献记录实际上是同一项beta-burst驱动自适应DBS研究的预印本和正式发表版本，使用同一研究队列，并非两项独立研究。报告没有建立明确的版本关联，若将
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:42571859 | 指控：原研究主要提供步态周期锁定的皮层低beta活动和皮层-STN theta coherence证据，并研究HFS、LFS对相关活动及冻结的调节，并非直接研究STN
+  [accusation_holds] 报告有依据:no 指控有依据:yes PMID:28890315 | 指控：原始研究实际报告的是冻结期间β功率下降。X直接引用了该原始研究，而Y主要通过电生理综述（PMID:33240199）转述了相反的结果。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40512756 | 指控：PMID:40635563实际对应的是一篇关于帕金森病疾病修饰试验的综述，并非胆碱能PET研究。该PET研究的正确PMID是40512756。
+  [accusation_holds] 报告有依据:no 指控有依据:yes PMID:41131028 | 指控：原文区分了正常转弯阶段TurnPre与冻结转弯阶段TurnStart的耦合变化，并报告TurnPre阶段耦合增强与较短的冻结时间相关。这些结果可以通过不同时间阶
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40512756 | 指控：PMID:40635563实际对应一篇疾病修饰试验综述，并非该胆碱能PET研究。该PET研究的正确PMID是40512756。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40512756 | 指控：PMID:40635563实际对应一篇疾病修饰治疗综述，并非胆碱能PET研究。胆碱能PET研究的正确PMID为40512756。

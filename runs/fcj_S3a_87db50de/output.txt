@@ -1,0 +1,18 @@
+<escape>{
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+    "STN local field potential recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16).",
+    "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+    "preprint (which was not certified by peer review)",
+    "doi: bioRxiv preprint"
+  ],
+  "judge_quotes": [
+    "preprint (which was not certified by peer review)",
+    "STN local field potential recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16).",
+    "Predictive performance was assessed using leave-one-patient-out logistic regression and threshold classifiers.",
+    "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+    "Across models, entropy consistently provided the most robust and generalizable discrimination between pre-freeze and stable turns, and additional features did not yield meaningful improvements beyond this single measure."
+  ],
+  "why": "报告的核心数据有明确依据：论文确实分析了4名帕金森病患者的STN局部场电位数据，并报告基于Shannon entropy的患者留一交叉验证AUC为0.825。但论文明确标注为bioRxiv预印本，并明确注明未经同行评审。因此，如果报告正文确实没有标明预印本状态，则属于遗漏重要文献状态限定，评级为partly，而不是no。指控者的描述同样有部分充分依据：预印本状态、4名受试者和leave-one-patient-out方法均由原文明确记载。论文没有报告独立外部验证队列，因此不能将内部患者留一交叉验证等同于独立外部验证。仅凭4名患者得到的AUC=0.825，也不足以证明稳定、可推广的跨患者预测性能。不过，后两点属于对研究设计和证据强度的合理方法学判断，并非论文明确作出的结论；论文实际上使用了'reliably separating ... across patients'及'robust and generalizable discrimination'等表述。因此，指控者的核心谨慎性判断有依据，但不能说这些限制是论文作者明确承认的结论。另需说明，附件只有论文全文，无法独立核实报告第五章5.5是否确实遗漏了预印本标注。"
+}</escape>

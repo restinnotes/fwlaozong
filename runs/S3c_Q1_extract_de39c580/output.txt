@@ -1,0 +1,939 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:42860886; DOI:10.1002/mdc3.70813; PMCID:PMC13655711",
+    "title": "Disease Duration Differentiates Freezing of Gait Response to Subthalamic and Nigral Stimulation for Parkinson's Disease in an Exploratory Multicenter Controlled Trial",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "NCT02588144",
+    "cohort_id_candidate": "unknown",
+    "cohort_relation_basis": "作者明确说明患者来自12个专家中心既有DBS队列，电极位置为回顾性筛选，而非为本研究前瞻性植入。文章引用既往STN+SNr研究，包括PMID:23757762、30241951、38363617和39957196，但没有说明本研究患者与这些研究存在个体层面的重叠，也没有提供招募时间、患者标识或中心级队列对应关系。因此，既有中心队列之间存在潜在重叠的可能性，但不能认定为同一患者队列。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID42860886_E01",
+      "design": "研究者发起的多中心、随机、双盲、对照临床试验；12个专家中心；患者按1:1随机分配至STN单靶点刺激或STN+SNr联合刺激；随访90天。探索性、非确证性研究。",
+      "population": "帕金森病患者，包括遗传性PD。入组条件包括病程>5年、年龄18至80岁、既往双侧STN-DBS至少6个月、STN刺激在MedOff条件下带来至少30%的运动改善，以及在优化STN刺激和药物治疗后仍存在FoG。FoG-AC入组评分为10至33。患者来自既有DBS队列。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "作者报告筛查53例、入组48例，其中1例筛查失败后被错误随机化且未接受研究治疗，2例撤回知情同意，最终mITT为45例，其中STN组23例、STN+SNr组22例；PP人群39例。45例mITT均属于满足FoG-AC入组条件的患者。实际冻结事件总数未报告。无神经电生理记录，因此有效神经数据患者数不适用。无试次级神经分析，n_trials不适用。电极和触点未作为神经记录分析单位报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。讨论部分指出FoG具有异质性，包括starting hesitation、shuffling、festination、obstacle-related freezing、turning freezes及straight-ahead walking freezes，但没有对本研究患者进行具体亚型分组。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "FoG-AC基线及随访评估均在MedON、StimON条件下进行。筛查V0曾在MedOFF条件下进行运动反应测试，随后重新给予多巴胺能药物，并在MedON条件下评估FoG-AC。V1至V6均在MedON、StimON条件下。",
+      "DBS_state_and_parameters": "所有患者既往接受双侧STN-DBS至少6个月，使用具备interleaving功能的Medtronic Activa PC或RC。V1随机化前所有患者均接受STN单靶点刺激。随机后STN组继续STN刺激，STN+SNr组增加SNr刺激。SNr触点仅在STN+SNr组随机化后激活。STN电极脉宽为60 μs（2例除外），所有SNr触点脉宽为60 μs。V6振幅中位数（范围）：STN组左/右STN分别为3.0（1.9–4.8）/2.9（1.2–5.7）mA；STN+SNr组左/右STN分别为3.6（1.6–6.0）/2.8（1.3–5.5）mA，左/右SNr分别为1.3（0.5–2.5）/1.2（0.5–2.5）mA。主文未报告刺激频率、具体触点组合及方向性。SNr定位依据MCP标准坐标，作者承认实际电流可能扩散至ventromedial STN或SNc。",
+      "task": "Freezing of Gait Assessment Course（FoG-AC），12项临床评估，总分0–36，36代表最严重。主要结局为V6，即随机化后90天的FoG-AC。V1为基线，V2、V3、V4、V5分别为Day 2、Day 8、Day 21、Day 42。作者指出FoG-AC协议包含转弯及直线行走相关冻结表现。所有FoG-AC评估均为MedON、StimON。",
+      "recording_location": "无神经活动记录。STN和SNr仅为DBS刺激靶点，不是神经信号记录位置。",
+      "measure": "临床FoG-AC总分。该指标为12项评估的综合评分，不是STN-LFP功率、beta burst、单元活动、相位调制或跨区域神经耦合指标。",
+      "frequency_and_analysis_window": "无神经频段及神经信号分析窗口。临床观察窗口为V1至V6，共90天；中间评估时间为Day 2、8、21、42。主要分析V6的FoG-AC，使用基线V1评分作为协变量。",
+      "finding": "90天时STN与STN+SNr两组FoG-AC没有显著差异。两组未调整均值显示FoG-AC均未出现明显的整体改善。基线调整后，STN+SNr组评分数值上低于STN组，但组间差异不显著。",
+      "effect_estimate": "未调整均值±SD：STN组V1 18.0±7.1，V6 18.1±8.9；STN+SNr组V1 14.3±6.3，V6 14.9±11.1。基线调整后V6均值：STN 17.10，STN+SNr 15.94；调整后差值Δ=-1.16，95%CI [-7.03, 4.71]，P=0.692；Hedges g=0.046，95%CI [-0.538, 0.631]。",
+      "statistical_unit_and_method": "患者级推断，mITT n=45。ANCOVA，以基线FoG-AC为协变量，以90天FoG-AC为因变量。预设探索性单侧α=0.20，P值未进行多重比较校正，作者明确指出结果属于描述性而非确证性分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评；非正式、非完整标准化评估。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "采用计算机生成的1:1随机序列，但主文未说明分配隐藏的具体实施。基线部分变量存在不平衡，例如MDS-UPDRS IV组间P=0.013。尚无证据证明随机化被破坏。",
+            "source_locator": "Methods—Study Design；Table 1"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "患者及评分医生保持盲法，盲法判断接近随机水平。但负责调整刺激参数的治疗医生知道分组，并可根据临床恶化及安全问题调整治疗。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "48例入组，最终45例进入mITT，另有6例不符合PP分析条件。缺失值不进行插补，采用complete-case analysis。主要结局的完整缺失情况未逐例提供。",
+            "source_locator": "Methods—Patients；Missing Values；Results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "评分医生对治疗分组保持盲法，有利于减少测量偏倚。但FoG-AC具体评估流程及评分细节被放在Data S1，提供的HTML未包含该补充文件，无法核实视频确认、评分者一致性等细节。",
+            "source_locator": "Methods—Primary Endpoint；Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "研究为探索性试验，多个次要结局未进行多重比较校正，P值主要用于描述。虽然报告了临床试验注册号NCT02588144，但未在所提供材料中核对完整注册方案及预设分析计划。",
+            "source_locator": "Methods—Primary Analysis；Secondary Analyses；Discussion"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是刺激干预临床研究，不是神经电生理研究。没有测量STN神经活动，因此不能据此推断STN活动与FOG之间的频段、时间顺序或神经生理因果关系。FoG-AC是综合临床评分，不能代替事件级冻结次数及神经活动与冻结事件的时间锁定分析。研究样本较小，原计划54例，实际mITT 45例；研究采用探索性α=0.20且未校正多重比较。患者来自既有队列，电极未前瞻性植入。FoG-AC详细操作流程所在Data S1未包含在提供的HTML中。",
+      "quote": "The mITT population showed no relevant difference of the FoG-AC 90 days after randomization (V6) between STN and STN+SNr group.",
+      "source_locator": {
+        "section": "Results—Primary Endpoint；Methods—Primary Endpoint；Primary Analysis",
+        "page": null,
+        "figure_table": "Figure 1A；Table 1",
+        "supplement": "Data S1被引用用于FoG-AC临床评估细节，但未包含在提供的HTML中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E02",
+      "design": "同一多中心随机双盲对照试验的次要结局分析。",
+      "population": "PD患者，mITT人群；STN组与STN+SNr组。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "mITT共45例，STN组23例、STN+SNr组22例。报告的是患者级CAPSIT-PD冻结次数均值及标准差，没有报告两组累计冻结事件总数或事件级时间戳。无神经记录。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；基线V1和V6评估。",
+      "DBS_state_and_parameters": "STN组继续优化后的STN刺激；STN+SNr组在随机化后增加SNr刺激。STN及SNr脉宽原则上60 μs，频率未在主文报告。具体振幅见Table 2。",
+      "task": "CAPSIT-PD临床评估；主文报告CAPSIT-PD的number of freezing episodes，但没有提供该项目完整操作流程和事件判定标准。",
+      "recording_location": "无神经记录。",
+      "measure": "CAPSIT-PD中的number of freezing episodes，按患者汇总的冻结次数指标。",
+      "frequency_and_analysis_window": "无神经频段分析。比较V1基线与V6第90天的变化。",
+      "finding": "CAPSIT-PD冻结次数的变化在STN和STN+SNr之间没有显著差异。STN组冻结次数数值上减少，STN+SNr组数值上增加。",
+      "effect_estimate": "STN组：V1 1.7±4.8，V6 1.0±3.2，Δ=0.6±1.7；STN+SNr组：V1 0.1±0.2，V6 0.5±2.0，Δ=-0.4±2.0；组间P=0.385。",
+      "statistical_unit_and_method": "患者级次要结局；V1至V6变化值；Table 2采用Mann–Whitney U检验比较组间变化。未报告事件级统计模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "计算机随机序列，但分配隐藏细节未充分报告，基线部分变量存在不平衡。",
+            "source_locator": "Methods—Study Design；Table 1"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "评分医生及患者保持盲法，但治疗医生未盲且可以调整刺激参数。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "采用complete-case analysis，不进行缺失值插补；次要结局的具体有效样本数未逐项报告。",
+            "source_locator": "Methods—Missing Values；Table 2"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "报告了CAPSIT-PD冻结次数，但没有在主文提供具体事件判定流程及视频确认方法。",
+            "source_locator": "Methods—Secondary Endpoints；Table 2"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "次要结局探索性分析，未进行多重比较校正。",
+            "source_locator": "Methods—Secondary Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果属于临床评估指标，不是连续神经信号。CAPSIT-PD任务细节未在提供的主文中完整描述，因此不能确定其冻结事件是否满足严格的自然步行、视频或临床事件确认标准。冻结次数均值不能替代总事件数。",
+      "quote": "CAPSIT-PD: number of freezing episodes.",
+      "source_locator": {
+        "section": "Results—Secondary Endpoints",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": "Data S1；所提供HTML未包含完整补充材料。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E03",
+      "design": "随机双盲对照试验的次要结局分析。",
+      "population": "PD患者，mITT人群；STN组23例、STN+SNr组22例。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "mITT为45例；FOG-Q的逐项有效样本分母未在Table 2单独列出。无神经记录，无事件级冻结统计。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON。",
+      "DBS_state_and_parameters": "STN单靶点与STN+SNr联合刺激。脉宽原则上60 μs；主文未报告刺激频率。",
+      "task": "Freezing of Gait Questionnaire（FOG-Q），基线V1与第90天V6。",
+      "recording_location": "无神经记录。",
+      "measure": "患者报告的FOG-Q总分。",
+      "frequency_and_analysis_window": "无神经频段。V1至V6，90天。",
+      "finding": "FOG-Q在两组之间没有显著差异。STN组与STN+SNr组评分在随访期均未显示明显改变。",
+      "effect_estimate": "STN组：V1 14.2±4.0，V6 14.5±4.7，Δ=-0.2±4.9；STN+SNr组：V1 16.2±3.3，V6 16.3±2.9，Δ=-0.1±1.8；组间P>0.999。",
+      "statistical_unit_and_method": "患者级问卷评分；V1至V6变化值；Mann–Whitney U检验。探索性次要结局，未进行多重比较校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "计算机生成随机序列，但分配隐藏细节未充分说明。",
+            "source_locator": "Methods—Study Design"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "患者和评分医生盲法有效，但治疗医生知晓分组。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "采用complete-case analysis，FOG-Q的逐项有效样本数未单独列出。",
+            "source_locator": "Methods—Missing Values；Table 2"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FOG-Q为患者报告量表，不提供事件级冻结验证。",
+            "source_locator": "Methods—Secondary Endpoints；Table 2"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "次要结局属于探索性分析，未进行多重比较校正。",
+            "source_locator": "Methods—Secondary Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "FOG-Q属于患者报告的症状量表，不代表实际冻结事件，不具备事件发生时间及神经活动时间锁定信息。不能作为STN神经活动与实际FOG事件之间的直接证据。",
+      "quote": "Freezing of Gait Questionnaire.",
+      "source_locator": {
+        "section": "Results—Secondary Endpoints",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E04",
+      "design": "随机双盲对照试验的次要结局分析。",
+      "population": "PD患者，mITT人群；STN组23例、STN+SNr组22例。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "mITT为45例；该条目逐项有效样本数未单独报告。无神经记录及事件级神经分析。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON。",
+      "DBS_state_and_parameters": "STN单靶点与STN+SNr联合刺激；脉宽原则上60 μs，刺激频率未在主文报告。",
+      "task": "MDS-UPDRS II第2.13项，即freezing条目；V1与V6评估。",
+      "recording_location": "无神经记录。",
+      "measure": "MDS-UPDRS II 2.13 freezing item，患者报告的日常生活冻结症状评分。",
+      "frequency_and_analysis_window": "无神经频段。V1至V6，90天。",
+      "finding": "MDS-UPDRS II冻结条目在两种刺激方案之间没有显著差异。STN组评分数值下降，STN+SNr组评分数值上升。",
+      "effect_estimate": "STN组：V1 3.86±0.91，V6 3.52±1.34，Δ=-0.29±1.27；STN+SNr组：V1 3.73±0.88，V6 3.91±0.92，Δ=0.18±0.91；P=0.175。",
+      "statistical_unit_and_method": "患者级评分；V1至V6变化值；Welch two-sample t-test。探索性次要结局。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "计算机生成随机序列，分配隐藏细节不充分。",
+            "source_locator": "Methods—Study Design"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "患者及评分医生盲法有效，治疗医生未盲。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "未进行缺失值插补，采用complete-case analysis。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "该指标是患者报告症状条目，而非经视频或事件级临床评审确认的冻结记录。",
+            "source_locator": "Methods—Secondary Endpoints；Table 2"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "未进行次要结局多重比较校正。",
+            "source_locator": "Methods—Secondary Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该条目反映日常生活中的冻结症状，而非自然行走中实际发生的事件。不能据此判断冻结发生的具体阶段或其与STN神经活动的时间关系。",
+      "quote": "MDS-UPDRS II 2.13 (freezing item).",
+      "source_locator": {
+        "section": "Results—Secondary Endpoints",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E05",
+      "design": "随机对照试验中的探索性事后应答者分析。",
+      "population": "STN单靶点刺激组的PD患者。应答者定义为V6相对于V1的FoG-AC改善至少3分；非应答者定义为改善不足3分、无变化或恶化。",
+      "n_enrolled": 48,
+      "n_analyzed": 23,
+      "n_patients_with_FOG": 23,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN组mITT共23例，7例应答者、16例非应答者。没有神经记录；FoG事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；V1至V6。",
+      "DBS_state_and_parameters": "STN单靶点刺激，筛查时已进行STN参数优化；随机化后继续STN刺激。脉宽原则上60 μs；频率未在主文报告。",
+      "task": "FoG-AC临床步行评估课程，比较V1与V6评分，并依据至少3分改善定义应答者。",
+      "recording_location": "无神经记录。",
+      "measure": "FoG-AC总分及其临床最小相关改善阈值。",
+      "frequency_and_analysis_window": "无神经频段。应答定义为90天V6相对于V1基线的变化。",
+      "finding": "STN组7/23患者达到至少3分的临床相关FoG-AC改善，占30.4%。应答者V6 FoG-AC评分低于非应答者。",
+      "effect_estimate": "应答者7/23（30.4%），非应答者16/23（69.6%）。V6 FoG-AC：应答者11.57±5.86，非应答者20.94±8.54；两组差值9.37，95%CI [1.96, 16.78]，P=0.0157。",
+      "statistical_unit_and_method": "患者级应答者与非应答者比较；应答阈值为FoG-AC改善≥3分；Table 4采用unpaired t-test。探索性分析，未校正多重比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评；另考虑事后亚组分析的选择偏倚。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原始治疗分组随机化，但应答者与非应答者不是随机分组。",
+            "source_locator": "Methods—Study Design；Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，治疗期间允许临床需要时调整刺激。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "采用complete-case analysis，PP分析排除6例重大方案偏离者。",
+            "source_locator": "Methods—Missing Values；Patients"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "临床评分医生保持盲法，但FoG-AC详细判定方法未包含在所提供的Data S1中。",
+            "source_locator": "Methods—Primary Endpoint；Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "high",
+            "reason": "应答者分析为探索性事后分析，应答分组直接依据同一个FoG-AC结局定义，且未校正多重比较；该比较不能视为独立验证的预测模型。",
+            "source_locator": "Methods—Responder Analyses；Results—Responder Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "应答者定义直接使用FoG-AC变化≥3分，随后比较应答者与非应答者的V6 FoG-AC，因此该差异具有定义上的内在联系，不能作为独立的治疗效应验证。应答分析是探索性的，缺乏外部验证。该结果不包含任何STN神经活动测量。",
+      "quote": "We defined patients as responders upon ≥3 points of clinical improvement of the FoG-AC.",
+      "source_locator": {
+        "section": "Methods—Responder Analyses Based on Minimal Clinically Relevant Change；Results—Responder Analyses",
+        "page": null,
+        "figure_table": "Table 4；Figure 1B",
+        "supplement": "Table S1报告应答者和非应答者的治疗调整情况。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E06",
+      "design": "随机对照试验中的探索性事后应答者分析。",
+      "population": "STN+SNr联合刺激组的PD患者。应答者定义为V6相对于V1的FoG-AC改善至少3分。",
+      "n_enrolled": 48,
+      "n_analyzed": 22,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN+SNr组mITT共22例，8例应答者、14例非应答者。无神经记录；冻结事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；V1至V6。SNr刺激从随机化后开始激活。",
+      "DBS_state_and_parameters": "STN+SNr联合刺激。V1时所有患者仍使用STN单靶点参数，随机化后激活SNr触点。STN及SNr脉宽原则上60 μs；频率未在主文报告。",
+      "task": "FoG-AC临床步行评估课程，V1基线与V6第90天。",
+      "recording_location": "无神经记录。",
+      "measure": "FoG-AC总分及至少3分改善的临床应答者比例。",
+      "frequency_and_analysis_window": "无神经频段。V1至V6，90天。",
+      "finding": "STN+SNr组8/22患者达到临床相关改善，占36.3%。应答者V6 FoG-AC评分低于非应答者。该组应答者与非应答者的评分差异数值上大于STN组对应差异。",
+      "effect_estimate": "应答者8/22（36.3%），非应答者14/22（63.6%）。V6 FoG-AC：应答者5.50±3.42，非应答者20.29±10.35；两组差值14.79，95%CI [6.85, 22.72]，P=0.0009。",
+      "statistical_unit_and_method": "患者级应答者与非应答者比较；应答阈值FoG-AC改善≥3分；Table 4采用unpaired t-test。探索性事后分析，未校正多重比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评；另考虑事后亚组分析的选择偏倚。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原始治疗分组采用随机化，但应答者与非应答者分组不是随机化。",
+            "source_locator": "Methods—Study Design；Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，且治疗期间可调整参数。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "采用complete-case analysis，PP分析排除6例重大方案偏离者。",
+            "source_locator": "Methods—Missing Values；Patients"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "评分医生保持盲法，但FoG-AC详细测量流程未包含在所提供的补充材料中。",
+            "source_locator": "Methods—Primary Endpoint；Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "high",
+            "reason": "事后应答者分析，分组依据与比较结局均为FoG-AC，且未进行多重比较校正；不能视为独立预测验证。",
+            "source_locator": "Methods—Responder Analyses；Results—Responder Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "应答者分析属于探索性事后分析，FoG-AC应答定义和结局存在内在关联。虽然STN+SNr组内应答者与非应答者差异较大，但不能据此证明STN+SNr优于STN，因为随机组间主要结局没有显著差异。没有神经活动测量。",
+      "quote": "In STN+SNr, responders improved compared to non-responders on the FoG-AC.",
+      "source_locator": {
+        "section": "Results—Responder Analyses Based on Minimal Clinically Relevant Change",
+        "page": null,
+        "figure_table": "Table 4；Figure 1B",
+        "supplement": "Table S1"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E07",
+      "design": "随机对照试验中的探索性患者级亚组比较。",
+      "population": "STN单靶点刺激组；比较FoG-AC应答者与非应答者的基线PD病程。",
+      "n_enrolled": 48,
+      "n_analyzed": 23,
+      "n_patients_with_FOG": 23,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN组23例，其中应答者7例、非应答者16例。没有神经记录。患者级冻结事件数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "FoG-AC应答在MedON、StimON条件下判定。",
+      "DBS_state_and_parameters": "STN单靶点刺激。既往双侧STN-DBS至少6个月。脉宽原则上60 μs，频率未报告。",
+      "task": "将V6相对V1的FoG-AC改善≥3分定义为应答者，比较两组V0时的疾病病程。",
+      "recording_location": "无神经记录。",
+      "measure": "基线疾病病程（years since disease onset），作为临床FoG-AC治疗应答的相关因素。",
+      "frequency_and_analysis_window": "无神经频段。病程在V0筛查时记录；应答结局在V1至V6的90天内确定。",
+      "finding": "STN应答者的平均疾病病程比非应答者短，但差异未达到统计学显著。",
+      "effect_estimate": "STN非应答者病程17.25±6.64年；应答者12.71±4.72年；差值4.54年，95%CI [-1.26, 10.33]，P=0.1186。",
+      "statistical_unit_and_method": "患者级比较；Table 4采用unpaired t-test。该分析属于探索性应答者亚组分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原始治疗组随机化，但病程应答亚组为事后分类。",
+            "source_locator": "Methods—Study Design；Table 4"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲且允许参数调整。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "未插补缺失值，采用complete-case analysis。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-AC为临床评分，评分者盲法有利于减少偏倚，但详细测量流程未在提供材料中完整呈现。",
+            "source_locator": "Methods—Primary Endpoint"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "病程与应答的关系来自探索性亚组分析，未进行多重比较校正。",
+            "source_locator": "Results—Responder Analyses；Table 4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "病程差异的95%CI跨越0，P=0.1186，不能认为STN组病程与应答存在已确立的统计学关联。该结果不能直接支持病程决定STN神经活动或FOG机制。",
+      "quote": "STN responders also showed numerically shorter disease duration compared to non-responders.",
+      "source_locator": {
+        "section": "Results—Responder Analyses Based on Minimal Clinically Relevant Change",
+        "page": null,
+        "figure_table": "Table 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E08",
+      "design": "随机对照试验中的探索性患者级亚组比较。",
+      "population": "STN+SNr联合刺激组；比较FoG-AC应答者与非应答者的基线PD病程。",
+      "n_enrolled": 48,
+      "n_analyzed": 22,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN+SNr组22例，其中应答者8例、非应答者14例。无神经记录，事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；FoG-AC应答根据V1至V6变化判定。",
+      "DBS_state_and_parameters": "STN+SNr联合刺激。V1前所有患者均使用STN单靶点参数，随机后增加SNr刺激。脉宽原则上60 μs；刺激频率未在主文报告。",
+      "task": "FoG-AC临床步行评估；根据V6相对于V1改善≥3分确定应答者；比较V0疾病病程。",
+      "recording_location": "无神经记录。",
+      "measure": "基线疾病病程与STN+SNr刺激下FoG-AC临床应答的关联。",
+      "frequency_and_analysis_window": "无神经频段。病程在V0记录，临床应答在90天随访V6判定。",
+      "finding": "STN+SNr应答者的疾病病程显著短于非应答者。该结果是本研究中疾病病程与联合刺激应答之间最明确的组内关联。",
+      "effect_estimate": "非应答者16.50±4.20年；应答者12.00±3.70年；差值4.50年，95%CI [0.77, 8.23]，Table 4报告P=0.0205；效应量1.14。需要注意，Results正文相应段落另报告P<0.01，与Table 4的P=0.0205不一致。",
+      "statistical_unit_and_method": "患者级应答者与非应答者比较；Table 4脚注注明unpaired t-test；探索性分析。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原始治疗组随机化，但应答者和非应答者为事后亚组。",
+            "source_locator": "Methods—Study Design；Table 4"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，允许根据临床需要调整刺激。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "complete-case analysis，PP分析排除重大方案偏离患者。",
+            "source_locator": "Methods—Missing Values；Patients"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "临床评分医生盲法有效，但FoG-AC详细评估流程未在所提供的补充材料中完整呈现。",
+            "source_locator": "Methods—Primary Endpoint"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "探索性亚组分析，且正文和Table 4的P值存在不一致。",
+            "source_locator": "Results—Responder Analyses；Table 4"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "病程与联合刺激应答之间的关系是事后探索性分析，样本仅22例。正文报告P<0.01，而Table 4报告P=0.0205，应保留这一原文内部不一致，不能自行统一。未进行多变量预测模型或外部验证。没有STN神经活动记录，因此不能把病程关联解释为STN电生理机制。",
+      "quote": "In STN+SNr, responders had shorter disease duration compared to non-responders.",
+      "source_locator": {
+        "section": "Results—Responder Analyses Based on Minimal Clinically Relevant Change",
+        "page": null,
+        "figure_table": "Table 4；Table 4之前的Results段落",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E09",
+      "design": "随机对照试验中合并两个治疗组的探索性应答者分析。",
+      "population": "STN和STN+SNr两组患者合并，按照FoG-AC改善≥3分分为应答者与非应答者。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "合并mITT人群45例，其中15例应答者、30例非应答者。无神经记录，未报告实际冻结事件总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "两组FoG-AC评估均在MedON、StimON条件下。",
+      "DBS_state_and_parameters": "合并STN单靶点与STN+SNr联合刺激组；不同治疗组的刺激条件不相同。",
+      "task": "根据V1至V6 FoG-AC变化≥3分划分应答者和非应答者，比较两组患者的疾病病程。",
+      "recording_location": "无神经记录。",
+      "measure": "基线PD病程与90天FoG-AC临床应答之间的关联。",
+      "frequency_and_analysis_window": "无神经频段。疾病病程为基线特征，FOG应答窗口为90天。",
+      "finding": "合并治疗组后，应答者平均疾病病程短于非应答者，达到统计学显著。",
+      "effect_estimate": "应答者平均病程12.33年，非应答者16.90年，P=0.003。正文未提供该合并比较的95%CI或标准差。",
+      "statistical_unit_and_method": "患者级比较，合并STN与STN+SNr治疗组。正文报告P=0.003，但该段未明确说明具体检验方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "合并不同随机治疗组后进行事后应答分类，不能认为应答者分组具有随机性。",
+            "source_locator": "Results—Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲且允许临床调整刺激。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "mITT排除撤回知情同意者，未插补缺失值。",
+            "source_locator": "Methods—Patients；Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-AC为临床量表，详细测量流程未包含在所提供的Data S1中。",
+            "source_locator": "Methods—Primary Endpoint"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "跨治疗组合并分析属于探索性事后分析，未报告多变量调整或外部验证。",
+            "source_locator": "Results—Responder Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是跨治疗组的合并分析，可能掩盖治疗组与病程之间的交互作用。不能将其解释为病程对STN+SNr特异性疗效的独立预测。未报告标准差和置信区间，且未报告调整年龄、DBS持续时间或其他混杂因素后的模型。",
+      "quote": "Overall responders showed shorter disease duration compared to non-responders.",
+      "source_locator": {
+        "section": "Results—Responder Analyses Based on Minimal Clinically Relevant Change",
+        "page": null,
+        "figure_table": "Table S2",
+        "supplement": "Table S2；提供的HTML仅列出补充材料名称，未包含Table S2具体内容。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E10",
+      "design": "随机对照试验中合并治疗组的探索性应答者特征比较。",
+      "population": "STN与STN+SNr两组患者合并，比较FoG-AC应答者与非应答者既往DBS植入时间。",
+      "n_enrolled": 48,
+      "n_analyzed": 45,
+      "n_patients_with_FOG": 45,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "合并mITT人群45例；应答者15例，非应答者30例。未报告该变量的单独有效样本分母。无神经记录。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON。",
+      "DBS_state_and_parameters": "合并STN及STN+SNr两种刺激方案。",
+      "task": "根据FoG-AC改善≥3分分类，比较应答者和非应答者既往DBS植入时间。",
+      "recording_location": "无神经记录。",
+      "measure": "DBS植入至研究基线的时间（月）。",
+      "frequency_and_analysis_window": "无神经频段。DBS时间在V0基线评估，应答结局在V6判定。",
+      "finding": "应答者的既往DBS时间数值上短于非应答者，但未达到统计学显著。",
+      "effect_estimate": "应答者39.00个月，非应答者60.60个月，P=0.061。",
+      "statistical_unit_and_method": "患者级合并组比较。正文未明确报告该变量的具体统计检验方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "DBS持续时间为基线观察性变量，且应答者分类为事后分析。",
+            "source_locator": "Results—Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，研究期间允许调整治疗。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "研究使用complete-case analysis。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-AC为临床评分，DBS时间为基线临床特征。",
+            "source_locator": "Methods—Primary Endpoint；Table S2"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "探索性事后分析，仅报告统计趋势。",
+            "source_locator": "Results—Responder Analyses"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "P=0.061仅为统计趋势，不能认定DBS持续时间与FoG治疗应答存在显著关联。该变量可能与疾病病程相关，但文章没有提供二者之间的独立性分析。",
+      "quote": "Responders showed numerically lower time since DBS implantation.",
+      "source_locator": {
+        "section": "Results—Responder Analyses Based on Minimal Clinically Relevant Change",
+        "page": null,
+        "figure_table": "Table S2",
+        "supplement": "Table S2的具体数据未包含在提供的HTML中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E11",
+      "design": "随机对照试验中STN应答者的纵向临床评分描述性分析。",
+      "population": "STN单靶点刺激组FoG-AC应答者。",
+      "n_enrolled": 48,
+      "n_analyzed": 7,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN组7例应答者。无神经记录；未报告事件级冻结总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；连续随访评估。",
+      "DBS_state_and_parameters": "STN单靶点刺激，筛查阶段已优化STN参数；随机后继续STN刺激。",
+      "task": "连续FoG-AC评估，V1基线，V2 Day 2，V3 Day 8，V4 Day 21，V5 Day 42，V6 Day 90。",
+      "recording_location": "无神经记录。",
+      "measure": "STN应答者的FoG-AC评分随时间变化。",
+      "frequency_and_analysis_window": "无神经频段。临床随访时间为Day 0至Day 90，重点观察Day 21至Day 90。",
+      "finding": "STN应答者的FoG改善不是立即完成的，而是随时间逐渐发生。作者指出，两种治疗方案的应答者大部分FoG严重程度变化发生在重新编程之后，并持续发展至Day 90。",
+      "effect_estimate": "正文未提供该亚组各时间点的具体数值或纵向效应量。Figure 1B展示均值±SD的纵向变化。",
+      "statistical_unit_and_method": "患者级重复随访数据，Figure 1B描述性展示。正文未报告针对该时间趋势的独立纵向统计模型或P值。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原始治疗分组随机化，但应答者亚组为事后定义。",
+            "source_locator": "Methods—Study Design；Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，研究允许临床需要时调整刺激参数。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "采用complete-case analysis，未进行缺失值插补。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "临床评分者保持盲法，但该纵向亚组的具体测量细节未在主文完整报告。",
+            "source_locator": "Methods—Primary Endpoint；Figure 1B"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "纵向变化主要以描述性图形呈现，未报告正式时间效应模型。",
+            "source_locator": "Results—Responder Analyses；Figure 1B"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果只描述7名应答者的临床评分轨迹，没有报告事件级冻结发生前、冻结中及恢复后的神经活动。不能据此确定延迟改善的神经生理原因，也不能排除临床评分的时间变异。",
+      "quote": "Most of the change in FoG severity in both STN and STN+SNr responder groups occurred with delay from re-programming.",
+      "source_locator": {
+        "section": "Discussion—Treatment Dynamics",
+        "page": null,
+        "figure_table": "Figure 1B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E12",
+      "design": "随机对照试验中STN+SNr应答者的纵向临床评分描述性分析。",
+      "population": "STN+SNr联合刺激组FoG-AC应答者。",
+      "n_enrolled": 48,
+      "n_analyzed": 8,
+      "n_patients_with_FOG": 8,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN+SNr组8例应答者。无神经记录；事件级冻结总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "MedON、StimON；V1至V6。",
+      "DBS_state_and_parameters": "STN+SNr联合刺激，V1之后才激活SNr触点。STN与SNr刺激脉宽原则上60 μs。",
+      "task": "FoG-AC连续评估，V1、Day 2、Day 8、Day 21、Day 42及Day 90。",
+      "recording_location": "无神经记录。",
+      "measure": "STN+SNr应答者FoG-AC随时间变化。",
+      "frequency_and_analysis_window": "无神经频段。Day 0至Day 90，重点为Day 21至Day 90。",
+      "finding": "STN+SNr应答者的FoG改善呈延迟、逐渐发展的时间模式，而不是重新编程后立即达到最大改善。作者指出大部分改善发生在Day 21至Day 90。",
+      "effect_estimate": "正文没有报告该亚组各访视的精确评分变化、置信区间或独立纵向检验结果。Figure 1B展示均值±SD。",
+      "statistical_unit_and_method": "患者级重复测量的描述性分析；未报告正式纵向模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "治疗组原始随机化，但应答者亚组为事后分类。",
+            "source_locator": "Methods—Study Design；Responder Analyses"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲，允许治疗期间调整刺激参数。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "未进行缺失值插补，采用complete-case analysis。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "评分者盲法有效，但纵向测量细节和独立事件确认信息不充分。",
+            "source_locator": "Methods—Primary Endpoint；Figure 1B"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "主要报告描述性轨迹，没有正式纵向模型或时间效应检验。",
+            "source_locator": "Discussion—Treatment Dynamics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "样本仅8例，时间轨迹为描述性结果。研究没有记录STN或SNr神经活动，因此不能将延迟改善直接归因于某种神经振荡、突触可塑性或网络重组机制。",
+      "quote": "Developing constantly between Day 21 and Day 90.",
+      "source_locator": {
+        "section": "Discussion—Treatment Dynamics",
+        "page": null,
+        "figure_table": "Figure 1B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID42860886_E13",
+      "design": "随机对照试验中STN+SNr非应答者的纵向FoG-AC描述性分析。",
+      "population": "STN+SNr组14例FoG-AC非应答者。",
+      "n_enrolled": 48,
+      "n_analyzed": 14,
+      "n_patients_with_FOG": 14,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "STN+SNr非应答者14例。无神经记录；实际冻结事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "V0筛查和V1基线均在MedON、StimON条件下使用STN单靶点参数；V1随机化后STN+SNr组开始联合刺激。",
+      "DBS_state_and_parameters": "V0和V1均为STN单靶点刺激。随机化后激活SNr刺激。作者明确指出筛查至基线期间药物和刺激参数没有变化。",
+      "task": "FoG-AC连续评估，比较筛查V0、随机前基线V1及随机化后Day 2、8、21、42和Day 90的临床评分。",
+      "recording_location": "无神经记录。",
+      "measure": "STN+SNr非应答者FoG-AC评分的时间变化。",
+      "frequency_and_analysis_window": "无神经频段。重点为V0筛查至V1基线，以及V1至V6第90天。",
+      "finding": "STN+SNr非应答者在筛查V0至基线V1之间已经出现明显的FoG-AC改善，但这一改善发生在随机化之前，且两个时间点均使用STN单靶点参数。随机化后接受STN+SNr刺激期间，患者的FoG逐渐恶化，到Day 90恢复至筛查时的FoG水平。",
+      "effect_estimate": "正文未提供该非应答者亚组V0、V1、V6的完整数值或正式统计检验。Figure 1B提供均值±SD曲线。",
+      "statistical_unit_and_method": "患者级纵向描述性分析；Figure 1B；正文没有报告该模式的正式统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2，随机对照试验领域级初评。",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机化本身有计算机序列，但V0至V1的改善发生在随机化之前，不能归因于随机分配的刺激。",
+            "source_locator": "Methods—Study Design；Figure 1 caption"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "治疗医生未盲且可调整参数。",
+            "source_locator": "Methods—Physician Roles and Therapy Adjustments"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "未插补缺失值，采用complete-case analysis。",
+            "source_locator": "Methods—Missing Values"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-AC临床评分由盲法评分医生进行，但没有在主文中提供全部评估细节。",
+            "source_locator": "Methods—Primary Endpoint；Figure 1 caption"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "该时间模式为探索性描述，没有独立的纵向统计模型。",
+            "source_locator": "Results—Primary Endpoint；Discussion—Treatment Dynamics"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "重要的时间顺序限制：V0至V1的早期改善发生在STN+SNr刺激开始之前，因此不能将其归因于SNr刺激。V0和V1之间药物及刺激参数未变化，可能存在临床测量波动或基线变异。作者将随机化后逐渐丧失改善的模式与既往所谓vanishing effect或tolerance现象联系起来，但本研究未直接测量耐受的神经生理机制。",
+      "quote": "The STN+SNr non-responders performed substantially better at baseline as compared to screening.",
+      "source_locator": {
+        "section": "Results—Primary Endpoint；Discussion—Treatment Dynamics",
+        "page": null,
+        "figure_table": "Figure 1A；Figure 1B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

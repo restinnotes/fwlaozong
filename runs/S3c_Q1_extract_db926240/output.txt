@@ -1,0 +1,1351 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40759323; DOI:10.1016/j.brs.2025.07.020",
+    "title": "Spinal cord stimulation restores locomotion in a Parkinson's disease patient and rodents",
+    "publication_status": "published",
+    "version_of_candidate": "possible_match：用户附件为2022年10月21日发布的bioRxiv预印本，DOI:10.1101/2022.09.19.508432，标题为Closed-loop dorsal column stimulation is superior in restoring locomotion in rodent models of Parkinson's Disease。两篇论文具有重叠作者（Benjamin Rees、Eleonora Borda、Miguel A.L. Nicolelis、Amol P. Yadav），且采用相同类型的双侧纹状体6-OHDA大鼠模型及闭环背柱刺激方案，提示附件可能是2025年正式论文动物实验部分的早期版本。但附件不包含2025年论文中的人类患者STN-LFP和FOG实验，且没有作者明确说明两版本动物队列完全相同，因此不能认定为完全相同的数据版本或独立重复研究。本文提取以2025年正式论文的期刊全文为准。",
+    "study_id_candidate": "Slack2025_DCS_PD_human_case_rodent_study_candidate",
+    "cohort_id_candidate": "S1_human_PD_FOG_single_case",
+    "cohort_relation_basis": "本文STN神经活动与FOG相关证据全部来自同一名患者S1，不能视为多个独立患者或重复验证。患者具有双侧STN DBS电极。附件中的2022年预印本主要报告大鼠实验，不能将其动物样本并入人类患者分母。动物实验与人类实验属于同一研究项目中的不同实验群体。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID40759323_H01_FOG_DCS_P2",
+      "design": "单病例前后比较研究；同一患者在DCS植入前及植入后进行多条件步态测试；IMU算法客观检测FOG事件，另有盲法神经科医生依据视频进行MDS-UPDRS评分。",
+      "population": "1名60岁男性PD患者，41岁确诊，左利手；OFF药物时出现FOG，FOG具有多巴胺反应性。既往接受双侧STN DBS，FOG未得到明显改善。合并腰椎退行性疾病及慢性腰痛。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": 10,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "FOG事件总数10：pre-op-OFF为9次（8次短冻结、1次长冻结），DCS-P2为1次短冻结。每种条件6次直线行走。未报告FOG的akinetic/trembling-in-place亚型。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；仅报告short FOG（2–5秒）和long FOG（>5秒），未区分akinetic、trembling-in-place或kinetic类型。",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "患者在第1天和第4天步态测试前一晚停用PD药物，测试时处于Med-Off状态。具体末次服药时间和剂量未报告。",
+      "DBS_state_and_parameters": "患者既往植入双侧Medtronic SenSight STN DBS电极及Percept IPG。该比较为DCS-P2单独刺激，DBS关闭。DBS具体临床参数见原文Supplementary Table 1，主文未完整列出。",
+      "task": "自然直立步行；每个条件进行6次7.3米直线行走，行走间进行180°转弯。另在完成直线行走后进行穿过门口的往返行走。30 fps视频记录。FOG算法在直线行走和转弯区间识别冻结事件。",
+      "recording_location": "FOG由双侧小腿IMU信号识别。同期采集双侧STN LFP，但本条FOG事件计数并未进行STN神经信号的事件级对齐分析。STN记录使用双侧SenSight DBS导线的contact pairs 1和3。",
+      "measure": "IMU客观检测的FOG事件数量、持续时间类别及冻结时间占步行时间比例。FOG检测结合双侧小腿角速度相关性和加速度频谱冻结比率。",
+      "frequency_and_analysis_window": "采用1秒无重叠窗口。第一种方法：双侧小腿角速度信号对齐后计算相关系数，绝对值<0.5标记为潜在FOG。第二种方法：FFT计算加速度频谱，冻结比率定义为3–10Hz功率与0–3Hz功率之比，<2.5标记为潜在FOG。两种方法同时阳性才认定为FOG。连续阳性窗口合并为短冻结（2–5秒）和长冻结（>5秒）。",
+      "finding": "与pre-op-OFF相比，DCS-P2条件下算法检测到的FOG事件减少。pre-op-OFF期间检测到8次短冻结和1次长冻结；DCS-P2期间检测到1次短冻结，没有长冻结。该结果说明DCS-P2条件下实际自然步行中的客观冻结事件减少，但不能说明STN活动变化发生在冻结之前还是冻结期间。",
+      "effect_estimate": "pre-op-OFF：短冻结8次，占步行时间21.77%；长冻结1次，占7.26%。DCS-P2：短冻结1次，占4.83%；长冻结0次，占0%。未报告该事件计数比较的P值、置信区间或患者级效应量。",
+      "statistical_unit_and_method": "FOG事件计数和冻结时间比例为条件级描述性结果。每条件6次SLW。未报告针对FOG事件数的独立统计检验。另报告MDS-UPDRS 3.10、3.11、3.13三项合计评分从pre-op-OFF的6降至post-op-OFF的3和DCS-P2的2，但该合计分数不能等同于单独FOG评分。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理及客观行为检测研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类部分只有1名患者，且患者同时具有既往STN DBS、FOG和腰痛，代表性有限。",
+            "source_locator": "Methods，Timeline of procedures in human PD subject，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "采用双算法同时阳性的IMU标准识别FOG，并有盲法医生视频评分，但没有报告每一个算法识别事件均经视频逐事件人工确认。",
+            "source_locator": "Methods，FOG assessment，p.8；Fig.5e，p.28。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "本条FOG事件识别主要依赖IMU；同期STN信号存在85Hz DBS伪迹问题，且没有进行FOG事件级神经信号验证。",
+            "source_locator": "Methods，Deep Brain Stimulation and Local Field Potential Recording，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "前后比较非随机；腰痛及其治疗可能影响步态。作者明确承认疼痛缓解可能构成混杂。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "同一患者多次行走产生重复事件，不能作为独立患者样本。",
+            "source_locator": "Fig.5 legend，p.28。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时评价多个DCS条件、步态和神经指标；FOG事件计数未提供完整的多重比较统计方案。",
+            "source_locator": "Methods，Statistical analysis of clinical data，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "该FOG分析为规则阈值检测，没有建立预测模型或进行外部验证。",
+            "source_locator": "Methods，FOG assessment，p.8。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文未提供预注册分析计划或完整的事件级缺失数据报告。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是一个患者的前后比较结果。算法识别的自然步行FOG事件并未与STN LFP逐事件对齐。不能据此推断STN beta变化是FOG发生的前因、结果或直接机制。作者另报告所有DCS方案均减少冻结，但只有DCS-P2的事件数量在主文中给出明确数值。",
+      "quote": "FOG episodes (measured using a detection algorithm) decreased from 8 short – 21.77% and 1 long – 7.26% to 1 short – 4.83% and 0 long – 0% of locomotion time during DCS-P2",
+      "source_locator": {
+        "section": "Methods—FOG assessment；Results—human PD subject gait and FOG outcomes",
+        "page": "8, 12",
+        "figure_table": "Fig.5e；Fig.5 figure legend，p.28",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H02_STN_BETA_DCS_P1",
+      "design": "单病例重复测量电生理研究；DCS植入前OFF状态与植入后不同DCS频率条件比较。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG，双侧STN DBS电极。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每个比较条件6次SLW，共12次。该LFP分析未按FOG事件划分窗口，未报告对应的事件级FOG分母。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported；患者临床FOG为OFF-FOG，冻结亚型未报告。",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停用PD药物。",
+      "DBS_state_and_parameters": "双侧STN DBS关闭。DCS-P1开启，频率30Hz，双极刺激配置，左侧阴极领先、右侧阳极领先；幅度约为感觉阈值的5–10%以上。具体脉宽及电流值未在主文报告。",
+      "task": "6次7.3米直线行走，每次之间180°转弯。LFP分析使用SLW阶段，而不是专门的FOG事件窗口。",
+      "recording_location": "双侧STN，Medtronic SenSight DBS leads，左右两侧各记录contact pairs 1和3。Percept PC BrainSense streaming，250Hz采样。共2条植入导线、4个双极记录通道。",
+      "measure": "双侧STN局部场电位相对beta频段功率（relative beta power）。",
+      "frequency_and_analysis_window": "beta频段13–35Hz；LFP先经0.5–100Hz七阶Butterworth滤波。Welch PSD，50%重叠。beta功率为13–35Hz积分功率除以2–65Hz宽频段积分功率。逐个SLW计算。排除85Hz DBS伪迹所在频率范围。",
+      "finding": "DCS-P1（30Hz）条件下，双侧STN相对beta功率低于pre-op-OFF。论文明确报告P1、P2、P3、P4所有DCS条件的双侧STN相对beta功率均显著低于pre-op-OFF，但主文没有给出P1单独的均值及P值。",
+      "effect_estimate": "方向：双侧降低，统计显著。P1的具体相对功率均值、百分比变化及独立P值未在主文明确列出。",
+      "statistical_unit_and_method": "每条件6次SLW；One-way ANOVA followed by Tukey's Multiple Comparisons test。统计观察单位为SLW，患者级样本量仍为n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类样本仅1例，且为具有既往STN DBS及疼痛合并症的特定患者。",
+            "source_locator": "Methods，Timeline of procedures in human PD subject，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "步态任务包含自然行走及客观FOG检测，但LFP分析没有进行逐事件冻结确认或对齐。",
+            "source_locator": "Methods，FOG assessment，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "LFP采样250Hz，存在85Hz DBS伪迹，采用滤波和频谱范围限制处理；未报告完整运动伪迹验证。",
+            "source_locator": "Methods，STN LFP spectral analysis，p.9。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "不同测试条件发生于植入前后不同时间点，未报告随机化条件顺序；可能存在手术、时间及疼痛改善的影响。",
+            "source_locator": "Methods，pp.7–8；Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "6次SLW来自同一患者，采用SLW层面的比较，未报告多层次模型处理患者内相关性。",
+            "source_locator": "Fig.5 legend，p.28；Methods，p.10。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时比较多个刺激频率、左右STN和多个步态及电生理结局；虽使用Tukey事后检验，但未报告跨所有指标的整体校正。",
+            "source_locator": "Methods，Statistical analysis of clinical data，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文未提供预注册分析计划及完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是STN beta功率与自然步行状态的关联证据，不是FOG事件级证据。LFP按SLW计算，没有区分冻结发生前、冻结期间及恢复阶段。P1具体数值未在主文给出。不能将beta功率下降解释为FOG发生机制已经得到验证。",
+      "quote": "Relative beta power in the left and right STN was significantly lower at all DCS conditions when compared to pre-op-OFF",
+      "source_locator": {
+        "section": "Results—human PD subject；STN beta power during DCS",
+        "page": "12",
+        "figure_table": "Fig.5f–h",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H03_STN_BETA_DCS_P2",
+      "design": "单病例重复测量电生理研究；DCS-P2与植入前OFF状态比较。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG，双侧STN DBS电极。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每个条件6次SLW，共12次。没有报告与每次STN beta功率测量对应的FOG事件数；神经分析不是事件锁定分析。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported；短冻结和长冻结为持续时间分类，不是运动学亚型分类。",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停用PD药物。",
+      "DBS_state_and_parameters": "双侧STN DBS关闭。DCS-P2开启，频率100Hz，双极配置，左侧阴极领先、右侧阳极领先；刺激幅度约为感觉阈值的5–10%以上。脉宽及具体电流未在主文报告。",
+      "task": "自然直立步行，6次7.3米SLW，每次之间180°转弯。STN beta分析按SLW区间计算。",
+      "recording_location": "双侧STN LFP；SenSight导线，左右各记录contact pairs 1和3；Percept PC BrainSense streaming，250Hz。",
+      "measure": "双侧STN LFP相对beta功率，非beta burst持续时间或占据率。",
+      "frequency_and_analysis_window": "13–35Hz beta；Welch PSD，50% overlap；相对beta功率=13–35Hz积分功率/2–65Hz宽频积分功率；每个SLW单独计算。85Hz DBS伪迹被排除在分析频带之外。",
+      "finding": "DCS-P2（100Hz）条件下，双侧STN相对beta功率显著低于pre-op-OFF。右侧STN的相对beta功率下降25.29%，为右侧各DCS方案中报告的最大下降。",
+      "effect_estimate": "右STN：pre-op-OFF为0.7371±0.0178，DCS-P2为0.5507±0.0413，下降25.29%，p<0.001。左STN也显著下降，但P2对应的具体均值未在主文报告。数值为论文报告的均值±SD。",
+      "statistical_unit_and_method": "每条件6次SLW；One-way ANOVA followed by Tukey's Multiple Comparisons test。患者级样本量n=1，SLW作为重复测量单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类STN-FOG证据来自单个患者，不能代表PD-FOG异质性。",
+            "source_locator": "Methods，Timeline of procedures in human PD subject，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "自然步行中使用IMU算法识别FOG，但STN beta功率没有与具体冻结事件逐一对齐。",
+            "source_locator": "Methods，FOG assessment，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在85Hz DBS伪迹；研究采用滤波和频谱限制，但没有报告完整的运动伪迹敏感性分析。",
+            "source_locator": "Methods，STN LFP spectral analysis，p.9。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "非随机前后比较，DCS植入、三日刺激暴露及腰痛变化可能同时影响步态和神经信号。",
+            "source_locator": "Methods，pp.7–8；Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "n=1患者，每条件6次SLW，未报告患者内重复测量的混合效应模型。",
+            "source_locator": "Fig.5 legend，p.28；Methods，p.10。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "左右STN及多个刺激条件、多种步态指标同时比较；Tukey检验不能自动解决所有跨指标比较问题。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未报告预注册统计计划及完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "右侧beta功率下降与DCS-P2条件下FOG减少发生在同一患者，但beta功率是按SLW计算的条件级指标，不能证明下降发生在冻结前或冻结期间。不能将25.29%的beta功率变化直接解释为25.29%的FOG改善。",
+      "quote": "Relative beta power in the left and right STN was significantly lower at all DCS conditions when compared to pre-op-OFF",
+      "source_locator": {
+        "section": "Results—human PD subject；STN beta power",
+        "page": "12",
+        "figure_table": "Fig.5f–h",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H04_STN_BETA_DCS_P3",
+      "design": "单病例重复测量电生理研究；DCS-P3与植入前OFF状态比较。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG，双侧STN DBS电极。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每条件6次SLW，共12次。未报告与STN信号逐事件对应的FOG事件数。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported；未报告akinetic或trembling等亚型。",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "双侧STN DBS关闭。DCS-P3开启，频率300Hz；双极配置，左侧阴极领先、右侧阳极领先；刺激幅度约为感觉阈值的5–10%以上。具体脉宽和电流未在主文报告。",
+      "task": "自然直立步行，6次7.3米SLW，每次之间180°转弯；LFP按SLW分段分析。",
+      "recording_location": "双侧STN LFP，SenSight leads，左右各记录contact pairs 1和3；250Hz采样。",
+      "measure": "双侧STN相对beta功率。",
+      "frequency_and_analysis_window": "13–35Hz beta；Welch PSD，50% overlap；beta积分功率相对于2–65Hz宽频积分功率归一化；按单次SLW计算。",
+      "finding": "DCS-P3（300Hz）条件下双侧STN相对beta功率低于pre-op-OFF。左侧STN在P3条件下出现论文报告的最大下降43.57%。",
+      "effect_estimate": "左STN：pre-op-OFF为0.4244±0.0830，DCS-P3为0.2395±0.0351，下降43.57%，p<0.001。右STN亦低于pre-op-OFF，但P3的具体均值未在主文报告。",
+      "statistical_unit_and_method": "每条件6次SLW；One-way ANOVA followed by Tukey's Multiple Comparisons test；患者级n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类样本只有1例，外部推广能力有限。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG虽由IMU算法检测，但神经信号未与冻结事件逐事件对齐。",
+            "source_locator": "Methods，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "85Hz DBS伪迹及250Hz采样限制；未报告完整运动伪迹敏感性分析。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "植入前后比较、三日DCS暴露及疼痛变化均可能影响结局。",
+            "source_locator": "Methods，p.7；Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "每条件6次SLW来自同一患者，没有患者层面的独立重复。",
+            "source_locator": "Fig.5 legend，p.28。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "比较多个频率、左右STN和多个结局。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未提供预注册统计计划及完整缺失数据报告。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "左侧STN beta下降43.57%是特定患者、特定DCS频率下的条件级结果，不是冻结事件前的神经预测指标。FOG的实际减少不能与beta功率变化视为同一结局。",
+      "quote": "Relative beta power in the left and right STN was significantly lower at all DCS conditions when compared to pre-op-OFF",
+      "source_locator": {
+        "section": "Results—human PD subject；STN beta power",
+        "page": "12",
+        "figure_table": "Fig.5f–h",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H05_STN_BETA_DCS_P4",
+      "design": "单病例重复测量电生理研究；DCS-P4与植入前OFF状态比较。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG，双侧STN DBS电极。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每条件6次SLW。未报告P4条件下具体FOG事件数与STN信号的事件级关联。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "双侧STN DBS关闭。DCS-P4为Differential Target Multiplexed（DTM）刺激，采用50Hz和300Hz两个频率的复用方案；双极刺激配置。主文未报告完整幅度和脉宽。",
+      "task": "自然直立步行，6次7.3米SLW，每次之间180°转弯。",
+      "recording_location": "双侧STN LFP，SenSight leads，左右两侧contact pairs 1和3，250Hz采样。",
+      "measure": "双侧STN相对beta频段功率。",
+      "frequency_and_analysis_window": "13–35Hz beta；Welch PSD，50% overlap；相对beta功率按13–35Hz与2–65Hz积分功率之比计算；每次SLW分别分析。",
+      "finding": "DCS-P4（DTM，50Hz与300Hz复用）条件下双侧STN相对beta功率显著低于pre-op-OFF。主文未给出P4的独立均值和百分比变化。",
+      "effect_estimate": "双侧相对beta功率显著降低；P4特定数值及P值未在主文单独报告。",
+      "statistical_unit_and_method": "每条件6次SLW；One-way ANOVA followed by Tukey's Multiple Comparisons test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类样本n=1，病例特征特殊。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "自然步行中的FOG采用IMU检测，但没有STN信号冻结事件级分析。",
+            "source_locator": "Methods，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "85Hz DBS伪迹及250Hz采样限制，未报告完整运动伪迹验证。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "非随机前后比较，疼痛改善及时间效应可能影响结果。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "每个条件6次行走均来自同一患者。",
+            "source_locator": "Fig.5 legend，p.28。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个DCS方案、左右半球及多项指标。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未提供预注册统计计划及完整缺失数据报告。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "DTM是不同于P1–P3的刺激模式。不能把P4的显著beta功率下降直接等同于特定FOG事件的减少。没有报告P4条件的独立数值效应量。",
+      "quote": "Relative beta power in the left and right STN was significantly lower at all DCS conditions when compared to pre-op-OFF",
+      "source_locator": {
+        "section": "Results—human PD subject；STN beta power",
+        "page": "12",
+        "figure_table": "Fig.5f–h",
+        "supplement": "DCS参数另见Supplementary Table 1；主文未完整提供。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H06_STN_BETA_POSTOP_OFF",
+      "design": "单病例前后重复测量研究；比较DCS植入前OFF与连续DCS治疗3天后、测试时停止刺激的OFF状态。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 18,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "pre-op-OFF为6次SLW，post-op-OFF为两组共12次SLW。post-op-OFF的精确FOG事件数未在主文文字中报告。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "两次步态测试均为Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "DBS关闭。患者在植入后连续接受DCS-P4 DTM刺激约3天，步态测试时DCS关闭。因此该比较反映持续刺激后的残留或慢性效应，而不是测试当时的即时刺激效应。",
+      "task": "自然直立步行，pre-op-OFF 6次SLW；post-op-OFF两组共12次SLW，每次约7.3米，转弯间隔180°。",
+      "recording_location": "双侧STN LFP；左右SenSight导线的contact pairs 1和3；Percept PC，250Hz。",
+      "measure": "双侧STN相对beta频段功率。",
+      "frequency_and_analysis_window": "13–35Hz beta；Welch PSD，50% overlap；相对beta功率=beta积分功率/2–65Hz宽频积分功率；每次SLW分析。",
+      "finding": "在连续DCS治疗约3天后，即使步态测试时关闭DCS，双侧STN相对beta功率仍低于植入前OFF状态。",
+      "effect_estimate": "左STN：0.4244±0.0830降至0.2584±0.0539，p<0.001。右STN：0.7371±0.0178降至0.6179±0.0563，p<0.001。数值为均值±SD。",
+      "statistical_unit_and_method": "pre-op-OFF n=6 SLWs，post-op-OFF n=12 SLWs；One-way ANOVA followed by Tukey's Multiple Comparisons test。患者级n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单病例研究，缺乏独立患者重复。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "虽然存在IMU FOG检测，但该比较分析的是整体行走LFP，不是冻结事件。",
+            "source_locator": "Methods，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "85Hz DBS伪迹及运动伪迹可能影响LFP分析，采用频谱限制处理。",
+            "source_locator": "Methods，p.9。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "前后时间点比较同时涉及DCS暴露、手术和可能的疼痛改善，无法分离各因素作用。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "post-op-OFF的12次SLW来自同一患者，不能作为12个独立样本。",
+            "source_locator": "Fig.5 legend，p.28。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "左右STN及多个刺激条件重复比较。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划及完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "post-op-OFF时beta功率下降提示持续DCS后存在残留变化，但不能判断其是否直接介导FOG改善。post-op-OFF的神经分析未区分冻结和非冻结步态。该比较也无法完全排除三天内的时间及疼痛变化。",
+      "quote": "Beta power during post-op-OFF locomotion was significantly lower than during pre-op-OFF locomotion in both left and right hemispheres",
+      "source_locator": {
+        "section": "Results—human PD subject；STN beta power during post-operative OFF",
+        "page": "12",
+        "figure_table": "Fig.5g–h",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H07_STN_BETA_DCS_DBS",
+      "design": "单病例重复测量研究；比较植入前DBS与植入后DBS、DCS及联合DCS+DBS条件。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时具有dopa-responsive FOG，既往植入双侧STN DBS。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 12,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每种条件6次SLW。该比较未报告联合刺激期间的独立FOG事件数，主要分析步态速度、步长及STN beta功率。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "DBS-ON时在每次SLW开始前数秒开启，行走结束时关闭。联合条件为DCS+DBS。DBS为双侧STN刺激；Percept PC记录。85Hz附近存在DBS刺激伪迹，具体DBS参数由神经科医生设置，主文未完整报告。联合条件使用的DCS具体程序未在该结果段明确指定。",
+      "task": "自然直立步行，每个条件6次7.3米SLW，转弯间隔180°。DBS在每次SLW期间开启。",
+      "recording_location": "双侧STN LFP；SenSight导线，左右各contact pairs 1和3；250Hz采样。",
+      "measure": "双侧STN相对beta频段功率。",
+      "frequency_and_analysis_window": "13–35Hz beta；Welch PSD，50% overlap；相对beta功率以2–65Hz宽频功率归一化；逐次SLW计算。",
+      "finding": "联合DCS+DBS时双侧STN相对beta功率低于植入前DBS条件。该结果与联合刺激下步态速度改善同时出现，但没有报告与FOG事件的逐事件关联。",
+      "effect_estimate": "左STN：pre-op-DBS为0.2954±0.0484，DCS+DBS为0.2021±0.0237，下降31.58%，p<0.001。右STN：pre-op-DBS为0.4415±0.0647，DCS+DBS为0.2245±0.0320，下降49.15%，p<0.001。",
+      "statistical_unit_and_method": "每条件6次SLW；One-way ANOVA followed by Tukey's Multiple Comparisons test。患者级n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅1名既往植入STN DBS的患者，不能代表一般PD-FOG人群。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "步态任务有IMU及视频，但STN beta功率没有与冻结事件逐一对齐。",
+            "source_locator": "Methods，p.8；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "DBS运行时存在85Hz刺激伪迹，且分析采样率为250Hz。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "联合刺激条件与植入前DBS条件的比较受到手术时间、DCS暴露及疼痛变化等影响。",
+            "source_locator": "Methods，p.7；Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "每条件6次SLW来自同一患者，缺少患者级独立重复。",
+            "source_locator": "Fig.6 legend，p.29。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个刺激条件、左右半球和步态指标同时比较。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划及完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "联合刺激时beta下降与步态改善同时发生，但没有证据表明这一变化特异地发生于FOG前或FOG期间。DCS+DBS的beta功率变化不能作为FOG特异性神经标志物。该研究只有一个患者。",
+      "quote": "For the left STN, post-op-DBS alone, DCS alone, and DCS+DBS beta power was significantly lower than pre-op-DBS",
+      "source_locator": {
+        "section": "Results—DCS in conjunction with DBS has a complementary effect on gait improvements",
+        "page": "13",
+        "figure_table": "Fig.6e–g",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H08_STN_PAC_THETA_LBETA",
+      "design": "单病例重复测量STN电生理研究；比较DCS开启、植入前OFF及植入后OFF条件。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 24,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "pre-op-OFF 6次SLW，post-op-OFF 12次SLW，DCS ON 6次SLW。PAC分析未按FOG事件划分。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "PAC比较时DBS关闭，DCS ON。使用论文所述最佳步态改善DCS方案进行PAC比较，但PAC结果段没有明确标出具体P编号，不自行推定。",
+      "task": "自然直立SLW；PAC分析取每次SLW的前7.5秒。",
+      "recording_location": "双侧STN LFP，SenSight导线，contact pairs 1和3；Percept PC，250Hz。",
+      "measure": "STN theta相位（θ）与低beta振幅（Lβ）的相位-振幅耦合（PAC）。属于同一STN内的跨频耦合，不是皮层-STN coherence。",
+      "frequency_and_analysis_window": "相位theta为4–8Hz；低beta振幅为13–20Hz。Gaussian-Copula PAC；分析每次SLW前7.5秒，去除两端各200ms；按条件内最大、最小值归一化；未使用surrogate distributions。",
+      "finding": "左STN：DCS时theta-low beta PAC较pre-op-OFF及post-op-OFF均显著下降。右STN：DCS时theta-low beta PAC较pre-op-OFF显著下降。该指标分析的是整体行走期间的跨频耦合，而非FOG事件期间的PAC。",
+      "effect_estimate": "左STN：DCS较pre-op-OFF及post-op-OFF下降，p<0.01。右STN：DCS较pre-op-OFF下降，p<0.05。具体PAC效应量未在主文报告。",
+      "statistical_unit_and_method": "每次SLW计算PAC，再比较各条件。One-way ANOVA followed by Tukey's Multiple Comparisons test。n=1患者。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有一名患者，不能评估患者间异质性。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "PAC在普通SLW窗口计算，没有将窗口分为FOG和non-FOG。",
+            "source_locator": "Methods，PAC analysis，p.10；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用Gaussian-Copula PAC和约83Hz notch处理，但仍存在DBS伪迹和250Hz采样限制。",
+            "source_locator": "Methods，PAC analysis，pp.9–10；Discussion，p.14。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "非随机前后比较，可能存在疼痛、时间和刺激暴露影响。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "每个患者的SLW被作为重复观察单位，n=1。",
+            "source_locator": "Fig.7 legend，p.32。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "同时评价theta、alpha相位及多个beta振幅频段、左右STN。",
+            "source_locator": "Methods，p.10；Results，p.13。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划和完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "该结果是DCS条件下整体步行PAC降低的证据，不能说明theta-beta耦合在FOG发生前或发生时升高。作者明确指出需要进一步研究特定步态周期及冻结期间的PAC变化。",
+      "quote": "significant reduction of mean PAC from both pre-op-OFF and post-op-OFF conditions for θ-Lβ",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Fig.7a–c",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H09_STN_PAC_ALPHA_LBETA",
+      "design": "单病例重复测量STN电生理研究；比较DCS开启、植入前OFF及植入后OFF条件。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 24,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "PAC分析使用pre-op-OFF 6次、post-op-OFF 12次和DCS ON 6次SLW；没有冻结事件级分母。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "PAC分析时DBS关闭，DCS ON；具体DCS程序编号未在PAC结果段明确说明。",
+      "task": "自然直立SLW；每次SLW前7.5秒用于PAC计算。",
+      "recording_location": "双侧STN LFP；左右SenSight导线contact pairs 1和3；Percept PC，250Hz。",
+      "measure": "STN alpha相位（α）与低beta振幅（Lβ）的PAC。",
+      "frequency_and_analysis_window": "alpha相位8–13Hz；低beta振幅13–20Hz；Gaussian-Copula PAC；每次SLW前7.5秒；去除两端各200ms；条件内归一化。",
+      "finding": "左STN：DCS时alpha-low beta PAC较pre-op-OFF和post-op-OFF均显著下降。右STN：DCS时较pre-op-OFF显著下降；此外右STN的post-op-OFF也较pre-op-OFF下降。",
+      "effect_estimate": "左STN：DCS较pre-op-OFF及post-op-OFF下降，p<0.001。右STN：DCS较pre-op-OFF下降，p<0.001；post-op-OFF较pre-op-OFF下降，p<0.01。未报告PAC数值效应量。",
+      "statistical_unit_and_method": "逐次SLW计算PAC；One-way ANOVA followed by Tukey's Multiple Comparisons test。患者级n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单个患者，缺少患者间独立重复。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "PAC未按FOG和非FOG事件分组。",
+            "source_locator": "Methods，p.10；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在85Hz DBS伪迹及250Hz采样限制，采用notch和频谱处理。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "前后比较无法充分分离DCS、手术、时间和疼痛改善的作用。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "多次SLW来自同一患者，没有患者层级模型。",
+            "source_locator": "Fig.7 legend，p.32。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多种相位-振幅频段组合和双侧STN同时比较。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未提供预注册计划及完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "alpha-low beta PAC降低与步态改善同时发生，但没有证据证明该PAC变化是FOG特异性的。没有报告FOG期间的alpha-beta PAC，也没有报告PAC变化领先于冻结改善的时间关系。",
+      "quote": "significant reduction of mean PAC from both pre-op-OFF and post-op-OFF conditions for θ-Lβ, α-Lβ, and α-Hβ",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Fig.7b–c",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H10_STN_PAC_ALPHA_HBETA",
+      "design": "单病例重复测量STN电生理研究；比较DCS开启、植入前OFF及植入后OFF条件。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 24,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "pre-op-OFF 6次、post-op-OFF 12次、DCS ON 6次SLW。未提供FOG事件级PAC分母。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "PAC分析时DBS关闭，DCS ON；具体DCS程序编号未在PAC结果段明确说明。",
+      "task": "自然直立SLW；每次SLW前7.5秒用于PAC计算。",
+      "recording_location": "双侧STN LFP；左右SenSight导线contact pairs 1和3；Percept PC，250Hz。",
+      "measure": "STN alpha相位（α）与高beta振幅（Hβ）的PAC。",
+      "frequency_and_analysis_window": "alpha相位8–13Hz；高beta振幅20–35Hz；Gaussian-Copula PAC；每次SLW前7.5秒；两端各去除200ms；条件内归一化。",
+      "finding": "左STN：DCS时alpha-high beta PAC较pre-op-OFF及post-op-OFF显著下降。右STN：DCS时较pre-op-OFF显著下降，且post-op-OFF也较pre-op-OFF显著下降。",
+      "effect_estimate": "左STN：DCS较pre-op-OFF和post-op-OFF均下降，p<0.001。右STN：DCS较pre-op-OFF下降，p<0.001；post-op-OFF较pre-op-OFF下降，p<0.001。具体PAC效应量未报告。",
+      "statistical_unit_and_method": "逐次SLW计算PAC；One-way ANOVA followed by Tukey's Multiple Comparisons test。患者级n=1。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单病例研究，无法估计患者间差异。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "PAC分析未区分冻结和非冻结步态。",
+            "source_locator": "Methods，p.10；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "DBS伪迹、采样率及滤波范围对高频耦合分析有约束。",
+            "source_locator": "Methods，pp.9–10；Discussion，p.14。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "非随机前后比较，存在疼痛及时间混杂。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "重复SLW来自同一患者。",
+            "source_locator": "Fig.7 legend，p.32。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "比较多个相位-振幅组合、左右STN和不同条件。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "未报告预注册统计计划和完整缺失数据流程。",
+            "source_locator": "Methods及Results，pp.7–13。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "alpha-high beta PAC降低属于跨频耦合变化，不能与平均beta功率下降合并解释。该结果没有冻结事件级验证，不能据此判断其对FOG的特异性。",
+      "quote": "α-Lβ (p<0.001), and α-Hβ (p<0.001) PAC was significantly lower during DCS",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Fig.7b–c",
+        "supplement": ""
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H11_STN_PAC_LBETA_GAMMA",
+      "design": "单病例重复测量STN电生理研究；比较植入前OFF、植入后OFF和DCS条件下的beta-gamma PAC。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 24,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每个相关条件的SLW数量见Fig.7；本文主文仅定性报告该PAC下降，未提供独立事件数或效应量。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "STN DBS关闭；DCS ON与post-op-OFF条件比较。PAC部分使用最佳DCS方案，但具体编号未在该段明确说明。",
+      "task": "自然直立SLW；分析行走前7.5秒。",
+      "recording_location": "双侧STN LFP，左右SenSight leads的contact pairs 1和3。",
+      "measure": "低beta相位与gamma振幅之间的PAC（Lβ-γ PAC）。",
+      "frequency_and_analysis_window": "低beta相位13–20Hz；gamma振幅40–60Hz；Gaussian-Copula PAC，逐次SLW分析；250Hz采样。条件内归一化。",
+      "finding": "论文报告，与pre-op-OFF相比，左、右STN的Lβ-γ PAC在post-op-OFF和DCS条件下均降低。主文未提供该结果的具体P值或数值效应量。",
+      "effect_estimate": "双侧Lβ-γ PAC方向性下降；具体均值、百分比变化及统计显著性数值未在主文报告。",
+      "statistical_unit_and_method": "PAC按SLW计算；具体统计检验及数值结果需要核查Supplementary Fig.5。主文未提供独立效应量。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类样本n=1。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "PAC只在一般行走窗口分析，没有事件级FOG标签。",
+            "source_locator": "Methods，p.10；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "高频耦合分析受到85Hz DBS伪迹和125Hz Nyquist频率限制。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "非随机前后比较，疼痛改善及持续DCS暴露可能影响结果。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "单患者重复SLW，无法估计患者间方差。",
+            "source_locator": "Fig.7 legend，p.32。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个PAC频段及双侧半球同时比较。",
+            "source_locator": "Results，p.13。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文没有提供完整的补充分析数值及预注册分析计划。",
+            "source_locator": "Results，p.13；Supplementary Fig.5。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是beta-gamma跨频耦合的定性结果，不应与STN平均beta功率或theta/alpha-beta PAC合并。主文没有提供该PAC比较的具体P值。补充图需要单独核查。未分析冻结事件期间的Lβ-γ PAC。",
+      "quote": "Reduction in Lβ-γ and Hβ-γ PAC from pre-op-OFF condition was observed for the left STN and right STN in both the post-op-OFF and DCS conditions",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Supplementary Fig.5b–c",
+        "supplement": "Supplementary Fig.5b–c，主文引用；补充文件未独立核查。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H12_STN_PAC_HBETA_GAMMA",
+      "design": "单病例重复测量STN电生理研究；比较植入前OFF、植入后OFF和DCS条件下的beta-gamma PAC。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": 24,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "每个相关条件的SLW数量见Fig.7。主文未报告Hβ-γ PAC的数值效应量及P值。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "STN DBS关闭；DCS ON与post-op-OFF条件比较。PAC分析的具体DCS程序编号未在结果段明确说明。",
+      "task": "自然直立SLW；分析每次行走前7.5秒。",
+      "recording_location": "双侧STN LFP，左右SenSight leads的contact pairs 1和3。",
+      "measure": "高beta相位与gamma振幅之间的PAC（Hβ-γ PAC）。",
+      "frequency_and_analysis_window": "高beta相位20–35Hz；gamma振幅40–60Hz；Gaussian-Copula PAC，逐次SLW分析；250Hz采样。",
+      "finding": "论文报告，与pre-op-OFF相比，双侧STN的Hβ-γ PAC在post-op-OFF和DCS条件下均降低。主文未报告该变化的具体P值及数值效应量。",
+      "effect_estimate": "双侧Hβ-γ PAC方向性下降；具体均值、百分比及P值未在主文报告。",
+      "statistical_unit_and_method": "PAC按SLW计算；详细统计结果需核查Supplementary Fig.5；主文未提供具体统计值。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单病例研究，无法评估患者间差异。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "PAC分析没有冻结事件级行为标签。",
+            "source_locator": "Methods，p.10；Discussion，p.14。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "高频耦合分析受85Hz DBS伪迹及采样率限制。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "植入前后比较及疼痛合并症构成潜在混杂。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "同一患者的重复SLW不能视为独立患者样本。",
+            "source_locator": "Fig.7 legend，p.32。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "比较多个PAC频段组合和双侧STN。",
+            "source_locator": "Results，p.13。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文未报告预测模型。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文未提供补充分析的完整数值及预注册计划。",
+            "source_locator": "Results，p.13；Supplementary Fig.5。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "Hβ-γ PAC是独立的跨频耦合指标，不能与平均beta功率混为一谈。当前证据仅显示步行期间条件相关变化，没有证明其与实际冻结事件具有时间锁定关系。",
+      "quote": "Reduction in Lβ-γ and Hβ-γ PAC from pre-op-OFF condition was observed for the left STN and right STN in both the post-op-OFF and DCS conditions",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Supplementary Fig.5b–c",
+        "supplement": "Supplementary Fig.5b–c，主文引用；补充文件未独立核查。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H13_PAC_VELOCITY",
+      "design": "单病例逐次步行试次相关分析；研究STN PAC与步态速度之间的关系。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "主文说明按individual SLWs进行相关分析，但未给出该相关模型的确切总试次数、自由度、r值和P值。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "STN DBS关闭；PAC与步态特征在不同治疗条件下进行相关分析。具体纳入相关分析的DCS程序及每种条件试次数未在主文逐项列明。",
+      "task": "自然直立SLW；按单次SLW提取步态速度及PAC指标。",
+      "recording_location": "双侧STN LFP，左右SenSight leads的contact pairs 1和3。",
+      "measure": "STN PAC与步态速度的相关性；涉及alpha-low beta、alpha-high beta、low beta-gamma及high beta-gamma耦合。",
+      "frequency_and_analysis_window": "PAC采用Gaussian-Copula方法。相位和振幅频段按各PAC组合定义；逐次SLW提取PAC并与同次步态速度比较。",
+      "finding": "PAC与步态速度呈显著负相关：双侧STN的alpha-low beta、alpha-high beta及high beta-gamma PAC均与速度负相关；左STN的low beta-gamma PAC也与速度负相关。",
+      "effect_estimate": "相关方向为负；具体Pearson r、95% CI及P值未在主文报告，需核查Supplementary Fig.6a。",
+      "statistical_unit_and_method": "统计单位为individual SLWs；采用linear regression和Pearson's correlation coefficient。主文未提供具体n、r和P值。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理及相关分析。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有1名患者。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "速度为步态指标而非事件级FOG标签，不能直接推断冻结风险。",
+            "source_locator": "Methods，pp.8–10。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "STN LFP存在85Hz DBS伪迹，PAC分析有频率范围限制。",
+            "source_locator": "Methods，pp.9–10；Discussion，p.14。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "相关分析可能受到DCS条件、步行状态及疼痛改善的影响，不能进行因果解释。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "逐次SLW相关分析来自单一患者，未报告混合效应模型或患者内相关校正。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个PAC组合与多个步态结局同时进行相关分析。",
+            "source_locator": "Methods，p.10；Supplementary Fig.6。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "采用相关及线性回归，不是经过外部验证的预测模型。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文未提供所有相关系数和完整统计表。",
+            "source_locator": "Results，p.13；Supplementary Fig.6a。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "这是PAC与步态速度的相关性，不是PAC与FOG事件发生的相关性。不能将步态速度较慢等同于FOG，也不能据此推断PAC能够预测冻结。相关系数和显著性数值需要核查Supplementary Fig.6a。",
+      "quote": "PAC was found to be significantly negatively correlated with velocity for α-Lβ, α-Hβ, and Hβ-γ in both STN hemispheres",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Supplementary Fig.6a",
+        "supplement": "Supplementary Fig.6a，主文引用；补充文件未独立核查。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H14_PAC_STEP_LENGTH",
+      "design": "单病例逐次步行试次相关分析；研究STN PAC与步长之间的关系。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "主文未给出相关分析总SLW数、Pearson r、置信区间和P值。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "STN DBS关闭；PAC与步态特征在不同治疗条件下进行相关分析，具体相关模型纳入的条件未逐项说明。",
+      "task": "自然直立SLW；提取单次SLW的步长和STN PAC。",
+      "recording_location": "双侧STN LFP，左右SenSight leads的contact pairs 1和3。",
+      "measure": "STN PAC与步长的相关性。",
+      "frequency_and_analysis_window": "theta-low beta、alpha-low beta、alpha-high beta及beta-gamma PAC；逐次SLW提取PAC并与同次步长比较。",
+      "finding": "PAC与步长呈显著负相关：theta-low beta、alpha-low beta和alpha-high beta在双侧STN均与步长负相关；low beta-gamma和high beta-gamma在右STN与步长负相关。",
+      "effect_estimate": "相关方向为负；具体r、95% CI及P值未在主文报告，需核查Supplementary Fig.6b。",
+      "statistical_unit_and_method": "individual SLWs；linear regression及Pearson's correlation coefficient；主文未报告具体n、r和P值。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理及相关分析。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "只有1名患者。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "步长是一般步态运动学指标，不是事件级冻结标签。",
+            "source_locator": "Methods，pp.8–10。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "85Hz DBS伪迹及采样限制可能影响PAC估计。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "治疗条件、时间和疼痛变化均可能影响PAC及步长。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "所有SLW来自同一患者，未报告患者内相关校正。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个PAC频段和步态结局进行相关检验。",
+            "source_locator": "Supplementary Fig.6b。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文未报告所有相关系数和完整统计表。",
+            "source_locator": "Results，p.13；Supplementary Fig.6b。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "步长与PAC负相关不能直接等同于FOG与PAC正相关。论文没有报告冻结事件发生前的步长变化，也没有将步长缩短的试次定义为FOG事件。具体相关系数需要核查补充材料。",
+      "quote": "Significant negative correlation with step length was found for θ-Lβ, α-Lβ and α-Hβ in both hemispheres",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Supplementary Fig.6b",
+        "supplement": "Supplementary Fig.6b，主文引用；补充文件未独立核查。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40759323_H15_PAC_CADENCE",
+      "design": "单病例逐次步行试次相关分析；研究STN PAC与步频（cadence）之间的关系。",
+      "population": "同一名60岁男性PD患者S1，OFF药物时有dopa-responsive FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": 1,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 4,
+      "missing_reason": "主文未报告相关分析总SLW数、相关系数、置信区间和P值。",
+      "endpoint_class": "B_objective_natural",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "OFF-FOG",
+      "experimental_medication_state": "Med-Off；测试前一晚停药。",
+      "DBS_state_and_parameters": "STN DBS关闭；不同治疗条件下的PAC和步态特征进行相关分析，具体条件分层未在主文逐项说明。",
+      "task": "自然直立SLW；逐次SLW提取步频和STN PAC。",
+      "recording_location": "双侧STN LFP，左右SenSight leads的contact pairs 1和3。",
+      "measure": "STN PAC与步频（cadence）的相关性。",
+      "frequency_and_analysis_window": "theta-low beta、alpha-low beta及alpha-high beta PAC；逐次SLW计算PAC和cadence。",
+      "finding": "PAC与cadence呈显著正相关：theta-low beta PAC在双侧STN均与cadence正相关；alpha-low beta和alpha-high beta PAC仅在左STN报告与cadence正相关。",
+      "effect_estimate": "相关方向为正；具体r、95% CI及P值未在主文报告，需核查Supplementary Fig.6c。",
+      "statistical_unit_and_method": "individual SLWs；linear regression及Pearson's correlation coefficient；主文未报告具体样本数及相关系数。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated：观察性单病例电生理及相关分析。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "人类数据仅来自1名患者。",
+            "source_locator": "Methods，p.7。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "cadence是一般步态指标，并非冻结事件或冻结易感性的直接测量。",
+            "source_locator": "Methods，pp.8–10。"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "85Hz DBS伪迹及采样率限制可能影响PAC分析。",
+            "source_locator": "Methods，pp.9–10。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "high",
+            "reason": "治疗条件、疼痛变化和步态状态可能共同影响PAC与cadence。",
+            "source_locator": "Discussion，p.14。"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "high",
+            "reason": "多次SLW来自同一患者，没有患者层级独立重复。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个PAC组合、左右STN及多个步态指标同时分析。",
+            "source_locator": "Supplementary Fig.6c。"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型。",
+            "source_locator": "Methods，p.10。"
+          },
+          {
+            "domain": "选择性报告及缺失数据",
+            "judgement": "unclear",
+            "reason": "主文没有完整列出所有相关系数和统计值。",
+            "source_locator": "Results，p.13；Supplementary Fig.6c。"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "cadence与PAC的正相关不是FOG事件证据。不能将cadence增加或减少直接视为冻结发生或解除。研究没有分析冻结期间的节律变化，也没有进行FOG预测模型的外部验证。",
+      "quote": "Positive correlation was found between PAC and cadence in both hemispheres for θ-Lβ and in the left STN for α-Lβ and α-Hβ",
+      "source_locator": {
+        "section": "Results—STN PAC is reduced during locomotion with DCS",
+        "page": "13",
+        "figure_table": "Supplementary Fig.6c",
+        "supplement": "Supplementary Fig.6c，主文引用；补充文件未独立核查。"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

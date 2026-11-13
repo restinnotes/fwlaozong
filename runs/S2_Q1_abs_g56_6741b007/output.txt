@@ -1,0 +1,150 @@
+<escape>{
+  "standards": [
+    {
+      "n": 1,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "研究方向覆盖较广，涉及临床DBS、电生理、频谱、beta burst、皮层-STN耦合、脑干网络、认知负荷、胆碱能系统、闭环刺激及竞争性机制。但缺少可复现的系统检索方法：没有完整报告数据库、检索日期、检索式、纳入排除标准、文献筛选流程、去重结果和检索覆盖率。因此，150篇参考文献和538条结构化证据不能单独证明已经尽可能减少重要文献遗漏。",
+          "where": "第1节：证据范围：以用户提供的结构化知识及 evidence_table.txt 中的原始文献证据为基础。覆盖临床DBS疗效、STN局部场电位（LFP）、频谱功率、beta burst、步态相位调制、皮层-STN耦合、刺激空间定位、闭环DBS、脑干步行网络及FOG临床亚型。"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "重要研究大多能够追溯到PMID或DOI，并提供患者数量、任务、药物状态、刺激条件和局限，这是明显优点。但部分关键电生理结论依赖预印本，正文没有逐篇明确标记其发表状态。例如，Klocke研究使用Research Square预印本，4名患者的beta burst entropy研究使用bioRxiv预印本。第5.6节虽笼统提醒存在预印本，却没有将发表状态明确绑定到每项具体结论，容易使读者高估证据成熟度。",
+          "where": "第3.2节：Klocke等（2026）的13人研究提供了更细致的事件级证据。第3.3节：2026年另一项仅4名患者的研究还发现。第5.6节：部分2025—2026年电生理研究和机制研究属于预印本或小样本探索性研究。"
+        },
+        {
+          "severity": "moderate",
+          "what": "2025年步态启动研究的证据性质描述不够精确。PMID:40709562实际上纳入38名患者，其中12名在记录中出现FOG，共有99个发生冻结的步行试次和263次冻结事件。其神经信号分析发生在步态启动阶段，研究的是随后发生冻结的试次中的冻结前神经活动，而不是完全没有发生冻结的整段步行试验。应明确区分冻结前记录与非冻结试次，避免低估事件锁定的直接证据。",
+          "where": "第2.3节：这些研究主要分析没有实际冻结发生的步态启动试次，因此更接近FOG易感性证据，而不是实际冻结期间的直接神经活动证据。"
+        },
+        {
+          "severity": "minor",
+          "what": "存在文献年份元数据错误。PMID:41659700被标注为Guo 2025，但PubMed及论文全文显示正式出版日期为2026年1月22日。DOI中的2025不能直接代替正式出版年份。该错误不改变研究结果，但影响长期文献检索、引用和时间顺序判断。",
+          "where": "第2.1节：Guo 2025；结构化附录中PMID:41659700的year字段为2025。论文正式出版日期为2026年1月22日。【turn894828view0】"
+        },
+        {
+          "severity": "moderate",
+          "what": "正文中14个FileCite引用所指向的turn-based文件没有在本次附件中提供，不能独立追溯其具体内容。虽然正文还提供了大量PMID和DOI，但这些内部文件引用本身不构成可独立复核的文献来源。",
+          "where": "第3.6节及第4节末尾，例如turn1file0、turn2file2、turn5file8、turn6file1、turn6file9等引用标记。"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "verdict": "met",
+      "issues": [
+        {
+          "severity": "minor",
+          "what": "研究冲突分析和替代机制讨论较深入，但部分冲突来源仍属于合理推测，没有通过统一的研究条件分层、研究间效应量比较或Meta回归验证。例如，任务差异、刺激位置和认知负荷被列为可能来源，却没有系统量化各因素能够解释多少异质性。整体不影响深度综合的成立，但需要区分已经验证的冲突来源与作者提出的解释。",
+          "where": "第5节：综合上述证据，可以将领域内的冲突归纳为九个问题。表格中的最可能的来源，以及第10.1节的综合机制框架。"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "知识分层设计清楚，Evidence、Claims、Mechanisms和Hypotheses之间存在明确映射，并且通过预测和反证条件连接机制模型与实验。但结构化附录存在至少一个无法解析的证据关联ID。C6引用的S2_E_DOI_10.21203_rs.3.rs-9617843_v10不在Evidence记录中，实际存在的对应记录为S2_E_DOI_10.21203_rs.3.rs-9617843_v1_10。这意味着至少一条研究结论与原始证据之间的链接不能直接解析。",
+          "where": "结构化附录JSON的claims.C6：S2_E_DOI_10.21203_rs.3.rs-9617843_v10；Evidence列表中对应记录为S2_E_DOI_10.21203_rs.3.rs-9617843_v1_10。"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "已经设计出较好的长期知识积累架构，包括稳定证据编号、原始研究属性、研究结论关系、机制模型、假说预测和更新触发规则。但报告主要展示的是系统设计方案，而不是已经运行的长期知识库。没有实际版本历史、历史结论变更记录、新证据触发旧结论更新的实例，也没有展示不同版本之间的证据差异。",
+          "where": "第9.2节：建议保留附件中原有的证据编号。第9.4节：新证据触发旧结论重新评价。更新时应保留旧版本结论及其证据状态，而不是直接覆盖。"
+        },
+        {
+          "severity": "moderate",
+          "what": "知识库自身存在数量及关联一致性问题。结构化附录实际包含538条evidence记录，而第11节声称有539条证据；同时存在一个无法解析的证据ID。对于需要持续检索和自动更新的研究系统，这类编号和计数错误会影响证据完整性检查。",
+          "where": "第11节：这也是将现有539条证据从文献汇总转化为可持续检验的研究体系的关键。与结构化附录中538条evidence记录及C6的未解析证据ID对照。"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "verdict": "met",
+      "issues": []
+    },
+    {
+      "n": 7,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "报告已经表现出一定的缺陷发现能力，例如识别2025年网络Meta分析摘要与正文的步速效应量不一致，以及2026年VR研究摘要与正文的冻结事件数量不一致。也提出了检索、提取、验证、更新和再评价的质量控制循环。但没有展示发现问题之后实际修改报告、重新验证结果、比较改进前后准确率或确认改进有效的完整实例。因此目前证明的是具有自我改进设计，而不是已经具备持续自主改进能力。",
+          "where": "第9.5节：建议采用以下循环。A发现研究问题或证据缺口……I预注册并开展验证……J评估改进是否真实有效。第1363行列举了网络Meta分析和VR研究的内部数值不一致。"
+        },
+        {
+          "severity": "moderate",
+          "what": "质量控制流程尚未完全发现自身的结构性缺陷：539与538的证据数量不一致，以及C6中的未解析证据ID均没有在报告的质量检查结果中被识别。这说明现有错误检查机制尚不能保证证据数据库的完整性和关联准确性。",
+          "where": "第9.5节：还需要专门设置错误检查。第11节：现有539条证据。结构化附录中实际有538条evidence记录。"
+        }
+      ]
+    }
+  ],
+  "spot_checks": [
+    {
+      "claim": "STN-DBS能够改善部分PD患者的FOG，但也可能无效或加重FOG。",
+      "cited": "Schlenstedt 2017（PMID:27766724）；Ferraye 2008（PMID:18413568）；EARLYSTIM（PMID:31755599）；Fleury 2016（PMID:26887333）；Guo（PMID:41659700）；Behboodi 2026（PMID:42098512）。",
+      "verdict": "consistent",
+      "why": "原始文献支持双向临床结果。Schlenstedt的Meta分析纳入16项步态研究，其中6项提供FOG数据，支持Med-Off/Stim-On改善；Ferraye的123人研究显示大多数术前FOG患者获益，但有11人术后首次出现FOG或不能完成测试；Fleury研究发现特定刺激接触点可以恶化FOG。EARLYSTIM也报告FOG比例由52%降至34%。另一方面，Guo的网络Meta分析中所有DBS模式的FOG-Q结果均未达到统计学显著性，FOG-Q网络I²为88.3%；Behboodi的Meta分析则发现总体DBS具有小幅获益。需要注意，后两篇Meta分析涉及多个刺激模式或靶点，不能把总体效应全部归因于STN。报告正确保留了临床效果的异质性。【turn360565search0】【turn360565search1】【turn360565search7】【turn360565search2】【turn894828view0】【turn315582search1】"
+    },
+    {
+      "claim": "STN参与FOG易感状态及实际冻结事件相关的神经活动，但尚未证明某种STN自发活动是FOG发生的必要或充分原因。",
+      "cited": "Liu 2022（PMID:35310098）；Thenaisie 2022（PMID:36070366）；Pozzi 2019（PMID:31505548）；Zhang 2025（PMID:41131028）；Collomb-Clerc 2025（PMID:40709562）；Klocke 2026（DOI:10.21203/rs.3.rs-9617843/v1）。",
+      "verdict": "consistent",
+      "why": "Liu研究同步记录8名患者的STN-LFP和实际冻结事件，21次高质量冻结测试中发现冻结期间beta功率升高。Pozzi研究在7名患者中发现冻结前后4–13 Hz皮层-STN耦合下降。Zhang研究提供19名患者的转弯阶段特异性神经活动证据。Collomb-Clerc研究纳入38名患者，其中12名在记录中出现FOG，共263次冻结事件，提供了冻结前步态启动与STN活动关联的较大规模证据。Klocke研究进一步提供冻结转弯期间的LFP证据。上述结果支持STN参与FOG相关神经网络活动，但均不能单独证明某种内源性STN活动是冻结的必要或充分原因。报告对此作出了恰当区分。【turn756079search0】【turn756079search2】【turn756079search1】【turn345652view0】【turn503751view0】"
+    },
+    {
+      "claim": "STN平均beta功率不存在适用于所有患者、任务和冻结阶段的统一变化方向。",
+      "cited": "Syrkin-Nikolau 2017（PMID:28890315）；Liu 2022（PMID:35310098）；Thenaisie 2022（PMID:36070366）；Anidi 2018（PMID:30196050）；Klocke 2026（DOI:10.21203/rs.3.rs-9617843/v1）。",
+      "verdict": "consistent",
+      "why": "文献确实报告了不同方向的结果。Syrkin-Nikolau研究发现，Freezer在无冻结运动期间的beta功率低于Non-Freezer，并报告实际冻结期间相对于自由前行步行的beta功率降低；Liu研究则观察到实际冻结期间STN beta功率升高；Thenaisie研究报告冻结转弯期间low-beta升高。Klocke预印本进一步发现12–15 Hz低beta在实际冻结转弯期间高于正常转弯。不同研究的任务、基线、频段和行为阶段并不相同，不能将这些结果简单合并为统一方向。报告的综合判断与原始研究一致。【turn312860search0】【turn756079search0】【turn503751view0】【turn863501search0】"
+    },
+    {
+      "claim": "Beta burst时间结构、运动相关ERD及步态相位调制可能比平均beta功率更有解释力。",
+      "cited": "Anidi 2018（PMID:30196050）；Klocke 2026（DOI:10.21203/rs.3.rs-9617843/v1）；Beaudoin 2026（DOI:10.64898/2026.08.13.744293）；Collomb-Clerc 2025（PMID:40709562）。",
+      "verdict": "consistent",
+      "why": "Anidi研究纳入12名患者，发现Freezer具有延长的运动相关beta burst，且刺激缩短较长burst时伴随步态改善。Klocke研究发现冻结转弯时长burst比例增加、短burst比例下降，但平均burst持续时间相对于站立基线没有显著变化，说明分布指标能够补充平均值的信息。Beaudoin的4人预印本发现预冻结阶段Shannon entropy降低，而Lempel-Ziv complexity反而升高。Collomb-Clerc研究则显示冻结前后的步态相位与STN频段调制具有不同关系。这些结果支持将时间结构和相位调制作为候选指标，但没有直接证明它们在预测性能上普遍优于平均beta功率。由于报告使用了“可能”并明确标记为待验证，因此没有构成实质性夸大。【turn863501search0】【turn503751view0】【turn826961search0】【turn345652view0】"
+    },
+    {
+      "claim": "Theta、alpha及beta等活动变化具有行为阶段和频段依赖性。",
+      "cited": "Pozzi 2019（PMID:31505548）；Zhang 2025（PMID:41131028）；Klocke 2026（DOI:10.21203/rs.3.rs-9617843/v1）；Syrkin-Nikolau 2017（PMID:28890315）。",
+      "verdict": "consistent",
+      "why": "Pozzi研究发现冻结前后theta-alpha皮层-STN耦合下降，而beta耦合增强还可能出现在主动停止等行为中。Zhang研究显示正常转弯和冻结转弯的alpha活动及皮层-STN连接具有不同的相位分布。Klocke研究发现正常转弯准备阶段theta峰值增强，而实际冻结转弯期间theta峰值降低。Syrkin-Nikolau则发现实际冻结期间alpha Sample Entropy变化。研究结果支持行为阶段和频段依赖性，但不支持将不同指标合并为统一的神经异常方向。【turn756079search2】【turn756079search1】【turn503751view0】【turn312860search0】"
+    },
+    {
+      "claim": "STN-皮层网络在冻结前后可能出现动态重组，但不同脑区及连接指标的变化并不一致。",
+      "cited": "Pozzi 2019（PMID:31505548）；Zhang 2025（PMID:41131028）；Liu 2022（PMID:35310098）。",
+      "verdict": "consistent",
+      "why": "Pozzi的7人研究发现SMA、M1及顶叶皮层与STN之间的低频耦合在冻结前后下降，恢复行走后恢复；beta耦合增强则可能出现在成功停止行走和通过门洞时。Zhang的19人研究发现冻结转弯时PMC-STN alpha coherence增强，同时M1-STN alpha coherence下降，且beta coherence没有相应显著变化。这些结果直接支持脑区和频段特异性的网络重组，而不是全局同步性统一升高或降低。报告没有把这些观察错误地解释为因果关系。【turn756079search2】【turn756079search1】"
+    },
+    {
+      "claim": "STN刺激效果具有空间和结构连接特异性，不能用单一最佳坐标概括。",
+      "cited": "Fleury 2016（PMID:26887333）；Strelow 2022（PMID:35431262）；Fan 2023（PMID:37701817）；Cherif 2025（PMID:39475137）。",
+      "verdict": "consistent",
+      "why": "Cherif的10人随机、双盲交叉研究发现中心STN定向刺激较后部STN刺激减少FOG，但中心定向刺激与ring-mode在FOG发生概率上没有显著差异。Strelow的47人研究发现刺激体积的结构连接特征与术后FOG变化有关，并发现豆状核束刺激与恶化相关。Fan的76人回顾性研究也发现不同STN位置与FOG改善或恶化相关。Fleury研究显示部分导致恶化的接触点实际位于STN背侧、前方的邻近结构。报告正确地将这些结果综合为位置和连接特异性，而没有推断出已经确定的普遍最佳坐标。证据仍受到小样本、回顾性设计和规范连接组模型的限制。【turn315582search3】【turn315582search2】【turn360565search2】"
+    },
+    {
+      "claim": "FOG具有不同临床及网络亚型，多巴胺反应性和非多巴胺能因素可能参与患者间异质性。",
+      "cited": "Ehgoetz Martens 2018（PMID:30153383）；Lench 2024（PMID:38101024）；Hvingelby 2025（PMID:40512756）。",
+      "verdict": "consistent",
+      "why": "Ehgoetz Martens研究纳入41名FOG患者，通过问卷和行为评估识别出三个不同的冻结模式亚组。Lench研究纳入55名PD患者，其中38名FOG患者分为22名多巴胺反应性和16名不反应性患者，发现不同亚组具有不同STN功能连接特征。Hvingelby研究纳入14名PD-FOG患者，发现胆碱能PET空间模式与药物ON状态下FOG相关，而与OFF-FOG没有相同关联。这些研究支持临床表型和网络机制存在异质性，但尚未建立经过独立验证的统一生物学分型体系，也没有直接证明不同亚型具有不同的STN-LFP机制。报告使用“可能参与”这一限定是恰当的。【turn360565search4】【turn315582search0】【turn360565search5】"
+    }
+  ]
+}</escape>

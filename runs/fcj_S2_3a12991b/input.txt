@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:41131028 Neural signatures of turn-induced freezing of gait in Parkinson's disease: insights from phase-specific cortico-subthalamic dynamics. (2025)
+报告的说法：报告称PMC-STN alpha coherence在TurnStart阶段相对于步行基线增加，并以此作为H4（代偿性重组）与H5（病理性过度耦合）竞争性假说的主要依据。
+指控者认为原文的说法：原文区分了不同转弯阶段和冻结状态。正常转弯期间，PMC-STN alpha coherence在TurnPre阶段已经增加；冻结转弯期间，增加则延迟至TurnStart阶段，并伴随M1-STN alpha coherence下降。TurnPre阶段PMC-STN coherence增加预测更短的冻结持续时间（β=0.205，p=0.006），而TurnStart阶段的coherence变化没有显著预测作用。此外，TurnPre阶段PMC alpha功率下降与更长的冻结持续时间相关（β=0.154，p=0.035）。报告遗漏了TurnPre阶段的关键结果及其与冻结持续时间的关系，将具有不同时间相位和临床意义的结果压缩为TurnStart阶段的耦合增强，导致对原文结果的概括不完整且可能产生误导。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

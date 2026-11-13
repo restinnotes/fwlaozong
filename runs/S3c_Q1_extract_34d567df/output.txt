@@ -1,0 +1,1566 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40383539; DOI:10.1177/1877718X251320941; Journal of Parkinson's Disease. 2025;15(4):843-857. Epub 2025-05-18. 【turn108028search0】【turn288941view0】",
+    "title": "Effects of theta burst stimulation on the Parkinsonian gait disorder and cortical gait-network activity",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:40383539; single-center randomized double-blind three-condition STN-DBS study",
+    "cohort_id_candidate": "UKE_Hamburg_STN_DBS_PD_15_candidate",
+    "cohort_relation_basis": "原始研究，单中心University Medical Center Hamburg-Eppendorf队列。15名PD患者，14男1女，年龄62±9岁，病程15±6年，双侧STN-DBS术后76±39个月，植入Medtronic Activa系统。未发现本文作者声明与其他论文存在患者队列重叠。特别注意：本文Discussion引用的参考文献49为Chen et al. 2019，Subthalamic nucleus oscillations correlate with vulnerability to freezing of gait in patients with Parkinson's disease，PMID:31494286，DOI:10.1016/j.nbd.2019.104605。该文是独立的原始研究，不是本文队列的重复报告；本文对其结果的描述属于二次引用，不能计为本文直接测量的STN神经活动。【turn899396search0】",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "DUTKE2025_SCOPE_STN_RECORDING",
+      "design": "单中心、随机、双盲、短期三条件重复测量研究；同时进行探索性移动EEG分析。",
+      "population": "15名接受双侧STN-DBS的PD患者；另有12名健康对照。所有15名PD患者均报告FoG-Q阳性。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": 15,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "24为头皮EEG通道数，不是STN记录触点数。全文未报告STN-LFP、单单位、多单位或皮层-STN coherence的直接记录。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "患者FoG-Q报告FoG；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物继续使用；具体剂量及末次服药时间未报告。",
+      "DBS_state_and_parameters": "双侧STN-DBS为治疗靶点。实验条件包括OFF-DBS、常规cDBS和TBS-DBS。STN是刺激位置，不是本文神经信号的记录位置。",
+      "task": "标准化步行课程；包括静息样状态、直线行走及冻结事件分析。",
+      "recording_location": "Smarting Mobi移动式24通道头皮EEG；中央运动区ROI：Cz、C3、C4；额部运动前区ROI：Fz、F3、F4。没有报告STN电极记录。",
+      "measure": "神经信号来源及解剖定位。",
+      "frequency_and_analysis_window": "头皮EEG采样率500 Hz；24通道；功率分析2–45 Hz。无STN-LFP频段分析。",
+      "finding": "本文虽然采用STN-DBS干预，但实际记录的是头皮皮层EEG。没有直接测量STN局部beta、theta、burst持续时间、STN神经元放电或皮层-STN耦合。因此本文不能提供STN神经活动与FOG之间的直接电生理关联证据。",
+      "effect_estimate": "不适用；没有STN神经活动效应量。",
+      "statistical_unit_and_method": "不适用；方法学来源核查。",
+      "risk_of_bias": {
+        "tool_or_framework": "not_assessed（方法学范围判定，不是效应估计）",
+        "domains": [],
+        "overall": "not_assessed"
+      },
+      "limitations": "这是本论文最重要的证据边界。不能将TBS-DBS引起的皮层EEG变化解释为STN局部神经活动变化。Discussion中关于STN低beta与FOG易感性的论述引用了Chen et al. 2019，而非本研究自身的STN记录。该原始研究应单独提取，不能作为本文独立重复验证。",
+      "quote": "cortical activity indexed by mobile EEG",
+      "source_locator": {
+        "section": "Abstract; Methods—EEG recordings and analysis",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_FOGCOURSE_PRIMARY_RELATIVE_CHANGE",
+      "design": "随机、双盲、三条件重复测量研究；主要终点分析。",
+      "population": "15名双侧STN-DBS PD患者；全部15人FoG-Q报告有FoG。FoG-Course包含实际临床观察到的冻结和festination评分。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "Table 1列出15名患者在OFF-DBS、cDBS和TBS-DBS下的FoG-Course数据。4名患者被排除的主要对象是115米客观步态分析。FoG-Course实际冻结事件总数未报告；神经数据有效人数不适用于该临床评分终点。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "FoG-Course评分同时包含festination/hastening和实际临床观察到的FOG；akinetic、trembling-in-place等亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物状态（Med-On/usual medication）；剂量及末次服药时间未报告。",
+      "DBS_state_and_parameters": "主要比较cDBS与TBS-DBS相对于OFF-DBS的改善幅度。实验cDBS为130 Hz、60 μs，个体化幅度，单环触点、单极、全向刺激；TBS-DBS为5 Hz interburst、200 Hz intraburst、60 μs，个体化TEED调整幅度。",
+      "task": "FoG-Course：从椅子站起、启动行走1米、顺时针及逆时针360°转弯、开门通过。包含walking、carrying tray with cup及carrying and calculation三个任务版本。",
+      "recording_location": "临床观察评分；该终点不是STN神经记录。本文另外使用头皮EEG，但未报告其与本FoG-Course主要终点的事件级对应关系。",
+      "measure": "FoG-Course总评分的相对变化；分数越低代表冻结/步态异常程度越轻。",
+      "frequency_and_analysis_window": "不适用；临床评分。比较各刺激条件相对于OFF-DBS的评分变化。",
+      "finding": "全组中TBS-DBS相对于cDBS没有表现出优势。相对于OFF-DBS的FoG-Course相对改善幅度，cDBS略优于TBS-DBS。",
+      "effect_estimate": "Wilcoxon signed-rank test，p=0.039。未报告可直接提取的标准化效应量、95% CI或具体相对变化百分比。",
+      "statistical_unit_and_method": "患者级配对比较；Wilcoxon signed-rank test。结果描述为entire sample；Table 1提供15名患者的三条件FoG-Course数据。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机、双盲、三条件重复测量试验；领域级初评）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告刺激条件随机排序和双盲，但未充分描述随机序列生成及分配隐藏方法。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "采用随机顺序和双盲；但刺激条件之间间隔约30分钟，作者承认这一时间可能不足以反映步态和轴性症状的完整变化过程。",
+            "source_locator": "Methods—Protocol and experimental setup; Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "4/15患者至少有一个条件下不能完成全部临床评估；Table 1仍列出15名患者的FoG-Course数据，但主要检验的实际分析分母没有在结果句中重新明确。",
+            "source_locator": "Methods—Statistical analysis; Results—Table 1"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "采用双盲标准化评分，但评分包含festination/hastening和FOG，且未报告评分者间一致性。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "全文未提供可核查的预注册方案或完整预设统计分析计划；存在探索性亚组分析。",
+            "source_locator": "Methods—Statistical analysis; Results—Behavioral results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是短期刺激干预对临床FoG-Course的影响，不是STN神经活动与FOG的直接关联。FoG-Course为复合评分，包含festination/hastening，不等同于事件级冻结时间或冻结发生率。30分钟刺激间隔可能不足以反映轴性症状的完整响应。",
+      "quote": "slightly better effects of cDBS compared to TBS-DBS",
+      "source_locator": {
+        "section": "Results—Behavioral results; The group effect of TBS-DBS is not superior to cDBS on clinical scores",
+        "page": null,
+        "figure_table": "Figure 1B; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_FOGCOURSE_CDBS_VS_OFF",
+      "design": "随机、双盲、三条件重复测量研究。",
+      "population": "15名双侧STN-DBS PD患者；全部15人FoG-Q报告有FoG。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FoG-Course的Table 1列出全部15名患者的三条件评分；实际事件总数未报告。该终点没有对应的STN神经记录。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "临床观察到的FoG及festination/hastening复合评分；具体亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication；剂量和时间未报告。",
+      "DBS_state_and_parameters": "cDBS：双侧STN刺激，实验频率130 Hz、脉宽60 μs，单环触点、单极全向模式、个体化幅度。对照OFF-DBS：刺激关闭。",
+      "task": "FoG-Course四项临床步态挑战；walking、carrying及carrying and calculation三个任务版本。",
+      "recording_location": "临床观察评分；无STN神经信号记录。",
+      "measure": "cDBS相对于OFF-DBS的FoG-Course总评分。",
+      "frequency_and_analysis_window": "不适用；临床评分。",
+      "finding": "cDBS条件下FoG-Course较OFF-DBS显著改善。",
+      "effect_estimate": "Friedman ANOVA：χ²=7.654，df=2，p=0.022；cDBS vs OFF-DBS：z=0.933，p=0.032。Table 1全组均值约由OFF-DBS的15±11降至cDBS的6±6。",
+      "statistical_unit_and_method": "患者级重复测量；Friedman ANOVA及Dunn-Bonferroni事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉/重复测量试验）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机刺激顺序，但未完整报告随机序列生成和分配隐藏。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "双盲设计，但约30分钟刺激间隔可能不足以排除步态刺激效应的残留或时期效应。",
+            "source_locator": "Methods—Protocol; Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "4名患者至少一个条件下不能完成完整临床评估；但Table 1列出全部15人的FoG-Course评分。",
+            "source_locator": "Methods—Statistical analysis; Table 1"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "使用标准化双盲评分，但包含festination与实际FOG的复合评分。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册或完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果支持cDBS对临床FOG评分的改善，但不能说明cDBS通过抑制哪种STN神经振荡发挥作用。",
+      "quote": "significant improvement between cDBS versus OFF-DBS",
+      "source_locator": {
+        "section": "Results—The group effect of TBS-DBS is not superior to cDBS on clinical scores",
+        "page": null,
+        "figure_table": "Figure 1B; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_FOGCOURSE_TBS_VS_OFF",
+      "design": "随机、双盲、三条件重复测量研究。",
+      "population": "15名双侧STN-DBS PD患者；全部15人FoG-Q报告有FoG。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FoG-Course数据列出15名患者；实际冻结事件数未报告。未报告与该评分对应的STN神经记录。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "临床观察到的FOG及festination/hastening复合评分；亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication；剂量和时间未报告。",
+      "DBS_state_and_parameters": "TBS-DBS：双侧STN刺激，5 Hz interburst、200 Hz intraburst、60 μs脉宽、0.1秒刺激burst及0.1秒间隔，TEED调整个体化幅度。对照OFF-DBS：刺激关闭。",
+      "task": "FoG-Course临床步态挑战。",
+      "recording_location": "临床观察评分；无STN神经信号记录。",
+      "measure": "TBS-DBS相对于OFF-DBS的FoG-Course总评分。",
+      "frequency_and_analysis_window": "不适用；临床评分。",
+      "finding": "全组中TBS-DBS与OFF-DBS之间的FoG-Course评分差异未达到统计学显著性。",
+      "effect_estimate": "Friedman ANOVA总体χ²=7.654，df=2，p=0.022；TBS-DBS vs OFF-DBS的事后比较未显著，报告所有相关两两比较p>0.362。Table 1均值约为OFF-DBS 15±11、TBS-DBS 11±9。",
+      "statistical_unit_and_method": "患者级重复测量；Friedman ANOVA及Dunn-Bonferroni事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉/重复测量试验）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机顺序，但未充分说明序列生成及分配隐藏。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "作者承认30分钟间隔可能不足以观察步态及轴性症状变化。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "4名患者至少一个条件下无法完成完整临床评估；Table 1列出FoG-Course评分的15名患者。",
+            "source_locator": "Methods—Statistical analysis; Table 1"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "标准化双盲临床评分，但量表包含festination/hastening与FOG。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册及完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不能将TBS-DBS组内FoG-Course数值下降解释为确定的治疗效应；全组与OFF-DBS比较未显著。",
+      "quote": "The FoG-Course was not significantly different between TBS-DBS and OFF-DBS",
+      "source_locator": {
+        "section": "Results—The group effect of TBS-DBS is not superior to cDBS on clinical scores",
+        "page": null,
+        "figure_table": "Figure 1B; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_FOGCOURSE_TBS_VS_CDBS",
+      "design": "随机、双盲、三条件重复测量研究。",
+      "population": "15名双侧STN-DBS PD患者；全部15人FoG-Q报告有FoG。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "FoG-Course数据列出15名患者；该评分未报告事件总数或神经记录有效人数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "FoG-Course复合临床评分；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-DBS：5 Hz interburst、200 Hz intraburst、60 μs。cDBS：130 Hz、60 μs，单极全向、单环触点。",
+      "task": "FoG-Course临床步态挑战。",
+      "recording_location": "临床观察评分；未记录STN神经活动。",
+      "measure": "TBS-DBS与cDBS条件下FoG-Course总评分的直接比较。",
+      "frequency_and_analysis_window": "不适用；临床评分。",
+      "finding": "全组原始FoG-Course评分在TBS-DBS和cDBS之间没有显著差异。该结果与主要终点相对改善幅度略偏向cDBS的结果需要区分。",
+      "effect_estimate": "两两比较报告p>0.362；未报告单独的效应量或95% CI。",
+      "statistical_unit_and_method": "患者级重复测量；Friedman ANOVA及Dunn-Bonferroni事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉/重复测量试验）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序已报告，序列生成及分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "30分钟间隔可能不足以消除刺激条件间的残留效应。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "some_concerns",
+            "reason": "4名患者至少一个条件下未完成完整临床评估；FoG-Course表格仍列出15名患者。",
+            "source_locator": "Methods—Statistical analysis; Table 1"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "双盲标准化评分，但未报告评分者一致性。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册及完整分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "主要终点的相对改善幅度比较与原始评分两两比较不是同一统计问题。不能仅凭其中一个p值宣称TBS-DBS优于或劣于cDBS。",
+      "quote": "TBS-DBS and cDBS in the whole sample (all p values greater than 0.362)",
+      "source_locator": {
+        "section": "Results—The group effect of TBS-DBS is not superior to cDBS on clinical scores",
+        "page": null,
+        "figure_table": "Figure 1B",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_FOGCOURSE_TBS_PREFERENCE_WITHIN_GROUP",
+      "design": "随机双盲刺激试验中的探索性患者偏好亚组分析。",
+      "population": "完整临床数据的11名患者；TBS-preference组6人，Non-TBS-preference组5人。15人中4人评价TBS更好、3人评价相等、8人评价更差。",
+      "n_enrolled": 15,
+      "n_analyzed": 6,
+      "n_patients_with_FOG": 6,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "该组内分析仅涉及TBS-preference组6名完整病例。所有15名患者FoG-Q阳性，但该亚组的实际事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "FoG-Course临床评分；具体冻结亚型未报告。TBS-preference由患者对刺激条件的主观步态及FOG偏好定义。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-preference组内比较TBS-DBS与OFF-DBS。TBS-DBS：5 Hz interburst、200 Hz intraburst、60 μs；OFF-DBS：刺激关闭。",
+      "task": "FoG-Course标准化临床步态挑战。",
+      "recording_location": "临床观察评分；未测量STN局部神经活动。",
+      "measure": "TBS-preference组内FoG-Course评分变化。",
+      "frequency_and_analysis_window": "不适用；临床评分。",
+      "finding": "在TBS-preference亚组中，TBS-DBS相对于OFF-DBS的FoG-Course评分显著改善。该结果未在全体患者中复现为TBS-DBS对OFF-DBS的显著优势。",
+      "effect_estimate": "TBS-DBS vs OFF-DBS：z=1.286，p=0.048。患者偏好亚组n=6。作者称亚组内只有TBS-DBS与OFF-DBS的比较达到显著。",
+      "statistical_unit_and_method": "患者级组内重复测量；Friedman ANOVA及事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2 + exploratory subgroup assessment",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "原试验随机排序，但患者偏好分组不是随机分配。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "短期三条件试验，刺激间隔可能不足以消除残留效应。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者没有完整三条件临床数据；亚组分析只纳入11人。",
+            "source_locator": "Methods—Statistical analysis; Results—TBS-preference subgroup"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-Course是标准化评分，但患者偏好分组基于主观排名，且未报告评分者间一致性。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "偏好亚组为探索性分析，未见预先注册的亚组假设或完整分析计划。",
+            "source_locator": "Methods—Statistical analysis; Discussion"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "小样本探索性亚组，分组依据是患者对TBS-DBS的主观评价，而非预先随机分层。结果不能证明存在稳定的神经生理响应亚型，也不能说明TBS-preference由STN beta变化导致。",
+      "quote": "only TBS-DBS showed a significant improvement compared to OFF-DBS",
+      "source_locator": {
+        "section": "Results—The TBS-preference subgroup showed specific improvement of FoG",
+        "page": null,
+        "figure_table": "Figure 1B; Table 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_TBS_PREFERENCE_GROUP_DIFFERENCE",
+      "design": "随机双盲刺激试验中的探索性患者偏好组间比较。",
+      "population": "完整临床数据11名PD患者；TBS-preference组6人，Non-TBS-preference组5人。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 11,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "11名完整病例进入临床亚组比较；实际冻结事件总数及有效STN神经数据人数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "unclear",
+      "freezing_phenotype": "FoG-Course临床评分；患者偏好组由主观评价定义，不代表不同FOG运动学亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-DBS条件下比较TBS-preference与Non-TBS-preference组；TBS-DBS采用5 Hz interburst、200 Hz intraburst、60 μs。",
+      "task": "FoG-Course标准化临床步态挑战。",
+      "recording_location": "临床观察评分；没有STN神经记录。",
+      "measure": "TBS-DBS条件下两组FoG-Course总评分的组间差异。",
+      "frequency_and_analysis_window": "不适用；临床评分。",
+      "finding": "TBS-DBS条件下，TBS-preference组的FoG-Course评分显著低于Non-TBS-preference组。OFF-DBS和cDBS条件下，两组FoG-Course没有显著差异。",
+      "effect_estimate": "TBS-DBS组间比较：Mann-Whitney U=4.000，p=0.004；TBS-preference n=6，Non-TBS-preference n=5。作者另报告偏好与FoG-Course总分的biserial correlation：r=-0.732，p=0.002。OFF-DBS组间p=0.955；cDBS组间p=0.336。",
+      "statistical_unit_and_method": "患者级组间比较；Mann-Whitney U检验及biserial correlation。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2 + exploratory subgroup assessment",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "刺激条件随机排序，但偏好组并非随机分配。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "短期交叉试验的刺激间隔可能不足以排除残留效应。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "组间分析仅纳入11名完整病例；作者还报告Non-TBS-preference组有2名患者无法完成TBS-DBS步态评估。",
+            "source_locator": "Results—The TBS-preference subgroup showed specific improvement of FoG"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "FoG-Course标准化，但患者偏好分类基于主观排名。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "some_concerns",
+            "reason": "探索性偏好亚组比较，未核实预设分析方案。",
+            "source_locator": "Methods—Statistical analysis; Results"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "偏好分组是治疗后的主观反应分类，存在事后分层及选择偏倚可能。该组间差异没有伴随相应的偏好组间皮层EEG差异，不能据此推断STN神经机制。",
+      "quote": "there was a significant group difference for the FoG-Course",
+      "source_locator": {
+        "section": "Results—The TBS-preference subgroup showed specific improvement of FoG",
+        "page": null,
+        "figure_table": "Table 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_OFF_TOTAL_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；可穿戴运动学步态分析。",
+      "population": "15名PD患者入组；4名无法完成所有三种刺激条件下的标准化115米步行课程，最终11名进入客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15因严重症状负荷及疲劳不能完成全部条件，被排除于客观步态分析。全文报告每名患者的平均冻结次数，但未报告全组原始事件总数或每条件试次数。该证据为运动学分析，不是神经记录。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际自然步行中检测到的FoG；3–8 Hz freeze band与0.5–3 Hz locomotion band区分。对可能无法与主动停止区分的akinetic freezing进行视频、书面记录及视觉检查修正；总体亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "OFF-DBS，双侧STN刺激关闭。其他实验条件为cDBS和TBS-DBS，均按随机顺序测试。",
+      "task": "标准化115米真实直立步行课程，包括通过门、乘坐电梯、90°和180°转弯、上下楼梯等日常挑战。",
+      "recording_location": "6个可穿戴运动学传感器：双侧踝、双侧腕、下背部及胸部；不是神经电极。",
+      "measure": "总冻结时间（total freezing time，秒）。",
+      "frequency_and_analysis_window": "运动学采样率128 Hz；FoG检测freeze band 3–8 Hz，locomotion band 0.5–3 Hz；akinetic freezing由视频、书面记录和视觉检查修正。",
+      "finding": "OFF-DBS时，11名分析患者中7名出现FoG。总冻结时间均值4.1808±7.9163秒，中位数1.2800秒，IQR 2.0085秒。",
+      "effect_estimate": "三条件总体Friedman ANOVA：χ²=6.741，p=0.034。事后比较：OFF vs cDBS，z=0.864，p=0.128；OFF vs TBS，z=0.500，p=0.723；cDBS vs TBS，z=0.364，p=1.000。虽然总体检验显著，但所有两两比较均未显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA及事后两两比较。均值±SD及中位数/IQR按患者汇总，而非将冻结事件作为独立患者。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "报告随机刺激顺序，但未详细说明随机序列生成及分配隐藏。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "刺激条件间隔约30分钟；作者认为该间隔可能不足以充分评估轴性及步态改变。",
+            "source_locator": "Methods—Protocol; Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者无法完成所有三种条件下的步行课程，分析仅包括11人；缺失与严重症状负荷和疲劳有关。",
+            "source_locator": "Results—Behavioral results; Methods—Statistical analysis"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "使用3–8 Hz运动学freeze band，并通过视频及人工检查修正akinetic freezing；未报告独立盲法裁定或评审者一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册及完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis; Results—Table 2"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "总冻结时间的总体检验显著，但所有事后两两比较均不显著。4名患者因无法完成步行课程而被排除，且排除原因与症状严重程度有关，可能低估严重FOG患者的冻结负担。该结果不能解释STN局部振荡。",
+      "quote": "7 participants showed FoG in the OFF-DBS condition",
+      "source_locator": {
+        "section": "Results—Behavioral results; Kinematic recordings and analysis",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_CDBS_TOTAL_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；可穿戴运动学步态分析。",
+      "population": "15名PD患者入组；客观步态分析11名。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 2,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15因无法完成全部三种刺激条件下的步行课程而排除。未报告全组原始冻结事件总数及每条件试次数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际步行FoG；freeze band 3–8 Hz，locomotion band 0.5–3 Hz；akinetic freezing通过视频、书面记录及视觉检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "cDBS：双侧STN刺激，130 Hz、60 μs，个体化幅度，单极全向、单环触点。",
+      "task": "标准化115米真实步行课程，包括门、转弯、电梯及楼梯等挑战。",
+      "recording_location": "6个可穿戴运动学传感器，分别位于双踝、双腕、下背部及胸部；不是STN电生理记录。",
+      "measure": "总冻结时间（total freezing time，秒）。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz与locomotion band 0.5–3 Hz；akinetic freezing进行视频及人工修正。",
+      "finding": "cDBS条件下11名患者中2名出现FoG。总冻结时间均值0.1186±0.3935秒，中位数0秒，IQR 0秒。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=6.741，p=0.034。cDBS与OFF-DBS事后比较z=0.864，p=0.128；cDBS与TBS-DBS比较z=0.364，p=1.000。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA及事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序已报告，随机序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "30分钟刺激间隔可能不足以排除步态刺激效应的残留。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者被排除于客观步态分析，缺失与症状负荷和疲劳有关。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "使用运动学频带定义冻结，并对akinetic freezing进行视频及人工修正；未报告独立裁定一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "cDBS下数值最低，但与OFF-DBS及TBS-DBS的事后两两差异均未达到显著。不能把较低的冻结时间解释为确定的神经机制证据。",
+      "quote": "2 participants showed FoG in the cDBS condition",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_TBS_TOTAL_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；可穿戴运动学步态分析。",
+      "population": "15名PD患者入组；客观步态分析11名。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15患者无法完成全部刺激条件下的步行课程，被排除。全组事件总数及每条件试次数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际步行FoG；3–8 Hz freeze band与0.5–3 Hz locomotion band；akinetic freezing通过视频和人工检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-DBS：双侧STN刺激，5 Hz interburst、200 Hz intraburst、60 μs，0.1秒burst及0.1秒pause，TEED调整个体化幅度。",
+      "task": "标准化115米真实步行课程，包括日常生活中的门、转弯、电梯及楼梯挑战。",
+      "recording_location": "6个可穿戴运动学传感器：双踝、双腕、下背部、胸部；不是神经记录。",
+      "measure": "总冻结时间（total freezing time，秒）。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz；人工视觉检查akinetic freezing。",
+      "finding": "TBS-DBS条件下11名患者中5名出现FoG。总冻结时间均值4.9952±14.8708秒，中位数0秒，IQR 1.0900秒。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=6.741，p=0.034。TBS与OFF-DBS事后比较z=0.500，p=0.723；TBS与cDBS比较z=0.364，p=1.000。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA及事后比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机刺激顺序已报告，但序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "作者承认30分钟间隔可能不足以评价轴性症状的完整变化。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者由于严重症状负荷及疲劳不能完成全部步行条件。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "运动学频带识别结合视频和人工修正，但未报告独立盲法裁定及一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "TBS-DBS组均值较高，但中位数为0，显示分布高度偏斜及患者间变异较大。总体检验显著并不意味着TBS与其他条件的事后两两比较显著。",
+      "quote": "5 participants showed FoG in the TBS-DBS condition",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_OFF_RELATIVE_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成三条件客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4名患者未完成全部三种条件下的步行课程。未报告原始事件总数和试次数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "自然步行中实际发生的FoG；运动学freeze band 3–8 Hz；akinetic freezing由视频及人工检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "OFF-DBS；双侧STN刺激关闭。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "相对冻结时间（relative freezing time）：总冻结时间/总步行时间。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz。",
+      "finding": "OFF-DBS条件下相对冻结时间均值为0.0226±0.0433，中位数0，IQR 0.0140。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=3.000，p=0.223；未报告显著的刺激条件总体差异。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序报告，但序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "30分钟刺激间隔可能不足以排除残留效应。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者未完成全部条件，客观分析仅11人。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "采用运动学频带识别及视频修正，但未报告独立裁定一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册和预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "相对冻结时间总体检验未显著。不能根据OFF条件单独的描述性均值推断FOG易感性或STN神经活动机制。",
+      "quote": "relative freezing time [ratio]",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_CDBS_RELATIVE_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成三条件客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 2,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4名患者未完成全部三种刺激条件下的步行课程。原始事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "自然步行FoG；3–8 Hz freeze band；akinetic freezing进行视频及人工修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "cDBS：双侧STN刺激，130 Hz、60 μs，个体化幅度。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "相对冻结时间（总冻结时间/总步行时间）。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz。",
+      "finding": "cDBS条件下相对冻结时间均值为0.0011±0.0036，中位数0，IQR 0。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=3.000，p=0.223；总体差异未达到显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序报告，但序列生成及分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "刺激条件间隔可能不足以排除步态反应残留。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者无法完成全部客观步态条件。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "运动学阈值结合视频人工修正，未报告独立评审一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "cDBS条件下描述性相对冻结时间最低，但三条件总体检验不显著。",
+      "quote": "relative freezing time [ratio]",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_TBS_RELATIVE_FREEZING_TIME",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成三条件客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4名患者因无法完成全部三条件步行课程而排除；未报告原始事件总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "自然步行FoG；freeze band 3–8 Hz；akinetic freezing进行视频及人工修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-DBS：双侧STN刺激，5 Hz interburst、200 Hz intraburst、60 μs，TEED调整幅度。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "相对冻结时间（总冻结时间/总步行时间）。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz。",
+      "finding": "TBS-DBS条件下相对冻结时间均值为0.0390±0.1163，中位数0，IQR 0.0085。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=3.000，p=0.223；总体差异未达到显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序报告，但序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "30分钟间隔可能不足以排除步态刺激效应残留。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者因症状负荷及疲劳未完成全部步行条件。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "运动学检测及视频修正方法已报告，但未报告独立裁定一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册及完整预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "TBS-DBS条件下相对冻结时间数值最高，但中位数为0且总体三条件比较不显著，存在较大个体差异。",
+      "quote": "relative freezing time [ratio]",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_OFF_FREEZING_NUMBER",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成全部客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 7,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15患者未完成全部三条件步行课程。仅报告每名患者的冻结次数描述性统计，未报告全组原始事件总数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际自然步行FoG；freeze band 3–8 Hz；akinetic freezing通过视频和人工检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "OFF-DBS，双侧STN刺激关闭。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "每名患者的总冻结次数（total freezing number）。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz与locomotion band 0.5–3 Hz。",
+      "finding": "OFF-DBS条件下冻结次数均值0.8636±1.2266次/患者，中位数0.5000，IQR 1.0000。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=5.120，p=0.077；总体差异未达到显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序已报告，序列生成和隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "刺激间隔可能不足以消除步态效应残留。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者被排除于客观步态分析。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "使用运动学算法及视频人工修正，但未报告独立裁定一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "冻结次数的总体检验p=0.077，未达到统计学显著。不能将数值趋势视为刺激条件的确定差异。",
+      "quote": "total freezing number",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_CDBS_FREEZING_NUMBER",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成全部客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 2,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15患者未完成全部三条件步行课程。全组原始冻结事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际自然步行FoG；3–8 Hz freeze band；akinetic freezing通过视频及人工检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "cDBS：双侧STN刺激，130 Hz、60 μs，个体化幅度。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "每名患者总冻结次数。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz。",
+      "finding": "cDBS条件下冻结次数均值0.0909±0.3015次/患者，中位数0，IQR 0。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=5.120，p=0.077；总体差异未达到显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序报告，但序列生成和隐藏方法不充分。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "30分钟刺激间隔可能不足以排除残留效应。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者因无法完成全部步行条件而排除。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "运动学算法结合视频检查，但未报告独立评审者一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "cDBS数值最低，但总冻结次数三条件总体比较未达到显著。",
+      "quote": "total freezing number",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_TBS_FREEZING_NUMBER",
+      "design": "随机、双盲、三条件重复测量研究；客观运动学分析。",
+      "population": "15名PD患者入组，11名完成全部客观步态分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 11,
+      "n_patients_with_FOG": 5,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "4/15患者未完成全部三条件步行课程；全组原始事件总数未报告。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际自然步行FoG；3–8 Hz freeze band；akinetic freezing通过视频及人工检查修正。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "TBS-DBS：双侧STN刺激，5 Hz interburst、200 Hz intraburst、60 μs，TEED调整幅度。",
+      "task": "标准化115米真实步行课程。",
+      "recording_location": "6个可穿戴运动学传感器，双踝、双腕、下背部及胸部。",
+      "measure": "每名患者总冻结次数。",
+      "frequency_and_analysis_window": "运动学128 Hz；freeze band 3–8 Hz，locomotion band 0.5–3 Hz。",
+      "finding": "TBS-DBS条件下冻结次数均值0.9545±2.1030次/患者，中位数0，IQR 0.7500。",
+      "effect_estimate": "三条件Friedman ANOVA：χ²=5.120，p=0.077；总体差异未达到显著。",
+      "statistical_unit_and_method": "患者级重复测量；n=11；Friedman ANOVA。",
+      "risk_of_bias": {
+        "tool_or_framework": "RoB 2（随机交叉试验；客观步态结局）",
+        "domains": [
+          {
+            "domain": "随机化过程",
+            "judgement": "some_concerns",
+            "reason": "随机顺序报告，但序列生成和分配隐藏细节不足。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "偏离预期干预",
+            "judgement": "some_concerns",
+            "reason": "刺激间隔可能不足以排除步态效应残留。",
+            "source_locator": "Discussion—limitations"
+          },
+          {
+            "domain": "结局数据缺失",
+            "judgement": "high",
+            "reason": "4/15患者未完成全部三条件步行课程。",
+            "source_locator": "Results—Behavioral results"
+          },
+          {
+            "domain": "结局测量",
+            "judgement": "some_concerns",
+            "reason": "运动学检测及视频修正已报告，但未报告独立评审一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预设分析计划。",
+            "source_locator": "Methods—Statistical analysis"
+          }
+        ],
+        "overall": "high"
+      },
+      "limitations": "TBS-DBS条件下描述性均值最高，但中位数为0且总体比较未显著。存在较大的患者间差异。",
+      "quote": "total freezing number",
+      "source_locator": {
+        "section": "Results—Behavioral results",
+        "page": null,
+        "figure_table": "Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_EEG_FREEZING_VS_WALKING",
+      "design": "随机双盲DBS干预研究中的探索性皮层EEG事件状态分析。",
+      "population": "15名PD患者；所有患者FoG-Q报告有FoG。实际进入冻结事件EEG比较的有效患者人数未单独报告。",
+      "n_enrolled": 15,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "全文明确报告进行了regular walking与freezing episodes比较，但没有给出该探索性比较的患者数、有效冻结事件数或各条件epoch数量。24为头皮EEG通道数，不是STN触点数。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "实际步行课程中的FoG事件；使用3–8 Hz freeze band识别，akinetic freezing通过视觉检查、书面记录及视频修正；具体亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication；剂量及时间未报告。",
+      "DBS_state_and_parameters": "研究包括OFF-DBS、cDBS及TBS-DBS。方法称各DBS条件均计算运动状态功率谱，但冻结与正常步行比较的条件特异结果未单独报告。",
+      "task": "标准化真实直立步行课程；比较regular walking与freezing episodes。",
+      "recording_location": "24通道移动式头皮EEG；额部Fz、F3、F4及中央Cz、C3、C4等皮层电极。没有STN-LFP记录。",
+      "measure": "冻结事件与正常步行期间的皮层EEG频谱功率差异；whole-cortex cluster-based permutation analysis。",
+      "frequency_and_analysis_window": "1秒不重叠epoch；FFT频谱2–45 Hz，1 Hz分辨率，±2 Hz smoothing；自然对数功率。delta 1–3 Hz、theta 4–8 Hz、alpha 9–13 Hz、low-beta 14–20 Hz、high-beta 21–30 Hz、gamma 31–45 Hz。gamma因步行肌电伪迹未纳入。5000次Monte Carlo permutation；至少两个相邻通道形成显著cluster，阈值p<0.05。",
+      "finding": "探索性比较regular walking与freezing episodes时，没有发现显著皮层EEG功率变化cluster。该研究没有报告冻结前事件相关的STN神经信号变化。",
+      "effect_estimate": "No significant clusters found。未报告具体cluster统计量、效应量、95% CI或事件级p值。",
+      "statistical_unit_and_method": "1秒epoch频谱先进行患者级平均；随后采用Monte Carlo cluster-based permutation test。冻结事件数及各患者有效epoch数量未报告，不能将epoch数量当作独立患者数。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性电生理/事件关联分析领域级初评，非正式验证工具）",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心、小样本；研究入组要求是步态障碍，不强制要求FOG；事件级EEG有效患者分母未报告。",
+            "source_locator": "Methods—Participants; Results—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "采用3–8 Hz freeze band识别并人工检查akinetic freezing，但未报告独立盲法裁定或评审者间一致性。",
+            "source_locator": "Methods—Kinematic recordings and analysis"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了DBS谐波去伪迹、ASR、ICA及DIPFIT处理，但作者明确承认残余伪迹不能完全排除。",
+            "source_locator": "Methods—EEG recordings and analysis; Discussion—limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "患者均使用常规药物；运动状态与肌电、运动伪迹及刺激条件可能共同影响EEG。",
+            "source_locator": "Methods—Participants; Discussion—limitations"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "采用1秒epoch并报告患者级平均，但冻结事件数及各患者有效epoch数量未报告。",
+            "source_locator": "Methods—EEG recordings and analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用5000次cluster permutation降低多重比较问题，但多个频段和探索性比较的跨分析校正情况不明确。",
+            "source_locator": "Methods—EEG analysis"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未报告预测模型；不存在可评估的外部验证。",
+            "source_locator": "Methods—Statistical analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册或完整预设EEG分析计划；该比较明确为探索性分析。",
+            "source_locator": "Results—EEG results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是本文与FOG事件最直接相关的EEG分析，但结果为阴性。记录位置是头皮皮层，不是STN；事件数及有效神经数据患者数不清楚；未提供pre-FOG事件窗口，不能检验冻结前STN beta升高机制。阴性结果也不能证明STN不存在相关活动。",
+      "quote": "between regular walking and freezing episodes where no significant clusters were found",
+      "source_locator": {
+        "section": "Results—EEG results; exploratory analysis of regular walking and freezing episodes",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_EEG_FRONTAL_LOW_BETA",
+      "design": "随机双盲刺激研究中的患者级移动EEG频谱分析。",
+      "population": "15名PD患者；所有患者报告FoG-Q阳性。Figure 4报告全部PD患者的frontal ROI分析。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": 15,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "Figure 4说明分析全部PD患者。该EEG比较对应无FoG的直线规则步行，不存在可提取的事件级冻结总数。24为头皮EEG通道数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "患者FoG-Q报告FoG，但本项EEG分析明确采用straight regular gait without FoG episodes；具体FOG亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "OFF-DBS、cDBS及TBS-DBS。cDBS为130 Hz、60 μs；TBS为5 Hz interburst、200 Hz intraburst、60 μs及TEED调整幅度。",
+      "task": "30秒坐姿睁眼resting-like状态与straight regular walking比较；分析无FoG步行。",
+      "recording_location": "24通道头皮EEG；frontal ROI为Fz、F3、F4，代表premotor cortex。",
+      "measure": "Frontal ROI低beta频段运动诱发功率抑制（movement-induced low-beta suppression）。",
+      "frequency_and_analysis_window": "low-beta 14–20 Hz；1秒不重叠epoch；2–45 Hz频谱、1 Hz分辨率、±2 Hz smoothing；自然对数功率；以30秒坐姿睁眼状态作为resting-like基线；患者级平均。",
+      "finding": "TBS-DBS下frontal low-beta抑制在数值上比cDBS更强，但没有达到统计学显著。各DBS条件下频段功率幅值也未发现显著差异。",
+      "effect_estimate": "TBS-DBS vs cDBS：p=0.250；TBS-DBS vs OFF-DBS：p=0.160；cDBS vs OFF-DBS：p=0.570。",
+      "statistical_unit_and_method": "患者级频谱平均；Figure 4报告全部PD患者。正文未明确给出这三个ROI两两比较的具体检验名称；whole-cortex分析另采用5000次cluster permutation。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性电生理/机制分析领域级初评）",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心15人，14男1女，且所有人有慢性双侧STN-DBS。",
+            "source_locator": "Methods—Participants; Results—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "该分析限定为无FoG的规则直线步行，行为状态定义清楚，但不能代表实际冻结事件。",
+            "source_locator": "Figure 2 caption; EEG results"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了多种伪迹去除，但作者承认仍不能完全排除残余EEG伪迹。",
+            "source_locator": "Methods—EEG recordings and analysis; Discussion—limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "常规药物状态、运动伪迹及刺激参数可能影响皮层EEG；药物时间和剂量未完整报告。",
+            "source_locator": "Methods—Participants; Discussion—limitations"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者级平均降低了epoch伪重复风险，但具体有效epoch数量未报告。",
+            "source_locator": "Methods—EEG recordings and analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用cluster permutation，但跨频段及不同刺激比较的整体校正不完全明确。",
+            "source_locator": "Methods—EEG analysis"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或外部验证。",
+            "source_locator": "Methods—Statistical analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册和预设EEG分析计划。",
+            "source_locator": "Methods—EEG analysis"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是皮层运动诱发低beta抑制，不是STN-LFP beta。分析的是没有冻结的规则步行，不能证明该信号与实际FOG事件存在时间关联。TBS与cDBS的直接差异p=0.250，不显著。",
+      "quote": "TBS-DBS showed a stronger low beta suppression than cDBS, although it was not statistically significant",
+      "source_locator": {
+        "section": "Results—EEG results",
+        "page": null,
+        "figure_table": "Figure 2; Figure 4",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_EEG_LOW_BETA_TOPOGRAPHY",
+      "design": "随机双盲刺激研究中的探索性头皮EEG拓扑分析。",
+      "population": "15名PD患者；Figure 3注明结果为全部PD患者平均。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": 15,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "分析全部PD患者的静息样与行走状态差异；该分析没有事件级FOG冻结总数。24为头皮EEG电极数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "患者FoG-Q阳性；此项比较为静息样状态与无FoG规则步行，不是冻结事件。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "cDBS：130 Hz、60 μs；TBS-DBS：5 Hz interburst、200 Hz intraburst、60 μs，TEED调整幅度。",
+      "task": "resting-like与walking比较；直线规则步行，无FoG事件。",
+      "recording_location": "24通道头皮EEG；全头皮拓扑分析，涉及motor及premotor cortex。",
+      "measure": "低beta频段14–20 Hz运动诱发功率抑制的空间拓扑分布。",
+      "frequency_and_analysis_window": "低beta 14–20 Hz；1秒不重叠epoch；2–45 Hz频谱；1 Hz分辨率、±2 Hz smoothing；resting-like为30秒坐姿睁眼基线；5000次cluster permutation。",
+      "finding": "cDBS条件下低beta抑制主要位于motor cortex上方；TBS-DBS条件下低beta抑制还扩展至premotor cortex上方。作者将两种刺激模式的拓扑差异描述为定性视觉比较。",
+      "effect_estimate": "Figure 3定性拓扑差异；未报告TBS-DBS与cDBS之间直接空间差异的独立p值或效应量。各刺激条件相对于resting-like的部分cluster达到显著。",
+      "statistical_unit_and_method": "患者级平均功率变化；whole-cortex Monte Carlo cluster-based permutation，5000次置换；显著cluster定义为至少两个相邻通道且p<0.05。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性电生理/机制分析领域级初评）",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，14/15为男性。",
+            "source_locator": "Results—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "该分析是无FoG规则步行与坐姿resting-like比较，不是事件级冻结标签。",
+            "source_locator": "Figure 2 caption; EEG recordings and analysis"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "虽然使用多种去伪迹算法，作者仍承认残余伪迹可能存在。",
+            "source_locator": "Methods—EEG recordings and analysis; Discussion"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "药物、步行运动伪迹及刺激模式可能共同影响EEG。",
+            "source_locator": "Methods—Participants; Discussion—limitations"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者级平均有助于控制伪重复，但有效epoch数量未报告。",
+            "source_locator": "Methods—EEG recordings and analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用cluster permutation，但跨频段与刺激条件的整体校正细节不足。",
+            "source_locator": "Methods—EEG analysis"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型或外部验证。",
+            "source_locator": "Methods—Statistical analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预设拓扑分析计划。",
+            "source_locator": "Methods—EEG analysis; Results—Figure 3"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该发现属于头皮皮层低beta空间分布变化，不是STN低beta活动。不同刺激条件的拓扑差异主要为定性比较，不能等同于显著的FOG事件相关神经变化。",
+      "quote": "low-beta suppression in the TBS-DBS condition was additionally localized above the premotor cortex",
+      "source_locator": {
+        "section": "Results—EEG results; TBS-DBS and cDBS showed slightly different patterns of movement-induced alpha- and beta-suppression",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_EEG_ALPHA_TOPOGRAPHY",
+      "design": "随机双盲刺激研究中的探索性头皮EEG拓扑分析。",
+      "population": "15名PD患者；Figure 3报告全部PD患者平均结果。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": 15,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "全部PD患者的resting-like与walking状态比较；未报告事件级冻结数量。24为头皮EEG通道数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "所有患者FoG-Q阳性；本项分析为无FoG规则步行，未分析实际冻结事件。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "cDBS：130 Hz、60 μs；TBS-DBS：5 Hz interburst、200 Hz intraburst、60 μs。",
+      "task": "resting-like坐姿睁眼与规则直线步行比较。",
+      "recording_location": "24通道头皮EEG；motor及premotor cortical scalp topography。",
+      "measure": "alpha频段运动诱发功率抑制的空间拓扑分布。",
+      "frequency_and_analysis_window": "alpha 9–13 Hz；1秒不重叠epoch；resting-like为30秒坐姿睁眼；患者级平均功率变化；5000次cluster permutation。",
+      "finding": "alpha抑制的拓扑模式与低beta相反：TBS-DBS条件下alpha抑制主要位于motor cortex上方；cDBS条件下则位于motor及premotor cortex上方。",
+      "effect_estimate": "Figure 3定性拓扑比较；未报告两种刺激模式之间直接拓扑差异的独立效应量或p值。",
+      "statistical_unit_and_method": "患者级功率平均；Monte Carlo cluster-based permutation test，5000次置换；至少两个相邻通道且p<0.05定义为显著cluster。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性电生理/机制分析领域级初评）",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，14/15男性。",
+            "source_locator": "Results—Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用无FoG规则步行，不是事件级FOG分析。",
+            "source_locator": "Figure 2 caption; Methods—EEG analysis"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了EEG伪迹处理，但残余运动及刺激伪迹不能完全排除。",
+            "source_locator": "Methods—EEG recordings and analysis; Discussion"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "常规药物状态、运动及DBS刺激均可能影响alpha功率。",
+            "source_locator": "Methods—Participants; Discussion"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者级平均降低伪重复风险，但epoch数量未报告。",
+            "source_locator": "Methods—EEG recordings and analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用cluster permutation，但多频段及多条件跨分析校正不明确。",
+            "source_locator": "Methods—EEG analysis"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未进行预测建模。",
+            "source_locator": "Methods—Statistical analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预设alpha拓扑分析计划。",
+            "source_locator": "Results—EEG results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "alpha拓扑差异属于皮层运动相关信号，且没有实际FOG事件对应分析。不能把alpha空间分布差异等同于STN alpha活动或FOG病理机制。",
+      "quote": "Alpha suppression in the TBS-DBS condition was predominantly localized above the motor cortex",
+      "source_locator": {
+        "section": "Results—EEG results",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "DUTKE2025_EEG_PREFERENCE_GROUP_COMPARISON",
+      "design": "随机双盲刺激研究中的探索性患者偏好组皮层EEG比较。",
+      "population": "15名PD患者；TBS-preference组7人，Non-TBS-preference组8人。EEG分析的独立有效数据人数未单独列出。",
+      "n_enrolled": 15,
+      "n_analyzed": 15,
+      "n_patients_with_FOG": 15,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 24,
+      "missing_reason": "偏好分组在全部15名患者中完成；EEG有效记录人数未单独报告。临床FoG-Course完整病例分析使用11人，不能将该11人分母直接替代EEG分析分母。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "non_event_gait",
+      "freezing_phenotype": "所有15人FoG-Q阳性；偏好组依据患者对TBS-DBS与cDBS的主观步态及FOG评价形成。此项EEG比较使用resting-like与walking状态，没有事件级冻结关联。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "常规多巴胺能药物，Med-On/usual medication。",
+      "DBS_state_and_parameters": "比较TBS-preference与Non-TBS-preference患者在不同DBS条件下的皮层EEG变化；cDBS 130 Hz、60 μs；TBS 5 Hz interburst、200 Hz intraburst、60 μs。",
+      "task": "30秒坐姿睁眼resting-like与步行状态比较；患者偏好组间比较。",
+      "recording_location": "24通道移动式头皮EEG；frontal ROI Fz、F3、F4；central ROI Cz、C3、C4。",
+      "measure": "患者偏好组之间的运动诱发皮层EEG功率变化。",
+      "frequency_and_analysis_window": "1秒不重叠epoch；2–45 Hz；alpha 9–13 Hz、low-beta 14–20 Hz、high-beta 21–30 Hz等；患者级平均；5000次Monte Carlo cluster permutation。",
+      "finding": "TBS-preference组与Non-TBS-preference组之间的resting-like至walking皮层活动变化没有显著cluster；line plots也未显示明显组间差异。",
+      "effect_estimate": "未发现显著cluster；未报告组间具体效应量或p值。",
+      "statistical_unit_and_method": "患者级组间EEG比较；Monte Carlo cluster-based permutation test，5000次置换；显著cluster定义为至少两个相邻通道且p<0.05。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated（观察性电生理/探索性亚组分析领域级初评）",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，患者偏好组为主观分类；完整临床病例仅11人。",
+            "source_locator": "Results—The TBS-preference subgroup showed specific improvement of FoG"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "偏好组反映主观治疗评价，不是客观冻结事件标签。",
+            "source_locator": "Methods—Protocol and experimental setup"
+          },
+          {
+            "domain": "信号质量及伪迹",
+            "judgement": "some_concerns",
+            "reason": "使用多种伪迹处理方法，但作者不能排除残余EEG伪迹。",
+            "source_locator": "Methods—EEG recordings and analysis; Discussion"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "偏好组不是随机形成的生理亚组；药物、临床差异及刺激参数可能影响组间比较。",
+            "source_locator": "Methods—Participants; Results—Table 3"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "some_concerns",
+            "reason": "患者级平均功率降低伪重复风险，但有效epoch和患者级完整数据分母未明确。",
+            "source_locator": "Methods—EEG recordings and analysis"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用5000次cluster permutation，但多频段、多通道及多条件的跨分析校正不明确。",
+            "source_locator": "Methods—EEG analysis"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "not_assessable",
+            "reason": "未报告预测模型或外部验证。",
+            "source_locator": "Methods—Statistical analysis"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未核实预注册和预设亚组EEG分析计划。",
+            "source_locator": "Methods—EEG analysis; Results—EEG results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是重要的阴性结果：患者主观感受到TBS-DBS获益的亚组，没有显示相应的静息至步行皮层EEG差异。该结果不能排除STN局部活动差异，因为本研究未记录STN-LFP，且分析不是实际冻结事件级比较。",
+      "quote": "did not reveal any significant clusters",
+      "source_locator": {
+        "section": "Results—The TBS-preference and Non-TBS-preference group did not show different cortical activity patterns",
+        "page": null,
+        "figure_table": "Figure 5",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

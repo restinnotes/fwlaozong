@@ -1,0 +1,715 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P2_C1",
+      "text": "本部分关于STN神经活动与FOG事件关系的直接人体电生理证据主要来自一项2017年原始研究（PMID:28890315），而不是多个独立队列的重复验证。该研究纳入14例PD患者，其中8例为Freezers、6例为Non-Freezers；由于神经信号质量及可识别beta峰等原因，最终只有9例（5例Freezers、4例Non-Freezers）进入神经分析。E1–E7均来自这一研究及其同一患者队列中的不同任务或分析，不应视为7项独立验证。该研究与其他Stanford Activa PC+S研究存在可能的队列重叠，但尚未证实。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "证据来源集中，患者数和有效神经记录数较少；神经数据排除可能产生选择偏倚；18个STN记录并不等于18名独立患者。与其他研究的队列重叠尚未解决。因此，后续多个显著结果不能被解释为跨队列重复性。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_1",
+          "relation": "supports",
+          "note": "报告14例患者、8例Freezers和6例Non-Freezers，以及自然行走任务中的行为数据。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_2",
+          "relation": "supports",
+          "note": "报告SIP任务中8例Freezers中的5例出现冻结样事件。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_3",
+          "relation": "supports",
+          "note": "提供同一队列TBC中的FOG空间分布数据。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "supports",
+          "note": "9例患者进入beta功率组间分析，报告18个STN记录。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "同一9例患者的beta SampEn分析。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "supports",
+          "note": "同一队列Freezer亚组的FOG期间beta功率分析。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "supports",
+          "note": "同一队列Freezer亚组的FOG期间alpha SampEn分析。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C2",
+      "text": "自然行走中的FOG具有明显的任务和空间情境依赖性。Turning and Barrier Course（TBC）比普通前向行走（FW）更容易诱发冻结：8例Freezers中，7例在TBC出现FOG，4例在FW出现FOG；TBC每试次平均冻结事件数为9.07±6.86，FW为2±0.82。冻结主要发生在转弯和通过狭窄开口时，figure-eight行走部分通常比椭圆行走部分诱发更多冻结。这说明神经活动比较必须控制转弯、障碍、空间约束及运动启动等任务因素。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "样本仅8例Freezers；作者未对TBC与FW的冻结发生率进行有充分统计效力的正式比较，也未对figure-eight与ellipse差异报告显著性检验。不能由行为发生位置直接推断STN活动的变化位置或机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_1",
+          "relation": "supports",
+          "note": "TBC中7/8 Freezers出现FOG，FW中4/8出现；TBC冻结事件数量较多，但任务间统计效力不足。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_3",
+          "relation": "supports",
+          "note": "报告冻结主要聚集于转弯及狭窄开口，figure-eight部分通常比椭圆部分诱发更多冻结。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C3",
+      "text": "Stepping in Place（SIP）能够诱发计算机算法识别的冻结样事件，但应与自然向前行走中的临床FOG区分。8例Freezers中5例在SIP出现冻结样事件，平均每试次3±0.71次，平均持续9.54±6.35秒，冻结时间比例为27.05%±17.15%。因此，SIP可以作为研究冻结易感性和步态控制异常的替代任务，但不能直接将其事件与自然行走中视频确认的FOG视为同一种行为终点。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "SIP采用原地踏步和计算机算法识别，任务运动学与自然行走不同。该研究还指出不同任务的测试时间及DBS暴露历史不同，不能直接比较所有神经指标。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_2",
+          "relation": "supports",
+          "note": "报告SIP中5/8 Freezers出现算法识别的冻结样事件，并给出事件数量、持续时间和冻结时间比例。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_1",
+          "relation": "qualifies",
+          "note": "自然行走中的FOG采用视频及运动学确认，与SIP算法识别的冻结样事件不是完全相同的测量终点。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C4",
+      "text": "STN beta相对功率与Freezer临床表型存在任务依赖性关联。在没有发生冻结的SIP阶段，Freezers的STN beta相对功率低于Non-Freezers：4.085±2.077对11.258±8.493，组间差异H(1)=7.17，P=0.036。但静息状态和FW无冻结阶段均未发现Freezer与Non-Freezer之间的beta功率差异，alpha功率也未能区分两组。因此，较低STN beta相对功率可能与特定任务下的冻结易感性有关，而不是稳定存在于所有状态的Freezer特征。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "仅9例患者进入神经分析，统计涉及18个STN记录，是否充分处理同一患者双侧STN的相关性不明确。SIP任务的时相、DBS启用历史和归一化方法可能影响结果。该结果是组间易感性关联，不是冻结事件发生前的预测证据。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "supports",
+          "note": "报告Freezers在无冻结SIP阶段具有显著较低的STN beta相对功率，同时静息和FW无冻结阶段没有相同组间差异。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C5",
+      "text": "STN beta信号的时间序列复杂度可能与Freezer易感性有关。在无冻结的SIP阶段，Freezers的STN beta Sample Entropy（SampEn）高于Non-Freezers：0.407±0.031对0.337±0.062，H(1)=4.61，P=0.032。该结果表明Freezer表型与beta时间序列较低的可预测性相关，但不能说明较高熵是导致FOG的异常活动，还是对运动控制障碍的补偿性反应。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "单一小样本研究，统计单位为18个STN记录，双侧记录的患者内相关性处理不明确。该比较发生在无冻结的SIP阶段，没有证明beta SampEn能够预测随后FOG的发生。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "直接报告Freezer与Non-Freezer在无冻结SIP阶段的beta SampEn差异及统计结果。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C6",
+      "text": "自然行走中的实际FOG阶段伴随STN beta相对功率降低，但这一变化尚不能认定为FOG特异性神经标志物。在Freezers中，TBC/FOG阶段的beta相对功率低于FW无冻结阶段：7.321±4.429对9.143±6.835，F(1,51)=14.45，P<0.001。值得注意的是，Non-Freezers虽然没有发生FOG，也表现出TBC相较FW的beta功率下降。这提示beta功率降低可能同时反映转弯、障碍和运动任务要求，而不只是冻结事件本身。",
+      "level": "finding",
+      "status": "contested",
+      "uncertainty": "这是跨任务比较，不是同一任务中冻结与非冻结时段的严格匹配比较。Non-Freezers也出现TBC相关beta下降，构成重要的任务混杂。研究报告的N=8个STN不是8名独立患者，独立患者数和事件数未明确报告；该分析的偏倚风险较高。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "supports",
+          "note": "报告Freezers在TBC/FOG阶段的beta相对功率低于FW无冻结阶段，且差异达到统计学显著。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "qualifies",
+          "note": "Non-Freezers在没有FOG时也出现TBC相对FW的beta功率下降，说明结果可能包含任务要求效应。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_3",
+          "relation": "qualifies",
+          "note": "TBC本身包含转弯和狭窄障碍，运动要求不同于FW。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C7",
+      "text": "实际FOG期间的STN alpha时间序列复杂度高于无冻结前向行走阶段。Freezers在TBC/FOG阶段的alpha SampEn为0.253±0.003，FW无冻结阶段为0.248±0.007，全文Results报告F(1,51)=7.67，P=0.005。该结果提示FOG阶段存在alpha时间序列可预测性降低的现象，但不能确定这是冻结本身的神经特征，还是转弯、空间障碍、注意及执行功能需求增加的结果。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "跨任务比较带来明显混杂；alpha活动可能与注意及执行功能有关。摘要报告P<0.001，而全文Results报告P=0.005，本证据采用全文Results数值。患者级独立样本数未报告，偏倚风险较高。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "supports",
+          "note": "报告TBC/FOG阶段STN alpha SampEn显著高于FW无冻结阶段。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "qualifies",
+          "note": "作者明确指出alpha复杂度可能受到注意、执行功能及空间认知需求影响，并存在摘要与正文P值不一致。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C8",
+      "text": "本部分STN beta活动的结果不能概括为beta功率在Freezers或FOG期间普遍升高或降低。当前研究发现无冻结SIP阶段Freezers的beta相对功率降低，实际FOG期间相较FW无冻结阶段也降低，但无冻结SIP阶段Freezers的beta SampEn反而升高。功率与熵描述的是不同信号属性，不能相互替代。此外，E4转述的既往研究还存在静息高beta较高与行走低beta较高等方向不同的发现。可能的冲突来源包括静息与行走状态、SIP与自然行走任务、beta子频段划分、相对功率归一化、微损伤效应及样本选择差异。当前证据不足以确定其中哪一种因素是主要原因。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "当前直接数据来自同一小样本队列；既往方向相反的结果仅由E4二手转述，原始研究没有作为本部分独立证据提供。不同研究的频段定义、分析窗口及归一化方法尚不能统一比较。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "supports",
+          "note": "Freezer在无冻结SIP阶段beta相对功率较低。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "同一任务中Freezer的beta SampEn反而较高，说明功率和复杂度不是同一指标。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "supports",
+          "note": "实际FOG阶段相较FW无冻结阶段也观察到较低beta相对功率。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "qualifies",
+          "note": "作者转述的既往研究存在不同状态下beta功率方向相反的结果，并提出微损伤效应及频段定义可能解释差异。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C9",
+      "text": "现有直接STN神经活动与FOG关系证据支持相关性，但不支持因果关系。PMID:28890315的所有神经记录均在OFF DBS至少87分钟、Med-Off条件下进行，治疗性刺激没有在记录期间启用；20 Hz短暂刺激仅用于信号同步。因此，研究观察到的beta功率、beta SampEn和alpha SampEn变化不能证明这些活动导致FOG，也不能证明它们介导了60 Hz低频DBS对FOG的改善。当前证据没有建立神经活动变化先于冻结、触发冻结或通过干预改变冻结的因果链条。",
+      "level": "synthesis",
+      "status": "well-supported",
+      "uncertainty": "这是对研究设计和测量条件的判断，不意味着STN活动与FOG不存在因果联系。需要事件前、事件中、恢复期连续记录以及随机刺激干预才能进一步检验因果关系。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_1",
+          "relation": "supports",
+          "note": "自然行走神经记录在OFF DBS和Med-Off条件下进行。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_2",
+          "relation": "supports",
+          "note": "SIP记录同样没有治疗性DBS刺激。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "supports",
+          "note": "beta功率为观察性Freezer与Non-Freezer比较。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "beta SampEn为表型相关性分析，而不是神经活动干预实验。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "supports",
+          "note": "FOG期间beta功率分析为观察性跨任务比较。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "supports",
+          "note": "alpha SampEn分析同样没有建立神经变化与冻结之间的因果方向。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C10",
+      "text": "双侧STN高频DBS具有改善临床总体步态评分的长期证据，但不能将其等同于实际FOG事件减少。系统综述Meta分析显示，Med-Off/Stim-On相较baseline Med-Off，UPDRS gait item在24–48个月由2.53改善至1.31，在超过48个月由2.56改善至1.40，均P<0.05。这说明高频STN刺激可以长期改善部分步态障碍，但不能据此推断每位患者的冻结频率、冻结持续时间或事件发生概率均下降。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "纳入研究的总患者数、具体刺激参数和原始研究偏倚风险未在摘要中充分报告。UPDRS gait item是临床评分，不是事件级FOG测量；Meta分析也不能提供具体STN神经活动机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_27766724_2",
+          "relation": "supports",
+          "note": "24–48个月Meta分析显示Med-Off/Stim-On步态评分显著改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_27766724_3",
+          "relation": "supports",
+          "note": "超过48个月随访仍观察到UPDRS gait item改善。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C11",
+      "text": "STN-DBS对临床FOG评分的长期改善可能具有药物状态依赖性。系统综述纳入6项FOG item研究，认为Med-Off/Stim-On条件下FOG评分改善可持续超过4年，但Med-On状态下没有发现明确获益。该发现提示药物状态可能是解释不同STN-DBS与FOG结果的重要效应修饰因素。不过，这一结果来自UPDRS item 14等临床评分，不等于实际冻结事件的长期减少。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "摘要没有给出FOG合并效应量、置信区间和具体研究权重；Med-On没有明确获益不等于已经证明无效。各纳入研究的药物状态和FOG表型也可能存在差异。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_27766724_4",
+          "relation": "supports",
+          "note": "综述报告Med-Off/Stim-On下长期FOG评分获益超过4年，而Med-On下没有明确获益。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C12",
+      "text": "在双侧STN DBS后仍存在实际FOG、尤其是130 Hz或其他高频刺激下出现FOG的选择性患者中，60 Hz低频刺激具有改善实际冻结事件的临床证据。13例随机双盲交叉研究显示，60 Hz等能量刺激在Stand-Walk-Sit期间的FOG spells和步态指标优于DBS-Off及130 Hz条件；7例130 Hz下存在药物难治性FOG的患者，在随机交叉比较中也表现出60 Hz下实际FOG、轴性症状及总体运动评分改善。另有5例病例系列中，Med-On状态下FOG患者比例由HFS的4/5降至LFS的2/5。2例病例在Med-Off及Med-On状态下切换60 Hz后均报告FOG改善。总体上，60 Hz可能对特定HFS相关FOG亚群有效，但不能外推至所有STN-DBS患者。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "13例、7例、5例和2例研究均为小样本，且部分数据由mini-review二手转述。13例研究中的不同刺激条件及2例研究中的不同药物状态不能重复计为独立队列。缺少统一效应量、置信区间、FOG亚型和标准化事件标注。另有TEED及触点设置差异。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "supports",
+          "note": "13例随机双盲交叉研究显示60 Hz等能量刺激显著优于DBS-Off和130 Hz，包含实际SWS冻结事件。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_8",
+          "relation": "supports",
+          "note": "7例130 Hz下药物难治性FOG患者的随机交叉研究报告60 Hz改善实际SWS冻结事件。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_7",
+          "relation": "supports",
+          "note": "5例病例系列中，Med-On状态下FOG患者比例从HFS的4/5降至LFS的2/5。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_5",
+          "relation": "supports",
+          "note": "2例患者由130 Hz切换至60 Hz后，Med-Off状态下均报告FOG改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_6",
+          "relation": "supports",
+          "note": "同一2例患者在Med-On状态下也报告改善，不构成新的独立队列。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_18",
+          "relation": "supports",
+          "note": "mini-review综合认为HFS条件下实际存在FOG的患者似乎更容易从LFS获益，但这不是正式的预测模型验证。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_9",
+          "relation": "qualifies",
+          "note": "综述转述的TEED比较也支持60 Hz获益，但患者数和研究身份不清楚，不能作为确定的独立验证。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_3",
+          "relation": "qualifies",
+          "note": "同一13例研究中130 Hz高电压可能恶化FOG，提示观察到的获益还可能受到刺激强度影响。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C13",
+      "text": "刺激电压与频率之间可能存在交互作用，不能简单把HFS与LFS的临床差异归因于频率本身。在13例随机交叉研究中，130 Hz高电压条件下SWS各项指标较常规130 Hz恶化，FOG spells数量甚至高于DBS-Off；相反，60 Hz高电压等能量条件获得最少FOG和最佳步态表现。这提示在部分已经存在FOG的患者中，130 Hz刺激强度过高可能加重轴性步态障碍。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "该发现来自同一13例患者队列，具体事件数、效应量和P值未提供。不能据此断言所有130 Hz高电压刺激均会恶化FOG，也不能将刺激电压的效应推广至不同触点和不同患者。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_3",
+          "relation": "supports",
+          "note": "报告130 Hz高电压条件下SWS参数恶化，实际FOG spells甚至高于DBS-Off。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "qualifies",
+          "note": "同一研究中60 Hz高电压等能量刺激表现最佳，提示频率和电压组合可能共同决定结果。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C14",
+      "text": "药物状态是否修饰低频STN刺激对FOG的疗效，目前存在尚未解决的证据冲突。Med-Off状态下的13例随机交叉研究报告60 Hz实际FOG改善；Med-On状态下，7例随机交叉研究、5例病例系列以及2例病例研究也报告改善。然而，系统综述认为Med-On条件下没有明确的长期FOG评分获益。较合理的解释是，药物状态可能影响不同患者的反应，但急性事件级试验与长期临床量表研究的差异也可能来自随访时间、患者筛选和终点测量不同。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "Med-On下的阳性结果主要来自小样本、短期刺激切换研究；Meta分析没有提供充分的状态分层效应量。2例病例在两种药物状态下的结果属于同一患者，不是独立重复。尚不能确定药物状态是否存在真正的统计学交互作用。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_27766724_4",
+          "relation": "supports",
+          "note": "系统综述认为Med-Off/Stim-On有长期FOG评分获益，而Med-On未发现明确获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "supports",
+          "note": "13例Med-Off随机交叉研究报告60 Hz实际FOG改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_5",
+          "relation": "supports",
+          "note": "2例患者Med-Off状态下由130 Hz切换60 Hz后改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_6",
+          "relation": "qualifies",
+          "note": "同一2例患者在Med-On状态下也报告改善，说明药物状态并非简单的绝对疗效分界。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_7",
+          "relation": "supports",
+          "note": "5例病例系列在Med-On状态下观察到60 Hz后FOG患者比例下降。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_8",
+          "relation": "supports",
+          "note": "7例Med-On药物难治性FOG患者的随机交叉研究报告实际FOG改善。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C15",
+      "text": "未选择HFS下实际存在FOG的患者、没有在测试期间诱发FOG、或者仅测量一般步态指标的研究，不能直接反驳选择性HFS-FOG患者中60 Hz减少实际冻结事件的结果。45例严重轴性症状患者的研究未发现LFS与HFS显著差异；17例FOG状态不明的患者及19例未预先定义FOG状态的患者也没有发现60 Hz在一般步态指标上稳定优于HFS。20例研究中虽然有7例报告FOG主诉，但测试期间难以重复诱发实际冻结，组水平主要步态终点没有显著差异；其中1例130 Hz下实际有FOG的患者在60 Hz下仍表现出步态改善。另有14例有既往OFF-FOG病史的患者，在Med-On测试时没有出现实际FOG，但60 Hz改善了部分一般步态和轴性评分。以上差异主要反映患者选择、事件是否实际发生以及终点定义不同，而不是对实际FOG事件疗效的直接、同质化反证。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "各研究样本和刺激设置异质性较高。部分研究为开放标签或回顾性研究；实际FOG发生情况、药物状态和刺激能量并不统一。不能从单个患者反应推断群体疗效，也不能把一般步态评分等同于FOG事件。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_4",
+          "relation": "qualifies",
+          "note": "12例开放标签研究中部分轴性评分改善，但2例步态恶化、3/12不能耐受LFS，未证明FOG事件减少。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_10",
+          "relation": "qualifies",
+          "note": "11例80 Hz研究仅发现SWS步数改善，130 Hz和80 Hz测试均未诱发FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_11",
+          "relation": "qualifies",
+          "note": "同一11例队列长期随访中客观SWS改善未能持续，测试仍未诱发实际FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_12",
+          "relation": "supports",
+          "note": "45例严重轴性症状患者切换LFS后，所有报告结局均未发现显著差异，但并非FOG特异性入组。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_13",
+          "relation": "qualifies",
+          "note": "14例既往OFF-FOG患者在Med-On测试时没有实际FOG，60 Hz改善的是步态及轴性指标。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_14",
+          "relation": "supports",
+          "note": "17例FOG状态不明患者在60 Hz与HFS之间没有显著步态差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_15",
+          "relation": "supports",
+          "note": "19例未预先定义FOG状态的患者中，60 Hz与HFS之间没有显著步态差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_16",
+          "relation": "supports",
+          "note": "20例研究中7例有FOG主诉，但主要步态终点没有发现60 Hz与130 Hz的显著组水平差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_17",
+          "relation": "qualifies",
+          "note": "同一20例队列中的1例130 Hz下有FOG患者在60 Hz下改善，提示可能存在个体反应异质性，但不是独立验证。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C16",
+      "text": "80 Hz低频刺激的临床证据不能直接与60 Hz减少实际FOG的证据合并。11例患者在130 Hz切换至80 Hz并维持等效TEED后，短期SWS步数改善，但测试期间没有诱发FOG；同一队列8例长期接受80 Hz后，1、5和15个月的客观SWS改善不再能够检测到。另一项45例研究同时采用80 Hz和60 Hz，也未发现总体轴性及步态评分显著改善。因此，80 Hz可能短期改善某些步态指标，但目前没有充分证据证明其减少实际FOG或具有稳定长期效果。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "80 Hz研究的主要终点不是实际FOG事件。长期随访只有8例继续使用80 Hz，且存在患者退出或恢复130 Hz的情况。45例研究混合80 Hz和60 Hz，不能单独估计80 Hz的疗效。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_10",
+          "relation": "supports",
+          "note": "80 Hz急性切换后SWS步数改善，但没有诱发实际FOG。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_11",
+          "relation": "supports",
+          "note": "同一队列长期随访中客观SWS改善未能维持，不能重复计算为独立队列。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_12",
+          "relation": "qualifies",
+          "note": "45例混合80 Hz与60 Hz的研究没有发现总体临床结局显著改善。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C17",
+      "text": "HFS条件下实际存在FOG可能是识别LFS获益人群的重要临床表型，但目前只是有支持的候选效应修饰因素，而不是已经验证的预测标志物。60 Hz改善实际FOG的阳性研究多采用已有HFS相关FOG的患者；未预先选择FOG患者的研究则较少发现LFS在一般步态指标上优于HFS。20例研究中唯一在130 Hz下观察到FOG的个体，在60 Hz下仍出现步态改善，也提供了个体层面的提示。未来研究应直接检验基线HFS-FOG状态与随机分配LFS后的实际FOG事件变化之间的交互作用。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "这一模式主要来自不同研究之间的非随机分组和叙述性综合，患者选择、药物状态、刺激参数、测试任务及FOG测量方式同时存在差异。尚无充分样本的前瞻性研究验证其预测价值。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_18",
+          "relation": "supports",
+          "note": "mini-review作者提出HFS下实际存在FOG似乎是LFS获益的重要临床特征。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "supports",
+          "note": "明确FOG患者的随机交叉研究报告60 Hz改善实际冻结事件。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_8",
+          "relation": "supports",
+          "note": "7例HFS下药物难治性FOG患者表现出60 Hz获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_7",
+          "relation": "supports",
+          "note": "5例术前OFF-FOG患者的病例系列报告60 Hz后FOG患者比例下降。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_17",
+          "relation": "supports",
+          "note": "同一20例队列中，1例130 Hz下FOG患者在60 Hz下步态改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_12",
+          "relation": "qualifies",
+          "note": "未明确选择HFS-FOG患者的45例队列未发现LFS总体显著获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_14",
+          "relation": "qualifies",
+          "note": "FOG状态不明的17例队列没有发现显著频率差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_15",
+          "relation": "qualifies",
+          "note": "未预先定义FOG状态的19例队列中60 Hz没有显著优于HFS。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_16",
+          "relation": "qualifies",
+          "note": "有FOG主诉的20例患者总体步态终点没有显著差异，但测试时实际FOG难以重复诱发。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C18",
+      "text": "频率效应与刺激能量、电压、脉宽及活动触点位置之间存在重要混杂，目前不能将60 Hz疗效完全归因于频率本身。13例研究在60 Hz等能量条件下仍观察到FOG改善，为频率本身可能具有作用提供了一定支持；但7例研究没有维持TEED，可能同时改变总刺激能量；14例研究虽然维持TEED，却分别优化了60 Hz和130 Hz触点，且60 Hz最优触点更偏腹侧。其他研究也存在电压增加、TEED改变或触点设置不同的情况。关于维持TEED与不维持TEED时60 Hz均可能获益的转述，为频率独立作用提供线索，但研究身份和样本信息尚不充分。",
+      "level": "synthesis",
+      "status": "contested",
+      "uncertainty": "刺激频率、总电能、局部电场强度、组织激活体积和活动触点之间可能存在交互作用。部分研究未报告完整参数，TEED相同也不意味着神经组织激活完全相同。当前证据不能确定频率独立效应与电流扩散效应的相对贡献。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "supports",
+          "note": "60 Hz等能量条件下仍观察到实际FOG改善，为频率本身可能具有独立作用提供证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_3",
+          "relation": "qualifies",
+          "note": "130 Hz高电压可能加重FOG，提示刺激强度与频率的交互作用。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_8",
+          "relation": "qualifies",
+          "note": "7例随机交叉研究未维持TEED，降低频率可能同时改变总刺激能量。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_9",
+          "relation": "supports",
+          "note": "综述报告维持与不维持TEED的60 Hz条件均有获益，但研究样本和身份尚不清楚。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_12",
+          "relation": "qualifies",
+          "note": "45例研究未维持TEED，且混合采用80 Hz与60 Hz。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_13",
+          "relation": "qualifies",
+          "note": "14例研究维持TEED，但分别优化频率对应的活动触点，触点位置并不相同。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_14",
+          "relation": "qualifies",
+          "note": "17例研究维持电压和脉宽而未维持TEED。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_15",
+          "relation": "qualifies",
+          "note": "19例研究保持电压稳定但频率变化导致TEED变化。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_16",
+          "relation": "qualifies",
+          "note": "20例研究保持其他参数但没有维持TEED，可能影响频率比较。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_21",
+          "relation": "supports",
+          "note": "综述提出刺激能量降低和电流扩散变化均可能解释LFS获益，但明确属于未经验证的机制解释。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C19",
+      "text": "竞争性机制假说一：低频刺激的获益可能来自总刺激能量下降，减少对邻近非目标结构的有害或过度刺激；竞争性假说二：在维持TEED时增加电压，可能扩大刺激场，反而招募具有促运动作用的邻近结构。这两种作用方向相反，却可能分别解释不同60 Hz研究中的获益。可检验的区分方法是进行个体化电场建模，分别控制频率、电压和TEED，并比较相同患者在不同电场分布条件下的实际FOG事件变化。如果疗效主要随总能量下降变化，支持第一种解释；如果疗效主要随特定邻近结构的组织激活体积变化，支持第二种解释。两者目前均未被直接验证。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "现有研究没有直接测量刺激场分布、组织激活体积或邻近结构神经活动。维持TEED与不维持TEED的临床结果不能单独确定电流扩散的方向及其行为效应。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_21",
+          "relation": "supports",
+          "note": "mini-review明确提出降低总能量减少有害非特异性刺激，以及增加电压扩大电流扩散并招募有利邻近结构这两个相反解释。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_2",
+          "relation": "qualifies",
+          "note": "60 Hz等能量刺激改善FOG，说明单纯总能量下降未必能够解释所有获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_3",
+          "relation": "qualifies",
+          "note": "130 Hz高电压条件下FOG恶化，提示刺激强度和可能的电流扩散也可能产生不利作用。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_9",
+          "relation": "qualifies",
+          "note": "维持与不维持TEED的条件均被报告有获益，但具体样本和研究身份不确定。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C20",
+      "text": "竞争性机制假说：STN DBS可能通过电流扩散影响邻近脚桥核区域，特别是PPN的前侧区域（PPNa）及其下降运动通路，进而改变运动启动和步态控制。STN与PPNa相距约5–8 mm，存在解剖及生理连接；综述提出HFS可能不利于相关脑干运动网络，而低频刺激可能产生促进运动启动的作用。可检验预测是，FOG改善应与个体刺激场是否覆盖PPNa、活动触点位置及STN-PPN网络连接有关，而不只是与60 Hz这一频率标签相关。需要通过个体电场建模、触点定位及脑干网络生理测量验证。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "该假说来自二手机制文献综合，没有在所述FOG患者中直接测量PPN神经活动或刺激场。PPN相关诱发电位和影像变化不能自动等同于自然FOG事件中的STN神经变化，也不能证明电流扩散至PPNa是60 Hz获益的原因。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_19",
+          "relation": "supports",
+          "note": "综述提出STN刺激可能通过电流扩散影响PPNa及脑干下降运动通路，并讨论相关解剖和生理联系。"
+        },
+        {
+          "eid": "S3c_E_PMID_28529730_21",
+          "relation": "supports",
+          "note": "提出刺激电流扩散至邻近有利结构可能解释维持TEED时的LFS获益。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "qualifies",
+          "note": "直接STN记录只显示beta功率与任务及FOG状态相关，并未记录PPN活动或电流扩散。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C21",
+      "text": "竞争性机制假说：60 Hz低频刺激可能通过改变异常基底节振荡及神经元同步化，促进促运动gamma活动，从而改善步态和FOG。可检验预测是在频率、TEED和触点位置得到控制的随机交叉试验中，实际FOG改善应与STN beta/gamma功率、beta burst、跨区同步或相位耦合的变化同步，并且这些变化应在行为改善前出现。当前综述提出了异常振荡调节和gamma促进机制，但没有直接证明60 Hz通过降低beta或增强gamma改善FOG。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "没有直接FOG事件锁定的STN beta/gamma调节实验，也没有相应的burst、相位或跨区coherence效应量。现有神经研究虽然观察到beta功率及熵变化，但没有操纵这些指标或测量60 Hz刺激对它们的影响。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28529730_20",
+          "relation": "supports",
+          "note": "mini-review提出60 Hz可能覆盖异常神经振荡并促进促运动gamma活动，但属于机制文献综合。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_4",
+          "relation": "qualifies",
+          "note": "报告Freezer在特定任务下beta相对功率降低，但没有研究LFS对beta功率的影响。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "qualifies",
+          "note": "报告Freezer的beta SampEn升高，但没有测量60 Hz诱导的熵变化。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "qualifies",
+          "note": "实际FOG期间beta功率降低，但跨任务比较无法证明其为FOG因果机制。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "qualifies",
+          "note": "实际FOG期间alpha SampEn升高，不能直接推断gamma增强或beta同步化被抑制。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C22",
+      "text": "竞争性机制假说A：较高STN神经熵可能代表异常神经信息处理、网络不稳定或运动抑制，进而增加冻结易感性。该假说可以解释Freezer在无冻结SIP期间beta SampEn较高，以及实际FOG期间alpha SampEn较高的观察。可检验预测是，在同一任务和相同运动学条件下，熵异常应在FOG发生前出现，并在冻结转换过程中具有可重复的时间锁定变化。若熵变化只在冻结发生后出现，则更可能是冻结的结果而非触发机制。当前证据没有证明时间先后关系，因此该解释仍是假说。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "beta SampEn组间差异来自无冻结SIP阶段，alpha SampEn差异来自跨任务FOG比较。两种熵指标对应不同频段和行为条件，不能简单合并为统一的病理熵机制。没有事件前连续时间序列分析或因果干预。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "Freezer无冻结SIP阶段具有较高beta SampEn，作者提出异常信息处理及运动抑制的可能解释。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "supports",
+          "note": "实际FOG期间alpha SampEn升高，为神经时间序列复杂度异常提供另一项关联观察。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_6",
+          "relation": "qualifies",
+          "note": "beta功率下降和跨任务比较的混杂说明熵异常不能直接认定为冻结的特异性触发因素。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C23",
+      "text": "竞争性机制假说B：较高STN神经熵可能不是致病性异常，而是对运动控制受损的补偿性复杂度增加，代表神经系统尝试通过更多样化的信息处理维持步态。可检验预测是，在同一患者中，较高熵应更多出现在仍能成功完成运动、尚未发生冻结的试次，并与更好的运动维持能力或后续恢复相关；如果人为抑制这种复杂度反而加重步态障碍，则支持补偿解释。该机制与异常信息处理假说方向相反，目前没有直接证据确定哪一种成立。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "现有研究没有测量熵变化与步态成功率、恢复能力或刺激干预结果之间的因果关系。Freezer无冻结SIP阶段beta SampEn较高，既可能代表潜在异常，也可能代表补偿，单纯组间比较不能区分。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_5",
+          "relation": "supports",
+          "note": "作者明确提出较高beta SampEn也可能代表提高信息传递能力的补偿性反应。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "qualifies",
+          "note": "alpha SampEn在FOG期间升高，但跨任务及注意负荷混杂使其补偿意义尚不清楚。"
+        }
+      ]
+    },
+    {
+      "cid": "P2_C24",
+      "text": "竞争性机制假说C：STN alpha SampEn升高可能主要反映转弯、障碍穿越和空间导航所需的注意及执行功能负荷，而不是FOG特异性活动。可检验预测是在同一TBC任务中分别比较发生FOG和未发生FOG的转弯、figure-eight及障碍穿越片段，并匹配速度、运动学和认知负荷。如果无FOG的高认知负荷片段也出现类似alpha SampEn升高，或者控制任务负荷后FOG与非FOG差异消失，则支持任务认知负荷解释；如果差异在严格匹配后仍然存在，则更支持FOG相关机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "当前研究的alpha SampEn比较为TBC/FOG与FW/无FOG跨任务比较，没有在相同任务内控制注意和执行功能负荷。现有证据无法判断alpha熵增加是冻结的神经表现还是复杂任务要求的伴随反应。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "supports",
+          "note": "作者明确提出alpha SampEn可能受到注意、执行功能和空间认知需求影响。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_1",
+          "relation": "supports",
+          "note": "TBC比FW更容易诱发冻结，提示任务要求本身可能影响神经活动和行为终点。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_3",
+          "relation": "supports",
+          "note": "冻结集中于转弯和狭窄开口等空间及执行要求较高的场景。"
+        },
+        {
+          "eid": "S3c_E_PMID_28890315_7",
+          "relation": "qualifies",
+          "note": "现有数据没有同一任务内匹配的FOG与非FOG对照，因此尚不能排除认知任务负荷解释。"
+        }
+      ]
+    }
+  ]
+}</escape>

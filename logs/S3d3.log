@@ -1,0 +1,51 @@
+写报告输入改为附件： 写报告输入超长 434715 字（结论 21 条、证据 538 条），不静默截断
+写报告：结论文字/假说/缺口内联 42236 字，证据映射和证据表作附件
+[S3d3_Q1_report_adf7bf9f] gpt3 gpt-6-thinking 完成 613s 33067 字
+附录：文献 150，证据 538，结论 21，假说 13
+S3d3 报告 33067 字
+S3d3 引用 150 条 {'ok': 150}
+S3d3 正文引用 52 个 {'in_kb': 52} ；疑似挂错编号 3 处
+  疑似挂错：PMID:40504072（相似 0.205）更像 PMID:42860886（0.667）| …研究报告的FOG次数分别为6.32±7.91和5.08±8.26，P=0.410
+  疑似挂错：PMID:35441231（相似 0.346）更像 PMID:36185822（0.577）| …Yin等人的16例研究发现，M1高beta-gamma PAC与FOG严重程度有关，并受到STN-DBS调节
+  疑似挂错：PMID:40117663（相似 0.122）更像 PMID:40408848（0.449）| …- 另一项98人概率性空间映射研究报告42人步态改善、7人术后步态恶化，恶化组活动触点具有更腹侧的位置特征
+[S3d3_Q1_open_g56_e8d4cabb] gpt4 gpt-5-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 1778s
+[S3d3_Q1_open_g6_e8d4cabb] gpt3 gpt-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 1778s
+[S3d3_Q1_abs_g6_4eb18bfc] gpt3 gpt-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 1777s
+[S3d3_Q1_abs_g6_4eb18bfc] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 515s
+abs_g6 解析失败 无回答
+[S3d3_Q1_open_g6_e8d4cabb] gpt4 gpt-6-thinking 完成 951s 8305 字
+[S3d3_Q1_open_g56_e8d4cabb] gpt3 gpt-5-6-thinking 完成 1054s 8891 字
+S3d3 open_g6: major 5，moderate 5
+    1 major 缺少可复现的文献检索与筛选方法，无法证明研究覆盖的完整性。
+    2 major 证据数据库存在计数不一致、证据关联错误和研究版本身份不清的问题，尚不能作为可靠的长期知识库。
+    3 major 证据强度分层没有充分区分因果识别能力、测量直接性和研究质量。
+S3d3 open_g56: major 6，moderate 3
+    1 major 缺少可复现的文献检索方法，无法证明研究覆盖的完整性。这是整个报告最根本的方法学缺陷之一。
+    2 major 附录已经收录的重要原始研究，没有被充分吸收到正文的核心证据综合中。存在知识库与最终研究论证脱节的问题。
+    3 major 临床DBS证据综合没有充分纳入截至2026年的重要Meta分析，导致临床证据总体判断不够完整。
+[blind_S2_vs_S3d3_aX_g6_123959f4] gpt3 gpt-6-thinking 完成 350s 2410 字
+[blind_S2_vs_S3d3_aX_g56_123959f4] gpt4 gpt-5-6-thinking 完成 385s 2440 字
+[blind_S2_vs_S3d3_bX_g6_9d388bf6] gpt3 gpt-6-thinking 完成 413s 2543 字
+[blind_S2_vs_S3d3_bX_g56_9d388bf6] gpt4 gpt-5-6-thinking 完成 421s 2703 字
+g6 aX 总体: S3d3 分项: {'coverage': 'S3d3', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S3d3', 'rigor': 'S3d3'}
+g56 aX 总体: S3d3 分项: {'coverage': 'S3d3', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S3d3', 'rigor': 'S3d3'}
+g6 bX 总体: S3d3 分项: {'coverage': 'S3d3', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S2', 'rigor': 'S3d3'}
+g56 bX 总体: S3d3 分项: {'coverage': 'S3d3', 'evidence': 'S3d3', 'synthesis': 'S3d3', 'structure': 'S3d3', 'rigor': 'S3d3'}
+[fcx_S3d3_ce7e1500] gpt4 gpt-6-thinking 完成 9s 35 字
+[fcx_S3d3_40c0ee15] gpt4 gpt-6-thinking 完成 13s 35 字
+[fcx_S3d3_89511e9c] gpt4 gpt-6-thinking 完成 8s 35 字
+[fcx_S3d3_07e16fac] gpt3 gpt-6-thinking 完成 30s 475 字
+[fcx_S3d3_3e3ad7f8] gpt4 gpt-6-thinking 完成 10s 35 字
+[fcx_S3d3_6ceb9e92] gpt4 gpt-6-thinking 完成 80s 1857 字
+指控来源 6 份，抽出指控 6 条
+[fcj_S3d3_8a0b514b] gpt4 gpt-6-thinking 完成 69s 2991 字
+[fcj_S3d3_27ff7f57] gpt3 gpt-6-thinking 完成 55s 1802 字
+[fcj_S3d3_7256e615] gpt3 gpt-6-thinking 完成 89s 1329 字
+[fcj_S3d3_ac471fae] gpt3 gpt-6-thinking 完成 146s 2870 字
+S3d3 指控裁定 {'no_fulltext': 2, 'accusation_partly': 2, 'accusation_rejected': 1, 'accusation_holds': 1}
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40408848 | 指控：PMID:40117663实际是Zak等人的另一项研究，纳入40名帕金森病患者，分析72个植入物，研究前部STN激活与步态改善的关系，并非98人研究。报告描述的
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:36070366 | 指控：原研究总体纳入18名患者，但实际FOG事件分析仅涉及其中4人。4人是FOG分析子组，而不是整个研究的总体样本量，报告没有明确标注这一层级区别。
+  [accusation_rejected] 报告有依据:yes 指控有依据:partly PMID:40992964 | 指控：该文献的参考文献已经指向2026年正式发表的期刊论文，部分证据记录却仍使用medRxiv预印本作为来源标识，未正确统一文献版本身份。
+  [accusation_holds] 报告有依据:no 指控有依据:partly PMID:39475137 | 指控：原研究已经开展了10名患者参与的随机、双盲、交叉研究，直接比较central与posterior定向STN刺激，并报告central刺激减少实际FOG发作（P<
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:40117663 | 指控：PMID:40117663实际对应40名患者、72个植入物的前部STN刺激研究，并非98人研究。真正报告98名患者、42人步态改善、7人步态恶化及恶化组活动触点
+  [accusation_partly] 报告有依据:partly 指控有依据:yes PMID:41131028 | 指控：原研究还报告了正常转弯前（TurnPre）的PMC-STN alpha coherence变化与较短冻结持续时间显著相关，回归系数β=0.205，P=0.006

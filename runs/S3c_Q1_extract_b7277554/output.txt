@@ -1,0 +1,1019 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40992964; DOI:10.1016/j.parkreldis.2025.108062; PubMed: https://pubmed.ncbi.nlm.nih.gov/40992964/",
+    "title": "Subthalamic deep brain stimulation alleviates the gait sequence effect and freezing of gait in Parkinson's disease",
+    "publication_status": "published",
+    "version_of_candidate": "所提供附件为同一研究的medRxiv预印本版本：PMID:40385412; DOI:10.1101/2025.05.08.25327015; 标题为Subthalamic Nucleus Deep Brain Stimulation Alleviates the Sequence Effect and Freezing of Gait in Parkinson's Disease。PubMed将该预印本明确标记为正式论文的UpdateOf版本。",
+    "study_id_candidate": "study_candidate_Cui_Je_Wilkins_STNDBS_SIP_gait_sequence_FOG",
+    "cohort_id_candidate": "cohort_candidate_Stanford_STNDBS_PD18_HC14",
+    "cohort_relation_basis": "正式论文与附件预印本作者、研究目的、18名PD患者、14名健康对照、SIP任务和DBS实验设计一致，属于同一研究的不同发表版本，不应计为两项独立研究。另存在与Kehnemouyi等2023年研究（PMID:37125563; DOI:10.3233/JPD-223368）的潜在队列重叠：两项研究均来自Stanford Bronte-Stewart团队，均涉及双侧STN-DBS、Medtronic 3389电极及Activa PC+S/Summit RC+S设备；本研究引用该文作为既往上肢sequence effect研究。2023年研究纳入21名PD患者，本研究纳入18名PD患者，存在可能的患者子集重叠。但没有患者编号、招募时间或作者明确声明证明两批患者相同，因此标记为possible_overlap，不能认定为同一队列或独立队列。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "E01_PD_vs_HC_peak_swing_AV",
+      "design": "单中心临床行为研究；PD与年龄匹配健康对照的横断面比较；PD组采用OFF medication、OFF DBS条件。非随机研究。",
+      "population": "18名双侧STN-DBS的PD患者与14名年龄匹配健康对照。PD患者年龄61.2±8.4岁，MDS-UPDRS III在off-medication/OFF-DBS状态下为36.1±10.9。PD组14名临床Freezer、4名Non-freezer；12名患者在SIP任务中实际出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 32,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文报告纳入分析的18名PD和14名HC，但没有单独报告筛查人数及enrolled分母。PD每人有一次OFF DBS试验，但HC试验总数未明确说明。报告12名患者发生任务相关FOG、18/36个PD试验存在FOG episodes，但没有报告独立冻结事件总数。全文没有报告STN神经信号及有效神经数据患者数；没有报告用于神经记录的电极/触点数量。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；原文仅使用clinical Freezer和Non-freezer分类，没有报告akinetic、trembling-in-place、kinetic-no-trembling等亚型。任务中FOG由GRF算法识别。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "PD患者均处于off dopaminergic medication状态。附件预印本报告：长效dopamine agonists停药48小时；dopamine agonists及controlled-release carbidopa/levodopa停药24小时；short-acting medication停药12小时。",
+      "DBS_state_and_parameters": "PD组比较条件为OFF DBS，刺激至少关闭15分钟后进行测试。患者均植入双侧Medtronic 3389 omnidirectional leads，靶向STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。患者为临床优化后的慢性DBS使用者。ON DBS参数不属于本项组间比较。个体幅度和触点配置未在所提供附件中报告。",
+      "task": "Harnessed stepping-in-place（SIP）：30秒quiet stance后进行100秒交替原地踏步，自选速度；每只脚置于独立测力台，双侧小腿安装IMU，实验环境采用封闭视觉环境以减少外部视觉线索。不是自然直线行走或转弯任务。",
+      "recording_location": "未报告STN LFP、单/多单位活动或皮层-STN信号记录。STN是DBS刺激靶点。实际运动学记录来自双侧shank IMU；FOG识别来自双测力台的vertical ground reaction force（GRF）。",
+      "measure": "Peak swing angular velocity及其sequence effect衰减参数λ。每一步提取小腿摆动阶段的峰值角速度，使用指数衰减函数y=Ae^(-λt)拟合。较大的正λ表示随时间更明显的峰值摆动角速度下降。该指标不是STN神经活动指标。",
+      "frequency_and_analysis_window": "IMU采样128 Hz，陀螺仪信号采用9 Hz低通滤波；GRF采样100或1000 Hz，采用12 Hz低通滤波并按体重归一化。任务持续100秒。发生FOG的试验使用第一次冻结开始前的movement epoch拟合λ；无FOG且存在多个epoch时使用第一个epoch，否则分析整个试验。未进行神经频谱分析，无神经频段或神经基线归一化。",
+      "finding": "与年龄匹配健康对照相比，PD患者在OFF medication、OFF DBS条件下表现出显著更大的peak swing angular velocity sequence effect，即摆动峰值角速度随连续动作逐渐下降得更快。",
+      "effect_estimate": "LMM组间效应β=0.010，95% CI [0.006, 0.014]，p<0.001。β为sequence effect λ的组间差异。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应为group，随机效应为participant nested with body side。图中每个数据点代表一条腿，而非独立患者。患者级样本为18 PD和14 HC。统计模型考虑了同一患者双侧身体数据的嵌套结构。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性运动学关联研究的领域级初评，非正式验证工具。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心、已植入双侧STN-DBS且能够在OFF medication/OFF DBS状态下行走的患者；14/18为临床Freezer，样本存在选择性。",
+            "source_locator": "Methods—Participants，p.2；Results—Table 1，p.6。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG由vertical GRF和既往验证算法识别，但本研究未报告视频或临床评审确认；SIP不等同于自然行走。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion—Limitations，pp.10–11。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "报告IMU及GRF采样率和滤波方法，但未充分报告信号丢失、伪迹排除及测量可靠性。",
+            "source_locator": "Methods—Data Acquisition/Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "年龄匹配且PD患者均停用多巴胺药物，但疾病严重程度、非运动因素和个体步态差异未在组间比较中充分调整。",
+            "source_locator": "Methods—Statistics，p.5；Results，p.6。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "low",
+            "reason": "LMM将participant与body side纳入嵌套随机效应，降低双侧腿重复测量造成的伪重复风险。",
+            "source_locator": "Methods—Statistics，p.5；Figure 3，p.8。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时分析三个步态参数，报告显著性阈值α<0.05，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "本项为组间运动学比较，没有建立预测模型，因此不存在可评价的模型外部验证。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "附件全文没有报告预注册方案或预先指定的统计分析计划。",
+            "source_locator": "Methods—Statistics，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是运动学sequence effect与PD状态的关联，不是STN神经活动证据。PD组和HC组的任务情境并非自然行走。由于FOG试验采用冻结前epoch，而无FOG试验采用全程或首个epoch，统计数据包含不同event phase。未报告FOG具体亚型。不能由此推断β振荡、burst或其他STN神经指标异常。",
+      "quote": "the PD group, OFF DBS, had significantly greater sequence effect in peak angular velocity",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS；Methods—Statistics。",
+        "page": "p.7；Figure 3位于p.8。",
+        "figure_table": "Figure 3A。",
+        "supplement": "Supplementary Figure 1被正文引用，但未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E02_PD_vs_HC_swing_angular_range",
+      "design": "单中心临床行为研究；PD与年龄匹配健康对照的横断面比较；PD组OFF medication、OFF DBS。",
+      "population": "18名双侧STN-DBS的PD患者和14名年龄匹配HC。PD组14名临床Freezer、4名Non-freezer；12名患者在SIP任务中实际出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 32,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "未报告独立enrolled分母和HC试验总数；离散FOG事件总数未报告；未报告STN神经记录患者数或记录触点数量。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；临床分类为Freezer/Non-freezer，无冻结运动学亚型分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "PD患者off dopaminergic medication；附件报告长效dopamine agonists停药48小时，dopamine agonists及controlled-release carbidopa/levodopa停药24小时，short-acting medication停药12小时。",
+      "DBS_state_and_parameters": "PD患者OFF DBS，刺激关闭至少15分钟；双侧Medtronic 3389 omnidirectional leads植入STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。HC无DBS。",
+      "task": "Harnessed SIP，30秒静止站立后交替原地踏步100秒；自选速度，双侧shank IMU及双测力台记录。",
+      "recording_location": "没有报告STN神经记录。运动学信号来自双侧小腿IMU；FOG识别来自vertical GRF。",
+      "measure": "Swing angular range及其sequence effect λ。Swing angular range通过对识别出的摆动时间内角速度曲线积分计算；λ由指数衰减函数拟合，正向较大λ表示摆动角度随连续动作下降更快。",
+      "frequency_and_analysis_window": "IMU 128 Hz采样、9 Hz低通滤波；GRF 100或1000 Hz采样、12 Hz低通滤波。100秒SIP任务。FOG阳性试验采用首次FOG前epoch；其他试验按首个epoch或全程处理。没有STN神经频谱分析。",
+      "finding": "PD患者OFF DBS时，swing angular range的sequence effect显著大于健康对照，提示连续原地踏步过程中摆动空间幅度下降更明显。",
+      "effect_estimate": "LMM组间效应β=0.008，95% CI [0.003, 0.013]，p=0.001。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应group，随机效应participant nested with body side。双侧腿为测量单位，患者为聚类单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性运动学关联研究领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "样本为单中心已植入STN-DBS且能够在OFF治疗状态下行走的PD患者，样本量有限。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG由GRF算法识别，但未报告本研究的视频/临床确认；SIP属于替代性任务。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion，pp.10–11。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "提供滤波和采样信息，但未报告IMU信号质量控制及伪迹排除细节。",
+            "source_locator": "Methods—Data Acquisition/Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "疾病严重程度和非运动因素未充分调整；年龄匹配不能消除所有潜在混杂。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "low",
+            "reason": "模型采用participant nested with body side的随机效应。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时检验三个步态指标，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或外部验证。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods—Statistics，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是步态空间运动学指标，不是STN局部神经活动。研究采用SIP而非自然行走。不同患者的冻结前epoch与无冻结epoch处理不同，event phase并不完全一致。没有报告步态空间参数与STN神经频段、burst或跨区耦合的关系。",
+      "quote": "significantly greater sequence effect in peak angular velocity and swing angular range",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS。",
+        "page": "p.7。",
+        "figure_table": "Figure 3B，p.8。",
+        "supplement": "Supplementary Figure 1被引用，但未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E03_PD_vs_HC_swing_time",
+      "design": "单中心临床行为研究；PD与年龄匹配健康对照的横断面比较；PD组OFF medication、OFF DBS。",
+      "population": "18名双侧STN-DBS的PD患者和14名HC。PD患者中14名临床Freezer、4名Non-freezer；全任务中12名PD患者发生FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 32,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "未报告enrolled与筛查分母；HC试验总数未明确；离散FOG事件总数和神经数据患者数未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；只有临床Freezer/Non-freezer标签，没有FOG运动学亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "PD组off dopaminergic medication，附件报告药物洗脱时间为48小时、24小时和12小时，具体按药物类型区分。",
+      "DBS_state_and_parameters": "PD组OFF DBS，关闭至少15分钟；双侧STN sensorimotor region植入Medtronic 3389 omnidirectional leads。HC无DBS。",
+      "task": "Harnessed SIP，30秒quiet stance后100秒交替原地踏步；自选速度。",
+      "recording_location": "未报告STN神经记录；IMU测量双侧小腿角速度。",
+      "measure": "Swing time及其指数衰减参数λ。Swing time为识别峰值前后两个zero-crossings之间的时间间隔。",
+      "frequency_and_analysis_window": "IMU 128 Hz采样、9 Hz低通滤波；100秒SIP。每侧腿分别计算λ。FOG阳性试验使用首次FOG前epoch；无FOG试验使用全程或首个epoch。无神经频谱分析。",
+      "finding": "PD组与健康对照组之间的swing time sequence effect没有显著差异。作者指出PD患者之间存在较大个体差异，部分患者swing time随时间下降，部分患者增加。",
+      "effect_estimate": "LMM组间效应β=0.001，95% CI [-0.002, 0.004]，p=0.727。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应group，随机效应participant nested with body side。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性运动学研究领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心、样本小，且要求PD患者能够在OFF治疗状态下完成任务。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG由GRF算法识别，但本研究未报告视频或临床确认。",
+            "source_locator": "Methods—Data Analysis，p.3。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "报告滤波方法，但未报告信号伪迹排除及可靠性分析。",
+            "source_locator": "Methods—Data Analysis，pp.4–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "PD组内个体差异明显，疾病严重程度等潜在因素没有充分调整。",
+            "source_locator": "Results，p.7；Discussion，p.10。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "low",
+            "reason": "LMM将患者和body side纳入嵌套随机效应。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "三个步态指标均被检验，没有报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定的分析计划。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不显著不等于swing time完全不参与FOG。作者指出，swing time可能在不同患者中呈相反变化；即使λ接近零，也可能伴随角速度和角度幅度同步下降。因此单独使用swing time不能可靠表示sequence effect。此处没有STN神经活动证据。",
+      "quote": "There was no significant difference for the sequence effect in swing time between the two cohorts",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS；Discussion—SIP task elicits the sequence effect in PD。",
+        "page": "p.7；讨论见p.10。",
+        "figure_table": "Figure 3C，p.8。",
+        "supplement": "Supplementary Figure 2被讨论引用，但未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E04_DBS_effect_peak_swing_AV",
+      "design": "单中心、非随机、受试者内重复测量的DBS干预比较；同一PD患者OFF DBS与ON DBS比较。",
+      "population": "18名慢性双侧STN-DBS的PD患者，均在off medication状态接受测试；14名临床Freezer、4名Non-freezer；12名患者在整个SIP实验中出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 36,
+      "n_electrodes_contacts": null,
+      "missing_reason": "18名PD患者各完成一次OFF和一次ON DBS试验，共36个试验。没有单独报告筛查或enrolled人数。12名患者出现任务相关FOG，但没有按刺激条件分别报告患者数；没有报告离散FOG事件总数。没有报告STN神经信号有效数据患者数或记录触点数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；仅有临床Freezer/Non-freezer分类，无akinetic、trembling-in-place等亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；附件预印本报告长效dopamine agonists停药48小时，dopamine agonists及controlled-release carbidopa/levodopa停药24小时，short-acting medication停药12小时。",
+      "DBS_state_and_parameters": "受试者内OFF/ON比较。OFF DBS：刺激至少关闭15分钟后测试。ON DBS：临床或临床等效刺激强度，频率140或150 Hz，pulse width 60 μs。双侧Medtronic 3389 omnidirectional leads位于STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。个体刺激幅度及触点在所提供附件主文中未报告；正式论文另引用Supplementary Table S1提供个体配置。",
+      "task": "Harnessed SIP，30秒quiet stance后100秒交替原地踏步，自选速度，双侧小腿IMU与双测力台同步采集。",
+      "recording_location": "未报告STN LFP、单/多单位或皮层-STN coherence记录。STN为刺激靶点；行为信号来自双侧shank IMU及vertical GRF。",
+      "measure": "Peak swing angular velocity sequence effect λ。λ来自每侧腿角速度峰值随时间变化的指数衰减拟合，较大的λ表示更快的运动速度衰减。",
+      "frequency_and_analysis_window": "IMU 128 Hz采样，9 Hz低通滤波；GRF 100或1000 Hz采样，12 Hz低通滤波。每个100秒任务单独分析。FOG阳性试验使用第一次冻结前的movement epoch；无FOG多epoch试验使用首个epoch；其他试验使用全程。无神经频段分析。",
+      "finding": "与OFF DBS相比，ON DBS显著降低peak swing angular velocity的sequence effect λ，提示STN-DBS减轻了连续踏步过程中摆动速度逐步衰减的现象。",
+      "effect_estimate": "LMM刺激条件效应β=-0.007，95% CI [-0.010, -0.003]，p<0.001。负β表示ON DBS条件下λ降低。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应stimulation condition，随机效应participant nested with body side。患者级n=18，双侧腿作为嵌套测量单位；共36个PD试验。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域；非随机受试者内DBS干预的初步评估，非正式完整ROBINS-I。",
+        "domains": [
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "同一患者自身比较可控制稳定的患者间差异，但没有报告随机化或刺激条件顺序平衡，潜在顺序、疲劳及残余刺激效应不能完全排除。",
+            "source_locator": "Methods—Experiment Protocol，p.3；Statistics，p.5。"
+          },
+          {
+            "domain": "participant_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心慢性STN-DBS患者，要求能够在OFF medication/OFF DBS状态行走，可能排除更严重的患者。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "intervention_classification",
+            "judgement": "low",
+            "reason": "OFF和ON DBS定义明确，报告了140/150 Hz和60 μs；个体幅度及触点配置未在附件主文报告。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "deviations_from_intended_intervention",
+            "judgement": "unclear",
+            "reason": "未报告测试者盲法、受试者盲法及实际刺激依从性；ON状态使用临床或临床等效强度。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "missing_data",
+            "judgement": "unclear",
+            "reason": "报告18名患者完成比较，但没有提供详细缺失数据或排除流程。",
+            "source_locator": "Methods—Participants，p.2；Results，pp.6–7。"
+          },
+          {
+            "domain": "outcome_measurement",
+            "judgement": "some_concerns",
+            "reason": "运动学通过IMU客观测量，但FOG算法结果没有报告本研究中的视频/临床确认；SIP不等同于自然步行。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion—Limitations，pp.10–11。"
+          },
+          {
+            "domain": "repeated_measurements",
+            "judgement": "low",
+            "reason": "LMM明确将participant与body side纳入嵌套随机效应。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "三个步态指标分别检验DBS效应，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案或预先指定的分析计划。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该研究支持STN-DBS对行为学sequence effect的干预效果，但不能说明这种改善对应哪种STN神经活动变化。没有报告刺激顺序随机化。不同患者的epoch处理不完全一致。不能将此结果等同于β功率降低、beta burst缩短或神经网络耦合改变。",
+      "quote": "DBS significantly reduced (improved) the sequence effect in peak angular velocity",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS。",
+        "page": "p.7。",
+        "figure_table": "Figure 3A，p.8。",
+        "supplement": "Supplementary Figure 1引用了多epoch处理示例，但未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E05_DBS_effect_swing_angular_range",
+      "design": "单中心、非随机、受试者内重复测量DBS干预比较；OFF DBS与ON DBS。",
+      "population": "18名双侧STN-DBS的PD患者，off medication状态；14名临床Freezer、4名Non-freezer；全任务中12名患者出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 36,
+      "n_electrodes_contacts": null,
+      "missing_reason": "18名患者完成36个OFF/ON DBS试验；刺激条件特异的FOG患者人数和离散事件总数未分别报告。未报告STN神经数据患者数及记录触点数量。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；临床Freezer/Non-freezer分类，没有冻结运动学亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；预印本报告不同药物洗脱时间为48小时、24小时及12小时。",
+      "DBS_state_and_parameters": "OFF DBS刺激关闭至少15分钟；ON DBS采用临床或临床等效刺激强度，140或150 Hz，60 μs pulse width。双侧Medtronic 3389 omnidirectional leads位于STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。个体幅度及触点未在附件主文报告。",
+      "task": "Harnessed SIP，30秒静止站立后100秒交替原地踏步，自选速度，双侧shank IMU和测力台记录。",
+      "recording_location": "没有报告STN神经活动记录。运动学来自双侧shank IMU，FOG来自vertical GRF。",
+      "measure": "Swing angular range及其指数衰减参数λ。Swing angular range为摆动阶段角速度曲线下的积分面积，表示摆动空间幅度。",
+      "frequency_and_analysis_window": "IMU 128 Hz，9 Hz低通滤波；GRF 100或1000 Hz，12 Hz低通滤波。100秒任务。FOG阳性试验分析第一次冻结前epoch；其他试验分析全程或首个epoch。无神经频段、burst或功率分析。",
+      "finding": "ON DBS显著减轻swing angular range的sequence effect，即连续踏步过程中摆动空间幅度逐渐衰减的程度降低。",
+      "effect_estimate": "LMM刺激条件效应β=-0.005，95% CI [-0.008, -0.002]，p=0.002。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应stimulation condition，随机效应participant nested with body side。患者级n=18，双侧腿为嵌套测量单位。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域；非随机受试者内DBS干预初评。",
+        "domains": [
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告OFF/ON顺序随机化或平衡，可能存在顺序和疲劳效应。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "participant_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心且要求患者能够在OFF medication/OFF DBS状态行走。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "intervention_classification",
+            "judgement": "low",
+            "reason": "ON/OFF状态、频率及脉宽有明确报告，个体触点和幅度未在附件主文提供。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "deviations_from_intended_intervention",
+            "judgement": "unclear",
+            "reason": "未报告盲法和刺激依从性。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "missing_data",
+            "judgement": "unclear",
+            "reason": "未提供详细缺失数据流程。",
+            "source_locator": "Results，pp.6–7。"
+          },
+          {
+            "domain": "outcome_measurement",
+            "judgement": "some_concerns",
+            "reason": "IMU客观测量，但任务为替代性SIP，未报告视频确认FOG。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion，pp.10–11。"
+          },
+          {
+            "domain": "repeated_measurements",
+            "judgement": "low",
+            "reason": "模型包含participant nested with body side随机效应。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多个步态指标分别检验，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定分析计划。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是行为学空间幅度变化，不能解释为STN放电或振荡幅度变化。任务为SIP而非自然步行；刺激条件顺序未明确报告。不同患者使用的具体幅度和触点没有出现在所提供附件主文中。",
+      "quote": "DBS significantly reduced (improved) the sequence effect in swing angular range",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS。",
+        "page": "p.7。",
+        "figure_table": "Figure 3B，p.8。",
+        "supplement": "正式论文引用Supplementary Table S1提供个体DBS配置，但该补充材料不在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E06_DBS_effect_swing_time",
+      "design": "单中心、非随机、受试者内重复测量DBS干预比较；OFF DBS与ON DBS。",
+      "population": "18名双侧STN-DBS的PD患者，off medication状态；14名临床Freezer、4名Non-freezer；全任务中12名患者出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 36,
+      "n_electrodes_contacts": null,
+      "missing_reason": "18名患者完成36个OFF/ON DBS试验。没有单独报告刺激条件特异的FOG患者数及离散FOG事件数；没有报告STN神经记录数据分母。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；临床Freezer/Non-freezer分类，无运动学冻结亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；附件预印本报告长效药物48小时、其他指定药物24小时、短效药物12小时洗脱。",
+      "DBS_state_and_parameters": "OFF DBS刺激关闭至少15分钟；ON DBS临床或临床等效强度，140或150 Hz，60 μs。双侧Medtronic 3389 omnidirectional leads位于STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。个体幅度和触点未在附件主文报告。",
+      "task": "Harnessed SIP，30秒quiet stance后100秒交替原地踏步。",
+      "recording_location": "未报告STN神经信号；仅报告双侧小腿IMU和GRF行为数据。",
+      "measure": "Swing time及其sequence effect λ。Swing time为摆动角速度峰值前后两个zero-crossings之间的时间。",
+      "frequency_and_analysis_window": "IMU 128 Hz，9 Hz低通滤波；100秒SIP。按每侧腿拟合指数衰减参数λ；FOG阳性试验使用首次冻结前epoch，其他试验按全程或首个epoch处理。无神经频谱分析。",
+      "finding": "ON DBS与OFF DBS之间的swing time sequence effect没有显著差异。作者指出ON DBS后患者的λ数值有从正负偏离向零靠近的趋势，但该变化未达到统计学显著性。",
+      "effect_estimate": "LMM刺激条件效应β=0.001，95% CI [-0.002, 0.003]，p=0.620。",
+      "statistical_unit_and_method": "Linear mixed-effects model；固定效应stimulation condition，随机效应participant nested with body side。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域；非随机受试者内干预初评。",
+        "domains": [
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告刺激条件随机化及顺序平衡。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "participant_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心慢性STN-DBS患者，要求能够在OFF治疗状态行走。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "intervention_classification",
+            "judgement": "low",
+            "reason": "ON/OFF状态及基本刺激频率、脉宽明确。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "deviations_from_intended_intervention",
+            "judgement": "unclear",
+            "reason": "未报告盲法和刺激依从性。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "missing_data",
+            "judgement": "unclear",
+            "reason": "没有详细报告缺失数据。",
+            "source_locator": "Results，pp.6–7。"
+          },
+          {
+            "domain": "outcome_measurement",
+            "judgement": "some_concerns",
+            "reason": "IMU客观测量，但SIP不等同于自然行走，未报告视频确认FOG。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion，pp.10–11。"
+          },
+          {
+            "domain": "repeated_measurements",
+            "judgement": "low",
+            "reason": "LMM采用患者和body side嵌套随机效应。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时检验多个步态指标，没有报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册统计分析计划。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "swing time与空间和速度指标并不完全一致。作者报告部分患者swing time下降、部分增加，稳定的swing time也可能伴随角速度和角度同步下降。因此该指标不能单独代表sequence effect。无STN神经信号证据。",
+      "quote": "The change in swing time λ was not statistically significant",
+      "source_locator": {
+        "section": "Results—Sequence Effect and the Effect of DBS；Discussion。",
+        "page": "p.7；讨论见p.10。",
+        "figure_table": "Figure 3C，p.8。",
+        "supplement": "Supplementary Figure 2被引用，但未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E07_OFF_DBS_correlation_peak_swing_AV_FOG",
+      "design": "观察性相关分析；OFF DBS条件下，步态sequence effect与FOG严重程度的横断面关联。",
+      "population": "18名双侧STN-DBS的PD患者；14名临床Freezer、4名Non-freezer。整个SIP实验中12名患者出现FOG；OFF DBS条件下的相关分析按患者进行描述。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 18,
+      "n_electrodes_contacts": null,
+      "missing_reason": "每名PD患者完成一次OFF DBS试验，因此OFF试验数为18。研究没有单独报告OFF条件下FOG阳性患者人数和离散FOG事件总数。图注称每个点代表一侧身体，最多涉及36个body-side数据点；具体Spearman分析的有效统计单位及患者级重复测量处理未完全说明。未报告神经数据分母。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；临床Freezer/Non-freezer分类，无akinetic、trembling等运动学亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；按附件报告的药物洗脱时间执行。",
+      "DBS_state_and_parameters": "OFF DBS；刺激至少关闭15分钟。双侧Medtronic 3389 omnidirectional leads植入STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。",
+      "task": "Harnessed SIP，100秒交替原地踏步。FOG严重程度为整个100秒任务中的冻结时间百分比；sequence effect取运动学epoch。",
+      "recording_location": "未报告STN神经记录。IMU来自双侧shank；FOG来自vertical GRF。",
+      "measure": "Peak swing angular velocity sequence effect λ与percent time freezing之间的Spearman相关。λ为首个movement epoch中峰值摆动角速度的指数衰减参数；FOG严重程度为整个试验冻结总时间占100秒任务的百分比。",
+      "frequency_and_analysis_window": "IMU 128 Hz，9 Hz低通滤波；GRF 100或1000 Hz，12 Hz低通滤波。FOG试验使用首次冻结前的movement epoch拟合λ，FOG严重程度使用整个100秒任务。没有神经频段或神经基线分析。",
+      "finding": "OFF DBS时，peak swing angular velocity衰减越明显，患者整个任务中花费在冻结状态的时间百分比越高。作者报告显著正相关。",
+      "effect_estimate": "Spearman's rho=0.57，p<0.001。没有报告置信区间。",
+      "statistical_unit_and_method": "Spearman's rho。Methods描述为在PD participants之间计算；但Figure 4图注明确说明每个点代表每名患者的一侧身体。可能涉及36个body-side观测，而FOG百分比是患者级变量。是否对同一患者双侧重复值进行了相关结构校正，全文没有明确说明，存在伪重复风险。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性关联/FOG严重程度分析的领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心小样本，患者均已植入STN-DBS并要求能够在OFF治疗状态行走。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "FOG通过GRF算法识别，但未报告本研究视频或临床评审确认；SIP属于替代性任务。",
+            "source_locator": "Methods—Data Analysis，p.3。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "IMU和GRF滤波信息明确，但没有充分报告伪迹排除、信号缺失和测量可靠性。",
+            "source_locator": "Methods—Data Acquisition/Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有报告疾病严重程度、FOG临床表型和非运动因素的多变量调整。",
+            "source_locator": "Methods—Statistics，p.5；Discussion，pp.10–11。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "Figure 4图注说明每个点代表一侧身体，而冻结时间百分比为患者级指标。双侧数据可能重复使用同一患者的FOG结局；统计模型是否处理该依赖性不明确。",
+            "source_locator": "Methods—Statistics，p.5；Figure 4，p.9。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时分析多个sequence effect指标与FOG时间百分比的相关性，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5；Results，p.8。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "使用相关分析而非训练预测模型，没有外部验证。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，无法判断是否存在选择性报告。",
+            "source_locator": "Methods—Statistics，p.5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是SIP任务中运动学指标与冻结总时间的关联，不是自然步行中事件级神经活动证据。sequence effect取冻结前epoch，但冻结时间百分比取整个任务；非冻结患者也可能进入相关分析。Figure 4每个点代表一侧身体，而FOG百分比为患者级变量，存在双侧数据伪重复的潜在问题。相关不证明sequence effect导致FOG。",
+      "quote": "the sequence effect in swing angular velocity and the percent time freezing (ρ = 0.57, p < 0.001)",
+      "source_locator": {
+        "section": "Methods—Statistics；Results—Sequence effect and FOG interactions。",
+        "page": "p.5及p.8。",
+        "figure_table": "Figure 4B，p.9。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E08_OFF_DBS_correlation_swing_range_FOG",
+      "design": "观察性相关分析；OFF DBS条件下，步态空间sequence effect与FOG严重程度的横断面关联。",
+      "population": "18名双侧STN-DBS的PD患者；14名临床Freezer、4名Non-freezer；全SIP实验中12名患者出现FOG。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 18,
+      "n_electrodes_contacts": null,
+      "missing_reason": "每名患者一次OFF DBS试验，共18次。OFF条件FOG阳性患者数未单独报告；离散冻结事件数未报告。相关图采用body-side数据点，但具体有效统计单位及双侧依赖性校正未明确。没有STN神经记录数据分母。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；临床Freezer/Non-freezer分类，无运动学亚型分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；按附件报告的药物洗脱时间执行。",
+      "DBS_state_and_parameters": "OFF DBS，刺激至少关闭15分钟；双侧Medtronic 3389 omnidirectional leads植入STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。",
+      "task": "Harnessed SIP，100秒交替原地踏步；FOG严重程度为整个任务的冻结时间百分比。",
+      "recording_location": "未报告STN神经信号。运动学来自双侧shank IMU，冻结识别来自vertical GRF。",
+      "measure": "Swing angular range sequence effect λ与percent time freezing之间的Spearman相关。Swing angular range为摆动阶段角速度曲线积分，λ表示其随连续踏步时间衰减的程度。",
+      "frequency_and_analysis_window": "IMU 128 Hz、9 Hz低通滤波；GRF 100或1000 Hz、12 Hz低通滤波。FOG阳性试验取第一次冻结前movement epoch拟合λ；冻结时间百分比取整个100秒任务。",
+      "finding": "OFF DBS时，swing angular range随连续动作下降越明显，患者整个任务中冻结时间百分比越高。",
+      "effect_estimate": "Spearman's rho=0.61，p<0.001。没有报告置信区间。",
+      "statistical_unit_and_method": "Spearman's rho。Methods称在PD participants之间进行相关分析；Figure 4图注称每个点代表患者一侧身体。若双侧腿均纳入，则可能存在36个body-side观测，但患者级FOG百分比重复使用。统计依赖结构未充分说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性运动学关联研究领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心、18名已植入STN-DBS且能在OFF治疗状态行走的PD患者。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "GRF算法用于识别冻结，但没有报告视频或临床评审确认。",
+            "source_locator": "Methods—Data Analysis，p.3。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "报告滤波和采样，但没有充分说明伪迹、信号丢失及可靠性控制。",
+            "source_locator": "Methods—Data Acquisition/Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "未报告多变量调整，疾病严重程度及非运动因素可能影响关联。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "some_concerns",
+            "reason": "图中每侧腿作为数据点，但冻结百分比为患者级指标；未明确说明是否处理双侧依赖性。",
+            "source_locator": "Figure 4，p.9；Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "多项步态指标分别进行相关分析，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型或进行外部验证。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预先指定分析计划。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "与E07相同的统计依赖性问题。相关分析不能确定空间幅度衰减是否为FOG的原因、早期标志，或与更严重疾病状态共同出现的行为表现。没有直接神经电生理测量。",
+      "quote": "the sequence effect in swing angular range and percent time freezing (ρ = 0.61, p < 0.001)",
+      "source_locator": {
+        "section": "Results—Sequence effect and FOG interactions。",
+        "page": "p.8。",
+        "figure_table": "Figure 4C，p.9。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E09_DBS_effect_percent_time_freezing",
+      "design": "单中心、非随机、受试者内重复测量DBS干预比较；OFF DBS与ON DBS的冻结时间结局。",
+      "population": "18名双侧STN-DBS的PD患者；14名临床Freezer、4名Non-freezer。12名患者在整个SIP实验中出现冻结事件。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": 12,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": 36,
+      "n_electrodes_contacts": null,
+      "missing_reason": "18名患者各完成OFF和ON DBS一次试验，共36次。研究报告12名患者在SIP中出现FOG，但没有按OFF/ON条件分别报告阳性患者数；没有报告独立冻结事件总数。STN神经数据患者数及记录触点数量未报告。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；临床Freezer/Non-freezer分类；没有akinetic、trembling-in-place等亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；附件预印本报告药物洗脱时间为48小时、24小时及12小时，按药物种类区分。",
+      "DBS_state_and_parameters": "OFF DBS刺激至少关闭15分钟；ON DBS使用临床或临床等效强度，140或150 Hz、60 μs。双侧Medtronic 3389 omnidirectional leads位于STN sensorimotor region；IPG为Activa PC+S或Summit RC+S。个体幅度和触点未在附件主文报告。",
+      "task": "Harnessed SIP，30秒quiet stance后100秒交替原地踏步。冻结由vertical GRF算法识别；percent time freezing为100秒任务中冻结总时长占比。",
+      "recording_location": "未报告STN神经信号；冻结由双测力台vertical GRF识别。",
+      "measure": "Percent time freezing；冻结总时长除以100秒任务时间，以百分比表示。不是神经信号指标，也不是问卷评分。",
+      "frequency_and_analysis_window": "GRF采样100或1000 Hz，12 Hz低通滤波，按体重归一化。冻结时长在整个100秒任务中累计，最终转换为百分比。没有神经频段或神经分析窗口。",
+      "finding": "与OFF DBS相比，ON DBS显著减少SIP任务中的percent time freezing。",
+      "effect_estimate": "Wilcoxon signed-rank test：W=6，p=0.010。正文未提供冻结时间百分比的精确配对差值、置信区间或标准化效应量。",
+      "statistical_unit_and_method": "患者级配对比较；每名患者OFF和ON DBS各一个试验。使用Wilcoxon signed-rank test处理非正态分布的percent time freezing。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBINS-I相关域；非随机受试者内DBS干预初评。",
+        "domains": [
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "受试者内比较控制稳定个体差异，但没有报告刺激条件随机化或顺序平衡，可能存在顺序和残余效应。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "participant_selection",
+            "judgement": "some_concerns",
+            "reason": "单中心患者且要求OFF medication/OFF DBS状态下能够行走。",
+            "source_locator": "Methods—Participants，p.2。"
+          },
+          {
+            "domain": "intervention_classification",
+            "judgement": "low",
+            "reason": "OFF与ON DBS条件明确，频率和脉宽有报告。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "deviations_from_intended_intervention",
+            "judgement": "unclear",
+            "reason": "未报告盲法及实际刺激依从性。",
+            "source_locator": "Methods—Experiment Protocol，p.3。"
+          },
+          {
+            "domain": "missing_data",
+            "judgement": "unclear",
+            "reason": "未提供详细缺失数据流程。",
+            "source_locator": "Methods—Participants，p.2；Results，p.8。"
+          },
+          {
+            "domain": "outcome_measurement",
+            "judgement": "some_concerns",
+            "reason": "GRF算法有既往验证，但本研究未报告视频或临床确认；任务为SIP替代任务。",
+            "source_locator": "Methods—Data Analysis，p.3；Discussion，pp.10–11。"
+          },
+          {
+            "domain": "repeated_measurements",
+            "judgement": "low",
+            "reason": "冻结时间采用患者级配对比较，而非将双侧腿作为独立患者。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "同时报告多个步态和冻结结局，未报告多重比较校正。",
+            "source_locator": "Methods—Statistics，p.5。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册方案。",
+            "source_locator": "Methods，pp.2–5。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是替代性SIP任务中的冻结时间变化，不代表自然步行中FOG发生率或日常生活中的临床改善。冻结由GRF算法识别，没有报告视频或临床确认。没有事件级冻结亚型、起始位置或恢复阶段分析，也没有与STN神经活动同步的证据。",
+      "quote": "the percent time freezing was significantly reduced ON DBS compared to OFF DBS",
+      "source_locator": {
+        "section": "Results—Sequence effect and FOG interactions。",
+        "page": "p.8。",
+        "figure_table": "Figure 4A，p.9。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E10_nonfreezer_peak_swing_AV_descriptive",
+      "design": "探索性描述性亚组比较；临床Non-freezer PD患者与健康对照的运动学表现比较。",
+      "population": "18名PD患者中4名临床Non-freezer；另有14名年龄匹配健康对照。作者描述其中2名Non-freezer的peak swing angular velocity衰减超过健康对照中观察到的最大值。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "临床Non-freezer亚组人数为4，但这4人在SIP任务中是否出现实际FOG没有单独报告。没有提供HC试验数及该亚组独立事件总数。没有神经记录数据分母。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "临床Non-freezer；没有报告运动学FOG亚型。该分类不等于已经证明其未来不会发生FOG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "PD患者off dopaminergic medication；描述的是OFF therapy状态下的表现。",
+      "DBS_state_and_parameters": "OFF DBS，刺激至少关闭15分钟；双侧STN sensorimotor region植入Medtronic 3389 omnidirectional leads；个体刺激配置未报告。",
+      "task": "Harnessed SIP，100秒交替原地踏步；描述性比较主要基于OFF therapy下的步态sequence effect。",
+      "recording_location": "没有报告STN神经记录。运动学来自双侧shank IMU。",
+      "measure": "Peak swing angular velocity sequence effect λ；比较4名临床Non-freezer中是否存在超过健康对照最大观察值的衰减。",
+      "frequency_and_analysis_window": "IMU 128 Hz，9 Hz低通滤波。每侧腿计算指数衰减参数λ。具体每名Non-freezer使用全程还是特定epoch，没有在该亚组结果中单独说明。",
+      "finding": "4名临床Non-freezer中，有2名在OFF therapy状态下表现出超过健康对照最大观察值的peak swing angular velocity衰减。作者将其描述为探索性现象，没有完成足够的统计检验。",
+      "effect_estimate": "描述性结果：2/4 Non-freezer超过HC观察到的最大衰减值；未报告组间β、置信区间或p值。",
+      "statistical_unit_and_method": "描述性观察；没有报告针对4名Non-freezer的独立统计检验。依据正文及Supplementary Figure 2的描述。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；探索性表型/易感性关联研究领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "Non-freezer亚组只有4名患者，统计能力有限。",
+            "source_locator": "Results—Table 1，p.6；Discussion，p.10。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "Non-freezer分类依据临床表型，不能据此认定未来不会发生FOG或任务中绝无冻结。",
+            "source_locator": "Results—Table 1，p.6。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "IMU采样和滤波有报告，但亚组结果没有独立报告信号质量和伪迹处理。",
+            "source_locator": "Methods—Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有报告对疾病严重程度和其他临床差异的亚组调整。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "unclear",
+            "reason": "正文没有提供亚组的独立统计模型或双侧腿依赖性处理细节。",
+            "source_locator": "Results，p.10；Supplementary Figure 2。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "该结果属于多个步态指标中的探索性观察，没有报告多重比较控制。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，也没有纵向预测或外部验证。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "没有预注册信息；该结果主要以讨论和补充图形式描述。",
+            "source_locator": "Discussion，p.10。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是4名临床Non-freezer中的描述性发现，不能认定为预测未来FOG的证据。作者明确表示非冻结患者数量太少，无法进行统计确认，并建议开展更大样本和纵向随访研究。Supplementary Figure 2未包含在附件中，无法独立复核全部个体数据。",
+      "quote": "two out of the four PD non-freezers, while off therapy, exhibited greater decay in swing angular velocity than the maximum observed among healthy controls",
+      "source_locator": {
+        "section": "Discussion—Sequence effect predicts FOG severity。",
+        "page": "p.10。",
+        "figure_table": "Table 1，p.6；Supplementary Figure 2。",
+        "supplement": "Supplementary Figure 2在正文中被引用，但未包含在所提供的15页PDF中。"
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E11_nonfreezer_swing_angular_range_descriptive",
+      "design": "探索性描述性亚组比较；临床Non-freezer PD患者与健康对照的运动学表现比较。",
+      "population": "18名PD患者中4名临床Non-freezer；14名年龄匹配HC。正文报告Non-freezer亚组的swing angular range存在与peak swing angular velocity相似的趋势。",
+      "n_enrolled": null,
+      "n_analyzed": 18,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "亚组仅4名临床Non-freezer；正文没有报告该指标具体有几名患者超过HC范围，也没有报告独立试验和事件分母。未报告STN神经记录数据。",
+      "endpoint_class": "D_susceptibility",
+      "event_phase": "susceptibility",
+      "freezing_phenotype": "临床Non-freezer；未报告akinetic、trembling等FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "off dopaminergic medication；描述为OFF therapy状态。",
+      "DBS_state_and_parameters": "OFF DBS，刺激关闭至少15分钟；双侧Medtronic 3389 omnidirectional leads植入STN sensorimotor region；个体触点和幅度未报告。",
+      "task": "Harnessed SIP，100秒交替原地踏步。",
+      "recording_location": "未报告STN神经记录；仅使用双侧shank IMU。",
+      "measure": "Swing angular range sequence effect λ；描述性观察临床Non-freezer患者中摆动空间幅度衰减与HC的差异。",
+      "frequency_and_analysis_window": "IMU 128 Hz，9 Hz低通滤波。通过摆动阶段角速度曲线积分获得swing angular range，再以指数衰减函数拟合λ。亚组的具体epoch没有单独报告。",
+      "finding": "作者报告临床Non-freezer中，swing angular range也出现与peak swing angular velocity相似的衰减趋势，但没有给出具体人数、效应量或显著性检验。",
+      "effect_estimate": "仅报告similar trend；没有具体患者人数、β、置信区间或p值。",
+      "statistical_unit_and_method": "描述性观察；没有针对该亚组单独报告统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；探索性表型/易感性关联研究领域级初评。",
+        "domains": [
+          {
+            "domain": "sample_selection",
+            "judgement": "some_concerns",
+            "reason": "临床Non-freezer亚组只有4名患者，代表性和统计能力有限。",
+            "source_locator": "Results—Table 1，p.6；Discussion，p.10。"
+          },
+          {
+            "domain": "behavior_label_validity",
+            "judgement": "some_concerns",
+            "reason": "临床Non-freezer分类并不能确定任务中没有冻结或未来不会发生冻结。",
+            "source_locator": "Results—Table 1，p.6。"
+          },
+          {
+            "domain": "signal_quality_and_artifacts",
+            "judgement": "unclear",
+            "reason": "未对该亚组单独报告信号伪迹、信号缺失及测量可靠性。",
+            "source_locator": "Methods—Data Analysis，pp.3–5。"
+          },
+          {
+            "domain": "confounding",
+            "judgement": "some_concerns",
+            "reason": "没有报告该小亚组中疾病严重程度等潜在混杂因素的调整。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "repeated_measurement_pseudoreplication",
+            "judgement": "unclear",
+            "reason": "没有报告亚组层面的统计模型和双侧腿依赖性处理。",
+            "source_locator": "Discussion，p.10；Supplementary Figure 2。"
+          },
+          {
+            "domain": "multiple_comparisons",
+            "judgement": "some_concerns",
+            "reason": "探索性地检查多个步态指标，没有报告多重比较校正。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "model_overfitting_external_validation",
+            "judgement": "not_assessable",
+            "reason": "没有建立预测模型或开展纵向验证。",
+            "source_locator": "Discussion，p.10。"
+          },
+          {
+            "domain": "selective_reporting",
+            "judgement": "unclear",
+            "reason": "未报告预注册计划，且补充图没有随附件提供。",
+            "source_locator": "Discussion，p.10。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者只报告similar trend，没有提供具体人数和统计量，不能将其解释为已验证的FOG易感性标志。4名Non-freezer样本不足以证明该指标可预测未来冻结。补充图没有包含在附件中，无法独立核查个体数据。",
+      "quote": "a similar trend was observed in swing angular range",
+      "source_locator": {
+        "section": "Discussion—Sequence effect predicts FOG severity。",
+        "page": "p.10。",
+        "figure_table": "Table 1，p.6；Supplementary Figure 2。",
+        "supplement": "Supplementary Figure 2未包含在所提供PDF中。"
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

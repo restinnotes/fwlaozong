@@ -1,0 +1,54 @@
+写报告输入改为附件： 写报告输入超长 434715 字（结论 21 条、证据 538 条），不静默截断
+写报告：结构化知识 68187 字改为附件
+[S3d2_Q1_report_41797b80] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 357s
+[S3d2_Q1_report_41797b80] gpt3 gpt-6-thinking 完成 480s 23347 字
+附录：文献 150，证据 538，结论 21，假说 13
+S3d2 报告 23347 字
+S3d2 引用 150 条 {'ok': 150}
+S3d2 正文引用 57 个 {'in_kb': 57} ；疑似挂错编号 8 处
+  疑似挂错：PMID:31665229（相似 0.273）更像 PMID:41131028（0.455）| …这意味着STN活动变化不只是“患者停止了行走”这一行为现象的简单反映
+  疑似挂错：PMID:24361601（相似 0.067）更像 PMID:33240199（0.467）| …但该研究主要是患者表型比较，记录条件不能完全等同于真实冻结事件
+  疑似挂错：PMID:35441231（相似 0.222）更像 PMID:36185822（0.511）| …另外，M1高beta-gamma PAC研究反映的是皮层活动，不能将其写成STN局部LFP变化
+  疑似挂错：PMID:35441231（相似 0.205）更像 PMID:41594737（0.614）| …结构连接研究报告FOG患者部分PPN相关通路存在改变，但不能据此证明STN局部神经活动异常
+  疑似挂错：PMID:39973482（相似 0.136）更像 PMID:41594737（0.614）| …结构连接研究报告FOG患者部分PPN相关通路存在改变，但不能据此证明STN局部神经活动异常
+  疑似挂错：PMID:39464215（相似 0.114）更像 PMID:41594737（0.614）| …结构连接研究报告FOG患者部分PPN相关通路存在改变，但不能据此证明STN局部神经活动异常
+  疑似挂错：PMID:40512756（相似 0.294）更像 PMID:31647540（0.529）| …14人胆碱能PET研究则发现胆碱能功能降低与ON-medication FOG相关，但没有发现与OFF-FOG相同的关系
+  疑似挂错：PMID:39470410（相似 0.178）更像 PMID:36185822（0.489）| …1. 双侧STN活动不对称及STN-肌肉协调可能参与步态节律和双下肢协调，但尚未证明其直接导致FOG
+[S3d2_Q1_abs_g6_18e8f5c1] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 481s
+[S3d2_Q1_open_g56_645238fa] gpt4 gpt-5-6-thinking 完成 842s 8712 字
+[S3d2_Q1_open_g6_645238fa] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1054s
+[S3d2_Q1_abs_g6_18e8f5c1] gpt3 gpt-6-thinking 完成 1396s 7358 字
+[S3d2_Q1_open_g6_645238fa] gpt4 gpt-6-thinking 完成 998s 7983 字
+S3d2 open_g6: major 1，moderate 0
+    1 major 文献覆盖缺乏可审计的系统检索过程，无法证明研究覆盖达到报告所声称的广度。
+S3d2 open_g56: major 7，moderate 3
+    1 major 文献覆盖缺乏可复核的检索过程，报告实际上没有证明自己完成了主动、系统的文献搜索。
+    2 major 证据分层没有真正解决证据质量评价问题，研究类型、证据直接性和证据可靠性被混在一起。
+    3 major 核心Thenaisie研究的样本量和发表状态存在明确错误，影响整个FOG事件级证据的可靠性判断。
+S3d2 绝对验收: severe 0，moderate 5，minor 2； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'met'), (4, 'partly'), (5, 'not_testable'), (6, 'met'), (7, 'not_testable')]
+   抽查 {'consistent': 8}
+[blind_S2_vs_S3d2_bX_g56_c048dcd4] gpt4 gpt-5-6-thinking 失败 UPSTREAM_STREAM_ERROR 216s
+[blind_S2_vs_S3d2_aX_g56_260e6dd1] gpt4 gpt-5-6-thinking 完成 319s 2558 字
+[blind_S2_vs_S3d2_aX_g6_260e6dd1] gpt3 gpt-6-thinking 完成 532s 2255 字
+[blind_S2_vs_S3d2_bX_g6_c048dcd4] gpt3 gpt-6-thinking 完成 546s 2356 字
+[blind_S2_vs_S3d2_bX_g56_c048dcd4] gpt3 gpt-5-6-thinking 完成 397s 2517 字
+g6 aX 总体: S2 分项: {'coverage': 'tie', 'evidence': 'S3d2', 'synthesis': 'S2', 'structure': 'S2', 'rigor': 'tie'}
+g56 aX 总体: S3d2 分项: {'coverage': 'tie', 'evidence': 'S3d2', 'synthesis': 'S2', 'structure': 'S3d2', 'rigor': 'S3d2'}
+g6 bX 总体: S2 分项: {'coverage': 'S2', 'evidence': 'S3d2', 'synthesis': 'S2', 'structure': 'S2', 'rigor': 'S3d2'}
+g56 bX 总体: S3d2 分项: {'coverage': 'S2', 'evidence': 'S3d2', 'synthesis': 'S2', 'structure': 'S3d2', 'rigor': 'S3d2'}
+[fcx_S3d2_518575bd] gpt4 gpt-6-thinking 完成 5s 35 字
+[fcx_S3d2_3666bacf] gpt4 gpt-6-thinking 完成 16s 254 字
+[fcx_S3d2_f8daa845] gpt4 gpt-6-thinking 完成 8s 35 字
+[fcx_S3d2_5c3a8157] gpt3 gpt-6-thinking 完成 35s 748 字
+[fcx_S3d2_9635053f] gpt4 gpt-6-thinking 完成 36s 691 字
+[fcx_S3d2_414ef34a] gpt4 gpt-6-thinking 完成 10s 35 字
+[fcx_S3d2_60a08f2a] gpt4 gpt-6-thinking 完成 47s 395 字
+指控来源 7 份，抽出指控 6 条
+[fcj_S3d2_1d4e78e2] gpt3 gpt-6-thinking 完成 101s 2247 字
+S3d2 指控裁定 {'no_fulltext': 3, 'paper_not_in_kb': 2, 'accusation_partly': 1}
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:39470410 | 指控：原始论文报告最终分析了12名患者，其中5名患者出现FOG，共记录42次冻结事件。报告遗漏了明确报告的患者样本量及事件数量。
+  [paper_not_in_kb] 报告有依据:None 指控有依据:None Klocke et al., 2024，STN-LFP与冻结步态研究；2026年13名患者转弯冻结研究 | 指控：Klocke 2024研究的12名分析患者与2026年13人研究的患者中，有12名具有相同的受试者编号。两项研究属于高度重叠的患者队列，不能作为独立患者队列的重
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:36070366 | 指控：原文是2022年发表于 Science Translational Medicine 的正式同行评审论文，整体纳入18名帕金森病患者，其中4名出现频繁FOG。这
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:39470410 | 指控：原文全文明确报告了12名分析患者，其中5人出现FOG，共记录42次FOG事件。因此，报告遗漏了原文已经明确提供的样本量及冻结事件数量。
+  [paper_not_in_kb] 报告有依据:None 指控有依据:None Klocke et al., 2024，STN-EMG研究（丘脑底核神经活动与肌电协调） | 指控：该研究最终分析样本实际为12人，报告遗漏了摘要中可获取的样本量信息。
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:39470410 | 指控：评委指出，知识库中已有该研究的样本量信息，为12人；报告正文表格应报告样本量为12人。

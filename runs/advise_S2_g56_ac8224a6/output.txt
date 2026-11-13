@@ -1,0 +1,122 @@
+<escape>{
+  "diagnosis": [
+    {
+      "rank": 1,
+      "problem": "D1｜检索过程不可复现：S2报告没有呈现本轮实际数据库/平台、检索日期、完整检索式、逐式命中数、去重数、筛选数、全文获取数和全文排除理由。这里不是没有做检索，而是实际检索轨迹没有进入报告。",
+      "root_cause": "根因已定位：search阶段把queries、pool、search_seeds和screening写入知识库/运行文件；但report阶段只把结构化KB交给模型，且report提示词要求“只用下面给出的内容”，没有传入检索账本。因此报告无法忠实描述实际检索方法。用模型补写PRISMA流程或数据库清单会变成伪造。若实际流程不是预注册/系统综述，应诚实标注为结构化叙述性证据综合，而不是为了形式套PRISMA。",
+      "verify": "最便宜：拦截一次run.py report的最终请求payload，检查是否包含每个数据库/接口、检索时间、原样检索式、total_hits、fetched、去重、筛选和全文状态。若运行目录有这些记录而payload/报告没有，根因成立；若运行目录本身也没有，则问题还上移到search日志实现。当前流水线和P7已显示报告输入缺少这些记录。",
+      "verified": true
+    },
+    {
+      "rank": 2,
+      "problem": "D2｜L1仍有已证实的召回截断：实际脚本每条检索式只取相关度前100篇，而plan提示词写的是最多200篇。P1中15/43篇模型点名的必读研究都能匹配至少一条检索式，却被前100截断；本轮靠must_read补回，不代表冷门交叉方向也能补回。",
+      "root_cause": "根因已验证：结果上限而不是检索式本身造成遗漏。当前只取相关度排序头部，没有对大结果集分页、分层取样、引文追溯或检索饱和度做强制处理；提示词的200与脚本的100还存在配置不一致。",
+      "verify": "复用P1脚本对43篇已知文献和B0两份参考文献并集做回放；成立条件是仍有文献能被query命中但不在取回集合，或独立清单召回率明显低于目标。已有P1结果15/43因截断未进入本地池，根因已成立；修复后要求本地检索覆盖至少40/43，并报告独立清单召回率。",
+      "verified": true
+    },
+    {
+      "rank": 3,
+      "problem": "D3｜证据条数被误当成独立证据：知识结构没有稳定区分论文版本、原始研究、患者队列和二手综述。同一预印本与正式版、同一队列的不同分析、综述转述同一原始研究，可能分别产生EID并重复支持Claim；交付物还出现538/539计数不一致、未定义的G来源和不存在的EID引用。",
+      "root_cause": "根因已验证：当前知识层以paper/evidence/claim/hypothesis为主，没有强制study_id、cohort_id、version_of、primary_source/secondary_source、cohort_overlap等实体和外键约束。仅按PMID/DOI去重不足以处理预印本更新、同队列不同论文及综述转述；自由文本from也不能保证关系完整。",
+      "verify": "先对评审已点名的预印本/正式版对和同中心同招募期论文做20组小审计，再跑全库外键检查。只要发现一组同一研究被累计为独立重复支持，或任一Claim指向不存在的EID/来源节点，即确认；当前评审已给出多个版本重复实例和悬空关系，根因成立。",
+      "verified": true
+    },
+    {
+      "rank": 4,
+      "problem": "D4｜没有可复核的研究质量/偏倚风险评价：supported、well-supported等状态没有操作性阈值；直接性、结果一致性、样本精度和研究质量容易混为一谈。小样本真实FOG记录可以是直接证据，但不因此自动可靠；随机交叉研究也不自动低偏倚。",
+      "root_cause": "根因已验证：extract只要求把论文承认的局限和模型看出的局限写入自由文本limitations；synthesis要求给status，却没有设计适配的偏倚风险字段、领域级判断、判断依据或证据确定性规则。报告因此可以给出强弱标签，却无法复核标签由什么构成。",
+      "verify": "抽取15项核心研究，分别按研究设计检查随机化/盲法/交叉设计配对处理、样本选择、信号和FOG标签有效性、重复测量/伪重复、多重比较、缺失数据和选择性报告。若重要Claim的强度标签不能追溯到这些域，或把直接性当成质量，根因成立；当前两份开放评审及绝对验收均指出该字段和规则缺失。",
+      "verified": true
+    },
+    {
+      "rank": 5,
+      "problem": "D5｜FOG证据本体没有贯彻到逐条提取和综合：真实直立行走视频确认冻结、客观冻结样事件、仰卧/虚拟任务、易感性、问卷/静息表型，以及Pre-FOG、During-FOG、恢复期并非同一终点。冻结亚型、患者临床药物反应亚型与实验当次Med-On/Off也需要分开。患者数、实际冻结患者数、事件数、试次数、电极数不能混为一个n。",
+      "root_cause": "根因已验证：extract只有population、n、condition、measure等粗字段，没有endpoint_class、event_phase、FOG_phenotype、medication_phenotype与experimental_medication_state分栏，也没有分别存储患者、事件、试次和电极分母。现有提示词虽举例要求写条件，但没有可机器查询的本体和操作定义。",
+      "verify": "抽查20篇核心论文，要求每篇独立标注终点类别、事件阶段、冻结亚型、患者临床药物亚型、实验药物状态及各层分母。若同一证据表无法按这些维度筛选，或将仰卧/虚拟冻结与自然行走真实FOG合并为同级直接证据，即成立。绝对验收和B0_gpt4开放评审已明确指出这些维度没有贯彻。",
+      "verified": true
+    },
+    {
+      "rank": 6,
+      "problem": "D6｜关键研究全文提取优先级不足，摘要未提及容易被写成论文未报告。已有评审核对到PMID:41741462全文报告5名患者FOG-Q探索性改善而摘要未呈现；PMID:39470410全文给出12名分析患者、5名实际FOG患者和42次事件，证据记录却没有提全。",
+      "root_cause": "根因已验证：fetch虽然尝试获取全文，但extract允许只有摘要的文献批量处理，且没有对核心直接FOG/STN-LFP研究设全文优先级；提示词也没有严格区分“摘要未提及”“全文未报告”和“无法确认”。这会造成阴性误判和分母缺失。",
+      "verify": "从直接记录真实FOG、Pre-FOG事件相关研究、闭环DBS研究中抽10篇当前basis=abstract或关键字段缺失的论文，全文对照结局、n、效应量和限制。任何一篇关键结局/患者分母在全文存在却被写成未报告，即确认；现有评审已给出可核实实例。",
+      "verified": true
+    },
+    {
+      "rank": 7,
+      "problem": "D7｜L4/L5存在两类“并列而未综合”：一是部分已进入附录的2026年高相关研究没有进入正文核心冲突分析和旧Claim更新；二是STN+SNr相反Meta分析虽被并列呈现，却没有落实到原始试验重叠、多臂共享对照、交叉设计配对数据和FOG结局定义的逐项裁决。文献收录/Meta分析摘要对照不等于完成了研究级综合。",
+      "root_cause": "根因尚未完全验证。可能是L4以年份分片、局部Claim压缩和多轮merge为主，没有独立的Evidence→Claim→正文覆盖矩阵，也没有Meta分析纳入研究矩阵；当前synth提示词要求“分析冲突”，但没有强制列出每项原始试验、队列依赖、共享对照和统计处理差异。也可能是L5正文选择造成，需先追踪链路。",
+      "verify": "最便宜：①追踪PMID:42571859、42236313、42297979、41810591、41741462的Evidence ID→分片Claim→合并Claim→正文段落；②对两篇STN+SNr Meta分析做一张原始试验纳入矩阵，标共同/独有试验、患者队列、多臂共享对照、交叉配对处理和FOG结局。若至少2篇高相关研究没有进入Claim/正文且无排除理由，或Meta冲突没有可复核的研究级矩阵，确认该流程根因；若Evidence链完整，则转查L5表达选择。",
+      "verified": false
+    },
+    {
+      "rank": 8,
+      "problem": "D8｜竞争性机制假说的因果结构不够正交：部分模型处于不同解释层级或可同时成立；例如共同上游网络原因、FOG发生后的行为反馈和STN局部因果介质不是同一个模型。supports/contradicts也可能把“未检验”“限制普遍性”和真正反证混为一谈，导致所谓竞争性预测未必能区分模型。",
+      "root_cause": "结构性根因已验证：synth_map/synth_reduce要求提出竞争性假说、预测和证伪条件，但没有要求因果DAG、时间顺序、因果角色、共同成立关系、独有预测或识别假设；关系类型只有supports/contradicts/qualifies，没有not_tested/not_comparable等语义。当前程序的编号映射解决不了因果结构是否真正可识别。",
+      "verify": "挑H1/H2及H9/H10做最便宜的因果审计：为每个模型画DAG，列出时间顺序、可观测预测、独有预测、可共存模型和真正不相容模型。若两模型可同时满足全部预测，或将同步相关/统计中介当成因果识别，或把未显著当反证，即确认；两份开放评审已指出模型层级和预测区分不足。",
+      "verified": true
+    },
+    {
+      "rank": 9,
+      "problem": "D9｜持续自主改进目前主要是报告中的设计建议，不是已运行的闭环。系统能写KB history不等于能发现缺陷、定位根因、修复、回归测试并证明新版本优于旧版本；关系图完整性和新证据触发旧Claim重评也未见实际执行记录。",
+      "root_cause": "根因已验证：主线流水线止于report，没有post-report audit→repair→rerun→regression/effect evaluation阶段；没有固定gold set、改动前后指标和自动化引用外键检查。KB的history记录写入，不足以证明语义层更新机制有效。",
+      "verify": "查最近一次S2运行是否有同一缺陷的原始检测、根因验证、代码/提示词改动、重新跑同一固定集、前后指标和独立复核记录。若缺少任一环节，就只能称为自我审计建议而非自主改进；绝对验收第7项已将此判为严重问题。",
+      "verified": true
+    },
+    {
+      "rank": 10,
+      "problem": "D10｜测法的构念效度尚未证明：开放评审的自由文本适合产生候选问题，但不应自动视为事实；盲比的整体胜负把coverage、rigor、结构等不同维度压成单一偏好。当前只有少量模型评委/顺序位置，没有专家金标准、评委校准、误报率或评分一致性。P5已排除的两项误读不能再计为S2缺陷，但它们提示评委批评必须核验。",
+      "root_cause": "根因假设：现行测法偏向“哪篇整体更好”和自由找错，没有要求每条批评提供报告原句、原始文献定位和可复核依据；也没有用已知答案集测评委是否会漏报/误报。现有数据不足以证明评委系统性偏向某种写作风格，故不能把评委问题当成已验证根因。",
+      "verify": "制作20条已由领域研究者核验的正/负控制：真实缺陷、看似缺陷但原文支持、尚不确定三类。让现有评委盲评并记录precision、recall、误报率、加权Kappa和顺序效应。若误报率>5%、加权Kappa<0.70，或交换X/Y顺序导致维度结论频繁翻转，才确认测法根因。",
+      "verified": false
+    }
+  ],
+  "candidates": [
+    {
+      "name": "检索账本入报告",
+      "targets": "D1（根因已验证）；不解决D2的召回截断。",
+      "layer": "流程结构、L1检索、L5报告输入",
+      "change": "不靠提示词让模型“记住”检索过程，直接改数据流。工程实现：①新增append-only的run_manifest.jsonl，每次run记录run_id、问题版本、运行时间、数据库/API、检索截止时间、完整原始query、字段/过滤器、total_hits、实际抓取数、是否截断、返回ID及query_id；②screen阶段追加每批数量、include/maybe/exclude、排除理由、模型版本和提示词哈希；③fetch阶段追加全文来源、成功/失败、失败原因、全文/摘要状态；④保存模型must_read、知识库继承、数据库检索、引文追溯四种来源标签，不能混成一个“检索命中”；⑤report阶段由代码从manifest生成“实际检索与筛选方法”表和流程计数，模型只负责解释，不负责编造数字；⑥正文明确综述类型和边界：没有按系统综述方案执行就写“结构化叙述性证据综合”，不能宣称PRISMA系统综述。最小输入是现有plan.json、queries、pool/search_seeds、screening表和fetch日志；输出为search_audit.json、可复现检索附录和报告中的方法段。先不改用户设定#3合法开放来源、#4 Luna每批最多一次、#5基线不变、#9正文+附录。",
+      "expected": "报告中实际检索式、日期、命中/去重/筛选/全文数和排除理由的可追溯率从当前接近0提高到100%；S2绝对验收第1项由partly争取到met或仅剩minor；两份开放评审的“检索不可复现”major问题应消失。它本身不提高检索召回，也不保证系统综述质量。",
+      "risk": "若日志不完整，自动生成的方法段会把不完整流程包装成“可复现”；流程图和附录也会增加篇幅。必须让缺失字段显示unknown，并禁止从模型回忆补数。",
+      "differs": "只修“做过什么能否被审计”，不扩大检索、不评价论文质量，也不改机制综合。"
+    },
+    {
+      "name": "召回深挖与引文滚雪球",
+      "targets": "D2（根因已验证）。",
+      "layer": "L1检索、流程结构",
+      "change": "改search.py而不是只改plan提示词：①把page_size和max_results_per_query统一放入单一配置，测试断言提示词、脚本和日志一致；②每条query先读total_hits，命中数低于阈值（如500）时分页取全；高于阈值时不允许静默截断，至少取相关度头部、按发表年份分层的结果和标题/摘要命中不同核心概念的结果，并把truncated标志写入日志；③对所有include和高相关maybe、以及plan.must_read种子做后向参考文献和前向被引追踪，记录seed_id、方向、轮次和新增文献；④对新纳入文献提取新术语（如turn-induced、gait initiation、freezing episode、beta burst、cortico-STN等）生成第二轮补充query；⑤每轮筛选后计算新增独立study/cohort比例，连续两轮新增相关原始研究低于2%且43篇已知种子召回达到预设阈值才可停止；⑥保留每篇文献命中的全部query来源，不因去重而丢掉检索路径。所有新增文献仍走现有screen，不把引用次数当成证据质量。",
+      "expected": "在P1同一测试集上，本地检索命中由28/43提升到至少40/43（≥93%）；B0两份参考文献并集的独立原始研究召回率至少提高15个百分点；大结果集的截断率从不透明变为可见且有补救路径。coverage分项本来已4:0，不承诺盲比票数继续增加，主要改善未知方向的漏检风险。",
+      "risk": "候选池和筛选成本上升；引文滚雪球会偏向高被引经典研究，年份分层也可能引入低相关文献。必须按独立study而非记录条数报告收益，并保留低被引/新近研究专项query。",
+      "differs": "这是召回率假设，与候选“检索账本入报告”的可复现性假设独立：一个增加找到的研究，一个证明实际怎么找。"
+    },
+    {
+      "name": "研究级证据账本与全文优先提取",
+      "targets": "D3、D4、D5、D6（根因均已验证）。",
+      "layer": "L2全文、L3提取、知识库数据结构",
+      "change": "将paper/evidence两层扩展为规范化关系：Publication（PMID/DOI、发表状态、version_of）；Study（study_id、设计、注册号、中心/招募期）；Cohort（cohort_id、患者来源、设备、重叠关系及置信度）；Evidence（一个具体发现/对比/条件）；Outcome（FOG终点和时间阶段）；QualityAssessment（按设计的偏倚域）；SourceLocator（页码/章节/图表/补充材料）。保留旧EID并迁移，不因版本合并删除历史；预印本与正式版不确定时只建possible_version_link，不自动合并；同队列不同分析保留不同Evidence，但在独立研究/患者计数时只算一次；综述作为secondary_source，不产生独立患者支持。必须分别存储n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes。FOG本体分A自然直立行走视频/临床确认、B自然直立行走但仅由运动学/肌电/可穿戴客观识别、C虚拟/仰卧/模拟替代任务、D易感性、E问卷/静息表型；event_phase分susceptibility、pre_FOG_event_associated（同一试次随后确实发生冻结）、during_FOG、offset_recovery、non_event_gait；另存冻结运动亚型、患者临床药物反应亚型和实验当次Med-On/Off。全文队列优先级：真实FOG/STN直接记录、事件相关Pre-FOG、闭环DBS和关键随机试验优先；摘要数据只作provisional，不能把“摘要未提及”写成“全文未报告”。偏倚风险按设计选择RoB 2、ROBINS-I、AMSTAR 2/ROBIS；观察性电生理使用明确标注为adapted_not_validated的域清单，不冒充正式验证工具。新增自动完整性测试：版本候选、队列重叠、EID外键、source locator、计数一致性、证据来源类型。建议修改自定设定#2：SQLite规范化库成为source of truth，JSON附录保留为机器可读导出，而非唯一知识结构；用户设定#3/#4不动。\n\n新的prompts/extract.txt全文：\n你是功能神经外科领域的证据提取研究员。研究问题：\n{QUESTION}\n\n你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。\n\n【提取单位与来源规则】\n1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。\n2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。\n3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。\n4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。\n5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。\n\n【必须分开的样本分母】\n分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。\n\n【FOG终点与时间阶段】\nendpoint_class 只能取：\n- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；\n- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；\n- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；\n- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；\n- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；\n- unclear。\nevent_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。\n另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。\n\n【药物、刺激、任务和信号】\n把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。\n信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。\n\n【效应与质量】\n尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。\nrisk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：\n- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；\n- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；\n- 系统综述：记录AMSTAR 2/ROBIS可判断的域；\n- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。\n每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。\n\n【定位与引文】\n每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。\n\n【输出规则】\n只输出一个JSON，不要Markdown，不要额外解释。未知值用null或\"unknown\"，不得省略必需字段：\n{\n  \"publication\": {\n    \"ref\": \"\",\n    \"title\": \"\",\n    \"publication_status\": \"published|preprint|conference_abstract|review|unknown\",\n    \"version_of_candidate\": null,\n    \"study_id_candidate\": \"\",\n    \"cohort_id_candidate\": \"\",\n    \"cohort_relation_basis\": \"\",\n    \"source_type\": \"primary|secondary|mixed|unclear\",\n    \"basis\": \"fulltext|abstract\",\n    \"fulltext_checked\": false\n  },\n  \"evidence\": [\n    {\n      \"eid_local\": \"\",\n      \"design\": \"\",\n      \"population\": \"\",\n      \"n_enrolled\": null,\n      \"n_analyzed\": null,\n      \"n_patients_with_FOG\": null,\n      \"n_patients_with_valid_neural_data\": null,\n      \"n_FOG_events\": null,\n      \"n_trials\": null,\n      \"n_electrodes_contacts\": null,\n      \"missing_reason\": \"\",\n      \"endpoint_class\": \"A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear\",\n      \"event_phase\": \"susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear\",\n      \"freezing_phenotype\": \"\",\n      \"medication_phenotype\": \"\",\n      \"experimental_medication_state\": \"\",\n      \"DBS_state_and_parameters\": \"\",\n      \"task\": \"\",\n      \"recording_location\": \"\",\n      \"measure\": \"\",\n      \"frequency_and_analysis_window\": \"\",\n      \"finding\": \"\",\n      \"effect_estimate\": \"\",\n      \"statistical_unit_and_method\": \"\",\n      \"risk_of_bias\": {\n        \"tool_or_framework\": \"\",\n        \"domains\": [\n          {\"domain\": \"\", \"judgement\": \"low|some_concerns|high|unclear|not_assessable\", \"reason\": \"\", \"source_locator\": \"\"}\n        ],\n        \"overall\": \"low|some_concerns|high|unclear|not_assessed\"\n      },\n      \"limitations\": \"\",\n      \"quote\": \"\",\n      \"source_locator\": {\"section\": \"\", \"page\": \"\", \"figure_table\": \"\", \"supplement\": \"\"},\n      \"basis\": \"fulltext|abstract\"\n    }\n  ]\n}\n\n【论文】\n{PAPERS}",
+      "expected": "在20篇核心研究试点中，患者/事件/试次分母完整率达到≥95%；已知预印本—正式版关系识别率≥90%，不确定关系明确标unknown而不重复计权；合法可获取全文的核心证据全文核验率≥90%，其余明确保留abstract状态；所有重要研究均能查询终点类别、事件阶段和风险域。S2开放评审中的版本重复、样本分母、偏倚风险、FOG分类和摘要提取问题应显著下降；rigor盲比目标从0:4至少改善到2:2，但需以事实核验而非迎合评委措辞判定。",
+      "risk": "规范化迁移成本较高；自动版本匹配可能误合并不同研究，cohort overlap也可能只能判为possible；偏倚域评价可能产生虚假的精确感。缓解方式是保留不确定状态、来源定位和人工抽查，不用模型置信语气代替证据。",
+      "differs": "主要修L2/L3的“证据单位是否正确、是否读到全文、是否知道研究质量”；不解决检索漏检，也不负责把证据组织成最终机制模型。"
+    },
+    {
+      "name": "证据对账与因果综合重构",
+      "targets": "D7（现象已观察、根因未验证）、D8（结构性根因已验证）、D9（闭环缺失已验证）。",
+      "layer": "L4综合、L5报告、流程结构、知识图谱",
+      "change": "保留分片以解决上下文限制，但不再把年份作为科学综合的主分层。输入改为规范化Evidence矩阵（EID、study/cohort/version、FOG终点/阶段、任务、药物/刺激、记录位置/频段、分母、效应、偏倚域）+现有局部Claims。局部Claims只作线索，最终综合必须回到原始EID。执行步骤：①按FOG终点×事件阶段×任务×药物/刺激状态×信号来源构建证据视图；②每个视图生成局部finding，但同一EID在跨视图出现时只计一次；③建立冲突矩阵，先判可比/不可比，再解释方向差异；④最终Claim必须列独立study/cohort数、患者数和事件数，分别报告直接性、偏倚风险、精确度和一致性；⑤每个EID必须进入Claim，或标context_only/excluded并写原因；⑥每个高相关直接研究必须有Claim和正文段落映射；⑦Hypothesis直接链接原始EID，禁止机制Claim循环支持；⑧用DAG标记共同原因、局部中介、行为后果、反馈和亚型修饰，允许机制共存；⑨脚本检查EID/CID/HID外键、孤儿节点、重复计数、来源环路和正文覆盖，失败则阻止交付并生成待修复列表；⑩增加真正运行的post-report改进环：复用现有review只生成候选缺陷，不把评委文本当事实；代码/原文核查完成根因验证和最便宜测试→仅对自定设定/代码创建候选修复分支→在同一冻结测试集重跑→比较覆盖率、提取准确率、外键错误、正文覆盖、评委误报率和绝对验收→无改善或发生回归则回滚。用户设定的改动只生成待用户确认项，不自动修改；这一闭环不另加新的自由评审提示词。\n\n新的prompts/synth_reduce.txt全文：\n你是功能神经外科领域的证据综合研究员。研究问题：\n{QUESTION}\n\n【成果标准】\n{STANDARD}\n\n你会收到两种输入：\n1. {EVIDENCE_MATRIX}：规范化的原始Evidence矩阵，是事实和证据关系的唯一权威来源；\n2. {LOCAL_CLAIMS}：分片模型产生的局部结论，只能作为检索线索，不能当作独立证据，也不能替代原始Evidence。\n\n【硬规则】\n1. 不得把论文数、Evidence条数、冻结事件数或试次数直接当成独立研究/独立患者数。报告独立study数、cohort数、患者数、事件数时必须分开。\n2. 不得把预印本和正式版、同一队列的不同分析、综述对原始研究的转述当成独立重复证据。存在依赖关系时明确标记。\n3. 每个重要Claim必须直接列出支持、反向和限定它的原始EID。局部Claim只能作为组织线索；机制Claim不能反过来作为支持该机制的独立证据。\n4. 证据直接性、研究偏倚风险、精确度、一致性、间接性和总体确定性是不同维度。不得仅凭“直接”或“多篇论文方向一致”标为well-supported。well-supported仅用于多个相互独立队列、直接性较高、主要偏倚域总体可接受且结果一致/精确的结论；supported表示有多项证据但存在重要限制；contested表示可比的直接证据方向冲突；weak表示证据稀少、小样本或间接；speculative表示主要是机制推理而非直接验证；unclear表示资料不足。质量评价必须回到矩阵中的设计、风险域和样本分母；不具备资料时写unclear。\n5. FOG终点必须按endpoint_class、event_phase、freezing_phenotype区分。真实自然行走FOG、客观冻结样事件、虚拟/仰卧替代任务、易感性、问卷/静息表型不能无条件合并。\n6. medication_phenotype与本次实验Med-On/Med-Off分开；DBS状态、任务、记录位置、频段、分析窗口和统计单位均是潜在效应修饰因素。\n7. 只有在终点、时间阶段、任务和关键条件足够可比时，才可用contradicts。条件不同但结果不同，应标qualifies或not_comparable；没有测试某主张应标not_tested；未显著不等于等效，也不自动构成反证。\n8. 对冲突先做“可比性审查”，再分析方向：列出相同点、差异点、哪些差异可能解释冲突、哪些仍不能解释。不要简单按研究数或显著性投票。Meta分析冲突必须建立原始试验纳入矩阵，比较共同/独有试验、队列重叠、多臂共享对照、交叉设计配对数据处理、结局定义和效应量计算；不能把两篇Meta分析当成两份独立试验。\n9. 机制模型必须写清因果角色、时间顺序和DAG边。至少考虑：STN局部活动是因果近端介质；STN活动是共同上游网络状态的标志；FOG/运动状态改变反过来影响STN信号；患者/任务/药物亚型导致不同机制并存。允许模型并行，不要强行制造互斥。\n10. 每个机制假说必须给出至少一个其他模型不能同时满足的判别性预测，写出反证条件、关键混杂/中介和识别假设。若当前实验设计不能识别因果方向，明确说“现有证据不可识别”，不得把同步相关或统计中介写成因果证明。\n11. 每个Evidence都必须有去向：进入一个或多个Claim，或明确标记context_only/excluded并说明原因。每个高相关直接原始研究必须进入正文核心综合，或解释为什么不进入。\n12. 新研究必须检查是否改变旧Claim的适用范围、证据状态、效应方向或优先研究假说；不能只增加参考文献。\n13. 结论编号与Evidence ID必须可解析。禁止悬空的G来源编号；禁止不存在的EID；禁止Claim/Hypothesis循环支持。\n\n【输出】\n只输出一个JSON：\n{\n  \"claims\": [\n    {\n      \"cid\": \"C1\",\n      \"text\": \"\",\n      \"scope\": {\n        \"endpoint_class\": [],\n        \"event_phase\": [],\n        \"freezing_phenotype\": [],\n        \"medication_phenotype\": [],\n        \"task\": \"\",\n        \"recording_location\": \"\",\n        \"signal_measure\": \"\"\n      },\n      \"level\": \"finding|synthesis|mechanism\",\n      \"status\": \"well-supported|supported|contested|weak|speculative|unclear\",\n      \"directness\": \"\",\n      \"certainty_assessment\": {\n        \"risk_of_bias\": \"\",\n        \"precision\": \"\",\n        \"consistency\": \"\",\n        \"indirectness\": \"\",\n        \"publication_status\": \"\"\n      },\n      \"independent_study_count\": null,\n      \"independent_cohort_count\": null,\n      \"patient_count\": null,\n      \"event_count\": null,\n      \"evidence\": [\n        {\"eid\": \"\", \"relation\": \"supports|contradicts|qualifies|not_comparable|not_tested\", \"note\": \"\"}\n      ],\n      \"limitations_and_alternatives\": \"\"\n    }\n  ],\n  \"hypotheses\": [\n    {\n      \"hid\": \"H1\",\n      \"name\": \"\",\n      \"causal_role\": \"local_mediator|common_cause_marker|behavioral_consequence|subtype_modifier|feedback_loop|other\",\n      \"dag_edges\": [{\"from\": \"\", \"to\": \"\", \"temporal_order\": \"\"}],\n      \"text\": \"\",\n      \"raw_evidence\": [{\"eid\": \"\", \"relation\": \"supports|weakens|not_tested\", \"note\": \"\"}],\n      \"predictions\": [\"\"],\n      \"discriminating_prediction\": \"\",\n      \"falsifiers\": [\"\"],\n      \"identification_assumptions_and_confounders\": \"\",\n      \"coexistence_with\": [],\n      \"incompatible_with\": []\n    }\n  ],\n  \"conflicts\": [\n    {\n      \"topic\": \"\",\n      \"meta_analysis_comparison\": \"\",\n      \"comparable_evidence\": [],\n      \"non_comparable_evidence\": [],\n      \"observed_directions\": \"\",\n      \"candidate_sources_of_conflict\": [],\n      \"unresolved_residual\": \"\"\n    }\n  ],\n  \"gaps\": [{\"what\": \"\", \"query\": \"\", \"why_it_matters\": \"\"}],\n  \"coverage\": [\n    {\"eid\": \"\", \"disposition\": \"used|context_only|excluded\", \"claim_ids\": [], \"reason\": \"\"}\n  ]\n}\n\n【原始Evidence矩阵】\n{EVIDENCE_MATRIX}\n\n【分片局部结论（仅作线索）】\n{LOCAL_CLAIMS}",
+      "expected": "对5篇指定的2026年高相关研究完成Evidence→Claim→Hypothesis→正文的100%路径核查；高相关直接Evidence的去向完整率100%，悬空EID/G来源和计数不一致为0；每条核心Claim报告独立study/cohort及质量维度；机制假说至少有一个独有判别预测和一个反证条件。S2正文遗漏新证据、冲突分析停留在并列、假说不互斥/循环支持等major问题目标降至minor；若盲比rigor仍0:4，则应回到原始证据核查，而不是继续润色。",
+      "risk": "条件分层会增加重复视图和token成本；强制覆盖可能把边缘研究塞进正文；复杂DAG可能造成假精确。用EID唯一计权、正文分层（核心/补充）和unknown状态控制。",
+      "differs": "与候选“研究级证据账本”不同，它假定L3已提供可用的标准化Evidence，重点修L4/L5如何比较、综合、反证和确保新证据真正改变结论。"
+    },
+    {
+      "name": "从偏好投票改为证据锚定评测",
+      "targets": "D10（测法根因未验证）、D9（自主改进效果缺乏测量，已验证）。",
+      "layer": "测法",
+      "change": "把开放评审定位为候选缺陷生成器，而非缺陷事实裁决器；把blind pairwise整体胜负降为次级偏好指标，不再作为唯一验收。建立40条左右的金标准测试集，覆盖：真实/虚拟/易感FOG分类、患者与事件分母、预印本版本、队列重叠、摘要与全文差异、阳性/阴性结果、Meta分析配对/多臂依赖、相关与因果、未检验与反证。每条金标准记录由领域研究者预先核验原始文献定位、关键事实、允许的不确定范围和常见误读；按study/cohort分组，避免同一队列泄漏到训练与holdout两侧。现有open review只保留为问题发现器；脚本把每条指控映射到报告原句和EID，找不到定位或金标准支持的只标pending_verification。新增benchmark_review步骤，单份报告逐项对照金标准并按7项用户标准0–3分；两名评委独立评分，争议由第三评委/领域研究者裁决。记录precision、recall、误报率、漏报率、加权Kappa和顺序效应。额外对设定#8做一次同文档内联vs附件等价性试验，避免长附件读取方式成为混杂。保留现有盲比作为偏好分析，但不让它覆盖分项绝对验收。\n\n新的prompts/benchmark_review.txt全文：\n你是独立的证据审计评委，不是文风评委。你不需要在两份报告之间选赢家。研究问题：\n{QUESTION}\n\n【评价标准】\n{STANDARD}\n\n【输入】\n- {REPORT}：待评估报告及其结构化附录。\n- {GOLD_CASES}：由领域研究者预先核验的金标准案例。每个案例包含原始文献定位、关键事实、允许的不确定范围、常见误读和应检查的报告主张。\n\n【审计规则】\n1. 只把能够由报告原句和金标准原始来源共同证明的问题标为confirmed_defect。每项批评必须包含报告中的精确原句/段落、对应gold_case_id、PMID/DOI、原文页码/章节/图表定位及判断理由。缺少任一必要定位时标pending_verification，不得写成事实。\n2. 区分incorrect、incomplete、not_addressed、correct、not_applicable。报告没有提及某结果，不等于原论文没有报告；摘要未提及不等于全文未报告；统计不显著不等于等效；未检验不等于反证。\n3. 不得把真实自然行走FOG、客观识别的自然行走事件、虚拟/仰卧/模拟冻结、FOG易感性和问卷/静息表型当成同一终点。患者数、有效神经记录人数、事件数、试次数和电极数必须分开。\n4. 不得把预印本与正式版、同一队列的不同分析、综述转述与原始研究当作独立重复证据。队列重叠未知时标unknown，不得猜测。\n5. 区分证据直接性、研究质量、精确度、一致性和因果性。不得仅凭“同步记录”推断因果；不得仅凭“直接证据”判定低偏倚。\n6. 机制模型可以并行。只有在相同终点、时间阶段和关键实验条件下出现真正不相容结果，才可称为反证。对模型预测是否真正互斥作单独判断。\n7. 不把篇幅、引用数量、复杂术语或报告自称的改进当成质量证据。对检索方法只核查实际日志；没有日志就标不可复现，不允许模型补写数据库或检索数量。\n8. P5已核实为不成立的两项指控不得再次列为缺陷。若金标准与报告信息不足以判定，必须标uncertain。\n9. 对每个标准按0–3分评分：0=缺失或存在实质错误；1=有提及但无法复核/关键维度混淆；2=基本满足但存在明确限制；3=完整、可复核且边界清楚。每个分数必须列出支持该评分的报告段落和gold_case_id。没有对应金标准的领域，只能给provisional分并说明。\n10. 不输出整体winner，不用单一总分掩盖coverage与rigor的权衡。优先输出可修复、可验证的缺陷。\n\n【输出】\n只输出一个JSON：\n{\n  \"gold_case_results\": [\n    {\n      \"gold_case_id\": \"\",\n      \"status\": \"correct|incomplete|incorrect|not_addressed|not_applicable|uncertain\",\n      \"report_excerpt\": \"\",\n      \"report_location\": \"\",\n      \"source_ref\": \"\",\n      \"source_locator\": \"\",\n      \"reason\": \"\",\n      \"severity\": \"severe|major|moderate|minor|none\"\n    }\n  ],\n  \"confirmed_defects\": [\n    {\n      \"defect_id\": \"\",\n      \"standard\": 1,\n      \"report_excerpt\": \"\",\n      \"gold_case_id\": \"\",\n      \"source_ref\": \"\",\n      \"source_locator\": \"\",\n      \"why_this_is_a_defect\": \"\",\n      \"severity\": \"severe|major|moderate|minor\"\n    }\n  ],\n  \"pending_verification\": [\n    {\"issue\": \"\", \"missing_check\": \"\"}\n  ],\n  \"scores\": [\n    {\n      \"standard\": 1,\n      \"score_0_to_3\": 0,\n      \"report_evidence\": \"\",\n      \"gold_case_ids\": [],\n      \"limitations\": \"\"\n    }\n  ],\n  \"calibration\": {\n    \"false_positive_count\": 0,\n    \"false_negative_count\": 0,\n    \"precision\": null,\n    \"recall\": null,\n    \"weighted_kappa_with_other_judge\": null,\n    \"order_effect\": \"none|possible|clear|not_tested\"\n  }\n}",
+      "expected": "评委对金标准缺陷的precision≥95%、误报率≤5%、加权Kappa≥0.70；交换文档顺序不应系统改变rigor评分。这个方案本身不直接改善S2报告内容，而是让下一轮能区分“真实科学缺陷”与“评委误读/偏好”，使改进前后比较可信；候选C完成后再测rigor绝对分项是否改善。",
+      "risk": "金标准集需要领域专家一次性投入，且小样本可能不能代表所有研究问题；评委也可能共享模型偏差。应留出未公开holdout集，并至少由一位非生成模型的领域研究者校准。",
+      "differs": "这是测量系统改造，不改检索、提取或综合本身；与其他候选正交，防止把评委意见直接当成真实根因。"
+    }
+  ],
+  "radical": "最应该被替换的是L4把“按年份切片”当作主要科学分组的做法，而不是分片本身。年份只是文献元数据，不是FOG机制的可比性维度；把证据按年份分开后再压缩局部Claim，容易把同一终点/任务/阶段的跨年证据拆散，也容易让新研究只留在附录。保留S2分片以解决P4上下文截断，但改成按endpoint_class×event_phase×task×medication/DBS_state×recording_source建立证据视图，并以全局Evidence矩阵做跨视图冲突裁决；年份只用于时间趋势分析。另一个必须降级的测法是自由文本open review/盲比整体胜负：它们可以发现候选问题、表达偏好，但不能直接裁决事实或作为唯一验收门槛；每条批评必须回到原文定位和金标准核验。不要退回One-shot，也不要撤销S2对P4的分片修复。"
+}</escape>

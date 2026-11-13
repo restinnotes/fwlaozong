@@ -1,0 +1,565 @@
+<escape>{
+  "claims": [
+    {
+      "cid": "P31_C1",
+      "text": "在OFF-medication/OFF-DBS条件下，STN-LFP多特征机器学习模型的预测输出与临床FOG起始存在时间邻近关联。在5名PD患者、30个FOG事件及8个留出测试试次中，166次假阳性预测有41次（25%）发生在临床确认FOG起始前2秒内，并连续延伸至冻结起始。这提示STN-LFP可能包含FOG发生前的可识别信息，但目前只能证明模型输出与事件时间相关，不能证明存在稳定的事件级提前预测能力。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "直接使用STN-LFP进行FOG预测，但样本仅5人，测试试次仅8个。41次是预测时间点而非41个独立FOG事件，连续预测存在时间窗口重叠。未报告事件级提前检出率、平均提前时间、置信区间或独立验证结果。研究使用VR跑台行走，外部效度有限。总体偏倚风险high。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "supports",
+          "note": "直接报告41/166次假阳性预测位于临床FOG起始前2秒，并连续延伸至事件起始，是STN-LFP可能具有事件前信息的主要依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_5",
+          "relation": "qualifies",
+          "note": "另有41/166次预测延伸至真实FOG结束后2秒，说明模型具有明显的事件边界时间延伸现象，不能简单将起始前预测解释为真正的提前检测。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C2",
+      "text": "STN-LFP机器学习模型的阳性预测可能在临床FOG结束后继续存在，表现为模型输出与临床事件边界之间的时间滞后。研究发现166次假阳性预测中，另外41次（25%）发生在真实FOG结束后2秒内，属于此前阳性预测的连续延伸。这更适合解释为分类器时间响应或事件恢复阶段的预测延迟，而不是FOG结束后仍存在持续病理性STN活动。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "没有报告41次预测对应的独立冻结事件数、事件级延伸时长分布或恢复期STN神经活动的独立分析。3秒重叠输入窗口及0.5秒预测步长可能造成时间相关性。无法区分生理恢复延迟与模型本身的时间平滑效应。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_5",
+          "relation": "supports",
+          "note": "直接报告FOG结束后2秒内持续出现的41次阳性预测，并将其归为真实预测的连续延长。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "FOG起始前也出现连续阳性预测，说明模型在事件起始和终止附近均存在时间边界延伸现象。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C3",
+      "text": "STN-LFP特征与模型预测FOG概率之间的关系可能具有诱发情境依赖性，而不是跨任务保持固定方向。同一名患者Subject 5在Cognitive模块中表现为特征值增加对应模型预测FOG概率降低，而在Anxiety模块中则表现为特征值增加对应预测FOG概率升高。这提示不同认知、情绪诱发条件可能改变模型利用的STN神经特征及其预测方向，但尚不能证明患者真实神经机制发生了切换。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "仅有一名患者、两个任务试次，两个面板包含大量相关时间窗口，但没有患者级或试次级统计检验。SHAP反映模型预测贡献，不等同于神经活动对FOG的因果效应。Cognitive与Anxiety模块同时改变多个行为及环境因素，无法确定具体调节因素。总体偏倚风险high。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_3",
+          "relation": "supports",
+          "note": "同一患者在两个诱发模块中出现相反的特征值与SHAP贡献方向，是trigger-specific heterogeneity的直接观察依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "事件前预测分析使用多特征模型，并未提供不同诱发情境下独立的频段效应或特征方向验证。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C4",
+      "text": "STN beta去同步化与一般运动启动及运动能力存在直接关联，但本批证据尚不能将其确定为FOG特异性神经标志。在16名PD患者中，运动前STN beta去同步化出现在sit-to-stand、stand-to-walk及腕关节运动任务中，且更强的去同步化与较轻的bradykinesia和更强的随后运动加速度相关。这表明STN beta动态与运动启动和运动表现有关，但不能将一般运动启动前的beta变化直接命名为pre-FOG活动。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "研究直接记录STN-LFP，样本16人，测试处于Med-Off及刺激关闭状态，但没有FOG诊断、Freezer与Non-freezer比较或实际冻结事件。具体运动前分析窗口未报告，P值信息存在摘要文本重复问题，效应量和置信区间未提供。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42422531_1",
+          "relation": "supports",
+          "note": "直接报告13–30 Hz STN beta在一般运动启动前去同步化，以及去同步化程度与bradykinesia和随后运动加速度的关联。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "虽然STN-LFP模型可能在FOG起始前产生阳性预测，但该分析没有证明预测信息具体来自运动前beta去同步化。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C5",
+      "text": "FOG易感步态中的皮层低beta动态异常可能具有步态周期和相位特异性，并且可以受到STN高频刺激调节。FOG试次相较非冻结试次表现为S1和SPL low-beta振荡中断或异常；HFS则逆转了double-support阶段SPL low-beta功率的病理性降低。这提示皮层-基底节网络中的步态相位相关活动可能参与FOG易感状态。不过，本批摘录明确报告的神经活动变化主要位于S1和SPL皮层，不能将其直接解释为STN自身beta活动变化。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "患者人数未报告，冻结亚型和OFF状态定义不充分。虽然研究同步记录STN和皮层LFP，但提供的具体结果没有给出STN局部beta功率或皮层-STN coherence的方向和效应量。刺激频率及其他参数未报告，缺少效应量和置信区间。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42571859_1",
+          "relation": "supports",
+          "note": "直接报告FOG试次与非冻结试次之间S1及SPL low-beta活动异常。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_2",
+          "relation": "supports",
+          "note": "报告STN高频刺激逆转double-support阶段SPL low-beta功率的病理性降低，提示STN刺激可以调节皮层步态周期信号。"
+        },
+        {
+          "eid": "S3c_E_PMID_42422531_1",
+          "relation": "qualifies",
+          "note": "一般运动启动时STN beta去同步化与较好运动表现相关，但其记录位置和行为阶段不同，不能与S1/SPL的FOG相关变化直接合并。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C6",
+      "text": "本批研究不支持将beta功率变化解释为跨脑区、跨任务和跨步态阶段均具有统一方向的运动障碍标志。一般运动启动时，更强的STN beta去同步化与较好运动表现相关；FOG相关步态周期中，SPL低beta降低却被描述为病理性变化；苍白球-皮层研究则发现成功转弯伴随beta活动降低，而受损转弯伴随过度beta同步。上述结果看似存在方向差异，但测量脑区、行为任务、时间相位和神经指标并不相同，因此不能简单判定为相互矛盾的STN-FOG结果。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "不同研究并非对同一患者、同一脑区、同一频段边界和同一行为事件进行直接比较。42571859未提供精确low-beta边界，42251056未报告beta具体边界。不同研究的归一化方式和分析窗口也不一致。该综合判断用于解释现有结果的可比性，不构成已经证实的统一机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42422531_1",
+          "relation": "supports",
+          "note": "STN运动前beta去同步化与较好运动表现相关，说明beta降低不必然意味着病理性运动状态。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_1",
+          "relation": "supports",
+          "note": "FOG相关步态周期中S1和SPL low-beta出现异常，说明皮层beta动态可能具有与STN运动启动不同的行为意义。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_2",
+          "relation": "contradicts",
+          "note": "SPL低beta降低被描述为病理性变化，与将所有低beta活动减少都解释为运动改善的全局单调模型不一致；但这不是对STN beta结果的直接反证。"
+        },
+        {
+          "eid": "S3c_E_PMID_42251056_1",
+          "relation": "supports",
+          "note": "成功转弯与beta降低及更灵活的皮层-苍白球通信相关，受损转弯则伴随过度beta同步，进一步说明beta意义依赖脑区和运动任务。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_3",
+          "relation": "supports",
+          "note": "同一患者不同诱发情境下STN-LFP特征的SHAP方向发生反转，说明不能预设所有FOG情境共享固定的特征方向。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C7",
+      "text": "STN神经动态具有用于实时识别一般运动活动并驱动活动依赖性DBS的可行性，但目前不能据此认定其能够识别FOG特异性状态。相关研究报告可以从STN神经动态解码不同运动活动，并依据活动状态调整刺激，同时改善一般运动障碍并维持核心运动症状控制。这为STN神经信号驱动aDBS提供了技术和临床可行性依据，而不是FOG特异性生物标志的验证。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "摘要没有报告患者数量、FOG患者比例、冻结事件数、冻结前后神经动态或具体频段。未提供解码准确率、效应量、置信区间及详细刺激参数。不能确定改善是否涉及FOG。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42297979_1",
+          "relation": "supports",
+          "note": "直接报告STN神经动态实时解码和活动依赖性刺激改善一般运动障碍。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "STN-LFP机器学习FOG预测提示可能进一步发展FOG特异性解码，但其事件级提前预测能力尚未得到验证。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C8",
+      "text": "STN-DBS刺激频率可以差异性影响站立和平衡及步态启动的不同运动阶段，但现有试验不能证明这种改善直接减少FOG。16名PD患者的随机交叉可行性试验显示，60 Hz低频刺激相较大于100 Hz高频刺激改善站立平衡及步态启动运动阶段的平衡，但未改善姿势准备阶段；临床移动能力、运动症状严重程度和步态后退指标没有明显条件间差异。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "双盲随机交叉设计提供干预证据，但摘要未报告具体效应量、置信区间和P值。没有FOG亚组、冻结事件级结局或STN神经活动记录，因此无法推断FOG特异性刺激机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42240331_1",
+          "relation": "supports",
+          "note": "直接报告低频与高频STN-DBS对站立和步态启动不同阶段平衡表现的差异性影响。"
+        },
+        {
+          "eid": "S3c_E_PMID_42403079_1",
+          "relation": "qualifies",
+          "note": "另一二级来源提及STN-DBS可能改善左旋多巴反应性FOG，但该治疗性陈述不能证明低频刺激的FOG特异性效果。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C9",
+      "text": "皮层或苍白球信号驱动的行为同步aDBS也可能改善一般步态指标及跌倒结局，但不能作为STN-FOG机制的直接证据。苍白球DBS研究报告行为同步aDBS改善步长变异、步长对称性，并在仅3名完成多日交叉阶段的参与者中观察到跌倒减少和个体化步态改善。这说明自适应神经调控具有一般步态获益潜力，但刺激靶点和FOG结局均不同。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "样本仅5人，多日阶段仅3人完成。记录来自皮层或苍白球，不是STN。没有Freezer亚组、冻结事件或FOG严重程度结局。跌倒次数不能替代FOG发生次数。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42297980_1",
+          "relation": "supports",
+          "note": "报告5名参与者均成功识别个体化步态阶段生物标志物。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297980_2",
+          "relation": "supports",
+          "note": "报告苍白球aDBS相较连续DBS改善步长变异和对称性。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297980_3",
+          "relation": "supports",
+          "note": "报告3名参与者完成多日阶段，并观察到跌倒减少和个体化步态改善。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297979_1",
+          "relation": "qualifies",
+          "note": "STN活动依赖性aDBS也报告一般步态改善，但不能据此将不同刺激靶点和不同队列的结果视为同一种FOG机制。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C10",
+      "text": "中脑运动区（MLR）的事件相关活动可能构成FOG发生前的另一重要神经生理标志，提示冻结并不一定由STN局部活动单独决定。在4名伴多巴胺治疗抵抗性FOG的患者中，38个随后发生FOG的步态启动试次相较115个未发生FOG的试次，出现冻结前过度且时间定位异常的MLR alpha同步，以及异常PPN beta活动调制。CuN和PPN还表现出不同的步态启动时频谱模式。这提供了比单纯易感性分组更接近事件级的神经生理证据，但记录位置并非STN。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "只有4名患者，153个试次不能视为153名独立患者。没有报告患者内聚类校正、精确频段边界、效应量或置信区间。冻结亚型、药物状态及刺激条件不明确。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42522567_1",
+          "relation": "supports",
+          "note": "报告CuN alpha活动在APA前增加，以及PPN beta去同步化和随后alpha调制，提供步态启动阶段的区域性神经动态证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42522567_2",
+          "relation": "supports",
+          "note": "直接比较FOG+与FOG−试次，发现随后冻结的试次在冻结发生前出现异常MLR alpha同步及PPN beta调制。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_3",
+          "relation": "qualifies",
+          "note": "分布式网络易感性模型将FOG解释为多脑区网络短暂失效，与非STN运动网络可能参与事件发生的观点相容，但该综述没有直接验证MLR机制。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C11",
+      "text": "FOG易感性还与边缘-认知及额叶网络活动变化有关，支持FOG可能涉及超出STN局部振荡的分布式网络状态。在24名PD患者的运动想象fMRI研究中，Freezer相较Non-freezer表现出更大的海马至中额回前部有效连接变化，该变化与freezing ratio相关。认知功能综述也总结了额叶、前额叶、后顶叶以及腹侧纹状体-precuneus-amygdala网络异常。这些结果支持认知和边缘网络参与FOG易感性，但不构成STN活动与实际冻结事件之间的直接证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "fMRI研究使用FOG运动想象而非实际冻结事件，连接变化不能证明发生在自然FOG之前或期间。相关性和有效连接模型不能单独证明因果。认知综述未提供具体原始研究和定量合并效应，可能存在研究异质性。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42297094_1",
+          "relation": "supports",
+          "note": "报告Freezer的海马至前部中额回连接变化及其与freezing ratio的相关关系。"
+        },
+        {
+          "eid": "S3c_E_PMID_42483310_1",
+          "relation": "supports",
+          "note": "综述总结Freezer的额叶、前额叶、后顶叶活动异常及腹侧纹状体-precuneus-amygdala耦合变化。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_3",
+          "relation": "supports",
+          "note": "提出多种神经退行性损害、共同病理和瞬时触发因素共同导致分布式运动网络接近功能失效阈值的模型。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_3",
+          "relation": "qualifies",
+          "note": "同一患者在Cognitive和Anxiety模块中的STN-LFP预测贡献方向不同，提示认知或情绪情境可能调节STN相关特征。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C12",
+      "text": "FOG评估工具和临床表型定义的异质性可能是不同研究中神经活动结果不一致的重要来源。不同评估工具定义的Freezer、Occasional freezer和Non-freezer群体具有不同的临床功能表现，特别是在360度旋转时间及部分运动功能指标方面。单病例纵向观察还显示报告性冻结、跌倒及旋转时间可以随时间共同变化，并出现后续功能恢复阶段。因此，仅依据问卷或单一临床项目定义FOG，可能导致研究纳入的患者并不具有相同的冻结表型或易感性。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "横断面研究未在摘要报告总样本数及各组人数，具体评估工具的敏感度和特异度未知。纵向证据只有一名患者，不能证明身体活动恢复导致FOG缓解。该证据说明表型定义可能影响队列构成，但没有直接证明其已经造成STN电生理研究之间的差异。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42270312_1",
+          "relation": "supports",
+          "note": "直接比较多种FOG评估工具定义的三类患者，并报告不同分类对应不同临床功能表现。"
+        },
+        {
+          "eid": "S3c_E_PMID_42270312_2",
+          "relation": "qualifies",
+          "note": "单病例长期观察显示FOG报告、跌倒和功能表现具有时间变化，但不能作为不同研究间表型差异的定量证据。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C13",
+      "text": "皮层-苍白球beta同步与转弯能力相关，提示与FOG相关的转弯障碍可能涉及更广泛的基底节网络beta动态，而不应全部归因于STN。成功转弯伴随beta活动降低和皮层-苍白球通信更加灵活，受损转弯则伴随过度beta同步。药物与DBS改善转弯时可能分别通过抑制苍白球异常beta通信和恢复皮层网络灵活性发挥作用。这是转弯障碍的神经生理比较证据，不是实际FOG事件证据。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "仅5名PD患者，摘要没有报告实际FOG事件、Freezer分组、具体DBS靶点及刺激参数。缺少beta效应量和统计检验细节。不能将受损转弯直接等同于FOG。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42251056_1",
+          "relation": "supports",
+          "note": "报告成功与受损转弯之间的beta活动和皮层-苍白球通信差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_42251056_2",
+          "relation": "supports",
+          "note": "报告药物和DBS可能通过不同机制改善转弯，提示网络通信灵活性与单一局部beta功率需要区分。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_1",
+          "relation": "qualifies",
+          "note": "FOG相关步态周期中的S1/SPL low-beta异常提示转弯和冻结可能涉及不同脑区及时间阶段，不能直接合并。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C14",
+      "text": "区域性神经递质异常可能构成FOG易感性的背景因素，但目前GABA及去甲肾上腺素证据不能定位为STN神经活动异常。PET研究发现Freezer相较Non-freezer在多个脑区存在较低GABAA受体可用性，包括小脑、扣带、海马旁回及左后壳核、苍白球等。MRS研究提示基底节GABA+与PD运动亚型及运动严重程度相关，但PIGD不等于FOG。另有综述提出LC去甲肾上腺素功能障碍与FOG有关。这些发现支持分布式神经化学易感性，但不能证明STN beta功率、beta burst或STN神经元放电发生相应变化。",
+      "level": "synthesis",
+      "status": "weak",
+      "uncertainty": "PET为患者表型级横断面比较，摘要没有报告各区域效应量和多重比较校正详情。MRS测量的是包含macromolecules及homocarnosine信号的GABA+，不是神经元放电。PIGD不是FOG特异性诊断。去甲肾上腺素证据来自叙述性综述。不同研究不能作为同一FOG队列的独立重复验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42400317_1",
+          "relation": "supports",
+          "note": "直接报告Freezer与Non-freezer之间多个脑区GABAA受体可用性差异，包括左后壳核和苍白球，但没有STN局部电生理结果。"
+        },
+        {
+          "eid": "S3c_E_PMID_42349894_1",
+          "relation": "qualifies",
+          "note": "综述将丘脑GABAA受体可用性与FOG联系起来，但其引用的Bohnen原始研究实际测量的是轴性UPDRS评分，并未证明FOG特异性关联。"
+        },
+        {
+          "eid": "S3c_E_PMID_42349894_2",
+          "relation": "qualifies",
+          "note": "原始Gong研究显示基底节GABA+与PIGD及运动严重程度相关，但没有提供FOG事件级证据，且TD与PIGD组间方向不同。"
+        },
+        {
+          "eid": "S3c_E_PMID_42301334_1",
+          "relation": "supports",
+          "note": "综述提出LC去甲肾上腺素功能障碍与FOG等短暂运动表现相关，但没有STN神经活动记录。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C15",
+      "text": "睡眠质量可能与PD轴性运动症状整体严重程度相关，但本批证据没有建立稳健的睡眠-FOG特异性关联。单夜EEG研究发现睡眠效率与轴性运动症状严重程度存在显著偏相关，但其与PIGD及临床评定FOG的关联在家族错误率校正后不再显著。REM潜伏期与自我报告FOG的关系仅属于探索性结果。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "样本28人，FOG结局来自临床评定或自我报告，而不是事件级步行记录。睡眠效率与FOG的关联未通过FWE校正。没有STN神经活动记录，不能据此推断STN振荡机制。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42290512_1",
+          "relation": "supports",
+          "note": "支持睡眠效率与轴性症状相关，但同时明确显示FOG和PIGD关联未通过FWE校正。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C16",
+      "text": "STN结构性病理受累不能直接用于解释PD-FOG中的STN功能活动变化。神经病理综述指出，STN神经元在PSP中较早且严重受累，在MSA中相对保留，在PD中受累程度较轻。六例PAGF-PSP病例中也观察到STN等脑区偶见tau包涵体。这些结果说明冻结步态可以出现在具有不同神经病理背景的疾病中，但PSP相关STN tau病理不能替代PD患者STN-LFP或神经元放电证据。",
+      "level": "finding",
+      "status": "supported",
+      "uncertainty": "证据来自叙述性综述及其对原始病例系列的二次转述，没有统一患者队列、患者级STN病理量化或FOG事件分析。PAGF-PSP与典型PD-FOG具有不同病理背景，不能跨疾病直接推广。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42331397_1",
+          "relation": "supports",
+          "note": "报告不同帕金森综合征之间STN结构病理受累程度的差异，尤其是PSP与PD的区别。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_2",
+          "relation": "supports",
+          "note": "转述六例PAGF-PSP病例存在STN神经元和胶质细胞tau包涵体，但没有STN活动测量。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_3",
+          "relation": "qualifies",
+          "note": "分布式网络模型强调结构病理和功能失效属于不同层次，不能由单一脑区病理直接推断事件期神经活动。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C17",
+      "text": "STN不同投射神经元亚群可能对运动输出具有不同甚至相反的功能作用，因此整体STN-LFP可能掩盖投射特异性活动差异。这一可能性得到动物实验的间接支持：EP投射STN神经元激活可以缓解异动症，但加重帕金森状态下的运动低下；RtTg投射神经元则呈现不同活动反应。这提示不能预设所有STN神经元在运动障碍中具有相同作用，但尚无证据证明这些亚群直接参与人类FOG。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "研究为小鼠LID模型，摘要没有报告动物数量、完整实验统计或FOG行为评估。运动低下不是FOG。动物投射通路结果向人类PD-FOG的推广属于跨物种机制推断。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42397913_1",
+          "relation": "supports",
+          "note": "直接操控STN不同投射亚群并观察到不同运动效应，为投射特异性STN输出机制提供动物实验依据，但没有冻结步态结局。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C18",
+      "text": "左旋多巴反应性FOG可能对STN-DBS产生积极临床反应，但本批证据仅提供二级定性陈述，不能据此推断STN内源性神经活动的变化方向。相关Editorial引用Moreau等人的研究，指出levodopa-responsive OFF-FOG可能对STN-DBS有积极反应。这属于刺激治疗效果的间接证据，而不是STN-LFP、beta活动或冻结前后神经动态的直接观察。",
+      "level": "finding",
+      "status": "weak",
+      "uncertainty": "来源为Opinion/Editorial，没有新患者数据或原始效应量。引用的Moreau研究匹配仍需核对。没有提供患者级响应比例、刺激参数及具体药物测试状态。不能把治疗有效直接解释为某一频段活动异常得到纠正。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42403079_1",
+          "relation": "supports",
+          "note": "二级来源提出levodopa-responsive FOG可能对STN-DBS有积极反应。"
+        },
+        {
+          "eid": "S3c_E_PMID_42240331_1",
+          "relation": "qualifies",
+          "note": "低频与高频STN-DBS的随机交叉试验显示部分平衡指标改善，但没有证明FOG特异性治疗效果。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C19",
+      "text": "本批证据中STN神经活动与FOG之间的因果证据明显弱于相关性和预测性证据。STN-LFP机器学习研究发现事件邻近预测，但没有选择性操控某个STN特征并观察FOG事件发生率变化。STN aDBS研究报告一般运动改善，STN低频刺激研究报告部分平衡改善，皮层低beta变化可被STN高频刺激调节，但这些结果均未直接证明特定STN神经活动变化导致FOG减少。治疗反应、模型预测和神经活动相关性必须分别解释。",
+      "level": "synthesis",
+      "status": "supported",
+      "uncertainty": "该判断限定于本批证据，不能代表全部已发表文献。STN刺激属于因果干预，但若没有同时测量明确的STN神经特征及事件级FOG结局，就无法确定具体神经活动指标的因果作用。Editorial二级治疗证据不能替代原始研究。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "模型预测与临床FOG时间邻近，但没有神经特征选择性干预或因果检验。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297979_1",
+          "relation": "qualifies",
+          "note": "STN活动依赖性aDBS改善一般运动障碍，但没有FOG特异性事件结局。"
+        },
+        {
+          "eid": "S3c_E_PMID_42240331_1",
+          "relation": "qualifies",
+          "note": "随机交叉刺激频率干预改善部分平衡指标，但没有FOG事件分析。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_2",
+          "relation": "qualifies",
+          "note": "STN高频刺激调节SPL low-beta活动，但摘要没有证明该神经变化导致FOG发生率或持续时间改变。"
+        },
+        {
+          "eid": "S3c_E_PMID_42403079_1",
+          "relation": "qualifies",
+          "note": "二级来源提出STN-DBS可能改善左旋多巴反应性FOG，但没有STN神经活动数据。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C20",
+      "text": "竞争性机制假说A：局部STN运动门控失效。正常运动启动需要适当的STN beta去同步化；如果患者在FOG易感步态中不能及时产生足够的beta去同步化，或去同步化的时间与实际运动启动不匹配，可能导致运动启动受阻并增加冻结概率。该假说预测，在同一患者内，随后发生FOG的试次应出现不同于匹配非冻结试次的STN beta去同步化幅度或时间延迟，并且这种变化应先于冻结行为。现有证据仅支持一般运动启动中的STN beta动态，尚未验证这一FOG机制。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "核心机制是基于一般运动启动电生理结果提出的推断，而不是已观察到的FOG事件期STN beta异常。也不能排除beta变化是运动减慢的结果或一般运动准备信号。需要直接比较FOG+和FOG−试次中的STN beta事件时间序列，并控制运动速度、步态相位及药物状态。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42422531_1",
+          "relation": "supports",
+          "note": "更强的运动前STN beta去同步化与较轻bradykinesia及更强运动加速度相关，为运动门控假说提供一般运动生理依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_4",
+          "relation": "qualifies",
+          "note": "模型可能在FOG起始前检测到STN-LFP信息，但没有证明该信息具体对应beta去同步化失败。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297979_1",
+          "relation": "qualifies",
+          "note": "STN动态可以解码一般运动状态，说明局部STN信号具有运动状态信息，但尚无FOG特异性验证。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C21",
+      "text": "竞争性机制假说B：触发因素依赖的分布式网络阈值失效。FOG可能不是由一个固定方向的STN beta异常引起，而是由认知负荷、焦虑、边缘系统调节及其他神经退行性或神经化学因素共同改变运动网络状态，使系统接近功能失效阈值。STN-LFP可能是这种网络状态的局部读出，其特征与FOG的关系会随诱发情境改变。该假说预测，Cognitive、Anxiety及Physical等条件下，STN特征与FOG的关系存在显著的情境交互作用，并且加入边缘-认知网络指标后，FOG预测能力应优于单独使用STN beta功率。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "同一患者的SHAP方向变化仅有单例依据，fMRI研究采用运动想象，网络阈值模型属于综述作者提出的概念框架。神经递质PET/MRS研究没有记录STN活动。尚未证明这些因素在同一患者或同一冻结事件中共同发生。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42239677_3",
+          "relation": "supports",
+          "note": "同一患者在Cognitive和Anxiety诱发条件下出现相反的STN-LFP特征归因方向，支持情境依赖性预测假说。"
+        },
+        {
+          "eid": "S3c_E_PMID_42297094_1",
+          "relation": "supports",
+          "note": "Freezer在FOG运动想象中出现更大的海马至前部中额回连接变化，提示边缘-认知网络参与FOG易感性。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_3",
+          "relation": "supports",
+          "note": "综述提出累积病理、共同病理、星形胶质细胞功能异常和瞬时触发因素共同降低网络功能阈值的模型。"
+        },
+        {
+          "eid": "S3c_E_PMID_42301334_1",
+          "relation": "supports",
+          "note": "LC去甲肾上腺素功能障碍被综述认为与FOG等短暂运动表现有关，可作为额外的网络调节因素。"
+        },
+        {
+          "eid": "S3c_E_PMID_42400317_1",
+          "relation": "qualifies",
+          "note": "Freezer存在多个脑区GABAA受体可用性差异，支持易感性可能具有分布式神经化学基础，但没有证明其与STN特征的直接联系。"
+        },
+        {
+          "eid": "S3c_E_PMID_42483310_1",
+          "relation": "supports",
+          "note": "认知综述总结额叶、顶叶和边缘网络异常，为情境依赖性网络机制提供间接背景。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C22",
+      "text": "竞争性机制假说C：皮层-STN步态周期相位协调失效。FOG可能并非由STN beta绝对功率升高或降低单独决定，而是由皮层与STN之间的beta活动在double-support、姿势调整和步伐执行等不同阶段失去正常协调造成。该假说预测，FOG+试次应出现特定步态相位下的皮层-STN相位同步、coherence或beta调制异常，而不是所有时间窗口内均出现相同方向的功率变化。STN高频刺激应能恢复特定步态相位的网络协调，并伴随冻结概率下降。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "现有摘录报告了FOG相关S1/SPL low-beta异常及STN刺激对SPL活动的调节，但没有提供STN自身beta变化方向、皮层-STN coherence或相位耦合的具体结果。刺激是否真正降低FOG也没有明确报告。机制需要同步皮层与STN记录验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42571859_1",
+          "relation": "supports",
+          "note": "FOG试次与非冻结试次之间存在步态周期相关的S1和SPL low-beta活动差异。"
+        },
+        {
+          "eid": "S3c_E_PMID_42571859_2",
+          "relation": "supports",
+          "note": "STN高频刺激可以调节double-support阶段SPL low-beta功率，为刺激影响步态相位相关网络活动提供干预依据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42251056_1",
+          "relation": "qualifies",
+          "note": "成功转弯与皮层-苍白球通信更加灵活相关，提示网络通信状态可能比单一区域beta功率更重要，但不是STN-FOG直接证据。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C23",
+      "text": "竞争性机制假说D：脑干运动区是FOG发生的近端执行节点，STN主要参与上游调节。该假说认为，STN及皮层网络可能改变运动准备和步态控制状态，但冻结事件的直接发生与MLR、CuN和PPN的节律调节异常有关。预测随后发生FOG的试次中，脑干运动区异常应比单独的STN功率变化更接近冻结起始，并且在控制脑干活动后，STN局部活动对事件预测的独立贡献可能下降。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "现有脑干证据来自4名患者和有限的试次级比较，没有同时提供完整STN事件相关结果。不能确定脑干异常是FOG原因、上游网络变化的下游表现，还是与冻结共同出现的活动。该机制需要STN与MLR同步记录及干预验证。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42522567_1",
+          "relation": "supports",
+          "note": "CuN和PPN在步态启动不同阶段具有不同的alpha和beta活动模式。"
+        },
+        {
+          "eid": "S3c_E_PMID_42522567_2",
+          "relation": "supports",
+          "note": "FOG+试次在冻结发生前出现MLR alpha同步及PPN beta调制异常，提供事件相关前期证据。"
+        },
+        {
+          "eid": "S3c_E_PMID_42331397_3",
+          "relation": "qualifies",
+          "note": "分布式网络失效模型支持多个运动网络节点共同参与FOG，但不能单独确定脑干是近端执行节点。"
+        }
+      ]
+    },
+    {
+      "cid": "P31_C24",
+      "text": "竞争性机制假说E：STN投射特异性输出决定不同运动障碍表型，整体STN-LFP只是多个功能不同的神经元亚群活动的混合信号。该假说预测，FOG相关变化可能局限于特定STN输出通路，而不同通路的活动甚至可能呈现相反方向，因此传统整体频谱分析可能掩盖真正与冻结相关的神经信号。需要在FOG动物模型及人类可获得的投射网络指标中检验不同输出通路的选择性参与。",
+      "level": "mechanism",
+      "status": "speculative",
+      "uncertainty": "目前只有小鼠异动症及运动低下实验支持STN投射亚群具有不同功能，尚无FOG动物或人类事件级投射特异性证据。将EP和RtTg投射结果推广到PD-FOG属于跨物种及跨表型推断。",
+      "evidence": [
+        {
+          "eid": "S3c_E_PMID_42397913_1",
+          "relation": "supports",
+          "note": "不同STN投射亚群的选择性激活产生不同运动效应，证明整体STN活动可能包含功能不同的神经元群体。"
+        },
+        {
+          "eid": "S3c_E_PMID_42239677_3",
+          "relation": "qualifies",
+          "note": "不同诱发情境下整体STN-LFP特征贡献方向不同，提示聚合信号可能包含复杂的状态依赖性，但不能证明存在投射特异性神经元机制。"
+        }
+      ]
+    }
+  ]
+}</escape>

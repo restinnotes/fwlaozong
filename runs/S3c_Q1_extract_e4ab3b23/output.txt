@@ -1,0 +1,1796 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:38101024; DOI:10.1016/j.parkreldis.2023.105952; PMCID:PMC10872230",
+    "title": "Subthalamic Functional Connectivity Associated with Freezing of Gait Dopa-Response",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:38101024_MUSC_prospective_cross_sectional_rs_fMRI",
+    "cohort_id_candidate": "MUSC_PD_FOG_cohort_possible_overlap_with_PMID:34102418",
+    "cohort_relation_basis": "本文明确指出，参与者纳入和排除标准的详细信息此前已发表，且该队列中PD-FOG与PD non-FOG组间差异此前已发表，均引用参考文献[12]。参考文献[12]为Lench DH等2021年发表的Paired inhibitory stimulation and gait training modulates supplemental motor area connectivity in freezing of gait，PMID:34102418，DOI:10.1016/j.parkreldis.2021.05.028。因此存在队列重叠的直接文字依据，但没有患者级ID、招募时间或样本交叉表，不能认定两篇论文使用完全相同的患者或完整重叠队列。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "E01",
+      "design": "前瞻性、横断面、观察性静息态功能磁共振成像研究；STN seed-to-voxel全脑功能连接分析。",
+      "population": "帕金森病伴FOG患者，dopa-responsive FOG组n=22，与dopa-unresponsive FOG组n=16比较。PD诊断依据UK Brain Bank Criteria。FOG依据nFOGQ报告冻结或UPDRS Item-14评分≥1判定，并由运动障碍专科医师确认。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 38,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未单独报告该影像对比的最终有效分析人数及有效BOLD数据人数。n_FOG_events和n_trials不适用：没有事件锁定的自然行走记录或试次分析。n_electrodes_contacts不适用：未进行电极或植入式神经电生理记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未区分akinetic、trembling-in-place、kinetic-no-trembling等亚型。研究使用临床FOG表型和dopa-response分组。",
+      "medication_phenotype": "ONOFF-FOG；两组均在OFF状态存在FOG，响应组在ON状态改善，非响应组在ON状态仍存在明显FOG。",
+      "experimental_medication_state": "静息态fMRI全部在medication ON状态采集。dopa-response分组依据运动障碍专科医师观察药物ON相对于OFF状态的冻结行为改善。扫描时具体药物、剂量及服药至扫描的时间未报告。",
+      "DBS_state_and_parameters": "研究未实施DBS干预或刺激。受试者既往DBS植入状态未报告。刺激频率、幅度、脉宽、触点和方向性均无报告。",
+      "task": "静息态fMRI，受试者注视十字。扫描持续4分30秒，119个volume，TR=2200 ms。不是直行、转弯、启动、双任务或实际FOG事件同步记录任务。",
+      "recording_location": "右侧STN，使用AAL atlas定义的STN seed，分析其与全脑BOLD信号的功能连接。不是STN局部电生理记录。",
+      "measure": "右STN seed-to-voxel静息态BOLD功能连接强度。采用功能连接相关系数及Fisher转换后的z值，比较dopa-responsive与dopa-unresponsive FOG患者。",
+      "frequency_and_analysis_window": "BOLD时间序列带通滤波0.008–0.09 Hz；使用完整4分30秒静息态扫描。GLM采用voxel-level p<0.01，cluster-level FWE校正p<0.05。",
+      "finding": "dopa-responsive FOG患者的右STN与左侧小脑蚓部（left cerebellar vermis）功能连接显著强于dopa-unresponsive FOG患者。",
+      "effect_estimate": "cluster-level FWE校正p=0.0182；cluster size=237 voxels；峰值MNI坐标(-8,-50,-16)。未报告两组连接强度差值、标准化效应量或置信区间。",
+      "statistical_unit_and_method": "患者级组间GLM分析；协变量包括年龄、病程和左旋多巴等效日剂量（LEDD）。采用cluster-level FWE校正。未报告该直接组间对比的精确有效样本数。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究领域级初评。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心MUSC队列；详细纳入排除标准转引既往研究[12]，本文未完整报告招募和流失流程。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由nFOGQ或UPDRS Item-14界定，且有运动障碍专科医师确认；但神经影像没有与实际冻结事件同步的事件级标签。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用头动校正、ART异常扫描识别和去噪；但作者承认3 mm BOLD空间分辨率相对于STN较大，不能排除partial voluming。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但响应组与非响应组年龄及病程存在差异，其他潜在混杂因素未被充分评估。",
+            "source_locator": "Methods—Functional Connectivity Statistics；Results—Characterizing Dopa-Responsive FOG"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "主要推断基于患者级功能连接数据及患者间比较，没有将FOG事件或步态试次作为独立患者样本重复计数。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用cluster-level FWE校正，但后续连接与临床评分相关分析使用同一数据中筛选出的显著cluster，存在分析选择和独立验证不足的问题。",
+            "source_locator": "Methods—Functional Connectivity Statistics；Results—STN Connectivity"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，亦未报告独立外部验证；该研究主要进行关联分析。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "本文未提供可核查的预注册分析计划或完整预设结局清单。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是STN与小脑的静息态BOLD功能连接证据，不是STN局部LFP、单单位、多单位活动或神经振荡证据。没有自然行走时的事件级FOG记录，不能确定连接变化发生于冻结前、冻结中还是恢复期。扫描只在药物ON状态完成。作者明确指出STN相对于BOLD空间分辨率较小，存在部分容积效应的可能。",
+      "quote": "Right STN connectivity to the left cerebellar vermis was significantly lower in the dopa-unresponsive FOG group relative to the dopa-responsive group.",
+      "source_locator": {
+        "section": "Results—STN Connectivity: Dopa-Response versus Dopa-Unresponsive FOG",
+        "page": null,
+        "figure_table": "Table 2; Figure 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E02",
+      "design": "前瞻性、横断面、观察性静息态fMRI研究；STN seed-to-voxel全脑功能连接分析。",
+      "population": "PD dopa-responsive FOG患者n=22与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 38,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未单独报告该影像对比的最终有效分析人数及有效BOLD数据人数。FOG事件和试次数不适用；无电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；未区分FOG运动学亚型。",
+      "medication_phenotype": "ONOFF-FOG；比较药物响应性不同的两组FOG患者。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；dopa-response分组依据临床ON与OFF状态的冻结行为变化。具体药物和扫描前剂量时间未报告。",
+      "DBS_state_and_parameters": "无DBS刺激干预；既往DBS状态未报告；刺激参数不适用或未报告。",
+      "task": "注视十字的静息态fMRI，4分30秒，119 volumes，TR=2200 ms；无步行任务。",
+      "recording_location": "右侧STN AAL atlas seed；全脑BOLD功能连接。",
+      "measure": "右STN与左侧inferior temporal gyrus/lateral occipital cortex之间的静息态功能连接。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整4分30秒静息态扫描；voxel p<0.01，cluster-level FWE p<0.05。",
+      "finding": "dopa-responsive FOG患者右STN与左侧下颞回/外侧枕叶皮层的功能连接强于dopa-unresponsive FOG患者。",
+      "effect_estimate": "cluster-level FWE校正p=0.0159；cluster size=242 voxels；峰值MNI坐标(-54,-72,-12)。连接强度差值及置信区间未报告。",
+      "statistical_unit_and_method": "患者级GLM组间比较；调整年龄、病程和LEDD；cluster-level FWE校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本；详细纳入排除标准引用既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "有临床医师确认FOG，但无与BOLD信号同步的事件级冻结标签。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用头动校正和去噪，但作者承认STN相对3 mm BOLD分辨率较小，不能排除部分容积效应。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但不能排除其他未测量混杂。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "以患者级连接值进行组间分析，无事件或试次级伪重复。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "组间cluster采用FWE校正，但同一数据中筛选的显著cluster用于后续关联分析。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或独立外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划或完整预设结局清单。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "反映静息态BOLD功能连接而非STN局部神经活动。没有实际FOG事件与连接信号的时间对应关系；扫描仅在ON状态进行。作者指出空间分辨率和部分容积效应可能影响STN信号解释。",
+      "quote": "Right STN connectivity to the left inferior temporal gyrus/lateral occipital cortex was significantly lower in the dopa-unresponsive FOG group relative to the dopa-responsive group.",
+      "source_locator": {
+        "section": "Results—STN Connectivity: Dopa-Response versus Dopa-Unresponsive FOG",
+        "page": null,
+        "figure_table": "Table 2; Figure 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E03",
+      "design": "前瞻性、横断面、观察性静息态fMRI研究；STN seed-to-voxel功能连接分析。",
+      "population": "PD dopa-responsive FOG患者n=22与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 38,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未单独报告最终有效影像样本数；无事件级FOG计数、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；没有按akinetic或trembling-in-place分类。",
+      "medication_phenotype": "ONOFF-FOG；dopa-responsive与dopa-unresponsive FOG患者。",
+      "experimental_medication_state": "fMRI在medication ON状态采集；临床分组根据OFF至ON冻结表现改变。",
+      "DBS_state_and_parameters": "无DBS干预；既往植入状态未报告；无刺激参数。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左侧STN AAL atlas seed；全脑BOLD。",
+      "measure": "左STN与左侧lateral occipital cortex的静息态功能连接强度。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；voxel p<0.01，cluster-level FWE p<0.05。",
+      "finding": "dopa-responsive FOG患者左STN与左侧外侧枕叶皮层的功能连接显著强于dopa-unresponsive FOG患者。",
+      "effect_estimate": "cluster-level FWE校正p=0.0030；cluster size=302 voxels；峰值MNI坐标(-52,-74,26)。未报告连接差值和置信区间。",
+      "statistical_unit_and_method": "患者级GLM；调整年龄、病程及LEDD；cluster-level FWE校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，纳排标准细节转引参考文献[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "有临床医师确认FOG，但没有神经信号与实际冻结事件同步的标签。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用标准去噪及头动校正，但存在STN空间分辨率不足和部分容积效应问题。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，不能排除其他混杂因素。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "以患者为统计单位进行连接强度分析。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "组间比较使用cluster-level FWE，但后续相关分析使用同一数据筛选出的显著区域。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，未报告外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有可核查的预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是静息态BOLD功能连接结果，不是STN局部神经振荡或电生理活动。没有事件级FOG记录。扫描仅在药物ON状态完成，且作者承认STN空间分辨率和部分容积效应限制。",
+      "quote": "Left STN connectivity to the lateral occipital cortex was significantly greater in the dopa-responsive FOG group.",
+      "source_locator": {
+        "section": "Results—STN Connectivity: Dopa-Response versus Dopa-Unresponsive FOG",
+        "page": null,
+        "figure_table": "Table 2; Figure 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E04",
+      "design": "前瞻性、横断面、观察性静息态fMRI研究；STN seed-to-voxel功能连接分析。",
+      "population": "PD dopa-responsive FOG患者n=22与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 38,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终有效影像分析人数未单独报告；没有事件级冻结记录、试次或电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；没有报告具体FOG运动学亚型。",
+      "medication_phenotype": "ONOFF-FOG；药物响应性不同的两组FOG患者。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床分组依据药物OFF和ON状态的冻结改善情况。",
+      "DBS_state_and_parameters": "未进行DBS刺激；既往DBS状态未知；无刺激参数。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左侧STN AAL atlas seed；全脑BOLD。",
+      "measure": "左STN与左侧postcentral gyrus（中央后回）的静息态功能连接。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；voxel p<0.01，cluster-level FWE p<0.05。",
+      "finding": "dopa-unresponsive FOG患者左STN与左侧中央后回的功能连接显著强于dopa-responsive FOG患者。",
+      "effect_estimate": "cluster-level FWE校正p<0.0001；cluster size=606 voxels；峰值MNI坐标(-28,-28,74)。未报告连接差值或置信区间。",
+      "statistical_unit_and_method": "患者级GLM，调整年龄、病程和LEDD；cluster-level FWE校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心招募，详细纳排标准引用既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床医师确认FOG，但没有事件级神经影像标签。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "虽然进行了头动处理和去噪，但作者承认BOLD分辨率相对于STN较低。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程及LEDD，但仍可能存在残余混杂。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级功能连接数据用于组间推断，无事件级伪重复。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "使用cluster-level FWE，但后续相关分析使用同一数据中的显著cluster。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未进行预测建模或外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册或完整预设分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "中央后回连接增强是组间静息态BOLD连接差异，不能直接等同于感觉输入异常、STN beta增强或冻结事件期间的神经活动。无事件级记录，且扫描仅在ON状态。",
+      "quote": "connectivity to a region within the postcentral gyrus was significantly greater in the dopa-unresponsive FOG group.",
+      "source_locator": {
+        "section": "Results—STN Connectivity: Dopa-Response versus Dopa-Unresponsive FOG",
+        "page": null,
+        "figure_table": "Table 2; Figure 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E05",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-responsive FOG组的连接强度比较。",
+      "population": "PD non-FOG controls n=17，与dopa-responsive FOG患者n=22比较。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本文未单独报告该影像比较的有效样本数；无FOG事件计数、步态试次和电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG比较组为ONOFF-FOG；对照组为PD non-FOG。",
+      "experimental_medication_state": "所有静息态fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "未进行DBS干预；既往植入状态未报告。",
+      "task": "注视十字的静息态fMRI；4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "右侧STN AAL atlas seed与左侧小脑蚓部。",
+      "measure": "右STN-左侧小脑蚓部静息态功能连接；比较Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照与dopa-responsive FOG患者之间的右STN-小脑连接没有显著差异。",
+      "effect_estimate": "t=1.37，df=37，p=0.1787。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-score；two-sample t-test。该控制组比较未在该段说明额外协变量调整。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心PD样本；详细纳排标准转引既往文献[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG组有临床确认，但未进行同步事件级冻结记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了头动校正和去噪，但STN空间分辨率限制由作者明确承认。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "观察性比较，未在该对照比较中明确说明完整协变量调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "使用患者级连接z-score进行两组比较。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "对照比较进行了多个cluster的t检验，本文未说明这些比较的多重检验校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "本结果只说明在该静息态BOLD连接指标上没有检出显著差异，不等于两组连接完全相同。扫描仅在ON状态；无实际FOG事件级神经数据。",
+      "quote": "PD control and dopa-responsive FOG groups did not differ in STN-cerebellar connectivity (t=1.37, df=37, p=0.1787).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E06",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-unresponsive FOG组的连接强度比较。",
+      "population": "PD non-FOG controls n=17，与dopa-unresponsive FOG患者n=16比较。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 16,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终影像分析人数未单独报告；FOG事件、试次和电极数据不适用。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG，且被分类为dopa-unresponsive；对照组为PD non-FOG。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "无DBS干预；既往植入状态未知。",
+      "task": "静息态fMRI，注视十字；4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "右侧STN AAL atlas seed与左侧小脑蚓部。",
+      "measure": "右STN-左侧小脑蚓部功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "dopa-unresponsive FOG组相对于PD non-FOG对照组表现出显著更负的右STN-小脑连接值。",
+      "effect_estimate": "t=2.68，df=31，p=0.0116。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，详细纳排标准转引既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由问卷和临床评分定义并经专科医师确认，但无事件级神经记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有标准预处理，但STN空间分辨率和部分容积效应存在限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "观察性对照比较，未明确说明该t检验调整所有潜在混杂因素。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "以患者级连接值为单位进行比较。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接区域进行对照比较，未报告该组t检验的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册或预设分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是静息态BOLD连接的组间差异，不是冻结事件期间的小脑-STN神经同步证据。更负的连接值不能直接等同于神经抑制或某一特定振荡增强。",
+      "quote": "the dopa-unresponsive group had significantly more negative connectivity values than PD controls (t=2.68, df=31, p=0.0116).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E07",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-responsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-responsive FOG患者n=22。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "影像比较的最终有效样本数未单独列出；无事件级冻结、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG；PD对照组无FOG。",
+      "experimental_medication_state": "fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "未实施DBS；既往DBS状态未报告。",
+      "task": "注视十字的静息态fMRI；4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左STN AAL atlas seed与左侧postcentral gyrus。",
+      "measure": "左STN-左侧中央后回功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照与dopa-responsive FOG患者之间，左STN-中央后回功能连接没有显著差异。",
+      "effect_estimate": "t=1.271，df=37，p=0.179。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列，纳排细节转引既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床确认FOG，但无事件级冻结记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了头动校正，但作者承认BOLD分辨率限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "对照t检验未明确说明完整协变量调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级连接值作为统计单位。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接区域进行对照比较，未明确报告该组检验的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不显著结果不证明两组功能连接完全等同。没有实际步态冻结事件记录，且影像采集只在药物ON状态完成。",
+      "quote": "Left STN connectivity with the postcentral cluster did not differ between PD controls and the dopa-responsive FOG group (t=1.271, df=37, p=0.179).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E08",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-unresponsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 16,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终影像分析人数未单独报告；没有事件级FOG、试次和电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG且dopa-unresponsive；对照组无FOG。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "无DBS干预；既往植入状态未报告。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左STN AAL atlas seed与左侧postcentral gyrus。",
+      "measure": "左STN-中央后回静息态功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "dopa-unresponsive FOG组的左STN-中央后回连接显著高于PD non-FOG对照组。",
+      "effect_estimate": "t=2.978，df=31，p=0.0056。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，纳排标准引用既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG经临床确认，但无事件级同步神经记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有标准预处理，但作者承认STN空间分辨率不足。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "观察性比较，未明确报告该对照t检验的完整混杂调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级功能连接值作为统计单位。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接cluster进行对照比较，未报告该组t检验的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "提示非响应FOG组的STN-感觉运动区域静息态连接较高，但不能据此推断冻结事件中中央后回活动增加或具体神经振荡机制。",
+      "quote": "PD controls had significantly less connectivity than the dopa-unresponsive FOG group (t=2.978, df=31, p=0.0056).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E09",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-responsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-responsive FOG患者n=22。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终影像分析人数未单独报告；FOG事件、试次和电极不适用。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG；PD对照组无FOG。",
+      "experimental_medication_state": "fMRI全部在medication ON状态采集。",
+      "DBS_state_and_parameters": "未实施DBS；既往DBS状态未报告。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "左STN-左侧枕叶cluster的静息态功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照组的左STN-左侧枕叶连接显著低于dopa-responsive FOG组。",
+      "effect_estimate": "t=2.232，df=37，p=0.0318。未报告效应量及置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，纳排标准转引参考文献[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床确认FOG，但无事件级同步冻结标签。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了去噪和头动校正，但STN空间分辨率限制存在。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "观察性对照比较，未说明该t检验的全部混杂调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级连接值进行比较。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接cluster进行对照检验，未报告该组比较的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该比较说明响应组相对PD对照存在连接增强，但不证明连接增强直接导致药物改善；没有冻结事件级记录。",
+      "quote": "Left STN connectivity with the left occipital cluster was significantly lower in PD controls relative to the dopa-responsive FOG group.",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E10",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-unresponsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 16,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终有效影像样本数未单独报告；无事件级冻结、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG且dopa-unresponsive；PD对照无FOG。",
+      "experimental_medication_state": "fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "未进行DBS刺激；既往植入状态未报告。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "左STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "左STN-左侧枕叶cluster的静息态功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照与dopa-unresponsive FOG组的左STN-枕叶连接没有显著差异。",
+      "effect_estimate": "t=0.966，df=31，p=0.342。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，纳排细节引用既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG经临床确认，但无事件级冻结记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "标准头动校正及去噪，但存在STN空间分辨率限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "对照比较没有明确说明完整混杂调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级功能连接值用于统计。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接cluster进行t检验，未说明对照比较的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未报告预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不显著不等于两组连接相等，也不能排除其他脑区或其他神经指标存在差异。",
+      "quote": "did not differ with the dopa-unresponsive FOG group (t=0.966, df=31, p=0.342).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E11",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-responsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-responsive FOG患者n=22。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 22,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终有效影像分析人数未单独报告；无事件、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG；对照组无FOG。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "未进行DBS干预；既往DBS状态未报告。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "右STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "右STN-左侧枕叶cluster功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照与dopa-responsive FOG组的右STN-左侧枕叶连接没有显著差异。",
+      "effect_estimate": "t=1.302，df=37，p=0.201。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心招募，详细纳排标准转引[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG经临床确认，但没有事件级冻结记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了头动校正，但作者指出STN空间分辨率限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "该对照t检验未明确报告全部混杂因素调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "使用患者级连接值进行比较。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "多个连接区域进行比较，但该组t检验未明确报告多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不显著结果不能解释为连接完全相同；该指标是静息态BOLD功能连接，而不是冻结期间的局部STN活动。",
+      "quote": "Right STN connectivity with the left occipital cluster did not significantly differ between PD controls and dopa-responsive (t=1.302, df=37, p=0.201).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E12",
+      "design": "横断面观察性静息态fMRI；PD non-FOG对照与dopa-unresponsive FOG组的连接比较。",
+      "population": "PD non-FOG controls n=17与dopa-unresponsive FOG患者n=16。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 16,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "最终有效影像分析人数未单独报告；无事件、试次或电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG组为ONOFF-FOG且dopa-unresponsive；对照组无FOG。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集。",
+      "DBS_state_and_parameters": "无DBS刺激；既往植入状态未报告。",
+      "task": "静息态fMRI，注视十字，4分30秒，119 volumes，TR=2200 ms。",
+      "recording_location": "右STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "右STN-左侧枕叶cluster静息态功能连接，Fisher-transformed z-scores。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。",
+      "finding": "PD non-FOG对照与dopa-unresponsive FOG组的右STN-左侧枕叶连接没有显著差异。",
+      "effect_estimate": "t=1.123，df=31，p=0.270。未报告效应量和置信区间。",
+      "statistical_unit_and_method": "患者级Fisher-transformed z-scores；two-sample t-test。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，纳排标准转引既往研究[12]。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床确认FOG，但没有事件级同步记录。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "标准去噪及头动校正，但STN空间分辨率存在限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "对照比较没有明确报告全部混杂因素调整。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级连接值用于统计。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "进行了多个连接区域的对照检验，但未报告这些检验的多重校正。",
+            "source_locator": "Results—STN Connectivity Relative to PD Controls"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "不显著差异不能证明两组连接相同，也不能排除其他STN连接区域的差异。",
+      "quote": "or unresponsive FOG group (t=1.123, df=31, p=0.270).",
+      "source_locator": {
+        "section": "Results—STN Connectivity Relative to PD Controls",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E13",
+      "design": "横断面观察性神经影像-临床表型相关研究；患者级partial Spearman相关分析。",
+      "population": "38名FOG患者中，35名有定量UPDRS Item-14 ON/OFF变化评分；包含dopa-responsive和dopa-unresponsive FOG患者。",
+      "n_enrolled": 55,
+      "n_analyzed": 35,
+      "n_patients_with_FOG": 35,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "35名FOG患者的dopa-response有定量UPDRS Item-14变化评分，原文明确报告。有效影像数据最终人数没有独立列出。FOG事件数和试次数不适用；无电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；采用UPDRS Item-14量化冻结严重程度变化。",
+      "medication_phenotype": "ONOFF-FOG；分析FOG患者对左旋多巴治疗的临床反应程度。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床FOG反应评分比较药物ON与OFF状态。具体药物剂量和两次评估间隔未报告。",
+      "DBS_state_and_parameters": "无DBS刺激干预；既往DBS状态未报告。",
+      "task": "静息态fMRI，注视十字。临床结局为药物ON与OFF状态UPDRS Item-14变化；非神经记录期间实际冻结事件。",
+      "recording_location": "右侧STN AAL atlas seed与左侧小脑蚓部。",
+      "measure": "右STN-小脑功能连接强度与UPDRS Item-14 ON/OFF变化评分之间的相关性。连接强度使用显著cluster内平均beta值及Fisher-transformed correlation coefficient表示。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整4分30秒静息态扫描。Spearman相关在年龄、病程和LEDD线性回归残差上计算；四项相关采用Bonferroni校正，阈值p<0.0125。",
+      "finding": "右STN-小脑功能连接强度与药物诱导的UPDRS Item-14变化呈正相关。作者解释为较强STN-小脑连接与较大的FOG药物反应相关。",
+      "effect_estimate": "Spearman partial correlation ρ=0.419，p=0.0122；通过四项相关的Bonferroni阈值0.0125。未报告置信区间。ON/OFF变化分数的具体减法方向未在本文明确说明。",
+      "statistical_unit_and_method": "患者级相关分析；对年龄、病程和LEDD进行线性回归后，对残差进行Spearman相关；四项相关采用Bonferroni校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列；35/38 FOG患者有定量UPDRS Item-14变化评分，缺失3人。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "UPDRS Item-14用于定量FOG反应，评分是在ON/OFF评估后获得；不是与神经信号同步的事件级冻结测量。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "经过标准预处理和头动校正，但STN空间分辨率及部分容积效应存在限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但其他混杂因素仍可能影响连接和药物反应。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "以患者为单位进行相关分析，而不是把冻结事件或试次作为独立样本。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "四项相关采用Bonferroni校正，但相关区域是在同一数据集的组间显著cluster中选取。",
+            "source_locator": "Methods—Functional Connectivity Statistics；Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或独立验证队列。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册的相关分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "连接测量来自药物ON状态的静息态fMRI，FOG结局是ON/OFF UPDRS Item-14变化而非事件级冻结次数。该结果不能确定小脑-STN连接在FOG发生前或发生时的动态变化。相关不代表因果。",
+      "quote": "the right STN and cerebellum (ρ=0.419, p=0.0122) were correlated with change in FOG severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E14",
+      "design": "横断面观察性神经影像-临床表型相关研究；患者级partial Spearman相关分析。",
+      "population": "有定量UPDRS Item-14变化评分的FOG患者；35/38名FOG患者具有该定量评分。",
+      "n_enrolled": 55,
+      "n_analyzed": 35,
+      "n_patients_with_FOG": 35,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "原文报告35名FOG患者有定量Item-14变化评分；有效影像人数未单独列出。没有事件计数、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "ONOFF-FOG；dopa-response通过ON/OFF UPDRS Item-14变化量化。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床评分比较ON与OFF状态。",
+      "DBS_state_and_parameters": "未进行DBS干预；既往DBS状态未报告。",
+      "task": "静息态fMRI；临床药物挑战前后UPDRS Item-14评分比较。无事件级FOG神经记录。",
+      "recording_location": "左STN AAL atlas seed与左侧postcentral gyrus。",
+      "measure": "左STN-左侧中央后回功能连接强度与UPDRS Item-14 ON/OFF变化评分的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。partial Spearman相关；年龄、病程、LEDD残差调整；Bonferroni阈值0.0125。",
+      "finding": "左STN-中央后回功能连接与UPDRS Item-14变化呈负相关。作者认为较强的该连接与较低的FOG药物反应相关。",
+      "effect_estimate": "Spearman partial correlation ρ=-0.432，p=0.0096；通过Bonferroni校正阈值0.0125。置信区间未报告。",
+      "statistical_unit_and_method": "患者级partial Spearman相关；先回归调整年龄、病程和LEDD，再对残差进行相关分析；Bonferroni校正四项相关。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列，FOG定量反应仅在35/38患者中获得。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "使用UPDRS Item-14变化量化药物反应，没有与BOLD同步的实际冻结事件记录。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "有标准去噪和头动校正，但STN空间分辨率较低。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，其他潜在混杂仍无法排除。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级相关分析，没有将事件或试次当作独立患者。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "四项相关采用Bonferroni校正，但使用同一数据集筛选的显著cluster。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型，也没有外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "负相关反映患者间静息态连接与临床药物反应评分之间的关联，不是冻结事件期间的中央后回神经活动增强证据。无法区分感觉整合、运动准备或其他网络机制。",
+      "quote": "the left STN and left postcentral gyrus (ρ=−.432, p=0.0096) were correlated with change in FOG severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E15",
+      "design": "横断面观察性神经影像-临床表型相关研究；患者级partial Spearman相关分析。",
+      "population": "有定量UPDRS Item-14变化评分的FOG患者；原文报告35/38名FOG患者有该评分。",
+      "n_enrolled": 55,
+      "n_analyzed": 35,
+      "n_patients_with_FOG": 35,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "35名FOG患者有定量Item-14评分；最终有效影像样本数未单独报告。无事件、试次或电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "ONOFF-FOG；按药物ON/OFF的FOG变化量化响应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床评分为药物ON与OFF状态变化。",
+      "DBS_state_and_parameters": "未进行DBS刺激；既往DBS状态未报告。",
+      "task": "静息态fMRI；UPDRS Item-14临床药物反应评分；没有神经记录期间的实际FOG任务。",
+      "recording_location": "左STN AAL atlas seed与左侧occipital gyrus/cluster。",
+      "measure": "左STN-左侧枕叶功能连接强度与UPDRS Item-14 ON/OFF变化的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；partial Spearman相关；调整年龄、病程、LEDD；Bonferroni阈值0.0125。",
+      "finding": "左STN-左侧枕叶功能连接强度与FOG药物反应评分呈正相关。作者解释为较强连接与较大的FOG药物改善相关。",
+      "effect_estimate": "Spearman partial correlation ρ=0.501，p=0.0022；通过Bonferroni校正。置信区间未报告。",
+      "statistical_unit_and_method": "患者级partial Spearman相关；使用年龄、病程和LEDD回归残差；Bonferroni校正四项相关。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列，只有35/38名FOG患者有定量Item-14反应数据。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床结局采用UPDRS Item-14变化，没有事件级神经信号标签。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用标准预处理，但存在STN空间分辨率及部分容积效应限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程、LEDD，但残余混杂不能排除。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "采用患者级连接值和患者级临床评分。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "采用四项相关的Bonferroni校正，但相关区域源自同一数据集的显著组间cluster。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或独立验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是静息态功能连接与临床FOG药物反应之间的患者级相关，不是枕叶活动导致冻结改善的因果证据。没有事件级步态记录。",
+      "quote": "the left STN and left occipital gyrus (ρ=.501, p=0.0022) were correlated with change in FOG severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E16",
+      "design": "横断面观察性神经影像-临床表型相关研究；患者级partial Spearman相关分析。",
+      "population": "有定量UPDRS Item-14变化评分的FOG患者；原文报告35/38名FOG患者有该评分。",
+      "n_enrolled": 55,
+      "n_analyzed": 35,
+      "n_patients_with_FOG": 35,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "35名FOG患者有定量Item-14评分；最终有效影像数据人数未独立列出。无事件、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "ONOFF-FOG；按药物ON/OFF时FOG变化量化响应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床FOG反应比较药物ON和OFF状态。",
+      "DBS_state_and_parameters": "未实施DBS；既往DBS植入状态未报告。",
+      "task": "静息态fMRI；UPDRS Item-14药物反应评分；非事件级步态任务。",
+      "recording_location": "右STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "右STN-左侧枕叶功能连接强度与UPDRS Item-14 ON/OFF变化评分的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；partial Spearman相关；调整年龄、病程和LEDD；Bonferroni阈值0.0125。",
+      "finding": "右STN-左侧枕叶功能连接强度与UPDRS Item-14变化呈正相关。作者将其解释为较强连接与较大的FOG药物反应相关。",
+      "effect_estimate": "Spearman partial correlation ρ=0.516，p=0.0015；通过Bonferroni校正。未报告置信区间。",
+      "statistical_unit_and_method": "患者级partial Spearman相关；年龄、病程、LEDD残差调整；四项相关采用Bonferroni校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本；FOG定量反应仅在35/38患者中获得。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "采用UPDRS Item-14药物前后变化，不是事件级冻结测量。",
+            "source_locator": "Methods—Study Participants；Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了头动校正和去噪，但作者指出STN空间分辨率限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但不能排除未测量混杂。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "以患者级数据进行相关分析。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "四项相关采用Bonferroni校正，但相关区域来自同一数据集筛选的显著cluster。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "未建立预测模型或外部验证。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划。",
+            "source_locator": "Methods；Results"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果反映右STN-枕叶静息态功能连接与临床FOG药物反应之间的关联，不能证明视觉网络参与了特定冻结事件，也不能推断神经振荡方向。",
+      "quote": "the right STN and left occipital cluster (ρ=.516, p=0.0015) were correlated with change in FOG severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E17",
+      "design": "横断面观察性静息态fMRI与临床结局相关分析；患者级相关分析。",
+      "population": "FOG患者；作者报告STN显著cluster与整体运动评分变化的相关分析。该Part-III相关分析的具体有效样本数未单独报告。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文没有单独给出UPDRS Part-III相关分析的有效样本数、相关系数及p值。FOG事件和试次不适用；无电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG患者ONOFF-FOG；本项结局为整体运动症状药物反应，而不是FOG特异性反应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态采集；临床结局为UPDRS Part-III药物ON/OFF变化。",
+      "DBS_state_and_parameters": "未实施DBS；既往植入状态未报告。",
+      "task": "静息态fMRI；临床UPDRS Part-III ON/OFF评分变化。无事件级步态冻结记录。",
+      "recording_location": "右STN AAL atlas seed与左侧小脑蚓部。",
+      "measure": "右STN-小脑功能连接强度与UPDRS Part-III整体运动评分ON/OFF变化之间的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描。作者称使用与FOG反应相关分析相同的连接cluster；具体本项统计参数未分别报告。",
+      "finding": "右STN-小脑功能连接强度与UPDRS Part-III整体运动评分变化没有显著相关。",
+      "effect_estimate": "作者报告not correlated；没有给出该项相关系数、p值、置信区间或效应量。",
+      "statistical_unit_and_method": "患者级相关分析；论文前述相关方法为调整年龄、病程和LEDD后的Spearman残差相关，但该项Part-III分析的具体N和统计值未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列；本项相关分析的具体样本数未报告。",
+            "source_locator": "Methods—Study Participants；Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "UPDRS Part-III是整体运动评分，不是事件级FOG测量。",
+            "source_locator": "Discussion—Limitations"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "标准预处理，但作者指出STN空间分辨率和部分容积效应限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，其他潜在混杂无法排除。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "分析基于患者级连接与临床评分。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "FOG相关分析采用Bonferroni，但Part-III分析的独立校正和完整统计值未分别报告。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册计划，且本项相关系数和p值未给出。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "作者只报告无相关，没有提供具体统计量。该阴性结果不能证明该连接与整体运动反应绝对无关。与FOG特异性评分的相关结果相比，这一发现提示结局特异性，但不能直接证明神经机制只作用于FOG。",
+      "quote": "the strength of functional connectivity between the STN and these same clusters was not correlated with overall change in motor severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E18",
+      "design": "横断面观察性静息态fMRI与临床结局相关分析。",
+      "population": "FOG患者；UPDRS Part-III整体运动评分变化与STN连接强度的相关分析。具体有效样本数未单独报告。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未报告该项Part-III相关的独立N、rho、p值和置信区间；无事件、试次或电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG患者ONOFF-FOG；本项临床结局为整体运动药物反应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态；临床结局比较UPDRS Part-III ON/OFF变化。",
+      "DBS_state_and_parameters": "未进行DBS刺激；既往植入状态未报告。",
+      "task": "静息态fMRI；UPDRS Part-III ON/OFF变化评分；非事件级冻结任务。",
+      "recording_location": "左STN AAL atlas seed与左侧postcentral gyrus。",
+      "measure": "左STN-左侧中央后回功能连接与UPDRS Part-III整体运动评分变化之间的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；该项相关的具体分析窗口和数值未分别报告。",
+      "finding": "左STN-中央后回功能连接与UPDRS Part-III整体运动评分变化未报告显著相关。",
+      "effect_estimate": "没有报告具体rho、p值、置信区间或效应量；仅报告与整体运动评分变化不相关。",
+      "statistical_unit_and_method": "患者级相关分析；前述方法为调整年龄、病程和LEDD的Spearman残差相关；该项独立N及统计值未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，具体Part-III相关分析人数未报告。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "整体UPDRS Part-III并非事件级FOG终点。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "进行了标准去噪，但STN空间分辨率及部分容积效应限制仍存在。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但残余混杂无法排除。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "患者级相关分析，没有事件级重复计数。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "该Part-III分析的独立统计值和多重校正情况未分别提供。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，且阴性结果没有具体统计值。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "没有具体统计值，无法判断效应估计精度或是否存在统计功效不足。不能将未显著相关解释为生物学上的零效应。",
+      "quote": "was not correlated with overall change in motor severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E19",
+      "design": "横断面观察性静息态fMRI与临床结局相关分析。",
+      "population": "FOG患者；左STN枕叶连接与UPDRS Part-III整体运动评分变化的相关性。具体分析人数未单独报告。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未报告该项Part-III相关分析的独立有效样本数、相关系数和p值。无事件、试次或电极记录。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG患者ONOFF-FOG；临床结局为整体运动症状药物反应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态；UPDRS Part-III为药物ON/OFF评分变化。",
+      "DBS_state_and_parameters": "未实施DBS刺激；既往植入状态未报告。",
+      "task": "静息态fMRI；临床UPDRS Part-III ON/OFF评分变化。",
+      "recording_location": "左STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "左STN-左侧枕叶功能连接强度与UPDRS Part-III变化之间的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；本项具体统计窗口和分析N未分别报告。",
+      "finding": "左STN-枕叶功能连接强度与UPDRS Part-III整体运动评分变化没有报告显著相关。",
+      "effect_estimate": "具体rho、p值、置信区间和效应量均未报告。",
+      "statistical_unit_and_method": "患者级相关分析；论文前述方法采用调整年龄、病程、LEDD后的Spearman残差相关，但本项独立统计值未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心队列；该项相关分析的有效样本数未报告。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "UPDRS Part-III是整体运动结局，并非FOG事件级标签。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "存在BOLD空间分辨率和部分容积效应限制。",
+            "source_locator": "Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "虽然调整年龄、病程和LEDD，其他混杂因素未完全排除。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "采用患者级相关分析。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "本项Part-III结果未分别报告具体统计值和校正情况。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "没有预注册分析计划，未给出本项阴性相关的完整数值。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "没有报告相关系数及p值，无法独立核查阴性关联的统计精度。不能将其解释为枕叶-STN连接与整体运动症状绝对无关。",
+      "quote": "was not correlated with overall change in motor severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "E20",
+      "design": "横断面观察性静息态fMRI与临床结局相关分析。",
+      "population": "FOG患者；右STN-左枕叶连接与UPDRS Part-III整体运动评分变化的相关性。具体有效分析人数未单独报告。",
+      "n_enrolled": 55,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "全文未报告该项Part-III分析的独立样本数、rho、p值及置信区间。没有事件、试次或电极数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported。",
+      "medication_phenotype": "FOG患者ONOFF-FOG；本项考察整体运动评分的药物反应。",
+      "experimental_medication_state": "静息态fMRI在medication ON状态；UPDRS Part-III比较药物ON/OFF变化。",
+      "DBS_state_and_parameters": "没有DBS干预；既往DBS状态未报告。",
+      "task": "静息态fMRI；临床UPDRS Part-III ON/OFF变化评分；非事件级冻结任务。",
+      "recording_location": "右STN AAL atlas seed与左侧occipital cluster。",
+      "measure": "右STN-左侧枕叶功能连接与UPDRS Part-III整体运动评分ON/OFF变化的相关性。",
+      "frequency_and_analysis_window": "BOLD bandpass 0.008–0.09 Hz；完整静息态扫描；本项具体分析样本和统计参数未分别报告。",
+      "finding": "右STN-左枕叶功能连接强度与UPDRS Part-III整体运动评分变化没有报告显著相关。",
+      "effect_estimate": "具体相关系数、p值、置信区间和效应量均未报告；仅报告无相关。",
+      "statistical_unit_and_method": "患者级相关分析；论文前述相关分析采用年龄、病程和LEDD残差调整的Spearman方法；本项具体N及统计值未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；观察性神经影像关联研究。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单中心样本，本项相关分析的独立有效人数未报告。",
+            "source_locator": "Methods—Study Participants"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "UPDRS Part-III衡量整体运动症状，不是FOG事件级标签。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "some_concerns",
+            "reason": "采用标准预处理，但存在STN空间分辨率和部分容积效应限制。",
+            "source_locator": "Methods—MRI Data Collection and Preprocessing；Discussion—Limitations"
+          },
+          {
+            "domain": "混杂因素",
+            "judgement": "some_concerns",
+            "reason": "调整年龄、病程和LEDD，但未排除全部潜在混杂因素。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "low",
+            "reason": "采用患者级相关分析。",
+            "source_locator": "Methods—Functional Connectivity Statistics"
+          },
+          {
+            "domain": "多重比较",
+            "judgement": "some_concerns",
+            "reason": "本项整体运动评分相关的具体统计量及校正情况未单独报告。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "无预测模型。",
+            "source_locator": "Methods—Statistical Analyses"
+          },
+          {
+            "domain": "选择性报告",
+            "judgement": "unclear",
+            "reason": "未提供预注册分析计划，且未报告该项阴性相关的完整统计值。",
+            "source_locator": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "未提供该项相关的独立统计值，无法核查效应精度。该结果不能解释为STN-枕叶连接完全不参与整体运动药物反应。",
+      "quote": "was not correlated with overall change in motor severity",
+      "source_locator": {
+        "section": "Results—Relationship Between STN-CLR Connectivity and Degree of Dopa-Response",
+        "page": null,
+        "figure_table": "Figure 3",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

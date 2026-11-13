@@ -1,0 +1,377 @@
+从下面的论文中提取与研究问题有关的证据。只提取论文里实际报告的内容，不要补充论文外的知识。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+每条证据是一个具体发现（一项比较、一个相关、一个效应），要写清研究条件，因为研究之间的冲突常常来自条件不同（例如药物状态、刺激状态、任务范式、测量方法、病人分组标准、样本量）。
+- basis 写 fulltext（有全文且你读了全文）或 abstract（只有摘要）。
+- quote 摘一句原文（英文原句，不超过 40 词）作为出处。
+- 论文自己承认的局限和你看出的方法学问题写进 limitations。
+- 综述类文章：只提取它报告的定量汇总或明确的观点，design 写 review/meta-analysis。
+- 没有相关证据就给空数组。
+
+只输出一个 JSON：{"evidence":[{"pid":"","design":"","population":"","n":"","condition":"","measure":"","finding":"","effect":"","limitations":"","quote":"","basis":"fulltext|abstract"}]}
+
+【论文】
+pid: PMID:40504072
+题目: Differential Effects of Levodopa and Stimulation on Post-Surgery Freezing of Gait in Subthalamic Nucleus Deep Brain Stimulation Parkinson's Disease Patients: A Clinical and Kinematic Analysis.
+年份: 2025
+全文：
+# Differential Effects of Levodopa and Stimulation on Post‐Surgery Freezing of Gait in Subthalamic Nucleus Deep Brain Stimulation Parkinson's Disease Patients: A Clinical and Kinematic Analysis
+
+## Abstract
+The long‐term efficacy of high‐frequency subthalamic nucleus deep brain stimulation (STN‐DBS) on freezing of gait (FOG) remains unclear. We aimed to study the mechanism and optimal therapeutic approach to long‐term post‐surgery FOG. The aim was to assess the mechanism and optimal therapeutic approach to long‐term post‐surgery FOG. Seventeen Parkinson's disease (PD) STN‐DBS patients with a FOG score (item 3.11) ≥2 in the MedON/StimON condition were evaluated under 5 experimental conditions, including a low‐frequency (60 Hz) condition maintaining the same total energy delivered. In each condition, gait and FOG episodes (#FOG) were assessed using clinical (eg, a 3 × 14‐m Stand‐Walk‐Sit Test) and kinematic data from inertial measurement units (IMU). Compared to MedOFF/StimOFF, #FOG significantly decreased in the MedON/StimON 130‐Hz condition. Either stimulation or levodopa (LD) (MedOFF/StimON or MedON/StimOFF) also significantly reduced #FOG and Stand‐Walk‐Sit Test (SWS) time compared to MedOFF/StimOFF. No significant difference in #FOG episodes or SWS time was found between 130 and 60 Hz, though 60‐Hz stimulation had lower axial scores. Individual responses to LD or stimulation varied: (1) 3 patients improved #FOG with LD but worsened with stimulation, whereas 5 exhibited the reverse; (2) in 9 patients, low‐frequency stimulation outperformed high‐frequency stimulation in reducing #FOG. Gait variability was the strongest kinematic dimension associated with FOG, with severity accurately identified via a neural network trained on sensor data. Post‐DBS FOG in the best‐functional state is largely therapy resistant, partially improved by stimulation and medication. Individual variability in responses to LD and stimulation underscores the need to determine FOG circuit mechanisms, as treatment remains an unmet clinical need.
+
+Freezing of gait (FOG) is characterized by a sudden and transient reduction in forward progression of the feet despite the intention to walk.
+1
+, 
+2
+, 
+3
+, 
+4
+, 
+5
+ FOG is a prevalent symptom in Parkinson's disease (PD), significantly impairing quality of life and increasing fall risk.
+6
+ Although subthalamic nucleus deep brain stimulation (STN‐DBS) has been beneficial in improving appendicular symptoms, its impact on axial symptoms appears to diminish over time.
+7
+, 
+8
+, 
+9
+, 
+10
+ Regarding FOG, despite an initial benefit observed in the first years post‐surgery, this effect progressively wanes,
+7
+, 
+8
+, 
+9
+, 
+10
+, 
+11
+, 
+12
+, 
+13
+, 
+14
+ with FOG emerging in the best‐functional state (medication ON and stimulation ON).
+14
+, 
+15
+, 
+16
+
+The etiology of best‐functional‐state FOG remains unclear. Disease progression with involvement of nondopaminergic pathways leads to a loss of levodopa (LD) and stimulation responses,
+8
+, 
+17
+ suboptimal targeting,
+18
+, 
+19
+, 
+20
+ stimulation‐induced effects,
+15
+, 
+21
+ structural brain lesions due to electrode placement, or inadequate stimulation settings or LD dose, which have been proposed as possible mechanisms
+8
+ that remain to be tested. Additionally, low‐frequency stimulation (LFS) has been suggested as a potential strategy to ameliorate FOG, but contradictory results are found across studies.
+15
+, 
+21
+, 
+22
+, 
+23
+, 
+24
+, 
+25
+ The presence of multiple mechanisms suggests that FOG pathophysiology is not uniform among individuals, with potential significant interindividual variability. Due to this complexity, individualized manipulation of specific treatments, such as LD and stimulation, may help elucidate the underlying pathophysiologic processes.
+
+The complexity of FOG is further enhanced by its paroxysmal nature and different phenotypes. Here, subjective metrics may not capture all phenomenological complexity and differential modulation by therapy.
+26
+, 
+27
+, 
+28
+ To address these challenges, integrating unbiased assessment tools (kinematic analysis and wearable sensors) in gait analysis becomes crucial.
+26
+
+In the current study, we used both clinical and inertial‐sensor‐based tools to test FOG response to stimulation and medication in advanced PD patients subjected to STN‐DBS and develop some putative mechanisms (as stimulation‐induced FOG or possible loss of response). Kinematic gait analysis was performed in others to complement the clinical assessments using objective gait metrics. We enrolled patients presenting with FOG on medication ON/stimulation ON state, a major problem in DBS clinics. We expanded our main objective by assessing individual responses of FOG to medication and high‐frequency (130 Hz) and energy‐matched low‐frequency (60 Hz) stimulation, and uncovering kinematic variables related to FOG across conditions. This may provide important advances in managing these patients and understanding high‐level control of gait.
+
+Our main hypothesis was that in patients with severe postsurgical freezing of gait, both LD and STN‐DBS can improve freezing of gait. Specifically, we expect that simultaneous LD and stimulations would significantly reduce the FOG episodes. Additionally, we hypothesize that kinematic gait analysis using wearable sensors can objectively detect FOG episodes and correlate with clinical assessments. Furthermore, we anticipate variability in individual patient responses to stimulation and medication, reflecting the heterogeneity of FOG pathophysiology.
+
+## Patients and Methods
+
+We conducted a cross‐sectional and unblinded study to assess the effect of LD and stimulation on post‐surgery FOG. We recruited patients presenting with FOG in the ON condition defined as a score ≥2 on item 3.11 of the Movement Disorder Society unified Parkinson's Disease Rating Scale (MDS‐UPDRS III) in the MedON/StimON condition. Clinical evaluations were conducted under 5 different conditions by a movement disorder expert (R.B.): (1) medication OFF/stimulation ON, (2) medication OFF/stimulation OFF, (3) medication ON/stimulation OFF, (4) medication ON/stimulation ON at 130‐Hz high‐frequency stimulation (HFS), and (5) medication ON/stimulation ON at 60‐Hz LFS. On the LFS, voltage was adjusted to maintain equivalent levels of energy. Number of FOG episodes (#FOG episodes) and gait time (Stand‐Walk‐Sit Test [SWS] time) were assessed during an SWS test where patients wore a set of 7 sensors positioned in the pelvis, right and left thighs, legs, and feet. Motor evaluations using the MDS‐UPDRS III,
+29
+ axial subscore (items 3.9–3.12),
+29
+ and nonaxial subscore were secondary endpoints. The primary outcome of the study was the difference in the number of FOG episodes between MedOFF/StimOFF and MedON/StimON 130 Hz. Secondary outcomes were (1) the change in the number of FOG episodes between the MedOFF/StimOFF and the MedON/StimOFF and the MedOFF/StimON conditions, (2) the differences in the number of FOG episodes between the 130‐ and the 60‐Hz conditions, and (3) the association between the automatic detection of FOG and FOG assessed using clinical gait metrics. Exploratory analysis was performed to dissect kinematic dimensions (Table S1) related to FOG. The statistical analysis was conducted in alignment with the prespecified hypothesis defined in our primary and secondary outcomes. A detailed description of methods and statistical analysis can be found in Supplementary Methods section.
+
+## Results
+
+Seventeen PD patients were included in the study: 71% male, disease onset at 51.9 ± 5.9 years, and age at bilateral STN‐DBS 62.2 ± 5.9 years. Patients were evaluated 7.7 ± 4.6 years after surgery. A full clinical description is presented in Table 1. FOG emerged 24.1 ± 2.11 months after surgery. Before surgery, none of the patients exhibited severe gait or FOG in their best ON state (0.6 ± 0.6 of item 3.10 and 0.4 ± 0.4 of item 3.11, during pre‐DBS levodopa challenge test [LCT]). Using the same dose of LD, MDS‐UPDRS III improvement during the LCT was significantly lower compared with pre‐DBS assessment (20.1 ± 13.4% vs. 56.1 ± 14.0%, P = 0.001). A similar result was found for the axial subscore of MDS‐UPDRS III (19 ± 37% vs. 78 ± 21%, P < 0.001). Total MDS‐UPDRS III scores, in both the OFF and ON states, were significantly worse compared with pre‐surgery evaluation (Fig. 1A–C; Table 1). Details on stimulation parameters and electrode placement are presented in Table S2 and Figure S1.
+
+[table-wrap mdc370170-tbl-0001] Clinical and demographic characteristics
+
+[fig mdc370170-fig-0001] Combined medication and stimulation lead to symptomatic improvement in axial and nonaxial motor symptoms in the long term. (A) Post‐surgery evaluation of the Movement Disorder Society unified Parkinson's Disease Rating Scale (MDS‐UPDRS) III score and axial subscore in best‐functional state (medication ON/stimulation ON) and in the OFF state: higher scores indicate higher severity of motor symptoms. (B) During the SWS test, patients were asked to stand from a chair, walk 7 m, do a half turn, walk back 7 m, and sit. Number of FOG episodes and gait time during the test were registered (left); post‐surgery evaluation of the #FOG episodes and the SWS time in best‐functional state (medication ON/stimulation ON) and in the OFF state: higher scores indicate higher severity of motor symptoms (right). (C) Comparison between the MDS‐UPDRS III score and the axial subscore at the pre‐surgery evaluation and at the current post‐surgery evaluation. A significant progression of motor symptoms in the OFF and best ON states is observed. Axial subscore, sum of items 3.9 to 3.12. #FOG episodes, number of freezing‐of‐gait episodes during the Stand‐Walk‐Sit Test; Med + Stim, medication ON/stimulation ON; Med + Stim, medication ON/stimulation ON state at the current evaluation; OFF follow‐up, medication OFF/stimulation OFF at the current evaluation; OFF pre‐op, OFF medication at the pre‐surgery evaluation; OFF, medication OFF/stimulation OFF; ON pre‐op, medication ON state at the pre‐surgery evaluation; SWS time, time to complete the Stand‐Walk‐Sit Test. *P < 0.05 and ***P ≤ 0.001.
+
+### FOG Assessment in MedOFF/StimOFF versus MedON/StimON
+
+The number of FOG episodes was significantly reduced in the MedON/StimON condition when compared with the MedOFF/StimOFF (6.3 ± 7.9 vs. 17.4 ± 15.7, P < 0.001; Fig. 1B) paired with a reduction in the SWS time (76.5 ± 54.0 vs. 239.5 ± 198.0, P = 0.004; Fig. 1B). A similar finding was observed for the total MDS‐UPDRS score (38.6 ± 8.5 vs. 62.0 ± 9.9, P = 0.003), axial subscore (7.4 ± 4.4 vs. 9.8 ± 3.8, P = 0.0247), FOG (2.0 ± 1.4 vs. 3.4 ± 0.8, P = 0.007), and postural instability (1.1 ± 1.6 vs. 1.9 ± 1.5, P = 0.011) scores (Fig. 1A; Table S3).
+
+### Assessing Individual Effect of Stimulation and LD on FOG
+
+Either stimulation or LD (MedOFF/StimON or MedON/StimOFF) significantly reduced total MDS‐UPDRS III score (MedOFF/StimOFF: 62.0 ± 9.9; MedOFF/StimON 45.91 ± 8.6; MedON/StimOFF: 49.353 ± 10.451, P < 0.0001; Fig. 2A). This was paired with a significant reduction in the #FOG episodes with any strategy (MedOFF/StimOFF: 17.395 ± 15.710; MedOFF/StimON: 11.235 ± 13.022; MedON/StimOFF: 9.279 ± 7.506, P = 0.0164; Fig. 2B) in line with SWS time (Fig. 2C). A strong correlation between the number of FOG episodes and SWS time was observed across all conditions (Fig. 2D).
+
+[fig mdc370170-fig-0002] Objective motor assessment reveals intra‐individual variability in the freezing‐of‐gait FOG responses to levodopa (LD) or DBS. (A) MDS‐UPDRS III score, (B) number of FOG episodes (C), and SWS time in the OFF, medication only, stimulation only conditions are depicted. Although a significant modulation is observed in relation to the OFF state, no difference emerges between medication and stimulation responses. (D) SWS times and #FOG episodes these variables are significantly correlated across conditions. (E) Maximal possible improvement from the baseline OFF state regarding the number of FOG episodes. It is possible to significantly reduce the number of FOG episodes considering at least one of the manipulations. Heterogeneity of responses in stimulation or medication is evident. (F) There is no association between the number of FOG episodes in the OFF state and the percentage of improvement. These variables are significantly correlated across conditions. (G) MDS‐UPDRS axial subscore, (H) non‐axial subscore, and Abnormal Involuntary Movement Scale (AIMS) (I) score in the OFF, medication only, stimulation only conditions. (J) Using the number of FOG episodes as outcome, distribution of patients based on to their response to LD and stimulation. (K) Degree of FOG improvement from the baseline OFF conditions in the different subgroups of patients. #FOG, number of FOG episodes; improvement with MedD&Stim, decrease on the number of FOG episodes with both medication and stimulation; OFF, medicationOFF/stimulationOFF, medication only, medicationON/stimulation OFF; stimulation only, medicationOFF/stimulationON; SWS Test, Stand‐Walk‐Sit Test; Worse with Med, failure to improve or worsening on the number of FOG episodes from the OFF conditions to the medication only condition; Worse with Stim, failure to improve or worsening on the number of FOG episodes from the OFF conditions to the stimulation only condition. *P < 0.05; **P ≤ 0.01; ***P ≤ 0.001.
+
+A high heterogeneity of responses on #FOG episodes was observed with either stimulation (change from −287% to 100%) or medication (from −600% to 94.12%). However, an average improvement of 75.5 ± 16.7% was obtained with at least 1 therapeutic intervention (Med‐only or Stim‐only) (Fig. 2E). The magnitude of this improvement was not related to the number of FOG episodes in the MedOFF/StimOFF condition, excluding a floor or ceiling effect (r = −0.11, P = 0.67; Fig. 2F).
+
+Medication or stimulation also significantly improved nonaxial MDS‐UPDRS subscores, whereas reduction in axial subscores achieved only statistical significance on the MedOFF/StimON condition (Fig. 2G,H). Abnormal involuntary movements significantly increased with LD but not with stimulation (Fig. 2I). Detailed description of clinical metrics is provided in Table S3.
+
+An increase in the #FOG episodes with stimulation was observed in 3 (17.7%) patients whose FOG improved with LD. In 5 patients (29.4%) #FOG episodes worsened with LD but improved with stimulation (Fig. 2I,J). In these 5 patients presenting with an LD‐worsened FOG, the #FOG episodes were significantly improved in the MedOFF/StimON compared to the MedON/StimOFF condition (1.8 ± 2.4 vs. 15.8 ± 6.8, P = 0.003) and baseline, supporting that it was possible to recover FOG (Fig. S2A). The addition of LD to this effective stimulation led to a trend in increase of #FOG episodes (Fig. S3A), supporting the possibly deleterious effect of LD in FOG in this subgroup. In contrast, an improvement in nonaxial MDS‐UPDRS III was observed with both stimulation and medication (Fig. S2A). This supports a pathophysiological dissociation between FOG and other motor symptoms.
+
+On the Stim‐worsened subgroup, stimulation induced an increase i the #FOG episodes when compared to medication (MedOFF/SimOFF: 13.61 ± 6.73; MedON/StimOFF: 4.55 ± 2.86; MedOFF/StimON: 26.00 ± 11.53, P = 0.0278; Fig. S2B). In this group adding LD to stimulation completely prevented the lack of FOG response (Fig. S3A). The group presenting an FOG response with both strategies also presented an improvement across all motor domains (Fig. S2C).
+
+Different response patterns were not related to the number of FOG episodes or severity of motor symptoms in the baseline (OFF/OFF) state (Fig. S2D).
+
+### The Role of HFS and LFS in FOG
+
+Globally, the #FOG episodes (HFS: 6.32 ± 7.91; LFS: 5.08 ± 8.26, P = 0.410) and SWS time (HFS: 76.52 ± 54.03; LFS: 71.84 ± 54.23, P = 0.836) were not significantly different between the HFS and LFS conditions (Fig. 3A,B). On the contrary, the effects on the MDS‐UPDRS nonaxial and axial subscores were distinct. HFS significantly improved the nonaxial scores (HFS: 31.18 ± 7.27; LFS: 35.12 ± 8.75, P = 0.004; Fig. 3C), whereas axial scores were significantly better with LFS (HFS: 7.2 ± 3.7; LFS: 5.59 ± 2.57, P = 0.0322; Fig. 3D) without changing dyskinesias (Fig. 3E).
+
+[fig mdc370170-fig-0003] Comparison of clinical responses to high‐ and low‐frequency stimulation (HFS and LFS) (matched for the total energy delivered). (A) Left: # freezing‐of‐gait FOG episodes observed in the all cohort at ON/ON 130 Hz and ON/ON 60 Hz are not significantly different. Right: Maximum possible improvement and observed improvement in these 2 conditions. (B) SWS test results in seconds at ON/ON 130 Hz and ON/ON 60 Hz. (C) MDS‐UPDRS III non‐axial score is lower in HFS, and (D) MDS‐UPDRS III axial score is lower in LFS. (E) No difference in the Abnormal Involuntary Movement Scale (AIMS) scores observed at ON/ON 130 Hz and ON/ON 60 Hz. (F) Representation of patient distribution regarding their response to the different frequency conditions. (G) Distribution of #FOG events. (H) MDS‐UPDRS III non‐axial score. (I) MDS‐UPDRS III axial score, and (J) AIMS score across the different subgroups of patients at both 130 and 60 Hz condition. Thicker lines correspond to lines that represent two different patients. #FOG, number of FOG episodes; ON/ON 130 Hz, medication ON/stimulation ON 130 Hz; ON/ON 60 Hz, medication ON/stimulation ON 60 Hz; SWS time, gait time during the Stand‐Walk‐Sit test. *P < 0.05; **P ≤ 0.01.
+
+Variability in patient response to different stimulation frequencies was observed (Fig. 3F): in 58.8% of the patients, LFS was superior to HFS in reducing the #FOG episodes (Fig. 3G), with a decrease in axial MDS‐UPDRS subscore (Fig. 3I) and a trend for an increase in nonaxial MDS‐UPDRS score (Fig. 3J). By contrast, 25.5% of patients had a better FOG response to HFS condition compared to LFS, although without statistical significance (Fig. 3F–J).
+
+### Identification of FOG and Kinematic Features Related with FOG
+
+Using a convolutional neural network in an independent group of 20 PD patients,
+30
+, 
+31
+ a model for automatic quantification of the percentage of time of FOG during straight gait (%FOG) was developed. This detection was not based on specific gait variables, but on the analysis of the inertial sensor signal (Fig. 4A–D; Supplementary Methods), and had a good specificity and sensitivity for freezing detection compared to clinical assessment (Fig. 4E).
+
+[fig mdc370170-fig-0004] For the construction of a model for automatic detection of freezing of gait (FOG), data were collecting using a set of 7 wearable devices. (A) The model was trained to distinguish between 2 different labels: FOG and non‐FOG. (B) Continuous inertial measurement unit (IMU) data were processed into a 1‐s dataset and treated as a time series classification problem. (C) Convolutional neural network (CNN)‐based architecture was used to build a FOG detection model, consisting of 3 sequential convolution modules. (D) The model was built in 13 patients, and 7 were used to test the model on unseen data with sensitivity, specificity, and overall accuracy of the model in the training dataset being shown. (E) %FOG decreased from the OFF condition to the ON/ON condition, with behavior across the different conditions tested being depicted. Individual patients trajectories are also demonstrated; correlation matrix between the %FOG and clinical metrics (Stand‐Walk Sit TestSWS time and #FOG episodes). (F) correlation matrix depicting the relationship between individual kinematic variables and %FOG across the different conditions under study. (G) Principal component analysis (PCA) was used to reduce the number of kinematic features under study, increasing data interpretability of data while preserving the maximum amount of information. Correlation matrix between each one of the 7 PC and individual gait metrics (H) and correlation of PC1 with FOG%, #FOG episodes, SWS test (I). Dark red and blue red represent higher positive and negative correlations, respectively. Correlations with statistical significance are shown on the matrix (CE).
+
+The %FOG significantly decreased from MedOFF/StimOFF to MedON/StimON condition (61.51% ± 9.99 vs. 24.43% ± 24.43, P = 0.0128) (Fig. 4F, left). The #FOG episodes and the SWS time significantly correlated with the %FOG detected by inertial measurement units (IMU) across conditions (Fig. 4F, right; Table S4). There was a significant correlation between the %FOG and individual kinematic gait metrics across conditions (Fig. 4G; Table S5), with metrics related to gait variability having the strongest correlations with FOG. As power was limited to perform a comprehensible analysis, dimension reduction was performed using principal component analysis (PCA) with the set of 30 prespecified kinematic variables. The first principal component (PC1) was able to explain 75% of the gait variability (Fig. S4B), and it was enriched with dimensions of gait variability and asymmetry (Fig. 4H; Fig. S4D). PC1 was correlated with multiple FOG metrics across conditions (Fig. 4I; Table S6). Another finding suggesting that these dimensions capture relevant FOG‐related metrics emerges from a comparison across frequency conditions. In the LFS‐better group, values of PC1 were lower with 60 Hz (low freezing) compared with 130 Hz (high freezing), whereas in the HFS‐better group, the reverse was observed (Fig. S4C,F).
+
+### Using Three‐Dimensional Kinematics to Describe Gait Alterations
+
+In the current study we found that LFS, when compared to HFS, was related to a global reduction in axial symptoms as assessed using the MDS‐UPDRS (Fig. 3D) with no difference in FOG (Fig. 3A). An exploratory analysis found that gait of patients on LFS tended to be faster with a significantly higher step cadence (P = 0.032) but no significant differences on step length (P = 0.640) or width (P = 0.330) (Fig. S5, left). LFS was also characterized by a lower stance time (P = 0.0219) and double support time variability (P = 0.022) translating into gait cycles with lower variability (Fig. S5, right). A description of gait metrics across study conditions is provided in Table S7.
+
+## Discussion
+
+The management of severe FOG in the best‐functional state after DBS remains a challenge in long‐term follow‐up. In this study, we found that FOG in the best‐functional state after surgery is mostly a therapy‐resistant FOG, and stimulation and medication are still able to partially improve the severe gait alterations observed in the treatment‐OFF condition.
+
+### FOG Responses to DBS or LD Are Heterogeneous
+
+In this study, either LD or stimulation improved MedOFF/StimOFF FOG, and they had a synergistic effect when combined. This suggests that patients presenting with FOG in MedON/StimON state 7 years after DBS still benefit from the effects of stimulation and LD, albeit with a lower magnitude of response than before surgery.
+
+We found a lower magnitude of motor response to LD in the post‐op LCT compared to the pre‐op LCT. This can be explained by disease progression and loss of dopamine sensitivity,
+8
+, 
+32
+ as well as by postsurgical desensitization of the postsynaptic dopaminergic receptors.
+33
+ The conjunction of decreased LD responsiveness, particularly regarding axial symptoms, as well the increased severity of motor scores in the treatment‐OFF states, supports (as previously proposed
+7
+, 
+8
+, 
+9
+, 
+10
+, 
+32
+) that disease progression, with involvement of nondopaminergic pathways, is likely the major cause for therapy‐resistant FOG.
+7
+, 
+8
+, 
+10
+, 
+32
+ Additionally, these findings do not suggest, at least at a group level, a deleterious effect of stimulation. This observation aligns with prior observations that although FOG may persist in the MedON/StimON condition, its severity and frequency decrease in comparison to the OFF‐treatment state.
+10
+, 
+15
+, 
+34
+, 
+35
+, 
+36
+
+STN‐DBS and LD have been shown to affect motor outcomes differently,
+37
+, 
+38
+, 
+39
+, 
+40
+ and more recently, they were found to modulate brain motor circuits in distinct ways.
+41
+ Here, we expand these observations by demonstrating distinct individual responses and, importantly, causally dissociating improvements in axial and nonaxial symptoms (whether with LD or stimulation frequency). We describe a subgroup of patients whose FOG did not improve with medication but with stimulation. In fact, the number of FOG episodes nearly doubled when they were on medication, even though their bradykinesia and rigidity improved. This indicates that LD may have little effect on axial symptoms, whereas STN‐DBS is more effective.
+
+Currently, patients with LD‐resistant FOG and gait impairment are excluded from surgical programs
+42
+, 
+43
+ even if some isolated findings have suggested that axial non‐LD responsive signs may improve with STN‐DBS.
+44
+ Even if the present study is not designed to answer this question directly, it adds further information regarding the potential distinct effects of LD and stimulation specifically on axial signs.
+
+Stimulation‐induced FOG and gait akinesia have been previously described,
+18
+, 
+45
+, 
+46
+ and we identified it in 3 patients. Although the mechanisms remain unclear, current diffusion to neighboring structures of the STN such as the pallidothalamic and pallido‐pedunculopontine fibers has been proposed as the cause of stimulation‐induced gait impairment.
+18
+, 
+45
+, 
+46
+, 
+47
+ In line with this, recent studies have highlighted the role of electrode location (including the use of directional stimulation)
+20
+, 
+48
+ and stimulation laterality
+49
+ in FOG outcomes. This suggests that both a “sweet” and a “sour” spot for stimulation regarding FOG outcomes may exist.
+
+The exact pathophysiologic mechanisms involved in FOG are not well understood, with multiple theoretical models
+5
+ and clinical triggers identified.
+4
+ By systematically exploring the response of the same patient in the same self‐paced scenario across multiple therapeutic manipulations, we are limited to extract conclusions regarding freezing in other contexts, but we benefit from constraining contextual variability. This allows us to argue that it is very likely that therapeutic responses of FOG can be obtained by manipulating different nodes of circuit dysfunction (with stimulation or medication).
+50
+, 
+51
+
+### LFS Can Lead to Improvement in Axial Symptoms
+
+LFS has been appointed as a possible strategy to manage refractory FOG in STN‐DBS patients.
+15
+, 
+22
+, 
+23
+, 
+52
+, 
+53
+ These studies have different designs and outcome measures, but from most of them, the clinical variability in FOG response is clear, even if they focus on younger and less‐severe patients than our sample. In our study, we found no difference in the number of FOG episodes between HFS and LFS, even though LFS was associated with a significant reduction in axial MDS‐UPDRS III scores, as previously shown.
+22
+, 
+54
+ Although variability, unblinding, and a small sample size limited comparisons, 9 patients experienced fewer FOG episodes with LFS compared to HFS at equivalent delivered energy. The effect of LFS on axial symptoms was also captured by the kinematic analysis. Here, variables reflecting mostly the overall gait bradykinesia (eg, speed or step length) were not specifically modulated by LFS (Fig. S5), whereas variables known to be associated with axial signs,
+55
+, 
+56
+, 
+57
+, 
+58
+ such as gait cycle variability metrics, were improved by 60‐Hz stimulation, in accordance with a previous observation using 80‐Hz stimulation.
+59
+ This suggests a mechanistic dissociation between axial and appendicular symptoms probably emerging from distinct brain circuits. Despite the lack of statistically significant difference between HFS and LFS, our observations support the need for a personalized, systematic evaluation of patients under both medication and stimulation (Fig. 5) to determine the mechanisms of FOG and guide treatment strategies. This heterogeneity might be a source of bias in clinical trials assessing stimulation parameter strategies and should be considered when calculating sample size.
+
+[fig mdc370170-fig-0005] A multi‐step approach to evaluate patients presenting with freezing‐of‐gait FOG in the best‐functional state after STN‐DBS surgery is proposed. FOG, freezing of gait; HFS, 130 Hz high frequency stimulation; LD, levodopa; LFS, 60 Hz‐low frequency stimulation; MedON/StimON, medication ON/stimulation ON; SNr, substantia nigra; STN, subthalamic nucleus.
+
+### Automatic FOG Detection Correlates with Clinical FOG Metrics
+
+FOG detection and quantification have traditionally been carried out using clinical scales, often relying on retrospective self‐assessment.
+26
+, 
+60
+, 
+61
+ Even when evaluated by trained clinicians, a significant interrater variability concerning both the number and duration of FOG episodes exists.
+62
+ To find more robust, precise, and objective metrics, wearable devices, such as IMUs, powered by machine‐learning algorithms
+63
+, 
+64
+ have been increasingly used for FOG quantification and detection.
+26
+ Our FOG detection model was applicable across different clinical conditions and presented good correlation with clinic FOG metrics. In addition, the automatic detection of the percentage of FOG in gait significantly decreased from Med OFF/Stim OFF condition to Med ON/Stim ON condition, suggesting that these tools are sensitive to treatment modulation. Further replications with large samples and naturalistic conditions are necessary.
+
+A discussion about the true episodic nature of FOG and the artificial split between episodic and continuous gait disorders is ongoing.
+5
+ Objective and continuous gait analysis, especially when performed in ambulatory settings throughout long time periods, can provide useful insights regarding gait structure, clarifying how continuous, background gait alterations may predispose to the emergence of a clinical episode of FOG. PD patients with FOG have higher gait variability and asymmetry than PD patients without FOG, even outside FOG episodes.
+65
+, 
+66
+, 
+67
+, 
+68
+ In addition, stride time variability was recently used as a biomarker to modulate adaptative DBS, with positive effects in FOG.
+69
+ Enriching this “kinematic biomarker” with a comprehensive set of gait variables known to capture FOG could provide an attractive treatment strategy. In our work, the gait metrics that were most strongly associated with clinical or automatic FOG metrics were gait variability, asymmetry, and nonlinear metrics, with this holding true across all tested conditions and after dimension reduction (PCA).
+
+This may argue that the existence of severe gait alterations will be associated to a decrease in the freezing threshold (as proposed by the threshold model
+5
+), and “normalization” of this background gait alterations could potentially translate into a lower likelihood of FOG. Nevertheless, to properly determine the background gait in PD freezers a comparison with an age‐ and disease‐duration‐matched nonfreezer group should be performed.
+
+Several limitations should be considered when interpreting the findings of this study. First, the small sample size restricts the generalizability of the results and may diminish statistical power to detect significant effects. Additionally, the absence of randomization and blinding in clinical evaluation, along with the use of a single rater for FOG assessment, introduces potential biases into the results. Furthermore, the presence of a carryover effect cannot be completely excluded, even if a strict 30‐minute interval was kept between stimulation changes. The LD dose administered during the LCT was determined based on pre‐surgery assessments and may underestimate the current dosage required. Accurately estimating the LD dose post STN‐DBS surgery is challenging due to the reduction in LEDD after surgery. Consequently, many STN‐DBS studies employ fixed LD doses of 200–250 mg for the LCT. In this study, an average LD dose of 433 mg was used, exceeding those typically employed in prior research. The use of these high doses of LD, while trying to ensure an adequate ON state, was also associated to high dyskinesia scores especially in the medication ON condition. Although severe dyskinesia and dystonia can affect gait, the highest scores on the modified Abnormal Involuntary Movement Scale (AIMS) scale were observed in the conditions associated to lower #FOG episodes, suggesting that in our cohort the presence of dyskinesia or dystonia did not impact the evaluation of freezing. Finally, the lack of prospective data precludes conclusions regarding the lasting beneficial effects of LFS in those patients who improved in the acute setting.
+
+In summary, STN‐DBS patients who experience post‐surgery FOG still respond to LD and DBS, even if the presurgical LD‐induced improvement cannot be fully reproduced. There seems to exist interindividual variability on treatment responses claiming for an individualized approach to FOG. Kinematic assessment of gait can play a crucial role in studying pathophysiological mechanisms of FOG. Importantly, we found that freezers who do not respond to medication may still respond to stimulation: a pivotal observation with implication for patients' selection for surgery.
+
+## Author Roles
+
+(1) Research project: A. Conception, B. Organization, C. Execution; (2) Statistical analysis: A. Design, B. Execution, C. Review and critique; (3) Manuscript: A. Writing of the first draft, B. Review and critique.
+
+R.B.: 1A, 1B, 1C, 2A, 2C, 3A, 3B
+
+P.B.: 2A, 2B; 2C, 3A, 3B
+
+P.P.L.:1B, 3B
+
+C.C.R.: 1C, 3B
+
+A.V.: 1B, 3B
+
+L.C.G.: 1B, 3B
+
+B.M.: 2A, 2B, 2C, 3B
+
+S.A.: 2A, 2B, 2C, 3B
+
+V.P.: 2A, 2B, 2C, 3B
+
+M.M.R.: 1B, 3B
+
+R.M.: 2A, 2B, 2C, 3B
+
+D.M.: 2A, 2B, 2C, 3B
+
+M.M.: 1A, 2A, 2B, 2C, 3A, 3B
+
+M.C.: 1A, 1B, 3B
+
+## Disclosures
+
+Ethical Compliance Statement: This study was approved by the local ethics committee of the Comissão de Ética do CHULN e do CAML (no. 345/21). Written informed consent for this study was obtained and documented from all participants in accordance with the Declaration of Helsinki and its later amendments. We confirm that we have read the journal's position on issues involved in ethical publication and affirm that this work is consistent with those guidelines.
+
+Funding Sources and Conflicts of Interest: R.B. was supported by Fundação para a Ciência e Tecnologia (FCT) through a PhD Scholarship (SFRH/BD/143797/2019) and Prémio João Lobo Antunes by Santa Casa da Misericórdia de Lisboa. The funders played no role in study design, data collection, analysis and interpretation of data, or the writing of this manuscript. M.M. was supported by grant EurDyscover–EJPRD19‐135, funded by FCT/MCTES through the European Joint Programme on Rare Diseases (EJPRD/0001/2019), by the Michael J. Fox Foundation (MJFF‐023180), and by the PsyPal project (grant agreement number 101137378) funded by the European Union's Horizon Research program. The funders played no role in study design, data collection, analysis and interpretation of data, or the writing of this manuscript. R.M. is a shareholder of a Kinetikos‐affiliated company, which owns the cloud‐based platform used in this study.
+
+Financial Disclosures for the Previous 12 Months: R.B. has received payment, honoraria, or other support from AbbVie, Medtronic and Boston in the past 12 months. M.M. has received payment, honoraria, or other support from Bial, Pharmacademy, Stada, Evidenze, Isoder, and AbbVie in the past 12 months. M.C. has received honoraria and sponsorship from AbbVie, Bial, Boston, Medtronic, Zambon, and Ipsen in the past 12 months. All other authors declare no financial competing interests.
+
+## Supporting information

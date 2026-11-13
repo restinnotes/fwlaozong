@@ -1,0 +1,187 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:38579455; PMCID:PMC11000190; DOI:10.1016/j.neurot.2024.e00348",
+    "title": "Neuroscience fundamentals relevant to neuromodulation: Neurobiology of deep brain stimulation in Parkinson's disease",
+    "publication_status": "review",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:38579455",
+    "cohort_id_candidate": "not_applicable_no_original_cohort",
+    "cohort_relation_basis": "本文为2024年发表的机制性综述，不包含新招募的患者或动物队列。FOG相关临床结论引用文献[54] Vijiaratnam et al., 2021, PMID:34396114, DOI:10.1093/braincomms/fcab165，以及[55] Xie et al., 2015, PMID:25540305, DOI:10.1212/WNL.0000000000001184。机制解释引用[56] Xie et al., 2017, PMID:28529730, DOI:10.1186/s40035-017-0083-7，该文自身为mini-review，不是独立原始队列。本文没有说明所引原始研究之间是否存在患者队列重叠，因此不能据此认定独立重复验证。上述引用编号与书目信息可由原文参考文献核查。 ",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID38579455_E1_STN_60Hz_FOG",
+      "design": "叙述性机制综述；对既有STN-DBS临床研究的二级证据总结，不包含新的原始实验数据。",
+      "population": "帕金森病患者接受STN-DBS。综述概括了60 Hz与传统高频刺激对FOG的疗效比较，但本段没有详细报告被引研究的具体入选标准、患者构成或FOG亚组定义。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：本文为二级综述，没有独立招募或分析的原始患者队列。被引研究的患者数、FOG患者数、事件数及电极数没有在本段逐项报告，不使用其他论文中的分母填补。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported。原文使用freezing of gait（FOG）统称，没有区分akinetic、trembling-in-place、kinetic-without-trembling或其他亚型。",
+      "medication_phenotype": "unknown。本文该段没有说明患者属于临床OFF-FOG、ONOFF-FOG、ON-FOG或其他药物相关表型。",
+      "experimental_medication_state": "unknown。没有报告该频率比较中各被引研究的测试药物状态、左旋多巴剂量或给药至测试的时间。",
+      "DBS_state_and_parameters": "STN-DBS。比较60 Hz低频刺激与传统高频刺激。原文在前一句将130 Hz作为高频DBS的示例，但FOG比较句没有明确规定所有被引研究的对照频率均为130 Hz。未报告该比较对应的刺激幅度、电压、电流、脉宽、触点、单双侧配置、极性或总电能是否匹配。",
+      "task": "not_reported。该综述段落没有说明FOG评估使用直行、转弯、步态启动、双任务或其他具体任务，也没有报告实验室步行与日常自然步行的区别。",
+      "recording_location": "未报告FOG相关神经记录位置。STN是刺激靶点，但不能据此推断该比较同时记录了STN局部场电位、单单位活动或多单位活动。",
+      "measure": "临床FOG改善情况与刺激频率之间的关系。属于刺激参数与临床结局的比较，不是STN神经活动与FOG的直接电生理关联。本文没有在该段报告STN-LFP功率、beta burst、gamma功率、STN-M1 coherence或PAC与FOG之间的统计关系。",
+      "frequency_and_analysis_window": "刺激频率：60 Hz与传统高频刺激比较；高频对照的具体频率在该FOG总结句中未明确规定。没有报告神经信号频段、分析窗口、基线、归一化方式、滤波参数或事件锁定时间。",
+      "finding": "综述指出，60 Hz STN-DBS可能比传统高频STN-DBS更有效地缓解FOG。原文使用may offer，属于审慎的二级证据总结，而不是确定性结论。该结果支持刺激频率可能影响FOG临床表现，但不能证明某种STN神经活动变化与FOG发生具有时间关联或因果关系。该结论引用原始研究[54]和[55]。",
+      "effect_estimate": "本文没有提供该FOG比较的合并效应量、均值差、标准化效应量、95%置信区间或P值。仅报告定性方向：60 Hz可能具有更好的FOG缓解效果。",
+      "statistical_unit_and_method": "本文该段未报告统计分析方法、统计单位、患者级或事件级推断方式，也没有说明是否对同一患者的重复刺激条件进行配对比较。没有报告meta-analysis或合并统计结果。",
+      "risk_of_bias": {
+        "tool_or_framework": "Narrative review appraisal。该文属于机制性叙述综述，未显示为系统综述；AMSTAR 2/ROBIS不直接适用。不能将其二级总结视为原始研究偏倚风险评估。",
+        "domains": [
+          {
+            "domain": "文献检索与研究选择透明度",
+            "judgement": "not_assessable",
+            "reason": "所提供全文没有独立的系统检索方法部分，没有报告数据库、检索式、检索时间范围、纳入排除标准或独立筛选流程，无法判断文献选择偏倚。",
+            "source_locator": "全文；未见Methods或系统文献检索策略部分。"
+          },
+          {
+            "domain": "被引原始研究的偏倚评估",
+            "judgement": "not_assessable",
+            "reason": "本文没有在FOG频率比较段对被引研究[54]和[55]进行正式的偏倚风险评价，也没有提供足够的随机化、结局测量、缺失数据及选择性报告信息。",
+            "source_locator": "Circuit Effects of DBS，包含60 Hz与高频刺激比较的段落。"
+          },
+          {
+            "domain": "二级证据选择性报告与解释",
+            "judgement": "unclear",
+            "reason": "该段强调60 Hz可能改善FOG，但没有在同一段呈现不支持低频刺激优势的原始研究或系统性解释研究间差异，无法判断证据呈现是否完整。",
+            "source_locator": "Circuit Effects of DBS，60 Hz刺激疗效总结句及其引文[54,55]。"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "1. 本文为二级证据，不构成独立患者队列或独立重复验证。2. 没有报告FOG的操作性定义、视频确认方式或客观运动学识别方法，因此endpoint_class无法进一步确定。3. 没有提供患者数、FOG事件数、试次数和电极数。4. 没有报告测试药物状态、FOG发生阶段及具体步行任务。5. 没有提供与FOG事件同步的STN神经记录。6. 本文其他段落讨论了低beta（13–20 Hz）、高beta（20–35 Hz）及STN-M1相位振幅耦合，但没有明确建立这些指标与实际FOG事件的关系。7. 本文没有对低频刺激研究之间的相反结果进行充分的定量比较。该证据应归类为临床刺激频率与FOG疗效的二级证据，而不是STN神经活动与FOG的直接证据。",
+      "quote": "may offer superior relief of freezing of gait",
+      "source_locator": {
+        "section": "Circuit Effects of DBS，段落中以PD involves a state of exaggerated synchrony开头，引用[54,55]的句子。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID38579455_E2_STN_FOG_PPN_SPREAD",
+      "design": "叙述性机制综述；提出STN-DBS频率依赖性临床效应的潜在解剖学或电流扩散机制。属于二级机制假说，不是本文直接完成的实验。",
+      "population": "PD患者STN-DBS的机制解释背景。该机制假说没有对应的独立患者队列、动物模型或具体实验样本描述。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：本文没有针对该机制招募或分析原始实验样本。该机制作为综述引用的理论解释提出，没有报告相关实验的样本分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported。没有区分FOG亚型。",
+      "medication_phenotype": "unknown。没有说明该机制是否针对OFF-FOG、ONOFF-FOG或ON-FOG。",
+      "experimental_medication_state": "unknown。没有报告药物状态或药物剂量。",
+      "DBS_state_and_parameters": "理论背景为60 Hz低频STN-DBS。没有提供用于验证该机制的具体刺激幅度、脉宽、触点、极性、刺激方向或电流扩散范围。",
+      "task": "not_reported。没有说明该机制是否在直行、转弯、步态启动或其他任务中验证。",
+      "recording_location": "没有报告神经记录位置。Pedunculopontine nucleus（PPN）仅作为STN附近可能受到电流扩散影响的区域被提及，不代表本文实际在PPN进行了电生理记录。",
+      "measure": "假设60 Hz刺激可能通过减少电流向附近PPN区域扩散而改善FOG。该指标属于刺激场空间分布或邻近结构募集的机制解释，不是STN-LFP功率、神经元放电、beta burst或跨区同步的直接测量。",
+      "frequency_and_analysis_window": "刺激频率背景为60 Hz。没有报告电场建模、体积组织激活（VTA）、PPN募集阈值、空间距离、信号分析窗口或神经活动基线。",
+      "finding": "综述提出一种可能解释：60 Hz刺激的临床效果差异可能来自其减少向附近PPN区域的电流扩散。这是一个解剖学/电场分布机制假说。本文没有提供直接的PPN募集测量、VTA比较或因果干预实验，因此不能认定该机制已经得到验证。",
+      "effect_estimate": "没有定量效应估计、置信区间或P值。该内容为机制假说，不是报告了效应量的实验发现。",
+      "statistical_unit_and_method": "不适用。本文没有报告针对PPN电流扩散机制的原始实验或统计模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "Narrative review appraisal。AMSTAR 2/ROBIS不直接适用于未明确采用系统检索方法的叙述性机制综述。",
+        "domains": [
+          {
+            "domain": "文献检索与研究选择透明度",
+            "judgement": "not_assessable",
+            "reason": "全文没有提供可复核的系统检索策略及文献筛选标准，无法判断该机制假说所依据文献的选择是否完整。",
+            "source_locator": "全文；未见Methods或系统文献检索策略部分。"
+          },
+          {
+            "domain": "机制假说的原始实验支持",
+            "judgement": "not_assessable",
+            "reason": "本文没有报告该机制的原始电场测量、PPN记录、刺激场建模或直接验证实验，不能评价原始实验的混杂和测量偏倚。",
+            "source_locator": "Circuit Effects of DBS，60 Hz刺激机制解释句，引用[56]。"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "1. 这是可能的机制解释，不是已证实的生理结果。2. 没有PPN电生理记录、VTA建模或电场空间分布数据。3. 没有将PPN募集程度与实际FOG事件进行时间关联。4. 没有说明该机制是否依赖患者解剖差异、刺激触点位置或其他刺激参数。5. 原文该假说引用[56]，即Xie et al. 2017的mini-review（PMID:28529730；DOI:10.1186/s40035-017-0083-7），因此属于综述转述的二级机制解释，不应作为独立实验验证。",
+      "quote": "reduced current spread to the nearby pedunculopontine nucleus area",
+      "source_locator": {
+        "section": "Circuit Effects of DBS，60 Hz刺激机制解释句，引用[56]。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID38579455_E3_STN_FOG_PROKINETIC_GAMMA",
+      "design": "叙述性机制综述；提出低频STN-DBS可能通过促进促运动性gamma振荡改善FOG的机制假说。属于二级机制解释，不是本文直接开展的神经电生理实验。",
+      "population": "PD患者STN-DBS的机制解释背景。该假说没有明确对应的患者队列、动物模型或具有FOG事件记录的独立实验样本。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：本文没有针对该gamma机制招募或分析原始样本。没有报告实际记录gamma活动的患者数、电极数或FOG事件数。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported。没有区分akinetic、trembling-in-place或其他FOG表现。",
+      "medication_phenotype": "unknown。没有说明gamma机制与临床药物相关FOG表型的关系。",
+      "experimental_medication_state": "unknown。没有报告药物On/Off状态、左旋多巴剂量或测试时间。",
+      "DBS_state_and_parameters": "机制背景为60 Hz低频STN-DBS。没有报告用于验证gamma机制的具体刺激幅度、脉宽、触点或总电能。没有说明是否采用同步刺激与记录系统。",
+      "task": "not_reported。没有报告gamma活动是在静息、自然直行、转弯、步态启动、双任务或其他任务中观察到的。",
+      "recording_location": "该FOG机制假说没有明确给出gamma信号的实际记录位置。虽然全文整体讨论STN及STN-M1振荡活动，但不能据此认定此处的gamma机制来自直接记录的STN-LFP或STN-M1耦合。",
+      "measure": "假设60 Hz刺激可能通过增强促运动性gamma振荡改善FOG。本文没有提供该机制对应的gamma功率、gamma burst持续时间、burst占据率、相位调制、STN-M1 coherence或PAC的实际测量结果。原文在前文将一般gamma频段定义为35–80 Hz，但没有在该FOG机制假说中指定实际分析频段。",
+      "frequency_and_analysis_window": "刺激频率背景为60 Hz。全文一般性定义gamma为35–80 Hz，但该FOG机制句没有明确规定gamma分析频段、峰值频率、时间窗口、基线、归一化方法或事件锁定方式。不能将一般gamma定义直接视为该假说的实测参数。",
+      "finding": "综述提出另一种可能解释：60 Hz STN-DBS可能通过增强促运动性gamma振荡产生FOG改善。这与减少PPN区域电流扩散的解释构成两种不同的候选机制。本文没有提供直接证据证明60 Hz刺激增加了FOG患者的STN gamma活动，也没有证明gamma变化发生在FOG缓解之前或与FOG事件同步。因此，该机制只能作为待检验假说，不能作为已观察到的神经活动与FOG关联。",
+      "effect_estimate": "没有gamma功率变化量、效应量、95%置信区间或P值。该内容是机制假说，不是量化的电生理发现。",
+      "statistical_unit_and_method": "不适用。本文没有报告该FOG-gamma机制对应的患者级、试次级或事件级统计分析，也没有提供神经信号与FOG事件之间的相关模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "Narrative review appraisal。AMSTAR 2/ROBIS不直接适用于未明确采用系统检索方法的叙述性机制综述。",
+        "domains": [
+          {
+            "domain": "文献检索与研究选择透明度",
+            "judgement": "not_assessable",
+            "reason": "全文没有提供完整检索策略、文献筛选标准或系统评价流程，无法判断gamma机制相关文献是否被完整纳入。",
+            "source_locator": "全文；未见Methods或系统文献检索策略部分。"
+          },
+          {
+            "domain": "神经信号测量与FOG行为关联的直接性",
+            "judgement": "not_assessable",
+            "reason": "本文没有在该机制段报告STN gamma的原始记录、信号质量、伪迹控制、FOG事件标签有效性或事件级统计结果，无法评估直接电生理证据的测量偏倚。",
+            "source_locator": "Circuit Effects of DBS，60 Hz刺激机制解释句，引用[56]。"
+          },
+          {
+            "domain": "机制假说的独立验证",
+            "judgement": "not_assessable",
+            "reason": "该机制引用[56]，即另一篇mini-review，没有在本文中提供独立的原始实验验证或外部重复验证。",
+            "source_locator": "Circuit Effects of DBS，60 Hz刺激机制解释句及引文[56]。"
+          }
+        ],
+        "overall": "not_assessed"
+      },
+      "limitations": "1. gamma促进运动的解释在本文中是理论性假说，不是FOG事件关联的实测结果。2. 没有报告STN gamma功率、gamma burst、相位调制或STN-M1 gamma耦合。3. 没有报告gamma活动相对于FOG发生的时间关系，不能判断它是FOG发生前的预测指标、冻结期间的伴随活动还是冻结缓解后的恢复信号。4. 没有报告gamma变化是否独立于运动本身、药物状态或刺激伪迹。5. 全文其他位置讨论了STN-M1 PAC以及beta与gamma振幅关系，但没有明确证明这些现象介导FOG改善。6. 该机制引用[56] Xie et al. 2017 mini-review（PMID:28529730；DOI:10.1186/s40035-017-0083-7），属于二级机制转述，不能作为独立电生理重复验证。",
+      "quote": "by boosting prokinetic gamma oscillations",
+      "source_locator": {
+        "section": "Circuit Effects of DBS，60 Hz刺激机制解释句，引用[56]。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：DOI:10.64898/2026.08.13.744293 Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson’s disease (2026)
+报告的说法：第五章5.5称Beaudoin等2026年的研究分析了4名患者的STN-LFP数据，并报告AUC=0.825，但正文没有明确标注预印本状态。
+指控者认为原文的说法：该DOI对应bioRxiv预印本，尚未经同行评审。研究只有4名独立患者，患者留一交叉验证不等于独立外部验证，因此AUC=0.825不能直接解释为已经获得稳定的跨患者预测性能。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

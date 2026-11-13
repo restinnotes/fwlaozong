@@ -1,0 +1,680 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:40918851",
+    "title": "A Case of Acute-Onset, Refractory Freezing of Gait Following Subthalamic Nucleus Deep Brain Stimulation Adjustment",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:40918851_case_report",
+    "cohort_id_candidate": "PMID:40918851_single_patient_cohort_candidate",
+    "cohort_relation_basis": "原文报告一名62岁女性特发性帕金森病患者，接受双侧Medtronic Sensight B33015 STN-DBS，并随访18个月。该研究为单病例报告。未发现本文内部存在多个患者队列的证据。文章讨论了其他既往病例，但所提供文本未包含完整参考文献列表，无法核实其PMID/DOI及与其他研究的患者队列重叠关系。Table 1仅提供标题和说明，未提供具体表格行，因此部分刺激参数无法核查。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID40918851_E01_onset_after_contact_adjustment",
+      "design": "单患者病例报告；临床纵向观察；非随机、非对照；描述STN-DBS植入、初始激活及后续参数调整与新发FOG的时间关系。",
+      "population": "62岁女性，特发性帕金森病病程5年，接受双侧STN-DBS治疗药物控制不佳及wearing-off症状。术前无FOG病史。使用Medtronic Sensight B33015系统。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用；研究没有分析与FOG相关的STN神经活动，术中微电极生理仅用于电极定位。n_FOG_events=null：全文未报告累计冻结事件数，仅描述每日发生数次。n_trials=null：全文未报告标准化步态实验试次数。n_electrodes_contacts=8：根据双侧电极各4个触点计算。所提供文本未包含Table 1具体数据行，无法核查各组完整幅度和脉宽。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；原文描述为severe FoG and shuffling gait，特别发生于转弯时，未进一步分类为akinetic、trembling-in-place或其他亚型。",
+      "medication_phenotype": "unknown；患者此前无FOG病史，新发FOG没有明确的药物时间关联，作者未将其归类为OFF-FOG、ON-FOG或biphasic FOG。",
+      "experimental_medication_state": "未进行标准化Med-On/Med-Off实验。患者接受Rytary及ropinirole XL 6 mg/day。FOG出现前后，病历提示Rytary剂量可能从4-5-4-2调整为3-2-3-2，但患者实际服药数量不确定。",
+      "DBS_state_and_parameters": "双侧STN-DBS。初始激活频率125 Hz，未报告不良事件。首次激活后12天进行第二次程控，将右侧活动触点从contact 9改为contact 10。影像重建显示contact 9位于右侧腹外侧STN，contact 10位于背外侧STN。幅度和脉宽的具体数值无法从所提供文本中的Table 1核实。",
+      "task": "自然直立行走。患者报告每日多次发生FOG，尤其在转弯时，造成多次跌倒，其中一次导致肱骨头骨折。未报告标准化步态任务或统一诱发方案。",
+      "recording_location": "未进行FOG相关STN神经信号记录。术后MRI空间重建用于定位双侧DBS电极。右侧contact 9位于ventrolateral STN，contact 10位于dorsolateral STN。左侧contact 2位于posterodorsal STN。",
+      "measure": "临床诊断及患者报告的自然行走FOG发生情况、严重程度和shuffling gait。没有STN-LFP、单单位、多单位或皮层-STN coherence指标。125 Hz是DBS刺激频率，不是神经振荡频段。",
+      "frequency_and_analysis_window": "没有神经信号频段、分析窗口或归一化方法。初始DBS刺激频率为125 Hz；第二次程控改变右侧活动触点；患者在调整后2天出现FOG。",
+      "finding": "患者术前没有FOG。初始DBS激活125 Hz后未出现明显不良事件。第二次程控将右侧活动触点从contact 9切换至contact 10，两天后出现严重新发FOG及shuffling gait。该发现建立了刺激调整与FOG发生之间的时间关联，但不能单独证明触点改变导致FOG。",
+      "effect_estimate": "1名患者；FOG在第二次程控后2天出现；每天发生数次。未报告发生率、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "患者级单病例时间序列描述；无统计模型、组间比较或事件级推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；针对单病例临床电生理相关研究的描述性偏倚评估，不是经过验证的正式量表。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单病例报告，因罕见且难治的术后FOG被选择发表，没有连续招募框架或未发生FOG患者作为对照。",
+            "source_locator": "Case presentation，首段；Conclusions。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG由患者报告及临床随访描述，文章未报告视频事件裁定、标准化FOG评分或客观运动学确认。",
+            "source_locator": "Case presentation，FOG首次出现及后续随访段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有FOG相关STN神经信号分析。术中微电极生理仅用于电极植入定位，未提供其信号质量或伪迹处理结果。",
+            "source_locator": "Case presentation，DBS植入及电极定位段落。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "触点调整与FOG出现存在时间关联，但同期可能存在Rytary剂量变化，实际服药量不确定；疾病进展及手术相关组织变化也未被控制。",
+            "source_locator": "Case presentation，药物调整段落；Discussion，alternative explanations段落。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "有18个月内14次程控随访，但未报告标准化重复测量数据或事件级统计，无法评估伪重复。",
+            "source_locator": "Case presentation，Over the next 18 months段落。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "尝试了多种刺激参数和药物调整；作者明确指出Table 1仅总结最重要的随访，不是全部临床交互记录。",
+            "source_locator": "Case presentation，Table 1说明；Discussion。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或机器学习分析。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是临床刺激干预相关病例，而不是STN神经活动研究。没有FOG相关LFP或单单位数据，不能据此推断beta、gamma或其他神经振荡变化。触点改变与FOG出现具有时间先后关系，但缺少对照及受控实验。FOG事件没有报告视频裁定和标准化量化。具体刺激幅度和脉宽不能从所提供的Table 1内容中核实。",
+      "quote": "she had developed severe episodes of FoG and shuffling gait several times per day.",
+      "source_locator": {
+        "section": "Case presentation，第二次程控及FOG首次出现段落。",
+        "page": null,
+        "figure_table": "Figure 1；Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E02_FOG_persistence_off_stimulation",
+      "design": "单患者病例报告；非随机临床观察；刺激开启与关闭状态下的症状比较。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，术后新发严重FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关STN神经信号分析。n_FOG_events=null：全文未报告累计事件数。n_trials=null：未报告标准化开关刺激交叉试验次数。患者实际关闭设备的次数及持续时间不明确。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；severe FoG and shuffling gait，特别在转弯时。",
+      "medication_phenotype": "unknown；患者未报告FOG与药物服用之间的明确时间关系。",
+      "experimental_medication_state": "没有受控Med-On/Med-Off比较。患者使用Rytary及ropinirole，具体关闭刺激期间的药物剂量和服药时间未报告。",
+      "DBS_state_and_parameters": "患者报告FOG在DBS开启和关闭状态下均持续。关闭刺激的持续时间不确定；患者回忆关闭时间可能只有数小时，且肯定没有超过1天。严重疼痛性足趾肌张力障碍限制了更长时间的停刺激试验。",
+      "task": "自然日常行走中的FOG；未报告刺激关闭期间的标准化步态任务或事件级视频记录。",
+      "recording_location": "无神经记录。双侧STN-DBS电极位置通过术后影像重建确定。",
+      "measure": "临床FOG持续存在与否；无神经信号测量。DBS关闭是刺激状态，不等同于记录到STN神经活动恢复至基线。",
+      "frequency_and_analysis_window": "无神经频段或分析窗口。关闭刺激的具体持续时间不确定，患者回忆可能为数小时，最长不超过一天。",
+      "finding": "患者及临床记录均描述FOG在完全关闭DBS后仍然存在，未观察到明确改善。作者同时指出，停刺激时间可能不足以使刺激相关不良效应完全消退，因此不能据此确认FOG已经独立于刺激状态。",
+      "effect_estimate": "定性结果：患者报告关闭刺激后FOG未明显改善。无定量FOG频率、持续时间或严重程度变化值，无置信区间及P值。",
+      "statistical_unit_and_method": "单患者主观临床比较；没有随机交叉设计、盲法、标准化洗脱期或统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单个难治性病例，无对照患者。",
+            "source_locator": "Case presentation；Conclusions。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG持续与否主要根据患者报告及临床随访，未报告视频量化或盲法事件裁定。",
+            "source_locator": "Discussion，off-stimulation periods段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有STN神经信号记录，无法评价信号质量或伪迹。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "停刺激持续时间不确定，严重肌张力障碍限制洗脱期；药物状态也没有标准化控制。",
+            "source_locator": "Discussion，The patient is unsure及prolonged off-trial段落。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "没有报告独立的开关刺激重复试验次数或统计分析。",
+            "source_locator": "Discussion，off-stimulation段落。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "存在多次程控和药物调整，但未提供预先规定的停刺激试验方案。",
+            "source_locator": "Case presentation；Discussion。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是患者主观报告的刺激开关比较，不是严格控制的DBS停刺激实验。停刺激时间可能不足，且存在严重肌张力障碍这一限制。刺激关闭后FOG持续不能证明其已经成为独立于刺激的永久性神经功能改变。没有神经记录，无法判断STN活动是否恢复或持续异常。",
+      "quote": "she consistently denied changes in her FoG when their device was off.",
+      "source_locator": {
+        "section": "Discussion，off-stimulation periods及washout duration讨论。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E03_no_effect_group_amplitude_changes",
+      "design": "单患者病例报告；非随机、非对照的临床程控参数调整观察。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，新发难治性FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关神经信号分析。n_FOG_events=null：全文未报告总事件数。n_trials=null：未报告每种程控参数下的标准化步态试次数。具体幅度数值因所提供Table 1正文缺失而无法核查。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；严重FOG及shuffling gait，转弯时突出。",
+      "medication_phenotype": "unknown；未发现明确药物时间关联。",
+      "experimental_medication_state": "未报告受控药物状态。患者在长期随访中接受Rytary及其他药物方案调整。",
+      "DBS_state_and_parameters": "在DBS开启状态下尝试不同stimulation groupings及所提供范围内的不同刺激幅度。设备有A-D四组设置，但所提供文本没有完整的具体参数行，不能恢复每组幅度、脉宽和触点组合。",
+      "task": "日常自然行走及临床随访中的步态表现；未报告每种刺激参数下的统一步态任务。",
+      "recording_location": "无STN神经记录。刺激作用部位为双侧STN电极触点。",
+      "measure": "临床FOG症状是否改善；无LFP功率、beta burst、神经元放电或跨区耦合指标。",
+      "frequency_and_analysis_window": "未报告神经振荡频段和分析窗口。刺激幅度调整的具体数值无法从提供的Table 1文本中核查。",
+      "finding": "患者在不同刺激分组和可用范围内改变刺激幅度后，FOG没有观察到明确变化。该结果提示这些常规程控改变未能有效控制该患者的FOG，但不能证明所有刺激参数均无效。",
+      "effect_estimate": "定性结果：不同groupings及幅度变化未观察到明确FOG改善。无定量效应量、置信区间或P值。",
+      "statistical_unit_and_method": "单患者临床观察；患者及临床医生主观评估；无统计模型或参数间正式比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅报告一名难治性FOG患者，没有对照或连续病例队列。",
+            "source_locator": "Case presentation；Conclusions。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "临床改善主要依据患者和检查者的主观判断，没有报告标准化FOG量表或视频分析。",
+            "source_locator": "Case presentation，Over the next 18 months段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有STN神经信号采集及分析。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "不同刺激设置的尝试没有标准化顺序或固定药物条件，难以隔离各参数的独立作用。",
+            "source_locator": "Case presentation；Table 1说明。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "未报告不同设置下的独立试次数或重复测量统计。",
+            "source_locator": "Case presentation，随访段落。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "尝试多种刺激分组和幅度，Table 1仅汇总部分重要访问，缺乏预先规定的比较方案。",
+            "source_locator": "Case presentation，Table 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "具体刺激幅度、脉宽及分组组合无法从所提供文本中完整核实。没有标准化步态试验或盲法评估。不同参数调整可能伴随药物变化。临床结果不能用于推断特定STN神经振荡频段的变化。",
+      "quote": "No change in symptoms was observed with different stimulation groupings, varying stimulation amplitudes within the provided range.",
+      "source_locator": {
+        "section": "Case presentation，FOG首次出现后的刺激参数调整段落。",
+        "page": null,
+        "figure_table": "Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E04_reverting_contact_10_to_9",
+      "design": "单患者病例报告；非随机、非对照的触点位置调整观察。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，调整后出现严重FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关STN神经信号分析。n_FOG_events=null：全文未报告累计事件数。n_trials=null：没有报告受控触点交叉试验次数。具体触点调整日期和幅度、脉宽不能从所提供Table 1正文中核实。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；severe FoG及shuffling gait，尤其转弯时。",
+      "medication_phenotype": "unknown；没有明确ON/OFF药物相关表型。",
+      "experimental_medication_state": "未报告触点回调时标准化药物状态。长期随访中药物方案发生变化。",
+      "DBS_state_and_parameters": "FOG发生前，右侧活动触点从contact 9切换到contact 10。之后曾重新切换回contact 9，即右侧ventrolateral STN区域。回调后未观察到明显FOG改善。具体刺激幅度和脉宽未报告于所提供文本。",
+      "task": "自然日常行走中的FOG；临床程控随访期间评估步长和转弯。",
+      "recording_location": "无神经信号记录。影像重建显示右侧contact 9位于ventrolateral STN，contact 10位于dorsolateral STN。",
+      "measure": "触点回调后临床FOG是否改善；不是触点局部神经放电或LFP变化的测量。",
+      "frequency_and_analysis_window": "没有神经频段或分析窗口。比较的是右侧contact 10与之后恢复contact 9的临床症状表现。",
+      "finding": "FOG在右侧活动触点由contact 9改为contact 10后出现。之后重新切换回ventrolateral STN的contact 9，没有观察到明显FOG改善。该结果不支持单纯由持续使用contact 10解释全部FOG表现，但没有受控交叉设计，不能排除其他刺激参数或时间因素。",
+      "effect_estimate": "定性结果：回到contact 9后FOG未见明确改善；无定量效应量或统计检验。",
+      "statistical_unit_and_method": "单患者前后临床观察；无随机化、盲法、统计检验或事件级比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单个病例，缺乏对照和连续样本。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "没有报告触点回调前后标准化FOG评分、视频事件数或盲法评价。",
+            "source_locator": "Case presentation，contact 9与contact 10调整段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有触点特异性的STN神经信号记录。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "触点回调并非受控单变量实验，其他刺激参数、药物状态及疾病时间进程可能影响结果。",
+            "source_locator": "Case presentation；Discussion。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "没有报告触点交叉试验的重复次数和统计处理。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "多次调整刺激参数，具体触点回调时间和全部参数细节未完整呈现。",
+            "source_locator": "Case presentation；Table 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "触点回调后的观察不是随机化交叉试验，未报告稳定洗脱期及各触点条件下的标准化FOG事件数。影像解剖位置不能等同于实际电流扩散范围或局部神经活动。不能据此排除刺激场涉及周围纤维束的可能性。",
+      "quote": "switching back to the ventrolateral STN contact later did not seem to improve symptoms.",
+      "source_locator": {
+        "section": "Case presentation，The most significant stimulus-related change段落。",
+        "page": null,
+        "figure_table": "Figure 1；Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E05_high_frequency_stimulation",
+      "design": "单患者病例报告；临床刺激频率调整观察。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，术后出现持续性FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关STN神经信号分析。n_FOG_events=null：未报告总事件数。n_trials=null：未报告标准化高频刺激下的步态试次数。具体高频条件的幅度和脉宽无法从所提供Table 1正文中核实。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；严重FOG及shuffling gait，未报告具体亚型。",
+      "medication_phenotype": "unknown；未报告明确药物相关FOG亚型。",
+      "experimental_medication_state": "高频刺激评估时未提供固定的Med-On/Med-Off条件或精确药物剂量对应关系。",
+      "DBS_state_and_parameters": "DBS开启。尝试高频刺激，频率最高达到180 Hz。作者指出高频刺激可以控制其他非FOG症状，包括dyskinesias及painful toe dystonia，但对FOG没有明确作用。幅度及脉宽具体值无法从所提供文本核实。",
+      "task": "自然日常行走；临床随访观察FOG发生频率和严重程度。",
+      "recording_location": "双侧STN-DBS。无局部场电位、神经元放电或其他STN神经信号记录。",
+      "measure": "临床FOG频率及严重程度；不包含神经振荡功率、beta burst持续时间或神经同步指标。",
+      "frequency_and_analysis_window": "DBS刺激频率最高180 Hz。没有神经频段分析窗口、基线归一化或神经功率测量。",
+      "finding": "高频刺激最高达到180 Hz，对患者的其他非FOG症状有治疗作用，但作者报告其对FOG发生频率和严重程度没有明确影响。该病例未显示高频刺激能够稳定诱发或加重FOG，也未显示高频刺激能够有效缓解FOG。",
+      "effect_estimate": "定性结果：高频刺激最高180 Hz，对FOG频率和严重程度无明确影响。未报告定量变化、置信区间或P值。",
+      "statistical_unit_and_method": "单患者纵向临床观察；未报告不同频率间的正式统计比较。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单个特殊病例，不能代表一般STN-DBS患者。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG频率和严重程度没有报告标准化量表、视频量化或客观运动学测量。",
+            "source_locator": "Case presentation，高低频刺激比较段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有神经信号记录或分析。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "高频条件未报告固定药物状态，且患者同时接受多种刺激参数及药物调整。",
+            "source_locator": "Case presentation；Discussion。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "未报告频率条件下的重复步态试验次数及统计单位。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "长期尝试多种频率，未报告预先规定的频率比较方案或完整参数结果。",
+            "source_locator": "Case presentation；Table 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "高频刺激的临床结果来自单患者长期程控观察，不是随机化频率交叉试验。未提供180 Hz条件下的具体幅度、脉宽、触点组合及标准化FOG事件统计。不能据此推断高频刺激对其他患者的普遍效应，也不能推断高频刺激下STN beta活动的变化。",
+      "quote": "high frequencies had no clear effect on freezing frequency or severity.",
+      "source_locator": {
+        "section": "Case presentation，Both high- and low-frequency stimulation were trialed段落；Discussion。",
+        "page": null,
+        "figure_table": "Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E06_low_frequency_55Hz",
+      "design": "单患者病例报告；长期临床随访中的低频DBS参数调整观察。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，持续难治性FOG。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关神经信号分析。n_FOG_events=null：全文未报告总事件数。n_trials=null：未报告低频条件下标准化步态试次数。具体幅度、脉宽及触点配置无法从所提供Table 1正文核实。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；严重FOG及shuffling gait，未进一步分类。",
+      "medication_phenotype": "unknown；没有明确ON-FOG或OFF-FOG分类。",
+      "experimental_medication_state": "低频刺激试验期间没有报告标准化Med-On/Med-Off条件或完整药物剂量控制。",
+      "DBS_state_and_parameters": "双侧STN-DBS开启。FOG出现约9个月后开始尝试降低刺激频率，报告的低频设置包括80 Hz及55 Hz。55 Hz带来数周的部分持续改善，但仍有冻结相关跌倒；之后改善效果减弱。低频状态下患者出现更加明显的肌张力障碍。",
+      "task": "自然日常行走，观察FOG及冻结相关跌倒；未报告标准化步行距离、转弯次数或诱发任务。",
+      "recording_location": "双侧STN-DBS电极；无STN-LFP、神经元放电或其他神经信号记录。",
+      "measure": "临床FOG改善情况、冻结相关跌倒以及低频刺激下其他运动症状；没有神经振荡或burst指标。",
+      "frequency_and_analysis_window": "DBS刺激频率由较高频率降低，先后尝试80 Hz和55 Hz。改善持续数周后减弱。没有神经信号频段、分析窗口、归一化或事件级分析。",
+      "finding": "降低刺激频率至55 Hz是作者在该病例中唯一报告能够产生数周持续FOG改善的参数调整。但改善并不完全，患者在改善期间仍出现冻结相关跌倒。之后低频获益逐渐减弱，同时低频刺激下疼痛性肌张力障碍变得更加明显，最终需要重新考虑较高频率以控制其他症状。",
+      "effect_estimate": "定性部分改善；55 Hz条件下FOG改善持续数周，但未完全消除。未报告FOG事件数量、改善百分比、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "单患者纵向临床观察；患者及临床医生主观判断；无统计检验和重复事件模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "单患者病例，选择依据为术后严重难治性FOG。",
+            "source_locator": "Case presentation；Conclusions。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG改善以临床及患者主观报告为主，没有标准化视频或运动学量化。",
+            "source_locator": "Case presentation，低频刺激试验段落。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有低频刺激期间的STN神经信号记录。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "低频试验发生在FOG出现数月后，期间可能存在疾病进展、药物变化及其他程控改变；低频和停刺激试验受到严重肌张力障碍限制。",
+            "source_locator": "Case presentation；Discussion，low-frequency stimulation段落。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "未报告每个频率条件下的独立步态试验数和事件级统计。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "经历多种刺激频率和药物调整，缺乏预设频率比较方案，具体参数表格内容未在所提供文本中呈现。",
+            "source_locator": "Case presentation；Table 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "55 Hz的改善是单患者、非随机长期临床观察中的定性结果。没有固定药物状态、标准化步态任务或客观事件量化。低频试验受到肌张力障碍影响，不能将FOG改善完全归因于频率本身。没有神经信号数据，因此不能证明低频刺激通过改变STN beta功率或beta burst产生临床获益。",
+      "quote": "This change was the only one noted to produce a sustained improvement in FoG for several weeks.",
+      "source_locator": {
+        "section": "Case presentation，One year after DBS implantation及低频刺激段落；Discussion。",
+        "page": null,
+        "figure_table": "Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E07_medication_changes_no_effect",
+      "design": "单患者病例报告；临床药物方案变化与FOG症状的纵向观察。",
+      "population": "同一名62岁女性特发性帕金森病患者，双侧STN-DBS，新发FOG，既往使用Rytary及ropinirole。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用，无FOG相关神经信号分析。n_FOG_events=null：全文未报告累计冻结事件数。n_trials=null：未报告标准化药物交叉试验次数。部分药物实际服用量不确定。",
+      "endpoint_class": "A_actual_natural",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；严重FOG及shuffling gait，未报告具体运动表型亚型。",
+      "medication_phenotype": "unknown；患者FOG没有明确的ON-FOG、OFF-FOG或biphasic模式，作者明确指出没有观察到与服药时间相关的规律。",
+      "experimental_medication_state": "未进行标准化Med-On/Med-Off交叉试验。后续调整包括Rytary及Sinemet剂量增减。曾使用Sinemet IR 25-100 mg，剂量为2-2-2-2，其LEDD与原先Rytary方案相近。患者在部分时期仅使用其中一种药物。",
+      "DBS_state_and_parameters": "药物调整发生在双侧STN-DBS长期治疗期间。没有固定的DBS刺激参数或统一的刺激开关条件用于药物比较。",
+      "task": "日常自然行走中的FOG；未报告服药前后统一步态测试或标准化FOG诱发任务。",
+      "recording_location": "没有神经信号记录。双侧STN-DBS电极位置通过术后MRI空间重建确定。",
+      "measure": "临床FOG发生及严重程度与药物方案变化之间的关系；没有STN神经信号或神经振荡指标。",
+      "frequency_and_analysis_window": "不适用；未进行神经频段分析。药物比较为长期临床随访，未报告固定的服药后分析时间窗。",
+      "finding": "在长期随访中，多次增加或减少Rytary/Sinemet剂量没有报告对FOG产生明确影响。使用与原始Rytary方案具有相近LEDD的Sinemet IR 25-100 mg 2-2-2-2，也没有改善FOG。患者FOG没有明确的服药时间关联，且在仅使用一种药物的较长时期内症状相对稳定。",
+      "effect_estimate": "定性结果：多次药物剂量调整未报告明确FOG改善。没有药物效应量、置信区间或P值。",
+      "statistical_unit_and_method": "单患者临床纵向观察；药物方案及FOG症状的描述性比较，无统计检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅有一名患者，不能推断药物与FOG关系在其他STN-DBS患者中的分布。",
+            "source_locator": "Case presentation。"
+          },
+          {
+            "domain": "行为标签有效性",
+            "judgement": "some_concerns",
+            "reason": "FOG没有通过标准化事件评估或视频确认量化，药物相关症状变化主要为临床描述。",
+            "source_locator": "Case presentation；Discussion。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有药物相关STN神经信号分析。",
+            "source_locator": "全文。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "药物实际服用量不确定，药物方案与DBS参数在长期随访中均发生变化，缺乏固定药物和刺激条件。",
+            "source_locator": "Case presentation，Documentation suggests段落；Discussion，medication-related etiologies段落。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "没有独立药物交叉试验或重复步态测量统计。",
+            "source_locator": "Case presentation，药物调整段落。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "尝试了多种药物剂量和方案，未提供预设药物比较计划或完整剂量时间序列。",
+            "source_locator": "Case presentation；Table 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "患者的实际药物服用剂量及调整时间存在不确定性。没有随机化药物交叉试验、固定DBS条件或标准化FOG测量。LEDD相近不能保证不同药物方案具有完全相同的药效学作用。该结果不能排除药物与刺激之间的交互作用。",
+      "quote": "subsequent increases/decreases in Rytary/Sinemet had no reported impact on FoG.",
+      "source_locator": {
+        "section": "Case presentation，Documentation suggests that the patient's Rytary dose was decreased段落；Discussion，medication-related etiologies段落。",
+        "page": null,
+        "figure_table": "Table 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID40918851_E08_postoperative_STN_contact_localization",
+      "design": "单患者病例报告；术后MRI空间重建的描述性解剖定位。",
+      "population": "同一名62岁女性特发性帕金森病患者，接受双侧STN-DBS植入。",
+      "n_enrolled": 1,
+      "n_analyzed": 1,
+      "n_patients_with_FOG": 1,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": 8,
+      "missing_reason": "n_patients_with_valid_neural_data=null：不适用；术后影像定位不是神经信号数据。n_FOG_events=null：本条证据为解剖定位结果，不适用。n_trials=null：不适用，没有实验步态试次。8个触点根据双侧电极各4个触点计算。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_applicable；本条记录电极解剖位置，不是独立FOG表型分析。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "不适用；本条证据不涉及药物干预比较。",
+      "DBS_state_and_parameters": "双侧Medtronic Sensight B33015 DBS电极。左侧contact 0位于substantia nigra，contact 1位于ventral STN并邻近substantia nigra，contact 2位于posterodorsal STN，contact 3位于STN上方并部分进入zona incerta。右侧contact 8位于substantia nigra，contact 9位于ventrolateral STN，contact 10位于dorsolateral STN，contact 11位于STN上方的zona incerta与internal capsule之间。",
+      "task": "不涉及步态任务；术后MRI影像重建用于电极定位。",
+      "recording_location": "术后T2 MRI结合Brainlab空间重建。不是STN神经活动记录。术中使用microelectrode physiology辅助电极定位，但没有报告与FOG相关的神经活动分析结果。",
+      "measure": "电极触点相对于STN、substantia nigra、zona incerta和internal capsule的解剖位置。",
+      "frequency_and_analysis_window": "不适用；没有神经频段、时间窗、功率谱或burst分析。",
+      "finding": "术后影像空间重建提示双侧电极的两个中央触点位于STN内。右侧contact 9位于ventrolateral STN，contact 10位于dorsolateral STN。作者认为电极总体位置符合预期，但指出不能完全排除触点位置及周围步态相关通路受到刺激的可能性。",
+      "effect_estimate": "解剖定位描述，无定量位置误差、刺激体积或纤维束覆盖效应量。",
+      "statistical_unit_and_method": "患者级术后MRI空间重建；使用Brainlab软件；没有统计推断或定位误差量化。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；单病例解剖定位及临床观察偏倚评估。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "some_concerns",
+            "reason": "仅报告一名患者的影像定位。",
+            "source_locator": "Case presentation，术后影像重建段落。"
+          },
+          {
+            "domain": "解剖定位有效性",
+            "judgement": "some_concerns",
+            "reason": "报告了MRI空间重建和各触点解剖位置，但没有报告配准误差、定位不确定性或独立盲法复核。",
+            "source_locator": "Case presentation；Figure 1说明。"
+          },
+          {
+            "domain": "信号质量与伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有分析STN神经信号；影像定位不能替代神经信号质量评价。",
+            "source_locator": "Case presentation，术中microelectrode physiology及术后MRI段落。"
+          },
+          {
+            "domain": "混杂",
+            "judgement": "some_concerns",
+            "reason": "触点位置不能单独确定实际刺激电场、白质纤维束招募或FOG的因果机制。",
+            "source_locator": "Discussion，anatomic/structural causes段落。"
+          },
+          {
+            "domain": "重复测量与伪重复",
+            "judgement": "not_assessable",
+            "reason": "单次术后影像定位，没有重复定位测量统计。",
+            "source_locator": "Case presentation；Figure 1。"
+          },
+          {
+            "domain": "多重比较与选择性报告",
+            "judgement": "some_concerns",
+            "reason": "影像描述提供主要触点位置，但未提供全部空间重建参数或定量刺激场分析。",
+            "source_locator": "Case presentation；Figure 1说明。"
+          },
+          {
+            "domain": "模型过拟合与外部验证",
+            "judgement": "not_assessable",
+            "reason": "没有预测模型或外部验证。",
+            "source_locator": "全文。"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "影像显示触点解剖位置，不代表实际神经组织招募范围。没有报告体积传导、刺激场建模、纤维束追踪或触点周围神经活动。术中微电极生理用于定位，但不能据此认为本文提供了可用于FOG机制分析的STN神经活动数据。影像定位也不能完全排除周围白质通路受到影响。",
+      "quote": "the two central contacts of each lead within the STN.",
+      "source_locator": {
+        "section": "Case presentation，Postoperative imaging with spatial reconstruction段落。",
+        "page": null,
+        "figure_table": "Figure 1。",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

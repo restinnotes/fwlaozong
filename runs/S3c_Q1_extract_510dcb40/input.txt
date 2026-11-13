@@ -1,0 +1,239 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:42058451
+题目: Gait and balance deterioration following deep brain stimulation in Parkinson's disease: a counterfactual review.
+年份: 2026
+全文：
+# Gait and balance deterioration following deep brain stimulation in Parkinson’s disease: a counterfactual review
+
+## Abstract
+•Gait and balance often deteriorate after DBS despite sustained appendicular motor benefit.•Deterioration reflects multiple mechanisms, including stimulation effects, medication interactions, and disease progression.•Counterfactual contrasts (stimulation, medication, time) clarify attribution of postoperative outcomes.•Balance, particularly dynamic postural control, is more consistently affected than gait.•Interpreting outcomes through attribution may inform individualized long-term DBS management. Gait and balance often deteriorate after DBS despite sustained appendicular motor benefit. Deterioration reflects multiple mechanisms, including stimulation effects, medication interactions, and disease progression. Counterfactual contrasts (stimulation, medication, time) clarify attribution of postoperative outcomes. Balance, particularly dynamic postural control, is more consistently affected than gait. Interpreting outcomes through attribution may inform individualized long-term DBS management.
+
+## Introduction
+
+Gait and balance impairment are among the most disabling manifestations of Parkinson’s disease and represent a major contributor to falls, loss of independence, institutionalization, and mortality. Although dopaminergic therapy can improve gait in earlier stages of the disease, after some time, the gait and balance issues worsen and become progressively resistant to medication, reflecting the increasing involvement of non-dopaminergic and multisystem pathology [1], [2], [3].
+
+Deep brain stimulation, most commonly targeting the subthalamic nucleus, is a well-established and effective treatment for advanced Parkinson’s disease, with a strong therapeutic effect on tremor, rigidity, bradykinesia, and motor fluctuations. Its effects on gait and balance, however, are less consistent and appear to evolve over the postoperative course [4], [5]. While some patients experience early improvement in gait, particularly in the medication OFF state, a substantial proportion develop worsening of freezing of gait, postural instability, or falls during follow-up, even when appendicular motor symptoms remain well controlled [6], [7]. This apparent dissociation between appendicular and axial outcomes has been reported across multiple observational cohorts and longitudinal studies and represents a major unresolved challenge in the long-term management of patients treated with STN-DBS [8]. Traditionally, late-onset gait and balance deterioration after STN-DBS has been attributed to disease progression and the emergence of non-dopaminergic deficits affecting locomotor and postural control networks [9]. This, however, does not fully explain the variability and timing of postoperative gait worsening. There are a number of indications that suggest a potential role of stimulation in gait and balance worsening in at least a subset of patients.
+
+The early postoperative worsening, which in some cases occurs weeks to months after surgery, is difficult to explain in terms of a neurodegenerative process, and this phenomenon has been described in both cohort studies and mechanistic case series [10], [11]. In addition, gait deterioration may preferentially occur in specific medication or stimulation states or improve following stimulation adjustment, further challenging a purely progression-based explanation [12].
+
+Gait and balance outcomes after STN-DBS are also sensitive to stimulation parameters. Changes in stimulation frequency, amplitude, or contact configuration can markedly influence freezing of gait and other axial symptoms, with some patients experiencing improvement following systematic parameter modification [13]. These findings highlight the complexity of the neural network subserving gait control and indicate that the effects of stimulation on neural networks might influence disease progression and dopaminergic state.
+
+The anatomical aspects have added another layer of complexity to the understanding of the mechanisms. Acute levodopa-resistant FOG has been described in the context of electrode implantation and stimulation activation, and it has been attributed to stimulation of fibers located near or dorsal to the STN, indicating network disruption rather than neurodegeneration as a possible causal factor [14].
+
+Experimental and clinical studies have demonstrated that STN stimulation and levodopa can have partly independent or even opposite effects on gait and postural control, highlighting the role of stimulation-medication interactions [15].
+
+Other targets provide useful context, even though they are not the focus of this review. Comparative meta-analytic data suggest that STN-DBS and GPi-DBS result in a similar long-term motor benefit, without clear evidence that one target confers a uniform long-term gait advantage [16]. The pedunculopontine nucleus has also been targeted for severe gait freezing and postural instability, but published responses remain variable, with variable methodology, and are limited by small cohorts and uncertain durability [17].
+
+However, despite extensive investigations, most of the studies are still descriptive, though they differ in terms of design, testing conditions, and follow-up time, making the results difficult to reconcile. Perhaps more importantly, none of the current studies clearly address the distinction between stimulation-induced effects, stimulation-therapy interactions, and disease progression, nor do they organize information along lines commonly utilized in counterfactual decision-making. In clinical practice, attribution of gait worsening is inherently counterfactual, involving systematic comparison across stimulation, medication, and time conditions. Counterfactual thinking, in this context, is a question of how gait or balance might have performed under a different stimulation, medication, or time condition. This is simple. It is also clinically useful.
+
+This review aims to address these issues by reassessing gait and balance worsening following STN-DBS within a counterfactual, attribution-based model. This review was undertaken because a similar postoperative complaint can have different implications for management, such as acute worsening that varies across stimulation conditions, suggesting a need to adjust stimulation, versus late worsening that is consistent across stimulation conditions, suggesting disease progression and a need to adjust rehabilitation, fall risk, and axial care strategies. By reviewing mechanistic, programming, and observational studies, we hope to shed light on which aspects of gait and balance deterioration are plausibly stimulation-related, which reflect interactions with dopaminergic therapy, and which are more consistent with disease progression.
+
+## Methods
+
+### Study design and scope
+
+This review has been performed as a structured narrative synthesis of systematic literature searches, specifically on the decline in gait and balance following subthalamic nucleus deep brain stimulation in PD. The review has aimed to attribute the decline in gait and balance following STN-DBS in PD to the effects of stimulation, drug-stimulation interactions, or natural disease progression over time. In contrast to other reviews that have simply described the occurrence of gait/balance decline following STN-DBS in PD or summarized the efficacy of specific programming interventions, this review has been specifically designed to address clinically relevant counterfactual questions.
+
+### Information sources and search strategy
+
+A comprehensive literature search was performed in PubMed/MEDLINE, Embase, and Web of Science from database inception through December 2025. Search terms combined controlled vocabulary and free-text keywords related to Parkinson’s disease, subthalamic nucleus, deep brain stimulation, gait, balance, postural instability, freezing of gait, axial symptoms, stimulation parameters, programming, and longitudinal or long-term outcomes. Titles and abstracts were screened for relevance, and full-texts of potentially eligible articles were reviewed. Reference lists of eligible articles were further screened for potentially suitable studies.
+
+### Eligibility criteria and study selection
+
+Studies were eligible if they were focused on Parkinson’s disease treated with STN-DBS and reported gait- or balance-related outcomes. In order to be involved, studies were required to provide at least one of the following: stimulation state during testing, medication state during testing, stimulation parameter manipulation, contact or target information relevant to interpretation, or follow-up duration sufficient to assess temporal change. Original studies, including observational cohorts, interventional programming studies, controlled experimental paradigms, and mechanistic case series, were included as primary sources of evidence. Animal studies, technical reports without clinical gait or balance outcomes, studies that did not separate axial outcomes from global motor scores, and duplicate reports without materially new gait analyses were excluded from the primary database. Conference abstracts without sufficient methodological detail, non-English publications without accessible full text, and studies lacking interpretable postoperative gait or balance assessment conditions were also excluded. Systematic reviews, meta-analyses, and narrative reviews were added to contextualize findings and to compare methodological approaches, but were not used as sources of primary data.
+
+### Data extraction
+
+From each included study, data were extracted on study design, follow-up duration, gait and balance outcomes assessed, stimulation parameters, medication state during assessment, and temporal patterns of change. Particular attention was paid to whether outcomes were assessed under stimulation ON versus OFF conditions, medication ON versus OFF conditions, following stimulation parameter modification, or across different postoperative time points.
+
+### Attribution framework and synthesis
+
+Given heterogeneity in study designs and outcome measures, a narrative synthesis approach was adopted. Evidence was organized according to clinically relevant counterfactual contrasts routinely used in clinical decision-making, including stimulation ON versus OFF, medication ON versus OFF, stimulation parameter modification, and early versus late postoperative periods, to distinguish stimulation-related effects from stimulation-medication interactions and time-dependent changes consistent with disease progression. Counterfactual contrasts were defined as within-patient or within-cohort comparisons that approximate the clinical question: “What would gait or balance have been under an alternative stimulation, medication, or temporal condition?”.
+
+### Methodological considerations
+
+Formal risk-of-bias assessment tools were not applied due to the predominance of observational, mechanistic, and hypothesis-generating studies and the substantial heterogeneity in study design, outcome definitions, and assessment conditions. Methodological limitations relevant to causal interpretation were considered qualitatively and integrated into the interpretation of findings.
+
+### PRISMA compliance
+
+The review was conducted and reported in accordance with the PRISMA 2020 guidelines [18]. Following database searching and reference screening, 29 articles met the inclusion criteria and were included in the qualitative synthesis, comprising 18 original studies reporting primary gait or balance outcomes and 11 review articles used for contextual interpretation. In addition to these included articles, further background and methodological references, including reporting guidelines, were cited to support study design, interpretation, and contextual framing.
+
+## Results
+
+The study selection process is summarized in the PRISMA flow diagram (Fig. 1). After duplicate removal and full-text assessment, 29 articles met the predefined inclusion criteria and were included in the qualitative synthesis, comprising 18 original studies reporting primary gait or balance outcomes after subthalamic nucleus deep brain stimulation and 11 review articles used for contextual interpretation. Individual studies were permitted to contribute to multiple attribution domains when gait or balance outcomes were evaluated under different stimulation, medication, or temporal conditions within the same cohorts [19]. Results are presented according to three non-exclusive attribution domains: stimulation-related effects, stimulation-medication interactions, and time-dependent progression. Where available, balance-specific outcomes are highlighted separately, given their distinct physiological foundations.Fig. 1PRISMA summary of study selection.Fig. 1
+
+### Characteristics of included studies
+
+The included studies were heterogeneous in design, sample size, follow-up duration, and outcome measures. Follow-up intervals ranged from acute postoperative assessments conducted within days to weeks after surgery [20], [21], [22] to longitudinal observations extending beyond four years [23], [24], [25]. Freezing of gait was the most frequently assessed outcome and was evaluated using clinical rating scales or task-based paradigms [1], [26], [27]. Balance outcomes were less commonly reported and were assessed using postural stability items or quantitative posturography [2], [28], [29]. Several studies explicitly compared stimulation ON versus OFF conditions [20], [26], [28], medication ON versus OFF conditions [28], [30], [31], or both. An overview of study designs, follow-up durations, outcomes, and attribution signals is provided in Table 1.Table 1Characteristics of original studies included in the qualitative synthesis evaluating gait and balance after DBS in Parkinson’s disease (n = 18).StudyDBS targetStudy designFollow-up/timingPrimary outcome(s)Key comparison(s)Main finding relevant to gait/balanceAttribution domain(s)Rocchi et al., 2002STNExperimentalAcutePostural swayDBS ON/OFF × Med ON/OFFIndependent and interacting effects of DBS and levodopa on postural swayStimulation–medication interactionRodriguez-Oroz et al., 2005STNLongitudinal cohort4 yearsGait, balanceBaseline vs follow-upProgressive axial worsening despite sustained appendicular benefitTime-dependent progressionTommasi et al., 2007STNCase seriesAcute/earlyFreezing of gaitDBS ON/OFFAcute stimulation-induced freezing reversible with DBS adjustmentStimulation-related effectMoreau et al., 2008STNInterventionalShort-termFreezing of gaitHigh vs low frequencyLow-frequency stimulation improved freezing of gaitStimulation-related effectFerraye et al., 2008STNExperimentalAcuteFreezing of gaitDBS ON/OFF × Med ON/OFFNon-additive effects of DBS and levodopa on freezingStimulation–medication interactionFasano et al., 2011STNExperimentalAcuteGait coordinationDBS ON/OFFSTN stimulation altered gait coordination patternsStimulation-related effectAdams et al., 2011STNCase seriesEarly postoperativeFreezing of gaitPost-implantationLevodopa-resistant freezing after electrode implantationStimulation-related effectWeiss et al., 2013STN/SNrRandomized controlled crossover trialAcuteGait initiationSTN vs SNr stimulationNigral stimulation improved gait initiation relative to STNStimulation-related effectVercruysse et al., 2014STNProspective controlled6–12 monthsFreezing of gaitDBS vs best medical therapyReduced FOG frequency and severity, largely mediated by postoperative medication reductionStimulation–medication interactionRizzone et al., 2014STNLongitudinal cohort8 yearsGait, balanceBaseline vs long-termProgressive axial decline over long-term follow-upTime-dependent progressionRamdhani et al., 2015STNInterventionalShort-termFreezing of gaitFrequency adjustmentImprovement in freezing with low-frequency stimulationStimulation-related effectFleury et al., 2016STNExperimentalAcuteGait, akinesiaDBS ON/OFF × Med ON/OFFDBS attenuated levodopa-related gait improvementStimulation–medication interactionJia et al., 2017STNInterventionalShort-termFreezing of gaitFrequency manipulationLow-frequency stimulation improved freezingStimulation-related effectXie et al., 2017STNInterventionalShort-termFreezing of gaitFrequency manipulationImproved freezing with low-frequency stimulationStimulation-related effectYin et al., 2018STNLongitudinal cohort5 yearsGait, balanceBaseline vs follow-upGait and balance worsened over time despite motor benefitTime-dependent progressionKim et al., 2019STNLongitudinal cohort≥5 yearsFreezing of gaitMed ON vs OFFLong-term benefit OFF-medication, not ON-medicationTime-dependent progressionMeoni et al., 2019STNCase seriesAcuteFreezing of gaitDBS ON/OFFAcute stimulation-induced gait worseningStimulation-related effectKarl et al., 2020STNInterventionalShort-termGait, balanceProgramming changesGait and balance sensitive to stimulation configurationStimulation-related effectFOG = freezing of gait. Table 1 summarizes the article set carried into the qualitative synthesis; the Cossu and Pau review is retained as contextual target-specific literature and is not treated as a primary data source.
+
+### Stimulation-related gait and balance worsening
+
+Acute gait worsening temporally associated with stimulation activation, transient gait deterioration related to electrode implantation, and early postoperative deterioration emerging within weeks to months after surgery were reported in mechanistic case series and observational studies. Acute freezing of gait induced by STN stimulation and resolving with stimulation deactivation was described in early postoperative assessments [32]. Levodopa-resistant freezing of gait emerging immediately after electrode implantation was reported in isolated cases and small series independent of stimulation activation [33]. Acute axial worsening shortly after stimulation onset, with partial reversibility following stimulation adjustment, was observed in several reports [34].
+
+Parameter-dependent modulation of gait outcomes was demonstrated in multiple interventional studies. Improvement in freezing of gait following systematic reduction of stimulation frequency from conventional high-frequency settings was reported in short-term crossover and interventional designs [35], [36], [37]. The literature supports a clinically relevant low-frequency range, usually 60–80 Hz in selected patients, rather than a single reproducible cutoff. The converse point is just as important: available studies do not identify a universal amplitude, pulse width, or contact threshold above which freezing of gait or imbalance reliably occurs. Contact location appears clinically relevant, but the signal is anatomical rather than binary; adverse axial effects have often been linked to current spread dorsal to the STN or into adjacent fibers, whereas improvement after contact relocation suggests that some cases are programming-sensitive. In practical terms, the available literature more often implicates dorsal or dorsally spreading stimulation than a specific lower contact as a trigger of gait worsening, likely because current spread above the intended STN motor territory may recruit pallidofugal, zona incerta, or other adjacent fiber pathways involved in locomotor control. However, the evidence does not support a uniform upper-versus-lower contact rule across patients, because contact effects depend on lead position, individual anatomy, and the volume of tissue activated. Evidence comparing monopolar with bipolar configurations remains limited and inconsistent, so a general rule cannot be justified. Additional programming strategies, including amplitude reduction, asymmetric stimulation, interleaving, and contact relocation, were associated with variable effects on gait and axial symptoms and were frequently accompanied by trade-offs in appendicular motor control [38], [39], [16].
+
+### Stimulation-medication interactions
+
+Several experimental and clinical studies reported differential gait and balance outcomes depending on combined stimulation and medication state. Independent and sometimes opposing effects of STN stimulation and levodopa on postural sway were demonstrated using quantitative posturography [40]. Differential freezing of gait responses across stimulation ON/OFF and medication ON/OFF conditions were reported, with effects strongly influenced by baseline dopaminergic responsiveness and postoperative medication reduction [41], [17]. Attenuation of levodopa-related improvement in gait and akinesia during STN stimulation was observed in controlled experimental paradigms [42]. Prospective studies further documented that freezing of gait responses varied across medication conditions, including improvement in the medication OFF state with stimulation and worsening when stimulation and medication were combined [43]. These interaction effects were observed despite sustained improvement in other motor domains.
+
+### Time-dependent changes in gait and balance
+
+Longitudinal cohort studies consistently demonstrated divergence between appendicular motor outcomes and axial features over time. Progressive worsening of gait and postural stability during extended follow-up was reported despite sustained improvement in tremor and rigidity [23], [24]. Long-term studies focusing on axial outcomes documented relative deterioration of gait and balance compared with appendicular motor symptoms several years after surgery [25], [44]. Persistent gait and balance impairment emerging with longer postoperative duration was reported across deep brain stimulation targets, with some alternative targets demonstrating short-term benefit but limited durability over time [45]. Meta-regression analyses and longitudinal syntheses demonstrated progressive worsening of balance and postural stability outcomes with increasing follow-up duration, while gait-related outcomes showed greater heterogeneity, even when global motor scores remained improved [46].
+
+### Balance-specific outcomes
+
+Quantitative posturography studies demonstrated that STN stimulation may differentially affect balance control, with improvement in some static measures of postural sway but worsening of dynamic or adaptive balance responses under certain conditions, despite improvement in other motor domains [29], [40]. Reviews focusing on balance physiology emphasized that postural instability reflects deficits in multisensory integration and anticipatory postural control, which were inconsistently responsive to STN stimulation across studies [28].
+
+### Summary of findings across attribution domains
+
+Across the included literature, three non-exclusive attribution patterns were observed, with parameter-dependent and contact-dependent phenomena grouped as stimulation-related/programming-sensitive effects. Early postoperative gait worsening that varied by stimulation state or stimulation parameters was reported in acute and short-term studies [32], [33], [34], [35], [36], [37]. Differential gait or balance responses across medication conditions were documented in experimental and prospective investigations [40], [41], [17], [42], [43]. Progressive late-onset balance and postural stability decline, with more heterogeneous effects on gait, was most consistently reported in longitudinal cohorts with extended follow-up [23], [24], [25], [44], [45], [46]. Individual studies frequently contributed evidence to more than one attribution domain. The attribution domains used to classify gait and balance deterioration across studies are summarized in Table 2.Table 2Attribution domains for gait and balance decline after deep brain stimulation in Parkinson’s disease.Attribution domainDefinitionRepresentative studiesStimulation-related/programming-sensitive effectsAcute or early gait or balance worsening linked to stimulation activation, electrode implantation, contact location, frequency, or amplitude adjustment, stimulation configuration, or target/network engagement; these effects may improve with reprogramming.Tommasi 2007; Adams 2011; Meoni 2019; Moreau 2008; Weiss 2013; Karl 2020Stimulation-medication interactionDifferential gait or balance effects across DBS and dopaminergic medication states, including non-additive or opposing responses.Rocchi 2002; Ferraye 2008; Fleury 2016; Vercruysse 2014Time-dependent progressionProgressive gait or balance decline with increasing postoperative duration, despite sustained appendicular motor benefit.Rodriguez-Oroz 2005; Rizzone 2014; Yin 2018; Kim 2019
+
+## Discussion
+
+### Integration with prior reviews
+
+Previous reviews have addressed gait and balance outcomes after STN-DBS, but most have approached the topic descriptively or interventionally rather than through explicit attribution. Systematic reviews have documented the frequency and timing of gait and balance worsening following STN-DBS, highlighting that axial symptoms often deteriorate despite sustained appendicular motor benefit [7]. Programming-focused reviews and meta-analyses have emphasized the potential of parameter modifications, particularly low-frequency stimulation, to alleviate freezing of gait while noting substantial heterogeneity and limited durability of benefit [13], [14], [35]. Consistent with prior narrative reviews, axial disability after DBS has been attributed predominantly to disease progression and non-dopaminergic pathology, although these reviews have not systematically disentangled stimulation effects from medication interactions or temporal evolution [5], [6].
+
+The present review differs from these prior syntheses by explicitly organizing evidence around clinically relevant counterfactual contrasts. Rather than grouping studies by intervention category alone, findings were interpreted according to stimulation ON/OFF effects, stimulation-medication interactions, and time-dependent change. This framework allows apparently contradictory findings, such as improvement of freezing of gait in some contexts and worsening in others, to be reconciled within a unified attribution model.
+
+### Stimulation-related gait and balance worsening
+
+Acute gait worsening temporally associated with stimulation activation, transient gait deterioration related to electrode implantation, and early postoperative deterioration emerging within weeks to months after surgery have been reported in mechanistic case series and observational studies. Acute freezing of gait induced by STN stimulation and resolving with stimulation deactivation was described in early postoperative assessments [32]. Levodopa-resistant freezing of gait emerging immediately after electrode implantation was reported in isolated cases and small series, independent of stimulation activation [33]. Acute axial worsening shortly after stimulation onset, with partial reversibility following stimulation adjustment, was observed in several reports [34].
+
+Parameter-dependent modulation of gait outcomes was demonstrated in multiple interventional studies. Improvement in freezing of gait following systematic reduction of stimulation frequency from conventional high-frequency settings was reported in short-term crossover and interventional designs [35], [36], [37]. The literature supports a clinically relevant low-frequency range, usually 60–80 Hz in selected patients, rather than a single reproducible cutoff. By contrast, available studies do not identify a universal amplitude, pulse width, or contact threshold above which freezing of gait or imbalance reliably occurs. Contact location appears clinically relevant, but the signal is anatomical rather than binary: adverse axial effects have more often been linked to dorsal or dorsally spreading stimulation above the intended STN motor territory, likely through recruitment of adjacent fiber pathways involved in locomotor control, whereas improvement after contact relocation suggests that some cases are programming-sensitive. However, the evidence does not support a uniform upper-versus-lower contact rule across patients, because contact effects depend on lead position, individual anatomy, and the volume of tissue activated. Evidence comparing monopolar and bipolar configurations remains limited and inconsistent, so no general rule can be justified. Even when deterioration is obvious after DBS, it should not automatically be solely interpreted as direct stimulation-induced harm, because medication reduction, altered network compensation, and time-dependent disease progression may contribute concurrently.
+
+### Stimulation-medication interactions as a source of apparent worsening
+
+Several studies indicate that gait and balance deterioration after STN-DBS may reflect complex interactions between stimulation and dopaminergic therapy rather than a unidirectional stimulation effect. Experimental studies have demonstrated that STN stimulation can attenuate the beneficial effects of levodopa on gait and akinesia, leading to paradoxical worsening in the medication ON state [42]. Prospective cohorts have further shown that freezing of gait responses differ depending on medication condition, with some patients improving in the OFF state but worsening when stimulation and medication are combined [17], [43]. These findings are supported by quantitative posturography studies showing partially independent and sometimes opposing effects of STN stimulation and levodopa on postural sway and balance control [40].
+
+### Time-dependent progression and late axial decline
+
+Long-term studies consistently demonstrate that gait and balance outcomes differ from appendicular motor responses over time. Multicentre cohorts with extended follow-up have shown progressive worsening of gait and postural instability despite sustained improvement in tremor and rigidity [23], [24]. Studies that explicitly focus on axial outcomes have identified time since surgery as a major determinant of late-stage gait and balance decline, often refractory to further stimulation or medication optimization [25], [45]. Regression and longitudinal syntheses reinforce this pattern, indicating that balance outcomes worsen with increasing follow-up duration, while gait outcomes show greater heterogeneity, even when overall motor scores remain improved [46]. These findings support the interpretation that late axial deterioration predominantly reflects disease progression and non-dopaminergic pathology rather than stimulation failure alone.
+
+### Balance outcomes and non-locomotor mechanisms
+
+Balance-specific outcomes have been studied less frequently than freezing of gait but offer important mechanistic insight. Experimental studies using posturography have demonstrated that STN-DBS can have divergent effects on balance, often improving static postural sway while impairing dynamic balance control and adaptive postural responses under certain conditions, despite improving other motor domains [40]. Reviews of postural control emphasize that balance impairment in Parkinson’s disease reflects deficits in multisensory integration, anticipatory postural adjustments, and brainstem network function, which may be less responsive to modulation by STN stimulation [28].
+
+### Clinical and methodological implications
+
+Systematic assessment of gait and balance across stimulation and medication states should be routine when postoperative worsening is reported. The first practical split is temporal and physiologic: early decline that changes with stimulation state, contact selection, or frequency is more likely to be stimulation-related; late decline that persists despite structured reprogramming is more likely to reflect disease progression. In programming-sensitive cases, clinicians should test alternative contacts, reduce current spread when possible, and consider lower-frequency stimulation in selected patients, while documenting trade-offs in tremor, rigidity, and bradykinesia. No single contact level, pulse width, voltage, amplitude, or monopolar-bipolar configuration can be recommended as a universal gait-safe setting. Responses are patient-specific and should be determined empirically through structured testing. When deterioration proves stimulation-insensitive, management should shift toward medication review, rehabilitation, fall-risk reduction, assistive strategies, and counseling about axial progression rather than repeated empiric programming alone.
+
+Future studies would benefit from standardized gait and balance outcomes, explicit reporting of stimulation and medication conditions, and longitudinal designs capable of capturing time-dependent change. Randomized trials of programming strategies should incorporate causal contrasts rather than relying solely on pre-post comparisons.
+
+## Limitations
+
+The included literature is heterogeneous, with most studies being observational, exploratory, or small interventional investigations rather than randomized controlled trials. Because counterfactual contrasts were reconstructed from non-randomized studies, causal attribution remains probabilistic and hypothesis-generating rather than definitive. Balance outcomes remain underrepresented relative to freezing of gait, limiting definitive conclusions in this domain.
+
+## Conclusions
+
+Gait and balance deterioration after DBS in Parkinson’s disease reflects a heterogeneous set of mechanisms, rather than a single uniform process. Evidence indicates that postoperative worsening may arise from stimulation-related effects, interactions between stimulation and dopaminergic therapy, or time-dependent disease progression. These mechanisms frequently coexist and may dominate at different postoperative stages. By organizing the literature around attribution-relevant counterfactual contrasts, this review provides a clinically grounded framework for interpreting postoperative gait and balance outcomes, guiding stimulation and medication adjustments, and informing long-term management after STN-DBS. Early, stimulation-sensitive deterioration should prompt systematic programming and medication-state testing, whereas late, stimulation-insensitive decline is more consistent with disease progression and warrants non-stimulation-based interventions.
+
+Declaration of Generative AI and AI-assisted technologies in the writing process: During the manuscript revision, authors used ChatGPT (OpenAI, GPT-4o) to improve stylistic consistency and readability. After using this tool, the authors reviewed and edited the content as needed, verified the scientific accuracy of the manuscript, and take full responsibility for the content of the publication.
+
+## CRediT authorship contribution statement
+
+Nana Tchantchaleishvili: Writing – original draft, Visualization, Project administration, Investigation, Conceptualization, Data curation. Andrii Netliukh: Writing – review & editing, Validation, Software, Resources, Formal analysis, Methodology. Mario Ganau: Formal analysis, Validation, Writing – review & editing.
+
+## Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.

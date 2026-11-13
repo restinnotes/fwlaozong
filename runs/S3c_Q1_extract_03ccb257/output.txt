@@ -1,0 +1,732 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:41594737; DOI:10.3390/brainsci16010016",
+    "title": "Symptom-Specific Networks and the DBS-Modulated Network in Parkinson's Disease: A Connectivity-Based Review",
+    "publication_status": "review",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:41594737_review",
+    "cohort_id_candidate": "not_applicable_review",
+    "cohort_relation_basis": "叙述性连接组综述，综合既往原始研究；作者明确说明本研究未产生或分析新的患者数据，因此不存在本综述独立患者队列。综述报告FoG网络纳入9项研究、DBS调制网络纳入14项研究，但未提供可用于确定患者队列重叠的完整信息。",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID41594737_E01",
+      "design": "叙述性综述；STN-DBS刺激体积与FoG改善之间的结构连接关联，转述原始研究[81]。",
+      "population": "帕金森病合并FoG患者；本综述未提供该项原始研究的具体患者特征。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未逐项报告原始研究[81]的患者数、事件数、试次数和电极数；不能将综述纳入研究数作为患者分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；综述未区分akinetic、trembling-in-place或其他FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述未报告该项研究的测试药物状态。",
+      "DBS_state_and_parameters": "STN-DBS；根据刺激体积（stimulation volumes）与远端结构连接分析；综述未报告频率、幅度、脉宽、具体触点、方向性或测试时刺激开关状态。",
+      "task": "FoG临床改善结局；综述未说明该项证据对应自然行走、诱发冻结、问卷评分还是其他具体测量条件。",
+      "recording_location": "STN-DBS刺激体积及其结构连接网络；涉及运动区、前额叶皮层和GPi。没有报告STN电生理记录。",
+      "measure": "刺激体积与远端脑区之间的结构连接（structural connectivity）；属于刺激网络连接分析，不是STN局部场电位、单单位或多单位神经活动。",
+      "frequency_and_analysis_window": "unknown；综述未报告神经振荡频段、信号分析窗口、归一化方法或动态分析时间尺度。",
+      "finding": "综述转述原始研究[81]：FoG改善与结构上连接至运动区、前额叶皮层和GPi的刺激体积相关。这提示STN-DBS的FoG疗效可能与刺激所调制的远端结构通路有关，但不能据此推断STN内源性神经活动的变化方向或因果作用。原始研究：Strelow et al., 2022，PMID:35431262，DOI:10.3233/JPD-212997。",
+      "effect_estimate": "本综述未报告效应量、置信区间或P值；原始研究的具体数值未在本综述该段呈现。",
+      "statistical_unit_and_method": "综述未报告原始研究[81]的统计单位、具体模型、交叉验证指标或多重比较校正方法。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（针对综述的适用域进行初步判断；并非作者实施的正式偏倚评估）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确说明研究主题、纳入标准及要求报告解剖学定义的区域间连接。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "报告PubMed和Web of Science两个数据库及2015—2025年的检索范围和关键词，但未充分说明完整检索式、独立筛选人数、筛选一致性及灰色文献处理。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "数据提取与原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "作者明确说明未采用正式风险偏倚评估工具，仅进行定性评价；未在该项证据中提供原始研究[81]的逐域偏倚判断。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "综合分析与结果呈现",
+            "judgement": "some_concerns",
+            "reason": "采用叙述性连接组综合，主要纳入具有统计学显著性且可解剖定位的区域间连接；没有提供该项FoG结果的效应量和跨研究定量异质性分析。",
+            "source_locator": "Sections 2, 4.5 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是二级证据，不构成新的独立患者队列。该发现属于结构连接与临床结局的关联，不能与STN-LFP beta功率、beta burst、单/多单位放电或事件相关神经活动证据混为一谈。原始研究[81]的患者分母和具体FoG测量条件不能从本综述该段恢复。",
+      "quote": "improvement in FoG has been linked to stimulation volumes structurally connected to motor areas, the prefrontal cortex, and the GPi",
+      "source_locator": {
+        "section": "Section 4.5, DBS-Modulated Network",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+
+    {
+      "eid_local": "PMID41594737_E02",
+      "design": "叙述性综述；转述STN-DBS刺激通路与FoG恶化之间的关联，原始研究[81]。",
+      "population": "帕金森病合并FoG患者；综述未提供原始研究具体样本特征。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究[81]的具体分母及事件数。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "STN-DBS；涉及lenticular fasciculus相关刺激通路；具体刺激参数未报告。",
+      "task": "FoG临床结局；具体任务和冻结事件评估方法未在综述中说明。",
+      "recording_location": "STN刺激体积及其结构连接通路；lenticular fasciculus。",
+      "measure": "刺激相关结构连接与FoG临床结局的关联。",
+      "frequency_and_analysis_window": "unknown；未报告神经振荡频段及分析窗口。",
+      "finding": "综述报告lenticular fasciculus相关刺激可能与FoG恶化相关。这与运动区、前额叶皮层及GPi相关通路所呈现的FoG改善关联形成方向相反的通路特异性结果。原始研究为Strelow et al., 2022，PMID:35431262，DOI:10.3233/JPD-212997。",
+      "effect_estimate": "综述未报告效应量、置信区间或P值。",
+      "statistical_unit_and_method": "未报告原始研究的具体统计单位和模型。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面的初步适用域评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确规定纳入研究的疾病、症状和连接分析要求。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "检索数据库及关键词已报告，但完整检索策略和独立筛选程序不清楚。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "作者未实施正式偏倚评价工具。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "未提供该结果的定量效应和跨研究异质性分析。",
+            "source_locator": "Sections 4.5 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是STN-DBS通路结构连接证据，而非STN神经元放电或局部场电位证据。改善与恶化的通路关联不能直接解释为STN内神经活动增强或减弱。原始研究[81]不能作为本综述之外的独立重复验证。",
+      "quote": "stimulation of the lenticular fasciculus may be associated with worsening of FoG",
+      "source_locator": {
+        "section": "Section 4.5, DBS-Modulated Network",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E03",
+      "design": "叙述性综述转述的静息态fMRI观察性研究；PD-PIGD亚型与STN-纹状体功能连接的比较。",
+      "population": "帕金森病PIGD亚型患者；不是经过事件级确认的FoG患者队列。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究[39,41]对应的具体样本分母；未提供FoG患者数或冻结事件数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；PIGD亚型不能等同于FoG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；本段未说明药物状态。",
+      "DBS_state_and_parameters": "未报告DBS干预；静息态fMRI功能连接研究。",
+      "task": "静息态fMRI；没有报告自然行走或事件级冻结任务。",
+      "recording_location": "STN与左侧putamen之间的功能连接。",
+      "measure": "STN-putamen静息态功能连接（BOLD相关性）；不是STN局部神经活动或振荡功率。",
+      "frequency_and_analysis_window": "静息态BOLD功能连接；具体频率范围、时间窗口、基线和归一化方法未在综述中报告。",
+      "finding": "综述报告PD-PIGD患者STN与putamen之间的功能连接减弱。这是与步态和姿势障碍表型相关的影像学证据，并非与实际FoG事件发生时间相关的证据。综述引用原始研究[39,41]：Hou et al., DOI:10.1007/s00234-018-2101-6，PMID:30244415；Vervoort et al., DOI:10.1016/j.parkreldis.2016.01.016，PMID:26924603。综述未将具体连接结果逐一分配给两篇原始研究。",
+      "effect_estimate": "仅报告连接减弱方向；没有提供具体相关系数、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "静息态fMRI功能连接分析；原始研究的具体统计单位、模型和重复测量处理未在综述中报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确规定PD亚型和解剖学连接研究的纳入要求。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "提供两个数据库和关键词，但缺少完整检索式及独立筛选程序。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "没有正式逐研究风险偏倚评价。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "连接结果以方向性叙述为主，缺乏统一效应量和异质性分析。",
+            "source_locator": "Sections 4.2 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "PIGD是包含步态和姿势障碍的临床表型，不代表所有患者存在FoG，也不能将其视为实际冻结事件的替代指标。静息态FC不能确定STN活动变化是否发生在冻结之前或期间。原始研究的患者队列关系尚不能仅凭本综述确认。",
+      "quote": "weakened connectivity between the STN and putamen and pons",
+      "source_locator": {
+        "section": "Section 4.2, The PIGD Network",
+        "page": null,
+        "figure_table": "Figure 4b; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E04",
+      "design": "叙述性综述转述的静息态fMRI观察性研究；PD-PIGD亚型与STN-脑桥功能连接的比较。",
+      "population": "帕金森病PIGD亚型患者；非事件级FoG队列。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究样本分母、有效影像数量或冻结事件数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；PIGD临床表型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "未报告DBS干预；静息态fMRI。",
+      "task": "静息态fMRI；没有事件级步行或冻结任务信息。",
+      "recording_location": "STN与脑桥（pons）之间的功能连接。",
+      "measure": "STN-pons静息态功能连接；BOLD功能连接指标。",
+      "frequency_and_analysis_window": "具体BOLD频率范围和分析窗口未报告。",
+      "finding": "综述报告PD-PIGD患者STN与脑桥之间的功能连接减弱。该结果提示PIGD表型伴随STN-脑干连接异常，但综述没有证明这种异常与实际FoG事件具有时间关联。原始研究引用[39,41]，其中Hou et al. DOI:10.1007/s00234-018-2101-6，PMID:30244415；Vervoort et al. DOI:10.1016/j.parkreldis.2016.01.016，PMID:26924603。",
+      "effect_estimate": "仅有连接减弱的方向性描述；无具体效应量、置信区间或P值。",
+      "statistical_unit_and_method": "静息态fMRI功能连接；原始研究具体统计单位和方法未在综述中给出。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述给出明确纳入标准。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "未充分报告完整检索策略和独立筛选程序。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "没有正式逐研究风险偏倚评价。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "缺乏统一效应量和跨研究异质性分析。",
+            "source_locator": "Sections 4.2 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "脑桥连接变化不能直接解释为STN内神经振荡异常，也不能证明其与冻结事件同步。PIGD和FoG的表型定义不能互换。",
+      "quote": "weakened connectivity between the STN and putamen and pons",
+      "source_locator": {
+        "section": "Section 4.2, The PIGD Network",
+        "page": null,
+        "figure_table": "Figure 4b; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E05",
+      "design": "叙述性综述转述的静息态fMRI观察性研究；PD-TD和PD-PIGD亚型的STN-感觉运动皮层功能连接比较。",
+      "population": "帕金森病TD和PIGD亚型患者；并非专门的FoG事件队列。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未提供对应原始研究的逐项样本分母、有效影像数量或FoG事件数。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；TD与PIGD分组，未按FOG具体表现分类。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；共同引用的研究可能具有不同测试条件，综述没有逐项说明。",
+      "DBS_state_and_parameters": "未报告DBS干预；该发现属于静息态功能连接综合。",
+      "task": "静息态fMRI；非事件级步行任务。",
+      "recording_location": "STN与感觉运动皮层（sensorimotor cortex）之间。",
+      "measure": "STN-感觉运动皮层功能连接；BOLD相关性。",
+      "frequency_and_analysis_window": "静息态BOLD功能连接；具体频率范围和分析窗口未报告。",
+      "finding": "综述报告TD和PIGD两种表型均存在STN与感觉运动皮层连接增强，并将其归纳为可能的共同代偿机制。该发现属于静息态连接，不是STN beta功率或冻结事件相关神经活动。共同引文为[35,38,47]。其中[38] Wang et al., PMID:27871435，DOI:10.1016/j.jns.2016.10.035；[47] Shen et al., PMID:28420978，DOI:10.3389/fnagi.2017.00074；[35] DOI:10.1007/s00702-023-02606-9。综述未逐篇说明每篇研究支持的具体连接边。",
+      "effect_estimate": "报告连接增强方向；无具体效应量、置信区间或P值。",
+      "statistical_unit_and_method": "静息态fMRI功能连接分析；患者级或其他统计单位未在综述中说明。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "纳入标准和解剖连接要求明确。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "数据库和关键词已报告，但完整检索式及筛选流程不充分。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "未使用正式偏倚评价工具。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "多个研究共同支持连接方向，但未报告逐研究效应量及贡献权重。",
+            "source_locator": "Sections 4.2 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "综述将该连接描述为可能的代偿机制，但没有直接测量其代偿效果，也没有报告其与实际冻结事件的时间关系。不能把PIGD或TD患者的静息态连接增强解释为FoG发生时STN活动增强。",
+      "quote": "increased STN connectivity with the sensorimotor cortex and visual cortex",
+      "source_locator": {
+        "section": "Section 4.2, The PIGD Network",
+        "page": null,
+        "figure_table": "Figure 4b; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E06",
+      "design": "叙述性综述转述的静息态fMRI观察性研究；PD-TD和PD-PIGD亚型的STN-视觉皮层功能连接比较。",
+      "population": "帕金森病TD和PIGD亚型患者；没有事件级FoG分组信息。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告对应研究的患者数和有效影像分母，也未报告冻结事件数量。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；TD和PIGD表型，不等同于FoG。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "未报告DBS干预；静息态fMRI。",
+      "task": "静息态fMRI；无实际冻结事件记录。",
+      "recording_location": "STN与视觉皮层之间的功能连接；综述具体表述为visual cortex。",
+      "measure": "STN-视觉皮层功能连接；BOLD相关性。",
+      "frequency_and_analysis_window": "未报告具体频段、分析窗口或归一化方法。",
+      "finding": "综述报告PD-TD与PD-PIGD患者存在STN与视觉皮层连接增强，并将其列为两种表型可能共享的代偿机制。该结果不能证明视觉连接增强对FoG具有保护作用，也不能证明它是冻结发生的原因。原始研究共同引文为[35,38,47]；其中[38] PMID:27871435，DOI:10.1016/j.jns.2016.10.035；[47] PMID:28420978，DOI:10.3389/fnagi.2017.00074；[35] DOI:10.1007/s00702-023-02606-9。",
+      "effect_estimate": "方向为连接增强；综述未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "静息态fMRI功能连接；具体统计单位和原始模型未报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确了纳入标准。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "缺少完整检索式和独立筛选流程说明。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "没有正式逐研究偏倚风险评估。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "未提供逐研究效应量及统一定量分析。",
+            "source_locator": "Sections 4.2 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结果是表型分组的静息态FC关联，不是实际FoG事件期间的STN活动证据。综述没有提供视觉皮层连接与FoG严重程度之间的直接相关系数或预测性能。",
+      "quote": "increased STN connectivity with the sensorimotor cortex and visual cortex",
+      "source_locator": {
+        "section": "Section 4.2, The PIGD Network",
+        "page": null,
+        "figure_table": "Figure 4b; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E07",
+      "design": "叙述性综述转述的DBS干预影像学研究；不同运动表型患者的DBS相关BOLD活动变化。",
+      "population": "帕金森病PIGD亚型患者；综述未说明其中有多少患者具有经确认的FoG。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究[82]的样本分母、患者级FoG数量和有效fMRI数据数量。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；研究按PIGD运动表型分组，未说明实际FoG事件或冻结表现。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述未报告扫描时药物状态。",
+      "DBS_state_and_parameters": "STN-DBS；综述报告PIGD患者在STN-DBS条件下出现M1激活；刺激开关循环、频率、幅度、脉宽及触点在本综述中未报告。",
+      "task": "DBS相关功能MRI；原始研究采用DBS ON/OFF扫描，但本综述没有详细说明扫描任务或运动任务。",
+      "recording_location": "M1（primary motor cortex）；不是STN内记录。",
+      "measure": "M1的BOLD功能活动；DBS调制的远端皮层活动指标。",
+      "frequency_and_analysis_window": "BOLD-fMRI；无STN电生理频段或beta burst分析。",
+      "finding": "综述报告STN-DBS在PD-PIGD患者中导致M1激活，而GPi-DBS在PIGD患者中导致M1失活。该结果提示不同刺激靶点与运动表型可能对应不同皮层反应，但并未直接报告FoG患者或冻结事件的神经活动。原始研究[82]为DiMarzio et al., 2020，PMID:32369255，DOI:10.1111/ner.13160。",
+      "effect_estimate": "本综述未提供M1激活的效应量、置信区间或P值。",
+      "statistical_unit_and_method": "原始研究采用功能MRI及DBS ON/OFF比较；综述未给出PIGD亚组的具体统计单位、模型和效应量。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价；原始研究干预偏倚未在本综述中正式评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确纳入DBS网络调制研究。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "检索范围和关键词明确，但筛选流程细节不足。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "没有正式报告原始干预研究的偏倚风险评价。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "按运动表型进行方向性叙述，但未给出具体分组效应量和跨研究比较。",
+            "source_locator": "Sections 4.5 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "PIGD不是FoG的同义词。M1的BOLD激活不能等同于STN神经活动增强；也不能据此推断冻结前或冻结期间的STN beta活动方向。该研究属于DBS诱导的网络反应证据，不是STN局部神经记录。",
+      "quote": "STN-DBS resulted in M1 activation in PD-PIGD patients",
+      "source_locator": {
+        "section": "Section 4.5, DBS-Modulated Network",
+        "page": null,
+        "figure_table": "Figure 3b",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E08",
+      "design": "叙述性综述转述的FoG影像学观察研究；PD-FoG患者的PPN功能连接异常。",
+      "population": "帕金森病合并FoG患者；原始研究具体样本量和分组细节未在综述中报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未提供原始研究[52,53]对应的患者数、有效影像数或事件级冻结记录数量。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "PD-FoG；具体akinetic、trembling-in-place或其他亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "未报告DBS干预；属于FoG网络影像学证据。",
+      "task": "连接组影像研究；该项结果的具体扫描和行为任务未在综述中说明。",
+      "recording_location": "PPN及其与corticopontine-cerebellar pathways之间的功能连接。",
+      "measure": "PPN与皮质-脑桥-小脑通路之间的功能连接；不是STN电生理信号。",
+      "frequency_and_analysis_window": "未报告具体频率范围、时间窗口或连接计算细节。",
+      "finding": "综述报告PD-FoG患者存在PPN与corticopontine-cerebellar pathways之间的异常功能连接。这构成FoG相关中脑运动网络异常的影像学证据，但不构成STN局部活动与FoG的直接证据。原始文献[53]为Wang et al., 2016，PMID:27230857，DOI:10.1007/s00415-016-8174-4。共同引用的[52]为Grabli et al., 2012，DOI:10.1136/jnnp-2012-302263，是综述性文献，不能作为新的独立患者队列。",
+      "effect_estimate": "仅报告异常功能连接；没有提供具体效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述未报告该项连接的原始统计单位、模型或多重比较校正结果。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述明确规定FoG网络研究的纳入条件。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "检索数据库和关键词明确，但完整筛选流程不清楚。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "未采用正式偏倚风险评价工具。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "以解剖连接方向性描述为主，未提供逐研究定量结果。",
+            "source_locator": "Sections 4.3 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "PPN属于中脑运动网络节点，不能将PPN连接异常解释为STN神经活动异常。综述没有说明该连接是否与实际冻结事件逐事件同步，也没有区分冻结前、冻结中和恢复期。",
+      "quote": "PD-FoG patients exhibit abnormal PPN FC with corticopontine–cerebellar pathways",
+      "source_locator": {
+        "section": "Section 4.3, The FoG Network",
+        "page": null,
+        "figure_table": "Figure 4c; Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E09",
+      "design": "叙述性综述转述的多模态影像学观察研究；PD-FoG患者的中脑-皮层功能连接比较。",
+      "population": "帕金森病合并FoG患者；原始研究[51]的具体样本分母未在综述中报告。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究[51]的患者数量、有效影像数量和事件级冻结数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "PD-FoG；具体冻结表现未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "未报告DBS干预；FoG相关多模态影像研究。",
+      "task": "影像学网络评估；具体扫描条件和行为任务未在综述中报告。",
+      "recording_location": "中脑与皮层之间的功能连接；不包括STN局部电生理记录。",
+      "measure": "Midbrain-cortical functional connectivity。",
+      "frequency_and_analysis_window": "未报告频段、BOLD分析窗口或动态时间尺度。",
+      "finding": "综述指出PD-FoG患者存在中脑-皮层功能连接明显降低。这一发现支持FoG与中脑-皮层网络功能障碍相关，但并未报告STN活动或STN-皮层神经振荡耦合。原始研究[51]为Droby et al., 2021，PMID:33995237，DOI:10.3389/fneur.2021.583593。",
+      "effect_estimate": "综述仅报告连接降低方向；未提供效应量、置信区间或P值。",
+      "statistical_unit_and_method": "原始研究的具体统计单位、连接指标和校正方法未在综述中呈现。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "明确规定FoG和解剖学连接研究的纳入条件。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "检索数据库明确，但完整检索式和独立筛选程序未充分报告。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "作者未实施正式偏倚风险评估。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "没有提供该项研究的定量效应及与其他FoG网络研究的异质性分析。",
+            "source_locator": "Sections 4.3 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是中脑-皮层连接证据，不是STN神经活动证据。综述没有提供冻结事件的时间锁定分析，也没有证明中脑连接变化对FoG具有因果作用。",
+      "quote": "a marked reduction in midbrain–cortical connectivity have been established in PD-FoG patients",
+      "source_locator": {
+        "section": "Section 4.3, The FoG Network",
+        "page": null,
+        "figure_table": "Figure 4c",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E10",
+      "design": "叙述性综述转述的多模态影像学观察研究；PD-FoG患者的中脑结构异常。",
+      "population": "帕金森病合并FoG患者；原始研究[51]。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述未报告原始研究[51]的样本数量、影像有效数据数量和事件级冻结数据。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "PD-FoG；具体冻结亚型未报告。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown",
+      "DBS_state_and_parameters": "未报告DBS干预。",
+      "task": "多模态脑影像；具体扫描任务未在综述中报告。",
+      "recording_location": "中脑；不涉及STN电极记录。",
+      "measure": "中脑结构损伤（structural damage）；具体结构影像指标未在综述中说明。",
+      "frequency_and_analysis_window": "不适用；结构影像指标，不是神经振荡测量。",
+      "finding": "综述报告FoG患者存在中脑结构损伤。这是与FoG表型相关的结构影像发现，不能推断STN神经活动的方向、频率或事件时序。原始研究[51]为Droby et al., 2021，PMID:33995237，DOI:10.3389/fneur.2021.583593。",
+      "effect_estimate": "未报告结构损伤的具体效应量或统计数值。",
+      "statistical_unit_and_method": "原始研究的具体结构影像指标、统计单位和统计方法未在综述中报告。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "综述给出明确的FoG影像学研究纳入条件。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "数据库及关键词已报告，但筛选细节不完整。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "没有正式逐研究偏倚风险评价。",
+            "source_locator": "Section 2"
+          },
+          {
+            "domain": "综合分析",
+            "judgement": "some_concerns",
+            "reason": "综述提供定性描述，没有报告结构影像结果的统一定量综合。",
+            "source_locator": "Sections 4.3 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "结构损伤和功能连接属于不同影像指标，不能合并成STN神经活动异常。该证据不能用于推断STN beta功率、burst或相位调制变化。",
+      "quote": "Both structural damage to the midbrain and a marked reduction in midbrain–cortical connectivity have been established in PD-FoG patients",
+      "source_locator": {
+        "section": "Section 4.3, The FoG Network",
+        "page": null,
+        "figure_table": "Figure 4c",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID41594737_E11",
+      "design": "叙述性连接组综述；对纳入研究的影像学方法和信号类型进行方法学描述。",
+      "population": "综述纳入的PD一般网络、PIGD、FoG及DBS网络研究；没有本综述独立患者队列。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述没有新患者数据，也没有提供跨研究统一的患者、事件、电极或有效神经信号分母。作者报告FoG网络纳入9项研究、DBS网络纳入14项研究，但研究数不能替代患者数。",
+      "endpoint_class": "unclear",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；方法学描述未涉及具体冻结表现。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "unknown；综述指出不同研究之间可能存在药物状态异质性，但未提供逐研究对应关系。",
+      "DBS_state_and_parameters": "综述包括STN-DBS和GPi-DBS的网络调制研究；未对STN电生理信号进行直接记录或分析。",
+      "task": "以静息态fMRI和结构连接研究为主；不同原始研究的具体任务不统一。",
+      "recording_location": "影像学脑区和白质通路；全文没有报告STN内LFP或单/多单位电生理记录位置。",
+      "measure": "主要为rs-fMRI功能连接、DTI结构连接、DBS刺激体积及白质通路连接。全文没有报告STN局部场电位功率、beta burst持续时间或占据率、神经放电率、相位调制或事件锁定STN神经活动。",
+      "frequency_and_analysis_window": "未报告STN神经电生理频段边界、burst检测阈值、事件分析窗口、基线归一化或神经活动的患者级/事件级统计。",
+      "finding": "本综述的证据基础主要是连接组影像学，而非STN神经电生理。作者说明大多数网络研究使用rs-fMRI相关分析构建功能连接，DBS网络研究使用rs-fMRI和DTI构建功能及结构连接。因此，本综述不能提供STN beta活动与实际FoG事件之间的直接时间关联证据，也不能支持STN活动增强或减弱的竞争性结论。此处的未报告仅指本综述全文未呈现相关电生理结果，不代表其引用的每篇原始研究都从未采集过电生理数据。",
+      "effect_estimate": "不适用；这是方法学覆盖范围描述，不是临床效应估计。",
+      "statistical_unit_and_method": "综述采用解剖学区域间连接的叙述性综合，使用BrainNet Viewer绘制网络；没有报告STN电生理患者级或事件级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS（综述层面初步评价）",
+        "domains": [
+          {
+            "domain": "研究资格标准",
+            "judgement": "low",
+            "reason": "明确报告研究时间范围、疾病症状、连接方法和解剖学区域定义要求。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "研究检索与选择",
+            "judgement": "some_concerns",
+            "reason": "报告PubMed、Web of Science及关键词，但完整检索式、独立筛选流程和灰色文献处理未充分说明。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "原始研究偏倚评价",
+            "judgement": "high",
+            "reason": "作者明确说明没有采用正式风险偏倚评价工具。",
+            "source_locator": "Section 2, Materials and Methods"
+          },
+          {
+            "domain": "综合分析与结果呈现",
+            "judgement": "some_concerns",
+            "reason": "仅纳入可解剖定位且达到统计学显著性的区域间连接，可能遗漏其他网络指标；作者亦承认边连接综合可能低估ICA和图论研究中的整体网络重组。",
+            "source_locator": "Sections 2 and 6"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "本综述不适合用来判断STN beta是否在FOG前增强、FOG期间降低或恢复期反弹，也不能比较beta平均功率与burst持续时间、占据率、熵或跨区相干性的差异。综述自身明确指出静息态fMRI主要提供相关性信息，不能直接推断因果或动态神经交互。不能将本综述未报告电生理结果解释为所有原始研究均不存在电生理数据。",
+      "quote": "Most of the included studies used correlation coefficient methods for constructing brain networks by employing rs-fMRI.",
+      "source_locator": {
+        "section": "Section 2, Materials and Methods；Section 6, Limitations；Data Availability Statement",
+        "page": null,
+        "figure_table": "Figure 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

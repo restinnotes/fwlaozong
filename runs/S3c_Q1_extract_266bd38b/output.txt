@@ -1,0 +1,514 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:39355431; DOI:10.1162/netn_a_00376",
+    "title": "The effect of deep brain stimulation on cortico-subcortical networks in Parkinson's disease patients with freezing of gait: Exhaustive exploration of a basic model",
+    "publication_status": "published",
+    "version_of_candidate": null,
+    "study_id_candidate": "PMID:39355431",
+    "cohort_id_candidate": null,
+    "cohort_relation_basis": "不适用。该研究为原创计算神经网络建模研究，没有人体或动物受试者队列，不能建立患者队列候选关系。研究使用文献解剖连接资料及Allen Mouse Brain Connectivity Atlas构建网络，但这不构成原始患者神经记录队列。",
+    "source_type": "primary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID39355431_E1",
+      "design": "原创计算建模研究；确定性离散susceptible-excited-refractory（SER）模型；通过改变有向符号网络拓扑模拟健康、PD、STN DBS和STN+SNr DBS状态。非临床干预试验，无患者级或事件级统计推断。",
+      "population": "无人体或动物受试者。作者构建FoG相关皮层-皮质下网络，Results称其包含12个区域。网络拓扑依据既往解剖文献和部分Allen Institute小鼠脑连接图谱。PD状态通过将SNc发出的所有边权重设置为0进行模拟。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：纯计算模型，无患者或动物招募，无临床FOG事件、行为试次、神经电极或接触点。不能将网络节点、初始状态、吸引子或网络连接边作为患者、事件或电极分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "未建模具体冻结行为表型。未区分akinetic、trembling-in-place、kinetic-no-trembling或mixed。作者将SNc去连接后产生的PD网络动力学解释为FoG相关网络动力学，但没有实际冻结事件。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态；无Med-On、Med-Off或左旋多巴剂量、给药时间等实验条件。",
+      "DBS_state_and_parameters": "STN DBS计算模拟状态。以virtual lesion假设实现：从PD网络拓扑出发，将所有源自STN的8条出边权重设为0。没有实际DBS设备、刺激频率、幅度、脉宽、触点或方向性参数。",
+      "task": "无实际步行任务、启动、转弯、双任务、仰卧踏步或虚拟现实任务。对固定STN DBS网络拓扑运行确定性SER模型，穷举所有可能的初始状态。",
+      "recording_location": "无神经生理记录。STN是计算网络中的一个节点，不是实际植入电极或记录解剖位置。",
+      "measure": "PD、STN DBS及健康网络配置中，最大吸引域对应的period-3 limit cycle占全部limit-cycle空间的比例。该指标反映计算模型的吸引子结构，不是STN平均放电率、LFP功率、beta burst或神经元同步活动的实测值。",
+      "frequency_and_analysis_window": "无Hz频段或神经信号分析窗口。SER模型使用离散时间步。Materials and Methods报告模型模拟至T=100，瞬态时间t=40。比较不同网络拓扑下的吸引子及其吸引域。",
+      "finding": "STN DBS拓扑配置下，最大吸引域对应的limit cycle占据的limit-cycle空间比例仍然较高。作者报告STN DBS状态为31%，PD状态为35%，健康状态为15%。因此，单独切断STN出边没有明显减少PD网络中最大吸引子的相对占据比例。该结果是网络动力学指标，不代表STN神经元实际放电活动的变化。",
+      "effect_estimate": "STN DBS：31%；PD：35%；健康：15%。作者描述STN DBS状态下该比例没有显著下降，但正文未提供相应统计检验、P值、置信区间或效应量计算方法。",
+      "statistical_unit_and_method": "统计单位为计算网络的吸引子及其吸引域，而非患者、FOG事件或试次。通过穷举初始状态，比较不同网络拓扑的limit-cycle空间。确定性模型分析，没有患者级统计推断或独立样本检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查，非经验证的正式偏倚评估工具。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "没有人体或动物受试者，无法评价患者纳入、排除或队列代表性。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "没有实际FOG行为标签。作者通过SNc出边断开定义PD网络状态，并将产生的网络动力学解释为FoG相关状态，不能验证计算吸引子是否对应真实冻结事件。",
+            "source_locator": "Materials and Methods—The FoG Network；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际LFP、单单位、多单位或其他电生理记录，不存在可评估的记录质量或运动伪迹控制。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "模型通过切断特定节点的全部出边代表PD或DBS。作者明确指出网络拓扑是SER模型中最具影响力的参数，并承认结果高度依赖初始拓扑选择。",
+            "source_locator": "Materials and Methods—The FoG Network；Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "所有初始状态和吸引子属于确定性计算状态空间，不是独立患者或独立临床事件。不能据此进行患者级推断。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "正文描述多个网络状态和吸引子比较，但没有在所提供全文中明确报告多重比较校正方案或预先指定的分析计划。补充材料未包含在本次提供的正文中。",
+            "source_locator": "Results—Emerging Dynamical Patterns；Supporting Information"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "未见使用独立患者神经记录或实际FOG事件进行外部验证。作者明确指出SER模型并不旨在重现真实神经元放电模式。",
+            "source_locator": "Introduction—The SER model；Discussion—Limitations of the current computational framework"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是网络拓扑干预的计算模拟，不是STN神经活动与FOG的直接电生理证据。31%与35%的差异不能解释为患者级疗效或STN beta活动变化。STN DBS通过删除STN出边实现，与真实高频电刺激的神经生理效应并不等同。没有事件级FOG记录、患者级统计、神经频谱或临床结局。作者也未提供该指标的统计显著性检验。",
+      "quote": "During the STN DBS, the amount of limit cycle space taken up by the attractor with the largest basin of attraction does not fall significantly (31%).",
+      "source_locator": {
+        "section": "Discussion—To obtain the present results；Results—Emerging Dynamical Patterns",
+        "page": null,
+        "figure_table": "Table 1",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID39355431_E2",
+      "design": "原创计算建模研究；确定性离散SER网络模型；比较健康、PD及不同DBS拓扑配置下的吸引子空间。",
+      "population": "无人体或动物受试者。使用文献构建的FoG相关皮层-皮质下网络，作者称其为12区域网络。通过删除PD网络中STN及SNr的输出连接模拟联合刺激。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：纯计算研究，无患者、动物、临床冻结事件、试次或电极。36是新出现的计算吸引子数量，不是患者数、事件数或实验重复次数。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "未报告具体FOG表现。模型不产生可观察的akinetic、trembling-in-place或其他冻结行为；只分析被解释为FoG相关的网络动力学。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态。",
+      "DBS_state_and_parameters": "STN+SNr联合DBS计算模拟。从PD拓扑出发，将源自STN和SNr的全部出边权重设为0，共14条边。该处理依据virtual lesion假说，不涉及真实刺激频率、幅度、脉宽或触点。",
+      "task": "无行为任务。对STN+SNr DBS网络拓扑运行确定性SER模型，穷举全部可能初始状态并识别period-3 limit cycles及其吸引域。",
+      "recording_location": "无实际神经记录。STN、SNr及其他皮层-皮质下和脑干区域作为计算图节点。",
+      "measure": "STN+SNr DBS配置中新出现的period-3 limit cycles数量，以及这些新吸引子占该配置全部limit cycles的比例。",
+      "frequency_and_analysis_window": "没有神经频段。SER模型使用离散时间步，模拟T=100，瞬态时间t=40。通过全部初始状态识别吸引子及吸引域。",
+      "finding": "STN+SNr DBS配置产生了大量PD和健康配置中不存在的新吸引子。作者报告36个新limit cycles，占STN+SNr DBS配置全部limit cycles的66%。这表明联合刺激所对应的模型网络并非简单返回健康吸引子空间，而是倾向于进入新的动力学状态空间。",
+      "effect_estimate": "36个新period-3 limit cycles，占STN+SNr DBS配置全部limit cycles的66%。未报告置信区间或P值。",
+      "statistical_unit_and_method": "统计单位为计算网络吸引子。通过穷举初始条件、识别limit cycles，并采用Venn diagram比较不同网络配置的吸引子空间。没有患者级或事件级统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "无人体或动物受试者。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "36个吸引子是模型状态，不是经过视频或临床确认的FOG事件。模型没有行为标签验证。",
+            "source_locator": "Results—Emerging Dynamical Patterns；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际神经电生理记录。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "联合DBS由同时删除STN和SNr出边实现，结果依赖预先选定的网络连接和虚拟病灶假设。",
+            "source_locator": "Materials and Methods—The FoG Network；Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "吸引子是计算状态，不是独立患者或事件。不能将36个吸引子作为36个生物学重复。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "比较了多个配置和吸引子类别，但未明确报告多重比较校正。补充材料内容未获得。",
+            "source_locator": "Results—Emerging Dynamical Patterns；Figures 4–6"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "没有独立临床或电生理数据验证36个新吸引子与FOG表型之间的对应关系。",
+            "source_locator": "Discussion—Limitations of the current computational framework"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "新吸引子数量和比例是模型拓扑及SER动力学的结果，不能直接解释为联合DBS增加或减少患者FOG事件。模型不区分冻结的临床表型、发生阶段和药物状态。36个吸引子不能作为独立生物学重复。该研究没有证明这些新吸引子对应特定的STN神经元活动模式。",
+      "quote": "there are 36 new limit cycles, which constitute 66% of all the limit cycles in the STN+SNr DBS attractor space.",
+      "source_locator": {
+        "section": "Results—Emerging Dynamical Patterns",
+        "page": null,
+        "figure_table": "Figure 6",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID39355431_E3",
+      "design": "原创计算建模研究；确定性SER模型；网络功能连接替代指标的比较分析。",
+      "population": "无人体或动物受试者。使用作者构建的FoG相关皮层-皮质下网络，比较PD、STN DBS、STN+SNr DBS及健康配置。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：没有患者队列或神经记录。矩阵元素及网络区域不能替代患者数、事件数或电极数。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "未区分具体冻结表型；没有实际FOG行为记录。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态。",
+      "DBS_state_and_parameters": "比较两种计算刺激状态：STN DBS将STN的8条出边设为0；STN+SNr DBS将STN和SNr的14条出边设为0。均为虚拟病灶模拟，无真实刺激参数。",
+      "task": "无行为任务。比较各拓扑配置下全部period-3 limit cycles产生的网络共激活矩阵。",
+      "recording_location": "无实际记录。矩阵包含STN及其他网络区域，但STN活动来自SER模型的S、E、R状态。",
+      "measure": "Coactivation matrix，作为模型中区域间同步活动及功能连接的替代指标。通过跨全部limit cycles累计同时发生的E状态，并除以模拟时间计算。使用1-norm distance比较各DBS配置与健康配置的矩阵差异。",
+      "frequency_and_analysis_window": "无LFP频段或频谱窗口。共激活矩阵基于全部limit cycles计算；每个周期的离散SER状态用于累计同步E事件。模拟T=100，瞬态t=40。1-norm用于比较矩阵差异。",
+      "finding": "STN+SNr DBS配置的共激活矩阵比PD配置更接近健康状态，且PD状态中出现的模块化共激活结构在联合刺激配置中趋于消散。相反，单独STN DBS配置仍呈现模块化结构，其共激活模式没有表现出向健康状态靠近的相同趋势。作者通过1-norm distance进行比较。该结果支持联合刺激在模型层面改变网络功能连接模式，但不是实测皮层-STN coherence或STN内同步活动。",
+      "effect_estimate": "定性结果：STN+SNr DBS与健康共激活矩阵的1-norm distance相对较小；STN DBS未显示相同趋势。正文未提供具体距离数值、置信区间或P值。",
+      "statistical_unit_and_method": "统计单位为网络区域对及其共激活矩阵元素。跨所有limit cycles累计同时发生的E状态，以1-norm distance比较不同配置。没有患者级统计或独立受试者推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "无患者或动物受试者。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "模型共激活矩阵没有与真实FOG事件进行对应验证，不能判断其是否反映冻结发生或恢复阶段的神经活动。",
+            "source_locator": "Results—Coactivation Matrices；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际LFP或其他神经记录，矩阵来自模型状态。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "共激活模式取决于预设网络连接和SER规则。作者承认拓扑选择对结果具有重要影响。",
+            "source_locator": "Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "区域对和limit cycles不是独立患者样本；没有患者级重复测量数据。",
+            "source_locator": "Materials and Methods—The SER Model；Coactivation matrices"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "多个网络区域对及矩阵元素参与比较，正文未明确说明多重比较校正。",
+            "source_locator": "Materials and Methods—Coactivation matrices；Results—Coactivation Matrices"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "没有独立的患者LFP或功能连接数据验证模型矩阵与真实神经网络功能连接的一致性。",
+            "source_locator": "Discussion—Limitations of the current computational framework"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "Coactivation matrix是模型内部功能连接替代指标，不能与实测STN beta功率、beta burst、皮层-STN coherence或相位同步混为一谈。该分析没有频段分解、患者级统计或FOG事件级时间锁定。矩阵的模块化程度还受到网络节点选择、拓扑及Louvain重排序方法影响。",
+      "quote": "Indeed, the STN+SNr DBS coactivation matrix is more similar to the healthy state coactivation matrix relative to the PD configuration. On the other hand, the STN DBS coactivation matrix does not exhibit this behavior.",
+      "source_locator": {
+        "section": "Results—Coactivation Matrices",
+        "page": null,
+        "figure_table": "Figure 7A–E",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID39355431_E4",
+      "design": "原创计算建模研究；基于确定性SER模型的网络投射活动传播分析；比较STN+SNr DBS与PD、健康网络配置。",
+      "population": "无人体或动物受试者。使用包含基底节、丘脑、皮层及脑干区域的FoG相关计算网络。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：无临床患者、FOG事件、试次或神经记录。Figure 8中的投射方格不是患者或事件分母。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "没有实际冻结表型。模型研究的是被认为与FoG相关的网络活动传播。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态。",
+      "DBS_state_and_parameters": "STN+SNr DBS虚拟病灶配置：PD网络中源自STN及SNr的全部14条出边权重设置为0。无真实刺激频率、幅度、脉宽、触点或方向性参数。",
+      "task": "无实际步行任务。对固定STN+SNr DBS拓扑运行SER模型，计算各网络区域之间的活动传播。",
+      "recording_location": "无实际电生理记录。模型分析包含STN、SNr、LC、PRF、PPN及皮层等节点。",
+      "measure": "Activity spike propagation matrix。对兴奋性投射，将目标区域的活动向后移动一个离散时间步后计算共激活；对抑制性投射，使用瞬态结束后的常规共激活矩阵。计算不同网络配置之间的1-norm distance，判断投射传播模式相对于健康状态和PD状态的接近程度。",
+      "frequency_and_analysis_window": "无神经振荡频段。离散SER时间步；模拟T=100，瞬态t=40。兴奋性投射使用目标节点活动向后移一个时间步的shifted coactivation matrix；抑制性投射使用排除瞬态后的常规coactivation matrix。统计跨全部limit cycles的活动传播。",
+      "finding": "STN+SNr DBS配置总体上使多个投射的活动传播模式趋向健康状态。对于脑干兴奋性投射，作者报告联合刺激具有单独STN DBS没有显示的特异性优势，涉及LC-PRF、PRF-LC、PRF-PPN和LC-Ctx四条投射。这是模型推导的投射级传播结果，并非真实脑干或STN神经元放电传播记录。",
+      "effect_estimate": "Figure 8相关文字报告31个gray squares、3个yellow squares、10个purple squares和26个green squares。作者明确指出purple squares对应STN+SNr DBS独有的脑干兴奋性传播正常化投射，包括LC-PRF、PRF-LC、PRF-PPN及LC-Ctx。没有报告独立统计检验、P值或置信区间。",
+      "statistical_unit_and_method": "统计单位为网络区域之间的投射边。基于兴奋性投射的shifted coactivation matrix和抑制性投射的常规coactivation matrix，计算各配置与健康及PD配置之间的1-norm distance。无患者级、事件级或独立神经记录统计。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "无患者或动物样本。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "没有实际FOG事件或行为阶段标签，不能确认计算投射传播正常化发生于真实冻结期间。",
+            "source_locator": "Results—Activity Propagation；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际神经记录，不存在可检查的运动伪迹或信号质量控制。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "投射传播取决于预先指定的兴奋性和抑制性边，以及将DBS视为删除靶点出边的假设。作者明确承认网络拓扑依赖性。",
+            "source_locator": "Materials and Methods—The FoG Network；Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "投射边数量和矩阵元素不是独立患者或FOG事件，不能用于患者级推断。",
+            "source_locator": "Materials and Methods—Activity propagation flow"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "同时比较多个兴奋性和抑制性投射，正文未明确报告多重比较校正或预先指定的主要投射。",
+            "source_locator": "Materials and Methods—Activity propagation flow；Figure 8"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "未通过独立患者电生理或行为数据验证LC-PRF、PRF-LC、PRF-PPN和LC-Ctx的模型传播结果。",
+            "source_locator": "Discussion—Limitations of the current computational framework"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "这是本研究与脑干活动传播机制最相关的计算结果，但不是直接的STN神经活动证据。作者的传播矩阵根据SER状态和预设网络连接推导，并非真实轴突放电或神经群体传播。模型没有动态模拟真实FOG事件，因此不能确认这些投射变化发生在FOG前、FOG中或恢复阶段。不能将purple squares解释为临床疗效大小。",
+      "quote": "for the normalization of excitatory propagation along the brainstem projections, the STN+SNr DBS is exclusively effective (purple squares for the LC-PRF, PRF-LC, PRF-PPN, LC-Ctx projections).",
+      "source_locator": {
+        "section": "Results—Activity Propagation",
+        "page": null,
+        "figure_table": "Figure 8",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID39355431_E5",
+      "design": "原创计算建模研究；确定性SER模型；比较单独STN DBS与PD、健康网络状态下的整体投射传播模式。",
+      "population": "无人体或动物受试者。使用文献构建的FoG相关皮层-皮质下网络。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：没有患者、临床FOG事件、试次或实际神经记录。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "未报告具体FOG表现，无实际冻结事件。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态。",
+      "DBS_state_and_parameters": "STN DBS虚拟病灶状态：将PD拓扑中所有源自STN的8条出边权重设置为0。无真实刺激频率、幅度、脉宽、触点及方向性参数。",
+      "task": "无行为任务。固定STN DBS拓扑下的SER网络动力学仿真及投射传播矩阵分析。",
+      "recording_location": "无实际神经记录。STN作为计算网络节点，未记录STN LFP或单位活动。",
+      "measure": "Activity spike propagation matrix及不同网络拓扑配置之间的1-norm distance。主要结局是单独STN DBS配置是否使整个FoG相关网络的投射传播模式接近健康状态。",
+      "frequency_and_analysis_window": "无神经频段。离散SER模型，T=100，瞬态t=40。兴奋性投射采用目标节点时间序列向后移动一个时间步；抑制性投射使用常规共激活矩阵。",
+      "finding": "作者认为单独STN DBS在该FoG网络模型中没有实现整体投射传播流的正常化。这与联合STN+SNr DBS能够改善脑干投射传播模式的结果形成对比。作者进一步指出，该模型结果与临床上STN DBS通常可以改善PD其他运动症状的观察并不一致，并认为可能与本研究专门选择FoG相关网络拓扑有关。",
+      "effect_estimate": "定性结果：STN DBS没有使整体FoG网络投射传播模式呈现作者定义的正常化趋势。没有报告总体1-norm distance的具体数值、置信区间或P值。",
+      "statistical_unit_and_method": "统计单位为模型网络区域间的投射边及其传播矩阵元素。比较STN DBS与健康、PD网络配置的1-norm distance。没有患者级或事件级统计推断。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "没有患者或动物队列。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "模型没有实际FOG事件标签，网络传播正常化不能直接等同于临床冻结改善。",
+            "source_locator": "Discussion—The SER model；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际电生理记录或信号质量数据。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "作者指出单独STN DBS结果可能与所选FoG网络拓扑有关，并承认网络拓扑对模型结果具有重要影响。",
+            "source_locator": "Discussion—The discrepancy is due to the choice of network topology；Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "网络投射边和初始状态不是独立患者样本或事件。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "多个投射及网络状态参与比较，但没有明确说明多重比较校正。",
+            "source_locator": "Results—Activity Propagation；Materials and Methods—Activity propagation flow"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "没有独立临床数据验证单独STN DBS未正常化FoG网络传播的结论。作者也承认模型针对特定症状网络，不能代表PD全部运动症状。",
+            "source_locator": "Discussion—The discrepancy is due to the choice of network topology"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该结论仅适用于作者构建的FoG相关网络及虚拟病灶SER模型，不能据此推断临床STN DBS对FOG无效，也不能推断STN神经元在真实刺激下未发生活动变化。作者明确指出，该结果与STN DBS通常改善患者症状的临床认识存在差异，可能源于模型仅聚焦FoG网络而未涵盖震颤、肌张力障碍和运动迟缓等其他症状网络。",
+      "quote": "our model suggest that STN DBS does not normalize spike propagation flow in the FoG network.",
+      "source_locator": {
+        "section": "Discussion—The effects of STN DBS on FoG network；The discrepancy is due to the choice of network topology",
+        "page": null,
+        "figure_table": "Figure 8；Table 2",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID39355431_E6",
+      "design": "原创计算建模研究；基于SER模型的投射级活动传播比较；分析单独STN DBS与联合STN+SNr DBS在不同网络连接上的差异。",
+      "population": "无人体或动物受试者。使用作者构建的FoG相关皮层-皮质下及脑干网络。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "不适用：纯计算模型，没有患者、FOG事件、试次或神经电极。投射数量不等同于实验样本数量。",
+      "endpoint_class": "unclear",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "没有具体冻结行为或临床表型记录。",
+      "medication_phenotype": "not_applicable_no_patient_cohort",
+      "experimental_medication_state": "未建模药物状态。",
+      "DBS_state_and_parameters": "比较STN DBS与STN+SNr DBS虚拟病灶配置。单独STN DBS删除8条STN出边；联合刺激删除STN及SNr的14条出边。无实际刺激频率、幅度、脉宽、触点或方向性参数。",
+      "task": "无实际步行任务。比较不同DBS网络拓扑下的区域间活动传播。",
+      "recording_location": "无实际神经记录。投射来源和目标为模型中的基底节、皮层及脑干节点。",
+      "measure": "投射级activity spike propagation matrix，以及各配置相对于健康和PD状态的1-norm distance。关注单独STN DBS相对于STN+SNr DBS在特定投射上的差异。",
+      "frequency_and_analysis_window": "无神经频段。SER离散时间步；模拟T=100，瞬态t=40。兴奋性投射采用shifted coactivation matrix，抑制性投射采用常规coactivation matrix。",
+      "finding": "虽然整体网络传播正常化更有利于STN+SNr DBS，但作者发现某些特定投射在单独STN DBS配置下反而更接近健康状态。Figure 8中这些投射由yellow squares表示；对于这些投射，STN+SNr DBS的结果方向相反。这提示不同DBS靶点对FoG网络的影响可能具有投射特异性，而不是所有连接都遵循相同的正常化方向。正文没有列出这些yellow squares所对应的全部具体投射名称。",
+      "effect_estimate": "Figure 8文字共报告3个yellow squares。作者将其解释为STN DBS相对更有利的特定投射，但正文没有逐一列出投射身份、单独距离数值或置信区间。",
+      "statistical_unit_and_method": "统计单位为不同网络区域之间的投射边。基于各拓扑配置的共激活矩阵计算1-norm distance，并按相对于健康及PD状态的距离关系进行分类。没有患者级、事件级统计或显著性检验。",
+      "risk_of_bias": {
+        "tool_or_framework": "adapted_not_validated；计算网络模型结构与构念效度审查。",
+        "domains": [
+          {
+            "domain": "样本选择",
+            "judgement": "not_assessable",
+            "reason": "没有患者或动物受试者。",
+            "source_locator": "Materials and Methods—The FoG Network"
+          },
+          {
+            "domain": "FOG构念及行为标签有效性",
+            "judgement": "high",
+            "reason": "特定投射的计算传播模式没有与真实FOG事件或临床改善程度建立直接对应关系。",
+            "source_locator": "Results—Activity Propagation；Discussion—FoG is known to be an episodic phenomenon"
+          },
+          {
+            "domain": "神经信号质量及伪迹",
+            "judgement": "not_assessable",
+            "reason": "没有实际神经信号记录。",
+            "source_locator": "Materials and Methods—The SER Model"
+          },
+          {
+            "domain": "模型拓扑假设及结构性混杂",
+            "judgement": "high",
+            "reason": "投射级结果由预设网络连接及virtual lesion处理决定，且作者承认模型高度依赖网络拓扑。",
+            "source_locator": "Materials and Methods—The FoG Network；Discussion—The healthy FoG network topological configuration"
+          },
+          {
+            "domain": "重复测量及伪重复",
+            "judgement": "not_assessable",
+            "reason": "投射边不是独立患者或独立冻结事件，不能作为生物学重复。",
+            "source_locator": "Materials and Methods—Activity propagation flow"
+          },
+          {
+            "domain": "多重比较及选择性报告",
+            "judgement": "unclear",
+            "reason": "分析涉及多个网络投射，正文没有明确说明多重比较校正。Yellow squares对应的全部投射身份没有在正文中逐项报告。",
+            "source_locator": "Results—Activity Propagation；Figure 8"
+          },
+          {
+            "domain": "模型过拟合及外部验证",
+            "judgement": "high",
+            "reason": "没有独立神经记录或患者临床结局验证这些STN DBS相对有利的特定投射。",
+            "source_locator": "Discussion—Limitations of the current computational framework"
+          }
+        ],
+        "overall": "some_concerns"
+      },
+      "limitations": "该发现是联合刺激与单独STN刺激之间的投射级异质性，不应概括成单独STN DBS整体优于联合刺激。正文没有明确列出3个yellow squares对应的全部投射，无法进行逐条连接的跨研究匹配。该结果也没有患者级临床结局或实际神经活动支持，不能据此推断某些STN神经元亚群或特定频段在FOG中具有相反作用。",
+      "quote": "STN DBS is more beneficial for specific projections (yellow squares).",
+      "source_locator": {
+        "section": "Results—Activity Propagation",
+        "page": null,
+        "figure_table": "Figure 8",
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

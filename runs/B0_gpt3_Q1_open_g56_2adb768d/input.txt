@@ -1,0 +1,1671 @@
+下面是一份研究报告。请你像一位严格、懂行的同行一样读它，找出它最重要的问题。
+
+这份报告想做到的事：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+它被要求满足的标准：
+1. **研究覆盖**：主动寻找相关研究和交叉方向，尽可能减少重要证据及研究方向的遗漏。
+2. **证据可靠**：重要结论能够追溯到原始文献、具体证据和研究条件；区分直接证据、推断与假说。
+3. **深度综合**：不仅总结论文，还要分析研究之间的矛盾、方法学限制、替代解释和未知问题。
+4. **知识分层**：原始证据、单项研究发现、跨研究综合结论、机制模型、研究假说之间具有明确关系。
+5. **长期积累**：过去的研究结果能够被重新检索和用于新问题；新证据能够触发相关旧结论的重新评价。
+6. **科学严谨**：明确不确定性；区分相关性与因果性，不能将模型之间的共识当成实验验证。
+7. **持续自主改进**：能够发现系统或研究成果的缺陷，验证原因，尝试改进，并检查改进是否真实有效。
+
+请只找问题，不打分。上面标准里没说到的问题，只要你觉得不对，也照样要说。可以联网核对事实和文献。
+按重要性从高到低列出问题，每个问题写：是什么、在哪（引用原文片段）、为什么是问题、你认为是结构性的大问题还是局部问题、可能的改法。
+
+只输出一个 JSON：{"problems":[{"rank":1,"what":"","where":"","why":"","severity":"major|moderate|minor","fix":""}],"overall":"一段话总体判断"}
+
+【报告】
+# 第三部分：竞争性机制模型、可证伪预测与研究设计
+
+## 28. 机制建模原则：不再寻找唯一的 FOG 频段
+
+综合前两轮的证据，最重要的研究转向是：
+
+不应继续把研究问题限定为“FOG 是否伴随 STN beta 增强”，而应改为：
+
+**在什么患者、什么药物状态、什么步态阶段、什么 STN 解剖区域，出现什么类型的神经活动变化，这些变化通过什么网络过程影响步态输出？**
+
+这意味着需要把 FOG 看成一个动态状态转换过程，而非单一的静态神经异常。
+
+建议使用以下五层结构组织证据：
+
+| 层次 | 研究对象 | 需要回答的问题 |
+|---|---|---|
+| L1：局部神经动力学 | STN beta、theta、alpha、burst、entropy | STN 内部发生了什么变化？ |
+| L2：网络协调 | Cortico-STN coherence、PAC、半球间连接 | 不同脑区如何协调？ |
+| L3：运动控制 | Pace、rhythm、balance、步态周期 | 哪个运动控制环节先失效？ |
+| L4：运动输出 | EMG、肌肉共同收缩、姿势调整 | 中枢异常如何转化为肌肉输出异常？ |
+| L5：行为结果 | FOG 起始、持续时间、解除、复发 | 最终表现为何种冻结表型？ |
+
+目前最值得研究的不是某个频段的单独变化，而是五层之间的时间顺序和因果依赖关系。
+
+## 29. 竞争性机制模型 H1：STN 病理性 beta burst 持续同步模型
+
+<badge color="info">H1 · 局部驱动模型</badge>
+
+### 29.1 核心机制
+
+该模型认为，STN 内部 beta 神经群体同步活动的持续时间异常延长，导致正常运动过程中必要的神经状态切换受到抑制。
+
+正常情况下，步态需要在运动准备、摆动、支撑和下一步动作之间快速切换。
+
+如果 STN 的 beta burst 过长，运动网络可能无法及时解除当前状态的同步约束，导致步态自动化和动作转换失败。
+
+可以表示为：
+
+\[
+\text{Prolonged STN beta bursts}
+\rightarrow
+\text{Impaired motor-state switching}
+\rightarrow
+\text{Abnormal gait transition}
+\rightarrow
+\text{FOG}
+\]
+
+其主要原始证据来自 [R1]，同时得到 [R9] 的闭环干预研究部分支持。
+
+### 29.2 与其他模型的区别
+
+该模型强调 STN 局部异常具有相对独立的驱动作用。
+
+它预测，即使不出现明显的皮层—STN 解耦，只要 STN beta burst 达到特定的异常持续时间，FOG 风险仍然会增加。
+
+### 29.3 可检验预测
+
+1. 冻结发生前，STN beta burst duration 应先于明显运动停滞增加。
+2. Burst duration 比平均 beta power 更能预测冻结风险。
+3. 在控制 theta、alpha、entropy、步态速度及运动伪迹后，burst duration 仍具有独立预测价值。
+4. 对 beta burst 进行选择性干预，应当改善 FOG。
+5. 在相同运动任务中，延长 burst 的患者应具有更高的冻结发生概率。
+
+### 29.4 证伪条件
+
+如果严格控制运动状态、解剖位置、信号质量及患者差异后：
+
+- 冻结前没有出现 beta burst duration 延长；
+- Burst duration 无法预测冻结；
+- 干预性缩短 burst 不能改善冻结；
+- 或 burst 变化始终发生在冻结开始之后；
+
+那么 H1 作为普遍性因果机制就应当被否定或显著降级。
+
+### 29.5 主要问题
+
+H1 最容易受到一个替代解释的挑战：
+
+beta burst 可能是运动停止、动作冲突或运动失败之后的反馈信号。
+
+因此，单纯观察 burst duration 与冻结持续时间相关，并不足以验证该模型。
+
+---
+
+## 30. 竞争性机制模型 H2：低频皮层—STN 网络解耦模型
+
+<badge color="info">H2 · 网络协调模型</badge>
+
+### 30.1 核心机制
+
+该模型认为，FOG 的主要病理过程不是 STN 活动绝对增强，而是运动网络失去正常的相位协调。
+
+正常步行依赖皮层、STN 和其他运动节点之间的动态同步。
+
+冻结发生时，低频皮层—STN 连接突然失调，导致运动准备、动作选择和运动执行之间的时间组织失败。
+
+\[
+\text{Cortico-STN phase coordination failure}
+\rightarrow
+\text{Impaired motor sequencing}
+\rightarrow
+\text{FOG}
+\]
+
+主要直接证据来自 [R15]，正常步态参照来自 [R17]，进一步的运动周期证据来自 [R12] 和 [R13]。
+
+### 30.2 可检验预测
+
+1. FOG 前低频皮层—STN 相位协调应出现可重复的异常。
+2. 网络解耦应早于明显的步态停止。
+3. 网络解耦比局部 beta power 更能预测 FOG。
+4. 相同的 STN beta power 水平下，网络协调较差的患者仍然具有更高的冻结风险。
+5. 恢复特定低频网络协调应当改善步态周期连续性。
+
+### 30.3 证伪条件
+
+如果：
+
+- 低频解耦只在冻结发生后出现；
+- 其变化可以完全由运动速度降低解释；
+- 在控制步态相位及共同输入后，解耦不再存在；
+- 或干预网络协调并不能改变冻结风险；
+
+那么 H2 的因果解释就不成立。
+
+### 30.4 主要问题
+
+H2 需要明确哪些连接、哪些方向、哪些频段具有真正的功能意义。
+
+不能把所有低频 coherence 降低都解释为运动网络失调。
+
+---
+
+## 31. 竞争性机制模型 H3：多频段状态转换与神经复杂度失调模型
+
+<badge color="info">H3 · 动态状态模型</badge>
+
+### 31.1 核心机制
+
+该模型试图解释 [R2]、[R3]、[R5]、[R10]、[R11] 和 [R27] 之间的现象。
+
+其核心观点是：
+
+FOG 不是某个频段持续增加，而是 STN 在不同运动状态之间转换时，失去了正常的神经动力学组织。
+
+在这一模型中：
+
+- Alpha 可能参与感觉和运动状态的转换。
+- Theta 可能参与运动控制、注意及网络协调。
+- Low-beta 可能参与运动状态维持。
+- High-beta 可能参与特定运动网络同步。
+- Gamma 可能反映局部神经处理及其与低频振荡的耦合。
+- Entropy 反映信号时序结构的变化。
+
+这并不意味着这些功能分工已经被完全证实，而是一个需要通过实验区分的工作模型。
+
+可以表示为：
+
+\[
+\text{Multiband dysregulation}
+\rightarrow
+\text{Abnormal neural-state transition}
+\rightarrow
+\text{Gait-cycle instability}
+\rightarrow
+\text{FOG}
+\]
+
+### 31.2 可检验预测
+
+1. 多频段联合模型应优于单一 beta power 模型。
+2. 冻结前、冻结中、冻结后应存在不同的频段组合。
+3. Entropy 与 burst duration 应提供相互独立的预测信息。
+4. 不同患者可以具有不同的主导频段，但共享某种高层次的状态转换失调。
+5. 使用隐马尔可夫模型（HMM）或其他状态空间模型，应能识别正常步行、冻结易感、冻结和恢复等不同神经状态。
+
+### 31.3 证伪条件
+
+如果经过独立数据集验证：
+
+- 单一 beta burst 指标已经解释绝大部分可重复的神经变化；
+- 多频段联合模型没有额外预测价值；
+- Entropy 和 PAC 的结果不能跨分析窗口和设备复现；
+- 或所谓状态转换只是步态运动伪迹造成的；
+
+那么 H3 应当被削弱。
+
+### 31.4 与 H1 的关键区别
+
+H1 认为 beta burst 是主要驱动因素。
+
+H3 认为 beta burst 只是更广泛的神经状态转换异常的一部分。
+
+这两个模型可以通过干预 beta burst 后，观察 theta、alpha、entropy 和网络连接是否仍然异常来区分。
+
+---
+
+## 32. 竞争性机制模型 H4：STN—脑干步态输出通路失调模型
+
+<badge color="info">H4 · 下游运动输出模型</badge>
+
+### 32.1 核心机制
+
+该模型认为，FOG 的最终表现是脑干步态发生网络及脊髓运动输出无法维持正常的节律性组织。
+
+STN 可能通过 GPi/SNr、丘脑及脑干相关通路参与这一过程。
+
+在这一模型中，STN 异常活动不一定是冻结的最初起因，但可能是基底节输出异常的关键中间环节。
+
+\[
+\text{Basal ganglia output dysregulation}
+\rightarrow
+\text{Brainstem locomotor network dysfunction}
+\rightarrow
+\text{Abnormal spinal motor pattern}
+\rightarrow
+\text{FOG}
+\]
+
+主要证据来自 [R5]、[R7]、[R24] 和 [R25]。
+
+### 32.2 可检验预测
+
+1. STN 异常应与脑干或下肢运动输出异常存在时间和方向上的联系。
+2. 拮抗肌共同收缩及肌肉交替激活失败应具有可重复的冻结前特征。
+3. SNr 联合刺激或其他针对下游运动网络的干预，可能改善部分患者的 FOG，即使 STN beta 指标没有完全正常化。
+4. 运动输出指标可能比 STN 平均功率更接近冻结的最终行为表现。
+5. 不同 FOG 亚型可能具有不同的 STN—肌肉协调异常。
+
+### 32.3 证伪条件
+
+如果：
+
+- 肌肉协调异常始终发生在冻结之后；
+- STN—肌肉关系在排除共同输入后消失；
+- 针对下游网络的干预不能改变 FOG；
+- 或冻结患者的运动输出异常与 STN 活动无可重复关系；
+
+那么 H4 应被降级。
+
+### 32.4 主要问题
+
+目前人体研究尚未充分直接记录 STN、SNr、PPN/MLR 和脊髓运动输出的完整因果链。
+
+所以 H4 的解剖合理性强于其完整的直接实验验证。
+
+---
+
+## 33. 竞争性机制模型 H5：多系统认知—运动资源竞争模型
+
+<badge color="info">H5 · 认知与运动整合模型</badge>
+
+### 33.1 核心机制
+
+该模型认为，部分 FOG 的直接诱因是复杂环境下的认知、感觉和运动控制需求超过了患者的可用处理能力。
+
+当患者同时需要：
+
+- 规划转弯。
+- 处理视觉空间信息。
+- 维持姿势平衡。
+- 进行语言或认知双任务。
+- 更新步态计划。
+
+运动自动化可能受到干扰。
+
+STN 活动在此过程中可能是冲突监测和动作选择系统的一部分。
+
+该模型特别强调前额叶—基底节网络，而不是 STN 局部振荡。
+
+### 33.2 可检验预测
+
+1. 双任务和复杂环境对 FOG 的影响应与认知负荷存在剂量关系。
+2. 同一患者在简单直线行走和复杂转弯任务中的 STN 活动应有不同表现。
+3. 前额叶—STN 网络异常应在高认知负荷条件下更加突出。
+4. 减少认知负荷或改善外部节律提示，应部分恢复步态连续性。
+5. 在控制认知负荷后，部分 beta 与 FOG 的关联可能显著减弱。
+
+### 33.3 证伪条件
+
+如果在严格匹配认知负荷后，FOG 仍然稳定出现，并且 STN 异常与冻结的关系完全不受认知任务影响，那么 H5 作为主要解释就不成立。
+
+### 33.4 与其他模型的关系
+
+H5 可以与 H1–H4 共存。
+
+例如，认知负荷可能诱发皮层—STN 网络协调失败，再导致 STN beta burst 延长和下游肌肉协调异常。
+
+因此，H5 更适合被视为一种触发机制，而不是所有 FOG 的共同最终机制。
+
+---
+
+## 34. 五种机制的竞争性预测汇总
+
+| 关键问题 | H1：Beta burst | H2：网络解耦 | H3：状态转换 | H4：输出通路 | H5：认知负荷 |
+|---|---|---|---|---|---|
+| 主要病理位置 | STN 局部 | 皮层—STN | 多频段网络 | 基底节—脑干—脊髓 | 额叶—基底节 |
+| 核心指标 | Burst duration | Phase coupling | Entropy、PAC、多频段 | STN-EMG、共收缩 | 认知负荷、网络连接 |
+| 预期最早变化 | Beta burst | 网络相位失调 | 多频段状态偏移 | 下行输出失调 | 认知资源竞争 |
+| 最关键干预 | Burst 驱动 aDBS | 网络协调干预 | 多特征闭环 | SNr/脑干相关干预 | 认知负荷或提示干预 |
+| 关键证伪 | 缩短 burst 不改善 FOG | 恢复连接不改善 FOG | 联合指标无额外价值 | 输出异常非先行 | 认知负荷无影响 |
+
+需要说明，这些模型并非逻辑上完全互斥。真正有科学价值的竞争，是判断哪一个模型对特定患者亚型具有主要解释力，以及哪个环节是必要中介。
+
+---
+
+## 35. 最优先的实验：同一患者、同一时间轴、完整记录
+
+目前文献中最严重的缺陷，是不同研究分别测量不同环节，缺少同一患者内的多层级同步证据。
+
+我建议开展一个多中心、纵向、同步记录研究。
+
+### 35.1 研究目标
+
+判断 STN 局部振荡、皮层—STN 网络协调、肌肉输出异常及认知负荷之间的时间顺序，并区分五种竞争性机制。
+
+### 35.2 研究对象
+
+建议招募 60–80 名接受 STN-DBS 的 PD 患者：
+
+- 约 30–40 名 Freezer。
+- 约 30–40 名 Non-freezer。
+- 在 Freezer 中进一步区分药物反应型和药物抵抗型。
+- 根据是否存在 DBS 诱发 FOG 进行分层。
+
+这一规模是研究设计建议，不是已有研究的证据。
+
+样本量应通过预实验估计患者内相关系数、冻结事件发生率和最小临床重要差异后，进行模拟功效分析。
+
+### 35.3 同步记录
+
+<box border radius="lg" padding={3} gap={3}>
+  **建议的同步记录系统**
+  <box background="surface-secondary" radius="md" padding={3} align="center">
+    **皮层 EEG / ECoG**
+
+    M1、PMC、SMA、PFC、S1
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary" size="lg"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3} align="center">
+    **双侧 STN LFP**
+
+    个体化 beta、theta、alpha、gamma、burst、PAC
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary" size="lg"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3} align="center">
+    **运动输出**
+
+    双下肢 EMG、IMU、足底压力、视频
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary" size="lg"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3} align="center">
+    **行为状态**
+
+    正常步行、冻结前、冻结中、冻结后、主动停止
+  </box>
+</box>
+
+在伦理和设备条件允许时，可增加眼动及认知任务表现指标。
+
+不建议为了获得更多神经信号而不必要地增加侵入性脑区记录。非侵入性 EEG、肌电和运动学已经能够解决一部分关键问题。
+
+### 35.4 实验条件
+
+建议采用随机交叉、重复测量设计。
+
+| 条件 | 目的 |
+|---|---|
+| 药物 OFF | 观察多巴胺缺乏时的异常 |
+| 药物 ON | 判断多巴胺调节作用 |
+| DBS OFF | 观察基础神经活动 |
+| 临床标准 DBS | 建立治疗基准 |
+| 频率调整 DBS | 判断频率效应 |
+| 伪随机对照条件 | 控制时间和任务效应 |
+
+药物 OFF、DBS OFF 的条件需要严格遵守患者安全和临床伦理，不应以诱发严重冻结为实验目的。
+
+### 35.5 行为任务
+
+应当覆盖：
+
+- 直线行走。
+- 起步。
+- 转弯。
+- 窄通道。
+- 双任务。
+- 外部节律提示。
+- 主动停止。
+
+需要特别记录每次 FOG 的起始、持续和解除时间，而不只是将整段步行划分为 FOG 或 non-FOG。
+
+### 35.6 主要统计分析
+
+建议预先注册以下主要分析：
+
+**A. 混合效应模型**
+
+\[
+Y_{ijkt} =
+\beta_0+
+\beta_1X_{ijkt}+
+u_i+v_{ij}+\epsilon_{ijkt}
+\]
+
+其中：
+
+- \(i\)：患者。
+- \(j\)：实验条件。
+- \(k\)：步态周期或冻结事件。
+- \(t\)：时间。
+- \(u_i\)：患者随机效应。
+- \(v_{ij}\)：患者内条件效应。
+
+**B. 时间先后关系**
+
+分析以下事件的时间顺序：
+
+- Beta burst 改变。
+- Theta/alpha 改变。
+- Cortico-STN coherence 改变。
+- 肌肉共收缩。
+- 步态节律失调。
+- FOG onset。
+
+**C. 神经状态转换模型**
+
+使用隐马尔可夫模型或状态空间模型，识别：
+
+1. 正常步行。
+2. FOG 易感。
+3. 冻结发生。
+4. 冻结维持。
+5. 冻结解除。
+
+**D. 预测模型**
+
+比较：
+
+- Beta power-only。
+- Beta burst-only。
+- Cortico-STN connectivity-only。
+- EMG-only。
+- Multimodal model。
+
+采用患者级独立验证，防止同一患者的数据同时进入训练集和测试集。
+
+### 35.7 最重要的主要终点
+
+建议预先设定：
+
+1. 冻结前 1–3 秒的预测性能。
+2. 冻结发生率。
+3. 冻结总持续时间。
+4. 每小时误报次数。
+5. 步态周期变异性。
+6. 拮抗肌共同收缩程度。
+7. 运动网络状态转换概率。
+
+预测性能必须同时报告灵敏度、特异度、阳性预测值和每小时误报率。
+
+只报告 accuracy 或 F1，不能证明闭环系统具有临床可用性。
+
+---
+
+## 36. 第二优先实验：用干预区分相关性与因果性
+
+观察性同步记录仍然不能完全确定因果方向。
+
+因此，建议在上述研究基础上开展嵌套式干预试验。
+
+### 36.1 Beta burst 选择性干预
+
+比较：
+
+- Burst-triggered aDBS。
+- 与 burst 无关的随机刺激。
+- 标准连续刺激。
+
+主要问题：
+
+如果 burst-triggered aDBS 明显改善 FOG，而且这种改善由 burst duration 缩短所中介，则支持 H1。
+
+如果行为改善与 burst 改变没有关系，则 H1 应当降级。
+
+### 36.2 网络状态干预
+
+采用不同的刺激反馈变量：
+
+- STN beta burst。
+- Cortico-STN phase coupling。
+- 多频段状态分类器。
+
+比较哪种反馈变量能够更早识别 FOG 风险，以及哪种反馈变量能够带来真正的行为改善。
+
+### 36.3 输出通路干预
+
+在有临床适应证、且伦理允许的患者中，进一步评估 SNr 联合刺激或其他下游运动网络调节方式。
+
+重点不只是看 FOG 是否改善，还要看：
+
+- STN beta 是否同步变化。
+- 皮层—STN coherence 是否恢复。
+- EMG 交替激活是否恢复。
+- 步态周期是否恢复。
+
+如果 FOG 改善而 STN beta 不变，则说明单纯 STN beta 不是所有患者的必要中介。
+
+### 36.4 认知负荷干预
+
+采用任务难度分级，比较：
+
+- 简单直线行走。
+- 单任务转弯。
+- 认知双任务转弯。
+
+如果认知负荷显著提高 FOG 风险，并且改变前额叶—STN 网络特征，则支持 H5。
+
+需要控制视觉刺激、步行速度、注意任务难度和疲劳程度。
+
+---
+
+## 37. 现阶段的优先级判断
+
+从临床意义、证据质量及可操作性综合考虑，我认为应按以下顺序投入研究资源：
+
+| 优先级 | 研究方向 | 理由 |
+|---|---|---|
+| 1 | Beta burst 与多频段动态状态联合分析 | 能直接解释现有 STN 电生理冲突 |
+| 2 | 冻结前网络解耦及时间顺序 | 最有希望区分相关与因果 |
+| 3 | STN—EMG—步态周期同步研究 | 能连接神经活动与行为输出 |
+| 4 | 个体化闭环 DBS | 有直接转化价值 |
+| 5 | STN 亚区和刺激位置分层 | 解释治疗反应异质性 |
+| 6 | STN—SNr—脑干网络 | 可能揭示难治性 FOG 的替代通路 |
+| 7 | 认知负荷及非多巴胺系统 | 解释复杂环境诱发和药物抵抗型 FOG |
+
+其中，第一和第二项应当优先进行，因为它们能够直接解决当前文献的核心矛盾。
+
+---
+
+# STN 神经活动与帕金森病冻结步态（FOG）
+## 现有证据、冲突来源、竞争性机制与实验验证方案
+
+<text color="secondary" size="sm">最终综合版研究报告｜文献检索截止：2026 年 11 月 13 日</text>
+
+## 一、研究摘要
+
+本研究考察帕金森病（Parkinson's disease，PD）冻结步态（freezing of gait，FOG）与丘脑底核（subthalamic nucleus，STN）神经活动之间的关系，重点比较 STN 局部场电位（local field potential，LFP）、多单位活动、振荡功率、beta burst、非线性复杂度、跨频耦合、皮层—STN 连接以及深部脑刺激（deep brain stimulation，DBS）干预证据。
+
+**主要结论如下。**
+
+1. 人体电生理研究已经提供较充分的证据，表明 STN 活动与 FOG 易感性及真实冻结事件存在关联。
+2. Beta 是重要的候选神经特征，但 beta 平均功率不是可靠的普遍性 FOG 标志。不同研究甚至报告相反的变化方向。
+3. Beta burst duration、alpha/theta 振荡、Sample Entropy 和跨频耦合提供了超越传统功率谱的研究维度。
+4. FOG 不仅可能涉及 STN 局部异常，还涉及皮层—STN 网络解耦、半球间不对称、下肢拮抗肌协调失败及脑干运动网络调节异常。
+5. STN-DBS 可以改变 FOG，但其治疗效应高度依赖患者表型、药物状态、刺激频率、总能量和电极位置。
+6. 现有干预研究尚未证明某一种 STN 振荡异常是所有 FOG 的必要或充分病因。
+
+本报告提出五种竞争性机制：
+
+- H1：STN 病理性 beta burst 持续同步。
+- H2：皮层—STN 低频网络解耦。
+- H3：多频段神经状态转换失调。
+- H4：基底节—脑干—脊髓运动输出失调。
+- H5：认知控制与自动化步态之间的资源竞争。
+
+最值得优先检验的总体假说是：**FOG 是一个具有患者特异性、频段特异性和运动阶段特异性的分布式神经网络状态转换障碍，STN 是其中重要的调节节点，但不一定是唯一的病理起源。**
+
+---
+
+## 二、检索范围与研究方法
+
+### 2.1 检索策略
+
+采用分层范围综述（scoping review）策略，优先检索人体原始研究，并向相关神经网络、临床干预和神经递质研究扩展。
+
+主要检索来源：
+
+- PubMed / MEDLINE。
+- PubMed Central。
+- 期刊原始出版页面。
+- DOI 与 PMID 记录。
+- 相关论文的参考文献和引用链。
+
+使用的核心检索词包括：
+
+```text
+Parkinson's disease
+Freezing of gait
+Subthalamic nucleus
+STN local field potential
+STN oscillations
+Beta burst
+Theta oscillations
+Alpha entropy
+Phase amplitude coupling
+Cortico-subthalamic coherence
+STN EMG coherence
+Gait initiation
+Turning-induced freezing
+Adaptive deep brain stimulation
+Low-frequency STN stimulation
+Substantia nigra pars reticulata
+Pedunculopontine nucleus
+```
+
+特别对以下交叉方向进行了检索：
+
+1. STN 与步态启动。
+2. STN 与冻结前神经活动。
+3. STN 与真实冻结事件。
+4. STN 与主动停止行为的差异。
+5. STN 与下肢肌电的耦合。
+6. STN 与皮层、脑干运动网络的连接。
+7. 药物和 DBS 对神经特征的调节。
+8. FOG 的认知、胆碱能及非多巴胺机制。
+9. 神经标志物驱动的自适应 DBS。
+
+### 2.2 纳入和排除原则
+
+优先纳入：
+
+- PD 患者的人体原始电生理研究。
+- 有明确 FOG 分组或真实 FOG 事件标注的研究。
+- 同步记录 STN 神经信号和步态运动学的研究。
+- 同时记录皮层、STN、EMG 的研究。
+- 随机交叉 DBS 参数比较研究。
+- 有明确样本量和研究条件的临床研究。
+
+补充纳入：
+
+- 正常步态的 STN 电生理研究。
+- FOG 认知网络研究。
+- 胆碱能 PET 研究。
+- DBS 靶点和电极位置研究。
+- 系统综述和 Meta-analysis。
+
+不将动物模型的结果直接作为人体 STN-FOG 因果证据。
+
+### 2.3 证据等级
+
+本报告采用以下分层：
+
+| 级别 | 含义 |
+|---|---|
+| 原始观察 | 研究直接测量到的神经活动或行为变化 |
+| 单项研究发现 | 某项研究支持的特定结果 |
+| 跨研究综合 | 多项研究共同支持的解释 |
+| 机制模型 | 对神经活动与行为之间关系的解释 |
+| 研究假说 | 尚需实验验证的可证伪命题 |
+
+证据状态分为：
+
+- well-supported：多项证据支持，且关键观察具有一定重复性。
+- supported：有较明确支持，但存在限制。
+- contested：结果存在实质性冲突。
+- weak：证据有限或不稳定。
+- speculative：主要为理论推测。
+
+**重要限制：** 本报告是截至指定日期的广泛范围综述，而不是已经注册、完成双人独立筛选及 PRISMA 流程的正式系统综述。检索结果不能声称已经穷尽所有相关文献。对于摘要无法确认的样本细节，不作无依据补充。
+
+---
+
+## 三、研究问题的重新定义
+
+### 3.1 FOG 必须被视为动态事件
+
+根据 FOG 领域的经典定义，FOG 是患者有行走意图，却短暂无法有效启动或维持足部向前运动的现象。[R16]
+
+临床表现包括：
+
+- Trembling in place。
+- Shuffling forward。
+- Akinetic freezing。
+
+常见诱因：
+
+- 步态启动。
+- 转弯。
+- 穿越狭窄通道。
+- 双任务。
+- 视觉空间环境变化。
+- 焦虑及认知负荷。
+
+不同表型可能具有不同的神经机制。因此，不能假定所有 FOG 事件具有完全相同的 STN 电生理特征。
+
+### 3.2 必须区分五个时间层级
+
+| 层级 | 定义 | 主要问题 |
+|---|---|---|
+| 易感性 | 患者长期存在的 FOG 倾向 | 哪些活动预示 Freezer 表型？ |
+| 诱发 | 正常步行向异常步行转变 | 哪种活动最先改变？ |
+| 冻结前 | FOG onset 之前 | 是否存在提前数秒的神经标志？ |
+| 冻结中 | 实际 FOG 期间 | 哪些活动与冻结维持相关？ |
+| 解除 | 恢复有效步行 | 哪些活动恢复与行为恢复同步？ |
+
+另外还必须单独分析药物和刺激状态。
+
+一个静息态 FOG 标志不能自动成为步行中的实时标志；一个能够识别正在发生的 FOG 的特征，也不能自动成为预测 FOG 的特征。
+
+### 3.3 STN 活动的测量维度
+
+| 维度 | 指标 | 解释范围 |
+|---|---|---|
+| 振荡功率 | Alpha、theta、beta、gamma | 频段活动强度 |
+| 持续时间 | Burst duration | 异常同步的时间结构 |
+| 振荡幅度 | Burst amplitude | 振荡事件强度 |
+| 事件发生率 | Burst rate | 单位时间内的事件数量 |
+| 非线性复杂度 | Sample Entropy | 信号时序结构 |
+| 跨频耦合 | PAC | 不同频率振荡的相互调制 |
+| 跨区域连接 | Coherence、PLV | 网络同步关系 |
+| 单位活动 | MUA、放电率 | 神经元群体活动 |
+| 肌肉耦合 | STN-EMG coherence | 中枢神经活动与运动输出的关联 |
+
+必须区分：
+
+\[
+\text{STN LFP}\neq\text{STN 单神经元放电}
+\]
+
+LFP 反映局部神经群体及其突触活动的混合结果，不应被直接解释为单细胞兴奋性。
+
+---
+
+## 四、STN 与 FOG 的核心原始证据
+
+### 4.1 Beta burst：最重要的局部电生理证据
+
+**[R1] Anidi 等，2018**
+
+*Neuromodulation targets pathological not physiological beta bursts during gait in Parkinson's disease.*
+
+DOI：10.1016/j.nbd.2018.09.004；PMID：30196050。
+
+- 设计：慢性 STN LFP 与步态运动学同步记录。
+- 样本：12 名 PD 患者。
+- 条件：停药，前向行走及原地踏步，比较 DBS OFF、60 Hz 和 140 Hz。
+- 主要发现：Freezer 在行走过程中表现出较长的 movement-band beta burst duration；长 burst 与 FOG 表型及异常步态有关。
+- DBS 对异常长 burst 具有调节作用，并伴随步态改善。
+
+这项研究的重要贡献在于将 beta 的时间结构作为研究对象，而不只是平均功率。
+
+**解释：** 病理性 beta 活动可能表现为同步事件持续时间过长，而非单纯平均功率升高。
+
+限制：样本较小，任务有限，刺激调节与行为改善之间尚未证明因果中介关系。[R1] <Cite refs={["turn755731search2","turn319714search6"]}/>
+
+### 4.2 Beta power 降低与 entropy 增加
+
+**[R2] Syrkin-Nikolau 等，2017**
+
+*Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease.*
+
+DOI：10.1016/j.nbd.2017.09.002；PMID：28890315。
+
+- 设计：自由活动 STN LFP、步态运动学和地面反作用力同步记录。
+- 样本：14 人，其中 Freezer 8 人。
+- 条件：停药、DBS OFF，包含前向行走、原地踏步、转弯和障碍物任务。
+- 无冻结步行阶段：Freezer 的 beta power 较低（P=0.036），beta Sample Entropy 较高（P=0.032）。
+- 真实冻结期间：alpha Sample Entropy 高于无冻结步行阶段。
+
+该研究直接挑战了将 FOG 等同于 beta 功率升高的简单模型。
+
+但 entropy 增加并不等同于神经元放电随机性增加，也不能单独证明信息处理能力改变。[R2] <Cite refs={["turn231728search4","turn231728search6"]}/>
+
+### 4.3 FOG 易感状态下的 low-beta 和 theta
+
+**[R3] Chen 等，2019**
+
+*Subthalamic nucleus oscillations correlate with vulnerability to freezing of gait in patients with Parkinson's disease.*
+
+DOI：10.1016/j.nbd.2019.104605；PMID：31494286。
+
+- 设计：STN LFP 与躯干加速度计同步记录。
+- 样本：15 名 PD 患者。
+- 条件：单任务与双任务步行，停药。
+- 指标：Index of freezing of gait（iFOG）。
+- 发现：15–21 Hz low-beta 和 5–8 Hz theta 与 FOG 易感性增加有关。
+- Theta 活动主要出现在腹侧 STN 和/或相邻 SNr 区域。
+- 实际冻结仅在 3 名患者的实验步行过程中出现。
+
+因此，这项研究的主要证据是易感性关联，而不是所有真实冻结事件均伴随 beta/theta 增强。[R3] <Cite refs={["turn260504search3","turn315220search8"]}/>
+
+### 4.4 静息态 high-beta
+
+**[R4] Toledo 等，2014**
+
+*High beta activity in the subthalamic nucleus and freezing of gait in Parkinson's disease.*
+
+DOI：10.1016/j.nbd.2013.12.005；PMID：24361601。
+
+- 设计：STN LFP 与皮层 EEG。
+- 样本：22 人，FOG 14 人、Non-FOG 8 人。
+- 发现：FOG 患者静息态 high-beta 功率更高。
+- 左旋多巴降低 high-beta，并伴随 FOG 改善。
+- High-beta cortico-STN coherence 更突出于中线皮层区域。
+
+这支持静息态 high-beta 可能反映 FOG 相关网络异常，但不能直接推断其为冻结发生的触发因素。[R4] <Cite refs={["turn905331search0"]}/>
+
+### 4.5 术中多单位活动与真实冻结
+
+**[R5] Georgiades 等，2019**
+
+*Hitting the brakes: pathological subthalamic nucleus activity in Parkinson's disease gait freezing.*
+
+DOI：10.1093/brain/awz325；PMID：31665229。
+
+- 设计：术中虚拟现实步态诱发、STN 微电极记录及 EMG。
+- 样本：8 名接受 STN-DBS 手术的患者。
+- 发现：冻结起始附近 STN 多单位活动瞬时增加，beta 和 theta 活动增强，随后出现异常下肢肌肉放电。
+
+这是重要的时间相关性证据，但术中诱发范式不等同于长期自然行走。[R5] <Cite refs={["turn755731search4"]}/>
+
+### 4.6 STN 与皮层同步记录
+
+**[R6] Liu 等，2022**
+
+*Synchronized Intracranial Electrical Activity and Gait Recording in Parkinson's Disease Patients With Freezing of Gait.*
+
+DOI：10.3389/fnins.2022.795417；PMID：35310098。
+
+- 设计：双侧 STN LFP、皮层 ECoG 和运动捕捉。
+- 样本：8 人，41 次步行测试。
+- 30 次包含冻结，21 组数据达到较好的信号质量。
+- FOG 时段 STN beta power 高于非冻结时段。
+- High-beta/high-gamma cortico-STN coherence 高于 shuffled surrogate。
+
+重要限制：高于 surrogate 不等于 FOG 与正常步行之间的 coherence 已经被证明存在显著差异。[R6] <Cite refs={["turn231728search1"]}/>
+
+### 4.7 STN—肌肉输出协调
+
+**[R7] Klocke 等，2024**
+
+*Supraspinal contributions to defective antagonistic inhibition and freezing of gait in Parkinson's disease.*
+
+DOI：10.1093/brain/awae223；PMID：39470410。
+
+同步记录 STN LFP、下肢拮抗肌 EMG 和步态运动学，并以主动停止行为作为对照。
+
+主要发现：
+
+- 冻结前和冻结中 STN 振荡存在激活—去激活异常。
+- 拮抗肌正常交替激活受到破坏。
+- 出现共同收缩。
+- 腓肠肌活动时序异常。
+- 冻结前 STN—腓肠肌 coherence 增强。
+
+这使研究从局部频谱关联推进到神经活动与脊髓运动输出之间的关联。
+
+但 coherence 不确定信息流动方向，不能单独证明 STN 是异常肌肉活动的起点。[R7] <Cite refs={["turn861579view0"]}/>
+
+### 4.8 Beta-gamma PAC
+
+**[R8] Farokhniaee 等，2024**
+
+*Gait-related beta-gamma phase amplitude coupling in the subthalamic nucleus of parkinsonian patients.*
+
+DOI：10.1038/s41598-024-57252-2；PMID：38509158。
+
+- 样本：8 名 PD 患者。
+- 记录：双侧 STN LFP。
+- 任务：静立与自然步行。
+- 发现：beta-gamma PAC 受到多巴胺状态调节。
+- PAC 调节能力较弱、行走时 PAC 较低的患者，站立相和双支撑相占比更高。
+
+该研究不是 FOG 专项研究，不能将 PAC 变化直接等同于冻结。[R8] <Cite refs={["turn315220search3","turn315220search4"]}/>
+
+### 4.9 Beta burst 驱动的自适应 DBS
+
+**[R9] Wilkins 等，2025**
+
+*Beta burst-driven adaptive deep brain stimulation for gait impairment and freezing of gait in Parkinson's disease.*
+
+DOI：10.1093/braincomms/fcaf266；PMID：40677701。
+
+- 样本：7 名患者。
+- 系统：Summit RC+S。
+- 条件：OFF、adaptive、continuous、random intermittent DBS。
+- 发现：aDBS 可以成功实施，且总体冻结时间比例及部分步态指标相较 OFF 改善。
+- 与连续刺激相比，疗效相近。
+
+这是 beta burst 作为闭环反馈变量的初步干预证据，但不能证明其优于常规 DBS。[R9] <Cite refs={["turn755731search3","turn253367search6"]}/>
+
+### 4.10 STN 亚区与步态启动
+
+**[R10] Collomb-Clerc 等，2025**
+
+*Subthalamic Electrophysiological Mapping of Gait Initiation Dynamics and Freezing in Parkinson's Disease.*
+
+DOI：10.1002/ana.70003；PMID：40709562。
+
+- 样本：38 名 PD 患者，24 名健康对照。
+- 35 名 PD 患者报告日常 FOG。
+- 12 名患者在实验中观察到 FOG，共 263 次冻结事件。
+- 使用外接电缆 STN LFP，比较 posterior sensorimotor 与 central associative STN。
+- 将步态启动分解为 pace、rhythm 和 balance。
+- FOG 易感和即将发生 FOG 的状态呈现不同 STN 空间分布及振荡关联。
+- 多巴胺改善步态，并部分恢复 STN 活动调节。
+
+该研究的重要贡献是证明 STN 与步态启动的关系具有空间和行为阶段依赖性。[R10] <Cite refs={["turn784146view3"]}/>
+
+### 4.11 Alpha 和 high-beta burst
+
+**[R11] Fim Neto 等，2025**
+
+*Alpha and high beta subthalamic intermittent activity correlates with freezing of gait severity in Parkinson's disease.*
+
+DOI：10.1016/j.clinph.2025.01.005；PMID：39884164。
+
+- 样本：23 人，FOG 14 人、Non-FOG 9 人。
+- 静息态 STN LFP。
+- FOG 组 alpha power 和 alpha burst amplitude 更高。
+- Alpha burst amplitude 与 FOG 严重程度相关（r=0.479）。
+- High-beta burst amplitude 与 FOG score 相关。
+
+它支持 alpha 和 high-beta 可能作为联合生物标志物，但仍属于横断面关联证据。[R11] <Cite refs={["turn231728search0"]}/>
+
+### 4.12 转弯诱发 FOG 的相位依赖性
+
+**[R12] Zhang 等，2025**
+
+*Neural signatures of turn-induced freezing of gait in Parkinson's disease: insights from phase-specific cortico-subthalamic dynamics.*
+
+DOI：10.1038/s41531-025-01173-y；PMID：41131028。
+
+- 样本：19 名 PD-FOG 患者。
+- 记录 M1、PMC、双侧 STN 和步态运动学。
+- 任务：TUG 转弯。
+- 比较停药与服药。
+- 冻结转弯中，M1、PMC alpha power 在早期阶段下降。
+- 正常转弯和冻结转弯的 PMC-STN coherence 增强发生在不同阶段。
+- M1-STN alpha coherence 在冻结转弯阶段出现解耦。
+
+这项研究支持 FOG 的神经特征具有明显的运动阶段依赖性。[R12] <Cite refs={["turn905331search5","turn905331search6"]}/>
+
+### 4.13 步态周期锁定的皮层—STN 特征
+
+**[R13] Zhuang 等，2026**
+
+*Gait-cycle-locked cortico-subthalamic signatures underlying freezing of gait and their modulation in Parkinson's disease.*
+
+DOI：10.1016/j.nbd.2026.107571；PMID：42571859。
+
+- 同步记录皮层、STN LFP 和步态运动学。
+- 将 gait cycle 作为分析单位。
+- 发现 FOG 相关试验中的 S1 和 SPL low-beta 活动异常。
+- 高频和低频 STN-DBS 均改善部分步态和冻结指标。
+- 左旋多巴调节 S1-STN theta coherence，并伴随步态恢复。
+
+这项研究将分析窗口从冻结事件本身扩展到冻结易感步态周期。[R13] <Cite refs={["turn878580search1"]}/>
+
+### 4.14 STN LFP 机器学习检测
+
+**[R14] Alberts 等，2026**
+
+*An initial machine learning model applied to local field potential data from the subthalamic nucleus to detect freezing of gait in Parkinson's disease.*
+
+DOI：10.3389/fneur.2026.1793291；PMID：42239677。
+
+- 样本：5 人。
+- 8 次试验。
+- 29 次冻结事件。
+- 成功检测 24 次。
+- Weighted F1=0.67，Macro F1=0.62。
+
+不同患者及不同诱发条件下的通道重要性不一致，提示个体化模型可能优于单一固定阈值。
+
+但这项研究证明的是初步检测可行性，而不是冻结发生前的可靠预警。[R14] <Cite refs={["turn231728search3"]}/>
+
+### 4.15 低频皮层—STN 解耦
+
+**[R15] Pozzi 等，2019**
+
+*Freezing of gait in Parkinson's disease reflects a sudden derangement of locomotor network dynamics.*
+
+DOI：10.1093/brain/awz141；PMID：31505548。
+
+这是解释研究冲突时不可忽略的一篇论文。
+
+- 样本：7 名 PD 患者。
+- 其中 5 名患者在实验中出现 FOG。
+- 共观察到 14 次冻结事件，总持续时间 127 秒。
+- 真实冻结期间 STN 与皮层 4–13 Hz 活动发生解耦。
+- 解耦在正常步行向冻结转换时已经出现，并在恢复步行后消失。
+- 解耦主要出现在纹状体多巴胺能支配较弱的半球。
+- 研究没有发现相同程度的 STN 平均功率或 beta burst duration 变化。
+
+最后一点尤其重要：该研究直接提示，即使局部 STN beta power 和 burst duration 没有明显变化，网络连接异常仍可能与 FOG 密切相关。[R15] <Cite refs={["turn315220search2","turn315220search6"]}/>
+
+### 4.16 正常步态的 STN—皮层参照
+
+**[R17] Louie 等，2022**
+
+*Cortico-Subthalamic Field Potentials Support Classification of the Natural Gait Cycle in Parkinson's Disease and Reveal Individualized Spectral Signatures.*
+
+DOI：10.1523/ENEURO.0325-22.2022；PMID：36270803。
+
+- 样本：3 名 PD 患者。
+- 记录 STN、M1/S1 和自然步态。
+- 发现 STN theta 活动和 cortico-STN coherence 具有步态周期依赖性。
+
+它提供正常步态的电生理参照，但不是 FOG 直接证据。[R17] <Cite refs={["turn755731search7"]}/>
+
+### 4.17 多巴胺对步态周期 STN 活动的调节
+
+**[R27] Simpson 等，2026**
+
+*Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping.*
+
+DOI：10.1093/brain/awaf464；PMID：41388789。
+
+- 样本：14 人。
+- 同步 STN LFP、腓肠肌及腓骨长肌 EMG。
+- 比较坐位、静立、stepping 及药物 ON/OFF。
+- 行走时 low-beta 与 high-beta 呈现不同调节方向。
+- 左旋多巴降低 low-beta，但增加 high-beta。
+- Beta burst 与运动启动时肌肉活动增加相关。
+
+这项研究的重要意义在于表明，不同 beta 子频段可能具有不同的运动功能，不能把 beta 整体当作病理性活动。[R27] <Cite refs={["turn878580search2"]}/>
+
+### 4.18 冻结前全脑网络改变
+
+**[R28] Tian 等，2026**
+
+*Aberrant Beta-Band Network Alteration Preceding Freezing of Gait in Parkinson's Disease.*
+
+DOI：10.1002/mds.70230；PMID：41760132。
+
+- 样本：18 名 PD-FOG 患者。
+- 使用可移动 EEG。
+- 比较 FOG 与主动停止前 2 秒。
+- FOG 前局部额顶等区域 beta connectivity 增强，低频额叶—后部网络连接下降。
+
+该研究是全脑 EEG 证据，不是 STN 直接记录。其价值在于支持 FOG 之前存在网络重组。[R28] <Cite refs={["turn878580search0"]}/>
+
+---
+
+## 五、其他重要的交叉证据
+
+### 5.1 认知控制网络
+
+**[R33] Shine 等，2013**
+
+*Freezing of gait in Parkinson's disease is associated with functional decoupling between the cognitive control network and the basal ganglia.*
+
+DOI：10.1093/brain/awt272；PMID：24142148。
+
+该研究使用功能影像分析认知控制网络和基底节之间的关系。
+
+FOG 患者出现认知控制网络与基底节网络的功能解耦，并与阵发性运动停止有关。
+
+这支持 FOG 可能涉及动作选择、认知控制和自动化步态之间的竞争，而不是单纯的局部运动神经异常。[R33] <Cite refs={["turn841482search5"]}/>
+
+### 5.2 胆碱能系统
+
+**[R26] Bohnen 等，2019**
+
+*Cholinergic system changes of falls and freezing of gait in Parkinson's disease.*
+
+DOI：10.1002/ana.25430；PMID：30720884。
+
+- 样本：94 名 PD 患者。
+- 使用 [18F]FEOBV PET。
+- 15 人存在观察到的 FOG。
+- Freezer 的纹状体和边缘皮层胆碱能标志物降低。
+
+该研究提示，FOG 的一部分可能与胆碱能系统退化有关，特别是认知、感觉和运动自动化过程。[R26] <Cite refs={["turn841482search0","turn841482search1"]}/>
+
+### 5.3 FOG 的多递质模型
+
+**[R29] Cho 等，2026**
+
+*Neurotransmitter Systems Underlying Freezing of Gait (FOG) in Parkinson's Disease.*
+
+DOI：10.1111/ejn.70590；PMID：42349894。
+
+该综述讨论 dopamine、acetylcholine、norepinephrine、serotonin、glutamate 和 GABA 对 FOG 的可能贡献。
+
+其重要观点是，左旋多巴抵抗型 FOG 不能简单归结为多巴胺缺乏。
+
+需要注意，这属于跨研究综合，不是单一递质机制的因果实验。[R29] <Cite refs={["turn231728search5"]}/>
+
+---
+
+## 六、DBS 干预证据：为什么 STN-DBS 并不总能改善 FOG？
+
+### 6.1 低频刺激研究
+
+| 研究 | 样本 | 主要结果 |
+|---|---:|---|
+| [R18] Moreau 2008 | 13 | 能量匹配条件下，60 Hz 高电压可减少冻结 |
+| [R19] Xie 2012 | 2 | 60 Hz 缓解新开启 STN-DBS 后出现的 FOG |
+| [R20] Khoo 2014 | 临床随机交叉研究 | 60 Hz 在更腹侧接触点上改善部分运动及轴性指标 |
+| [R21] Phibbs 2014 | 20 | 固定电压时，60 Hz 未显著改善步幅 |
+| [R22] Xie 2015 | 7 | 对常规 130 Hz 下仍有 FOG 的患者，60 Hz 减少 FOG |
+| [R23] Su 2018 | 10 项研究、132 人 | Meta-analysis 支持低频对部分步态和冻结指标有益 |
+
+[R18]、[R22] 的结果支持低频刺激对部分患者有效。[R21] 则提示，若固定电压导致总能量变化，频率本身的效果可能无法被独立识别。
+
+[R23] 的 Meta-analysis 发现低频刺激对部分步态及冻结指标具有统计学优势，但研究间参数差异和样本量限制使结果不能直接推广到所有患者。[R18–R23] <Cite refs={["turn253367search1","turn905331search2","turn905331search3","turn253367search0","turn253367search9","turn253367search3"]}/>
+
+### 6.2 大样本 STN-DBS 临床结局
+
+**[R31] Karachi 等，2019**
+
+*Clinical and anatomical predictors for freezing of gait and falls after subthalamic deep brain stimulation in Parkinson's disease patients.*
+
+DOI：10.1016/j.parkreldis.2019.01.021；PMID：30704853。
+
+- 样本：331 名患者。
+- DBS 后 93 人 FOG 加重。
+- 75 人跌倒加重。
+- 约三分之一患者的 FOG 得到改善。
+- 最佳治疗效果与电极接触点位于 STN 内有关。
+- 没有发现一个特定电极位置可以解释所有 FOG 加重病例。
+
+这是临床转化研究中非常重要的异质性证据。[R31] <Cite refs={["turn315220search0","turn315220search1"]}/>
+
+### 6.3 SNr 联合刺激
+
+**[R24] Valldeoriola 等，2019**
+
+DOI：10.1016/j.parkreldis.2018.09.008；PMID：30241951。
+
+6 名患者的先导研究显示，4 人在高频 STN 加低频 SNr 联合刺激下获得较好的步态改善。
+
+**[R25] Artusi 等，2025**
+
+DOI：10.1177/1877718X241292315；PMID：39957196。
+
+双盲随机交叉研究纳入 15 名患者，比较高频 STN 单独刺激和不同联合刺激方案。
+
+FOG 主要终点 NFOG-Q 没有显著组间差异，但约三分之一患者获得临床意义上的改善，80% 患者更倾向于保留联合刺激。
+
+**[R30] Han 等，2026**
+
+DOI：10.1159/000549859；PMID：41553951。
+
+6 名难治性 FOG 患者接受高频 STN 联合超低频 SNr 刺激。结果具有探索价值，但样本非常小，尚不足以证明长期疗效。
+
+这三项研究提示，SNr 可能是部分难治性 FOG 的重要下游调节靶点，但其临床效益尚未被充分证实。[R24–R25、R30] <Cite refs={["turn319714search0","turn878580search4","turn253367search2"]}/>
+
+### 6.4 PPN 和楔状核刺激的阴性证据
+
+**[R32] Bourilhon 等，2022**
+
+*Pedunculopontine and Cuneiform Nuclei Deep Brain Stimulation for Severe Gait and Balance Disorders in Parkinson's Disease.*
+
+DOI：10.3233/JPD-212793；PMID：34744048。
+
+6 名患者接受 PPN、cuneiform nucleus 和 sham 刺激的随机双盲交叉试验。
+
+主要结果没有显示 PPN 或 cuneiform nucleus 刺激带来明确的临床步态及 FOG 改善。
+
+这是一项重要的阴性研究，提醒我们不能因为脑干步态网络在理论上重要，就直接推断其 DBS 必然有效。[R32] <Cite refs={["turn707186search0","turn707186search2"]}/>
+
+---
+
+## 七、研究结果冲突的系统解释
+
+### 7.1 Beta 功率为什么有时增加、有时降低？
+
+目前观察：
+
+| 研究 | 结果 | 状态 |
+|---|---|---|
+| [R4] | High-beta 增加 | 静息 |
+| [R2] | Beta 降低 | 无冻结步行 |
+| [R3] | Low-beta 增加 | FOG 易感步行 |
+| [R6] | Beta 增加 | 真实冻结 |
+| [R15] | STN power 无显著变化 | 真实冻结及转换 |
+| [R27] | Low/high-beta 方向不同 | 正常 stepping |
+
+这不是一个可以简单平均的冲突。
+
+至少有六个来源。
+
+**第一，研究对象不同。**
+
+Freezer 与 Non-freezer 是患者层级分类，FOG 与 non-FOG 是事件层级分类。两者不能直接互换。
+
+**第二，运动状态不同。**
+
+静息、步态启动、正常行走、冻结前和冻结中具有不同神经动力学。
+
+**第三，频段边界不同。**
+
+Low-beta、high-beta 和宽频 beta 不是同一个变量。
+
+**第四，分析指标不同。**
+
+功率、burst duration、burst amplitude、entropy 是不同神经特征。
+
+**第五，药物和刺激状态不同。**
+
+左旋多巴、DBS OFF、DBS ON 和不同频率刺激都可能改变 beta 活动。
+
+**第六，解剖区域不同。**
+
+Posterior sensorimotor STN 与 central associative STN 不应简单合并。
+
+因此，beta power 方向相反并不必然意味着某项研究错误。
+
+### 7.2 Power、burst duration 和 entropy 能否同时成立？
+
+可以。
+
+平均功率衡量总体振荡能量；burst duration 衡量超阈值事件的持续时间；entropy 衡量时间序列的可预测性。
+
+三者不必呈现相同方向。
+
+例如，患者可以出现：
+
+- 平均 beta power 较低。
+- 少数 beta burst 持续时间较长。
+- 整体时间序列复杂度增加。
+
+这是数学上可以成立的组合，但是否确实存在于同一患者的冻结前状态，必须通过同一数据集联合分析验证。
+
+### 7.3 皮层—STN coherence 为什么有时增强、有时减弱？
+
+[R15] 发现低频皮层—STN 解耦。
+
+[R6] 报告 high-beta/high-gamma coherence 高于 surrogate。
+
+[R12] 发现 PMC-STN 和 M1-STN 的 alpha 连接具有不同的转弯阶段变化。
+
+这些结果可以同时成立，因为不同连接可能：
+
+- 位于不同频段。
+- 发生在不同时间窗口。
+- 涉及不同皮层区域。
+- 反映不同方向的神经信息传递。
+- 在不同运动阶段发挥不同作用。
+
+因此，真正需要研究的是频率特异性、空间特异性和相位特异性的网络协调，而不是单一 coherence 数值。
+
+### 7.4 研究之间是否真正独立？
+
+部分早期 STN-FOG 研究来自相近研究团队、记录平台和实验范式。
+
+[R1]、[R2] 尤其需要检查患者队列是否存在重叠。
+
+在没有核对受试者编号及原始数据来源之前，不应将相似研究简单计为完全独立的重复验证。
+
+另外，多个冻结事件来自同一患者，也不能当成相互独立的患者样本。
+
+---
+
+## 八、竞争性机制模型
+
+以下机制是研究假说，不是已确立的事实。
+
+### H1：STN 病理性 beta burst 持续同步
+
+核心机制：
+
+\[
+\text{Prolonged beta burst}
+\rightarrow
+\text{Motor-state switching failure}
+\rightarrow
+\text{FOG}
+\]
+
+支持证据：[R1]、[R5]、[R9]、[R10]。
+
+预测：
+
+- 冻结前 beta burst duration 延长。
+- Burst duration 比平均功率具有更强的预测价值。
+- 缩短病理性 burst 应当改善冻结。
+
+证伪条件：
+
+- 冻结前没有可重复的 burst 延长。
+- 控制运动状态后，burst duration 不再预测 FOG。
+- 选择性改变 burst 后，FOG 不发生相应变化。
+
+### H2：低频皮层—STN 网络解耦
+
+核心机制：
+
+\[
+\text{Cortico-STN phase decoupling}
+\rightarrow
+\text{Motor sequencing failure}
+\rightarrow
+\text{FOG}
+\]
+
+支持证据：[R15]、[R17]、[R12]、[R13]。
+
+预测：
+
+- 冻结前低频连接异常。
+- 网络解耦早于行为冻结。
+- 相同 STN beta power 下，网络协调较差的患者更容易冻结。
+
+证伪条件：
+
+- 解耦只发生在冻结之后。
+- 解耦完全由运动伪迹或速度变化解释。
+- 恢复网络协调不能改善步态。
+
+### H3：多频段神经状态转换失调
+
+核心机制：
+
+\[
+\text{Alpha/theta/beta/gamma dysregulation}
+\rightarrow
+\text{Abnormal neural-state transition}
+\rightarrow
+\text{FOG}
+\]
+
+支持证据：[R2]、[R3]、[R5]、[R10]、[R11]、[R27]。
+
+预测：
+
+- 冻结前、冻结中和恢复阶段具有不同频段组合。
+- Entropy 和 burst duration 提供独立信息。
+- 多频段联合模型优于单一 beta 模型。
+- HMM 等模型能够识别不同神经状态。
+
+证伪条件：
+
+- 多频段联合指标没有独立预测价值。
+- 复杂度指标无法跨数据集复现。
+- 所谓状态转换完全由伪迹解释。
+
+### H4：基底节—脑干—脊髓输出通路失调
+
+核心机制：
+
+\[
+\text{Basal ganglia output dysfunction}
+\rightarrow
+\text{Brainstem locomotor dysfunction}
+\rightarrow
+\text{Abnormal spinal motor output}
+\rightarrow
+\text{FOG}
+\]
+
+支持证据：[R5]、[R7]、[R24]、[R25]、[R30]。
+
+预测：
+
+- 冻结前出现可重复的 STN—EMG 时序异常。
+- 拮抗肌协调失败具有时间先行性。
+- 某些患者可能在 STN beta 未正常化时仍能通过下游网络干预改善 FOG。
+
+证伪条件：
+
+- EMG 异常始终晚于冻结。
+- 排除共同输入后 STN—肌肉关联消失。
+- 下游网络干预不改变冻结风险。
+
+### H5：认知—运动资源竞争
+
+核心机制：
+
+\[
+\text{Cognitive load}
+\rightarrow
+\text{Executive-motor network overload}
+\rightarrow
+\text{Impaired gait automaticity}
+\rightarrow
+\text{FOG}
+\]
+
+支持证据：[R3]、[R26]、[R28]、[R33]。
+
+预测：
+
+- 双任务和复杂转弯提高冻结风险。
+- 前额叶—基底节连接在高认知负荷下发生异常。
+- 外部节律提示及降低认知负荷可能改善部分患者的步态。
+
+证伪条件：
+
+- 控制认知负荷后 FOG 与网络异常完全无关。
+- 相同任务负荷不影响冻结发生概率。
+- 认知网络变化无法预测实际冻结事件。
+
+### 五种机制的区别
+
+| 机制 | 核心异常 | 最重要的判别指标 |
+|---|---|---|
+| H1 | 局部同步过长 | Beta burst duration |
+| H2 | 网络协调丧失 | Cortico-STN phase coupling |
+| H3 | 神经状态转换失调 | 多频段、entropy、PAC |
+| H4 | 下行运动输出异常 | STN-EMG、拮抗肌协调 |
+| H5 | 认知控制资源竞争 | 认知负荷、额叶—基底节连接 |
+
+这些机制并非必然互斥。研究目标应是识别每种患者亚型的主要机制及必要中介，而不是强迫所有 FOG 归入同一种模型。
+
+---
+
+## 九、最值得开展的实验
+
+### 9.1 多中心同步记录研究
+
+建议纳入 60–80 名 STN-DBS 患者，最终样本量由预实验和功效模拟确定。
+
+建议分层：
+
+- Freezer。
+- Non-freezer。
+- Dopaminergic-responsive FOG。
+- Dopaminergic-resistant FOG。
+- DBS-responsive FOG。
+- Stimulation-induced FOG。
+
+记录：
+
+1. 双侧 STN LFP。
+2. EEG 或有临床记录条件时的 ECoG。
+3. 双下肢 EMG。
+4. IMU。
+5. 足底压力。
+6. 同步视频。
+
+不建议为了增加数据维度而不必要地增加侵入性记录。
+
+### 9.2 实验条件
+
+- 药物 ON/OFF。
+- 临床标准 DBS。
+- 安全范围内的 DBS 参数交叉比较。
+- 正常直线行走。
+- 步态启动。
+- 转弯。
+- 双任务。
+- 窄通道。
+- 主动停止。
+
+实验应遵守临床安全要求，不能以诱发严重冻结为目标。
+
+### 9.3 时间标注
+
+每次事件标记：
+
+- 正常行走。
+- 冻结易感阶段。
+- FOG onset。
+- FOG maintenance。
+- FOG termination。
+- 恢复步行。
+- 主动停止。
+
+需要将步态周期作为基本分析单位，并将患者、试验和事件作为不同统计层级。
+
+### 9.4 主要分析
+
+**A. 联合特征分析**
+
+\[
+X=
+[\text{Power},\text{Burst},\text{Entropy},\text{PAC},\text{Coherence}]
+\]
+
+判断各特征的独立预测价值。
+
+**B. 时间先后分析**
+
+比较 beta burst、theta/alpha、网络连接、EMG 和步态异常的出现顺序。
+
+**C. 混合效应模型**
+
+将患者、半球、药物状态、刺激条件和步态周期纳入统计模型。
+
+**D. 状态空间模型**
+
+采用 HMM 或其他状态空间方法识别：
+
+1. 正常步行。
+2. 冻结易感。
+3. 冻结发生。
+4. 冻结维持。
+5. 恢复。
+
+**E. 独立验证**
+
+机器学习必须使用患者级数据隔离，不能让同一患者的不同事件同时进入训练和测试集。
+
+必须报告：
+
+- Sensitivity。
+- Specificity。
+- Positive predictive value。
+- F1。
+- 每小时误报次数。
+- 预警提前量。
+- 跨患者泛化性能。
+
+### 9.5 因果干预
+
+最值得开展三个嵌套干预：
+
+| 干预 | 主要验证目标 |
+|---|---|
+| Beta burst-triggered aDBS | H1 |
+| 基于 cortico-STN phase coupling 的反馈 | H2 |
+| 多频段神经状态反馈 | H3 |
+
+在适合的临床患者中，可探索 SNr 联合刺激，以进一步评估 H4。
+
+同时改变认知负荷和外部提示条件，用于检验 H5。
+
+关键不是单纯观察 FOG 是否改善，而是判断刺激是否改变了预先提出的神经中介指标。
+
+---
+
+## 十、研究优先级
+
+| 优先级 | 研究方向 | 预期贡献 |
+|---|---|---|
+| 1 | Beta burst、power、entropy 联合分析 | 解释现有 beta 结果冲突 |
+| 2 | 冻结前 cortico-STN 动态连接 | 区分局部与网络机制 |
+| 3 | STN—EMG—步态周期同步记录 | 建立神经活动与运动输出的联系 |
+| 4 | 个体化多特征 aDBS | 提升实时检测与干预能力 |
+| 5 | STN 亚区与患者表型分层 | 解释个体差异 |
+| 6 | SNr、MLR 及脑干网络 | 探索难治性 FOG 的替代机制 |
+| 7 | 胆碱能与认知控制 | 解释非多巴胺依赖性 FOG |
+
+最优先的研究不是继续单独测量静息态 beta，而是对同一患者进行冻结前、冻结中和恢复阶段的多层级同步记录。
+
+---
+
+## 十一、最终综合判断
+
+### 11.1 已经较可靠的结论
+
+- STN 电生理活动与 FOG 易感性及真实冻结存在关联。
+- Beta burst 时间结构具有研究价值。
+- FOG 相关 STN 活动具有频率、空间、药物和运动状态依赖性。
+- 皮层—STN 网络协调异常是重要的候选机制。
+- STN 活动与下肢拮抗肌输出异常有关。
+- DBS 对 FOG 的治疗效果具有显著个体差异。
+
+### 11.2 尚未解决的关键问题
+
+1. Beta burst 是否是冻结发生的必要中介？
+2. 低频皮层—STN 解耦是否先于冻结并具有因果作用？
+3. Alpha、theta、beta 和 entropy 是不同病理过程，还是同一个状态转换的不同表征？
+4. STN 对肌肉输出的影响是否通过 SNr 和脑干运动网络实现？
+5. 是否存在不同 FOG 亚型对应不同的电生理生物标志物？
+6. 个体化多特征闭环刺激是否真正优于常规连续刺激？
+
+### 11.3 最终工作模型
+
+目前最符合整体证据的工作模型是：
+
+FOG 的发生涉及运动准备、步态节律、姿势控制和感觉—运动整合之间的动态协调失败。STN 局部振荡异常可能参与这种失调，但其表现并不固定为 beta 功率升高。
+
+在不同患者和不同状态下，可能表现为：
+
+- Beta burst 持续时间延长。
+- Low-beta 或 high-beta 活动改变。
+- Theta/alpha 活动异常。
+- 神经时间序列复杂度改变。
+- 皮层—STN 网络解耦。
+- STN—肌肉协调异常。
+
+这些异常可能共同作用，也可能分别代表不同 FOG 亚型。
+
+因此，最值得发展的方向不是寻找一个适用于所有患者的 STN 频段标志，而是建立**患者特异性、运动阶段特异性、网络多维度的 FOG 神经动力学模型**。
+
+这也是未来自适应 DBS 从单一 beta 阈值走向多变量神经状态控制的主要科学依据。
+
+---
+
+## 十二、研究质量控制与长期积累方案
+
+为了让本报告能够被领域研究者继续使用，建议将证据组织为四个相互关联的层级：
+
+<box border radius="lg" padding={3} gap={2}>
+  <box background="surface-secondary" radius="md" padding={3}>
+    **L1｜文献层**
+
+    PMID、DOI、标题、年份、研究类型、研究队列。
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3}>
+    **L2｜证据层**
+
+    人群、样本量、药物状态、刺激状态、任务、信号、主要发现和局限。
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3}>
+    **L3｜主张层**
+
+    哪些发现被支持、反驳或限定；证据等级和不确定性。
+  </box>
+  <row justify="center">
+    <icon name="arrow-down" color="secondary"/>
+  </row>
+  <box background="surface-secondary" radius="md" padding={3}>
+    **L4｜假说层**
+
+    机制模型、预测、证伪条件和下一步实验。
+  </box>
+</box>
+
+### 12.1 更新机制
+
+每次有新论文时：
+
+1. 通过 PMID/DOI 查重。
+2. 判断是否为新队列或已有队列的二次分析。
+3. 抽取研究条件和原始结果。
+4. 对现有 claims 进行支持、反驳或限定。
+5. 检查竞争性假说的预测是否被满足。
+6. 更新证据等级。
+7. 保留旧版本和修改理由。
+
+### 12.2 质量缺陷及改进检查
+
+本次研究已经发现几个值得持续修正的缺陷：
+
+| 缺陷 | 改进方法 | 验证方法 |
+|---|---|---|
+| 不同频段定义不统一 | 保存原始频段边界 | 同一数据重新分析 |
+| FOG 与易感性混淆 | 分开标注事件和患者 | 独立事件标注复核 |
+| 样本可能重复 | 建立 cohort ID | 核对受试者来源 |
+| 功率与 burst 混淆 | 独立保存指标 | 多指标联合建模 |
+| 连接与因果混淆 | 增加时间先后及干预 | 随机交叉试验 |
+| ML 过拟合 | 患者级验证 | 独立中心测试 |
+
+这套体系能够让后续证据重新评价既有结论，而不是每次从头总结文献。
+
+---
+
+## 十三、结构化附录：参考文献、原始证据、综合主张与竞争性假说
+
+以下 JSON 与正文的 R 编号对应。证据条目尽可能保留原始研究条件；对于未能从已核对的摘要中确定的样本信息，不作推测。

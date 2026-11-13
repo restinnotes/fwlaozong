@@ -1,0 +1,282 @@
+<escape>{
+  "publication": {
+    "ref": "PMID:33368872; PMCID:PMC8233405; DOI:10.1111/ner.13347",
+    "title": "Freezing of Gait in Parkinson’s Disease: Invasive and Noninvasive Neuromodulation",
+    "publication_status": "review",
+    "version_of_candidate": "附件为PMC作者稿，2021-07-22收录；对应正式发表版本：Neuromodulation. 2020 Dec 26;24(5):829–842. DOI:10.1111/ner.13347。属于同一论文的作者稿与正式发表版本，不是独立预印本。",
+    "study_id_candidate": "review:PMID:33368872",
+    "cohort_id_candidate": null,
+    "cohort_relation_basis": "该论文为叙述性综述，不包含独立招募的患者队列。以下证据分别转述其参考文献R56、R58、R61和R62所列原始研究。对应原始研究分别为PMID:28725687、24937008、31505548和30637883。综述未提供这些研究之间患者队列重叠的信息，因此不推断队列重叠或独立性。所有证据均为secondary source，不得作为独立患者队列或重复验证。",
+    "source_type": "secondary",
+    "basis": "fulltext",
+    "fulltext_checked": true
+  },
+  "evidence": [
+    {
+      "eid_local": "PMID33368872_E01",
+      "design": "人体观察性神经电生理研究（secondary source转述）。原始研究：Pozzi NG et al., Freezing of gait in Parkinson’s disease reflects a sudden derangement of locomotor network dynamics. Brain. 2019;142:2037–2050. PMID:31505548; DOI:10.1093/brain/awz141。综述称研究对象为接受STN-DBS的患者，比较有效行走与冻结发作时皮层-STN之间的神经活动同步关系。原始研究的具体设计细节未由本综述完整报告。",
+      "population": "接受STN-DBS的帕金森病患者。综述未报告患者总数、FOG患者比例、病程、FOG临床亚型及其他人口学特征。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述无独立患者样本。所引Pozzi原始研究的上述样本分母在本综述全文中未报告，不能根据研究标题或其他论文推测。需要回查PMID:31505548原始研究全文。",
+      "endpoint_class": "unclear",
+      "event_phase": "during_FOG",
+      "freezing_phenotype": "not_reported；综述仅使用freezing episodes，没有区分akinetic、trembling-in-place或其他FOG亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "综述未报告记录时Med-On或Med-Off状态、左旋多巴剂量及给药至测试的时间。",
+      "DBS_state_and_parameters": "患者接受STN-DBS。综述未报告电生理记录时刺激是否开启、刺激频率、幅度、脉宽、触点位置、单双侧刺激或方向性参数。不能将植入STN-DBS等同于记录时处于刺激ON状态。",
+      "task": "比较effective walking与freezing episodes。综述没有进一步说明直行、转弯、启动、窄通道、双任务等具体行走任务，也未报告每个条件的持续时间及行为标注方法。",
+      "recording_location": "STN与运动相关皮层。综述明确指出相关皮层区域包括supplementary motor area（SMA）、primary motor cortex及parietal cortex。具体STN亚区、记录触点及皮层记录位置未报告。",
+      "measure": "皮层-STN神经活动同步（synchronization）及皮层-皮层下网络解耦（cortical-subcortical decoupling）。信号来源为DBS相关电生理记录。综述未明确原始研究使用的具体信号形式、计算指标，不能直接将其归类为STN局部LFP平均功率、beta功率、beta burst持续时间或特定相干性指标。这里的主要结果是跨区域同步关系，而非STN局部振荡功率变化。",
+      "frequency_and_analysis_window": "报告低频频段4–13 Hz。综述未报告频段内具体子频段划分、分析窗口长度、时间分辨率、基线、归一化方式、滤波参数以及冻结前后的时间窗定义。没有足够信息判断该结果是否涉及事件前预测性变化。",
+      "finding": "综述转述Pozzi等人的结果：有效行走期间，皮层与STN在4–13 Hz低频频段表现出同步；与此相对，FOG发作期间表现为皮层-皮层下解耦。该发现涉及SMA、初级运动皮层和顶叶皮层等运动相关皮层区域。结果支持FOG期间皮层-STN运动网络通信异常，但不能据此推断STN局部神经活动功率升高或降低，也不能直接得出beta异常结论。原始研究：PMID:31505548；DOI:10.1093/brain/awz141。",
+      "effect_estimate": "方向性结果：有效行走时皮层-STN低频同步；FOG期间皮层-皮层下解耦。综述报告频段为4–13 Hz，但未提供同步强度、效应量、置信区间、P值或组间差异数值。",
+      "statistical_unit_and_method": "综述未报告原始研究的统计单位、统计模型、具体同步性计算方法及显著性检验方法。无法判断推断属于患者级、事件级还是试次级，也无法判断是否对同一患者多个冻结事件进行了重复测量校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2相关域描述性评估。本文为叙述性综述，未进行正式系统综述偏倚风险评级。原始Pozzi研究的观察性电生理研究偏倚风险不能通过本综述摘要性转述完整判断。",
+        "domains": [
+          {
+            "domain": "综述检索策略与研究选择",
+            "judgement": "some_concerns",
+            "reason": "综述说明检索PubMed，但没有报告完整可重复的检索式、全部检索日期、独立筛选流程及排除研究清单。",
+            "source_locator": "Abstract: Materials and Methods；INTRODUCTION，P8。"
+          },
+          {
+            "domain": "原始研究信号质量及伪迹控制",
+            "judgement": "unclear",
+            "reason": "综述未报告Pozzi研究的STN信号质量、运动伪迹控制、信号剔除标准及有效记录比例。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18。"
+          },
+          {
+            "domain": "原始研究行为标签有效性",
+            "judgement": "unclear",
+            "reason": "综述称freezing episodes，但未说明冻结是否通过视频、临床评审或运动学指标确认，也未报告事件标注者一致性。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18。"
+          },
+          {
+            "domain": "原始研究重复测量及统计分析",
+            "judgement": "unclear",
+            "reason": "没有报告患者数、事件数、统计单位和重复事件处理方法，不能排除事件级伪重复。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18。"
+          },
+          {
+            "domain": "原始研究选择性报告与外部验证",
+            "judgement": "not_assessable",
+            "reason": "综述没有提供原始研究的预注册、完整结局清单、模型验证或独立外部验证信息。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18；REFERENCES，R61。"
+          }
+        ],
+        "overall": "unclear"
+      },
+      "limitations": "这是本综述中与STN神经活动和FOG发作关系最直接的电生理证据，但属于对Pozzi原始研究的二级转述。必须区分跨区域同步与STN局部功率。4–13 Hz不能直接等同于beta频段。综述没有提供原始研究的样本分母、具体信号处理、效应量、统计单位和冻结行为验证方式。特别是，现有转述只支持FOG期间存在网络解耦，不能确定解耦是FOG的起因、伴随现象还是冻结发生后的结果。原始研究需要独立核查。",
+      "quote": "During effective walking, the cortex and STN were synchronized in the low-frequency band (4–13 Hz). In contrast, freezing episodes were characterized by cortical–subcortical decoupling.",
+      "source_locator": {
+        "section": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18；对应参考文献R61。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID33368872_E02",
+      "design": "人体功能影像学研究（secondary source转述）。原始研究：Fling BW et al., Functional reorganization of the locomotor network in parkinson patients with freezing of gait. PLoS One. 2014;9:e100291. PMID:24937008; DOI:10.1371/journal.pone.0100291。综述报告STN-SMA功能连接降低，但没有在该段落中明确原始研究的具体影像序列和任务设计。",
+      "population": "帕金森病伴FOG相关运动网络功能连接研究。综述未报告样本数量、Freezer与Non-freezer各组人数、患者临床特征或具体比较组构成。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述无独立患者样本。Fling原始研究的所有样本分母在本综述对该研究的具体转述中未报告。需要回查PMID:24937008原始研究全文。不能将综述中其他研究的患者数移用到该研究。",
+      "endpoint_class": "E_questionnaire_rest",
+      "event_phase": "not_applicable",
+      "freezing_phenotype": "not_reported；综述没有说明FOG是akinetic、trembling-in-place或其他亚型。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "综述未报告Med-On、Med-Off、药物剂量及测试时间。",
+      "DBS_state_and_parameters": "综述没有说明该原始研究患者是否接受STN-DBS，也没有报告测试刺激状态、频率、幅度、脉宽或触点位置。本研究证据属于STN-SMA功能连接，不应解释为DBS刺激参数效应。",
+      "task": "功能影像学运动网络研究。综述没有在介绍Fling研究时明确说明采用静息态、运动想象、实际步行还是其他任务。因此不能将其直接归为某种特定行走任务或事件前FOG试次。",
+      "recording_location": "STN与SMA之间的功能连接；同时涉及综述提及的MLR、CLR与SMA连接。该证据条目只提取STN-SMA连接结果。",
+      "measure": "STN-SMA functional connectivity。属于脑区间功能连接指标，而不是STN单区域放电率、STN局部LFP功率或单个神经元活动。具体成像技术、功能连接计算方法和连接方向未由综述明确报告。",
+      "frequency_and_analysis_window": "未报告STN-SMA连接所使用的频率边界、时间窗、基线、归一化方法和具体分析窗口。不能将其指定为beta、theta或其他特定频段。",
+      "finding": "综述报告Fling等人观察到STN与SMA之间的功能连接降低，并提出这一现象可能反映抑制竞争性运动程序的能力下降。这属于FOG表型相关的网络连接证据，不是实际冻结事件发生期间的STN电生理记录，也没有证明STN本身局部神经活动增强或减弱。原始研究：PMID:24937008；DOI:10.1371/journal.pone.0100291。",
+      "effect_estimate": "方向：STN-SMA功能连接降低。综述未报告连接强度数值、效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述未报告原始研究的样本级统计方法、统计模型、连接计算指标、患者级或组级推断方法，也没有提供重复测量和多重比较校正信息。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2相关域描述性评估；原始研究按adapted_not_validated观察性影像研究域考虑。",
+        "domains": [
+          {
+            "domain": "综述检索策略与研究选择",
+            "judgement": "some_concerns",
+            "reason": "综述仅说明使用PubMed及有限关键词，未提供可重复的完整检索策略和系统性筛选流程。",
+            "source_locator": "Abstract: Materials and Methods；INTRODUCTION，P8。"
+          },
+          {
+            "domain": "原始研究样本选择",
+            "judgement": "unclear",
+            "reason": "本综述未报告Fling研究的样本量、患者选择标准、FOG分组及排除情况。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17；REFERENCES，R58。"
+          },
+          {
+            "domain": "功能连接测量与混杂",
+            "judgement": "unclear",
+            "reason": "未报告影像测量质量、头动控制、药物状态、运动表现及疾病严重程度对功能连接的潜在影响。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17。"
+          },
+          {
+            "domain": "原始研究偏倚风险评价",
+            "judgement": "not_assessable",
+            "reason": "综述没有提供针对Fling研究的正式偏倚风险评价或完整统计分析信息。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17；COMMENTS，P128–P129。"
+          }
+        ],
+        "overall": "unclear"
+      },
+      "limitations": "该结果是功能连接层面的表型关联，不能与Pozzi研究中冻结事件期间的皮层-STN电生理解耦视为同一指标。综述没有明确R58的成像任务和时间尺度，也没有说明功能连接降低是否发生在实际FOG发作前或发作期间。不能据此推断STN局部放电或LFP功率的变化。该研究的原始统计结果需要独立核查。",
+      "quote": "reduced functional connectivity between the STN and SMA proposed to reflect reduced capacity to inhibit competing motor programs.",
+      "source_locator": {
+        "section": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17；对应参考文献R58。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID33368872_E03",
+      "design": "人体虚拟现实功能磁共振成像研究（secondary source转述）。原始研究：Gilat M et al., Brain activation underlying turning in Parkinson’s disease patients with and without freezing of gait: a virtual reality fMRI study. Parkinsons Dis. 2015;1:15020. PMID:28725687; DOI:10.1038/npjparkd.2015.20。",
+      "population": "帕金森病患者。综述明确报告17名伴FOG的患者参与虚拟现实转弯诱发研究，但没有报告是否另有Non-freezer对照组及其具体人数。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": 17,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "综述明确报告17名FOG患者，但没有报告原始研究的总招募数、完整分析数、有效影像数据人数、冻结事件数、试次数或电极数。fMRI研究不适用STN电极接触数。其余缺失数据需回查PMID:28725687原始研究全文。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；综述没有报告虚拟现实条件下冻结的具体临床亚型，也没有说明是否与自然行走中的FOG表现一致。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "综述未报告实验时Med-On或Med-Off状态及药物剂量。",
+      "DBS_state_and_parameters": "综述未报告患者接受STN-DBS的情况。该研究使用VR-fMRI，不能将假设的STN高通路参与解释为STN-DBS记录或刺激结果。没有STN刺激参数。",
+      "task": "Virtual reality turning condition，用于诱发freezing。综述报告该条件能够trigger freezing，但未说明是否为自然直立行走、是否具有实际肢体步行运动，以及影像分析窗口是否精确对应冻结发作。",
+      "recording_location": "inferior frontal regions。综述提出可能涉及经hyperdirect connections到达STN的异常停止信号，但没有报告直接采集STN神经活动。",
+      "measure": "fMRI区域脑激活（BOLD activation）。报告的结果为inferior frontal regions激活增加。经hyperdirect pathway到STN的异常停止信号属于机制假说，不是直接测量的STN神经信号。",
+      "frequency_and_analysis_window": "fMRI BOLD信号；未报告频段边界、冻结前后分析窗口、BOLD基线、归一化方法及事件锁定时间。",
+      "finding": "综述转述Gilat等人的研究：在虚拟现实转弯条件下，17名FOG患者接受研究，发现inferior frontal regions激活增加。综述进一步提出，额叶激活可能通过hyperdirect connections向STN传递异常停止信号，导致步行中止。这一结果是支持额叶-STN停止网络假说的间接证据，不能表述为已观察到STN自身活动增加。原始研究：PMID:28725687；DOI:10.1038/npjparkd.2015.20。",
+      "effect_estimate": "inferior frontal regions激活增加。综述没有报告具体激活体素、BOLD效应量、置信区间或P值。",
+      "statistical_unit_and_method": "综述未报告原始研究的具体影像统计模型、组间比较方法、患者级或试次级统计单位、多重比较校正及事件级分析结果。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2相关域描述性评估；原始研究按adapted_not_validated观察性功能影像研究域考虑。",
+        "domains": [
+          {
+            "domain": "综述检索策略与研究选择",
+            "judgement": "some_concerns",
+            "reason": "检索方法只报告PubMed和有限关键词，缺乏完整检索流程和筛选标准。",
+            "source_locator": "Abstract: Materials and Methods；INTRODUCTION，P8。"
+          },
+          {
+            "domain": "行为标签与虚拟现实任务效度",
+            "judgement": "unclear",
+            "reason": "综述说明VR转弯可诱发冻结，但未报告冻结事件的客观确认方式、时间同步、评审者一致性及与真实自然行走FOG的对应关系。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17。"
+          },
+          {
+            "domain": "影像信号质量及混杂",
+            "judgement": "unclear",
+            "reason": "没有报告头动伪迹、运动状态、药物状态、认知负荷及其他影响额叶激活的因素。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17。"
+          },
+          {
+            "domain": "原始研究偏倚风险评价",
+            "judgement": "not_assessable",
+            "reason": "本综述没有提供针对Gilat研究的正式偏倚风险评价。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17；COMMENTS，P128–P129。"
+          }
+        ],
+        "overall": "unclear"
+      },
+      "limitations": "本证据是虚拟现实模拟任务中的脑激活结果，不是自然行走中的实际FOG电生理记录。inferior frontal激活增加与STN之间的关系是通过hyperdirect pathway提出的机制解释，不能作为STN局部活动增强的直接证据。综述在P17明确指出功能影像不能捕获实际步态冻结事件期间的脑网络活动，因此不能仅凭该研究判断异常停止信号在真实冻结发作中的时间顺序。",
+      "quote": "Gilat et al. used a VR turning condition to trigger freezing in 17 patients with FoG. Findings in this study demonstrated increased activation in inferior frontal regions.",
+      "source_locator": {
+        "section": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P17；对应参考文献R56。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    },
+    {
+      "eid_local": "PMID33368872_E04",
+      "design": "人体虚拟现实功能磁共振成像研究（secondary source转述）。原始研究：Matar E et al., Identifying the neural correlates of doorway freezing in Parkinson’s disease. Hum Brain Mapp. 2019;40:2055–2064. PMID:30637883; DOI:10.1002/hbm.24506。",
+      "population": "帕金森病患者，研究对象涉及虚拟现实门口诱发的FOG。综述未报告具体患者数量、FOG分组和临床特征。",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "本综述无独立患者样本。Matar原始研究的患者数、有效影像人数、冻结事件数、试次数及其他样本分母在本综述全文对该研究的转述中未报告。需要回查PMID:30637883原始研究全文。fMRI研究不适用STN电极接触数。",
+      "endpoint_class": "C_virtual_simulated",
+      "event_phase": "unclear",
+      "freezing_phenotype": "not_reported；综述没有说明doorway freezing属于akinetic、trembling-in-place或其他表现。",
+      "medication_phenotype": "unknown",
+      "experimental_medication_state": "综述未报告测试时Med-On或Med-Off状态、剂量及给药时间。",
+      "DBS_state_and_parameters": "综述没有报告该研究是否包含STN-DBS患者或记录时的DBS状态。没有报告STN刺激参数、触点位置或方向性信息。",
+      "task": "Virtual reality doorway-provoked freezing of gait。综述仅说明使用虚拟现实研究门口诱发的FOG，没有提供实际行走与模拟任务的详细运动学对应关系，也未报告激活分析是否精确锁定冻结开始、持续或恢复阶段。",
+      "recording_location": "双侧pre-supplementary motor area（preSMA）。综述没有报告直接记录STN神经活动。",
+      "measure": "fMRI脑激活（BOLD activation）。主要结果为双侧preSMA选择性低激活（selective hypoactivation）。不能将preSMA低激活直接等同于STN神经活动降低，但可作为额叶-基底节运动控制网络异常的间接证据。",
+      "frequency_and_analysis_window": "fMRI BOLD信号；综述未报告具体频率边界、时间窗、事件锁定分析、基线或归一化方法。",
+      "finding": "综述转述Matar等人的研究：采用虚拟现实评估门口诱发的FOG，发现双侧preSMA存在选择性低激活。该结果与综述提出的皮层-皮层下运动网络信号传递异常假说相符，但没有直接测量STN神经活动，也没有证明STN局部活动降低。原始研究：PMID:30637883；DOI:10.1002/hbm.24506。",
+      "effect_estimate": "双侧preSMA激活降低。综述未报告具体BOLD效应量、置信区间、P值及组间差异数值。",
+      "statistical_unit_and_method": "综述未报告原始研究的统计模型、影像比较方法、患者级或事件级统计单位、重复测量处理及多重比较校正。",
+      "risk_of_bias": {
+        "tool_or_framework": "ROBIS/AMSTAR 2相关域描述性评估；原始研究按adapted_not_validated观察性功能影像研究域考虑。",
+        "domains": [
+          {
+            "domain": "综述检索策略与研究选择",
+            "judgement": "some_concerns",
+            "reason": "综述只报告PubMed数据库及有限关键词，缺少完整检索和研究筛选方法。",
+            "source_locator": "Abstract: Materials and Methods；INTRODUCTION，P8。"
+          },
+          {
+            "domain": "行为标签有效性及事件时间定位",
+            "judgement": "unclear",
+            "reason": "综述没有报告门口冻结的具体识别标准、事件级视频确认方式，以及preSMA低激活与真实冻结发生时刻的对应关系。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18。"
+          },
+          {
+            "domain": "影像信号质量和混杂",
+            "judgement": "unclear",
+            "reason": "综述未报告头动控制、任务表现、药物状态、疾病严重程度及影像信号质量。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18。"
+          },
+          {
+            "domain": "原始研究偏倚风险评价",
+            "judgement": "not_assessable",
+            "reason": "本综述未提供Matar研究的正式偏倚风险评估或完整原始统计资料。",
+            "source_locator": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18；COMMENTS，P128–P129。"
+          }
+        ],
+        "overall": "unclear"
+      },
+      "limitations": "该研究属于VR门口诱发FOG的功能影像证据，不属于STN直接神经记录。双侧preSMA低激活与Gilat研究中inferior frontal激活增加涉及不同脑区、不同任务和不同影像结果指标，不能直接视为相互否定。也不能从preSMA低激活推断STN活动降低。综述明确指出功能影像不能直接捕获自然步态冻结发作中的实时脑网络活动。",
+      "quote": "found selective hypoactivation in the preSMA bilaterally.",
+      "source_locator": {
+        "section": "PATHOPHYSIOLOGY OF FREEZING OF GAIT，P18；对应参考文献R62。",
+        "page": null,
+        "figure_table": null,
+        "supplement": null
+      },
+      "basis": "fulltext"
+    }
+  ]
+}</escape>

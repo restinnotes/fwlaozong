@@ -1,0 +1,339 @@
+你是功能神经外科领域的证据提取研究员。研究问题：
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+你的任务是从每篇给定论文中提取可直接核查的原始证据，供后续跨研究综合。只记录论文实际报告的内容；不得用领域常识填补缺失数据，不得把摘要未提及写成全文未报告。
+
+【提取单位与来源规则】
+1. 一条 evidence 只描述一个明确的发现、一个比较、一个结局和一组实验条件。若同一论文报告不同任务、药物/刺激状态、冻结阶段或不同信号指标，拆成不同 evidence。
+2. 必须区分 primary source（原始患者/动物/实验数据）与 secondary source（综述、Meta分析对原始研究的转述）。综述转述不能作为新的独立患者队列或独立重复验证；若综述明确指出原始研究，记录其PMID/DOI。
+3. 对预印本、会议摘要和正式论文，记录版本状态及可能的 version_of。不要仅凭标题相似就断言是同一研究；证据不足时写 possible_match/unknown，并说明依据。
+4. study_id_candidate 表示同一项研究；cohort_id_candidate 表示同一批或可能重叠的患者队列。它们是待程序/后续审计确认的候选关系，不是你自行生成的永久ID。说明队列关系依据（中心、招募时间、设备、样本特征、作者说明等）。
+5. basis 必须是 fulltext（确实检查全文）或 abstract（只有摘要可核查）。全文未获得时，关键字段写 null/unknown，不得猜测。
+
+【必须分开的样本分母】
+分别提取 n_enrolled、n_analyzed、n_patients_with_FOG、n_patients_with_valid_neural_data、n_FOG_events、n_trials、n_electrodes/contacts。不要把患者数、事件数、试次数、电极数互相替代。若论文未报告，写 null，并用 missing_reason 区分“摘要未提及”“全文未报告”“全文未能获得”“不适用”。
+
+【FOG终点与时间阶段】
+endpoint_class 只能取：
+- A_actual_natural：自然直立行走中实际发生、由视频/临床明确确认的FOG；
+- B_objective_natural：自然直立行走中由运动学/肌电/可穿戴设备客观识别、但未由视频/临床评审确认的冻结事件；
+- C_virtual_simulated：虚拟现实、仰卧踏步或其他模拟/替代任务中的冻结或FOG-like现象；
+- D_susceptibility：患者易感性、Freezer vs Non-freezer分组、预测风险或随后事件之前但没有事件关联的试次；
+- E_questionnaire_rest：问卷、静息态或其他表型关联，没有事件级冻结记录；
+- unclear。
+event_phase 只能取 susceptibility、pre_FOG_event_associated、during_FOG、offset_recovery、non_event_gait、not_applicable、unclear。只有同一试次/事件随后确实出现FOG，才可标为pre_FOG_event_associated；不能把Freezer患者的一般步态启动都叫Pre-FOG。
+另记录 freezing_phenotype（如akinetic、trembling-in-place、kinetic-no-trembling、mixed、not_reported），并保留原论文术语。不同FOG表现不能默认等价。
+
+【药物、刺激、任务和信号】
+把 medication_phenotype（患者临床OFF-FOG、ONOFF-FOG、ON-FOG、biphasic、unknown）与 experimental_medication_state（本次测试Med-On/Med-Off/剂量/时间）分开。把 DBS临床状态、测试刺激状态、频率/幅度/脉宽/触点/方向性、记录解剖位置、任务（直行/转弯/启动/双任务/虚拟/仰卧等）分开记录。
+信号指标要写明来源（STN局部LFP、单/多单位、皮层-STN coherence等）、频段边界、分析窗口、基线/归一化、患者级还是事件级统计。平均功率、burst持续时间/占据率/熵、相位调制和跨区耦合不可合并成一个“beta异常”。
+
+【效应与质量】
+尽可能提取效应量、方向、置信区间、P值、模型单位和统计方法；区分患者级推断与事件/试次级重复测量。
+risk_of_bias 只做有依据的领域级初评，不把“直接证据”当作“高质量证据”：
+- 随机试验：按RoB 2相关域记录随机化、偏离干预、缺失数据、结局测量、选择性报告；
+- 非随机干预：按ROBINS-I相关域记录混杂、选择、干预分类、偏离、缺失、测量、报告；
+- 系统综述：记录AMSTAR 2/ROBIS可判断的域；
+- 观察性电生理/预测研究：使用明确标为“adapted_not_validated”的域清单，至少检查样本选择、行为标签有效性、信号质量/伪迹、混杂、重复测量/伪重复、多重比较、模型过拟合/外部验证、选择性报告。
+每个判断都必须写理由和原文定位；无法判断写unclear，不得自动给总体“低风险”。发表状态（预印本/同行评审）单独记录，不等同于偏倚风险。
+
+【定位与引文】
+每条 evidence 提供原文短引句（英文不超过40词）及 source_locator：章节/页码/图表/补充材料位置。不要编造页码或图表编号。若只能从摘要提取，明确标记并降低可支持的结论范围。
+
+【输出规则】
+只输出一个JSON，不要Markdown，不要额外解释。未知值用null或"unknown"，不得省略必需字段：
+{
+  "publication": {
+    "ref": "",
+    "title": "",
+    "publication_status": "published|preprint|conference_abstract|review|unknown",
+    "version_of_candidate": null,
+    "study_id_candidate": "",
+    "cohort_id_candidate": "",
+    "cohort_relation_basis": "",
+    "source_type": "primary|secondary|mixed|unclear",
+    "basis": "fulltext|abstract",
+    "fulltext_checked": false
+  },
+  "evidence": [
+    {
+      "eid_local": "",
+      "design": "",
+      "population": "",
+      "n_enrolled": null,
+      "n_analyzed": null,
+      "n_patients_with_FOG": null,
+      "n_patients_with_valid_neural_data": null,
+      "n_FOG_events": null,
+      "n_trials": null,
+      "n_electrodes_contacts": null,
+      "missing_reason": "",
+      "endpoint_class": "A_actual_natural|B_objective_natural|C_virtual_simulated|D_susceptibility|E_questionnaire_rest|unclear",
+      "event_phase": "susceptibility|pre_FOG_event_associated|during_FOG|offset_recovery|non_event_gait|not_applicable|unclear",
+      "freezing_phenotype": "",
+      "medication_phenotype": "",
+      "experimental_medication_state": "",
+      "DBS_state_and_parameters": "",
+      "task": "",
+      "recording_location": "",
+      "measure": "",
+      "frequency_and_analysis_window": "",
+      "finding": "",
+      "effect_estimate": "",
+      "statistical_unit_and_method": "",
+      "risk_of_bias": {
+        "tool_or_framework": "",
+        "domains": [
+          {"domain": "", "judgement": "low|some_concerns|high|unclear|not_assessable", "reason": "", "source_locator": ""}
+        ],
+        "overall": "low|some_concerns|high|unclear|not_assessed"
+      },
+      "limitations": "",
+      "quote": "",
+      "source_locator": {"section": "", "page": "", "figure_table": "", "supplement": ""},
+      "basis": "fulltext|abstract"
+    }
+  ]
+}
+
+【论文】
+pid: PMID:37701817
+题目: Optimal subthalamic stimulation sites and related networks for freezing of gait in Parkinson's disease.
+年份: 2023
+全文：
+# Optimal subthalamic stimulation sites and related networks for freezing of gait in Parkinson’s disease
+
+## Abstract
+Freezing of gait is a common and debilitating symptom in Parkinson’s disease. Although high-frequency subthalamic deep brain stimulation is an effective treatment for Parkinson’s disease, post-operative freezing of gait severity has been reported to alleviate, deteriorate or remain constant. We conducted this study to explore the optimal stimulation sites and related connectivity networks for high-frequency subthalamic deep brain stimulation treating freezing of gait in Parkinson’s disease. A total of 76 Parkinson’s disease patients with freezing of gait who underwent bilateral high-frequency subthalamic stimulation were retrospectively included. The volumes of tissue activated were estimated based on individual electrode reconstruction. The optimal and sour stimulation sites were calculated at coordinate/voxel/mapping level and mapped to anatomical space based on patient-specific images and stimulation settings. The structural and functional predictive connectivity networks for the change of the post-operative Freezing of Gait-Questionnaire were also identified based on normative connectomes derived from the Parkinson’s Progression Marker Initiative database. Leave-one-out cross-validation model validated the above results, and the model remained significant after including covariates. The dorsolateral two-thirds of the subthalamic nucleus was identified as the optimal stimulation site, while the ventrocentral portion of the right subthalamic nucleus and internal capsule surrounding the left central subthalamic nucleus were considered as the sour stimulation sites. Modulation of the fibre tracts connecting to the supplementary motor area, pre-supplementary motor area and pedunculopontine nucleus accounted for the alleviation of freezing of gait, whereas tracts connecting to medial and ventrolateral prefrontal cortices contributed to the deterioration of freezing of gait. The optimal/sour stimulation sites and structural/functional predictive connectivity networks for high-frequency subthalamic deep brain stimulation treating freezing of gait are identified and validated through sizable Parkinson’s disease patients in this study. With the growing understanding of stimulation sites and related networks, individualized deep brain stimulation treatment with directional leads will become an optimal choice for Parkinson’s disease patients with freezing of gait in the future. Keywords: Parkinson’s disease, freezing of gait, subthalamic deep brain stimulation, optimal simulation site, connectivity network
+
+## Introduction
+
+Freezing of gait (FOG) is a common and debilitating symptom in Parkinson’s disease that is characterized by sudden and transient episodes of walking or turning arrest.1 The incidence of FOG significantly increases with the progression of Parkinson’s disease, leading to a higher risk of falls. The prevalence of FOG exceeds 50% in advanced Parkinson’s disease patients and exceeds 90% in patients at Hoehn and Yahr (H–Y) stage 4.2 After focusing on a one-axis mechanism underlying FOG in isolation, it has recently been recommended to take a holistic view of the heterogeneous FOG symptoms, in which the abnormalities of cognitive, motor and affective networks might all have significant roles in the pathophysiology of FOG.3
+
+Subthalamic deep brain stimulation (STN-DBS) is an effective treatment for advanced Parkinson’s disease because STN-DBS effectively controls motor symptoms such as rigidity and tremor and reduces the dosage of levodopa intake.4 There is an interesting and contradictory phenomenon whereby post-operative FOG severity has been reported to alleviate, deteriorate, or remain constant among different Parkinson’s disease patients.5,6 Though the FOG symptom of many patients is dramatically alleviated after STN-DBS, one-third of patients have symptom exacerbation.4,5 Some patients even develop new-onset FOG after STN-DBS surgery. The outcome variability has been reported to be mainly determined by variations in electrode location and incorrect stimulation settings.7–9 Some recent small-sample studies reported a significant association between FOG changes and the recruitment of sensorimotor and prefrontal dorsolateral cortico-subthalamic fibres, as well as the hyper-direct pathway connecting to supplementary area (SMA).10,11 We recently proposed a bandwidth model supporting that STN-DBS improves FOG by both reducing motor impairments and enhancing the overall cortical information-processing capabilities.12 Except for cortico-subthalamic connectivity, it has been suggested that STN-DBS improves Parkinsonian gait by modulating pedunculopontine nucleus/mesencephalic locomotor region (PPN/MLR) activity.13 However, the mechanisms underlying the paradoxical outcome of FOG-DBS treatment are still a matter of debate, requiring further studies from larger samples and multiple perspectives.
+
+Given these studies, we speculated that STN-DBS alleviated or deteriorated FOG by stimulating different STN subregions and engaging in different brain networks. We used individual image data, such as pre-operative MRI and post-operative CT scans, the volume of tissue activated (VTA) model combining stimulation location and parameter settings and normative connectomes derived from diffusion and functional MRI to identify the optimal stimulation sites and related connectivity networks of STN-DBS on FOG in Parkinson’s disease.
+
+## Materials and methods
+
+### Patients and clinical characteristics
+
+#### Patient screening and clinical data
+
+Parkinson’s disease patients who underwent bilateral STN-DBS at Beijing Tiantan Hospital from June 2018 to June 2021 were screened retrospectively. All patients were strictly included only after meeting the following inclusion criteria: (i) pre-operative FOG-Questionnaire (FOG-Q) item 3 ≥1; (ii) assessment videos are available and at least one freezing episode was observed in the video; (iii) available parameter settings and a stimulation frequency ≥90 Hz; and (iv) available MRI and post-surgical CT. Patients were excluded for the following reasons: (i) other brain diseases leading to FOG; (ii) lower limb disability; (iii) history of stereotactic-lesioning surgery or DBS of other stimulation targets; (iv) severe surgical adverse effects and/or stimulation-related complications; and (v) ON-state FOG.
+
+The surgical procedure was described in Supplementary Methods. Every patient was at his/her best therapeutic stimulation setting during the follow-up assessment. The mechanisms underlying STN-DBS with different frequencies are still under debate.9 The local and global effects on brain changes were also regarded to be different.14 Therefore, we only collected patients with high-frequency STN-DBS to exclude the analysis bias of frequency difference. Sex, disease duration, age at onset/surgery, H–Y stage, Movement Disorder Society Unified Parkinson’s Disease Rating Scale (MDS-UPDRS), Levodopa Equivalent Daily Dose (LEDD), Berg Balance Scale, Mini-mental State Exam (MMSE), Montreal Cognitive Assessment (MoCA), 14-item Hamilton Anxiety Scale (HAM-A), 24-item Hamilton Depression Scale (HAM-D), therapeutic stimulation settings and other important clinical data were collected pre- operatively and post-operatively. This study followed the Declaration of Helsinki and was approved by the Institutional Review Board of Beijing Tiantan Hospital. All subjects provided written informed consent.
+
+#### Freezing of gait assessment and grouping
+
+The FOG-Q is a questionnaire that assesses the normal and worst FOG symptom in the most recent 1 month, and all patients were assessed at medication off state to help patients better recall and answer the questions.15 The FOG-Q percent change was calculated as follows: %FOG-Q change = [(pre-operative FOG-Q score–post-operative FOG-Q score)/pre-operative FOG-Q] × 100. An FOG-Q reduction was considered a positive FOG-Q change because FOG represented the alleviation of FOG severity from baseline to follow-up was calculated as the primary outcome. The effect of disease progression was excluded by calculating whether %FOG-Q was related with follow-up duration. For subgroup comparisons, patients were delivered into three subgroups, including alleviation, minor change and deterioration. The cut-off values of %FOG-Q change were 0 and 30% because the change rate below 0 is generally deemed as a deterioration of symptoms and >30% is considered good improvement.16 Patients in the alleviation group whose FOG-Q Item 3 (‘frequency of freezing episodes’) score changed to 0 after STN-DBS were further classified into the FOG-disappearance group for validation analysis.
+
+#### Imaging data collection
+
+All patients underwent pre-operative MRI and post-operative CT imaging scans. A 3-Tesla MRI scanner (Philips Medical Systems, Best, The Netherlands) was used to acquire T1-weighted scans [slice thickness, 1 mm; repetition time (TR), 6.9 ms; echo time (TE), 3.1 ms]. The slice thickness of the post-operative CT was 0.625 mm. For the Parkinson’s Progression Marker Initiative (PPMI) database (www.ppmi-info.orgz) that was used to generate normative connectomes, 90 Parkinson’s disease patients underwent diffusion-weighted scans (TR/TE = 900/88 ms; 2 mm3 resolution; 72 slices; 64 gradient directions; and b = 1000 s/mm2) and resting fMRI scans (TR/TE = 2400/25 ms; flip angle = 80°; field of view = 240 × 240 mm; matrix = 68 × 68; 40 slices; slice thickness = 3.3 mm; voxel size = 3.25 × 3.25 × 3.25 mm3; 212 volumes).17 The processes of converting these original imaging data to available normative connectomes are described in detail in the Supplementary Methods sections according to Horn et al.18
+
+### Image pre-processing and computational analysis
+
+#### Electrode localization
+
+Figure 1 illustrates the methodology used in this study. Briefly, a pre-operative MRI and post-operative CT scans were linearly co-registered and non-linearly normalized into the Montreal Neurological Institute (MNI) ICBM 2009b NLIN ASYM template space using advanced normalization tools.19 Then, the brain shift correction was performed, and all of the above outcomes were inspected by experienced neurosurgeons (HF and YB, respectively).20 The Precise and Convenient Electrode Reconstruction (PaCER) and refined TRAC/CORE methods were applied to pre-construct the electrodes, which were manually inspected and subsequently refined by HF and YB.21 The DBS Intrinsic Template AtLas (DISTAL) minimal atlas was used to visualize the STN, and this atlas was very accurate for localizing the basal ganglia structure because the atlas was designed for surgical localization.22 To graphically illustrate the electrode locations, 2D slices were plotted using the 7-T 100-μm ex vivo human brain MRI template as a background image. The reconstruction processes were conducted in the Lead-DBS toolbox (version 2.5.3).23
+
+[fig fcad238-F1] Illustration of the methodology. (A) Electrodes (132 sides) were reconstructed by the co-registration and alignment of pre-operative MRI (T1 and T2) and post-operative CT. The activated contacts and stimulation parameters were used to estimate bilateral VTAs. (B) The MNI coordinates of activated contacts were all extracted, and the correlation with FOG-Q change was estimated. Then, the relationships between the intersections of VTAs with STN/subregions and FOG-Q changes were calculated. The PSM was also identified by combining voxels of VTAs and FOG-Q change. (C) The stimulated fibre tracts by VTAs of each patient were all identified based on the PPMI dataset. The relationship between individual connection status and the patient-specific FOG-Q outcome was calculated using a linear mixed model; the positive (red) and negative (blue) fibres were identified by effect sizes. FOG-disappearance and FOG-deterioration patients were selected to process the sensitive analysis to extract the different fibres. (D) The functional connectivity pattern per patient was identified based on the PPMI dataset. Then, the R-map was generated by correlating the individual functional connectivity pattern with the FOG-Q changes at the voxel-wise level.
+
+#### Activated contact coordinate extraction and volume of tissue activated estimation
+
+Three-dimensional coordinates of the activated contacts of the DBS electrodes in the MNI space were then extracted from the reconstructed electrode models. The VTA was estimated in native space based on the finite element method.23 Patient-specific stimulation parameters, especially activated contacts, pulse width, frequency and amplitudes, were used to calculate VTAs using the SimBio/FieldTrip pipeline.24 A volume conductor model was constructed based on a four-compartment mesh that includes grey matter (σ = 0.33 S/m), white matter (σ = 0.14 S/m), electrode contacts and insulated sections (Fig. 1A). Binary VTAs were generated by thresholding the gradient vector magnitude distribution at 0.2 V/mm.
+
+#### Sweet and sour stimulation sites
+
+#### Structural connectivity analysis
+
+The structural connectivity network between VTAs and all other brain areas was calculated using the normative connectome base on the PPMI dataset that has been proven to effectively explore the effects of DBS in previous studies.18,23,26 The DBS fibre-filtering method was applied to identify white matter fibre tracts overlapped by the VTAs. In each subject, a total of 20 000 fibres were sampled using a generalized q-sampling approach implemented in DSI Studio.18 Fibres that were connected to a minimum of 20% of the included patients’ VTAs were used for further analysis. For each fibre, a ‘Fibre-T-score’ was assigned by calculating two-sample t-tests to compare clinical outcomes between connected and disconnected VTAs (Fig. 1C left). These T-scores were not intended to calculate significant results but instead to identify a predictive model (Fig. 1C middle). Positive T-scores stand for preferentially stimulated fibre tracts in well-responded patients and negative T-scores for the preferentially stimulated ones in poor-responded patients. LOOCV was used for validation. Sex, disease duration, pre-op MoCA, pre-op HAM-A/HAM-D, LEDD reduction and UPDRS-III percent change were included as covariates to exclude confounders. Subgroups of FOG-disappearance and FOG-deterioration patients were included for further confirmatory analysis. To determine the differences between these two groups, a patient-specific structural connectivity pattern was used for comparative analysis between groups by independent samples t-test using DPABI (version 6.1) (Fig. 1C right).
+
+#### Functional connectivity analysis
+
+Analyses of structural connectivity are only capable of identifying monosynaptic connections. We then conducted a functional network analysis with clinical information from another sight. Based on the normative connectome of resting fMRI, voxel-wise correlations between the time series of bilateral VTAs and the remaining whole-brain voxels were determined for each patient with FOG, averaged throughout the normative sample and Fisher Z-transformed. The resulting patient-specific connectivity was then correlated with the %FOG-Q changes across patients at the voxel level to produce an R-map model (Fig. 1D). LOOCV was used for validation. Sex, disease duration, pre-op MoCA, pre-op HAM-A/HAM-D, LEDD reduction and UPDRS-III percent change were further included as covariates to validate the predictive model. More detailed descriptions were according to the Lead-DBS website (www.lead-dbs.org).
+
+### Statistical analysis
+
+All clinical variables were compared with a QQ-plot database to test the normal distribution. A paired t-test was used to assess the changes from baseline to follow-up only if clinical variables met the normal distribution. Otherwise, a non-parametric Wilcoxon signed-rank test was adopted. A chi-square test of independence and the Kruskal–Wallis rank-sum test were used to compare baseline differences among three or more groups. Standard deviations or interquartile ranges were used to describe the dispersion. Correlations were estimated using linear regression analysis based on the general linear model (GLM). The effect sizes were indicated as Spearman rho (R) correlation coefficients. A P < 0.05 was considered statistically significant, and the Bonferroni correction was adopted if multiple comparisons existed. All statistical and imaging analyses were performed using R Studio v2021.09.1 (R v4.1.2; PBC, Boston, MA, USA) and MATLAB R2020b (Mathworks, Natick, MA, USA).
+
+## Results
+
+### Clinical characteristics and stimulation settings of included patients
+
+A total of 76 Parkinson’s disease-FOG of 776 Parkinson’s disease patients were included after strictly screening the inclusion and exclusion criteria (Supplementary Fig. 1). The detailed characteristics are shown in Supplementary Table 1 and summarized in Table 1 (37 females, average age at surgery = 62.40 ± 8.66 years, 49 PINS-L301 and 27 Medtronic-3389). The average follow-up time was 12.14 ± 7.03 months. The %FOG-Q has no correlation with follow-up time (Spearman R = 0.2, P = 0.088). The pulse width, frequency and amplitude were not significantly different between right-side and left-side hemispheres (67.63 ± 11.30 versus 70.00 ± 11.43 μs, P = 0.602; 131.34 ± 21.24 versus 130.88 ± 19.86 Hz, P = 0.204; 2.36 ± 0.56 versus 2.41 ± 0.52 V, P = 0.926). According to the UPDRS-III, motor symptoms significantly improved (medication-off: 51.05 ± 19.75 to 22.8 ± 13.42, P < 0.001; medication-on: 22.32 ± 13.85 to 11.06 ± 6.82, P < 0.001). Pre-operative LEDD was 941.41 ± 372.74 mg as compared to post-operative 629.53 ± 252.3 mg (P < 0.001). Although the average FOG-Q at baseline was 16.89 ± 5.46 and significantly decreased to 10.05 ± 7.16 at follow-up (P < 0.001), the patient-specific changes were diverse among individuals. The average %FOG-Q change from baseline to follow-up was 37.93 ± 42.61% (42 patients were classified as alleviation, 22 patients as a minor change and 12 patients as deterioration; 18 patients in the alleviation group were further classified into the FOG-disappearance group). There was no significant difference in therapeutic stimulation parameters and pre-operative characteristics (specifically, sex, disease duration, pre-operative FOG-Q, pre-operative MMSE and pre-operative MoCA; Supplementary Table 2), which greatly minimizes the heterogeneity and bias among groups. The individual changes and overall trends are displayed in Fig. 2.
+
+[table-wrap fcad238-T1] Demographical features, stimulation parameters and clinical assessments of Parkinson’s disease patients with FOG
+
+[fig fcad238-F2] Effects of high-frequency STN-DBS on FOG. (A) The FOG-Q scores at baseline (blue) and follow-up (salmon). The line charts illustrate individual FOG-Q changes: salmon = FOG alleviation (FOG-Q score drops by >30%), blue = FOG deterioration (FOG-Q score increases), grey = minor change (FOG-Q score drops by <30%), and the violin plots represent overall trends (P < 0.001). (B) Among 76 FOG patients after STN-DBS, the FOG symptoms of 42 patients were alleviated (salmon), 22 patients had minor changes and 12 patients deteriorated. *The FOG symptoms of 18 patients completely disappeared after DBS.
+
+### Electrode localization and volume of tissue activated modelling
+
+Lead electrodes were reconstructed and localized in MNI space, and the activated contacts are shown in a 7 T 100-μm T1 MRI scan from the anterior view (Fig. 3A). By locating activated contacts as the centre, individual VTA models were calculated based on therapeutic stimulation parameters. Most of the activated contacts and calculated VTAs are inside or around the STN. Detailed coordinates of activated contacts are shown in Supplementary Table 3.
+
+[fig fcad238-F3] Sweet and sour stimulation contacts and VTAs. (A) The position of activated contacts and its relative spatial position with the STN and subregions in a 7 T 100-μm T1 MRI scan from the anterior view. (B) Negative correlation between the VTA and limbic STN overlap in the right hemisphere and %FOG-Q changes (n = 76; Spearman R = −0.27; P = 0.011); 95% confidence intervals are represented in shading areas. Three-dimensional coordinates of activated contacts in the right (C–E) and left (F–H) hemisphere among different groups. x, y and z coordinates represent mediolateral, anteroposterior and dorsoventral axes, respectively. Salmon dots = FOG alleviation (n = 42), grey dots = FOG minor change (n = 22), blue = FOG deterioration (n = 12), *significant difference.
+
+### Sweet and sour stimulation sites
+
+#### Coordinate-level analysis
+
+Larger x and z coordinates in the right-side hemisphere in the MNI space were shown to be significantly related to a greater %FOG-Q change (Spearman R = 0.27, P = 0.020 and Spearman R = 0.32, P = 0.005; Supplementary Table 4). Contrastingly, there are obvious differences in the activated contacts in the right-side STN between the alleviation and deterioration groups (Fig. 3C–H). Specifically, most active contacts were located at the dorsolateral two-thirds of the right STN in the FOG-alleviation group, but in the ventrocentral portion of the right STN in the FOG-deterioration group (x coordinates: 12.96 ± 1.31 versus 12.18 ± 1.22, P = 0.045; z coordinates: −5.81 ± 1.72 versus −7.35 ± 2.02, P = 0.015; the difference of z coordinates was still significant after Bonferroni correction; Fig. 3C and E). Eighteen patients in the alleviation group were further classified into the FOG-disappearance group. A similar outcome was generated showing that stimulation at the dorsolateral two-thirds of the right STN could lead to FOG disappearance (P = 0.011; Supplementary Fig. 2).
+
+#### Volume of tissue activated-level analysis
+
+Greater VTA and limbic STN overlap in the right hemisphere was shown to be significantly related to a worse deterioration of FOG symptom (Spearman R = −0.27, P = 0.003, still significant after Bonferroni correction; Fig. 3B), but in contrast to left hemisphere (Supplementary Fig. 3A). Moreover, the overlaps between VTA and the whole STN/sensorimotor STN/associative STN did not predict the %FOG-Q changes (Supplementary Fig. 3B–D).
+
+#### Mapping-level analysis
+
+PSM and its relative position with surrounding anatomic structures are shown in Fig. 4A–D. Voxels at the dorsolateral two-thirds of the bilateral STN were positively associated with the %FOG-Q change, whereas the ventrocentral portion of the right STN and the internal capsule surrounding the central STN in the left hemisphere were negatively correlated with the %FOG-Q change. The values of positive and negative voxels ranged from −2.94 to 2.30. The centroids of sweet and sour spots were located at (13.7, −11.6, −4.7) and (11.7, −13.8, −8.9) in the right hemisphere (Fig. 4E), respectively, and at (−12.1, −12.6, −5.4) and (−12.7, −11.0, −5.9) in the left hemisphere (Supplementary Fig. 4), respectively. The results of PSM analysis were validated in a LOOCV design (n = 76, Spearman R = 0.29, P = 0.002; Fig. 4F). It remains significant even after adjusting for cohort in a combined GLM and including sex, disease duration, pre-op MoCA, pre-op HAM-A/HAM-D, LEDD decrease and UPDRS-III percent change as covariates (Spearman R = 0.25, P = 0.009).
+
+[fig fcad238-F4] Schematic diagram of PSM. Sweet and sour spots and surrounding anatomic structures (pink regions) are shown in the axial (A), sagittal (B), coronal (C) and render (D) views. Hotter colours represent higher positive correlations, and colder colours represent the opposite. (E) The centroids of sweet and sour spots in the right hemisphere (salmon dot = centroids of sweet spots, blue dot = centroids of sour spots) and their relative spatial position with the STN and subregions. (F) Results of PSM analysis were validated in a LOOCV design (n = 76, Spearman R = 0.25; P = 0.009); 95% confidence intervals are represented by shading areas.
+
+### Structural connectivity outcomes
+
+Structural connectivity network results seeding from bilateral VTAs across all patients are shown in Fig. 5. The %FOG-Q changes were positively correlated with fibre tracts connecting the VTAs in the STN to the supplementary motor area and pre-SMA but negatively correlated with fibre tracts to the medial and ventrolateral prefrontal cortices (mPFC and vlPFC; Fig. 5A–C). Many positive tracts extend to the MLR/PPN (Fig. 5D). The spatial positions with STN of positive pathways were mainly crossing through the dorsolateral two-thirds of the bilateral STN, while negative pathways most crossed through the ventrocentral STN and the internal capsule surrounding the central STN (Fig. 5E). The T-values of the positive and negative tracts ranged from −5.75 to 4.81. Moreover, the LOOCV design validates this structural connectivity model (Spearman R = 0.29, P = 0.003; Fig. 5F). It remains significant after including covariates (Spearman R = 0.25, P = 0.007). To determine a more sensitive connectivity pattern, patient-specific connectivity tracts of 18 FOG-disappearance patients and 12 FOG-deterioration patients were compared (Fig. 6). In agreement with the results of the structural connectivity model, more STN–SMA/pre-SMA tracts were stimulated in the FOG-disappearance patients, whereas more STN-PFC tracts were stimulated in FOG-deterioration patients.
+
+[fig fcad238-F5] The predictive structural connectivity network model. Discriminative fibre tracts of positivity and negativity associated with the %FOG-Q changes are displayed from the sagittal (A), coronal (B) and axial (C) views. The top 30% predictive tracts are displayed. Tracts in white-to-red scale represent the T-values for the positive association between selected tracts and the FOG percent change, whereas the tracts in white-to-blue represent the T-values for the negative association. Tracts cross from the VTAs in the STN to the SMA/pre-SMA were positively associated with the %FOG-Q changes, and tracts connecting the VTAs in the STN to the PFC were negatively associated with the %FOG-Q changes. (D) Many positive tracts extend to the MLR, in particular the PPN. (E) The spatial positions with the STN of positive pathways are mainly crossing through the upper dorsal and centromedial portion of the STN, while negative pathways are most crossing though or surrounding the lower ventral and centromedial of STN. (F) Results from this analysis were validated in a LOOCV design (n = 76, Spearman R = 0.29; P = 0.003); 95% confidence intervals are represented by shaded areas.
+
+[fig fcad238-F6] Comparative analysis of activated contacts and structural connectivity patterns between 18 FOG-disappeared patients and top 12 FOG-deteriorated patients. FOG-disappeared patients stimulated more STN–SMA/pre-SMA fibres, whereas FOG-alleviated patients stimulated more STN-PFC fibres.
+
+### Functional connectivity outcomes
+
+A profile of global functional connectivity was modelled across all included patients. The functional connectivity to the SMA/pre-SMA, motor cortex, basal ganglia, MLR, dorsal anterior cingulate cortex (dACC) and occipital regions was significantly correlated to FOG alleviation, but the connectivity to prefrontal regions, cerebellum and ventral anterior cingulate cortex (vACC) was significantly associated with FOG deterioration (Fig. 7). Although the functional network had a predictive trend, the model failed in the LOOCV analysis (Spearman R = 0.15, P = 0.098; Supplementary Fig. 5). Similar outcome was generated after including sex, disease duration, pre-op MoCA, pre-op HAM-A/HAM-D, LEDD reduction and UPDRS-III percent change as covariates (Spearman R = 0.14, P = 0.114).
+
+[fig fcad238-F7] Functional connectivity network results. Hot colours represent high positive correlations, and cold colours represent negative correlations with the %FOG-Q changes. The connectivity to SMA/pre-SMA, motor cortex, basal ganglia, MLR and occipital regions is strongly correlated with FOG alleviation, but connectivity to the prefrontal regions, cerebellum and cingulate gyrus is correlating with FOG deterioration.
+
+## Discussion
+
+A post hoc analysis of 76 Parkinson’s disease patients was performed to explore the optimal stimulation sites and connectivity network of STN-DBS treating FOG. Two main conclusions are drawn from these analyses. The dorsolateral two-thirds of the STN were considered the optimal stimulation region, whereas the ventrocentral portion of the right STN and internal capsule surrounding the left central STN were considered the sour stimulation regions. The fibre tracts connecting the supplementary motor area and pre-SMA to the dorsolateral two-thirds of the STN are recognized as the optimal bundle, while the tracts connecting mPFC and vlPFC to the ventrocentral portion of the STN and internal capsule surrounding the central STN are recognized as the sour bundle. Function connectivity results add that dACC and occipital regions may relate to alleviation, whereas the cerebellum and vACC may associate with deterioration. All of our results indicated that a broad and complex brain network was modulated during the treatment of FOG with STN-DBS.
+
+### Specific subthalamic subregions are responsible for effective freezing of gait treatment and show bilateral asymmetry
+
+During the process of making the pre-operative schedule, identifying the focally optimal stimulation region for specific individuals is of great importance. This pre-defined target should meet the purpose of balancing the efficacy of patients’ clinical symptoms and avoiding side effects. For motor symptoms, mainly including tremor and rigidity, the dorsolateral STN has been acknowledged as the optimal site. Severe side effects of emotional or cognitive decline, however, would occur if the electrode or stimulation regions extend out of the dorsolateral STN to the ventral or medial STN.27 Thus, the clinical use of STN-DBS for FOG will be encouraged by identifying the effective and aggravating regions of the STN for FOG-DBS treatment.
+
+The association of FOG severity alleviation and the dorsolateral two-thirds of the STN is not surprising given that previous studies have mentioned the optimal targets of STN-DBS on FOG from the perspective of clinical experience. Fleury et al.28 proposed that deteriorating stimulation sites were mostly dorsal and anterior to the STN in the anterior zona incerta and Forel fields H2. Khoo et al.29 reported that the optimal stimulation sites of high- and low-frequency stimulations (HFS and LFS) are different, and the optimal regions of HFS are more lateral compared to LFS. In many electrophysiologic, imageologic and anatomic studies exploring the somatotopic organization of the STN, the lower limb-related neurons have been shown to be located at the ventrocentral portion of the dorsolateral two-thirds of the STN.30–34 The sweet spot and its centroid generated in our analysis overlapped with the leg region in the SMA and sensorimotor STN defined by Rodriguez-Rojas et al.34 Therefore, the local stimulation on the leg motor-related regions of the STN may influence leg functions, especially FOG in Parkinson’s disease patients. The ventrocentral portion of the STN overlaps mostly with the limbic STN and partly with the associative STN.22,34 The stimulation on the sour sites may add extra influences on patients’ cognition and emotion, which are also related to FOG in Parkinson’s disease patients.
+
+Our results also observed differences in correlation between stimulation location and FOG efficacy, with significant results only for the right hemisphere. This finding can be explained by the differing volumes of the left and right STN subregions, with the left sensorimotor STN subregion being a large volume. As a result, the possibility of stimulation on the right limbic and associative STN subregions is higher.10 Another assumption is that the right-side STN is dominant in postural control and FOG, but the results of previous studies are still contradictory. The right-side STN has been described as the locus of inhibitory control, together with the associated SMA/pre-SMA, prefrontal cortex and locomotor areas.35 And, the right-side STN stimulation has been reported by many studies that achieved similar results as bilateral stimulation.36,37 However, Lizárraga et al.38 recently proposed that FOG-Q and axial motor signs are greatly associated with the left STN-DBS amplitude other than the right STN-DBS. No difference in post-operative FOG severity after the right and left STN-DBS has also been reported by other studies.10,39 Therefore, we cannot arbitrarily conclude that the right STN is a dominant DBS target for FOG. More convincing evidence should be collected to determine the potential mechanism underlying this asymmetric phenomenon.
+
+### A broad and complex brain network that includes the motor, affective and cognitive portions was modulated, thus generating positive and negative effects
+
+In addition to local effects, different stimulation sites also lead the diffused current towards different fibre tracts and brain pathways, modulating different networks and producing global effects on the entire brain.40 In our analysis, tracts connecting the SMA/pre-SMA to the dorsolateral two-thirds of the STN are responsible for FOG alleviation, while the tracts connecting the medial and ventrolateral prefrontal cortices to the ventrocentral portion of the STN and internal capsule surrounding the central STN accounted for FOG deterioration. Many positive tracts extend to the MLR/PPN. The SMA/pre-SMA, STN and MLR/PPN have been reported to have important roles during FOG occurrence and treatment.11,13,41–43 A set of regions of the PFC also participate in FOG occurrence and treatment.3,10,28,44
+
+Using diffusing technology, the connectivity between the SMA/pre-SMA-STN-MLR/PPN pathways has been found to be significantly decreased among Parkinson’s disease-FOG patients.37,42 The initiation of walking and occurrence of FOG has been proposed to be greatly associated with this pathway.45–47 Functional MRI, PET and other cerebral imaging studies further proved this weakened connection during FOG occurrence and discovered enhanced connectivity in alleviation patients benefited from STN-DBS.13,31,48–50 Among studies processing walking and gait tasks, the same conclusions were reported.51 The increased connectivity between the STN and SMA/pre-SMA, as well as MLR/PPN, was considered to be the core mechanism of STN-DBS improving FOG in Parkinson’s disease patients. HFS on the STN has recently been proposed to selectively evoke glutamatergic but not GABAergic afferent synaptic depression.52 Therefore, the stimulation generates activating signals and anti-dromically activates the hyper-direct pathway,53,54 followed by activation of the SMA and generating an action-initiating signal. Through indirect and related pathways, this active signal sequentially inhibits gamma-aminobutyric acid (GABA) of the pallidum to the MLR, feedback to the STN, and activating the MLR/PPN. The anti-dromic activation of the SMA and hyper-direct pathway can also reduce the inhibition of the thalamus, promoting the output of walking and other motor actions to MLR/PPN.55 Many non-invasive stimulation studies also generated similar conclusions after local stimulations over SMA/pre-SMA and other motor cortex.56–58 In addition to activation effects, STN-DBS may also inhibit a feedback signal of noises that may exist throughout the entire cortex-basal-ganglia-thalamus-cortex feedback loop, restoring the pathologic brain networks towards more physiological conditions.59 Except for the results consistent with the fibre-filtering results, the functional connectivity added several new regions that have been reported to be associated with FOG in previous studies in which the motor cortex, dACC and occipital regions may be related to the alleviation. Activation of the dACC may play a significant role in the anti-dromic activation of the hyper-direct pathway, and occipital regions are important for visual networking. It has also been reported that the increased connectivity between the visual, motor and attention networks contribute to the alleviation of FOG.44,60–62
+
+Although many studies only focused on the motor mechanism underlying FOG in isolation, recent evidence has proposed that FOG is also correlated with impairments throughout cognitive and affective networks.63 According to a widely accepted hypothesis, accumulating affective, cognitive and motor information results in an unresolvable response conflict, leading to the occurrence of FOG.64 We found that fibre tracts connecting the medial and ventrolateral prefrontal cortices to the ventrocentral portion of the STN and the internal capsule surrounding the central STN contributed to deterioration of the FOG. It was proposed that the coupling between the cognitive and affective networks was greatly correlated with ‘worse freezing severity’.3 Connectivity from the ventral STN to the prefrontal cortex was recently reported to be greatly associated with cognitive decline and mood change after STN-DBS or lesion.34,65,66 The bandwidth model we recently proposed supported the above opinions.12 According to this hypothesis, cognitive and motor functions compete for the information-processing resources in the motor cortex during walking. STN-DBS improves FOG by both reducing motor impairments and enhancing the overall cortical information-processing capabilities, which enables normal cognitive functioning. Stimulation over connectivity fibres between the STN and prefrontal cortex may improve decoupling between the cognitive and limbic networks, increasing cognitive and emotional load and leading to a higher possibility of FOG occurrence.
+
+### Individualized deep brain stimulation treatment with directional leads is optimal for freezing of gait
+
+The pre-operative schedule, operative process and post-operative programme are important steps for DBS treatment. For Parkinson’s disease patients with severe FOG symptom, electrode paths and activated contacts are recommended to cross or near the dorsolateral two-thirds of the STN in the pre-operative MRI, to stimulate sweet fibre tracts and avoid sour tracts. With the increase in stimulation amplitude and VTAs, the possibility of simulating sore sites and fibre tracts was increased due to the ring-shaped design of conventional contacts. Segmented contacts on directional leads provide current steering to particular regions for more spatially limited stimulation.67 To improve stimulation efficacy and reduce side effects, directional leads may be the optimal choice for individualized DBS treatment on Parkinson’s disease -FOG patients in the future.
+
+### Limitations
+
+A post hoc analysis including a set of 76 Parkinson’s disease patients was presented to determine the optimal stimulation sites and networks of STN-DBS treating FOG, but several limitations exist in this study.
+
+First, to exclude the effect of stimulation frequency, we only included Parkinson’s disease patients with FOG whose stimulation frequency was ≥90 Hz. Many patients with low-quality imaging scans were also excluded to reach the most accurate reconstruction of DBS electrodes. Hence, only 76 of 776 patients were left.
+
+Second, the FOG-Q scale was used as the primary tool to assess the freezing severity of included patients. Though FOG-Q has been considered as a reliable tool for assessing FOG, it cannot distinguish freezing as a result of incompatible physical, cognitive or emotional processes.68 Task-based gait testing would be a wonderful assessment way with a controlled design in the following studies.12
+
+Third, asymmetric effects of bilateral STN-DBS, which were reported in previous studies, were also observed in this analysis.10 However, because each patient had just one stimulation setting, it was difficult to determine if the asymmetric findings were due to stimulation target asymmetry, anatomic asymmetry, hemisphere-dominant effects or even an unidentified mechanism. More experiments are needed to explain the asymmetric phenomenon.
+
+Lastly, normative connectomes based on the PPMI dataset were used to process the network-level analysis, which has been proven to be a novel and great method to explore DBS treatment-related networks on the group level.18,26 Individual changes in patients, however, were not identified in this method. In the following studies, patient-specific diffusion scans and fMRI scans should be collected to explore the network changes at the individual level.
+
+## Supplementary Material
+
+## Acknowledgements
+
+We thank all participated patients and their families. We also thank Prof. Andreas Horn, Ningfei Li, Till A. Dembek and Juan CarlosBaldermann for their patient answers and directions in the Slack channel (‘leadusers’) and emails.
+
+## Contributor Information
+
+Houyou Fan, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Zijian Guo, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+School of Biomedical Engineering, Capital Medical University, 100069 Beijing, China.
+
+Yin Jiang, 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China; 
+Beijing Key Laboratory of Neurostimulation, 100070 Beijing, China.
+
+Tao Xue, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Zixiao Yin, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Hutao Xie, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Yu Diao, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Tianqi Hu, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Baotian Zhao, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China; 
+Beijing Key Laboratory of Neurostimulation, 100070 Beijing, China.
+
+Delong Wu, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Qi An, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Yichen Xu, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Yuan Gao, 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China; 
+Beijing Key Laboratory of Neurostimulation, 100070 Beijing, China.
+
+Yutong Bai, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China.
+
+Jianguo Zhang, 
+Department of Neurosurgery, Beijing Tiantan Hospital, Capital Medical University, 100070  Beijing, China; 
+Department of Functional Neurosurgery, Beijing Neurosurgical Institute, Capital Medical University, 100070 Beijing, China; 
+Beijing Key Laboratory of Neurostimulation, 100070 Beijing, China.
+
+## Supplementary material
+
+Supplementary material is available at Brain Communications online.
+
+## Funding
+
+This work was supported by the National Natural Science Foundation of China (grant numbers: 81830033 and 81870888).
+
+## Competing interests
+
+The authors report no competing interests.
+
+## Data availability
+
+All data relevant to clinical and research information of the datasets used in this study are included in the manuscript. Supplementary materials containing individual data and active contacts’ locations are made freely available within the Open Science Framework (DOI: 10.17605/OSF.IO/2KT3). Data can be made available to qualified researchers upon reasonable request and subject to a suitable data-transfer agreement being reached.
+
+## References
+
+## Associated Data
+
+### Supplementary Materials
+
+### Data Availability Statement
+
+All data relevant to clinical and research information of the datasets used in this study are included in the manuscript. Supplementary materials containing individual data and active contacts’ locations are made freely available within the Open Science Framework (DOI: 10.17605/OSF.IO/2KT3). Data can be made available to qualified researchers upon reasonable request and subject to a suitable data-transfer agreement being reached.

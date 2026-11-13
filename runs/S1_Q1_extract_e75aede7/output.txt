@@ -1,0 +1,69 @@
+<escape>{
+  "evidence": [
+    {
+      "pid": "PMID:40496972",
+      "design": "单中心回顾性队列研究；LASSO-logistic回归临床预测模型",
+      "population": "确诊原发性帕金森病、术前存在冻结步态并接受双侧STN-DBS的患者",
+      "n": "104；训练集68例（改善58例，未改善10例），验证集36例（改善31例，未改善5例）",
+      "condition": "术前为Med-off状态，MDS-UPDRS III第11项冻结步态评分≥1；术后1年在Stim-on/Med-off状态评估。以术前Med-off与术后Stim-on/Med-off状态下MDS-UPDRS III第11项评分差值≥1定义为改善。",
+      "measure": "MDS-UPDRS III第11项冻结步态评分；双侧STN-DBS术后临床疗效。",
+      "finding": "训练集中58/68例、验证集中31/36例达到预设的FOG改善标准。研究报告双侧STN-DBS术后1年多数患者达到临床定义的FOG改善。该结果提供了STN干预与FOG变化之间的临床证据，但没有直接测量STN神经活动。",
+      "effect": "改善组：训练集58/68，验证集31/36；改善判定阈值为MDS-UPDRS III第11项评分差值≥1。未报告无刺激对照组或具体的神经活动变化效应量。",
+      "limitations": "作者承认研究为回顾性设计，部分临床指标因缺失值被剔除，可能产生选择偏倚；研究为单中心、小样本研究；随访仅1年，长期疗效尚不明确；队列中左旋多巴反应性冻结步态患者比例较高，外推需谨慎。方法学问题：研究没有记录或分析STN单神经元放电、局部场电位或其他STN电生理活动，也没有无刺激对照，因此不能据此判断特定STN神经活动与FOG之间的关系。",
+      "quote": "Scores with differences of ≥1 and <1 were categorized as the improved and non-improved groups, respectively.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40496972",
+      "design": "单中心回顾性队列研究；LASSO-logistic多变量预测模型",
+      "population": "接受双侧STN-DBS的PD伴FOG患者；训练集中的改善组与未改善组",
+      "n": "训练集68例：改善组58例，未改善组10例",
+      "condition": "术前Med-off状态评估下肢强直；术后1年在Stim-on/Med-off状态评估FOG改善情况。比较术前下肢强直评分，并进一步进行多变量logistic回归。",
+      "measure": "术前下肢强直评分；MDS-UPDRS III第11项定义的术后FOG改善情况。",
+      "finding": "术前下肢强直程度较高与术后FOG改善较差相关。改善组术前下肢强直评分低于未改善组；多变量logistic回归进一步将下肢强直确定为术后FOG改善的独立预测因子。作者认为术前较严重的下肢强直可能提示STN-DBS术后FOG改善受限。",
+      "effect": "未改善组下肢强直评分为2.5（2.375–3），改善组为2（1.5–2.5），组间差异p=0.025；多变量logistic回归系数β=-1.726，p=0.028。",
+      "limitations": "作者承认研究为回顾性、单中心研究，样本量有限，且随访仅1年。训练集未改善组仅10例，验证集未改善组仅5例，可能影响预测模型稳定性。研究测量的是临床强直评分而非STN神经活动，不能将强直与FOG的关联直接解释为STN放电或振荡机制。",
+      "quote": "the higher the preoperative leg rigidity score, the worse the postoperative FOG symptom improvement",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40496972",
+      "design": "单中心回顾性队列研究；LASSO-logistic多变量预测模型",
+      "population": "接受双侧STN-DBS的PD伴FOG患者；训练集中的改善组与未改善组",
+      "n": "训练集68例：改善组58例，未改善组10例",
+      "condition": "术前临床评估MDS-UPDRS II；术后1年在Stim-on/Med-off状态，根据MDS-UPDRS III第11项评分变化判断FOG改善。分析包括组间比较及多变量logistic回归。",
+      "measure": "术前MDS-UPDRS II日常生活活动能力评分；术后FOG改善情况。",
+      "finding": "多变量logistic回归显示，术前MDS-UPDRS II评分是术后FOG改善的最强影响因素，回归系数为正，提示较高的术前评分与更大的术后FOG改善概率相关。但组间单变量比较未达到统计学显著性，说明该关联依赖于多变量模型分析。",
+      "effect": "多变量logistic回归β=0.159，p=0.026；改善组与未改善组的单变量比较p=0.056，未达到统计学显著性。",
+      "limitations": "单变量比较与多变量回归结果存在统计学差异，提示结果可能受到其他临床变量调整的影响。训练集未改善组仅10例，模型估计可能不稳定。作者承认回顾性设计、单中心样本量小和短期随访等局限。此外，该指标是临床日常生活能力评分，并非STN神经活动测量。",
+      "quote": "the multivariate logistic regression analysis revealed that the MDS-UPDRS II score was the strongest influencing factor (p = 0.026 < 0.05).",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40496972",
+      "design": "单中心回顾性队列研究；LASSO-logistic多变量预测模型",
+      "population": "接受双侧STN-DBS的PD伴FOG患者",
+      "n": "104例；模型训练集68例，验证集36例",
+      "condition": "术前评估MDS-UPDRS IV，术后1年在Stim-on/Med-off状态评估FOG改善；使用LASSO筛选变量并建立多变量logistic回归模型。",
+      "measure": "术前MDS-UPDRS IV评分，包括左旋多巴诱发的运动障碍、开关现象波动及其他药物治疗并发症；术后FOG改善情况。",
+      "finding": "MDS-UPDRS IV被筛选为FOG术后改善的预测变量，模型回归系数为正。作者报告，术前MDS-UPDRS IV评分较高与术后FOG改善较大相关，并认为左旋多巴治疗反应较好的患者可能具有更好的术后FOG改善。",
+      "effect": "logistic回归模型系数β=0.030。正文未提供该变量独立的回归显著性检验结果。",
+      "limitations": "该结果来自临床预测模型，不能直接证明左旋多巴反应性与STN神经活动之间的关系。作者承认队列中左旋多巴反应性冻结步态患者占比较高，结果外推需要谨慎；研究为回顾性单中心设计，随访仅1年。正文未提供该预测变量独立的显著性检验结果。",
+      "quote": "This study revealed that a higher preoperative UPDRS IV score was associated with greater improvement in postoperative FOG symptoms.",
+      "basis": "fulltext"
+    },
+    {
+      "pid": "PMID:40496972",
+      "design": "单中心回顾性队列研究；LASSO-logistic多变量预测模型",
+      "population": "接受双侧STN-DBS的PD伴FOG患者",
+      "n": "104例；模型训练集68例，验证集36例",
+      "condition": "术前进行MoCA和MMSE认知评估；术后1年在Stim-on/Med-off状态评估FOG改善；通过LASSO筛选和多变量logistic回归分析预测因素。",
+      "measure": "术前MoCA、MMSE认知评分；术后MDS-UPDRS III第11项FOG改善情况。",
+      "finding": "MoCA和MMSE均被筛选为术后FOG改善的预测变量，模型系数均为正。作者报告术前认知评分越高，术后FOG改善越明显，并提出术前认知功能较差的患者可能出现较有限的FOG改善。",
+      "effect": "MoCA模型系数β=0.121；MMSE模型系数β=0.036。正文未提供这两个变量各自独立的显著性检验结果。",
+      "limitations": "作者承认研究为回顾性、单中心研究，样本量有限，随访时间仅1年。研究没有直接测量认知相关神经网络或STN电生理活动，因此不能据此推断认知功能与STN神经活动之间的具体机制。模型系数不能单独证明认知功能改善会导致FOG改善。",
+      "quote": "This study revealed that the higher the preoperative cognitive score, the greater the postoperative FOG improvement.",
+      "basis": "fulltext"
+    }
+  ]
+}</escape>
