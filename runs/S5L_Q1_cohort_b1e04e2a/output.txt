@@ -1,0 +1,108 @@
+<escape>{
+  "papers": [
+    {
+      "pid": "PMID:25932301",
+      "kind": "primary_patient",
+      "n_patients": 1,
+      "center": "北京天坛医院（Beijing Tiantan Hospital），北京，中国【turn929355search0】",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:35310098",
+      "kind": "primary_patient",
+      "n_patients": 8,
+      "center": "北京天坛医院（Beijing Tiantan Hospital），北京，中国【turn111506search2】",
+      "recruitment": "2019年1月至2020年6月【turn755055search5】"
+    },
+    {
+      "pid": "PMID:28479586",
+      "kind": "primary_patient",
+      "n_patients": 42,
+      "center": "Asan Medical Center，首尔，韩国【turn755055search1】",
+      "recruitment": "2002年4月至2014年5月【turn755055search1】"
+    },
+    {
+      "pid": "PMID:32498496",
+      "kind": "primary_patient",
+      "n_patients": 49,
+      "center": "Asan Medical Center，首尔，韩国【turn379405view1】",
+      "recruitment": "2005年至2010年【turn923388view0】"
+    },
+    {
+      "pid": "PMID:28830666",
+      "kind": "primary_patient",
+      "n_patients": 112,
+      "center": "Seoul National University Movement Disorder Center，首尔，韩国【turn682935search0】",
+      "recruitment": "2005年3月7日至2016年12月31日【turn682935search0】"
+    },
+    {
+      "pid": "PMID:30641837",
+      "kind": "primary_patient",
+      "n_patients": 52,
+      "center": "Seoul National University Hospital，首尔，韩国【turn111506search1】",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:28910619",
+      "kind": "primary_animal",
+      "n_patients": null,
+      "center": "Northwestern University，Chicago，美国【turn929355search8】",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:39068661",
+      "kind": "primary_animal",
+      "n_patients": null,
+      "center": "Northwestern University，Chicago，美国【turn929355search3】",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:29503606",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:41594737",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:30035024",
+      "kind": "primary_patient",
+      "n_patients": 10,
+      "center": "Ludwig-Maximilians-Universität München（慕尼黑大学），Munich，德国【turn949846view2】",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:36893498",
+      "kind": "primary_patient",
+      "n_patients": 5,
+      "center": "Ludwig-Maximilians-Universität München（慕尼黑大学），Munich，德国【turn111506search5】",
+      "recruitment": ""
+    }
+  ],
+  "relations": [
+    {
+      "a": "PMID:28479586",
+      "b": "PMID:32498496",
+      "relation": "unknown",
+      "basis": "两篇研究均来自Asan Medical Center，手术时间窗存在重叠。2017年论文从该中心2002年4月至2014年5月接受DBS的147例患者中选取14例GPi-DBS和28例STN-DBS患者进行分析；2020年论文则分析该中心2005年至2010年连续纳入的49例STN-DBS患者。两者的来源总体及手术时间窗存在交集，可能有患者重叠，但尚无患者名单或论文自述能够确认实际分析的42例与49例之间的交集，因此暂定unknown。【turn755055search1】【turn923388view0】"
+    },
+    {
+      "a": "PMID:28830666",
+      "b": "PMID:30641837",
+      "relation": "unknown",
+      "basis": "两篇论文具有高度重合的核心作者团队，均研究Seoul National University相关DBS患者的STN-DBS与FOG结局。2017年论文明确说明患者数据来自自2005年3月7日起建立的前瞻性评估方案，纳入112例具有术前及术后12个月资料的患者；2019年论文则从前瞻性登记数据库中选取52例进行5年或7年长期FOG随访。两项研究的中心、研究团队、疾病、干预及FOG评价高度一致，52例可能是较大数据库中的长期随访子集，但现有资料没有明确说明两篇论文的患者名单是否重叠，故标记为unknown，而不直接认定same_cohort。【turn682935search0】【turn949846view1】【turn111506search1】"
+    },
+    {
+      "a": "PMID:30035024",
+      "b": "PMID:36893498",
+      "relation": "unknown",
+      "basis": "两篇研究均由Franz Hell、Jan H. Mehrkens和Kai Bötzel参与，研究中心均为慕尼黑大学，均涉及STN局部场电位及Activa PC+S记录设备。2018年论文报告10名患者的步行相关STN-LFP记录；2023年论文报告15名参与者，其中仅6名具有可用于LFP记录的Activa PC+S设备，排除1名伪迹严重者后，实际分析5名患者。研究团队、中心、设备及研究主题相近，存在部分患者重复使用的可能，但没有患者编号、基线特征交叉核对或明确的队列说明，不能确认实际重叠，故标记为unknown。【turn949846view2】【turn284398search3】"
+    }
+  ]
+}</escape>

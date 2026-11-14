@@ -1,0 +1,138 @@
+<escape>{
+  "papers": [
+    {
+      "pid": "PMID:22696586",
+      "kind": "primary_patient",
+      "n_patients": 2,
+      "center": "University of Chicago Medical Center, Chicago, USA",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:25540305",
+      "kind": "primary_patient",
+      "n_patients": 7,
+      "center": "University of Chicago Medicine, Chicago, USA",
+      "recruitment": "2013-08至2014-06"
+    },
+    {
+      "pid": "PMID:28529730",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:29654112",
+      "kind": "primary_patient",
+      "n_patients": 11,
+      "center": "University of Chicago Medical Center, Chicago, USA",
+      "recruitment": "2015-08-15至2017-03-15"
+    },
+    {
+      "pid": "PMID:29236966",
+      "kind": "primary_patient",
+      "n_patients": 22,
+      "center": "Toronto Western Hospital, University Health Network, Toronto, Canada",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:31179534",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:36018837",
+      "kind": "primary_patient",
+      "n_patients": 19,
+      "center": "Krembil Brain Institute, University Health Network, Toronto, Canada",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:38135193",
+      "kind": "primary_patient",
+      "n_patients": 24,
+      "center": "Toronto Western Hospital, University Health Network, Toronto, Canada",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:30637270",
+      "kind": "primary_patient",
+      "n_patients": 4,
+      "center": "Tsinghua University Yuquan Hospital, Beijing, China",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:31856908",
+      "kind": "other",
+      "n_patients": null,
+      "center": "中国多中心：北京天坛医院、大连医科大学附属第一医院、南京脑科医院、唐都医院、齐鲁医院、北京协和医院、中国人民解放军总医院、深圳市第二人民医院、上海长海医院、复旦大学附属华山医院、浙江大学医学院附属邵逸夫医院",
+      "recruitment": "计划2017-08至2019-12"
+    },
+    {
+      "pid": "PMID:38948151",
+      "kind": "primary_patient",
+      "n_patients": 28,
+      "center": "Tsinghua University Yuquan Hospital, Beijing, China",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:42211297",
+      "kind": "primary_patient",
+      "n_patients": 134,
+      "center": "The Affiliated Hospital of Xuzhou Medical University, Xuzhou, China",
+      "recruitment": "2018-09至2023-02"
+    }
+  ],
+  "relations": [
+    {
+      "a": "PMID:22696586",
+      "b": "PMID:25540305",
+      "relation": "unknown",
+      "basis": "两篇均来自University of Chicago的Xie/Kang团队，研究STN-DBS频率与FOG的关系。2012年为新植入DBS后即刻出现FOG的2例，2015年为长期DBS后药物难治性FOG的7例。2015年论文引用了2012年病例报告，但没有明确说明7例是否包含此前的2例。两项研究的入选情境不同，不能认定为同一队列，但存在潜在患者重叠可能。"
+    },
+    {
+      "a": "PMID:25540305",
+      "b": "PMID:29654112",
+      "relation": "partial_overlap",
+      "basis": "有直接证据。NCT02549859研究方案明确说明2018年长期研究是2015年研究（IRB 13-0566，NCT01935011）的延伸。2015年研究的7例中，有6例在研究结束后继续接受60Hz刺激，并计划在长期研究中重新评估；长期研究同时计划增加新患者。2018年论文报告11例入组、10例完成长期随访。因此两篇论文至少有6名患者重叠，属于部分重叠而非完全独立队列。"
+    },
+    {
+      "a": "PMID:22696586",
+      "b": "PMID:29654112",
+      "relation": "unknown",
+      "basis": "2018年研究明确部分延续了2015年研究，而2015年研究又引用了2012年的2例病例报告。三篇均属于University of Chicago同一STN低频刺激研究团队。若2012年的病例属于2015年的7例，则可能进一步进入2018年的长期随访队列；但没有患者编号或论文自述证实这一点，因此只能标记为间接的潜在重叠。"
+    },
+    {
+      "a": "PMID:29236966",
+      "b": "PMID:36018837",
+      "relation": "unknown",
+      "basis": "均来自Toronto Western Hospital及University Health Network研究团队，具有多名共同作者，包括Milosevic、Kalia、Hodaie、Lozano和Hutchison。两篇均使用DBS术中微电极记录。2018年研究纳入22例PD患者，其中STN记录涉及16名患者；2022年研究纳入19例PD-STN患者。研究人数、研究中心及记录技术存在相似性，但没有患者编号或明确招募时间可供核对，无法排除部分患者重复使用。"
+    },
+    {
+      "a": "PMID:29236966",
+      "b": "PMID:38135193",
+      "relation": "unknown",
+      "basis": "均来自Toronto Western Hospital/University Health Network团队，且有Kalia、Hodaie、Lozano、Milosevic和Hutchison等共同作者。两篇均为DBS手术期间的基底节微电极记录研究。2018年研究报告22例PD患者，2024年研究报告24例PD患者，其中17例接受STN-DBS、7例接受GPi-DBS。研究中心、研究团队和记录技术高度相近，但缺乏患者编号及记录时间段，不能确认是否存在重叠。"
+    },
+    {
+      "a": "PMID:36018837",
+      "b": "PMID:38135193",
+      "relation": "unknown",
+      "basis": "两篇均来自Toronto的Krembil Brain Institute/University Health Network研究团队，共享Milosevic、Kalia、Hodaie、Lozano和Hutchison等作者。2022年研究包括19例PD-STN患者，2024年研究包括24例PD患者，其中17例为STN、7例为GPi。两篇均采用DBS术中微电极记录，具有潜在患者重叠的条件，但没有明确的患者编号、招募时间或队列沿用声明，无法判断是否为同一批或部分相同的患者。"
+    },
+    {
+      "a": "PMID:30637270",
+      "b": "PMID:38948151",
+      "relation": "unknown",
+      "basis": "2018年研究报告Tsinghua University Yuquan Hospital的4例双侧STN-DBS患者接受变频刺激；2024年研究在同一医院报告28例PD患者的前瞻性变频刺激研究。两篇共享Jia等核心作者，研究中心及VFS干预一致。2024年论文明确称其研究旨在进一步验证此前病例研究的结果，但没有说明4例是否纳入28例队列，因此可能是原病例的扩展队列，也可能是独立新增队列。"
+    },
+    {
+      "a": "PMID:31856908",
+      "b": "PMID:38948151",
+      "relation": "unknown",
+      "basis": "2019年方案论文在背景部分明确提到一项正在审稿的28人VFS研究，并描述其FOG及其他运动症状改善持续12个月；这一样本量和随访特征与2024年发表的28人、12个月VFS研究高度吻合，提示两者可能涉及同一项前期试验队列。不过必须区分：2019年论文的主体是另一项注册号NCT03053726的11中心随机对照试验方案，计划入组106人，并非该28人试验的正式结果报告。方案论文没有提供两项研究之间的患者编号或实际入组交叉信息，因此不应将其主体RCT与28人研究直接认定为同一队列。"
+    }
+  ]
+}</escape>
