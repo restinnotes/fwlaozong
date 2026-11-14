@@ -23,3 +23,29 @@
 证据关联：底 888 条 EID → 新 893 条；改类型 86、新增 104；丢失 0（应为 0：S2 结论都被 S3d 修订版沿用时）
 写报告输入改为附件： 写报告输入超长 724593 字（结论 25 条、证据 890 条），不静默截断
 写报告：结论文字/假说/缺口内联 40546 字，证据映射和证据表作附件
+[S4Rb_Q1_report_7cc6f63b] gpt4 gpt-6-thinking 完成 541s 36797 字
+附录：文献 352，证据 890，结论 25，假说 20
+S4Rb 报告 44903 字
+S4Rb 引用 352 条 {'ok': 352}
+S4Rb 正文引用 50 个 {'in_kb': 49, 'not_in_kb_not_found': 1} ；疑似挂错编号 2 处
+   not_in_kb_not_found DOI:10.1101/2025.01.10.632393应核对记录数量和图注 | 
+  疑似挂错：PMID:24361601（相似 0.196）更像 PMID:36185822（0.522）| …该研究支持患者层面的高beta异常与FOG表型相关，但没有充分证明高beta活动在每次实际冻结之前出现
+  疑似挂错：PMID:18413568（相似 0.185）更像 PMID:31275238（0.519）| …该研究支持术前FOG表型及药物反应性可能影响术后冻结结局
+[S4Rb_Q1_abs_g6_e4f42164] gpt3 gpt-6-thinking 完成 527s 6041 字
+[S4Rb_Q1_open_g56_95e9548d] gpt4 gpt-5-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 743s
+[S4Rb_Q1_open_g6_95e9548d] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1419s
+[S4Rb_Q1_open_g6_95e9548d] gpt4 gpt-6-thinking 完成 649s 9704 字
+[S4Rb_Q1_open_g56_95e9548d] gpt3 gpt-5-6-thinking 完成 1547s 10787 字
+S4Rb open_g6: major 8，moderate 6
+    1 major 文献检索、筛选和纳入数量存在无法同时成立的统计矛盾，导致整个证据基础的规模和完整性不可核验。
+    2 major 检索策略的召回能力不足，且检索覆盖存在明显的数据库和排序偏倚。
+    3 major 文献纳入和实际证据提取之间存在严重断层，绝大部分所谓纳入文献没有进入可审计的证据体系。
+S4Rb open_g56: major 7，moderate 6
+    1 major 检索与筛选数量存在无法自洽的算术矛盾，导致整个证据集的来源和规模不可核验。
+    2 major 检索策略存在系统性截断，数据库覆盖和相关研究的发现能力不足。
+    3 major 已经检索到的若干重要研究没有真正进入正文综合，部分研究的关键结果甚至在正文中被选择性遗漏。
+S4Rb 绝对验收: severe 0，moderate 5，minor 0； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'partly'), (4, 'partly'), (5, 'not_testable'), (6, 'partly'), (7, 'not_testable')]
+   抽查 {'consistent': 7, 'overstated': 1}
+[blind_S3d3_vs_S4Rb_aX_g56_deeefd84] gpt4 gpt-5-6-thinking 完成 222s 2248 字
+[blind_S3d3_vs_S4Rb_aX_g6_deeefd84] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 415s
+[blind_S3d3_vs_S4Rb_aX_g6_deeefd84] gpt4 gpt-6-thinking 失败 None 17s

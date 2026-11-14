@@ -9,7 +9,7 @@
   python tools/run.py blind --a B0_gpt3 --b S1   盲比，两种先后顺序 × 两位评委
   python tools/run.py stats                      知识库和调用统计
 """
-import argparse, json, re, sys, time
+import argparse, collections, json, re, sys, time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -457,6 +457,8 @@ def build_methods(c, args):
     while (OUT / lineage[-1] / "plan.json").exists() and lineage[-1] != "S1" and len(lineage) < 5:
         lineage.append("S1")   # 目前所有 S 版本的检索都在 S1 跑（fork 沿用）
     qrun = lineage[-1]
+    # 11-14 S4Rb：S4R 自己做了全量检索，原来写死沿用 S1 的检索记录（每条 100 篇），评审算出数字对不上。本版本有自己的检索记录就用自己的
+    if c.execute("SELECT 1 FROM queries WHERE run_id=? AND question=? LIMIT 1", (src, args.q)).fetchone(): qrun = src
     qs = list(c.execute("SELECT text, hit_count, kept, at FROM queries WHERE run_id=? AND question=? ORDER BY qid", (qrun, args.q)))
     pool = json.loads(rd(OUT / src / "pool.json")) if (OUT / src / "pool.json").exists() else []
     seeds = json.loads(rd(OUT / src / "search_seeds.json")) if (OUT / src / "search_seeds.json").exists() else []
@@ -469,17 +471,23 @@ def build_methods(c, args):
     lp = ROOT / "runs" / "luna_calls.jsonl"
     luna = [json.loads(l) for l in lp.read_text(encoding="utf-8").splitlines()] if lp.exists() else []
     date = (qs[0]["at"] or "")[:10] if qs else "unknown"
+    full = sum(q['kept'] for q in qs) > 0.9 * sum(q['hit_count'] for q in qs)
     L = ["### 检索与筛选记录（程序根据运行日志生成，数字未经模型改写）", "",
          f"- 综述类型：结构化叙述性证据综合（structured narrative evidence synthesis）；未按 PRISMA 系统综述方案预注册和双人独立筛选，不是系统综述或 Meta 分析。",
          f"- 检索日期：{date}；数据库：Europe PMC REST API（收录 PubMed/MEDLINE、PMC、预印本）。没有检索 Embase、Scopus、Web of Science、Cochrane。",
-         f"- 检索式：{len(qs)} 条，由模型根据研究问题拟定；每条按 Europe PMC 相关度排序取前 {max((q['kept'] for q in qs), default=0)} 条（命中数超过时被截断，见下表）。",
+         (f"- 检索式：{len(qs)} 条，由模型根据研究问题拟定；全量翻页取回（命中合计 {sum(q['hit_count'] for q in qs)}，取回合计 {sum(q['kept'] for q in qs)}，去重前；个别检索式未取全的见下表）。"
+          if sum(q['kept'] for q in qs) > 0.9 * sum(q['hit_count'] for q in qs) else
+          f"- 检索式：{len(qs)} 条，由模型根据研究问题拟定；每条按 Europe PMC 相关度排序取前 {max((q['kept'] for q in qs), default=0)} 条（命中数超过时被截断，见下表）。"),
          f"- 模型联网点名的必读文献：{len(seeds)} 篇，查得到 {sum(s['exists'] for s in seeds)} 篇，其中本地检索已覆盖 {sum(s.get('in_search') for s in seeds if s['exists'])} 篇；两路合并去重后进入筛选 {len(pool)} 篇。",
-         f"- 题目+摘要筛选（GPT-6，每批 30 篇）：纳入 {scr.get('include', 0)}，待定 {scr.get('maybe', 0)}，排除 {scr.get('exclude', 0)}。",
+         *([f"- 题目初筛（GPT-6，只看题目，宽松保留）：{len(pool)} 篇中排除 {scr['title_drop']} 篇，其余 {len(pool) - scr['title_drop']} 篇进入题目+摘要筛选。"] if scr.get('title_drop') else []),
+         f"- 题目+摘要筛选（GPT-6，每批 30 篇）：纳入 {scr.get('include', 0)}，待定 {scr.get('maybe', 0)}，排除 {scr.get('exclude', 0)}"
+         + (f"（合计 {scr.get('include', 0) + scr.get('maybe', 0) + scr.get('exclude', 0)}；与进入筛选数之差 {len(pool) - scr.get('title_drop', 0) - scr.get('include', 0) - scr.get('maybe', 0) - scr.get('exclude', 0)} 篇为缺题目或摘要、无法筛选的记录）" if scr.get('title_drop') else "") + "。",
+         *([f"- 证据分层（GPT-6 按与问题的直接程度）：" + "，".join(f"{k} 层 {v} 篇" for k, v in sorted(collections.Counter(tiers.values()).items())) + "；只给 A 层取全文。"] if (tiers := tiers_of(argparse.Namespace(tag=src))) else []),
          f"- 纳入文献的全文获取：" + "；".join(f"{k} {v} 篇" for k, v in sorted(kinds.items())) + f"（下载辅助调用 {len(luna)} 次，只用合法开放来源）。",
-         f"- 证据提取：{nev[1]} 篇文献提取出 {nev[0]} 条证据（纳入文献有全文的读全文，其余和待定文献读摘要）。",
-         "", "| # | 检索式 | 命中数 | 取回 | 是否截断 |", "|---|---|---|---|---|"]
+         f"- 证据提取：全部 {scr.get('include', 0)} 篇纳入文献都送入提取（有全文的读全文，其余读摘要，每批 20 篇）；其中 {nev[1]} 篇提取出 {nev[0]} 条证据，其余 {max(0, scr.get('include', 0) - nev[1])} 篇提取器判定没有与本问题直接相关、可单独记录的发现，只作背景，不进入证据表。",
+         "", "| # | 检索式 | 命中数 | 取回 | " + ("命中与取回之差" if full else "是否截断") + " |", "|---|---|---|---|---|"]
     for i, q in enumerate(qs, 1):
-        L.append(f"| {i} | `{q['text'].replace('|', '/')}` | {q['hit_count']} | {q['kept']} | {'是' if q['hit_count'] > q['kept'] else '否'} |")
+        L.append(f"| {i} | `{q['text'].replace('|', '/')}` | {q['hit_count']} | {q['kept']} | " + (f"{q['hit_count'] - q['kept']}" if full else ('是' if q['hit_count'] > q['kept'] else '否')) + " |")
     return "\n".join(L)
 
 
