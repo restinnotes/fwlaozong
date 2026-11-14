@@ -1,0 +1,23 @@
+你在为一个自主科研系统做"研究独立性"核对。下面是一组可能相关的文献（程序按共同的第一作者或末位作者、以及已知的预印本—正式版关系把它们归在一组；归在一组不代表它们有关）。每篇已经由上一步判断了类型、患者数、中心和时间段。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+【文献】（每行：编号｜作者｜年份｜期刊｜题目｜类型｜患者数｜中心｜时间段｜证据里记录的样本量｜已知版本关系）
+PMID:36185822｜Nwogo RO, Kammermeier S, Singh A.｜2022｜Frontiers in systems neuroscience｜Abnormal neural oscillations during gait and dual-task in Parkinson's disease.｜review_meta｜不明｜—｜—｜未报告 / 不适用；未提供汇总样本量。｜—
+PMID:37092236｜Bosch TJ, Cole RC, Bezchlibnyk Y, Flouty O, Singh A.｜2023｜Journal of Parkinson's disease｜Effects of Very Low- and High-Frequency Subthalamic Stimulation on Motor Cortical Oscillations During Rhythmic Lower-Limb Movements in Parkinson's Disease Patients.｜primary_patient｜13｜University of Iowa，爱荷华城，美国｜—｜本文未报告 / 13（FOG+ 6；FOG− 7）｜—
+PMID:38101024｜Lench DH, Doolittle JD, Ramakrishnan V, Rowland N, Revuelta GJ.｜2024｜Parkinsonism & related disorders｜Subthalamic functional connectivity associated with freezing of gait dopa-response.｜primary_patient｜55｜Medical University of South Carolina（MUSC），Charleston，South Carolina，美国｜—｜总计55例：FOG患者38例（多巴胺反应性22例，不反应性16例）；无FOG的PD对照17例。 / 22例 vs 16例。｜—
+PMID:42641912｜Leedom M, Espinoza AI, Mancini M, Lench DH, Singh A.｜2026｜Neuroscience｜Midfrontal oscillatory alterations during gait imagination and observation in Parkinson's disease with freezing of gait.｜primary_patient｜50｜—｜—｜71例，其中HC=21、PDFOG-=16、PDFOG+=34｜—
+PMID:42778807｜Leedom M, Pallab MRA, Bharmauria V, Flouty O, Stuart S, Mancini M, Singh A.｜2026｜Journal of neurology｜Frequency-Specific EEG burst dynamics in Parkinson's Disease and freezing of gait.｜primary_patient｜149｜—｜—｜总计237例；HC=88，PD=149；摘要未报告PDFOG+和PDFOG-各自的具体人数。｜—
+
+请判断两两关系：只列出你认为不是"相互独立的不同研究"的那些对。可选关系：
+- same_work：同一学术成果的不同版本（预印本与正式版、会议摘要与全文）。
+- same_cohort：不同论文，但用的是同一批患者（同一队列的不同分析、二次分析、扩展随访）。
+- partial_overlap：患者部分重叠（例如同一中心同一时期、样本量一个包含另一个）。
+- unknown：有理由怀疑重叠（同一团队、同一中心、时间相近、样本量相近），但凭现有信息无法判断。
+没有列出的对，视为你判断它们相互独立（distinct）。不确定时宁可写 unknown，不要默认独立；但也不要只因同一作者就写 same_cohort——要有依据（同样的样本量和特征、论文自述使用既有数据、同一试验注册号、同一记录设备和时间段等）。basis 写具体依据。
+
+只输出一个 JSON：
+{"relations":[{"a":"","b":"","relation":"same_work|same_cohort|partial_overlap|unknown","basis":""}]}
