@@ -3,3 +3,21 @@ S5La 正文引用 39 个 {'in_kb': 38, 'not_in_kb_not_found': 1} ；疑似挂错
    not_in_kb_not_found DOI:10.1101/2024.06.26.24309418（预印本 | 
 [S5La_Q1_abs_g6_972c0726] gpt4 gpt-6-thinking 完成 900s 8272 字
 [S5La_Q1_open_g56_de3c375e] gpt4 gpt-5-6-thinking 完成 929s 7974 字
+[S5La_Q1_open_g6_de3c375e] gpt3 gpt-6-thinking 完成 1167s 10340 字
+S5La open_g6: major 8，moderate 4
+    1 major 若干最重要的人体原始研究没有真正进入正文的核心证据综合，导致事件前期、STN-肌肉耦合及步态启动机制的证据被低估。附录已经收录部分研究，但正文没有完成相应的整合；另有直接相关研究的全文提取明显不完整。
+    2 major 检索和筛选方法不足以支撑报告所暗示的广泛证据覆盖，且单一模型承担全部筛选与提取，存在系统性遗漏和选择偏差。
+    3 major 全文获取比例过低，缺少正式的研究质量和偏倚风险评价，证据分层容易被误解为证据可靠性分层。
+S5La open_g56: major 5，moderate 4
+    1 major 正文没有充分整合附录中已经检索到的关键原始研究和最新Meta分析，导致核心证据综合不完整。这是整份报告最严重的问题之一：文献库看起来很丰富，但真正用于构建正文结论的证据明显少于已经收集的证据。
+    2 major 检索策略和文献筛选过程不足以支撑报告所追求的广泛覆盖和低遗漏率。报告虽然有大量检索记录，但并没有建立足够可靠的文献发现与筛选程序。
+    3 major 全文证据严重不足，而且没有正式的研究质量和偏倚风险评价。报告将证据的直接程度与证据的可靠程度混在了一起。
+S5La 绝对验收: severe 1，moderate 4，minor 1； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'partly'), (4, 'partly'), (5, 'not_testable'), (6, 'met'), (7, 'not_testable')]
+   抽查 {'consistent': 8}
+[blind_S4Rc_vs_S5La_aX_g56_a8e3bc40] gpt4 gpt-5-6-thinking 失败 UPSTREAM_STREAM_ERROR 269s
+[blind_S4Rc_vs_S5La_bX_g56_05407a85] gpt4 gpt-5-6-thinking 完成 317s 2035 字
+[blind_S4Rc_vs_S5La_bX_g6_05407a85] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 420s
+[blind_S4Rc_vs_S5La_bX_g6_05407a85] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 359s
+盲比解析失败 无回答
+[blind_S4Rc_vs_S5La_aX_g6_a8e3bc40] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1059s
+[blind_S4Rc_vs_S5La_aX_g6_a8e3bc40] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 616s

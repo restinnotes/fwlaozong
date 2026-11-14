@@ -619,7 +619,7 @@ def cited_ids(tag):
     else:
         t = rd(OUT / tag / "report.md")
         for m in sorted(set(re.findall(r"PMID:\s*(\d{5,9})", t))): ids.append({"ref": "PMID:" + m, "pmid": m, "doi": "", "title": None})
-        for m in sorted(set(re.findall(r"DOI:\s*(10\.[^\s\]\),;（|]+)", t, re.I))): ids.append({"ref": "DOI:" + m, "pmid": "", "doi": m.rstrip("."), "title": None})
+        for m in sorted(set(re.findall(r"DOI:\s*(10\.[^\s\]\),;（|一-鿿]+)", t, re.I))): ids.append({"ref": "DOI:" + m, "pmid": "", "doi": m.rstrip("."), "title": None})
     return ids
 
 
@@ -637,7 +637,7 @@ def cmd_bodycheck(args):
     t = rd(OUT / args.tag / "report.md")
     t = t.split("### 检索与筛选记录")[0]
     pm = sorted(set(re.findall(r"PMID[:：]\s*(\d{5,9})", t)))
-    do = sorted(set(x.rstrip(".)，。；") for x in re.findall(r"DOI[:：]\s*(10\.[^\s\]\)，。；,;（|]+)", t, re.I)))   # 遇全角括号/竖线停（正式版补注、表格）
+    do = sorted(set(x.rstrip(".)，。；") for x in re.findall(r"DOI[:：]\s*(10\.[^\s\]\)，。；,;（|一-鿿]+)", t, re.I)))   # 遇全角括号/竖线/汉字停（正式版补注、表格、DOI 后紧跟中文）
     c = kb.connect(); src = kbtag(args)
     inkb = {r[0] for r in c.execute("SELECT DISTINCT pid FROM evidence WHERE run_id=?", (src,))}
     res = []
@@ -657,7 +657,7 @@ def cmd_bodycheck(args):
     eg = {p: grams(" ".join(v)) for p, v in evtext.items()}
     sim = lambda a, b: len(a & b) / max(1, len(a))
     mism = []
-    for m in re.finditer(r"(PMID|DOI)[:：]\s*([^\s\]\)，。；,;（|]+)", t, re.I):
+    for m in re.finditer(r"(PMID|DOI)[:：]\s*([^\s\]\)，。；,;（|一-鿿]+)", t, re.I):
         pid = f"{m.group(1).upper()}:{m.group(2).rstrip('.').lower() if m.group(1).upper() == 'DOI' else m.group(2)}"
         if pid not in eg: continue
         end = m.start()
