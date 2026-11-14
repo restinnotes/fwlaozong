@@ -261,16 +261,16 @@
   "cid": "C3",
   "n_evidence": 94,
   "n_papers": 55,
-  "n_works": 53,
+  "n_works": 52,
   "by_kind": {
    "primary_patient": 38,
    "review_meta": 17
   },
-  "cohorts_min": 31,
-  "cohorts_max": 35,
-  "patients_min": 1726,
-  "patients_max": 1866,
-  "supports": "26–27",
+  "cohorts_min": 29,
+  "cohorts_max": 34,
+  "patients_min": 1698,
+  "patients_max": 1852,
+  "supports": "24–26",
   "contradicts": "0",
   "qualifies": "15–17",
   "clusters": [
@@ -308,6 +308,18 @@
     ],
     "relations": [
      "PMID:33027712~PMID:34015693:same_cohort"
+    ]
+   },
+   {
+    "papers": [
+     "PMID:36706929",
+     "DOI:10.1101/2025.01.01.631000",
+     "PMID:41388789"
+    ],
+    "relations": [
+     "DOI:10.1101/2025.01.01.631000~PMID:36706929:unknown",
+     "PMID:36706929~PMID:41388789:unknown",
+     "DOI:10.1101/2025.01.01.631000~PMID:41388789:same_work"
     ]
    },
    {
@@ -418,11 +430,11 @@
    "primary_patient": 33,
    "review_meta": 15
   },
-  "cohorts_min": 25,
+  "cohorts_min": 24,
   "cohorts_max": 31,
   "patients_min": null,
   "patients_max": null,
-  "supports": "19–22",
+  "supports": "18–22",
   "contradicts": "0",
   "qualifies": "15–17",
   "clusters": [
@@ -475,6 +487,15 @@
     ],
     "relations": [
      "PMID:32431656~PMID:42860886:unknown"
+    ]
+   },
+   {
+    "papers": [
+     "PMID:36706929",
+     "DOI:10.1101/2025.01.01.631000"
+    ],
+    "relations": [
+     "DOI:10.1101/2025.01.01.631000~PMID:36706929:unknown"
     ]
    },
    {
@@ -762,21 +783,47 @@
   "cid": "C10",
   "n_evidence": 102,
   "n_papers": 67,
-  "n_works": 67,
+  "n_works": 66,
   "by_kind": {
    "primary_animal": 18,
    "primary_patient": 36,
    "review_meta": 12,
    "computational": 1
   },
-  "cohorts_min": 34,
-  "cohorts_max": 36,
+  "cohorts_min": 26,
+  "cohorts_max": 34,
   "patients_min": null,
   "patients_max": null,
-  "supports": "25–26",
+  "supports": "19–26",
   "contradicts": "1",
-  "qualifies": "13",
+  "qualifies": "12–13",
   "clusters": [
+   {
+    "papers": [
+     "PMID:28742498",
+     "PMID:28342747",
+     "PMID:33087473",
+     "PMID:36706929",
+     "PMID:36158623",
+     "PMID:38636820",
+     "DOI:10.1101/2025.01.01.631000",
+     "PMID:39534364",
+     "PMID:41388789"
+    ],
+    "relations": [
+     "PMID:28342747~PMID:28742498:unknown",
+     "PMID:28342747~PMID:38636820:partial_overlap",
+     "PMID:28342747~PMID:39534364:partial_overlap",
+     "PMID:33087473~PMID:38636820:unknown",
+     "PMID:33087473~PMID:39534364:unknown",
+     "PMID:36706929~PMID:38636820:unknown",
+     "PMID:36706929~PMID:39534364:unknown",
+     "DOI:10.1101/2025.01.01.631000~PMID:36706929:unknown",
+     "PMID:36706929~PMID:41388789:unknown",
+     "PMID:38636820~PMID:39534364:partial_overlap",
+     "DOI:10.1101/2025.01.01.631000~PMID:41388789:same_work"
+    ]
+   },
    {
     "papers": [
      "PMID:29236966",
@@ -992,13 +1039,13 @@
    "review_meta": 10,
    "primary_animal": 2
   },
-  "cohorts_min": 23,
+  "cohorts_min": 19,
   "cohorts_max": 34,
   "patients_min": null,
   "patients_max": null,
-  "supports": "16–22",
+  "supports": "15–22",
   "contradicts": "0",
-  "qualifies": "14–18",
+  "qualifies": "11–18",
   "clusters": [
    {
     "papers": [
@@ -1018,6 +1065,20 @@
      "PMID:39965098"
     ],
     "relations": []
+   },
+   {
+    "papers": [
+     "PMID:31494286",
+     "PMID:36158623",
+     "PMID:36706929",
+     "DOI:10.64898/2026.08.13.744293",
+     "PMID:41388789"
+    ],
+    "relations": [
+     "PMID:31494286~PMID:36158623:unknown",
+     "PMID:36706929~PMID:41388789:unknown",
+     "DOI:10.64898/2026.08.13.744293~PMID:41388789:unknown"
+    ]
    },
    {
     "papers": [
@@ -1085,11 +1146,11 @@
    "review_meta": 7,
    "primary_animal": 1
   },
-  "cohorts_min": 12,
+  "cohorts_min": 11,
   "cohorts_max": 17,
   "patients_min": null,
   "patients_max": null,
-  "supports": "6–8",
+  "supports": "5–8",
   "contradicts": "1",
   "qualifies": "10–15",
   "clusters": [
@@ -1117,6 +1178,15 @@
     ],
     "relations": [
      "PMID:40648292~PMID:42239677:partial_overlap"
+    ]
+   },
+   {
+    "papers": [
+     "DOI:10.64898/2026.08.13.744293",
+     "PMID:41388789"
+    ],
+    "relations": [
+     "DOI:10.64898/2026.08.13.744293~PMID:41388789:unknown"
     ]
    }
   ]
@@ -1192,14 +1262,23 @@
    "review_meta": 3,
    "primary_animal": 1
   },
-  "cohorts_min": 10,
-  "cohorts_max": 11,
+  "cohorts_min": 9,
+  "cohorts_max": 10,
   "patients_min": null,
   "patients_max": null,
-  "supports": "9",
+  "supports": "8",
   "contradicts": "0",
   "qualifies": "5",
   "clusters": [
+   {
+    "papers": [
+     "PMID:29760182",
+     "PMID:38636820"
+    ],
+    "relations": [
+     "PMID:29760182~PMID:38636820:same_cohort"
+    ]
+   },
    {
     "papers": [
      "DOI:10.1101/2025.01.10.632393",
@@ -1229,13 +1308,13 @@
    "primary_patient": 19,
    "review_meta": 11
   },
-  "cohorts_min": 15,
+  "cohorts_min": 14,
   "cohorts_max": 18,
   "patients_min": null,
   "patients_max": null,
   "supports": "10–13",
   "contradicts": "0",
-  "qualifies": "10",
+  "qualifies": "9–10",
   "clusters": [
    {
     "papers": [
@@ -1245,6 +1324,13 @@
     "relations": [
      "PMID:31505548~PMID:38509158:partial_overlap"
     ]
+   },
+   {
+    "papers": [
+     "PMID:31494286",
+     "DOI:10.64898/2026.08.13.744293"
+    ],
+    "relations": []
    },
    {
     "papers": [
@@ -1273,16 +1359,16 @@
   "cid": "C18",
   "n_evidence": 18,
   "n_papers": 11,
-  "n_works": 11,
+  "n_works": 10,
   "by_kind": {
    "primary_patient": 8,
    "review_meta": 3
   },
-  "cohorts_min": 7,
-  "cohorts_max": 8,
+  "cohorts_min": 6,
+  "cohorts_max": 7,
   "patients_min": null,
   "patients_max": null,
-  "supports": "6–7",
+  "supports": "5–6",
   "contradicts": "0",
   "qualifies": "3",
   "clusters": [
@@ -1293,6 +1379,15 @@
     ],
     "relations": [
      "PMID:35153698~PMID:39470410:unknown"
+    ]
+   },
+   {
+    "papers": [
+     "DOI:10.1101/2025.01.01.631000",
+     "PMID:41388789"
+    ],
+    "relations": [
+     "DOI:10.1101/2025.01.01.631000~PMID:41388789:same_work"
     ]
    }
   ]
@@ -1406,14 +1501,23 @@
    "primary_patient": 7,
    "review_meta": 5
   },
-  "cohorts_min": 6,
+  "cohorts_min": 5,
   "cohorts_max": 7,
   "patients_min": null,
   "patients_max": null,
   "supports": "2",
   "contradicts": "0",
-  "qualifies": "6–7",
+  "qualifies": "5–7",
   "clusters": [
+   {
+    "papers": [
+     "PMID:28342747",
+     "PMID:28742498"
+    ],
+    "relations": [
+     "PMID:28342747~PMID:28742498:unknown"
+    ]
+   },
    {
     "papers": [
      "PMID:19773356",
@@ -1429,20 +1533,20 @@
   "cid": "C22",
   "n_evidence": 315,
   "n_papers": 152,
-  "n_works": 148,
+  "n_works": 147,
   "by_kind": {
    "review_meta": 33,
    "primary_animal": 13,
    "primary_patient": 102,
    "computational": 4
   },
-  "cohorts_min": 65,
-  "cohorts_max": 98,
+  "cohorts_min": 57,
+  "cohorts_max": 97,
   "patients_min": null,
   "patients_max": null,
-  "supports": "51–70",
+  "supports": "48–69",
   "contradicts": "3",
-  "qualifies": "34–49",
+  "qualifies": "29–49",
   "clusters": [
    {
     "papers": [
@@ -1492,6 +1596,31 @@
      "PMID:26108960~PMID:28261073:unknown",
      "PMID:26108960~PMID:33292899:unknown",
      "PMID:28261073~PMID:33292899:unknown"
+    ]
+   },
+   {
+    "papers": [
+     "PMID:28742498",
+     "PMID:31494286",
+     "PMID:28342747",
+     "PMID:36706929",
+     "PMID:36158623",
+     "DOI:10.64898/2026.08.13.744293",
+     "PMID:41388789",
+     "PMID:38636820",
+     "DOI:10.1101/2025.01.01.631000"
+    ],
+    "relations": [
+     "PMID:28342747~PMID:28742498:unknown",
+     "PMID:28342747~PMID:38636820:partial_overlap",
+     "DOI:10.64898/2026.08.13.744293~PMID:38636820:unknown",
+     "PMID:31494286~PMID:36158623:unknown",
+     "PMID:36706929~PMID:38636820:unknown",
+     "DOI:10.1101/2025.01.01.631000~PMID:36706929:unknown",
+     "PMID:36706929~PMID:41388789:unknown",
+     "DOI:10.1101/2025.01.01.631000~DOI:10.64898/2026.08.13.744293:unknown",
+     "DOI:10.1101/2025.01.01.631000~PMID:41388789:same_work",
+     "DOI:10.64898/2026.08.13.744293~PMID:41388789:unknown"
     ]
    },
    {

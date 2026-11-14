@@ -1539,11 +1539,11 @@ def cmd_independence(args):
         cl["independence"] = (f"论文 {k['n_papers']} 篇、成果 {k['n_works']} 项；独立患者队列 {_rng(k['cohorts_min'], k['cohorts_max'])}，"
                               f"独立患者 {_rng(k['patients_min'], k['patients_max'])} 人；支持/反对/限定的独立队列 {k['supports']}/{k['contradicts']}/{k['qualifies']}")
         if not u: continue
-        if u.get("changed"):
-            nchg += 1
-            for f in ("text", "uncertainty"):
-                if u.get(f): cl[f] = u[f]
-            if u.get("status") in ok_status: cl["status"] = u["status"]
+        # 11-14：模型改了全部 25 条的措辞和不确定性却都标 changed:false，按标志取会把修订全丢掉。按内容是否不同来取
+        newv = {f: u.get(f) for f in ("text", "uncertainty") if u.get(f)}
+        if u.get("status") in ok_status: newv["status"] = u["status"]
+        if any(cl.get(f) != v for f, v in newv.items()):
+            nchg += 1; cl.update(newv)
         if u.get("independence_note"): cl["independence_note"] = u["independence_note"]
     # 程序规则：只有一个独立患者队列支持的结论不能是 well-supported（模型没改的程序改，并记下）
     for cl in syn["claims"]:

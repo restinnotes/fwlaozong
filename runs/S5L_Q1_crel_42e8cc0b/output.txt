@@ -1,0 +1,70 @@
+<escape>{
+  "relations": [
+    {
+      "a": "PMID:31494286",
+      "b": "PMID:36158623",
+      "relation": "unknown",
+      "basis": "两篇研究均来自Chang Gung Memorial Hospital，作者团队有明显重叠。A全文报告15例，D报告26例，且D的DBS手术时间为2009–2016年。两者均涉及术后STN局部场电位记录，存在使用同一院内患者库或部分重复纳入的可能。但没有找到明确的患者ID对应、重复使用既有数据的声明或足以确认重叠的逐例资料，因此不能确定为partial_overlap。【turn822818search1】【turn577018search0】"
+    },
+    {
+      "a": "PMID:33087473",
+      "b": "PMID:38636820",
+      "relation": "unknown",
+      "basis": "F的8例来自Fischer等2018年相关的术后STN步行及声音提示研究。该原始英国队列包含UCLH作为手术中心。C的10例中有9例来自UCLH，且研究涉及已植入DBS患者的后续记录，因此存在部分患者来自同一手术队列、在不同阶段接受记录的可能。但没有患者ID或明确的随访对应关系，无法确认重叠。【turn324409search0】【turn633338view0】"
+    },
+    {
+      "a": "PMID:33087473",
+      "b": "PMID:39534364",
+      "relation": "unknown",
+      "basis": "G明确使用Fischer等2018年研究中的10名患者进行二次分析。该原始英国队列包括UCLH，而C的10例中有9例来自UCLH。两篇研究的患者来源存在潜在交集，且C可能涉及早期DBS患者的后续记录。但没有逐例身份对应或明确的数据复用声明，不能确认是否为同一批患者。【turn324409search0】【turn287222view0】"
+    },
+    {
+      "a": "PMID:36706929",
+      "b": "PMID:38636820",
+      "relation": "unknown",
+      "basis": "E的27例包括King's College Hospital患者；F所使用的Fischer 2018相关队列也包括King's College Hospital。两项研究均在DBS术后外置导线期间记录STN活动，记录时间分别为术后2–6天和3–7天。E的一名King's患者为63岁男性、病程13年、Medtronic 3389，与F的一名62岁男性、病程12年、同型号电极患者特征接近。存在同一患者被不同研究重复分析的可能，但没有患者ID对应，故标记unknown。【turn318884view0】【turn852477view0】【turn633338view0】【turn324409search0】"
+    },
+    {
+      "a": "PMID:36706929",
+      "b": "PMID:39534364",
+      "relation": "unknown",
+      "basis": "E的27例中包括King's College Hospital患者，G的10例来自Fischer 2018年原始队列，该队列也包括King's。两者均涉及术后数日内外置DBS电极的STN记录。E的一名King's患者为67岁男性、病程6年、使用Medtronic SenSight，与G所依据的后续研究网络中相应患者特征存在潜在匹配可能，但没有患者ID交叉验证，因此不能确认部分重叠。【turn318884view0】【turn852477view0】【turn287222view0】【turn324409search0】"
+    },
+    {
+      "a": "PMID:36706929",
+      "b": "DOI:10.1101/2025.01.01.631000",
+      "relation": "unknown",
+      "basis": "E的患者14为67岁男性、病程6年、使用Medtronic SenSight，来自King's College Hospital；H对应的正式发表研究J中，P012同样为67岁男性、病程6年、使用Medtronic SenSight。两项研究均在DBS手术后数日进行外置导线记录。这是较具体的患者特征匹配，但J没有明确提供该患者的手术中心对应关系，也没有患者ID交叉声明，因此暂不能确认为同一患者。【turn852477view0】【turn203727view0】"
+    },
+    {
+      "a": "PMID:36706929",
+      "b": "PMID:41388789",
+      "relation": "unknown",
+      "basis": "E的患者14与J的P012具有相同的年龄、性别、病程及Medtronic SenSight型号，且记录时间均处于术后早期。E明确记录该患者来自King's College Hospital，而J的研究团队也包括King's相关临床研究人员。该匹配提示可能存在患者重叠，但J未提供患者与具体手术中心的对应关系，尚不足以确认partial_overlap。【turn852477view0】【turn203727view0】"
+    },
+    {
+      "a": "PMID:38636820",
+      "b": "PMID:39534364",
+      "relation": "partial_overlap",
+      "basis": "F报告8例，G报告10例。G明确说明其10例来自Fischer等2018年的原始研究，其中P3–P10共8例具有完整的不同声音刺激状态记录。F的8例正是相关声音提示步行数据的再分析，患者临床特征也与G的这8例高度对应。因此，两篇论文至少有高度可信的8例共同患者，G还纳入了另外2例。属于不同论文对重叠队列的分析。【turn633338view0】【turn287222view0】"
+    },
+    {
+      "a": "DOI:10.1101/2025.01.01.631000",
+      "b": "DOI:10.64898/2026.08.13.744293",
+      "relation": "unknown",
+      "basis": "I报告4名出现FOG的患者及176次FOG事件。J对应的14例队列中有4名患者被明确分类为freezer（P005、P007、P013、P014）。两项研究的研究团队存在Oswal、Green及O'Keeffe等共同成员，存在I使用J队列中4名FOG患者进行二次分析的可能。但目前没有患者ID对应或明确的数据复用声明，不能确认。【turn203727view0】"
+    },
+    {
+      "a": "DOI:10.1101/2025.01.01.631000",
+      "b": "PMID:41388789",
+      "relation": "same_work",
+      "basis": "2025年bioRxiv预印本The role of STN beta oscillations on lower extremity muscle activity in Parkinsonian stepping与2026年Brain正式发表的Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping属于同一研究成果的不同版本。两者均为Simpson等人的研究，使用14名患者的STN活动和下肢肌电记录，研究步进过程中STN beta活动与下肢肌肉活动的关系及多巴胺状态的影响。正式发表时题目及作者列表有所调整。【turn895921search7】【turn203727view0】"
+    },
+    {
+      "a": "DOI:10.64898/2026.08.13.744293",
+      "b": "PMID:41388789",
+      "relation": "unknown",
+      "basis": "I的4名患者均有FOG事件，J的14名患者中恰有4名被分类为freezer。两项研究的研究团队均涉及Oswal和Green等人员，且存在共同的临床研究网络。I可能使用J队列中的4名FOG患者进行针对beta burst entropy的二次分析，但尚无患者ID或明确的数据集复用声明，因此保留unknown，而不直接判定为partial_overlap。【turn203727view0】"
+    }
+  ]
+}</escape>

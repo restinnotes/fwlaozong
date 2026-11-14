@@ -1,0 +1,70 @@
+<escape>{
+  "relations": [
+    {
+      "a": "PMID:28342747",
+      "b": "PMID:29760182",
+      "relation": "partial_overlap",
+      "basis": "两篇论文的患者临床资料表存在至少4名患者的高度一致匹配。具体包括：62岁男性、病程12年、FOG、LEDD 955 mg、Medtronic 3389；60岁男性、病程8年、FOG、LEDD 1282 mg、Medtronic 3389；59岁男性、病程7年、UPDRS 53/18、LEDD 1195 mg、Boston DB-2202；64岁女性、病程16年、UPDRS 66/36、LEDD 1628 mg、Boston DB-2202。后者的16人队列包含这些患者，而前者10名纳入分析的患者并非全部来自该队列，因此判定为部分重叠。【turn309173view0】【turn895107view0】"
+    },
+    {
+      "a": "PMID:28342747",
+      "b": "PMID:38636820",
+      "relation": "partial_overlap",
+      "basis": "Fischer 2017 imagined grip研究中的患者8和患者10，分别与Yeh 2024研究中的患者1和患者2在年龄、性别、病程、UPDRS、左旋多巴等效剂量及DBS电极型号方面一致。前者10名分析患者中至少2名与后者8名患者重叠。不同研究的任务不同，不能认定为完全相同队列。【turn309173view0】【turn581092view0】"
+    },
+    {
+      "a": "PMID:28342747",
+      "b": "PMID:39534364",
+      "relation": "partial_overlap",
+      "basis": "Fischer 2017 imagined grip研究至少4名患者与Fischer 2018 stepping研究的患者1至4具有相同的详细临床特征。Hu 2024明确说明其10名患者来自Fischer 2018既有研究，且患者资料表与该研究前10名患者对应。因此，Fischer 2017与Hu 2024之间也存在至少4名患者的重叠，但不是相同的完整患者集合。【turn309173view0】【turn895107view0】【turn290607view0】"
+    },
+    {
+      "a": "PMID:29760182",
+      "b": "PMID:38636820",
+      "relation": "same_cohort",
+      "basis": "Yeh 2024明确声明，其8名患者的STN-LFP数据此前已经用于研究节律性听觉提示对STN beta调制的影响，并明确引用Fischer 2018的Alternating Modulation of Subthalamic Nucleus Beta Oscillations during Stepping。两篇论文采用不同的信号分析方法研究同一stepping及听觉提示实验队列，属于既有患者数据的二次分析。【turn895107view0】【turn581092view1】"
+    },
+    {
+      "a": "PMID:29760182",
+      "b": "PMID:39534364",
+      "relation": "same_cohort",
+      "basis": "Hu 2024在Materials部分明确声明，其10名患者来自Fischer et al. 2018的既有研究。患者年龄、性别和DBS电极型号与Fischer 2018患者表前10名对应；记录均在DBS术后3至7天进行，采用STN-LFP及有无听觉提示的交替踏步任务。这是明确的既有队列二次分析关系。【turn895107view0】【turn290607view0】"
+    },
+    {
+      "a": "PMID:38636820",
+      "b": "PMID:39534364",
+      "relation": "partial_overlap",
+      "basis": "两篇论文均使用Fischer 2018的stepping及听觉提示研究数据。比较患者表，Yeh 2024的8名患者中至少7名与Hu 2024的10名患者具有一致的年龄、性别、病程、临床评分及电极配置特征。另有末位患者存在年龄及电极型号差异，不能确认8人完全包含于10人，因此保守判定为部分重叠，而不是直接认定完整队列相同。【turn581092view0】【turn290607view0】"
+    },
+    {
+      "a": "DOI:10.1101/2025.01.01.631000",
+      "b": "PMID:41388789",
+      "relation": "same_work",
+      "basis": "2025年bioRxiv预印本与2026年Brain正式论文具有相同的第一作者及核心作者团队，患者数均为14，研究内容均为帕金森病患者STN beta活动、下肢肌电及踏步行为之间的关系，并比较左旋多巴ON/OFF状态。正式发表版本调整了标题及内容表述，但属于同一研究成果的预印本与正式发表版本，不应作为两项独立研究计数。【turn670469view0】【turn363046view0】"
+    },
+    {
+      "a": "DOI:10.64898/2026.08.13.744293",
+      "b": "PMID:38636820",
+      "relation": "unknown",
+      "basis": "Beaudoin 2026的4名患者与Yeh 2024的8名患者存在潜在重叠可能。两项研究均涉及Oxford STN记录研究团队，并共同包含Alexander Green和Ashwini Oswal。值得注意的是，Yeh 2024的8人中有4人被记录为FOG或轻度FOG，而Beaudoin 2026恰好纳入4名出现FOG的患者。不过，两篇研究的任务分别为实际步行中的FOG观察和坐姿交替踏步，现有资料没有患者编号、记录日期或明确的数据复用声明，不能确认是否为同一批患者。"
+    },
+    {
+      "a": "DOI:10.64898/2026.08.13.744293",
+      "b": "PMID:39534364",
+      "relation": "unknown",
+      "basis": "两项研究均涉及Oxford STN-LFP及帕金森病步态研究。Hu 2024使用的10名患者来自Fischer 2018的Oxford相关stepping队列；Beaudoin 2026则由Oxford功能神经外科相关团队研究4名患者的实际步行FOG。由于两者研究对象和记录场景存在关联可能，但没有患者编号、采集时间及直接数据复用声明，无法排除部分患者重叠。"
+    },
+    {
+      "a": "DOI:10.64898/2026.08.13.744293",
+      "b": "DOI:10.1101/2025.01.01.631000",
+      "relation": "unknown",
+      "basis": "两项研究均属于Oxford功能神经外科相关团队的STN活动与帕金森病步态研究，作者存在Ashwini Oswal的共同参与。Beaudoin研究纳入4名患者，Simpson预印本纳入14名患者，存在小队列作为大队列子集的可能。但两者研究任务分别侧重实际步行FOG和踏步期间STN-LFP与下肢EMG，未发现明确的患者编号或数据复用证据。"
+    },
+    {
+      "a": "DOI:10.64898/2026.08.13.744293",
+      "b": "PMID:41388789",
+      "relation": "unknown",
+      "basis": "Beaudoin 2026的4人FOG研究与Simpson 2026的14人STN及下肢肌肉活动研究均涉及Oxford功能神经外科相关研究团队，共同作者包括Ashwini Oswal和Andrew O’Keeffe，发表时间接近，且研究对象均为接受STN-DBS的帕金森病患者。4人可能是14人队列中的FOG亚组，也可能是独立采集的患者。由于缺少患者级身份对应、记录时间及电极型号信息，暂不能判断是否重叠。"
+    }
+  ]
+}</escape>
