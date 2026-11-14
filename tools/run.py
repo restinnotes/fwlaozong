@@ -1284,8 +1284,9 @@ def cmd_cohorts(args):
     for p, r in root.items(): groups.setdefault(r, []).append(p)
     groups = sorted(groups.values(), key=len, reverse=True)
     batches, cur = [], []
-    for g in groups:   # 组不拆开；小组拼批，每批不超过 30 篇
-        if cur and len(cur) + len(g) > 30: batches.append(cur); cur = []
+    # 11-14：每批 30 篇时回答太长，13 批里 12 批在几百到 1700 多秒时被上游流式错误中断（短调用正常）。改为每批不超过 12 篇（大组仍不拆）
+    for g in groups:   # 组不拆开；小组拼批
+        if cur and len(cur) + len(g) > 12: batches.append(cur); cur = []
         cur = cur + g
     if cur: batches.append(cur)
     batches = [b for b in batches if not set(b) <= done]
