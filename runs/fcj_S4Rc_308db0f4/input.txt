@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:28890315 Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease. (2017)
+报告的说法：报告第五节5.4将H11与H12描述为针对同一神经现象提出相反的时间顺序和行为结果预测，将不同熵及复杂度指标组织成同一现象的竞争性机制解释。
+指控者认为原文的说法：2017年研究实际发现的是：真实FOG发生期间，STN alpha频段（8–12 Hz）的Sample Entropy高于无冻结步行期间。2026年预印本涉及的则是冻结前转弯期间beta burst timing的Shannon entropy下降，以及Lempel-Ziv complexity升高。两者的分析算法、频段、时间阶段和比较基线均不同，不能视为同一种神经现象的相反解释，也不能仅凭指标方向相反就建立病理性与代偿性的竞争假说。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}
