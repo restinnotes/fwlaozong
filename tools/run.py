@@ -619,7 +619,7 @@ def cited_ids(tag):
     else:
         t = rd(OUT / tag / "report.md")
         for m in sorted(set(re.findall(r"PMID:\s*(\d{5,9})", t))): ids.append({"ref": "PMID:" + m, "pmid": m, "doi": "", "title": None})
-        for m in sorted(set(re.findall(r"DOI:\s*(10\.[^\s\]\),;]+)", t, re.I))): ids.append({"ref": "DOI:" + m, "pmid": "", "doi": m.rstrip("."), "title": None})
+        for m in sorted(set(re.findall(r"DOI:\s*(10\.[^\s\]\),;（|]+)", t, re.I))): ids.append({"ref": "DOI:" + m, "pmid": "", "doi": m.rstrip("."), "title": None})
     return ids
 
 
@@ -637,7 +637,7 @@ def cmd_bodycheck(args):
     t = rd(OUT / args.tag / "report.md")
     t = t.split("### 检索与筛选记录")[0]
     pm = sorted(set(re.findall(r"PMID[:：]\s*(\d{5,9})", t)))
-    do = sorted(set(x.rstrip(".)，。；") for x in re.findall(r"DOI[:：]\s*(10\.[^\s\]\)，。；,;]+)", t, re.I)))
+    do = sorted(set(x.rstrip(".)，。；") for x in re.findall(r"DOI[:：]\s*(10\.[^\s\]\)，。；,;（|]+)", t, re.I)))   # 遇全角括号/竖线停（正式版补注、表格）
     c = kb.connect(); src = kbtag(args)
     inkb = {r[0] for r in c.execute("SELECT DISTINCT pid FROM evidence WHERE run_id=?", (src,))}
     res = []
@@ -657,7 +657,7 @@ def cmd_bodycheck(args):
     eg = {p: grams(" ".join(v)) for p, v in evtext.items()}
     sim = lambda a, b: len(a & b) / max(1, len(a))
     mism = []
-    for m in re.finditer(r"(PMID|DOI)[:：]\s*([^\s\]\)，。；,;]+)", t, re.I):
+    for m in re.finditer(r"(PMID|DOI)[:：]\s*([^\s\]\)，。；,;（|]+)", t, re.I):
         pid = f"{m.group(1).upper()}:{m.group(2).rstrip('.').lower() if m.group(1).upper() == 'DOI' else m.group(2)}"
         if pid not in eg: continue
         end = m.start()
@@ -1602,13 +1602,15 @@ def cmd_report_sections(args):
         claim = json.dumps({k: cl.get(k) for k in ("cid", "text", "level", "status", "uncertainty", "independence", "independence_note") if cl.get(k)}, ensure_ascii=False)
         ind = json.dumps(packet.get(cl["cid"], {}), ensure_ascii=False) if packet else "（本版本没有独立性数据）"
         evtxt = "\n".join(evline(e) for e in evs); att = []
-        tpl = P("report_section").replace("{CID}", cl["cid"]).replace("{TITLE}", title)
+        # S6D：不限篇幅时每节 3–4 万字、全文 74 万字（P 值 742 处，但没人读得完）。S6D2 按证据条数给篇幅上限
+        budget = min(6000, 1500 + 30 * len(evs))
+        tpl = P("report_section").replace("{CID}", cl["cid"]).replace("{TITLE}", title).replace("{BUDGET}", str(budget))
         msg = fill(tpl, QUESTION=q, CLAIM=claim, EVIDENCE=evtxt, INDEPENDENCE=ind)
         if len(msg) > INLINE_MAX - 2000:
             f = secdir / f"{cl['cid']}_evidence.txt"; wr(f, evtxt); att = [f]
             msg = fill(tpl, QUESTION=q, CLAIM=claim, EVIDENCE=f"（共 {len(evs)} 条，见附件 {f.name}，请逐条读完再写）", INDEPENDENCE=ind)
         try:
-            if len(evs) > 60:   # 证据多的节分轮写（单次回答上限约 1770 秒，P2），各轮按顺序拼接
+            if False and len(evs) > 60:   # S6D2 有篇幅上限，不再分轮（S6D：证据多的节分轮写（单次回答上限约 1770 秒，P2），各轮按顺序拼接
                 msg += P("section_turns_note")
                 turns = llm.session(f"{args.tag}_{args.q}_sec_{cl['cid']}_{llm.pid(msg)}", msg, attach=att, model=G6, stage="report_section", max_turns=6)
                 ans = "\n\n".join(t.replace("【完成】", "").replace("【继续】", "").strip() for t in turns) if turns else None

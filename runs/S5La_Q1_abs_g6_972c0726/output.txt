@@ -1,0 +1,123 @@
+<escape>{
+  "standards": [
+    {
+      "n": 1,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "检索范围较广，覆盖了STN电生理、LFP、单单位、beta burst、皮层-STN耦合、认知负荷、刺激参数、PPN/SNr、动物模型及闭环DBS等方向。但数据库覆盖单一，且部分检索结果没有进入筛选。仅使用Europe PMC，未检索Embase、Scopus、Web of Science和Cochrane；检索式2—22均未完整取回命中结果。尤其动物模型检索式#16遗漏193条，影像学#15遗漏88条，认知任务#8遗漏81条。这使研究覆盖不能视为接近穷尽。",
+          "where": "“数据库：Europe PMC REST API，覆盖其收录的 PubMed/MEDLINE、PMC及预印本。”；“未检索：Embase、Scopus、Web of Science、Cochrane。”；“检索式2—22均存在命中数与实际取回数之间的差异。”"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "severe",
+          "what": "结构化附录存在明确的文献与证据错误映射。PMID:42185340的finding描述的是PIGD患者的parafascicular nucleus（Pf）投射通路微结构异常、FA/NDI降低及FOG严重程度关联。这实际上对应PMID:42183045《Microstructural alterations of parafascicular nucleus pathways associated with freezing of gait in Parkinson's disease》。而PMID:42185340真实对应的是《Machine learning-based optimization of dual subthalamic nucleus and substantia nigra targeting in deep brain stimulation》，研究内容是612条电极轨迹及STN-SNr双靶点定位，并非Pf通路DTI/NODDI研究。这是未被报告自身审计发现的数据来源错配，可能污染后续证据检索和知识关联。",
+          "where": "结构化附录JSON：ref为“PMID:42185340”的证据记录，其finding开头为“与健康对照相比，PIGD患者的Pf相关通路表现出显著微结构异常，包括FA和NDI降低、AD、MD和RD升高”。实际PMID记录及正确的Pf研究分别见【turn268045search2】【turn555924search0】。"
+        },
+        {
+          "severity": "moderate",
+          "what": "全文核查比例不足以支持所有证据具有相同的信息可靠性。1177篇纳入文献中，1074篇只有摘要，只有103篇获得全文。对这些摘要来源，无法充分核实实验细节、刺激参数、药物状态、统计模型、阴性结果及亚组分析。报告虽然明确披露了这一限制，也提出不应将摘要证据与全文证据等同，但部分跨研究结论及队列统计仍依赖不完整信息。",
+          "where": "“无全文，仅有摘要 | 1,074”；“全部1,177篇文献均进入证据提取”；“对只有摘要的研究，不应与全文审查过的原始实验赋予相同的信息完整度。”"
+        },
+        {
+          "severity": "minor",
+          "what": "对PMID:41131028的内部一致性审计可能过度判定。原文回归变量定义为(Walk-Turn)/Walk，PMC-STN coherence的回归系数为正；图注明确报告coherence增加预测较短的冻结事件。正文只说coherence增加能够预测冻结持续时间，并没有明确说增加预测更长的冻结。因此更准确的判断是正文没有充分说明关联方向，而不是正文与图注已经存在方向相反的结果。公式、系数和图注可以得到一致解释。报告据此完全搁置关联方向，略显过于谨慎。",
+          "where": "“PMID:41131028 | PMC-STN alpha coherence与冻结严重程度的关联方向在正文和图注之间不一致 | 不将其作为方向已确定的机制证据”；以及“PMC-STN coherence与冻结持续时间的预测方向存在正文与图注不一致”。原文方法和图注见【turn690042view0】【turn897327view0】。"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "报告对beta方向冲突、burst指标、皮层-STN耦合、药物-刺激交互、任务差异及因果识别问题进行了深入分析，竞争性假说也有区分性预测和反证条件。但若干重要原始研究虽然进入了结构化附录，没有真正进入正文的机制综合。尤其是PMID:39470410，该研究同步记录STN-LFP、拮抗肌EMG和步态运动学，直接观察到冻结前及冻结期间STN活动异常，以及冻结前STN-腓肠肌耦合增加，是检验H10（STN至肌肉输出时序失调）的重要证据。正文3.7却主要讨论30196050和36070366，没有充分整合该研究。另外，PMID:40709562纳入38名PD患者，其中12人实际观察到FOG，共263次冻结事件，研究STN活动与步态启动、即将发生的FOG及药物状态的关系。这对准备期机制和患者易感性非常重要，但没有进入正文相应的核心综合。其他2026年证据，如PMID:42236313、42571859、42239677，以及beta-burst entropy预印本，也主要停留在附录，未充分更新H4、H5、H9、H11/H12及C19的正文讨论。问题不是没有检索到这些文献，而是没有把已检索到的重要证据转化为完整的跨研究综合。",
+          "where": "正文3.7：“[PMID:36070366] 的4例转弯冻结研究发现，低beta活动与双侧膝伸肌共同激活同时出现”；正文3.2仅列出“[PMID:24361601]”和“[PMID:39884164]”作为主要患者层面研究。结构化附录则已经包含PMID:39470410和PMID:40709562的证据记录。两项原始研究的相关内容可核对【turn526767search1】【turn526767search3】。"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "verdict": "partly",
+      "issues": [
+        {
+          "severity": "moderate",
+          "what": "报告建立了Evidence、Study、Cohort、Claim、Hypothesis五层结构，也明确区分患者层面、事件层面和因果证据，这是明显优点。但结构化Claim与证据层级之间存在不完全一致。N1被定义为患者层面的易感性关联，正文实际重点讨论的直接患者层面研究是24361601和39884164；然而N1的结构化证据映射还包括31665229（术中VR冻结起始时的MUA记录）和42571859（步态周期锁定的事件级电生理及干预研究）。这两项属于事件级证据，不是患者层面的静息或基线易感性研究。将它们计入N1的4个独立队列，会使患者层面证据数量的含义不够清楚。此外，N2正文使用31665229和35310098作为实际冻结事件证据，但结构化N2映射没有完整纳入这些研究，反而包含30196050等不同章节的证据。说明Evidence到Claim的映射尚未完全遵循报告自己提出的证据分层原则。",
+          "where": "N1：“独立队列：4个；支持2个、反对0个、限定2个。”；正文3.2：“研究一：[PMID:24361601]”；“研究二：[PMID:39884164]”。结构化附录中N1还关联“[PMID:31665229] 采用术中虚拟现实步态诱发冻结”及“[PMID:42571859] 步态周期锁定的皮层-STN电生理观察及刺激干预研究”。"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "verdict": "not_testable",
+      "issues": []
+    },
+    {
+      "n": 6,
+      "verdict": "met",
+      "issues": []
+    },
+    {
+      "n": 7,
+      "verdict": "not_testable",
+      "issues": []
+    }
+  ],
+  "spot_checks": [
+    {
+      "claim": "C1：STN相关网络参与帕金森病FOG的发生或调节，并具有临床可干预性。",
+      "cited": "PMID:21370271；PMID:18413568；PMID:24396010；PMID:21997389；PMID:31505548；PMID:31665229。",
+      "verdict": "consistent",
+      "why": "临床干预证据支持STN刺激能够改变部分患者的实际冻结表现。13例患者的受试者内研究观察到刺激开启后FOG频率及持续时间下降；123例连续病例研究显示刺激在大多数术前左旋多巴反应性FOG患者中重现了改善；前瞻性对照研究也报告了部分临床获益。另一方面，门洞诱发研究发现DBS没有降低freeze-like events风险。人体电生理研究还显示冻结期间STN及皮层-STN网络活动发生变化。报告没有将临床刺激效果直接等同于内源性STN活动的致病作用，因此这一跨研究综合结论成立。【turn527412search3】【turn527412search1】【turn527412search0】【turn527412search5】【turn977661search3】【turn977661search2】"
+    },
+    {
+      "claim": "N1：患者层面的STN高beta及alpha活动与FOG易感性或严重程度存在初步关联。",
+      "cited": "PMID:24361601；PMID:39884164。",
+      "verdict": "consistent",
+      "why": "PMID:24361601纳入22名患者（14名FOG、8名非FOG），发现FOG组STN高beta功率更高，并且左旋多巴降低高beta活动时FOG受到抑制。PMID:39884164纳入23名患者（14名FOG、9名非FOG），静息态记录发现FOG组alpha功率和间歇性alpha活动幅度更高，部分alpha及高beta间歇性活动与FOG严重程度相关。两项研究均支持初步关联，但都不足以证明这些活动能够预测单次冻结或构成冻结病因。报告的措辞与原始结果相符。【turn527412search2】【turn527412search4】"
+    },
+    {
+      "claim": "N2：实际冻结事件的前期、开始、持续和恢复阶段可能伴随STN局部频谱、beta burst或皮层-STN耦合变化，但不存在统一的变化方向。",
+      "cited": "PMID:28890315；PMID:31505548；PMID:31665229；PMID:35310098；PMID:36070366；DOI:10.21203/rs.3.rs-9617843/v1。",
+      "verdict": "consistent",
+      "why": "原始研究确实呈现不同的事件级神经动态。31505548发现冻结前已经出现4–13 Hz皮层-STN去耦合，并持续至冻结期间、恢复后重新建立；31665229发现冻结起始时STN多单位活动及beta/theta节律短暂增强；35310098发现冻结期间STN beta功率升高；36070366的FOG子集中观察到冻结期间低beta活动增加。28890315则报告冻结期间alpha Sample Entropy增加，并在其他步行状态下观察到不同的beta表现。任务、信号定义和比较基线不同，报告没有将这些方向强行统一，判断合理。【turn977661search3】【turn977661search2】【turn977661search4】【turn977661search1】【turn977661search0】"
+    },
+    {
+      "claim": "N3：目前没有充分人体实验直接证明某种STN内源性神经活动是FOG发生的必要或充分原因。",
+      "cited": "PMID:21370271；PMID:31505548；PMID:31665229；PMID:36070366；PMID:40677701。",
+      "verdict": "consistent",
+      "why": "直接记录研究主要属于观察性电生理实验，能够确定神经活动与冻结在时间上的关联，但不能排除冻结本身、感觉反馈及共同运动指令对STN活动的反向影响。STN-DBS开关及参数干预也同时影响多个局部和远端神经结构，不能被视为对某一种内源性振荡的选择性操控。beta-burst驱动aDBS研究虽具有干预性质，也没有证明特定内源性活动是FOG发生的必要或充分条件。报告对此保持了正确的因果证据标准。【turn977661search2】【turn977661search3】【turn527412search3】【turn143974search1】"
+    },
+    {
+      "claim": "C2：STN-DBS能够改善部分PD患者的FOG，但不能概括为普遍有效或普遍有害。",
+      "cited": "PMID:21370271；PMID:18413568；PMID:24396010；PMID:21997389；PMID:37701817。",
+      "verdict": "consistent",
+      "why": "原始研究支持明显的患者异质性。18413568的123例研究显示多数术前左旋多巴反应性FOG患者能够获得改善，但仍有术后新发FOG；24396010的41例前瞻性对照研究报告部分患者改善，同时有45%的基线冻结患者术后仍存在FOG，且LED调整会影响组间结论；21997389则显示STN-DBS不能降低特定门洞诱发freeze-like events风险。报告区分了患者表型、任务及结局指标，没有将这些结果简化成普遍有效或普遍无效。【turn527412search1】【turn527412search0】【turn527412search5】"
+    },
+    {
+      "claim": "C13：STN beta与FOG有关，但beta平均功率、ERD和burst不是同一指标，不能视为统一的FOG生物标志。",
+      "cited": "PMID:24361601；PMID:28890315；PMID:31505548；PMID:35310098；PMID:36070366；DOI:10.21203/rs.3.rs-9617843/v1。",
+      "verdict": "consistent",
+      "why": "24361601报告FOG患者高beta功率较高；28890315报告Freezer在无冻结运动期间的beta功率与Non-Freezer不同，并发现实际冻结期间alpha复杂度变化；31505548在实际冻结期间没有发现STN局部beta功率显著变化，但发现低频皮层-STN去耦合；35310098报告冻结期间STN beta功率升高；36070366及2026转弯研究进一步提示低beta活动及ERD变化具有任务和比较基线依赖性。报告将平均功率、ERD、burst持续时间和时间分布分开处理，与原始研究一致。【turn527412search2】【turn977661search0】【turn977661search3】【turn977661search4】【turn977661search1】【turn706037view0】"
+    },
+    {
+      "claim": "C14：STN beta burst时间结构可能包含FOG相关动力学信息，但长burst持续时间不是普遍适用的冻结标志。",
+      "cited": "PMID:30196050；PMID:31505548；DOI:10.21203/rs.3.rs-9617843/v1。",
+      "verdict": "consistent",
+      "why": "30196050的12例研究支持Freezer存在较长beta burst，且部分实际冻结患者在SIP冻结期间burst持续时间增加；但31505548没有发现实际前向行走冻结期间beta burst持续时间显著增加。2026年13例转弯研究进一步显示，冻结转弯相对于站立时平均burst持续时间没有显著变化，但相对于正常步行存在向长burst（超过400 ms）重新分布的现象。报告区分平均持续时间和持续时间分布，正是这些结果所要求的处理方式。【turn143974search0】【turn977661search3】【turn706037view0】"
+    },
+    {
+      "claim": "C17：皮层-STN耦合与FOG相关，其方向依赖皮层来源、频段及步态阶段。",
+      "cited": "PMID:31505548；PMID:41131028；PMID:42571859。",
+      "verdict": "consistent",
+      "why": "31505548观察到冻结前及冻结期间低频皮层-STN去耦合；41131028在19名患者、87次冻结转弯中观察到TurnStart阶段PMC-STN alpha coherence增加，同时M1-STN alpha coherence下降，且正常转弯与冻结转弯的阶段性模式不同。这支持不同皮层来源、频段和时间阶段可能出现不同方向的变化。不过，coherence本身不能确定信息传递方向或因果作用。报告对C17的总体概括是成立的。【turn977661search3】【turn897327view0】【turn690042view0】"
+    }
+  ]
+}</escape>
