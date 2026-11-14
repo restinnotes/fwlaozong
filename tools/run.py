@@ -1443,6 +1443,7 @@ def cmd_cohorts2(args):
     vo = [(p, r["version_of"]) for p, r in papers.items() if r["version_of"]]
     conf = {(r["a"], r["b"]) for r in c.execute("SELECT a,b FROM paper_rel WHERE run_id=? AND relation='same_work'", (args.tag,))}
     print(f"程序的预印本—正式版候选 {len(vo)} 组，模型确认 same_work {sum(tuple(sorted(x)) in conf for x in vo)} 组", flush=True)
+    wr(OUT / args.tag / "rel_left.json", [g for g in left])
     if left: raise SystemExit(f"还有 {len(left)} 组关系没判完，重跑 cohorts2")
 
 
@@ -1517,6 +1518,8 @@ def cmd_independence(args):
     nev = len(_ev_papers(c, args)); nmeta = c.execute("SELECT COUNT(*) FROM paper_meta WHERE run_id=? AND kind!='unknown'", (args.tag,)).fetchone()[0]
     if nmeta < 0.95 * nev:   # 核对没做完时算出来的队列数偏少（缺的文献记 unknown、不计队列），不能拿去用
         raise SystemExit(f"独立性核对只完成 {nmeta}/{nev} 篇（<95%），先重跑 cohorts")
+    rl = OUT / args.tag / "rel_left.json"   # 关系没判完的组会被当成相互独立，队列数偏多（不保守），不能用
+    if rl.exists() and json.loads(rd(rl)): raise SystemExit(f"还有 {len(json.loads(rd(rl)))} 组文献关系没判完，先重跑 cohorts2")
     if not (OUT / args.tag / "synthesis_before_indep.json").exists(): wr(OUT / args.tag / "synthesis_before_indep.json", syn)
     else: syn = json.loads(rd(OUT / args.tag / "synthesis_before_indep.json"))
     packet = independence_packet(c, args, syn["claims"])
