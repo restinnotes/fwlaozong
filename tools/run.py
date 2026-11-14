@@ -1283,13 +1283,18 @@ def cmd_cohorts(args):
     groups = {}
     for p, r in root.items(): groups.setdefault(r, []).append(p)
     groups = sorted(groups.values(), key=len, reverse=True)
-    batches, cur = [], []
-    # 11-14：每批 30 篇时回答太长，13 批里 12 批在几百到 1700 多秒时被上游流式错误中断（短调用正常）。改为每批不超过 12 篇（大组仍不拆）
-    for g in groups:   # 组不拆开；小组拼批
-        if cur and len(cur) + len(g) > 12: batches.append(cur); cur = []
+    batches, cur = [], []   # 每批 (逐篇判断的文献, 同组其他文献——只给简要信息、供判断跨批关系)
+    # 11-14：每批 30 篇时回答太长，13 批里 12 批被上游流式错误中断；改 ≤12 篇后小批多数成功，但 13–32 篇的大组（不拆）
+    # 三遍都失败（2.5–4.6 万字）。大组按年份切成 ≤10 篇一块，每块附同组其他文献的简要信息，跨块关系仍能列出
+    for g in groups:
+        if len(g) > 12:
+            g = sorted(g, key=lambda p: (papers[p]["year"] or 0, p))
+            for i in range(0, len(g), 10): batches.append((g[i:i + 10], [x for x in g if x not in g[i:i + 10]]))
+            continue
+        if cur and len(cur) + len(g) > 12: batches.append((cur, [])); cur = []
         cur = cur + g
-    if cur: batches.append(cur)
-    batches = [b for b in batches if not set(b) <= done]
+    if cur: batches.append((cur, []))
+    batches = [b for b in batches if not set(b[0]) <= done]
     nmap = {}
     for r in c.execute("SELECT pid, n FROM evidence WHERE run_id=? AND question=?", (kbtag(args), args.q)):
         nmap.setdefault(r["pid"], [])
@@ -1301,14 +1306,21 @@ def cmd_cohorts(args):
                 + (f"\n已知版本关系: 预印本，正式版为 {r['version_of']}（标题相似，待确认）" if r["version_of"] else "")
                 + f"\n证据里记录的样本量: {' / '.join(nmap.get(p, [])) or '（无）'}\n摘要: {(r['abstract'] or '（无摘要）')[:900]}")
     norm = lambda x: x if ":" in str(x) else (f"PMID:{x}" if str(x).isdigit() else f"DOI:{str(x).lower()}")
-    def one(b):
-        msg = fill(P("cohort_resolve"), QUESTION=q, PAPERS="\n\n---\n\n".join(brief(p) for p in b))
-        try: return b, llm.parse_json(llm.call(f"{args.tag}_{args.q}_cohort_{llm.pid(msg)}", msg, model=G6, stage="cohort"))
-        except Exception as e: print("独立性核对失败（这批下次重跑）", e, flush=True); return b, None
+    def short(p):
+        r = papers[p]; a = [x.strip() for x in (r["authors"] or "").split(",") if x.strip()]
+        return f"- {p}｜{(a[0] if a else '')}…{(a[-1] if len(a) > 1 else '')}｜{r['year']}｜{(r['title'] or '')[:150]}｜样本量: {' / '.join(nmap.get(p, [])[:1]) or '（无）'}"
+    def one(bt):
+        b, ctx = bt
+        papers_txt = "\n\n---\n\n".join(brief(p) for p in b)
+        if ctx: papers_txt += ("\n\n【同组其他文献】（只给简要信息，不用逐篇判断，papers 里不要列它们；但如果上面某篇和它们是同一成果/同一队列/部分重叠/无法判断，"
+                               "要在 relations 里列出）\n" + "\n".join(short(p) for p in ctx))
+        msg = fill(P("cohort_resolve"), QUESTION=q, PAPERS=papers_txt)
+        try: return b, ctx, llm.parse_json(llm.call(f"{args.tag}_{args.q}_cohort_{llm.pid(msg)}", msg, model=G6, stage="cohort"))
+        except Exception as e: print("独立性核对失败（这批下次重跑）", e, flush=True); return b, ctx, None
     with ThreadPoolExecutor(WORKERS) as ex:
-        for b, d in ex.map(one, batches):
+        for b, ctx, d in ex.map(one, batches):
             if not d: continue
-            cc = kb.connect(); bs = set(b)
+            cc = kb.connect(); bs = set(b); bctx = bs | set(ctx)
             for it in d.get("papers", []):
                 p = norm(str(it.get("pid", "")).strip())
                 if p not in bs: continue
@@ -1317,7 +1329,7 @@ def cmd_cohorts(args):
                 cc.execute("INSERT OR REPLACE INTO paper_meta VALUES(?,?,?,?,?,?,?)", (p, args.tag, it.get("kind") or "other", n, it.get("center") or "", it.get("recruitment") or "", kb.now()))
             for it in d.get("relations", []):
                 a, b2, rel = norm(str(it.get("a", "")).strip()), norm(str(it.get("b", "")).strip()), it.get("relation")
-                if a in bs and b2 in bs and a != b2 and rel in ("same_work", "same_cohort", "partial_overlap", "unknown"):
+                if a in bctx and b2 in bctx and (a in bs or b2 in bs) and a != b2 and rel in ("same_work", "same_cohort", "partial_overlap", "unknown"):
                     a, b2 = sorted((a, b2))
                     cc.execute("INSERT OR REPLACE INTO paper_rel(a,b,run_id,relation,basis,source,at) VALUES(?,?,?,?,?,?,?)", (a, b2, args.tag, rel, it.get("basis") or "", "model", kb.now()))
                     kb.hist(cc, "paper_rel", f"{a}|{b2}", rel, it.get("basis") or "", args.tag)

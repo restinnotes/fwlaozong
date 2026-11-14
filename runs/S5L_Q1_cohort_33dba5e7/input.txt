@@ -1,0 +1,42 @@
+你在为一个自主科研系统做"研究独立性"核对。下面是一组可能相关的文献（程序按共同的第一作者或末位作者、以及已知的预印本—正式版关系把它们归在一组；归在一组不代表它们有关）。
+
+【研究问题】
+领域：功能神经外科（优先 DBS、STN、帕金森病冻结步态 FOG）。
+
+研究问题：比较"丘脑底核（STN）神经活动与帕金森病冻结步态（FOG）关系"的现有证据，分析研究结果之间的冲突及其可能来源，提出可区分、可检验的竞争性机制解释。
+
+【文献】（每篇给出编号、题目、作者、年份、期刊、类型、已知版本关系、摘要，以及从这篇提取到的证据里记录的样本量文字）
+pid: PMID:42829632
+题目: Local field potential biomarkers for adaptive deep brain stimulation in Parkinson's disease: A scoping review.
+作者: Khan RA, Imtiaz Ahamed MS, Thomas FJ, Bashier Mohamed BA, Balakumar B, Nasir M, Sarguroh Khan MAQ, Siraj HM.
+年份: 2026  期刊: Surgical neurology international  类型: review-article; Review; Journal Article
+证据里记录的样本量: 综述纳入73篇研究；其中直接涉及FOG及步态的研究数量未报告 / 未报告具体样本量 / 7例 / 20例
+摘要: BackgroundParkinson's disease (PD) is the second most common neurodegenerative disorder in the elderly. Conventionally, to combat the symptoms, drugs such as Levodopa and conventional deep brain stimulation (DBS) are routinely used. However, with time, the efficiency of both treatment modalities wears off and accompany side effects. Advocating for the need to explore subsequent management options such as adaptive DBS (aDBS) - a tailor-made DBS promising more personalized and favorable outcomes. The main objective of this review was to explore local field potentials (LFPs) as biomarkers for aDBS in PD. In addition, to investigate any correlations between the LFPs biomarkers, their physiology, and how they affect the quality of aDBS.MethodsA literature search was conducted using two primary electronic databases, PubMed and Scopus, which were examined from 2005 to April 2026. The inclusion 
+
+---
+
+pid: PMID:42968793
+题目: Superiority of dual-target STN-SNr deep brain stimulation towards gait in Parkinson's disease: a meta-analysis and meta-regression of randomised trials.
+作者: Haq RA, Berawi KN, Islami S, Muthmainah JS, Balqis GZ, Sulistyanto A, Medikanto AR, Keswani RR, Yunus M, Simanjuntak A, Wijayanto FPS.
+年份: 2026  期刊: BMJ connections. Surgery  类型: research-article; Journal Article
+证据里记录的样本量: 97（8项交叉RCT合计）
+摘要: ObjectivesTo evaluate the effectiveness of a dual-target deep brain stimulation (DBS) approach, stimulating both the subthalamic nucleus (STN) and the substantia nigra pars reticulata (SNr), and improvement of gait function and quality of life (QoL) in patients with Parkinson's disease (PD).DesignSystematic review and meta-analysis of crossover randomised controlled trials (RCTs).SettingA systematic search was conducted across PubMed, ScienceDirect and Scopus databases up to October 2025.ParticipantsAdults with advanced PD (disease duration >5 years) experiencing clinically significant and refractory freezing of gait (FoG) despite optimal dopaminergic therapy and standard STN-DBS.InterventionsDual-target DBS stimulation of the STN and SNr compared with conventional STN-only stimulation.Main outcome measuresFoG and QoL.ResultsEight crossover RCTs (n=97) were included. Combined STN+SNr res
+
+请做两件事。
+
+一、逐篇判断（每篇都要有一条）：
+- kind：primary_patient（报告了自己采集的患者数据，含对自己既有队列的再分析）/ primary_animal（动物实验）/ computational（计算模型、仿真，不含新患者数据）/ review_meta（综述、Meta 分析、指南、述评）/ other（病例报告也算 primary_patient；方案文件、会议摘要无数据的算 other）。
+- n_patients：这篇实际分析的帕金森病患者人数（整数）。只在摘要或样本量文字里写明时填；没写明、或只给了事件数/试次数/电极数时填 null。不要把冻结事件数、试次数、半球数当成人数。
+- center：研究中心或城市（看不出就空字符串）。
+- recruitment：招募或记录时间段（看不出就空字符串）。
+
+二、两两关系：只列出你认为不是"相互独立的不同研究"的那些对。可选关系：
+- same_work：同一学术成果的不同版本（预印本与正式版、会议摘要与全文）。
+- same_cohort：不同论文，但用的是同一批患者（同一队列的不同分析、二次分析、扩展随访）。
+- partial_overlap：患者部分重叠（例如同一中心同一时期、样本量一个包含另一个）。
+- unknown：有理由怀疑重叠（同一团队、同一中心、时间相近、样本量相近），但凭现有信息无法判断。
+没有列出的对，视为你判断它们相互独立（distinct）。不确定时宁可写 unknown，不要默认独立；但也不要只因同一作者就写 same_cohort——要有依据（同样的样本量和特征、论文自述使用既有数据、同一试验注册号、同一记录设备和时间段等）。basis 写具体依据。
+
+只输出一个 JSON：
+{"papers":[{"pid":"","kind":"","n_patients":null,"center":"","recruitment":""}],
+ "relations":[{"a":"","b":"","relation":"same_work|same_cohort|partial_overlap|unknown","basis":""}]}

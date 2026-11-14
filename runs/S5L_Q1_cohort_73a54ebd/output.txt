@@ -1,0 +1,108 @@
+<escape>{
+  "papers": [
+    {
+      "pid": "PMID:39223361",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:41557560",
+      "kind": "review_meta",
+      "n_patients": null,
+      "center": "",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:39530963",
+      "kind": "primary_patient",
+      "n_patients": 22,
+      "center": "Hospital Santa Marcelina, São Paulo, Brazil",
+      "recruitment": "2015-02至2018-07（手术期间；FF组10例，STN组12例）"
+    },
+    {
+      "pid": "PMID:39884164",
+      "kind": "primary_patient",
+      "n_patients": 23,
+      "center": "Hospital Santa Marcelina, São Paulo, Brazil",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:40117663",
+      "kind": "primary_patient",
+      "n_patients": 40,
+      "center": "University of Michigan, Ann Arbor, Michigan, USA",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:40274625",
+      "kind": "primary_patient",
+      "n_patients": 70,
+      "center": "University of Michigan, Ann Arbor, Michigan, USA",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:40648292",
+      "kind": "primary_patient",
+      "n_patients": 1,
+      "center": "Cleveland Clinic, Cleveland, Ohio, USA",
+      "recruitment": "个体采集日期未报告；对应受试者亦见NCT05103384研究（2022-07至2024-06）"
+    },
+    {
+      "pid": "PMID:42239677",
+      "kind": "primary_patient",
+      "n_patients": 5,
+      "center": "Cleveland Clinic, Cleveland, Ohio, USA",
+      "recruitment": "2022-07-22至2024-06-24（NCT05103384研究期间）"
+    },
+    {
+      "pid": "PMID:10634253",
+      "kind": "primary_patient",
+      "n_patients": 1,
+      "center": "University Hospital, Umeå, Sweden",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:10766889",
+      "kind": "primary_patient",
+      "n_patients": 10,
+      "center": "Groupe Hospitalier Pitié-Salpêtrière, Paris, France",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:16139421",
+      "kind": "primary_patient",
+      "n_patients": 67,
+      "center": "University of Kansas Medical Center, Kansas City, Kansas, USA",
+      "recruitment": ""
+    },
+    {
+      "pid": "PMID:17481921",
+      "kind": "primary_animal",
+      "n_patients": null,
+      "center": "University of Southern California, Los Angeles, California, USA",
+      "recruitment": ""
+    }
+  ],
+  "relations": [
+    {
+      "a": "PMID:39530963",
+      "b": "PMID:39884164",
+      "relation": "unknown",
+      "basis": "两篇研究均来自Hospital Santa Marcelina（São Paulo），有多位共同作者，包括Godinho、Rocha、Figueiredo和Carlotti，且使用相同的伦理审批编号CAAE: 62418316.9.2004.0066。39530963报告2015年2月至2018年7月期间15例STN-DBS手术，其中12例进入长期随访分析；39884164报告29例STN-DBS候选患者中23例获得了术中LFP记录。两篇研究的中心、伦理审批和患者来源高度相近，存在部分患者重叠的可能，但没有明确的患者交叉名单或论文自述证明二者使用同一批患者，因此判定为unknown，而非same_cohort。"
+    },
+    {
+      "a": "PMID:40117663",
+      "b": "PMID:40274625",
+      "relation": "unknown",
+      "basis": "均为University of Michigan的双侧STN-DBS患者回顾性研究，且共同作者包括Kelvin Chou和Parag Patil。40117663分析40例患者、72个植入物，使用VTA模型研究刺激位置与步态改善的关系；40274625从University of Michigan Surgical Therapies Improving Movement项目数据库提取70例患者，研究电极位置与轴性运动症状的关系。两篇研究具有相同研究中心、相近的手术人群和相关数据来源，40例队列可能是70例队列的子集或与其部分重叠，但现有资料没有提供明确的患者纳入时间、患者编号或队列交叉说明，不能确认partial_overlap或same_cohort。"
+    },
+    {
+      "a": "PMID:40648292",
+      "b": "PMID:42239677",
+      "relation": "partial_overlap",
+      "basis": "有明确的单个患者重叠证据。40648292报告一名65岁男性患者，PD病程6年，双侧STN-DBS术后约8个月，LEDD为1150 mg/day。42239677的5人队列中Subject 1具有相同特征：65岁男性、PD病程6年、DBS术后0.75年、LEDD 1150 mg/day，FOG-Q评分22。两篇研究均来自Cleveland Clinic，使用相同的Cleveland Clinic-Virtual Home Environment（CC-VHE）平台和Medtronic Percept STN-LFP记录系统。42239677还登记了临床试验NCT05103384。40648292的单例与42239677五人队列中的Subject 1高度确定为同一患者，因此属于部分重叠，而不是同一成果的不同版本。"
+    }
+  ]
+}</escape>
