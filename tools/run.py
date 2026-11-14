@@ -1344,6 +1344,92 @@ def cmd_cohorts(args):
     print(f"程序的预印本—正式版候选 {len(vo)} 组，模型确认 same_work {sum(tuple(sorted(x)) in conf for x in vo)} 组", flush=True)
 
 
+def cmd_cohorts2(args):
+    """11-14：cohorts（逐篇判断 + 组内关系一次做）对大组反复被上游中断（缩批两次仍失败，触发绊线），改为两步：
+    A 逐篇判断类型/患者数/中心/时间段（每批 12 篇，回答只列这些文献）；
+    B 组内关系（不带摘要，只给 A 的结果和作者、题目，一组一调用，回答只列非独立的对）。
+    旧方法已完成的组（全部成员都已有判断）关系沿用，不重做。"""
+    c = kb.connect(); q = question(args); papers = _ev_papers(c, args)
+    au = lambda p: [a.strip().rstrip(".").lower() for a in (papers[p]["authors"] or "").split(",") if a.strip()]
+    key = {}; pairs = [(p, r["version_of"]) for p, r in papers.items() if r["version_of"]]
+    for p in papers:
+        a = au(p)
+        for k in set(a[:1] + a[-2:]):
+            if len(k) > 3: key.setdefault(k, []).append(p)
+    for v in key.values(): pairs += [(v[0], x) for x in v[1:]]
+    root = _uf(list(papers), pairs); groups = {}
+    for p, r in root.items(): groups.setdefault(r, []).append(p)
+    groups = [sorted(g) for g in groups.values() if g]
+    meta = lambda: {r["pid"]: r for r in c.execute("SELECT * FROM paper_meta WHERE run_id=? AND kind!='unknown'", (args.tag,))}
+    rdp = OUT / args.tag / "rel_done.json"
+    rel_done = set(json.loads(rd(rdp))) if rdp.exists() else {g[0] for g in groups if all(p in meta() for p in g)}
+    wr(rdp, sorted(rel_done))
+    nmap = {}
+    for r in c.execute("SELECT pid, n FROM evidence WHERE run_id=? AND question=?", (kbtag(args), args.q)):
+        nmap.setdefault(r["pid"], [])
+        if r["n"] and r["n"] not in nmap[r["pid"]] and len(nmap[r["pid"]]) < 3: nmap[r["pid"]].append(r["n"][:120])
+    norm = lambda x: x if ":" in str(x) else (f"PMID:{x}" if str(x).isdigit() else f"DOI:{str(x).lower()}")
+    from concurrent.futures import as_completed
+    # A
+    todo = [p for p in papers if p not in meta()]
+    def brief(p):
+        r = papers[p]
+        return (f"pid: {p}\n题目: {r['title']}\n作者: {(r['authors'] or '')[:200]}\n年份: {r['year']}  期刊: {r['journal'] or ''}  类型: {r['pub_type'] or ''}"
+                + f"\n证据里记录的样本量: {' / '.join(nmap.get(p, [])) or '（无）'}\n摘要: {(r['abstract'] or '（无摘要）')[:900]}")
+    def a_one(b):
+        msg = fill(P("cohort_meta"), QUESTION=q, PAPERS="\n\n---\n\n".join(brief(p) for p in b))
+        try: return b, llm.parse_json(llm.call(f"{args.tag}_{args.q}_cmeta_{llm.pid(msg)}", msg, model=G6, stage="cohort_meta"))
+        except Exception as e: print("逐篇判断失败（下次重跑）", e, flush=True); return b, None
+    print(f"A 逐篇判断：待判 {len(todo)} 篇，{(len(todo) + 11) // 12} 批", flush=True)
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for f in as_completed([ex.submit(a_one, todo[i:i + 12]) for i in range(0, len(todo), 12)]):
+            b, d = f.result()
+            if not d: continue
+            cc = kb.connect(); bs = set(b)
+            for it in d.get("papers", []):
+                p = norm(str(it.get("pid", "")).strip())
+                if p not in bs: continue
+                n = it.get("n_patients"); n = int(n) if isinstance(n, (int, float)) or (isinstance(n, str) and n.isdigit()) else None
+                cc.execute("INSERT OR REPLACE INTO paper_meta VALUES(?,?,?,?,?,?,?)", (p, args.tag, it.get("kind") or "other", n, it.get("center") or "", it.get("recruitment") or "", kb.now()))
+            cc.commit(); cc.close()
+    m = meta()
+    print(f"A 完成：已判 {len(m)}/{len(papers)} 篇", flush=True)
+    # B
+    gtodo = [g for g in groups if len(g) > 1 and g[0] not in rel_done]
+    def line(p):
+        r = papers[p]; x = m.get(p)
+        return "｜".join([p, (r["authors"] or "")[:200], str(r["year"]), (r["journal"] or "")[:60], (r["title"] or "")[:200],
+                         x["kind"] if x else "未判", str(x["n_patients"]) if x and x["n_patients"] is not None else "不明",
+                         (x["center"] if x else "") or "—", (x["recruitment"] if x else "") or "—", " / ".join(nmap.get(p, [])[:2]) or "—",
+                         f"预印本，候选正式版 {r['version_of']}（标题相似，待确认）" if r["version_of"] else "—"])
+    def b_one(g):
+        msg = fill(P("cohort_rel"), QUESTION=q, PAPERS="\n".join(line(p) for p in g))
+        try: return g, llm.parse_json(llm.call(f"{args.tag}_{args.q}_crel_{llm.pid(msg)}", msg, model=G6, stage="cohort_rel"))
+        except Exception as e: print("组内关系失败（下次重跑）", e, flush=True); return g, None
+    print(f"B 组内关系：待判 {len(gtodo)} 组（最大 {max((len(g) for g in gtodo), default=0)} 篇）", flush=True)
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for f in as_completed([ex.submit(b_one, g) for g in gtodo]):
+            g, d = f.result()
+            if d is None: continue
+            cc = kb.connect(); gs = set(g)
+            for it in d.get("relations", []):
+                a, b2, rel = norm(str(it.get("a", "")).strip()), norm(str(it.get("b", "")).strip()), it.get("relation")
+                if a in gs and b2 in gs and a != b2 and rel in ("same_work", "same_cohort", "partial_overlap", "unknown"):
+                    a, b2 = sorted((a, b2))
+                    cc.execute("INSERT OR REPLACE INTO paper_rel(a,b,run_id,relation,basis,source,at) VALUES(?,?,?,?,?,?,?)", (a, b2, args.tag, rel, it.get("basis") or "", "model_rel", kb.now()))
+                    kb.hist(cc, "paper_rel", f"{a}|{b2}", rel, it.get("basis") or "", args.tag)
+            cc.commit(); cc.close()
+            rel_done.add(g[0]); wr(rdp, sorted(rel_done))
+    from collections import Counter
+    left = [g for g in groups if len(g) > 1 and g[0] not in rel_done]
+    print("文献类型", dict(Counter(r["kind"] for r in meta().values())), "关系", dict(Counter(r[0] for r in c.execute("SELECT relation FROM paper_rel WHERE run_id=?", (args.tag,)))),
+          f"未完成的组 {len(left)}", flush=True)
+    vo = [(p, r["version_of"]) for p, r in papers.items() if r["version_of"]]
+    conf = {(r["a"], r["b"]) for r in c.execute("SELECT a,b FROM paper_rel WHERE run_id=? AND relation='same_work'", (args.tag,))}
+    print(f"程序的预印本—正式版候选 {len(vo)} 组，模型确认 same_work {sum(tuple(sorted(x)) in conf for x in vo)} 组", flush=True)
+    if left: raise SystemExit(f"还有 {len(left)} 组关系没判完，重跑 cohorts2")
+
+
 def independence_packet(c, args, claims):
     """每条结论的独立性计数：全部由程序按 paper_rel 计算（顾问：不让模型从几百条证据里估）。"""
     papers = _ev_papers(c, args)
