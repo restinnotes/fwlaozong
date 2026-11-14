@@ -1555,6 +1555,68 @@ def cmd_independence(args):
     print(f"独立性修订：{nchg}/{len(syn['claims'])} 条结论改了措辞或强度；附表已写", flush=True)
 
 
+def cmd_report_sections(args):
+    """S6D（11-14 用户判定：同学说 S3 "细节有点缺乏"）：整份报告一次写完时 25 条结论、890 条证据被压成概括句
+    （S3d3 正文引用 52 篇 / 库里 352 篇、P 值 3 处；B0 One-shot P 值 12 处）。改为每条结论一节、一节一调用，
+    每节带这条结论的全部证据行；框架（摘要、证据全景、假说、缺口）另一调用；程序拼接。"""
+    c = kb.connect(); syn = json.loads(rd(syn_path(args))); q = question(args)
+    ev = {r["eid"]: r for r in c.execute("SELECT e.*, p.title, p.year, p.authors FROM evidence e JOIN papers p USING(pid) WHERE e.run_id=?", (kbtag(args),))}
+    pkp = OUT / args.tag / "independence_packet.json"
+    packet = {k["cid"]: k for k in json.loads(rd(pkp))} if pkp.exists() else {}
+    secdir = OUT / args.tag / "sections"; secdir.mkdir(parents=True, exist_ok=True)
+    rel_cn = {"supp": "支持", "cont": "反对", "qual": "限定"}
+    def evline(e):
+        r = ev[e["eid"]]
+        return (f"[{e['eid']}] 关系:{rel_cn.get((e.get('relation') or '')[:4], e.get('relation'))} | 文献 {r['pid']}（{(r['authors'] or '').split(',')[0]} {r['year']}，{r['title']}）"
+                f" | 设计:{r['design']} | 对象:{r['population']} | n:{r['n']} | 条件:{r['condition']} | 测量:{r['measure']} | 发现:{r['finding']} | 效应:{r['effect']} | 局限:{r['limitations']} | 依据:{r['basis']}")
+    def one(cl):
+        evs = [e for e in cl.get("evidence", []) if e["eid"] in ev]
+        order = {"supp": 0, "cont": 1, "qual": 2}
+        evs.sort(key=lambda e: (order.get((e.get("relation") or "")[:4], 3), ev[e["eid"]]["pid"]))
+        title = re.split(r"[。；;，,]", cl["text"])[0][:40]
+        claim = json.dumps({k: cl.get(k) for k in ("cid", "text", "level", "status", "uncertainty", "independence", "independence_note") if cl.get(k)}, ensure_ascii=False)
+        ind = json.dumps(packet.get(cl["cid"], {}), ensure_ascii=False) if packet else "（本版本没有独立性数据）"
+        evtxt = "\n".join(evline(e) for e in evs); att = []
+        tpl = P("report_section").replace("{CID}", cl["cid"]).replace("{TITLE}", title)
+        msg = fill(tpl, QUESTION=q, CLAIM=claim, EVIDENCE=evtxt, INDEPENDENCE=ind)
+        if len(msg) > INLINE_MAX - 2000:
+            f = secdir / f"{cl['cid']}_evidence.txt"; wr(f, evtxt); att = [f]
+            msg = fill(tpl, QUESTION=q, CLAIM=claim, EVIDENCE=f"（共 {len(evs)} 条，见附件 {f.name}，请逐条读完再写）", INDEPENDENCE=ind)
+        try:
+            if len(evs) > 60:   # 证据多的节分轮写（单次回答上限约 1770 秒，P2），各轮按顺序拼接
+                msg += P("section_turns_note")
+                turns = llm.session(f"{args.tag}_{args.q}_sec_{cl['cid']}_{llm.pid(msg)}", msg, attach=att, model=G6, stage="report_section", max_turns=6)
+                ans = "\n\n".join(t.replace("【完成】", "").replace("【继续】", "").strip() for t in turns) if turns else None
+            else:
+                ans = llm.call(f"{args.tag}_{args.q}_sec_{cl['cid']}_{llm.pid(msg)}", msg, attach=att, model=G6, stage="report_section")
+        except Exception as e:
+            print(f"  {cl['cid']} 一节失败", e, flush=True); return cl["cid"], None
+        if not ans: print(f"  {cl['cid']} 一节无回答", flush=True); return cl["cid"], None
+        wr(secdir / f"{cl['cid']}.md", ans); return cl["cid"], ans
+    with ThreadPoolExecutor(WORKERS) as ex:
+        secs = dict(ex.map(one, syn["claims"]))
+    miss = [k for k, v in secs.items() if not v]
+    if miss: raise SystemExit(f"有 {len(miss)} 节没写成：{miss}，重跑（已写成的走缓存）")
+    claims_txt = json.dumps([{k: cl.get(k) for k in ("cid", "text", "status", "independence") if cl.get(k)} for cl in syn["claims"]], ensure_ascii=False)
+    msg = fill(P("report_frame"), QUESTION=q, STANDARD=standard(), CLAIMS=claims_txt,
+               HYPOTHESES=json.dumps(syn["hypotheses"], ensure_ascii=False), GAPS=json.dumps(syn.get("gaps", []), ensure_ascii=False))
+    if len(msg) > INLINE_MAX: raise SystemExit(f"框架提示词超长 {len(msg)}")
+    fr = llm.call(f"{args.tag}_{args.q}_frame_{llm.pid(msg)}", msg, model=G6, stage="report_frame")
+    parts = dict(re.findall(r"=====(开头|证据全景|假说|缺口与下一步)=====\s*(.*?)(?=\n=====(?:开头|证据全景|假说|缺口与下一步)=====|\Z)", fr, re.S))
+    if len(parts) < 4: print(f"  框架只拆出 {list(parts)}，其余原样放在开头", flush=True)
+    body = [parts.get("开头", fr if len(parts) < 4 else ""), parts.get("证据全景", ""), "## 分结论的证据与综合"]
+    body += [secs[cl["cid"]].strip() for cl in syn["claims"]]
+    body += [parts.get("假说", ""), parts.get("缺口与下一步", "")]
+    ans = "\n\n".join(x.strip() for x in body if x and x.strip())
+    if args.with_methods:
+        methods = build_methods(c, args); wr(OUT / args.tag / "methods.md", methods); ans += "\n\n" + methods + "\n"
+    itab = OUT / args.tag / "independence_table.md"
+    if itab.exists(): ans = ans.rstrip() + "\n\n" + rd(itab) + "\n"
+    wr(OUT / args.tag / "report.md", ans)
+    export_appendix(c, args)
+    print(args.tag, "分节报告", len(ans), "字，", len(secs), "节", flush=True)
+
+
 def cmd_check(args):
     import subprocess
     for a, exe in llm.CLI.items():
