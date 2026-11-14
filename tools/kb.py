@@ -1,5 +1,8 @@
 """分层知识库（SQLite，kb/kb.sqlite3）。
 
+独立性层（S5L，Ledger 3.0）：paper_meta 每篇文献的类型和患者数；paper_rel 两篇文献的关系（same_work / same_cohort /
+partial_overlap / unknown；没记录的视为独立），由模型判断、带依据，review_status 只能人工改。
+
 层次（标准第 4 条）：文献 papers → 证据 evidence（单项研究的具体发现，带研究条件和出处）
 → 结论 claims（跨研究综合，带证据关系 claim_evidence）→ 假说 hypotheses（机制解释，带预测和反证条件，关联结论）。
 每次写入都记一行 history，旧结论不删，用 superseded_by 指向新版本（标准第 5 条：可修订、可回溯）。
@@ -30,6 +33,10 @@ CREATE TABLE IF NOT EXISTS hypotheses(
   hid TEXT PRIMARY KEY, question TEXT, name TEXT, text TEXT, predictions TEXT, falsifiers TEXT, status TEXT,
   superseded_by TEXT, run_id TEXT, at TEXT);
 CREATE TABLE IF NOT EXISTS hypothesis_claims(hid TEXT, cid TEXT, relation TEXT, PRIMARY KEY(hid, cid));
+CREATE TABLE IF NOT EXISTS paper_meta(pid TEXT, run_id TEXT, kind TEXT, n_patients INTEGER, center TEXT, recruitment TEXT,
+  at TEXT, PRIMARY KEY(pid, run_id));
+CREATE TABLE IF NOT EXISTS paper_rel(a TEXT, b TEXT, run_id TEXT, relation TEXT, basis TEXT, source TEXT, at TEXT,
+  review_status TEXT DEFAULT 'pending', PRIMARY KEY(a, b, run_id));
 CREATE TABLE IF NOT EXISTS history(id INTEGER PRIMARY KEY AUTOINCREMENT, tbl TEXT, key TEXT, action TEXT,
   detail TEXT, run_id TEXT, at TEXT);
 """

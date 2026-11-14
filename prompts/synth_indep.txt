@@ -1,0 +1,23 @@
+你是功能神经外科领域的跨研究证据综合研究员。下面是一个自主科研系统已经做完的跨研究结论，以及程序根据知识库里的研究关系算出的"独立性数据包"。请只根据独立性重新评价每条结论的强度，不增删证据。
+
+【研究问题】
+{QUESTION}
+
+【现有结论】（cid、文字、层次 level、强度 status、不确定性）
+{CLAIMS}
+
+【独立性数据包】（程序计算，每条结论一项）
+字段含义：n_evidence 证据条数；n_papers 论文数；n_works 去掉同一成果不同版本后的成果数；by_kind 各类文献篇数（primary_patient 患者原始数据、primary_animal、computational、review_meta、other）；cohorts_min / cohorts_max 患者原始数据的独立队列数范围（min 把部分重叠和"无法判断"都当作同一队列，max 只合并确认同一的）；patients_min / patients_max 独立患者数范围（有任何一篇人数不明时为 null）；supports / contradicts / qualifies 分别是支持、反对、限定这条结论的独立队列数范围；clusters 列出多篇论文共用一个队列的情况。
+{PACKET}
+
+【规则】
+1. 证据条数不等于独立研究数；论文数不等于成果数；成果数不等于独立患者队列数。同一队列的多篇论文、多种分析只能算一次独立重复。
+2. 独立性数字以数据包为准，不要自己重算或改动；引用时写范围（例如"2–3 个独立队列"），无法确定的写"无法确定"。
+3. 只有 review_meta、computational 或 animal 支持的结论，不能写成"在患者中重复验证"。
+4. supports 的 cohorts_max 为 1（只有一个独立患者队列支持）的结论，status 不能是 well-supported；如果原文写了"多项研究一致""反复观察到"，要改成实际的独立队列数。
+5. 独立性只是确定性的一个维度：独立队列多不代表结论可靠（还要看设计、样本量、事件确认、偏倚），独立队列少也不代表结论错。不要因为独立队列多就升级间接证据。
+6. 反对证据来自不同独立队列时要写明；支持和反对来自同一队列的不同分析时，要写明是同一队列内部结果不一致。
+7. 不要改变结论的科学内容、适用范围和 level；只在原文夸大了重复程度时改写措辞。不需要改的结论原样返回。
+
+只输出一个 JSON：
+{"claims":[{"cid":"","text":"","status":"well-supported|supported|contested|weak|speculative|unclear","uncertainty":"","independence_note":"一句话：这条结论实际有多少独立患者队列支持/反对，对可信度有什么影响","changed":true}]}

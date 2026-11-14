@@ -504,7 +504,7 @@ def cmd_report(args):
         tbl = OUT / args.tag / "evidence_table.txt"
         wr(tbl, "\n".join(f"[{k}] 文献 {ev[k]['pid']}（{(ev[k]['authors'] or '').split(',')[0]} {ev[k]['year']}，{ev[k]['title']}）| 设计:{ev[k]['design']} | 对象:{ev[k]['population']} | n={ev[k]['n']} | 条件:{ev[k]['condition']} | 测量:{ev[k]['measure']} | 发现:{ev[k]['finding']} | 效应:{ev[k]['effect']} | 局限:{ev[k]['limitations']} | 依据:{ev[k]['basis']}"
                           for k in used if k in ev))
-        compact = {"claims": [{**{x: cl.get(x) for x in ("cid", "text", "level", "status", "uncertainty")},
+        compact = {"claims": [{**{x: cl.get(x) for x in ("cid", "text", "level", "status", "uncertainty", "independence_note", "independence") if cl.get(x) is not None},
                                "evidence": [f"{e['eid']}:{(e.get('relation') or '')[:4]}" for e in cl.get("evidence", [])]} for cl in syn["claims"]],
                    "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}
         kbt = ("## 结论与假说（每条结论的 evidence 是证据编号:关系；证据全文见附件 evidence_table.txt，"
@@ -517,7 +517,7 @@ def cmd_report(args):
         syn = json.loads(rd(syn_path(args)))
         cmap = OUT / args.tag / "claim_evidence_map.md"
         wr(cmap, "\n".join(f"{cl['cid']}: " + "; ".join(f"{e['eid']}:{(e.get('relation') or '')[:4]}" for e in cl.get("evidence", [])) for cl in syn["claims"]))
-        inline = {"claims": [{k: cl.get(k) for k in ("cid", "text", "level", "status", "uncertainty", "applies_to")} for cl in syn["claims"]],
+        inline = {"claims": [{k: cl.get(k) for k in ("cid", "text", "level", "status", "uncertainty", "applies_to", "independence_note", "independence") if cl.get(k) is not None} for cl in syn["claims"]],
                   "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}
         kbt3 = ("## 结论（文字和强度；每条结论的证据编号见附件 claim_evidence_map.md，证据内容见附件 evidence_table.txt）、假说、缺口\n"
                 + json.dumps(inline, ensure_ascii=False))
@@ -541,9 +541,15 @@ def cmd_report(args):
         msg += ("\n\n【检索与筛选记录（程序根据运行日志生成，数字准确）】\n" + inline +
                 "\n\n写报告时：开头写明本报告的类型和边界（结构化叙述性证据综合，不是 PRISMA 系统综述）；方法一节只能依据上面的记录写，"
                 "不得添加没有使用的数据库、步骤或数字；记录里检索被截断的地方要如实说明对覆盖的影响。程序会把这份记录原样附在报告末尾。")
+    itab = OUT / args.tag / "independence_table.md"
+    if itab.exists():   # S5L：独立性计数由程序算，正文只能引用、不能改；表原样附在报告末尾
+        msg += ("\n\n【独立性】每条结论的 independence 字段是程序根据知识库研究关系算出的独立患者队列数和患者数范围（同一张表会原样附在报告末尾）。"
+                "写每条核心结论时说明它实际有几个独立患者队列支持、几个反对；数字只能照抄，不能自己算或改；"
+                "同一队列的多篇论文不能写成“多项研究重复验证”；范围就写范围，null 写“无法确定”。")
     if len(msg) > INLINE_MAX: raise RuntimeError(f"写报告提示词仍超长 {len(msg)}")
     ans = llm.call(f"{args.tag}_{args.q}_report_{llm.pid(msg)}", msg, attach=att, model=G6, stage="report")
     if methods: ans = ans.rstrip() + "\n\n" + methods + "\n"
+    if itab.exists(): ans = ans.rstrip() + "\n\n" + rd(itab) + "\n"
     wr(OUT / args.tag / "report.md", ans)
     export_appendix(c, args)
     print(args.tag, "报告", len(ans), "字", flush=True)
@@ -1241,6 +1247,191 @@ def cmd_stats(args):
     for s in cnt: print(f"  {s:<18} 调用 {cnt[s]:>4}  失败 {fail[s]:>3}  合计 {secs[s] / 3600:.1f} 小时")
     lp = ROOT / "runs" / "luna_calls.jsonl"
     print("luna 调用", len(lp.read_text(encoding="utf-8").splitlines()) if lp.exists() else 0, "次")
+
+
+# ---------------- S5L：独立性层（顾问 Evidence Ledger 3.0，见试验记录 S3c 交回） ----------------
+
+def _uf(pids, pairs):
+    par = {p: p for p in pids}
+    def f(x):
+        while par[x] != x: par[x] = par[par[x]]; x = par[x]
+        return x
+    for a, b in pairs:
+        if a in par and b in par: par[f(a)] = f(b)
+    return {p: f(p) for p in pids}
+
+
+def _ev_papers(c, args):
+    rows = list(c.execute("SELECT p.* FROM papers p WHERE pid IN (SELECT DISTINCT pid FROM evidence WHERE run_id=? AND question=?)", (kbtag(args), args.q)))
+    return {r["pid"]: r for r in rows}
+
+
+def cmd_cohorts(args):
+    """候选分组只由程序产生（共同第一/末两位作者、version_of）；组内关系和每篇的类型、患者数由模型判断并给依据。
+    标题相似度只作候选（顾问要求），不自动算同一研究。"""
+    c = kb.connect(); q = question(args); papers = _ev_papers(c, args)
+    done = {r[0] for r in c.execute("SELECT pid FROM paper_meta WHERE run_id=?", (args.tag,))}
+    au = lambda p: [a.strip().rstrip(".").lower() for a in (p["authors"] or "").split(",") if a.strip()]
+    key = {}
+    pairs = [(p, r["version_of"]) for p, r in papers.items() if r["version_of"]]
+    for p, r in papers.items():
+        a = au(r)
+        for k in set(a[:1] + a[-2:]):
+            if len(k) > 3: key.setdefault(k, []).append(p)
+    for v in key.values(): pairs += [(v[0], x) for x in v[1:]]
+    root = _uf(list(papers), pairs)
+    groups = {}
+    for p, r in root.items(): groups.setdefault(r, []).append(p)
+    groups = sorted(groups.values(), key=len, reverse=True)
+    batches, cur = [], []
+    for g in groups:   # 组不拆开；小组拼批，每批不超过 30 篇
+        if cur and len(cur) + len(g) > 30: batches.append(cur); cur = []
+        cur = cur + g
+    if cur: batches.append(cur)
+    batches = [b for b in batches if not set(b) <= done]
+    nmap = {}
+    for r in c.execute("SELECT pid, n FROM evidence WHERE run_id=? AND question=?", (kbtag(args), args.q)):
+        nmap.setdefault(r["pid"], [])
+        if r["n"] and r["n"] not in nmap[r["pid"]] and len(nmap[r["pid"]]) < 4: nmap[r["pid"]].append(r["n"][:160])
+    print(f"独立性核对：{len(papers)} 篇有证据的文献，候选组 {len(groups)} 个（单篇 {sum(len(g) == 1 for g in groups)}），{len(batches)} 批", flush=True)
+    def brief(p):
+        r = papers[p]
+        return (f"pid: {p}\n题目: {r['title']}\n作者: {(r['authors'] or '')[:300]}\n年份: {r['year']}  期刊: {r['journal'] or ''}  类型: {r['pub_type'] or ''}"
+                + (f"\n已知版本关系: 预印本，正式版为 {r['version_of']}（标题相似，待确认）" if r["version_of"] else "")
+                + f"\n证据里记录的样本量: {' / '.join(nmap.get(p, [])) or '（无）'}\n摘要: {(r['abstract'] or '（无摘要）')[:900]}")
+    norm = lambda x: x if ":" in str(x) else (f"PMID:{x}" if str(x).isdigit() else f"DOI:{str(x).lower()}")
+    def one(b):
+        msg = fill(P("cohort_resolve"), QUESTION=q, PAPERS="\n\n---\n\n".join(brief(p) for p in b))
+        try: return b, llm.parse_json(llm.call(f"{args.tag}_{args.q}_cohort_{llm.pid(msg)}", msg, model=G6, stage="cohort"))
+        except Exception as e: print("独立性核对失败（这批下次重跑）", e, flush=True); return b, None
+    with ThreadPoolExecutor(WORKERS) as ex:
+        for b, d in ex.map(one, batches):
+            if not d: continue
+            cc = kb.connect(); bs = set(b)
+            for it in d.get("papers", []):
+                p = norm(str(it.get("pid", "")).strip())
+                if p not in bs: continue
+                n = it.get("n_patients")
+                n = int(n) if isinstance(n, (int, float)) or (isinstance(n, str) and n.isdigit()) else None
+                cc.execute("INSERT OR REPLACE INTO paper_meta VALUES(?,?,?,?,?,?,?)", (p, args.tag, it.get("kind") or "other", n, it.get("center") or "", it.get("recruitment") or "", kb.now()))
+            for it in d.get("relations", []):
+                a, b2, rel = norm(str(it.get("a", "")).strip()), norm(str(it.get("b", "")).strip()), it.get("relation")
+                if a in bs and b2 in bs and a != b2 and rel in ("same_work", "same_cohort", "partial_overlap", "unknown"):
+                    a, b2 = sorted((a, b2))
+                    cc.execute("INSERT OR REPLACE INTO paper_rel(a,b,run_id,relation,basis,source,at) VALUES(?,?,?,?,?,?,?)", (a, b2, args.tag, rel, it.get("basis") or "", "model", kb.now()))
+                    kb.hist(cc, "paper_rel", f"{a}|{b2}", rel, it.get("basis") or "", args.tag)
+            for p in b:   # 模型漏判的文献：类型记 unknown（不计入患者队列，也不当成独立）
+                cc.execute("INSERT OR IGNORE INTO paper_meta(pid,run_id,kind,at) VALUES(?,?,?,?)", (p, args.tag, "unknown", kb.now()))
+            cc.commit(); cc.close()
+    from collections import Counter
+    print("文献类型", dict(Counter(r[0] for r in c.execute("SELECT kind FROM paper_meta WHERE run_id=?", (args.tag,)))),
+          "关系", dict(Counter(r[0] for r in c.execute("SELECT relation FROM paper_rel WHERE run_id=?", (args.tag,)))), flush=True)
+    vo = [(p, r["version_of"]) for p, r in papers.items() if r["version_of"]]
+    conf = {(r["a"], r["b"]) for r in c.execute("SELECT a,b FROM paper_rel WHERE run_id=? AND relation='same_work'", (args.tag,))}
+    print(f"程序的预印本—正式版候选 {len(vo)} 组，模型确认 same_work {sum(tuple(sorted(x)) in conf for x in vo)} 组", flush=True)
+
+
+def independence_packet(c, args, claims):
+    """每条结论的独立性计数：全部由程序按 paper_rel 计算（顾问：不让模型从几百条证据里估）。"""
+    papers = _ev_papers(c, args)
+    meta = {r["pid"]: r for r in c.execute("SELECT * FROM paper_meta WHERE run_id=?", (args.tag,))}
+    rels = list(c.execute("SELECT a,b,relation,basis FROM paper_rel WHERE run_id=?", (args.tag,)))
+    ps = list(papers)
+    works = _uf(ps, [(r["a"], r["b"]) for r in rels if r["relation"] == "same_work"])
+    cmax = _uf(ps, [(r["a"], r["b"]) for r in rels if r["relation"] in ("same_work", "same_cohort")])
+    cmin = _uf(ps, [(r["a"], r["b"]) for r in rels])
+    e2p = {r["eid"]: r["pid"] for r in c.execute("SELECT eid, pid FROM evidence WHERE run_id=?", (kbtag(args),))}
+    kind = lambda p: (meta[p]["kind"] if p in meta else "unknown")
+    def cohorts(pids):
+        prim = [p for p in pids if kind(p) == "primary_patient"]
+        if not prim: return {"min": 0, "max": 0, "patients_min": 0, "patients_max": 0}
+        def pat(part):
+            cl = {}
+            for p in prim: cl.setdefault(part[p], []).append(meta[p]["n_patients"])
+            if any(n is None for v in cl.values() for n in v): return None
+            return sum(max(v) for v in cl.values())
+        return {"min": len({cmin[p] for p in prim}), "max": len({cmax[p] for p in prim}), "patients_min": pat(cmin), "patients_max": pat(cmax)}
+    out = []
+    from collections import Counter
+    for cl in claims:
+        evs = [e for e in cl.get("evidence", []) if e["eid"] in e2p]
+        pids = list(dict.fromkeys(e2p[e["eid"]] for e in evs))
+        byrel = {r: list(dict.fromkeys(e2p[e["eid"]] for e in evs if (e.get("relation") or "").startswith(r[:4]))) for r in ("supports", "contradicts", "qualifies")}
+        co = cohorts(pids)
+        shared = {}
+        for p in pids:
+            if kind(p) == "primary_patient": shared.setdefault(cmin[p], []).append(p)
+        clusters = []
+        for v in shared.values():
+            if len(v) < 2: continue
+            vs = set(v)
+            clusters.append({"papers": v, "relations": [f"{r['a']}~{r['b']}:{r['relation']}" for r in rels if r["a"] in vs and r["b"] in vs]})
+        out.append({"cid": cl["cid"], "n_evidence": len(evs), "n_papers": len(pids), "n_works": len({works[p] for p in pids}),
+                    "by_kind": dict(Counter(kind(p) for p in pids)), "cohorts_min": co["min"], "cohorts_max": co["max"],
+                    "patients_min": co["patients_min"], "patients_max": co["patients_max"],
+                    **{r: _rng(cohorts(v)["min"], cohorts(v)["max"]) for r, v in byrel.items()},
+                    "clusters": clusters})
+    return out
+
+
+def _rng(a, b):
+    if a is None or b is None: return "无法确定"
+    return str(a) if a == b else f"{a}–{b}"
+
+
+def independence_table(packet, claims):
+    txt = {cl["cid"]: cl["text"] for cl in claims}
+    L = ["### 附表：各结论的研究独立性（程序根据知识库研究关系计算，数字未经模型改写）", "",
+         "独立队列数给范围：下限把\"部分重叠\"和\"无法判断是否重叠\"都当作同一队列，上限只合并确认同一的。患者数在任何一篇人数不明时记\"无法确定\"。"
+         "只统计报告自有患者数据的原始研究；综述、Meta 分析、动物和计算研究另列篇数，不计入队列。", "",
+         "| 结论 | 证据条数 | 论文 | 成果（去版本重复） | 患者原始研究 / 综述 / 动物 / 计算 | 独立患者队列 | 独立患者数 | 支持 / 反对 / 限定的独立队列 |",
+         "|---|---|---|---|---|---|---|---|"]
+    for k in packet:
+        b = k["by_kind"]
+        L.append(f"| {k['cid']}：{txt.get(k['cid'], '')[:60].replace('|', '/')} | {k['n_evidence']} | {k['n_papers']} | {k['n_works']} | "
+                 f"{b.get('primary_patient', 0)} / {b.get('review_meta', 0)} / {b.get('primary_animal', 0)} / {b.get('computational', 0)} | "
+                 f"{_rng(k['cohorts_min'], k['cohorts_max'])} | {_rng(k['patients_min'], k['patients_max'])} | {k['supports']} / {k['contradicts']} / {k['qualifies']} |")
+    return "\n".join(L)
+
+
+def cmd_independence(args):
+    """算独立性数据包 → 模型按独立性调整结论强度（不动证据关联）→ 写附表。"""
+    c = kb.connect(); sp = OUT / args.tag / "synthesis.json"
+    if not sp.exists(): raise SystemExit(f"{sp} 不存在：先把上游版本的 synthesis.json 复制过来")
+    syn = json.loads(rd(sp))
+    if not (OUT / args.tag / "synthesis_before_indep.json").exists(): wr(OUT / args.tag / "synthesis_before_indep.json", syn)
+    else: syn = json.loads(rd(OUT / args.tag / "synthesis_before_indep.json"))
+    packet = independence_packet(c, args, syn["claims"])
+    wr(OUT / args.tag / "independence_packet.json", packet)
+    print("独立性数据包：", [(k["cid"], k["n_papers"], f"{k['cohorts_min']}-{k['cohorts_max']}") for k in packet], flush=True)
+    claims_in = [{k: cl.get(k) for k in ("cid", "text", "level", "status", "uncertainty")} for cl in syn["claims"]]
+    msg = fill(P("synth_indep"), QUESTION=question(args), CLAIMS=json.dumps(claims_in, ensure_ascii=False), PACKET=json.dumps(packet, ensure_ascii=False))
+    if len(msg) > INLINE_MAX:
+        slim = [{k: v for k, v in x.items() if k != "clusters"} | {"n_shared_clusters": len(x["clusters"])} for x in packet]
+        msg = fill(P("synth_indep"), QUESTION=question(args), CLAIMS=json.dumps(claims_in, ensure_ascii=False), PACKET=json.dumps(slim, ensure_ascii=False))
+    d = llm.parse_json(llm.call(f"{args.tag}_{args.q}_indep_{llm.pid(msg)}", msg, model=G6, stage="indep"))
+    upd = {x.get("cid"): x for x in d.get("claims", [])}
+    pk = {k["cid"]: k for k in packet}; nchg = 0
+    ok_status = {"well-supported", "supported", "contested", "weak", "speculative", "unclear"}
+    for cl in syn["claims"]:
+        u = upd.get(cl["cid"]); k = pk[cl["cid"]]
+        cl["independence"] = (f"论文 {k['n_papers']} 篇、成果 {k['n_works']} 项；独立患者队列 {_rng(k['cohorts_min'], k['cohorts_max'])}，"
+                              f"独立患者 {_rng(k['patients_min'], k['patients_max'])} 人；支持/反对/限定的独立队列 {k['supports']}/{k['contradicts']}/{k['qualifies']}")
+        if not u: continue
+        if u.get("changed"):
+            nchg += 1
+            for f in ("text", "uncertainty"):
+                if u.get(f): cl[f] = u[f]
+            if u.get("status") in ok_status: cl["status"] = u["status"]
+        if u.get("independence_note"): cl["independence_note"] = u["independence_note"]
+    # 程序规则：只有一个独立患者队列支持的结论不能是 well-supported（模型没改的程序改，并记下）
+    for cl in syn["claims"]:
+        k = pk[cl["cid"]]
+        if cl.get("status") == "well-supported" and k["supports"] in ("0", "1", "0–1"):
+            cl["status"] = "supported"; cl["uncertainty"] = (cl.get("uncertainty") or "") + "（程序按独立性规则把强度从 well-supported 降为 supported：支持它的独立患者队列不超过 1 个）"
+    wr(sp, syn)
+    wr(OUT / args.tag / "independence_table.md", independence_table(packet, syn["claims"]))
+    print(f"独立性修订：{nchg}/{len(syn['claims'])} 条结论改了措辞或强度；附表已写", flush=True)
 
 
 def cmd_check(args):
