@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：DOI:10.21203/rs.3.rs-9617843/v1 Subthalamic Signatures of Freezing while Turning in Parkinson’s Disease (2026)
+报告的说法：第2.3节主要讨论该研究的低 beta 活动和 beta burst，没有报告 STN theta 结果。
+指控者认为原文的说法：原文还发现，真实转弯冻结期间 STN theta 功率相较正常行走下降：宽频 theta 差异 P=0.029，峰值 theta 差异 P<0.001。评委认为报告选择性遗漏了这一直接涉及 STN 局部 theta 活动的重要结果。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

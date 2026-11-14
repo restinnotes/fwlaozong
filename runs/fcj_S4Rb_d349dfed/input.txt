@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:42968793 Superiority of dual-target STN-SNr deep brain stimulation towards gait in Parkinson's disease: a meta-analysis and meta-regression of randomised trials. (2026)
+报告的说法：第3.4节将2018年频率Meta分析、2025年网络Meta分析和2026年更新Meta分析放在同一表格中，并将其结果差异作为比较依据，但没有充分呈现2026年更新Meta分析关于高频 STN 刺激获益更一致的结果。
+指控者认为原文的说法：不同Meta分析的研究设计、患者群体、药物状态、刺激靶点和结局指标不同，不能直接将总体均值差异与网络Meta分析结果并列为真正的科学冲突。2026年更新Meta分析纳入31项研究、905名患者，其中21项提供FOG-Q数据，并合并不同药物及刺激状态下的均值差异。该分析报告高频 STN 刺激具有更一致的获益。此外，其检索截止日期实际为2025年9月28日，而非2026年11月。报告没有充分呈现这些关键限定条件和结果。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

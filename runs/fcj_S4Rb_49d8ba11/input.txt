@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：DOI:10.64898/2026.08.13.744293 Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson’s disease (2026)
+报告的说法：第2.6节将研究结果概括为「STN beta burst timing 的 Shannon entropy 低于稳定转弯」，没有在正文中明确区分具体的熵指标及其计算对象。
+指控者认为原文的说法：原文摘要描述的是 inter-burst interval entropy（burst间隔熵），但 Methods 将 Shannon entropy 定义为 burst midpoint time distribution（burst中点时间分布）的熵。两者不是同一个统计量，具有不同的生理解释。报告在没有确认实际计算方式的情况下，将其概括为笼统的 beta burst timing 熵，可能混淆不同指标。原文只有4名患者，AUC结果也应谨慎解释。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

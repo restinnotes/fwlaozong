@@ -1,0 +1,13 @@
+有人指控一份研究报告误读了一篇论文。附件是这篇论文的全文。请只根据全文，分别判断两件事。
+
+论文：PMID:40383539 Effects of theta burst stimulation on the Parkinsonian gait disorder and cortical gait-network activity. (2025)
+报告的说法：在H19中以该研究支持TBS-DBS暂停期即时刺激遮蔽机制，在H20中以该研究支持长期网络可塑性及跨日适应机制。
+指控者认为原文的说法：原文是15名帕金森病患者参与的单中心、随机、双盲、短期研究，TBS-DBS采用5 Hz interburst和200 Hz intraburst模式。全体患者的主要FoG-Course结局并未显示TBS-DBS优于连续DBS。研究记录的是头皮移动EEG和运动学，没有直接记录STN-LFP，也没有长期随访。因此，原文没有直接观察STN-FOG事件中的暂停期神经活动，也没有跨日或停止刺激后的可塑性证据。报告将短期刺激模式研究延伸为暂停期STN机制和长期网络可塑性机制，超出了原研究实际测量和验证的范围。
+
+1. report_supported：报告的说法有没有全文依据？yes（全文明确支持）/ partly（部分支持，或缺少关键限定条件）/ no（与全文不符）/ cannot_tell（全文里找不到相关信息）。
+2. judge_supported：指控者对原文的描述有没有全文依据？取值同上。
+注意：两个说法可能同时都对（例如原文同时报告了两个结果）。只有报告的说法与全文不符或缺少会改变结论的关键限定，才算报告读错。
+
+必须分别引用全文原句（英文原文）作为依据。
+
+只输出一个 JSON：{"report_supported":"","judge_supported":"","report_quotes":[""],"judge_quotes":[""],"why":""}

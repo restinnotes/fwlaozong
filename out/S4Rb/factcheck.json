@@ -1,0 +1,374 @@
+[
+ {
+  "paper": "Klocke 等，2026，STN-LFP 转弯冻结预印本",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "report_says": "第2.3节主要讨论该研究的低 beta 活动和 beta burst，没有报告 STN theta 结果。",
+  "judge_says": "原文还发现，真实转弯冻结期间 STN theta 功率相较正常行走下降：宽频 theta 差异 P=0.029，峰值 theta 差异 P<0.001。评委认为报告选择性遗漏了这一直接涉及 STN 局部 theta 活动的重要结果。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Low beta band decoupling is impaired in FoG-Turns compared to Reg-Turns",
+   "Decoupling failure of pathological beta bursts in FoG-Turns",
+   "Enhancement and attenuation of theta power across locomotor states",
+   "FoG-Turns showed decreased theta activity compared to Regular Walking (P = 0.029).",
+   "the significant decrease in peak theta power during FoG-Turn compared to Regular Walking was preserved (P < 0.001)."
+  ],
+  "judge_quotes": [
+   "The role of subthalamic theta activity during turning",
+   "FoG-Turns showed decreased theta activity compared to Regular Walking (P = 0.029).",
+   "the significant decrease in peak theta power during FoG-Turn compared to Regular Walking was preserved (P < 0.001).",
+   "Compared to regular walking, we found significant differences in theta power differentiating regular turning from freezing states and their preceding transitions."
+  ],
+  "why": "报告的说法部分有依据：论文确实重点讨论了低 beta 活动异常及 beta burst 持续时间变化，相关结果分别有独立的小节。但报告说法中关于没有 STN theta 结果的部分与全文不符。论文第 7 页 Results 明确设有“Enhancement and attenuation of theta power across locomotor states”小节，报告 FoG-Turn 相较 Regular Walking 的宽频 theta 功率显著下降（P=0.029），峰值 theta 功率也显著下降（P<0.001）。第 8 页 Discussion 更专门设置“The role of subthalamic theta activity during turning”小节，明确讨论这一结果。因此，指控者对原文的描述得到全文直接支持。需要区分的是，低 beta 和 beta burst 确实是论文的重要研究结果，但并非论文报告的全部神经振荡结果。如果报告只是选择不在第 2.3 节讨论 theta，单凭论文全文不能核实报告章节的实际内容；但如果其表述意在声称原论文没有报告 STN theta 结果，则这一说法不成立。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Hariz 等，2000，Bilateral subthalamic nucleus stimulation in a parkinsonian patient with preoperative deficits in speech and cognition",
+  "pmid": "10634253",
+  "doi": "",
+  "report_says": "附录将该文献对应的四条证据记录描述为群体步态变异性比较，并将其映射为 C9 的支持证据。",
+  "judge_says": "原文实际上是一名帕金森病患者接受双侧 STN 刺激后的单病例研究，报告的是临床变化，并非 FOG 患者与非 FOG 患者之间的群体步态变异性比较。报告将完全不对应的研究内容归给了这篇文献。",
+  "source": "open_g56.json",
+  "pid": "PMID:10634253",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID 28890315 对应研究（评审意见未提供作者及题名）",
+  "pmid": "28890315",
+  "doi": "",
+  "report_says": "第6.3节将该文献列为 H4「STN 局部 theta/delta 状态转换异常机制」的支持证据。",
+  "judge_says": "原文主要研究 alpha 和 beta 频段的 Sample Entropy，并非 STN 局部 theta/delta 功率。该研究不能作为 STN 局部 theta/delta 活动异常的直接证据，报告存在证据内容与机制假说不匹配的问题。",
+  "source": "open_g56.json",
+  "pid": "PMID:28890315",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "The main outcome variables were alpha/beta power and SampEn.",
+   "The predictability of the LFPs (band-pass filtered between 8–12 Hz for alpha and 13–30 Hz for beta) was analyzed using Sample Entropy 11 (SampEn), a nonlinear measure suitable for physiological time series.",
+   "Ambulatory EEG in PD Freezers has demonstrated an increase in central theta oscillations and a decrease in beta entropy in the transition to FOG, which led to the suggestion that cortical activity was ‘less complex’ when PD subjects transitioned from normal walking to freezing ( Handojoseno et al., 2015 ).",
+   "Further analysis of STN LFPs during transitions from walking to FOG will help to determine whether this is also seen in subcortical structures."
+  ],
+  "judge_quotes": [
+   "The main outcome variables were alpha/beta power and SampEn.",
+   "Power was summed in the beta and alpha bands.",
+   "During the SIP task (without FOG) there was lower relative beta power in the Freezer compared to Non-Freezer groups (H(1) = 7.17, P = 0.036), which resulted in a greater attenuation of resting state beta power in Freezers (F (1, 15) = 28.37, P < 0.001).",
+   "Nonlinear signal analysis demonstrated that SampEn in the beta band was greater during SIP (without FOG) in Freezers compared to Non-Freezers (H(1) = 4.61, P = 0.032).",
+   "Freezers also showed increased alpha SampEn during FOG when compared to walking without FOG (F(1, 51) = 7.67, P = 0.005)."
+  ],
+  "why": "报告的说法部分有依据，但存在重要的频段限定问题。原文确实研究了 STN 局部场电位（LFP）在步行和冻结步态期间的神经异常，包括 beta 功率、beta Sample Entropy 和 alpha Sample Entropy 的变化，因此可以支持较宽泛的 STN 神经活动复杂性异常与 FOG 有关这一观点。但是，原文分析的 STN LFP 频段是 alpha（8–12 Hz）和 beta（13–30 Hz），没有报告 STN 局部 theta/delta 功率异常，也没有提供相应频段的状态转换证据。尤其需要注意，原文讨论中提及的 theta 振荡来自既往 ambulatory EEG 研究，而非本研究的 STN 局部记录；作者还明确表示，需要进一步分析 STN LFP，才能确定这种现象是否也存在于皮层下结构。因此，该文献可以作为相关背景证据，但不足以直接支持 H4 所限定的 STN 局部 theta/delta 状态转换异常机制，报告若未作此限定，存在证据与假说不匹配的问题。指控者的核心判断有全文依据，但其将原文概括为主要研究 alpha/beta Sample Entropy 不够完整，因为原文也明确将 alpha/beta power 列为主要结局指标，并进行了相应分析。因此 judge_supported 判为 partly，而非 yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID 31505548 对应研究（评审意见未提供作者及题名）",
+  "pmid": "31505548",
+  "doi": "",
+  "report_says": "第6.3节将该文献列为 H4「STN 局部 theta/delta 状态转换异常机制」的支持证据。",
+  "judge_says": "原文的重要发现是皮层-STN 之间 4–13 Hz theta-alpha 耦合发生变化，而不是 STN 局部 theta 功率发生变化。跨脑区神经活动耦合不能等同于 STN 局部功率，报告将网络耦合证据用于支持局部 theta 功率机制，存在证据类型错配。",
+  "source": "open_g56.json",
+  "pid": "PMID:31505548",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "To investigate the role of the STN neural activity in gait freezing we compared the STN oscillations between (effective) walking and ongoing freezing episodes. We first studied power changes in low frequency (i.e. θ-α rhythms) and in the β-frequency band of the two STN and did not find any differences during gait freezing in comparison to (effective) walking (Fig. 3A and B).",
+   "Despite the lack of subthalamic activity changes during gait freezing in our study, exaggerated STN β-synchronization may still influence dynamic motor processing in favour of gait freezing development (Anidi et al., 2018).",
+   "The spectral analysis was performed between 4 Hz and 80 Hz, with a resolution of 1 Hz."
+  ],
+  "judge_quotes": [
+   "To study the cortical-subthalamic and the interhemispheric subthalamic coupling, we computed the cross power spectral density (CPSD) between the LFP signals of the cortical areas and the STN, as well as between the two STN (Shine et al., 2014; Canessa et al., 2016).",
+   "To assess for differences in the cortico-subcortical coupling across the five conditions, we integrated the CPSD in the specific θ-α band, obtaining an index (θαCCCX/STNk) to describe the cross coupling between each cortical region of interest [CX = (SMA+/–, M1+/–, PC+/–, TC+/–)] and its own ipsilateral STN for all epochs k = {Walking, FPRE, FSTART, FSTOP, FPOST}.",
+   "We showed that during (effective) walking the cortex and the STN were coupled in a low frequency band (i.e. θ-α rhythms). In contrast, gait freezing was characterized by a low frequency cortical-subthalamic decoupling in the hemisphere with less striatal dopaminergic innervation (H−) (Fig. 4A).",
+   "During gait freezing (FSTART – FSTOP), the cortex and the STN decoupled selectively in the hemisphere with less striatal dopamine (H−).",
+   "The disruption of this cortical-subcortical coupling anticipated and specifically characterized the freezing episodes, to recover when the effective walking pattern was regained (Fig. 4A)."
+  ],
+  "why": "报告的说法与全文不符。论文明确区分了STN局部振荡功率（power）和皮层-STN跨脑区耦合（coupling）。对于前者，研究者直接比较了步行与冻结期间双侧STN的低频θ-α功率，明确报告没有显著差异；讨论部分也再次确认缺乏STN局部活动变化。因此，该文不能作为支持「STN局部theta/delta状态转换异常机制」的直接证据。对于后者，论文明确报告步行时皮层与STN存在4–13 Hz θ-α频段耦合，而冻结发生前及冻结期间，低频皮层-STN耦合发生解耦，并在步行恢复后恢复。指控者关于论文主要发现是皮层-STN θ-α耦合变化、而非STN局部θ功率变化的描述有全文依据。两者是不同的神经生理指标，不能将跨脑区耦合变化直接等同于STN局部功率变化。另需注意，论文分析的目标低频段为4–13 Hz θ-α频段，并未提供STN局部δ频段状态转换异常的证据。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "2026年更新Meta分析（评审意见引用 PMID 41659700、42098512，未明确两者与各Meta分析的逐一对应关系）",
+  "pmid": "41659700; 42098512",
+  "doi": "",
+  "report_says": "第3.4节将2018年频率Meta分析、2025年网络Meta分析和2026年更新Meta分析放在同一表格中，并将其结果差异作为比较依据，但没有充分呈现2026年更新Meta分析关于高频 STN 刺激获益更一致的结果。",
+  "judge_says": "不同Meta分析的研究设计、患者群体、药物状态、刺激靶点和结局指标不同，不能直接将总体均值差异与网络Meta分析结果并列为真正的科学冲突。2026年更新Meta分析纳入31项研究、905名患者，其中21项提供FOG-Q数据，并合并不同药物及刺激状态下的均值差异。该分析报告高频 STN 刺激具有更一致的获益。此外，其检索截止日期实际为2025年9月28日，而非2026年11月。报告没有充分呈现这些关键限定条件和结果。",
+  "source": "open_g56.json",
+  "pid": "PMID:42968793",
+  "report_supported": "cannot_tell",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Meta regression revealed high-frequency stimulation in both targets was a significant moderator for gait improvement (95% CI −0.96 to −0.05, I2=39.2%).",
+   "In contrast, HSTN+HSNr was associated with a statistically significant reduction in the pooled effect size, (p=0.0287), suggesting a potential moderating effect of high-frequency stimulation (HFS).",
+   "no difference of improvement was observed during high frequency versus low frequency in gait speed and step length."
+  ],
+  "judge_quotes": [
+   "Eight crossover RCTs (n=97) were included.",
+   "The pooled analysis for the FoG outcome, which was reported by seven studies, is presented in figure 3.",
+   "One study used the HFPS (Heel–Flat–Push–Swing) parameter, while the rest used the FOG-Q (Freezing of Gait Questionnaire) parameter. In contrast, the other two studies used the Freezing of Gait Assessment Course (FOG-AC).",
+   "A systematic search was conducted across PubMed, ScienceDirect and Scopus databases up to October 2025.",
+   "All included studies were crossover RCTs and double-blinded.",
+   "Meta-regression analyses were conducted to explore potential moderators influencing the pooled effect on FoG outcome."
+  ],
+  "why": "报告_supported判为cannot_tell：附件只有论文全文，没有报告第3.4节及其表格，因此无法核实报告是否将2018、2025和2026年Meta分析并列，也无法判断其是否遗漏了某项研究结果。论文确实报告了高频刺激相关获益，但限定条件很重要：统计学显著的调节效应具体出现在HSTN+HSNr组合，而不是单独高频STN刺激；HSTN+低频SNr、HSTN+中频SNr及低频STN+高频SNr均未显示显著效应。此外，论文还指出高频与低频刺激在步速和步长改善方面没有观察到差异。judge_supported判为partly：指控者关于结局测量存在差异以及高频刺激存在特定获益的描述有部分依据，但其关键研究规模和检索日期不能与附件全文对应。附件明确报告的是8项交叉RCT、97名患者，7项研究报告FoG结局，检索时间截至2025年10月；并未报告31项研究、905名患者、21项提供FOG-Q数据或2025年9月28日这一具体截止日期。论文也没有提供关于不同Meta分析之间药物状态及刺激状态差异的系统比较。因此，不能将指控者所述31项研究等具体信息视为这篇论文全文已经证实的事实。总体而言，论文支持高频双靶点刺激存在特定的步态获益，但不支持将其直接扩大为高频STN单靶点具有更一致获益的结论。",
+  "verdict": "cannot_tell"
+ },
+ {
+  "paper": "PMID 40383539，15名帕金森病患者参与的TBS-DBS与连续DBS随机、双盲短期研究",
+  "pmid": "40383539",
+  "doi": "",
+  "report_says": "第6.9节 H19 和 H20 分别提出 TBS-DBS 暂停期即时刺激遮蔽机制、长期网络可塑性及跨日适应机制，但没有系统呈现该随机对照研究的主要结果。",
+  "judge_says": "原文的主要结局没有显示 TBS-DBS 在全体患者中优于连续DBS；在主要 FOG-Course 比较中，连续DBS甚至略好于TBS-DBS。只有部分患者表现出对TBS的偏好。研究作者明确指出，该研究没有评价长期疗效。因此，报告提出机制假说时遗漏了直接临床试验的全样本阴性结果、亚组差异及短期随访限制。",
+  "source": "open_g56.json",
+  "pid": "PMID:40383539",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "The spacing of stimulation trains and insertion of stimulation pauses with TBS-DBS might represent a double-edged sword for DBS application.",
+   "The finding of impaired, short-term efficacy in tremor suppression by non-continuous DBS was interpreted as the inability to mask burst-driver inputs to the thalamus.",
+   "This might partially explain the slightly inferior short-term effect on objective gait parameters and the FoG-Course of TBS-DBS as a whole group compared to cDBS.",
+   "TBS-DBS with its temporal patterning might slowly, progressively increase its subthalamic efficacy in the long-term by beneficial neuroplastic effects from TBS-DBS.",
+   "Since axial symptoms might change over days, the EEG might potentially point to advantageous long-term changes, which could not be proven in that acute experimental setting."
+  ],
+  "judge_quotes": [
+   "The primary outcome, the relative change of FoG-Course by DBS, was not superior with TBS-DBS compared to cDBS in the entire sample.",
+   "The comparison of the relative DBS–induced change in the FoG-Course from OFF-DBS in the entire sample revealed slightly better effects of cDBS compared to TBS-DBS (Wilcoxon signed rank test p = 0.039).",
+   "In this study, we found no superior effects of TBS-DBS compared to cDBS for the FoG-Course or the MDS-UPDRS III in the entirety of the group.",
+   "4 PD participants rated TBS better (4 PD participants), equal (3 PD participants) or worse (8 PD participants) compared to cDBS.",
+   "For the exploration of the full effect strength, a long-term evaluation of TBS-DBS would be necessary, which has not been performed here in the randomised study of short-term effects."
+  ],
+  "why": "报告所述机制并非凭空提出。论文第Discussion部分明确讨论了TBS-DBS暂停可能导致的即时刺激遮蔽不足，以及由此产生的短期疗效劣势；同时明确提出长期神经可塑性可能逐渐增强TBS-DBS疗效的假说。因此，这些机制具有直接全文依据。不过，跨日适应机制需要限定：论文仅指出轴性症状可能随时间（数天）变化，并未建立或验证一个明确的跨日适应机制。此外，附件只有论文全文，没有被指控的研究报告本身，因而无法独立核实报告第6.9节是否确实遗漏或没有系统呈现主要结果，不能将这一点判定为全文明确支持。指控者对论文临床结果的描述则有明确依据：第一，主要结局没有显示TBS-DBS在全体患者中优于cDBS；第二，主要FoG-Course相对变化比较中，cDBS效果略好（p=0.039）；第三，15名患者中4名评价TBS-DBS更好、3名评价相等、8名评价更差，所谓TBS-preference group实际包含评价相等者，不能将7人全部理解为明确偏好TBS；第四，作者明确说明本研究没有进行长期疗效评价。还应注意，论文另报告全样本Friedman事后比较中TBS-DBS与cDBS没有显著差异，因此cDBS略好这一结论应限定于主要相对变化比较。总体而言，指控者对原文主要临床结果和研究局限的概述成立；但报告提出机制假说本身并不构成误读，是否遗漏临床结果还需要查看报告原文才能最终确认。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Beaudoin 等，2026，STN beta burst timing 与 Shannon entropy 预印本",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "第2.6节将研究结果概括为「STN beta burst timing 的 Shannon entropy 低于稳定转弯」，没有在正文中明确区分具体的熵指标及其计算对象。",
+  "judge_says": "原文摘要描述的是 inter-burst interval entropy（burst间隔熵），但 Methods 将 Shannon entropy 定义为 burst midpoint time distribution（burst中点时间分布）的熵。两者不是同一个统计量，具有不同的生理解释。报告在没有确认实际计算方式的情况下，将其概括为笼统的 beta burst timing 熵，可能混淆不同指标。原文只有4名患者，AUC结果也应谨慎解释。",
+  "source": "open_g56.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+   "Entropy was lower in pre-freeze than stable turns (Δ = 0.611 ± 0.282).",
+   "Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times."
+  ],
+  "judge_quotes": [
+   "Entropy of inter-burst intervals was reduced prior to freezing (p < 0.01), with strong predictive performance (AUC = 0.825; threshold AUC = 0.858).",
+   "Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times.",
+   "STN recordings during gait were analyzed from four individuals with Parkinson’s disease from a previously published dataset(16) (clinical details in Table S1).",
+   "Using Shannon entropy alone, the model achieved strong classification performance (AUC = 0.825, accuracy = 0.773), reliably separating pre-freeze from stable turns across patients (Figure 1D).",
+   "PAC-based classifiers showed high apparent performance (AUC ≈ 0.859), particularly for alpha-low beta coupling, though these results should be interpreted cautiously given the smaller sample size (Figure S1B)."
+  ],
+  "why": "报告的核心结果有明确全文依据：Results直接报告Shannon entropy of burst timing在pre-freeze turns中低于stable turns，因此不能认定报告的结果概括与原文不符。但报告所用的笼统表述没有体现一个重要问题：Abstract将降低的熵描述为inter-burst intervals的熵，而Methods明确将Shannon entropy定义为burst midpoint times分布的熵。这是两个不同的计算对象，报告若不说明采用哪一种定义，就没有充分呈现原文的指标歧义，因此判为partly，而非yes。指控者关于Abstract与Methods存在表述不一致的判断有直接原文依据，关于样本量只有4名患者也有直接依据。不过，原文没有明确论述两种熵指标具有不同的生理解释，这属于基于计算对象差异作出的进一步解释。此外，原文明确提出小样本谨慎解释的对象是PAC分类器，并未对Shannon entropy的AUC单独提出同样的警告。因此，指控的核心成立，但其全部延伸判断并非都得到全文直接支持，判为partly。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Zhang et al., 2025, Neural signatures of turn-induced freezing of gait in Parkinson's disease: insights from phase-specific cortico-subthalamic dynamics",
+  "pmid": "41131028",
+  "doi": "10.1038/s41531-025-01173-y",
+  "report_says": "在H2中，将该研究作为STN beta ERD及步态周期beta调制失败机制的对应证据。",
+  "judge_says": "原文主要报告PMC-STN和M1-STN相关的alpha功率及alpha coherence变化，没有发现相应的beta coherence差异。因此，该研究不能直接支持报告所提出的beta ERD机制，存在频段和信号变量错配。",
+  "source": "open_g6.json",
+  "pid": "PMID:41131028",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "During normal turning, a significant decrease in the alpha band power was observed in the STN during the TurnStart phase (p = 0.012). Additionally, there was a decrease in the alpha band power (p < 0.001) and an increase in the beta band power in the M1 (p = 0.013) during the TurnEnd phase (Fig. 2B).",
+   "In the case of turning freeze, both the PMC and M1 showed significant suppression in the alpha band throughout the entire turning process, including the TurnPre (p = 0.0042 for PMC and p < 0.001 for M1), TurnStart (p = 0.027 for PMC and p = 0.048 for M1) and TurnEnd (p = 0.0072 for PMC and p = 0.0016 for M1) phases (Fig. 2C).",
+   "In terms of beta coherence between the PMC-STN and M1-STN, no significant differences were found between the turning phases and walking in any of the regions analyzed.",
+   "While prior ERD studies typically used rest as baseline, our study analyzed spectral dynamics relative to steady-state walking.",
+   "For baseline normalization, only artifact-free, non-freezing straight-walking segments within each trial were used. These segments typically lasted at least 8 seconds, covering a minimum of 7 gait cycles."
+  ],
+  "judge_quotes": [
+   "We focused on indicators that showed significant changes during the TurnPre and TurnStart phases, specifically the alpha power in the PMC and M1, as well as the alpha coherence between the PMC-STN and M1-STN.",
+   "In contrast, during turning freeze, there was an increase in PMC-STN alpha coherence (p = 0.048) and a decrease in M1-STN alpha coherence (p = 0.043) during the TurnStart phase (Fig. 3B).",
+   "In terms of beta coherence between the PMC-STN and M1-STN, no significant differences were found between the turning phases and walking in any of the regions analyzed.",
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial."
+  ],
+  "why": "报告的说法判为partly，而非完全no，是因为论文确实分析了beta频段，并报告正常转弯TurnEnd阶段M1 beta功率显著增加。但这一结果是M1局部beta功率增加，发生于正常转弯，并非STN beta ERD，也不能证明冻结时步态周期beta调制失败。冻结相关的主要显著结果是PMC和M1的alpha功率下降，以及PMC-STN和M1-STN的alpha coherence改变；PMC-STN和M1-STN的beta coherence则没有显著差异。此外，论文分析的是TurnPre、TurnStart、TurnEnd和TurnPost等转弯阶段相对于稳态步行基线的变化，并非步态周期内的beta调制。文中提到7个以上gait cycles，是指用于建立步行基线的信号窗口，而非对步态周期beta调制的分析。因此，该研究只能提供与beta频段研究有关的有限背景，不能作为报告所述具体机制的直接证据。指控者的核心判断有全文依据。不过有一个术语细节需要澄清：alpha power是PMC和M1等脑区的局部功率指标，PMC-STN和M1-STN对应的是alpha coherence连接指标，不应将两者混为一谈。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Syrkin-Nikolau et al., 2017, Subthalamic neural entropy is a feature of freezing of gait in freely moving people with Parkinson's disease",
+  "pmid": "28890315",
+  "doi": "10.1016/j.nbd.2017.09.002",
+  "report_says": "在H4中将该研究作为STN局部theta/delta功率变化的证据；在H11、H12中又将其熵结果与其他熵指标合并，作为STN神经活动熵增加的依据。",
+  "judge_says": "原文的相关结果主要是alpha Sample Entropy增加，具体表现为FOG期间alpha Sample Entropy高于无冻结步行期间，并非STN局部theta/delta功率改变。此外，该研究测量的是特定频段的Sample Entropy，不能与其他研究的beta burst时间间隔Shannon entropy或Lempel-Ziv complexity视为同一种数学指标。",
+  "source": "open_g6.json",
+  "pid": "PMID:28890315",
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Power was summed in the beta and alpha bands. The predictability of the LFPs (band-pass filtered between 8–12 Hz for alpha and 13–30 Hz for beta) was analyzed using Sample Entropy 11 (SampEn), a nonlinear measure suitable for physiological time series.",
+   "During periods of FOG, Freezers showed greater alpha (8–12 Hz) Sample Entropy (P < 0.001) than during walking without FOG.",
+   "During locomotion without FOG, Freezers showed lower beta (13–30 Hz) power (P = 0.036) and greater beta Sample Entropy (P = 0.032), than Non-Freezers.",
+   "For the first time, using synchronized subthalamic neural and kinematic recordings in freely moving PD subjects, we have demonstrated that neural entropy and lower power in the beta band identified Freezers from Non-Freezers during locomotion without FOG. When Freezers exhibited FOG, beta power was even lower and neural entropy increased in the alpha band.",
+   "Ambulatory EEG in PD Freezers has demonstrated an increase in central theta oscillations and a decrease in beta entropy in the transition to FOG, which led to the suggestion that cortical activity was ‘less complex’ when PD subjects transitioned from normal walking to freezing ( Handojoseno et al., 2015 )."
+  ],
+  "judge_quotes": [
+   "During periods of FOG, Freezers showed greater alpha (8–12 Hz) Sample Entropy (P < 0.001) than during walking without FOG.",
+   "Freezers also showed increased alpha SampEn during FOG when compared to walking without FOG (F(1, 51) = 7.67, P = 0.005).",
+   "Nonlinear signal analysis demonstrated that SampEn in the beta band was greater during SIP (without FOG) in Freezers compared to Non-Freezers (H(1) = 4.61, P = 0.032).",
+   "SampEn is calculated as the negative logarithm of the estimated conditional probability that if consecutive subseries of length m are similar according to some preset tolerance r, the consecutive subseries of length m+1 will be similar too.",
+   "The predictability of the LFPs (band-pass filtered between 8–12 Hz for alpha and 13–30 Hz for beta) was analyzed using Sample Entropy 11 (SampEn), a nonlinear measure suitable for physiological time series."
+  ],
+  "why": "报告整体判定为partly。H4没有全文依据：本文对STN局部场电位的功率分析涉及alpha和beta频段，没有报告STN局部theta/delta功率变化。全文确实提到theta振荡，但明确是在引用另一项研究的ambulatory EEG结果，并非本文测得的STN局部信号。H11/H12则有实质性依据：本文报告了FOG期间alpha SampEn增加，也报告了无FOG原地踏步期间Freezers的beta SampEn高于Non-Freezers；结论明确将这些结果概括为STN neural entropy增加。因此，将本文作为广义STN神经熵增加的证据是成立的，但必须注明它测量的是特定频段LFP的Sample Entropy，不能将不同算法说成同一种数学指标。指控者的核心描述有依据，尤其是FOG期间alpha SampEn增加及其与theta/delta功率变化的区别。不过，指控者的描述并不完整：本文还发现无FOG原地踏步期间beta SampEn增加。此外，本文没有讨论beta burst时间间隔Shannon entropy或Lempel-Ziv complexity，因此仅凭本文全文不能独立验证这几种指标之间的数学关系。故指控者的核心判断成立，但部分表述需要限定。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Pozzi et al., 2019, Freezing of gait in Parkinson's disease reflects a sudden derangement of locomotor network dynamics",
+  "pmid": "31505548",
+  "doi": "10.1093/brain/awz141",
+  "report_says": "在H4中将该研究作为STN局部theta/delta功率变化的证据。",
+  "judge_says": "原文的核心发现是FOG期间皮层与STN之间4–13 Hz低频（theta-alpha）耦合下降，即皮层-STN低频解耦，并非STN局部theta/delta功率改变。报告将跨脑区耦合指标误用为STN局部功率指标。",
+  "source": "open_g6.json",
+  "pid": "PMID:31505548",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "For each patient, we identified the most prominent peak of the averaged PSD across walking epochs in the low frequency (i.e. θ-α, 4–13 Hz) and the β-frequency (13–35 Hz) bands.",
+   "We first computed the power in the specific θ-α and β-frequency bands of the two STN (STN+ and STN−, separately) and compared it between (effective) walking and the abovementioned time frames of gait freezing.",
+   "To investigate the role of the STN neural activity in gait freezing we compared the STN oscillations between (effective) walking and ongoing freezing episodes. We first studied power changes in low frequency (i.e. θ-α rhythms) and in the β-frequency band of the two STN and did not find any differences during gait freezing in comparison to (effective) walking (Fig. 3A and B)."
+  ],
+  "judge_quotes": [
+   "In contrast, gait freezing was characterized by a low frequency cortical-subthalamic decoupling in the hemisphere with less striatal dopaminergic innervation (H−) (Fig. 4A).",
+   "During gait freezing (FSTART – FSTOP), the cortex and the STN decoupled selectively in the hemisphere with less striatal dopamine (H−).",
+   "Percentage relative change of cortical-subthalamic low frequency (i.e. θ-α band, 4–13 Hz) coupling during gait freezing versus (effective) walking.",
+   "The disruption of this cortical-subcortical coupling anticipated and specifically characterized the freezing episodes, to recover when the effective walking pattern was regained (Fig. 4A)."
+  ],
+  "why": "报告的说法与全文不符。需要区分两个不同的电生理指标：STN局部功率（power）和皮层-STN跨脑区耦合（coupling）。原文确实测量了双侧STN局部θ-α频段功率，因此不能说论文完全没有研究STN局部低频功率；但研究结果明确指出，FOG期间STN局部θ-α功率与正常行走相比没有显著差异。因此，不能将该研究作为STN局部低频功率发生改变的证据。此外，原文定义的低频范围是4–13 Hz（theta-alpha），而不是theta/delta。相反，论文明确报告了FOG期间皮层与STN之间4–13 Hz低频耦合下降，且这种解耦出现在多巴胺能神经支配损失更严重的半球（H−），在冻结开始前已经出现，并持续至冻结结束、正常行走恢复时消失。因此，指控者对论文核心发现的描述有全文明确依据。结论：report_supported = no；judge_supported = yes。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "Breu et al., 2022, People With Parkinson's Disease and Freezing of Gait Show Abnormal Low Frequency Activity of Antagonistic Leg Muscles",
+  "pmid": "35153698",
+  "doi": "10.3389/fnhum.2021.733067",
+  "report_says": "在H10中将该研究作为STN活动与真实冻结事件中下肢肌肉输出时序关系的证据。",
+  "judge_says": "原文研究的是FOG患者拮抗肌（胫骨前肌和腓肠肌）的肌电频谱活动，比较正常步行与冻结期间的肌肉活动，并考察STN-DBS和SNr-DBS的影响。研究没有同步记录STN-LFP，因此不能证明STN神经活动与真实FOG事件中下肢肌肉输出之间的同步时序关系。",
+  "source": "open_g6.json",
+  "pid": "PMID:35153698",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "STN- but not SNr-DBS decreased this activity and paralleled the clinical improvement of freezing.",
+   "The frequency domain spectra pointed to higher activity in both TA and GA during ‘freezing’ episodes compared to ‘regular gait’ in 4 PD freezers, however, this did not reach statistical significance in the cluster-based comparison of the frequency domain spectra from 1 to 45 Hz (TA: p = 0.1264; GA: p = 0.1204) (Figures 2A,B).",
+   "This was present during both regular gait and during the freezes to similar extent.",
+   "Future studies may use combined recordings of local field potentials, electroencephalography (EEG), and electromyography (EMG) to interrogate the supraspinal circuit mechanisms of the pathological activation pattern of the spinal pattern generator."
+  ],
+  "judge_quotes": [
+   "We analyzed the frequency-domain spectra of the tibialis anterior (TA) and gastrocnemius (GA) muscles in ‘regular gait’ and during the ‘freezing’ episodes.",
+   "During walking, we recorded the synchronized videotapes as well as the kinematic and EMG time series.",
+   "Then, we analyzed the effect of stimulation of either target (STNonly, SNronly, respectively) on muscle activity, comparing the frequency domain spectra of PD freezers in ‘regular gait‘ ‘StimOff’ with ‘STN,’ and ‘StimOff’ with ‘SNr’ for TA and GA.",
+   "Future research using combined EMG-LFP-EEG measurement in gait paradigms will help to further investigate the underlying network interactions of pathological activation pattern in FoG (Kühn et al., 2009; Lewis and Barker, 2009; Anidi et al., 2018; Pozzi et al., 2019)."
+  ],
+  "why": "报告的说法有部分全文依据：研究确实记录了FOG患者胫骨前肌（TA）和腓肠肌（GA）的肌电频谱，比较正常步行与实际冻结期间的活动，并考察了STN-DBS和SNr-DBS的影响。研究也发现STN-DBS能够降低TA和GA的α/低β频段肌电峰值，并与冻结临床表现改善相伴。但是，这些结果不能证明STN神经活动与真实冻结事件中下肢肌肉输出之间存在同步时序关系。首先，研究记录的是视频、运动学数据和肌电，没有同步记录STN-LFP；作者明确将联合LFP、EEG和EMG记录列为未来研究方向。其次，实际冻结与正常步行期间的TA和GA肌电频谱差异未达到统计学显著性，而且作者明确指出这种异常活动并非冻结状态特异性。因此，研究可以支持STN-DBS对肌肉低频活动及临床冻结表现的调节作用，但不能作为STN神经活动与真实冻结事件中肌肉输出时序关系的直接证据，故report_supported为partly。指控者对研究内容、记录方法及其证据局限的描述均有全文依据，故judge_supported为yes。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Simpson et al., 2026, Dopamine and the dynamics of subthalamic and leg muscle activities in parkinsonian stepping",
+  "pmid": "41388789",
+  "doi": "10.1093/brain/awaf464",
+  "report_says": "在H10中将该研究作为STN活动与真实冻结事件中下肢肌肉输出时序关系的证据。",
+  "judge_says": "原文研究的是14名帕金森病患者在坐、站立和原地步进过程中的STN-LFP与下肢肌电动态关系，并考察左旋多巴的影响。实验没有分析真实FOG事件，因此只能支持无真实冻结事件的步进任务中的STN-EMG动态关系，不能作为冻结发生时直接神经肌肉时序关系的证据。",
+  "source": "open_g6.json",
+  "pid": "PMID:41388789",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Moreover, analyses in this study focused on steps that could be reliably detected using force plate measurements and did not include episodes of hastening or true freezing.",
+   "Whether the observed increases in STN beta activity and intermuscular coherence during the late stance phase when OFF levodopa are associated with poor motor performance during free walking remains to be tested in future studies."
+  ],
+  "judge_quotes": [
+   "LFPs in the STN and leg muscle activity measured as EMG of the gastrocnemius and peroneus longus were recorded in 14 PD patients during sitting, standing and stepping, ON and OFF levodopa.",
+   "During the stepping-in-place condition, patients were instructed to step at a comfortable and consistent frequency, and to imagine themselves walking normally.",
+   "This study examines the dynamics of STN and EMG activities during stepping in PD, and how they are modulated by dopaminergic medication.",
+   "Moreover, analyses in this study focused on steps that could be reliably detected using force plate measurements and did not include episodes of hastening or true freezing.",
+   "The reduction in STN beta activity appears to precede changes in EMG activity (Fig. 3A), suggesting a causal relationship where STN activity influences muscle activation."
+  ],
+  "why": "报告的说法为no。论文确实研究了STN活动与下肢肌电活动之间的动态和时序关系，例如STN beta活动变化先于EMG活动变化，并探讨了STN beta bursts与肌肉活动的关联。但是，这些结果来自受控的原地步进任务，而非真实FOG事件。论文在Limitations中明确指出，分析没有纳入真正的冻结事件（true freezing），并明确表示相关现象与自由行走中运动障碍的关系仍有待未来研究验证。因此，不能将该研究作为真实冻结事件发生时STN活动与下肢肌肉输出时序关系的直接实验证据。指控者对研究对象、实验任务、左旋多巴比较以及未分析真实冻结事件的描述均有全文依据，判断为yes。需要区分的是：论文支持无真实冻结事件的步进任务中的STN-EMG动态关系，但不支持将该关系直接推广为真实FOG发生时的神经肌肉时序关系。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "Klocke et al., 2026, Subthalamic Signatures of Freezing while Turning in Parkinson's Disease",
+  "pmid": "",
+  "doi": "10.21203/rs.3.rs-9617843/v1",
+  "report_says": "第2.3节和H3将冻结前长beta burst比例、累计持续时间或持续时间分布变化作为冻结前可重复的预测标志，后续综合没有始终严格区分冻结前与冻结期间的结果。",
+  "judge_says": "原文明确区分Pre FoG-Turn和FoG-Turn。长burst分布增加以及burst持续时间与冻结发生显著相关（β=0.709，P=0.001）的结果出现在冻结转弯期间。冻结前转弯阶段的预测模型关联仅达到趋势水平（P=0.091），分布分析主要发现100–200 ms短burst比例下降，而不是已经证明长burst比例增加。报告将冻结期间的长burst结果与冻结前的短burst分布变化混合，可能把冻结伴随表现误当成冻结前预测标志。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.21203/rs.3.rs-9617843/v1",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Further, FoG-Turn – but not Pre FoG-Turn – showed prolonged beta bursts.",
+   "Post-hoc comparison indicated a significantly lower proportion of burst durations (− 11.09% of bursts, adjusted P = 0.010) in the 100–200 ms interval (window 1) in Pre FoG-Turn compared to Regular Walking (Fig. 5C).",
+   "In contrast, burst duration during turning was positively associated with FoG-Turns (β = 0.709, P = 0.001), whereas burst duration during the pre-turn phase showed only a trend toward significance (β = −0.317, P = 0.091).",
+   "Rather than directly addressing pre-FoG detection, we here combined burst-information and kinematic features that reliably differentiate pathological from physiological turning states.",
+   "Here, we could show that freezing while turning was specifically associated with a significant redistribution of bursts longer than 400 ms, whereas the preceding transition period was characterized by a significant reduction in short bursts (< 200 ms)."
+  ],
+  "judge_quotes": [
+   "FoG-Turns were defined as turns containing clinically annotated FoG.",
+   "Turn transitions were studied provided our interest in pre-monitory STN activation abnormalities preceding a turn. Therefore, we analysed the 3-second epochs before turn start of either locomotor state and labelled epochs Pre Reg-Turn if preceding a Reg-Turn, and Pre FoG-Turn if preceding a FoG-Turn.",
+   "In contrast, burst duration during turning was positively associated with FoG-Turns (β = 0.709, P = 0.001), whereas burst duration during the pre-turn phase showed only a trend toward significance (β = −0.317, P = 0.091).",
+   "Post-hoc comparison indicated a significantly lower proportion of burst durations (− 11.09% of bursts, adjusted P = 0.010) in the 100–200 ms interval (window 1) in Pre FoG-Turn compared to Regular Walking (Fig. 5C).",
+   "Compared to regular walking, we further observed a significant shift in the distribution of burst durations, with a reduction in short duration bursts in the transitions preceding FoG-Turns, as well as an increase in long lasting bursts in FoG-Turns."
+  ],
+  "why": "报告的说法部分有依据，但缺少会改变结论的关键限定。原文确实发现冻结前转弯阶段存在beta burst持续时间分布变化，具体表现为100–200 ms短burst比例显著下降（P=0.010）；而且将Pre-Turn burst duration纳入了分类模型。但是，这不等于证明冻结前长burst比例增加、累计持续时间增加，或存在可重复的冻结前预测标志。尤其是模型中Pre-Turn burst duration与冻结发生的关联仅达到趋势水平（β=-0.317，P=0.091），模型的分类目标是区分FoG-Turn与Reg-Turn，而非直接预测冻结发生。作者还明确指出，研究并非直接针对pre-FoG detection。相反，长burst（>400 ms）分布增加以及burst duration与FoG-Turn显著相关（β=0.709，P=0.001），均属于冻结转弯期间的结果。因此，指控者对原文结果的时序、方向和统计显著性的描述有全文依据。报告如果将冻结期间的长burst结果作为冻结前预测证据，就是混淆了两个不同阶段。不过，原文自身的Discussion实际上明确区分了Pre FoG-Turn与FoG-Turn，不能将这种混淆归因于原文作者。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "Beaudoin et al., 2026, Reduced entropy of subthalamic beta bursts predicts freezing of gait in Parkinson's disease（预印本）",
+  "pmid": "",
+  "doi": "10.64898/2026.08.13.744293",
+  "report_says": "在H11和H12中，将该研究与其他熵指标研究共同组织为STN神经活动熵增加的现象，并据此提出病理性信息失序和代偿性信息重组两种解释。",
+  "judge_says": "原文报告的是冻结前beta burst的inter-burst interval Shannon entropy下降，而Lempel-Ziv complexity增加。也就是说，Shannon entropy实际上是下降而非增加，Lempel-Ziv complexity则是另一种数学指标。报告将不同指标、不同方向的结果混合为同一个熵增加现象，构成指标定义和结果方向上的错配。",
+  "source": "open_g6.json",
+  "pid": "DOI:10.64898/2026.08.13.744293",
+  "report_supported": "no",
+  "judge_supported": "partly",
+  "report_quotes": [
+   "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+   "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+   "Reduced Shannon entropy reflects more constrained and predictable burst timing, suggesting that STN activity explores a narrower range of temporal patterns before freezing.",
+   "These results suggest pathological bursting emerges from a constrained temporal repertoire."
+  ],
+  "judge_quotes": [
+   "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+   "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+   "Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times."
+  ],
+  "why": "报告的说法不受全文支持。关键问题是混淆了两个不同指标及其结果方向。论文明确报告，冻结前的Shannon entropy下降，而增加的是Lempel-Ziv complexity。后者是基于二值化inter-burst intervals计算的复杂度指标，论文并未将其等同于Shannon entropy。因此，不能将这项研究作为STN神经活动熵增加的证据，而不交代Shannon entropy实际上下降这一关键结果。论文对结果的解释也是神经活动时间模式变得更加受限、可预测，以及病理性burst活动出现受限的时间模式，并没有明确提出病理性信息失序和代偿性信息重组这两种解释。指控者的核心批评有全文依据：Shannon entropy下降，Lempel-Ziv complexity增加，二者不能混为同一个熵增加现象。但指控者的描述也有一处技术性不准确：其称下降的是inter-burst interval Shannon entropy，而方法部分明确说明，Shannon entropy是根据burst midpoint times的分布计算的；由inter-burst intervals推导的是variability和complexity指标。因此，指控者对结果方向的判断正确，但对Shannon entropy具体计算对象的描述不完全准确，判定为partly。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "Dutke et al., 2025, Effects of theta burst stimulation on the Parkinsonian gait disorder and cortical gait-network activity",
+  "pmid": "40383539",
+  "doi": "10.1177/1877718X251320941",
+  "report_says": "在H19中以该研究支持TBS-DBS暂停期即时刺激遮蔽机制，在H20中以该研究支持长期网络可塑性及跨日适应机制。",
+  "judge_says": "原文是15名帕金森病患者参与的单中心、随机、双盲、短期研究，TBS-DBS采用5 Hz interburst和200 Hz intraburst模式。全体患者的主要FoG-Course结局并未显示TBS-DBS优于连续DBS。研究记录的是头皮移动EEG和运动学，没有直接记录STN-LFP，也没有长期随访。因此，原文没有直接观察STN-FOG事件中的暂停期神经活动，也没有跨日或停止刺激后的可塑性证据。报告将短期刺激模式研究延伸为暂停期STN机制和长期网络可塑性机制，超出了原研究实际测量和验证的范围。",
+  "source": "open_g6.json",
+  "pid": "PMID:40383539",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "The finding of impaired, short-term efficacy in tremor suppression by non-continuous DBS was interpreted as the inability to mask burst-driver inputs to the thalamus.",
+   "This might partially explain the slightly inferior short-term effect on objective gait parameters and the FoG-Course of TBS-DBS as a whole group compared to cDBS.",
+   "TBS-DBS with its temporal patterning might slowly, progressively increase its subthalamic efficacy in the long-term by beneficial neuroplastic effects from TBS-DBS.",
+   "Since axial symptoms might change over days, the EEG might potentially point to advantageous long-term changes, which could not be proven in that acute experimental setting.",
+   "However, these effects only become apparent after a longer period of stimulation. For the exploration of the full effect strength, a long-term evaluation of TBS-DBS would be necessary, which has not been performed here in the randomised study of short-term effects."
+  ],
+  "judge_quotes": [
+   "In this monocentric, randomised, double-blind, short-term study, 12 age-matched controls (11 male, age 59 ± 8 years) and 15 PD participants (14 male, age 62 ± 9 years, disease duration 15 ± 6 years) with subthalamic stimulation (76 ± 39 months) were assessed with clinical scores (FoG-Course, MDS-UPDRS) and a standardized gait course simulating everyday life situations.",
+   "Three DBS algorithms were applied in a randomized order with intertrial waiting periods of 30 min: (1) OFF-DBS; (2) cDBS; (3) TBS-DBS (interburst frequency 5 Hz, intraburst frequency 200 Hz) with regular medication.",
+   "The primary outcome, the relative change of FoG-Course by DBS, was not superior with TBS-DBS compared to cDBS in the entire sample.",
+   "During the standardized gait course a mobile, 24-channel EEG system and 6 wearable axial kinematic sensors were used.",
+   "EEG data were segmented into 1 s non-overlapping epochs to compare episodes of straight walking, FoG and resting-like condition (30s EEG recording while the patient is sitting on a chair with eyes open before starting the FoG-Course) among participants.",
+   "In an exploratory analysis, we also calculated a cluster permutation test between regular walking and freezing episodes where no significant clusters were found.",
+   "The most important limitation in the evaluation of patterned DBS algorithms is the assessment of short-term effects of TBS-DBS on gait within one day, since the effects of patterned DBS might evolve over time and axial symptoms typically respond over a longer time course.",
+   "For the exploration of the full effect strength, a long-term evaluation of TBS-DBS would be necessary, which has not been performed here in the randomised study of short-term effects."
+  ],
+  "why": "报告的两项说法均能在论文Discussion中找到文字依据，因此不能判定为与全文不符。但这些依据有决定性限定条件。H19方面，论文引用的是非连续丘脑DBS期间震颤重新出现及无法遮蔽丘脑burst-driver输入的既往研究，并将其作为解释TBS-DBS短期步态效果可能较差的一种推测。论文没有直接验证STN-FOG事件中的暂停期刺激遮蔽机制。H20方面，论文确实提出TBS-DBS可能通过神经可塑性逐渐增强长期丘脑底核疗效，也提出轴性症状可能随时间、跨日发生变化，但明确说明这些长期效应尚未在本研究中得到验证，且需要长期研究。因此，若报告将这两项机制表述为该研究提出的理论假设或可能解释，有全文依据；若将其作为该研究已经实验证实的机制，则缺少改变结论的关键限定，属于证据强度和研究结论范围的扩大。指控者的描述总体准确。需要补充一个细节：论文确实利用头皮EEG比较了行走与FoG阶段的皮层活动，但没有直接记录STN-LFP，也没有专门测量STN-FOG事件中刺激暂停期的神经活动。论文还明确指出，长期评价并未进行。因此，最终判断为report_supported=partly，judge_supported=yes。",
+  "verdict": "accusation_partly"
+ }
+]

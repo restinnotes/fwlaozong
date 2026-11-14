@@ -1,0 +1,19 @@
+<escape>{
+  "report_supported": "partly",
+  "judge_supported": "partly",
+  "report_quotes": [
+    "Power was summed in the beta and alpha bands. The predictability of the LFPs (band-pass filtered between 8–12 Hz for alpha and 13–30 Hz for beta) was analyzed using Sample Entropy 11 (SampEn), a nonlinear measure suitable for physiological time series.",
+    "During periods of FOG, Freezers showed greater alpha (8–12 Hz) Sample Entropy (P < 0.001) than during walking without FOG.",
+    "During locomotion without FOG, Freezers showed lower beta (13–30 Hz) power (P = 0.036) and greater beta Sample Entropy (P = 0.032), than Non-Freezers.",
+    "For the first time, using synchronized subthalamic neural and kinematic recordings in freely moving PD subjects, we have demonstrated that neural entropy and lower power in the beta band identified Freezers from Non-Freezers during locomotion without FOG. When Freezers exhibited FOG, beta power was even lower and neural entropy increased in the alpha band.",
+    "Ambulatory EEG in PD Freezers has demonstrated an increase in central theta oscillations and a decrease in beta entropy in the transition to FOG, which led to the suggestion that cortical activity was ‘less complex’ when PD subjects transitioned from normal walking to freezing ( Handojoseno et al., 2015 )."
+  ],
+  "judge_quotes": [
+    "During periods of FOG, Freezers showed greater alpha (8–12 Hz) Sample Entropy (P < 0.001) than during walking without FOG.",
+    "Freezers also showed increased alpha SampEn during FOG when compared to walking without FOG (F(1, 51) = 7.67, P = 0.005).",
+    "Nonlinear signal analysis demonstrated that SampEn in the beta band was greater during SIP (without FOG) in Freezers compared to Non-Freezers (H(1) = 4.61, P = 0.032).",
+    "SampEn is calculated as the negative logarithm of the estimated conditional probability that if consecutive subseries of length m are similar according to some preset tolerance r, the consecutive subseries of length m+1 will be similar too.",
+    "The predictability of the LFPs (band-pass filtered between 8–12 Hz for alpha and 13–30 Hz for beta) was analyzed using Sample Entropy 11 (SampEn), a nonlinear measure suitable for physiological time series."
+  ],
+  "why": "报告整体判定为partly。H4没有全文依据：本文对STN局部场电位的功率分析涉及alpha和beta频段，没有报告STN局部theta/delta功率变化。全文确实提到theta振荡，但明确是在引用另一项研究的ambulatory EEG结果，并非本文测得的STN局部信号。H11/H12则有实质性依据：本文报告了FOG期间alpha SampEn增加，也报告了无FOG原地踏步期间Freezers的beta SampEn高于Non-Freezers；结论明确将这些结果概括为STN neural entropy增加。因此，将本文作为广义STN神经熵增加的证据是成立的，但必须注明它测量的是特定频段LFP的Sample Entropy，不能将不同算法说成同一种数学指标。指控者的核心描述有依据，尤其是FOG期间alpha SampEn增加及其与theta/delta功率变化的区别。不过，指控者的描述并不完整：本文还发现无FOG原地踏步期间beta SampEn增加。此外，本文没有讨论beta burst时间间隔Shannon entropy或Lempel-Ziv complexity，因此仅凭本文全文不能独立验证这几种指标之间的数学关系。故指控者的核心判断成立，但部分表述需要限定。"
+}</escape>

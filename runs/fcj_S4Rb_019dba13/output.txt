@@ -1,0 +1,16 @@
+<escape>{
+  "report_supported": "no",
+  "judge_supported": "partly",
+  "report_quotes": [
+    "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+    "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+    "Reduced Shannon entropy reflects more constrained and predictable burst timing, suggesting that STN activity explores a narrower range of temporal patterns before freezing.",
+    "These results suggest pathological bursting emerges from a constrained temporal repertoire."
+  ],
+  "judge_quotes": [
+    "Shannon entropy of burst timing was reduced during pre-freeze turns in both low and high beta bands (high beta: p = 0.00186, low beta: p = 0.000567; Figure 1B).",
+    "Lempel-Ziv complexity, computed after binarization of inter-burst intervals, was increased (0.222 ± 0.087) during pre-freeze turns (high beta: p = 0.000621; low beta: p = 0.00723), consistent with increased temporal structure (Figure 1C).",
+    "Temporal features of burst timing were computed within each behavioral bout, including variability and complexity measures derived from inter-burst intervals, and Shannon entropy of burst timing computed from the distribution of burst midpoint times."
+  ],
+  "why": "报告的说法不受全文支持。关键问题是混淆了两个不同指标及其结果方向。论文明确报告，冻结前的Shannon entropy下降，而增加的是Lempel-Ziv complexity。后者是基于二值化inter-burst intervals计算的复杂度指标，论文并未将其等同于Shannon entropy。因此，不能将这项研究作为STN神经活动熵增加的证据，而不交代Shannon entropy实际上下降这一关键结果。论文对结果的解释也是神经活动时间模式变得更加受限、可预测，以及病理性burst活动出现受限的时间模式，并没有明确提出病理性信息失序和代偿性信息重组这两种解释。指控者的核心批评有全文依据：Shannon entropy下降，Lempel-Ziv complexity增加，二者不能混为同一个熵增加现象。但指控者的描述也有一处技术性不准确：其称下降的是inter-burst interval Shannon entropy，而方法部分明确说明，Shannon entropy是根据burst midpoint times的分布计算的；由inter-burst intervals推导的是variability和complexity指标。因此，指控者对结果方向的判断正确，但对Shannon entropy具体计算对象的描述不完全准确，判定为partly。"
+}</escape>

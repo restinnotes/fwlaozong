@@ -1,0 +1,112 @@
+{
+ "standards": [
+  {
+   "n": 1,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "检索覆盖具有较大规模和较好的主题分解，但数据库覆盖仍然有限，筛选流程也缺少独立复核。报告仅使用Europe PMC REST API，没有检索Embase、Scopus、Web of Science和Cochrane；题目及摘要筛选由单一模型完成，没有预注册的系统综述方案或双人独立筛选。另有1074篇纳入文献仅获得摘要，动物模型、双任务、影像学和可穿戴步态研究方向仍存在遗漏风险。因此，现有文献数量不能证明已经充分覆盖重要证据。",
+     "where": "§1 L9：“不是按照 PRISMA 方案预注册、双人独立筛选”；§2.1 L30–36：“数据库：Europe PMC REST API”；“未检索：Embase、Scopus、Web of Science、Cochrane”；§2.2 L57–64：“1,074篇仅有摘要”；§2.3 L82：“动物模型、双任务、影像学和可穿戴步态研究方向存在较明显的潜在遗漏风险。”"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "原始文献追溯能力较好，EID能够关联PMID、研究条件、样本和具体发现。但全文核验比例不足：1177篇纳入文献中只有103篇获得全文，1074篇仅有摘要。结构化附录中890条证据有302条标记为abstract来源。摘要不能充分支持对统计模型、阴性结果、亚组分析和方法学细节的核验。报告也没有采用统一的RoB2、ROBINS-I或GRADE等工具对不同研究的偏倚风险及证据确定性进行正式分级。",
+     "where": "§2.2 L55–64：“epmc_xml：67篇”“luna_html：10篇”“luna_pdf：26篇”“仅获得摘要：1,074篇”；“1,074篇仅有摘要的文献，其证据不能视为已经完成全文核验。”结构化附录的evidence[].basis字段也显示存在大量abstract来源。"
+    },
+    {
+     "severity": "moderate",
+     "what": "存在正式发表版本与预印本版本的来源状态错标。三个EID使用正式发表的PMID作为ref，却在limitations中称其为未经同行评审的medRxiv预印本。具体而言，PMID:36070366对应2022年Science Translational Medicine正式论文，PMID:40992964对应2026年Parkinsonism & Related Disorders正式论文，PMID:32634599对应2020年Brain Stimulation正式论文。相应预印本确实另有独立DOI记录，报告也建立了version_of关系，但EID没有正确区分所引用的版本。这会影响证据来源等级、同行评审状态及重复计数审计。",
+     "where": "结构化附录EID S4R_E_PMID_36070366_1：“该版本为尚未经过同行评审的medRxiv预印本”；EID S4R_E_PMID_40992964_1：“所附论文为medRxiv预印本”；EID S4R_E_PMID_32634599_2：“该研究发表于尚未经过同行评审的medRxiv预印本”。正式发表状态可分别核对【turn490638search0】【turn132937search1】【turn132937search2】。"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "verdict": "partly",
+   "issues": [
+    {
+     "severity": "moderate",
+     "what": "报告对高beta与低beta冲突、burst时间结构、皮层-STN耦合、熵、药物状态和刺激参数的分析较深入，提出了有区分性预测的竞争性模型。但存在一个重要的正文综合缺口：若干截止日期前已经纳入结构化附录的重要研究，没有进入正文的核心证据比较和机制讨论。例如，PMID:40709562是一项38例患者的STN电生理及步态启动研究，其中12例在实验中观察到FOG，共记录263次冻结事件；PMID:42571859是2026年10月发表的步态周期锁定皮层-STN研究，涉及HFS、LFS及左旋多巴对冻结相关信号的调节；PMID:42236313提供13例患者转弯冻结期间STN theta与焦虑、认知表现的关系；PMID:42860886则是45例患者的多中心随机双盲STN与STN+SNr比较试验，其主要FOG终点没有显示组间显著差异。这些研究虽然出现在附录，却没有得到与其重要性相称的正文综合。尤其是42571859和42860886，分别涉及核心神经机制和临床刺激证据，应该重新评价H9、H15、C2及C20等结论。",
+     "where": "§3.5 L214–239主要讨论PMID:41131028和Klocke预印本；§3.7 L285–302主要讨论8例Georgiades研究；§3.9 L425–499没有讨论PMID:42860886的随机试验；§10 L1726–1747的核心文献索引也没有完整呈现这些研究。结构化附录已有EID S4R_E_PMID_40709562_1、S4R_E_PMID_42571859_1、S4R_E_PMID_42236313_1及S4R_E_PMID_42860886_1、_2。上述研究的发表时间和主要结果可核对【turn490638search5】【turn490638search2】【turn490638search4】【turn132937search3】。"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "verdict": "met",
+   "issues": []
+  },
+  {
+   "n": 5,
+   "verdict": "not_testable",
+   "issues": []
+  },
+  {
+   "n": 6,
+   "verdict": "met",
+   "issues": []
+  },
+  {
+   "n": 7,
+   "verdict": "not_testable",
+   "issues": []
+  }
+ ],
+ "spot_checks": [
+  {
+   "claim": "C1：STN相关网络参与帕金森病FOG的发生或调节，并具有临床可干预性。临床刺激证据与人体电生理证据是两条不同的证据链。",
+   "cited": "PMID:24361601; PMID:31505548; PMID:18413568; PMID:24396010; PMID:21997389",
+   "verdict": "consistent",
+   "why": "PMID:24361601确实报告22例患者中FOG组STN高beta功率较高；PMID:31505548报告实际冻结前及冻结期间皮层-STN低频耦合下降。临床刺激研究也存在改善部分患者FOG的证据。但电生理相关性和刺激干预效果并不构成同一条因果证据链。报告对此作了正确区分，没有把STN-DBS的临床效果直接解释为STN内源性活动的致病作用。【turn472989search5】【turn163883search5】【turn132937search1】"
+  },
+  {
+   "claim": "N1：FOG患者存在与STN神经活动有关的患者层面易感性特征，包括高beta、alpha及间歇性振荡活动。",
+   "cited": "PMID:24361601; PMID:39884164",
+   "verdict": "consistent",
+   "why": "PMID:24361601的22例病例对照研究报告FOG组高beta功率显著较高（F=11.6，p=0.002）。PMID:39884164的23例研究报告FOG组静息alpha功率及间歇性alpha活动较高，并发现间歇性高beta幅度与FOG评分相关。这些结果支持患者层面的关联，但没有证明这些活动是单次实际冻结前的预测信号。报告明确保留了这一界限。【turn472989search5】【turn132937search0】"
+  },
+  {
+   "claim": "N2/C13：实际冻结期间STN活动存在动态变化，但不存在已经确立的统一STN beta功率方向或通用冻结标志。",
+   "cited": "PMID:28890315; PMID:31505548; PMID:36070366; DOI:10.21203/rs.3.rs-9617843/v1",
+   "verdict": "consistent",
+   "why": "PMID:28890315报告实际FOG期间beta功率下降及alpha Sample Entropy升高；PMID:31505548发现局部STN beta功率没有显著改变，但皮层-STN低频耦合下降；PMID:36070366的研究则在4名实际发生冻结的患者中观察到低beta活动增强及膝伸肌共同激活；Klocke预印本报告转弯冻结中的低beta ERD缺失和相对于正常转弯的12–15 Hz低beta增加。不同研究的任务、基线、冻结阶段和频段定义不同，不能合并成统一方向。报告的综合结论与原始发现一致。【turn163883search6】【turn163883search5】【turn216604search0】【turn513260view1】"
+  },
+  {
+   "claim": "C14：STN beta burst时间结构可能与FOG相关，但长burst不是所有患者和所有冻结任务中都成立的通用标志。",
+   "cited": "PMID:30196050; PMID:31505548; DOI:10.21203/rs.3.rs-9617843/v1",
+   "verdict": "consistent",
+   "why": "Anidi等的12例研究发现Freezer组burst持续时间较长，且5名实际发生SIP冻结的患者在冻结期间burst持续时间进一步延长。Pozzi等研究却没有发现冻结期间平均burst持续时间显著增加。Klocke研究发现长短burst分布重新组织，但冻结转弯与站立之间的总体burst持续时间没有显著差异。报告区分了平均持续时间、长burst比例和任务基线，没有将它们混为一谈。【turn163883search3】【turn163883search5】【turn868842view4】"
+  },
+  {
+   "claim": "C17：皮层-STN耦合异常具有脑区和冻结阶段依赖性，不同皮层区域可能出现方向相反的连接变化。",
+   "cited": "PMID:31505548; PMID:41131028",
+   "verdict": "consistent",
+   "why": "Pozzi等报告冻结前及冻结期间皮层-STN低频耦合下降。Zhang等19例研究则发现冻结转弯TurnStart阶段PMC-STN alpha coherence增加，同时M1-STN alpha coherence下降。这支持区域特异性和阶段依赖性。但PMID:41131028正文称PMC-STN coherence增加预测冻结时间增加，而图注称其预测较短冻结事件，存在原文内部方向不一致。报告对此明确提出回查，处理正确。【turn163883search5】【turn868842view2】"
+  },
+  {
+   "claim": "C2：STN-DBS能够改善部分患者的FOG，但疗效存在明显患者异质性，不能概括为普遍有效。",
+   "cited": "PMID:18413568; PMID:24396010; PMID:21997389; PMID:37701817; PMID:42098512; PMID:42860886",
+   "verdict": "consistent",
+   "why": "PMID:37701817的76例回顾性队列中，42例改善、22例变化轻微、12例恶化。PMID:42098512的31项研究Meta分析报告总体FOG-Q存在 modest improvement，但研究异质性明显。PMID:42860886的45例多中心随机双盲试验发现STN与STN+SNr的90天主要FOG-AC终点没有显著组间差异，两个组均存在响应者。这些结果支持部分获益和明显异质性的结论，而不支持普遍有效或双靶点必然优于单靶点。【turn311126search1】【turn472989search0】【turn132937search3】"
+  },
+  {
+   "claim": "C2及Meta分析综合：2025年网络Meta分析未发现DBS模式具有显著FOG-Q改善，而2026年更新Meta分析报告总体FOG-Q改善；两者不应被视为独立重复验证。",
+   "cited": "PMID:41659700; PMID:42098512",
+   "verdict": "consistent",
+   "why": "PMID:41659700纳入25项RCT，其中10项提供FOG-Q数据，FOG-Q网络没有任何DBS模式达到统计学显著改善，I²=88.3%，并存在网络不一致。PMID:42098512纳入31项研究、905例患者，其中21项提供FOG-Q数据，报告总体MD=-2.99，Med-Off/Stim-On比较的MD=-5.88。两者的纳入研究范围、统计框架和异质性不同，不能直接解释为相互否定。报告也正确提醒两篇Meta分析可能存在原始研究重叠。【turn472989search1】【turn472989search0】"
+  },
+  {
+   "claim": "C8：beta burst驱动的自适应DBS具有初步可行性，但尚未证明其相对于连续刺激或随机自适应刺激具有独立优势。",
+   "cited": "PMID:40677701",
+   "verdict": "consistent",
+   "why": "Wilkins等2025年7例双盲急性实验中，aDBS和连续DBS均较OFF DBS显著降低SIP冻结时间，但aDBS没有显著优于连续DBS或随机自适应DBS。研究证明了初步可行性，而不是beta反馈机制的特异性治疗优势。报告的表述与原始论文一致。【turn472989search2】"
+  }
+ ]
+}
