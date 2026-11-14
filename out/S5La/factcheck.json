@@ -1,0 +1,139 @@
+[
+ {
+  "paper": "PMID:42185340，Machine learning-based optimization of dual subthalamic nucleus and substantia nigra targeting in deep brain stimulation",
+  "pmid": "42185340",
+  "doi": "",
+  "report_says": "报告在结构化附录中将PMID:42185340描述为一项研究，称与健康对照相比，PIGD患者的parafascicular nucleus（Pf）相关通路存在微结构异常，包括FA和NDI降低、AD、MD和RD升高，并与FOG严重程度相关。",
+  "judge_says": "PMID:42185340实际对应的是《Machine learning-based optimization of dual subthalamic nucleus and substantia nigra targeting in deep brain stimulation》，研究分析了612条电极轨迹及STN-SNr双靶点定位，并非Pf通路DTI/NODDI研究。报告所述Pf通路微结构异常实际来自另一篇文献PMID:42183045《Microstructural alterations of parafascicular nucleus pathways associated with freezing of gait in Parkinson's disease》。属于明确的文献编号与研究发现错配。",
+  "source": "abs_g6.json",
+  "pid": "PMID:42185340",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:41131028，PMC-STN alpha coherence与冻结转弯及冻结持续时间的关联研究",
+  "pmid": "41131028",
+  "doi": "",
+  "report_says": "报告认为原文正文与图注对PMC-STN alpha coherence与冻结严重程度的关联方向存在不一致，因此不将关联方向作为已确定的机制证据。",
+  "judge_says": "原文回归变量定义为(Walk-Turn)/Walk，PMC-STN coherence的回归系数为正；图注明确说明coherence增加预测较短的冻结事件。正文只说coherence增加能够预测冻结持续时间，并没有明确说增加预测更长的冻结。因此正文与图注并未明确出现方向相反的结果，报告将其判定为方向不一致属于过度解读。更准确的判断是正文没有充分交代关联方向。",
+  "source": "abs_g6.json",
+  "pid": "PMID:41131028",
+  "report_supported": "no",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "The fixed effects were defined as the normalized electrophysiological changes, calculated by:",
+   "Percentage Change (%) = (Value_Walk - Value_TurnPre or TurnStart) / Value_Walk × 100",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "judge_quotes": [
+   "Our analysis revealed that the decreases in the PMC alpha power (β = 0.154, p = 0.035) (Fig. 4A) and increases in PMC-STN alpha coherence (β = 0.205, p = 0.006) (Fig. 4B) during the TurnPre phase, but not the TurnStart phase, significantly predicted the freezing duration within the trial.",
+   "The fixed effects were defined as the normalized electrophysiological changes, calculated by:",
+   "Percentage Change (%) = (Value_Walk - Value_TurnPre or TurnStart) / Value_Walk × 100",
+   "Increased PMC-STN alpha coherence during the TurnPre phase (but not during the TurnStart phase) relative to walking predicted shorter freezing episodes (β = 0.205, p = 0.006)."
+  ],
+  "why": "报告的方向不一致判断没有充分依据。正文Results段确实只说PMC-STN alpha coherence的增加能够预测freezing duration，没有明确使用longer或shorter描述关联方向；图注则明确说明增加coherence预测较短的冻结事件。但关键在于Methods给出的回归变量定义为(Walk-TurnPre)/Walk×100，而该变量的回归系数为正值β=0.205。也就是说，TurnPre coherence相对于Walk增加时，回归变量反而减小；在正回归系数下，这对应较短而不是较长的冻结持续时间。因此，回归系数、变量定义与图注的方向实际上相互一致。正文没有明确用文字交代关联方向，不等于正文报告了与图注相反的方向。指控者关于正文没有明确说增加coherence预测更长冻结、报告将表述不充分误判为方向矛盾的描述有全文依据。需要补充的限定是：虽然Results正文没有直接写出shorter，但结合Methods中的变量定义和正回归系数，全文实际上可以推导出与图注一致的方向。",
+  "verdict": "accusation_holds"
+ },
+ {
+  "paper": "PMID:31665229，术中虚拟现实（VR）步态诱发冻结及冻结起始时多单位活动（MUA）记录研究",
+  "pmid": "31665229",
+  "doi": "",
+  "report_says": "报告将该研究纳入N1患者层面的STN高beta及alpha活动与FOG易感性或严重程度关联证据，并计入N1的4个独立队列。",
+  "judge_says": "该研究记录的是术中虚拟现实步态诱发冻结起始时的事件级多单位神经活动，属于实际冻结事件的电生理证据，而不是患者层面的静息态或基线易感性研究。将其纳入N1患者层面易感性证据并计入独立队列，属于证据层级与研究内容的错误映射。",
+  "source": "abs_g6.json",
+  "pid": "PMID:31665229",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:42571859，步态周期锁定的皮层-STN电生理观察及刺激干预研究",
+  "pmid": "42571859",
+  "doi": "",
+  "report_says": "报告将该研究纳入N1患者层面的STN高beta及alpha活动与FOG易感性或严重程度关联证据，并计入N1的4个独立队列。",
+  "judge_says": "该研究属于步态周期锁定的事件级电生理观察及刺激干预研究，而不是患者层面的静息态或基线易感性研究。将其归入N1患者层面易感性证据并计入独立队列，混淆了事件级证据与患者层面证据。",
+  "source": "abs_g6.json",
+  "pid": "PMID:42571859",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:21997389，第一作者及年份未提供",
+  "pmid": "21997389",
+  "doi": "",
+  "report_says": "报告在跨研究机制证据比较中使用该研究的freeze-like events，但没有始终将其与实际观察到的FOG事件区分，容易将两者作为可直接比较的同类结局。",
+  "judge_says": "原文测量的是门洞诱发的freeze-like events，并非直接等同于实际发生的FOG。该研究的结局类型应与真实冻结事件分开处理。",
+  "source": "open_g56.json",
+  "pid": "PMID:21997389",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:31494286，第一作者及年份未提供",
+  "pmid": "31494286",
+  "doi": "",
+  "report_says": "报告在FOG机制证据比较中使用该研究，但没有始终保留FOG易感性指标与实际观察到的冻结事件之间的区别，容易将两者作为同类证据比较。",
+  "judge_says": "原文使用的是由躯干加速度计推导的FOG vulnerability指数，而非仅基于直接观察到的真实冻结事件。不能将该指标与实际冻结事件的发生情况等同。",
+  "source": "open_g56.json",
+  "pid": "PMID:31494286",
+  "verdict": "no_fulltext"
+ },
+ {
+  "paper": "PMID:37226972，第一作者及年份未提供",
+  "pmid": "37226972",
+  "doi": "",
+  "report_says": "报告在解释该研究的认知负荷相关STN theta活动下降时，将其作为FOG相关神经活动证据进行机制比较，但没有充分体现受影响试次同时包含显著步态减速这一条件。",
+  "judge_says": "原文中认知负荷导致步态障碍的受影响试次同时包含冻结和显著步态减速，不能将结果简单解释为纯粹针对实际FOG的神经活动变化。",
+  "source": "open_g56.json",
+  "pid": "PMID:37226972",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "Signal analysis during 15 trials containing freezing or significant motor output slowing precipitated by dual‐tasking demonstrated reduced θ frequency (3–8 Hz) firing compared to 18 unaffected trials.",
+   "Specifically, we observed reduced θ activity coincident with cue presentation for trials where ongoing VR gait was disturbed by concurrent cognitive processing (either VR freezing or >50% FPV reduction), compared to trials that were unaffected by dual‐tasking (Fig. 2)."
+  ],
+  "judge_quotes": [
+   "The remaining 15 trials were pooled and classed as cognitive cue‐associated VR freezing (n = 8) or significant VR gait slowing where there was >50% FPV reduction (n = 7).",
+   "Further research is required to explore whether the presently reported reduction in θ frequency activity relates specifically to altered cognitive processing or to freezing itself.",
+   "A remaining challenge for future work is to confirm our preliminary findings in a larger cohort and discern robust features that distinguish pathological freezing and gait disturbances with cognitive dual‐tasking."
+  ],
+  "why": "报告的解释有部分依据，但存在重要限定条件。论文确实将STN theta活动下降置于认知负荷诱发的FOG及步态障碍的研究背景下，因此将其作为FOG相关神经活动的证据并非完全错误。然而，关键分析中的15个受影响试次并非全部为实际冻结试次，而是合并了8个冻结试次和7个显著步态减速试次（FPV下降超过50%）。因此，theta活动下降反映的是认知负荷相关步态功能障碍这一混合结果，不能直接等同于FOG特异性神经活动变化。指控者的描述有明确全文依据。尤其是作者明确指出，仍需进一步研究该theta活动下降究竟与认知加工改变有关，还是与冻结本身有关。这表明作者并未将观察到的神经活动变化确认为FOG特异性现象。需要准确区分的是，冻结和显著步态减速是汇总分析中两类不同的受影响试次，并非每个受影响试次都同时出现冻结和显著减速。总体判断：报告将该发现用于FOG机制比较具有一定依据，但若未交代7个显著步态减速试次的纳入，确实遗漏了影响FOG特异性解释的重要限定；指控者关于不能将结果简单解释为实际FOG特异性神经活动变化的判断成立。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "PMID:35310098，第一作者及年份未提供",
+  "pmid": "35310098",
+  "doi": "",
+  "report_says": "报告在跨研究证据比较中使用该研究的30次冻结测试，但没有充分体现原始数据质量方面的限制。",
+  "judge_says": "原文报告的30次冻结测试中，只有21次达到了较好的原始数据质量，不能将全部30次测试不加区分地视为同等质量的有效数据。",
+  "source": "open_g56.json",
+  "pid": "PMID:35310098",
+  "report_supported": "partly",
+  "judge_supported": "yes",
+  "report_quotes": [
+   "A total of 8 patients completed 41 walking tests, 30 of which had frozen episodes, and 21 of the 30 raw data were level 1 or 2 in quality (70%)."
+  ],
+  "judge_quotes": [
+   "A total of 8 patients completed 41 walking tests, 30 of which had frozen episodes, and 21 of the 30 raw data were level 1 or 2 in quality (70%).",
+   "Therefore, before selecting each segment of electrical signal for analysis, we manually reviewed and scaled the signal quality, and selected level 1 or level 2 for subsequent analysis (Table 2).",
+   "We selected each segment of electrical signal reaching level 1 or 2 for analysis, and of all the data collected in this study, more than 70% have limited motion artifacts, which also confirms the stability of our data collection platform."
+  ],
+  "why": "原文同时明确报告了两个事实，因此二者并不矛盾。第一，30次行走测试确实出现了冻结事件，故将该研究描述为包含30次冻结测试有明确依据。第二，原文明确指出，30份冻结相关原始数据中，只有21份（70%）达到1级或2级质量；方法部分还明确说明，后续分析选择的是达到1级或2级质量的数据。因此，指控者关于原始数据质量存在限制的描述有充分依据，不能不加区分地把30次测试全部视为同等质量的数据。不过，原文并未说明另一份报告如何具体处理这些数据，也无法仅凭论文全文确认该报告是否确实遗漏了质量限定。因此，report_supported判为partly，而不是no：30次冻结测试这一数量本身没有误读，但如果跨研究比较将30次全部作为同等质量的有效数据而未体现21/30的质量限定，则会遗漏重要信息。另需注意，原文并未直接将其余9份数据定义为完全无效，只说明它们未达到后续分析所选择的1级或2级质量标准。",
+  "verdict": "accusation_partly"
+ },
+ {
+  "paper": "2025年预印本，具体题目未提供；结构化附录中的DOI引用键与参考文献条目不一致",
+  "pmid": "",
+  "doi": "参考文献所列：10.1101/2025.01.01.631000；证据键所列：10.1101/2025.01.10.631000",
+  "report_says": "结构化证据键S4R_E_DOI_10.1101_2025.01.10.631000_1将该预印本标识为DOI 10.1101/2025.01.10.631000。",
+  "judge_says": "参考文献中的对应DOI是10.1101/2025.01.01.631000，两者不一致，属于具体文献标识符错引，导致证据记录与参考文献之间无法可靠对应。",
+  "source": "open_g56.json",
+  "verdict": "paper_not_in_kb"
+ },
+ {
+  "paper": "2024年 Brain 开放获取原始研究，研究关键词：步态启动、STN-GA相干性、冻结前神经肌肉活动",
+  "pmid": "39470410",
+  "doi": "",
+  "report_says": "报告在附录中将该研究的证据记录标记为 basis=abstract，并将样本量记录为“摘要未报告”，没有提取全文中的实际样本量和实验条件。",
+  "judge_says": "该研究全文明确报告纳入12名患者，其中5名在实验中出现冻结（FOG），共记录42次冻结事件及75个冻结前步态周期。此外，全文报告冻结前STN-GA相干性增加、拮抗肌共同收缩及STN活动异常。报告将样本量记为“摘要未报告”，未能准确提取开放获取全文中已有的事实性数据。",
+  "source": "open_g6.json",
+  "pid": "PMID:39470410",
+  "verdict": "no_fulltext"
+ }
+]

@@ -575,13 +575,18 @@ def export_appendix(c, args):
     pkp = OUT / args.tag / "independence_packet.json"
     if pkp.exists():
         rt = getattr(args, "rel_tag", None) or ("S5L" if c.execute("SELECT 1 FROM paper_meta WHERE run_id='S5L' LIMIT 1").fetchone() else args.tag)
-        meta = [dict(r) for r in c.execute("SELECT pid, kind, n_patients, center, recruitment FROM paper_meta WHERE run_id=?", (rt,)) if r["pid"] in papers]
-        rels = [dict(r) for r in c.execute("SELECT a, b, relation, basis FROM paper_rel WHERE run_id=?", (rt,)) if r["a"] in papers or r["b"] in papers]
+        # 紧凑格式（11-14：字典格式 13.7 万字，盲比两份一起超过对话长度上限）：一篇一行、一对一行，依据截到 80 字
+        meta = [f"{r['pid']}|{r['kind']}|n={r['n_patients'] if r['n_patients'] is not None else '不明'}|{r['center'] or '-'}"
+                for r in c.execute("SELECT pid, kind, n_patients, center FROM paper_meta WHERE run_id=?", (rt,)) if r["pid"] in papers]
+        rels = [f"{r['a']}|{r['b']}|{r['relation']}|{(r['basis'] or '')[:80]}"
+                for r in c.execute("SELECT a, b, relation, basis FROM paper_rel WHERE run_id=?", (rt,)) if r["a"] in papers or r["b"] in papers]
         app["independence"] = {
             "how_counted": "独立患者队列只统计 kind=primary_patient 的文献；上限只合并 same_work/same_cohort，下限再合并 partial_overlap/unknown；"
                            "未列在 relations 里的文献对视为独立。患者数 = 各队列内取最大 n 后相加，任何一篇 n 不明则为 null。全部由程序按下面两张表计算。",
-            "papers": meta, "relations": rels,
-            "per_claim": json.loads(rd(pkp))}
+            "papers_format": "pid|类型|患者数|中心", "papers": meta,
+            "relations_format": "文献A|文献B|关系|依据", "relations": rels,
+            "per_claim": [{**{k: v for k, v in x.items() if k != "clusters"}, "shared_cohort_clusters": [cl["papers"] for cl in x.get("clusters", [])]}
+                          for x in json.loads(rd(pkp))]}
     wr(OUT / args.tag / "appendix.json", app)
     print(f"附录：文献 {len(app['references'])}，证据 {len(app['evidence'])}，结论 {len(app['claims'])}，假说 {len(app['hypotheses'])}", flush=True)
 
@@ -745,8 +750,22 @@ def summarize_review(tag):
         print("   抽查", dict(Counter(x.get("verdict") for x in d.get("spot_checks", []))))
 
 
+def blind_view(tag):
+    """盲比看的版本（设定登记 #15，11-14）：正文 + 附录，但两份都去掉证据的 quote 原文摘句。
+    原因：两份成品各约 100 万字作附件一起给，S5L/S5La 多了独立性数据后超过对话长度上限（上游报
+    "maximum length for this conversation"），4 次盲比失败 3 次。两份同样处理，比较仍对称。"""
+    full_report(tag)
+    body = rd(OUT / tag / "report.md"); app = OUT / tag / "appendix.json"
+    if app.exists():
+        a = json.loads(rd(app))
+        a["evidence"] = [{k: v for k, v in e.items() if k != "quote"} for e in a.get("evidence", [])]
+        a["claims"] = [{**cl, "evidence": [f"{e.get('eid')}:{e.get('relation')}" for e in cl.get("evidence", [])]} for cl in a.get("claims", [])]
+        body += "\n\n## 结构化附录（JSON；证据的原文摘句、结论—证据关联的逐条说明已略去）\n\n```json\n" + json.dumps(a, ensure_ascii=False) + "\n```\n"
+    return body
+
+
 def cmd_blind(args):
-    q = question(args); st = standard(); A = full_report(args.a); B = full_report(args.b)
+    q = question(args); st = standard(); A = blind_view(args.a); B = blind_view(args.b)
     jobs = [(seat, j, m, acct) for seat in ("aX", "bX") for j, m, acct in (("g6", G6, "gpt3"), ("g56", G56, "gpt4"))]
     def one(job):
         seat, j, m, acct = job

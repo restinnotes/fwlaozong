@@ -214,3 +214,19 @@ S6D2 正文引用 213 个 {'in_kb': 208, 'not_in_kb_not_found': 5} ；疑似挂�
   疑似挂错：PMID:28261073（相似 0.07）更像 PMID:41420410（0.488）| …hi等（2025）在33例患者（FOG 15、非FOG 18）中发现，不一致视觉提示增加APA振幅、持续时间和延迟，FOG患者SMA激活较低，尤其在冲突条件下；该研究没有STN记录
   疑似挂错：DOI:10.1101/2024.06.26.24309418（相似 0.267）更像 PMID:36185822（0.5）| …这意味着治疗有效不等于beta burst特异性反馈机制得到验证
 [S6D2_Q1_abs_g6_892c5f7f] gpt4 gpt-6-thinking 完成 459s 8049 字
+[S6D2_Q1_open_g56_9269ae27] gpt4 gpt-5-6-thinking 完成 618s 9191 字
+[S6D2_Q1_open_g6_9269ae27] gpt3 gpt-6-thinking 完成 927s 8527 字
+S6D2 open_g6: major 1，moderate 0
+    1 major 存在已确认的核心文献错配，而且报告声称已经排除的错误证据仍然保留在结构化数据库中。这是证据污染，不只是引用格式错误。
+S6D2 open_g56: major 7，moderate 5
+    1 major 已经识别出的严重文献错配没有从最终证据库中清除，导致错误证据仍然参与结论生成。这是目前最严重的数据完整性问题。
+    2 major 文献筛选和证据提取主要依赖单一GPT模型，没有独立人工复核、双人筛选或经过验证的提取准确率。
+    3 major 检索覆盖范围不足以支撑报告对现有证据全景和交叉研究方向的广泛概括。
+S6D2 绝对验收: severe 2，moderate 6，minor 2； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'met'), (4, 'partly'), (5, 'not_testable'), (6, 'partly'), (7, 'not_testable')]
+   抽查 {'consistent': 7, 'wrong': 1}
+[blind_S4Rc_vs_S6D2_aX_g56_d95f26c6] gpt4 gpt-5-6-thinking 完成 230s 2386 字
+[blind_S4Rc_vs_S6D2_aX_g6_d95f26c6] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 271s
+[blind_S4Rc_vs_S6D2_bX_g6_6bfb4a65] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 269s
+[blind_S4Rc_vs_S6D2_bX_g56_6bfb4a65] gpt4 gpt-5-6-thinking 失败 UPSTREAM_STREAM_ERROR 381s
+[blind_S4Rc_vs_S6D2_aX_g6_d95f26c6] gpt4 gpt-6-thinking 完成 276s 2570 字
+[blind_S4Rc_vs_S6D2_bX_g56_6bfb4a65] gpt3 gpt-5-6-thinking 完成 361s 2212 字
