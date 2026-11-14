@@ -11,3 +11,37 @@ S5L 正文引用 38 个 {'in_kb': 38} ；疑似挂错编号 0 处
 [S5L_Q1_abs_g6_c345bd51] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1034s
 [S5L_Q1_open_g6_58db57cf] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1409s
 [S5L_Q1_abs_g6_c345bd51] gpt4 gpt-6-thinking 完成 707s 7040 字
+[S5L_Q1_open_g6_58db57cf] gpt4 gpt-6-thinking 完成 1594s 11676 字
+S5L open_g6: major 1，moderate 0
+    1 major 核心证据的全文核查比例不足，报告的证据可靠性与其呈现出的综合规模不相称。
+S5L open_g56: major 6，moderate 6
+    1 major 检索与筛选方法不足以支撑报告所追求的广泛、系统性证据覆盖，且检索过程不能充分复现。
+    2 major 所谓独立研究、独立患者队列和患者数量审计，缺乏能够真正复算这些数字的数据结构。
+    3 major 缺少统一的研究质量和偏倚风险评价，使用支持性队列数量代替证据强度，容易产生虚假的证据确定性。
+S5L 绝对验收: severe 0，moderate 5，minor 0； 逐条 [(1, 'partly'), (2, 'partly'), (3, 'met'), (4, 'partly'), (5, 'not_testable'), (6, 'met'), (7, 'not_testable')]
+   抽查 {'consistent': 7, 'overstated': 1}
+[blind_S4Rc_vs_S5L_bX_g56_b81e08cf] gpt4 gpt-5-6-thinking 完成 243s 2284 字
+[blind_S4Rc_vs_S5L_aX_g6_7ff74703] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 438s
+[blind_S4Rc_vs_S5L_aX_g56_7ff74703] gpt4 gpt-5-6-thinking 失败 UPSTREAM_STREAM_ERROR 594s
+[blind_S4Rc_vs_S5L_bX_g6_b81e08cf] gpt3 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 622s
+[blind_S4Rc_vs_S5L_aX_g6_7ff74703] gpt4 gpt-6-thinking 完成 297s 2192 字
+[blind_S4Rc_vs_S5L_aX_g56_7ff74703] gpt3 gpt-5-6-thinking 失败 LOCAL_TRANSPORT_FAILURE 299s
+盲比解析失败 无回答
+[blind_S4Rc_vs_S5L_bX_g6_b81e08cf] gpt4 gpt-6-thinking 失败 UPSTREAM_STREAM_ERROR 1027s
+盲比解析失败 无回答
+g6 aX 总体: S4Rc 分项: {'coverage': 'tie', 'evidence': 'S4Rc', 'synthesis': 'S4Rc', 'structure': 'S4Rc', 'rigor': 'S4Rc'}
+g56 bX 总体: S4Rc 分项: {'coverage': 'S5L', 'evidence': 'S4Rc', 'synthesis': 'S4Rc', 'structure': 'S5L', 'rigor': 'S4Rc'}
+[fcx_S5L_7820679a] gpt4 gpt-6-thinking 完成 6s 35 字
+[fcx_S5L_68b230be] gpt4 gpt-6-thinking 完成 22s 817 字
+[fcx_S5L_0695ea5f] gpt4 gpt-6-thinking 完成 14s 35 字
+[fcx_S5L_c505e669] gpt3 gpt-6-thinking 完成 53s 911 字
+[fcx_S5L_7ed7a06c] gpt4 gpt-6-thinking 完成 45s 560 字
+指控来源 5 份，抽出指控 5 条
+[fcj_S5L_afcd6fa3] gpt4 gpt-6-thinking 完成 50s 535 字
+[fcj_S5L_25863321] gpt4 gpt-6-thinking 完成 101s 3685 字
+S5L 指控裁定 {'no_fulltext': 3, 'accusation_partly': 1, 'cannot_tell': 1}
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:31665229 | 指控：该研究实际上是术中通过虚拟现实诱发冻结、研究冻结事件起始过程的事件层面研究，而非患者层面的静息态或稳定易感性病例对照研究。它可以作为患者层面结论的限定性证据，但
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:42571859 | 指控：该研究实际上比较的是冻结与非冻结步态周期，并考察不同刺激频率及左旋多巴的调节作用，属于步态周期或事件层面研究，而非患者层面的静息态或稳定易感性病例对照研究。它可
+  [accusation_partly] 报告有依据:partly 指控有依据:partly PMID:41659700 | 指控：原文纳入25项随机对照试验，但FOG-Q分析实际上只有10项研究，结论是没有任何DBS模式的网络效应达到统计学显著性。该研究主要估计不同DBS模式之间的相对效果
+  [no_fulltext] 报告有依据:None 指控有依据:None PMID:42098512 | 指控：原文纳入31项研究、905名患者，其中21项研究提供FOG-Q数据，报告总体MD=-2.99，并进一步比较不同药物状态和刺激状态下的效果。其研究对象、治疗对照和
+  [cannot_tell] 报告有依据:cannot_tell 指控有依据:partly PMID:40677701 | 指控：该研究已于2025年正式发表，正式发表版的PMID为40677701，DOI为10.1093/braincomms/fcaf266。评委指出，报告X引用了202

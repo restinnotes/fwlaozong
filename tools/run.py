@@ -548,6 +548,7 @@ def cmd_report(args):
                 "同一队列的多篇论文不能写成“多项研究重复验证”；范围就写范围，null 写“无法确定”。")
     if len(msg) > INLINE_MAX: raise RuntimeError(f"写报告提示词仍超长 {len(msg)}")
     ans = llm.call(f"{args.tag}_{args.q}_report_{llm.pid(msg)}", msg, attach=att, model=G6, stage="report")
+    if itab.exists(): ans = canon_cites(c, ans)
     if methods: ans = ans.rstrip() + "\n\n" + methods + "\n"
     if itab.exists(): ans = ans.rstrip() + "\n\n" + rd(itab) + "\n"
     wr(OUT / args.tag / "report.md", ans)
@@ -570,6 +571,17 @@ def export_appendix(c, args):
                           for p in pids if p in papers],
            "evidence": [{"eid": x, "ref": ev[x]["pid"], **{k: ev[x][k] for k in ("design", "population", "n", "condition", "measure", "finding", "limitations", "quote", "basis")}} for x in used],
            "claims": syn["claims"], "hypotheses": syn["hypotheses"], "gaps": syn.get("gaps", [])}
+    # S5L 盲比理由（11-14）："29–39、45–66 等队列范围缺少可直接复核的逐队列归并清单"——计数的底数据要导出，读者才能复算
+    pkp = OUT / args.tag / "independence_packet.json"
+    if pkp.exists():
+        rt = getattr(args, "rel_tag", None) or ("S5L" if c.execute("SELECT 1 FROM paper_meta WHERE run_id='S5L' LIMIT 1").fetchone() else args.tag)
+        meta = [dict(r) for r in c.execute("SELECT pid, kind, n_patients, center, recruitment FROM paper_meta WHERE run_id=?", (rt,)) if r["pid"] in papers]
+        rels = [dict(r) for r in c.execute("SELECT a, b, relation, basis FROM paper_rel WHERE run_id=?", (rt,)) if r["a"] in papers or r["b"] in papers]
+        app["independence"] = {
+            "how_counted": "独立患者队列只统计 kind=primary_patient 的文献；上限只合并 same_work/same_cohort，下限再合并 partial_overlap/unknown；"
+                           "未列在 relations 里的文献对视为独立。患者数 = 各队列内取最大 n 后相加，任何一篇 n 不明则为 null。全部由程序按下面两张表计算。",
+            "papers": meta, "relations": rels,
+            "per_claim": json.loads(rd(pkp))}
     wr(OUT / args.tag / "appendix.json", app)
     print(f"附录：文献 {len(app['references'])}，证据 {len(app['evidence'])}，结论 {len(app['claims'])}，假说 {len(app['hypotheses'])}", flush=True)
 
@@ -1555,6 +1567,19 @@ def cmd_independence(args):
     print(f"独立性修订：{nchg}/{len(syn['claims'])} 条结论改了措辞或强度；附表已写", flush=True)
 
 
+def canon_cites(c, text, rel_tag="S5L"):
+    """S5L 盲比理由（11-14）：正文仍引预印本，而正式版已发表。只对 version_of 且模型确认 same_work 的对，
+    在正文的预印本引用后面补上正式版编号（程序做，不让模型改写）。"""
+    conf = {tuple(sorted((r["a"], r["b"]))) for r in c.execute("SELECT a,b FROM paper_rel WHERE run_id=? AND relation='same_work'", (rel_tag,))}
+    n = 0
+    for r in c.execute("SELECT pid, version_of FROM papers WHERE version_of IS NOT NULL"):
+        if tuple(sorted((r["pid"], r["version_of"]))) not in conf or r["pid"] not in text: continue
+        pat = re.compile(r"(\[[^\]]*?)" + re.escape(r["pid"]) + r"(?![^\]]*正式发表版)")
+        text, k = pat.subn(lambda m: m.group(1) + r["pid"] + f"（预印本；正式发表版 {r['version_of']}）", text); n += k
+    if n: print(f"正文预印本引用补正式版编号 {n} 处", flush=True)
+    return text
+
+
 def cmd_report_sections(args):
     """S6D（11-14 用户判定：同学说 S3 "细节有点缺乏"）：整份报告一次写完时 25 条结论、890 条证据被压成概括句
     （S3d3 正文引用 52 篇 / 库里 352 篇、P 值 3 处；B0 One-shot P 值 12 处）。改为每条结论一节、一节一调用，
@@ -1608,6 +1633,7 @@ def cmd_report_sections(args):
     body += [secs[cl["cid"]].strip() for cl in syn["claims"]]
     body += [parts.get("假说", ""), parts.get("缺口与下一步", "")]
     ans = "\n\n".join(x.strip() for x in body if x and x.strip())
+    ans = canon_cites(c, ans)
     if args.with_methods:
         methods = build_methods(c, args); wr(OUT / args.tag / "methods.md", methods); ans += "\n\n" + methods + "\n"
     itab = OUT / args.tag / "independence_table.md"

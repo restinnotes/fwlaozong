@@ -1,0 +1,94 @@
+### C14 STN beta burst时间结构可能比整段平均beta功率更接近部分FOG相
+
+#### 一、直接证据：实际冻结事件期间的STN beta burst时间结构
+
+**1. Anidi et al.（2018）：SIP任务中实际冻结期间beta burst duration延长，但burst power没有同步增加**
+
+Anidi等开展了人体STN-LFP记录实验，采用受试者内重复测量设计，随机呈现不同DBS刺激条件，并在停药状态下考察不同刺激条件对步态及神经活动的影响。本节最重要的是其无刺激（DBS OFF）条件下的冻结事件分析。研究纳入12名接受双侧STN-DBS植入的PD患者，其中Freezers 8名、Non-Freezers 4名；Freezer身份根据临床FOG病史和/或实验任务中是否出现冻结确定。SIP任务的神经分析使用18个STN半球。需要区分的是，8名Freezers并不意味着8人都在实验中产生了可分析的冻结事件：只有5名患者在SIP任务中实际出现冻结；另有1名患者在所有SIP刺激条件下持续冻结、无法完成任务，因此被排除在神经及运动学分析之外。[PMID:30196050]
+
+在OFF-medication、DBS OFF条件下，研究对同一患者SIP任务中的冻结阶段与未冻结阶段进行比较。采用STN-LFP个体化movement-band beta活动，通过振幅包络超过基线的持续时间计算beta burst duration。结果显示，实际FOG期间的beta burst duration显著长于同一患者未冻结时的持续时间，\(F(1,815)=13.114\)，\(P<0.001\)。这是目前所列证据中直接将同一患者的实际冻结事件与非冻结运动阶段进行比较、并报告beta burst持续时间显著增加的关键人体研究。[PMID:30196050]
+
+值得注意的是，延长并非伴随所有beta burst指标一致增加。对同一批患者进行burst power分析时，冻结期间与非冻结期间的单个burst平均功率没有显著差异，论文未报告该比较的精确P值。这意味着该研究观察到的冻结相关变化主要体现在burst持续时间，而不是单个burst平均功率的同步升高。研究还报告，burst duration与burst power之间的关系很弱：静息状态\(R^2=0.0625\)，SIP任务\(R^2=0.108\)，二者均\(P<0.001\)；FW任务\(R^2=0.006\)，未报告对应P值。这些结果支持将burst时间结构与功率幅度作为不同神经维度分析，而不是把两者当作可以互相替代的指标。[PMID:30196050]
+
+该研究的限制包括：实际SIP冻结分析仅涉及5名患者；Freezer与Non-Freezer组人数不平衡；部分STN半球受到刺激伪迹或心电伪迹影响而被排除。尤其需要谨慎解释\(F(1,815)\)中的大量自由度：研究的统计单位涉及患者内重复出现的burst观测，论文对burst嵌套于患者及半球后的相关结构处理说明不够充分。因此，较小的P值不能被理解为存在数百名独立患者或数百次独立临床重复验证。[PMID:30196050]
+
+Anidi等还展示了一名代表性Freezer的时间序列：在尚未冻结时，更受累侧（MA）STN平均burst duration为0.85 s，较少受累侧（LA）为0.55 s，均高于Non-Freezer组平均值\(0.27\pm0.04\) s。任务开始23 s后，LA STN的burst duration开始增加，随后步态进一步恶化并出现冻结。这一病例提示双侧STN burst时间结构可能存在不对称变化，且变化可能与冻结前的步态恶化相伴；但它是\(n=1\)的描述性观察，不能作为独立组水平证据，也不能确定burst延长发生在冻结的因果链条中的具体位置。[PMID:30196050]
+
+**2. Pozzi et al.（2019）：自然前向行走冻结期间没有发现平均beta burst duration显著增加**
+
+Pozzi等对7名接受双侧STN-DBS植入的特发性PD患者进行了患者内重复测量研究，其中5名为FOG阳性患者。研究共分析14次冻结事件。与Anidi等的SIP原地踏步范式不同，该研究在实际前向行走（forward walking）过程中观察冻结，属于对自然行走情境中FOG相关STN活动的直接记录。[PMID:31505548]
+
+记录条件为药物OFF至少12小时、DBS OFF至少2小时。研究通过Morlet小波变换识别个体beta峰频率处超过阈值的beta burst，并采用半高全宽（full width at half maximum，FWHM）计算burst持续时间。分析时将冻结开始（FSTART）和冻结结束（FSTOP）阶段合并，再与等时长、随机选择的有效行走时间窗比较，以减少不同分析时间窗长度造成的偏差。[PMID:31505548]
+
+与Anidi等在SIP任务中的结果不同，Pozzi等没有发现实际冻结期间STN beta burst持续时间相对于有效行走期间显著增加，也没有发现左右STN之间的持续时间差异。该研究报告的主要结果是阴性结果，没有提供可用于量化组间差异的具体效应量或精确P值。[PMID:31505548]
+
+这两项研究构成C14最明确的直接证据冲突：
+
+- Anidi等：OFF-medication、DBS OFF，坐位/原地踏步范式，5名实际出现SIP冻结的患者；冻结期间相对于同一患者非冻结踏步阶段，burst duration显著延长。[PMID:30196050]
+- Pozzi等：OFF-medication、DBS OFF，自然前向行走范式，7名患者、14次冻结事件；冻结开始及结束阶段合并后，与有效行走时间窗比较，没有发现burst duration显著增加。[PMID:31505548]
+
+两者的药物及刺激关闭条件相近，因而不能简单将冲突归因于药物或DBS状态不同。更值得考虑的是任务范式及冻结状态的差异：SIP是原地交替踏步任务，而Pozzi研究观察的是前向行走期间的冻结。两种任务涉及不同的运动控制要求和冻结表现，可能产生不同的STN活动时间结构。此外，冻结事件的时间窗定义不同：Anidi采用任务中冻结与非冻结踏步阶段的比较，Pozzi将冻结开始与结束阶段合并，并以等时长随机有效行走窗作为对照。两种分析可能捕捉到不同的时间动态。Pozzi等也明确提出，任务设置差异可能解释其结果与Anidi等之间的不一致，并指出不同临床表现的FOG未必具有完全相同的电生理基础。[PMID:30196050; PMID:31505548]
+
+因此，Pozzi研究不宜被解释为STN beta burst时间结构与FOG完全无关。它更具体地限制了一个较强的命题：**不能认为所有实际冻结事件都必然表现为平均beta burst duration增加。**[PMID:31505548]
+
+**3. Klocke et al.（2026）：转弯冻结未表现为平均持续时间增加，但长短burst分布发生重新组织**
+
+Klocke等开展了双侧STN-DBS患者的受试者内重复测量研究，专门分析转弯相关冻结。研究纳入13名确诊definite FoG的PD患者，其中11名实际出现转弯冻结（FoG-Turn）。实验在MedOFF/StimOFF条件下进行，比较站立（Standing）、正常行走（Regular Walking）、正常转弯（Regular Turn）和冻结转弯（FoG-Turn）。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+该研究的burst检测方法需要特别注意。首先，以每名患者Standing阶段的beta峰频率为中心，采用峰值频率±2 Hz进行滤波；其次，依据各患者Standing阶段beta振幅分布的第75百分位确定阈值；最后，将超过阈值且持续时间超过100 ms的连续活动定义为beta burst。研究不仅计算平均burst duration，还将持续时间按100 ms区间分组，分析不同持续时间区间的burst分布。图5A报告的burst试次数量分别为Standing 21、Regular Walking 876、Regular Turn 277及FoG-Turn 168。这些数字是burst分析的试次/观测数量，不是患者数或冻结事件数；实际出现FoG-Turn的患者为11名。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+平均持续时间分析首先显示，Regular Walking和Regular Turn相对于Standing均出现显著缩短，分别为\(P<0.001\)和\(P=0.002\)。但FoG-Turn相对于Standing的平均beta burst duration没有显著差异，\(P=0.569\)。因此，这项研究同样没有支持将平均burst duration增加视为冻结转弯的普遍特征。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+然而，如果只看平均值，会遗漏该研究最重要的结果。将FoG-Turn与Regular Walking进行持续时间分布比较后，研究发现两种状态的burst时间结构发生重新组织：FoG-Turn中的短burst比例下降，而长burst比例增加。分布交互效应为\(F(2.003,18.024)=8.455\)，校正后\(P=0.003\)。具体而言，相对于Regular Walking：
+
+- 0.1–0.2 s区间的burst比例下降12.95%，\(P=0.010\)；
+- 0.2–0.3 s区间的burst比例下降6.96%，\(P=0.011\)；
+- 0.4–0.5 s区间的burst比例增加5.20%；
+- 0.5–0.6 s区间的burst比例增加5.21%；
+- 大于0.6 s区间的burst比例增加4.19%。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+这一结果与Anidi研究的表面差异并不意味着两者必然互相否定。Anidi报告的是SIP冻结期间平均burst duration相对于非冻结踏步阶段增加；Klocke则发现转弯冻结相对于Standing的平均持续时间没有增加，但相对于正常行走，其长短burst的分布发生变化。前者强调平均持续时间，后者进一步揭示分布内部不同持续时间区间的比例变化。即使平均值没有显著变化，长burst比例上升和短burst比例下降仍可能同时存在。两项研究的任务范式、参照状态、burst识别方法和统计分析层级也不同。[PMID:30196050; DOI:10.21203/rs.3.rs-9617843/v1]
+
+Klocke等进一步分析了转弯前3 s的STN活动。研究报告Pre FoG-Turn和Pre Reg-Turn相对于Standing的平均burst duration均显著缩短，分别为\(P=0.010\)和\(P=0.018\)。但是，与Regular Walking比较时，Pre FoG-Turn出现短burst比例重新分布：100–200 ms区间比例下降11.09%，校正后\(P=0.010\)；整体分布交互效应为\(F(2.244,20.194)=3.391\)，\(P=0.049\)。Pre Reg-Turn与Regular Walking之间的相应交互效应未达到显著性，\(P=0.079\)。图5A报告的Pre Reg-Turn、Pre FoG-Turn及Regular Walking burst试次数量分别为271、166和876，同样不能解释为患者数或独立冻结事件数。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+这一结果提示，冻结前转弯阶段的异常与实际冻结转弯阶段的异常未必相同：冻结前可表现为特定短burst区间比例下降，而实际冻结转弯则表现为短burst比例下降和长burst比例增加。由于Pre FoG-Turn与Pre Reg-Turn之间缺乏充分的直接统计比较，不能将这些结果进一步解释为已经验证的个体水平冻结预测标志。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+该研究还发现，FoG-Turn期间beta burst duration与平均转弯角速度呈负相关，\(\rho=-0.478\)，\(P=0.038\)，即burst持续时间越长，转弯角速度越低。Regular Turn中没有相应关系，\(\rho=-0.006\)，\(P=0.979\)。两种转弯状态下，burst振幅与角速度均无显著相关：FoG-Turn为\(\rho=0.122\)，\(P=0.619\)；Regular Turn为\(\rho=0.352\)，\(P=0.100\)。这进一步提示持续时间与振幅所反映的运动学关系并不相同，而且burst持续时间与运动表现的关联具有任务状态依赖性。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+研究使用广义线性混合效应逻辑回归进一步区分Regular Turn和FoG-Turn。Turn期间burst duration与FoG-Turn发生呈正相关，\(\beta=0.709\)，\(P=0.001\)，OR=2.032；Pre-Turn期间burst duration的效应未达到显著性，\(\beta=-0.317\)，\(P=0.091\)。运动学指标也与冻结转弯相关：Turn期间平均角速度\(\beta=-2.668\)，\(P<0.001\)；Pre-Turn步幅长度\(\beta=-0.978\)，\(P<0.001\)。整合神经和运动学指标的模型\(R^2=0.476\)，留一受试者交叉验证的AU-ROC为\(0.84\pm0.14\)，准确率为\(70\pm19\%\)，Cohen's kappa为\(0.34\pm0.16\)。这些结果显示burst duration具有冻结转弯相关信息，但模型同时纳入运动学指标，不能证明burst duration具有独立于运动学的预测贡献；其分类性能也仍属中等水平。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+Klocke研究的主要局限包括：患者总数仅13人，实际出现FoG-Turn者为11人；burst阈值依赖Standing阶段振幅分布的第75百分位，阈值设定可能影响持续时间分类；单一触点记录限制了STN空间分布的解释；所有分析均在MedOFF/StimOFF条件下进行，尚不能确定结果在药物或刺激开启时是否保持。作者还指出平均功率与burst统计并非相互独立，因此不同指标的统计结果不能被当作完全独立的神经证据。[DOI:10.21203/rs.3.rs-9617843/v1]
+
+**4. Beaudoin et al.（2026）：FOG相关变化可能表现为burst时间分布及规则性改变，而非单纯持续时间延长**
+
+Beaudoin等对既有STN-LFP步态数据进行二次分析，采用患者内行为状态比较，并进行leave-one-patient-out分类。研究只有4名PD患者，但记录到176次FOG发作，其中163次（92.6%）之前出现转弯。每个session选择beta功率最高的单个STN接触点进行分析。研究重点不是平均burst duration，而是burst出现时间及相邻burst间隔的时间结构，包括Shannon entropy、inter-burst interval的变异系数（CV）、median absolute deviation（MAD）、permutation entropy、Lempel-Ziv complexity和sample entropy。[DOI:10.64898/2026.08.13.744293]
+
+首先，研究比较FOG发生前、同一turn-freeze cluster中的转弯（pre-freeze turns）与不邻接FOG的稳定转弯（stable turns）。Shannon entropy在low beta和high beta频段均显著下降：high beta \(P=0.00186\)，low beta \(P=0.000567\)，两种状态间的entropy差异为\(\Delta=0.611\pm0.282\)。控制bout duration后，condition效应仍显著，\(\beta=-0.529\)，\(P=0.0027\)，而bout duration本身没有显著关联，\(\beta=0.047\)，\(P=0.561\)。两个beta频段之间也没有显著交互作用，\(P=0.693\)。作者将这一现象解释为冻结发生前STN beta burst时间分布变得更加受限、可预测。[DOI:10.64898/2026.08.13.744293]
+
+使用Shannon entropy进行患者层面留一交叉验证时，logistic regression的AUC为0.825，accuracy为0.773；low beta和high beta单独建模的AUC分别为0.815和0.817。合并两个频段的entropy没有改善性能，AUC约为0.75。基于entropy阈值的分类器AUC为0.858，low beta和high beta的频段特异性阈值分类器AUC分别为0.852和0.842。上述分类单位是转弯episode，而独立患者只有4名，因此不能把较高AUC解释为已经获得独立患者队列的外部验证。[DOI:10.64898/2026.08.13.744293]
+
+该研究同时发现，不同时间结构指标并不总是同方向变化。Pre-freeze turns中的Lempel-Ziv complexity反而增加\(0.222\pm0.087\)，high beta \(P=0.000621\)，low beta \(P=0.00723\)，频段与condition之间没有显著交互作用，\(P=0.725\)。low beta分析中有1名患者因pre-freeze数据不足而被排除，因此该频段的这一比较实际上只有3名患者。Shannon entropy下降与Lempel-Ziv complexity上升并非简单的同一指标重复验证：前者根据burst midpoint time分布计算，后者则先将inter-burst intervals二值化，再计算时间序列复杂性。两者测量定义不同，不能将其压缩成“所有复杂性指标均下降”。[DOI:10.64898/2026.08.13.744293]
+
+更重要的是，pre-freeze与stable turns之间的差异不能直接等同于FOG已经发生时的差异。Beaudoin等比较FOG发作与pre-freeze turns时，Shannon entropy没有显著差异：high beta \(P=0.56\)，low beta \(P=0.09\)。其分类性能也较弱，Shannon entropy AUC=0.596；CV AUC=0.626；MAD AUC=0.617；CV+MAD AUC=0.629；permutation entropy AUC=0.585；Lempel-Ziv complexity AUC=0.592。这提示Shannon entropy在该数据中更接近冻结发生前的状态变化指标，而不是已经发生冻结的稳定标志。[DOI:10.64898/2026.08.13.744293]
+
+针对实际FOG期间的inter-burst interval变化，研究发现CV在high beta和low beta均显著下降，分别为\(P=3.7\times10^{-6}\)和\(P=0.0016\)；MAD仅在high beta显著下降，\(P=0.023\)，low beta不显著，\(P=0.47\)。Permutation entropy在high beta和low beta均 modestly下降，分别为\(P=0.030\)和\(P=0.042\)。Lempel-Ziv complexity在high beta显著增加，\(P=0.0047\)，low beta仅呈趋势，\(P=0.057\)；sample entropy没有显著变化。因此，实际冻结期间可以观察到burst时间间隔规则性增强，但不同指标和频段并不一致。[DOI:10.64898/2026.08.13.744293]
+
+这一结果将C14的解释从单一的“长burst增加”扩展到更一般的时间结构改变：FOG相关神经动力学可能体现为burst持续时间分布、相邻burst间隔的变异性及其时间组织方式变化，而不必表现为所有患者、所有任务中平均burst duration一致增加。不过，这项研究仅有4名患者，是既有数据的二次分析；每个session只选择beta功率最高的单个STN接触点；分析主要集中于转弯相关FOG，不能直接推广到直线行走的全部冻结类型。研究还是尚未经过同行评审的bioRxiv预印本，且Methods将Shannon entropy定义为burst midpoint time分布的熵，而Abstract称其为inter-burst interval entropy，存在测量术语不一致。[DOI:10.64898/2026.08.13.744293]
+
+**5. Wilkins et al.（2024预印本；2025正式版本）：burst-driven aDBS能够调节burst，但未证明其具有独立的抗冻结优势**
+
+Wilkins等研究了基于STN beta burst duration的自适应DBS（adaptive DBS，aDBS），并比较其与持续刺激及不依赖实时beta生物标志物的随机自适应刺激之间的差异。2024年预印本DOI:10.1101/2024.06.26.24309418与2025年正式版本PMID:40677701被研究关系数据标记为同一成果（same_work），因此这里将其视为同一研究，而不是两项独立重复验证。[DOI:10.1101/2024.06.26.24309418; PMID:40677701]
+
+该研究的步态结果来自7名患者的SIP任务及5名患者的转弯行为任务（TBC）。研究比较三种DBS条件：由实时beta burst duration驱动的aDBS、持续DBS（cDBS），以及与实时beta burst信号脱钩的随机自适应DBS（2024版本称iDBS，2025版本称rDBS）。随机刺激采用与aDBS相似的刺激幅度变化模式，但将实际幅度变化顺序随机打乱，使刺激不再与实时beta burst duration相关。三种ON条件使用相同刺激接触点、140.1 Hz频率和60 μs脉宽；刺激幅度限制在个体化治疗窗口Imin至Imax内，并通过匹配总电能输送量（TEED）控制刺激剂量差异。[DOI:10.1101/2024.06.26.24309418; PMID:40677701]
+
+研究没有发现aDBS相对于iDBS/rDBS或cDBS的显著组水平优势。TBC任务中，iDBS也显著降低了FOG；SIP任务中，iDBS相对于OFF DBS仅表现为改善趋势。三个ON条件之间的步态和FOG指标均没有显著差异。TEED在不同刺激条件间也没有显著变化：SIP为\(F(2,33)=0.0065\)，\(P=0.99\)；TBC为\(F(2,52.5)=0.067\)，\(P=0.227\)；rWFE为\(F(2,62)=0.036\)，\(P=0.96\)。正式版本还报告三种ON刺激条件下，整体MDS-UPDRS III相对于OFF DBS的改善分别为aDBS \(59.9\pm15.8\%\)、cDBS \(58.6\pm13.8\%\)和rDBS \(57.5\pm11.7\%\)，三者之间没有显著差异。[DOI:10.1101/2024.06.26.24309418; PMID:40677701]
+
+该结果对burst时间结构作为治疗反馈信号的特异性具有重要限制。虽然aDBS能够依据beta burst动态改变刺激，但与beta burst脱钩的随机刺激也能取得相近的组水平疗效。由于随机刺激仍维持在治疗窗口内，且与aDBS具有相近TEED，研究无法排除维持有效刺激强度、总体刺激量或刺激幅度变化本身产生了步态改善。没有显著组间差异也不等于正式证明三种刺激机制完全等效，尤其是在患者样本较小、研究时间较短且缺乏正式等效性检验的情况下。[DOI:10.1101/2024.06.26.24309418; PMID:40677701]
+
+该研究还展示了一名患者的刺激校准过程。在OFF-medication状态下进行SIP任务，刺激幅度依次测试0%、25%、50%、75%、85%、100%和110%的临床刺激幅度，并以约15 Hz beta峰为中心、采用6 Hz个体化频带分析。该患者在0%和25%刺激时整个试验期间均处于冻结状态，50%时大部分时间仍然冻结；达到75%后FOG明显改善，继续提高刺激幅度至110%时步态进一步改善。与此同时，STN beta burst duration随刺激幅度增加而缩短，较高刺激幅度下多数burst短于500 ms。[DOI:10.1101/2024.06.26.24309418]
+
+这一病例提供了刺激幅度、burst duration和冻结表现共同变化的直观例证，但只有1名参与者，且仅展示一个STN的神经数据。刺激幅度本身能够同时影响神经活动和行为，因而不能区分burst缩短是否直接介导FOG改善，也没有提供burst变化与单次冻结事件之间的逐事件时间关系。[DOI:10.1101/2024.06.26.24309418]
+
+总体而言，Wilkins研究支持STN beta burst duration具有刺激可调节性，但没有建立“刺激缩短burst—因此FOG改善”的中介因果链。特别是随机刺激与生物标志物驱动刺激获得相似结果，使得burst时间结构是否具有超出一般刺激调节的独立治疗价值，仍然是一个需要进一步验证的问题。[DOI:10.1101/2024.06.26.24309418; PMID:40677701]
+
+【继续】
