@@ -1407,9 +1407,21 @@ def cmd_cohorts2(args):
         try: return g, llm.parse_json(llm.call(f"{args.tag}_{args.q}_crel_{llm.pid(msg)}", msg, model=G6, stage="cohort_rel"))
         except Exception as e: print("组内关系失败（下次重跑）", e, flush=True); return g, None
     print(f"B 组内关系：待判 {len(gtodo)} 组（最大 {max((len(g) for g in gtodo), default=0)} 篇）", flush=True)
+    # 11-14：30、32 篇的两组三遍都失败（一小时无完成）。超过 16 篇的组切成 8 篇一块，每两块合起来判一次（16 篇），
+    # 每一对文献仍至少被比较一次；全部块对完成才算这组完成
+    jobs = []
+    for g in gtodo:
+        if len(g) <= 16: jobs.append((g[0], g)); continue
+        gy = sorted(g, key=lambda p: (papers[p]["year"] or 0, p)); bl = [gy[i:i + 8] for i in range(0, len(gy), 8)]
+        for i in range(len(bl)):
+            for j in range(i + 1, len(bl)):
+                k = f"{g[0]}#{i}-{j}"
+                if k not in rel_done: jobs.append((k, bl[i] + bl[j]))
+    gsub = {g[0]: {f"{g[0]}#{i}-{j}" for i in range((len(g) + 7) // 8) for j in range(i + 1, (len(g) + 7) // 8)} for g in gtodo if len(g) > 16}
     with ThreadPoolExecutor(WORKERS) as ex:
-        for f in as_completed([ex.submit(b_one, g) for g in gtodo]):
-            g, d = f.result()
+        futs = {ex.submit(b_one, sub): k for k, sub in jobs}
+        for f in as_completed(futs):
+            g, d = f.result(); k = futs[f]
             if d is None: continue
             cc = kb.connect(); gs = set(g)
             for it in d.get("relations", []):
@@ -1419,7 +1431,10 @@ def cmd_cohorts2(args):
                     cc.execute("INSERT OR REPLACE INTO paper_rel(a,b,run_id,relation,basis,source,at) VALUES(?,?,?,?,?,?,?)", (a, b2, args.tag, rel, it.get("basis") or "", "model_rel", kb.now()))
                     kb.hist(cc, "paper_rel", f"{a}|{b2}", rel, it.get("basis") or "", args.tag)
             cc.commit(); cc.close()
-            rel_done.add(g[0]); wr(rdp, sorted(rel_done))
+            rel_done.add(k)
+            for gk, subs in gsub.items():
+                if subs <= rel_done: rel_done.add(gk)
+            wr(rdp, sorted(rel_done))
     from collections import Counter
     left = [g for g in groups if len(g) > 1 and g[0] not in rel_done]
     print("文献类型", dict(Counter(r["kind"] for r in meta().values())), "关系", dict(Counter(r[0] for r in c.execute("SELECT relation FROM paper_rel WHERE run_id=?", (args.tag,)))),
