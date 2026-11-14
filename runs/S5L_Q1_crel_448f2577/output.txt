@@ -1,0 +1,100 @@
+<escape>{
+  "relations": [
+    {
+      "a": "PMID:31665229",
+      "b": "PMID:37226972",
+      "relation": "unknown",
+      "basis": "两篇均为悉尼/Westmead术中STN微电极记录，各纳入8人。2019论文已经包含认知颜色词提示的VR步态任务，2023论文明确沿用2019年描述的术中设置和VR任务，并进一步分析认知提示试次。高度怀疑使用了相同或部分相同的原始记录，但没有明确的患者ID或数据复用声明，因此不直接判定same_cohort。【turn530661view0】【turn232214search2】"
+    },
+    {
+      "a": "PMID:32431656",
+      "b": "PMID:35153698",
+      "relation": "unknown",
+      "basis": "两篇均来自Tübingen，研究接受STN-DBS的帕金森病患者。Cebi 2020纳入18人，其中13人为FOG患者；Breu 2021纳入16名PD-DBS患者，最终分析9名FOG患者。中心、疾病表型、DBS硬件和样本规模均存在潜在交集，但伦理审批和患者身份尚未建立对应关系，不能确认是否为同一队列。【turn482828view0】【turn792338view0】"
+    },
+    {
+      "a": "PMID:32431656",
+      "b": "PMID:39470410",
+      "relation": "unknown",
+      "basis": "均为Tübingen的STN-DBS/FOG患者研究。Cebi 2020的18人队列中有13名freezers；Klocke 2024分析12名FOG患者，使用Medtronic Percept PC，其中存在更换脉冲发生器的患者。早期Medtronic DBS患者可能进入后续Percept研究，但没有患者级身份或手术日期匹配证据。【turn482828view0】【turn608993view1】"
+    },
+    {
+      "a": "PMID:35153698",
+      "b": "PMID:39470410",
+      "relation": "unknown",
+      "basis": "均来自Tübingen，研究PD-FOG及STN-DBS相关步态异常。Breu是Klocke 2024论文的共同作者；前者分析9名FOG患者，后者分析12名FOG患者。Medtronic 3389电极与后续Percept发生器更换存在技术上的连续性可能，但没有患者ID匹配或明确的既有队列声明。【turn792338view0】【turn608993view1】"
+    },
+    {
+      "a": "PMID:32431656",
+      "b": "PMID:42860886",
+      "relation": "unknown",
+      "basis": "2026多中心试验包括Tübingen中心，并明确从既有DBS患者队列中招募。Cebi 2020的18名患者来自同一中心，使用STN-DBS，且其研究时间与试验早期招募时期有交集。试验要求Medtronic Activa PC/RC及相应电极位置，部分早期患者可能符合条件，但没有Tübingen中心的患者名单或个体ID匹配。【turn482828view0】【turn254386view3】【turn200790view4】"
+    },
+    {
+      "a": "PMID:35153698",
+      "b": "PMID:42860886",
+      "relation": "unknown",
+      "basis": "Breu 2021的Tübingen队列中，9名FOG患者有8名的低位电极接触达到SNr，使用Medtronic 3389电极。2026多中心试验从既有DBS队列选取患者，要求双侧STN/SNr相关电极位置，且包含Tübingen中心。两者的患者选择条件和硬件具有较强相似性，但没有直接患者身份匹配证据。【turn792338view0】【turn254386view3】"
+    },
+    {
+      "a": "PMID:39470410",
+      "b": "DOI:10.21203/rs.3.rs-9617843/v1",
+      "relation": "partial_overlap",
+      "basis": "2024论文的12名患者ID为1、5、9、10、11、13、14、15、17、18、19、20；2026预印本的13名患者ID为1、5、6、9、10、11、13、14、15、17、18、19、20。前者的12名患者全部出现在后者中，后者额外增加ID 6。两篇还具有相同的Tübingen研究背景和伦理审批信息。【turn482828view6】【turn613821view0】"
+    },
+    {
+      "a": "PMID:39470410",
+      "b": "PMID:42236313",
+      "relation": "partial_overlap",
+      "basis": "2024论文的12名患者ID与2026 EJN论文13名患者的ID列表一致，后者包含前者全部12人并增加1人。两篇使用相同Tübingen STN-DBS患者来源，属于同一患者群体的不同分析或扩展。【turn482828view6】【turn764283view0】"
+    },
+    {
+      "a": "DOI:10.21203/rs.3.rs-9617843/v1",
+      "b": "PMID:42236313",
+      "relation": "same_cohort",
+      "basis": "两篇均分析13名Tübingen患者的转弯相关STN-LFP记录，患者ID列表及临床特征一致。预印本重点分析低β频段、β burst及步态分类；EJN论文重点分析STN振荡与认知、焦虑及抑郁指标的关联。属于同一批患者的不同分析；现有信息不足以认定为同一学术成果的正式版本。【turn613821view0】【turn764283view0】【turn797905search2】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:32431656",
+      "relation": "unknown",
+      "basis": "按PMID和题名核查，Leavitt论文实际涉及Tübingen的广义DBS电极轨迹数据库，报告612条电极轨迹、约306名患者，并非题列的59名PD患者加38名健康对照。该广义数据库可能包含Cebi 2020的Tübingen STN-DBS患者，但没有患者ID或完整纳入时间窗可供核对。【turn254386view4】【turn700224search0】【turn482828view0】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:35153698",
+      "relation": "unknown",
+      "basis": "Leavitt论文的广义Tübingen DBS轨迹数据库包含Medtronic电极型号；Breu 2021的患者也来自Tübingen并使用Medtronic 3389电极。两者可能共享标准临床DBS患者，但没有公开的个体ID或时间窗对应表。另需注意，Leavitt条目的题列样本量与实际论文报告的306名患者/612条轨迹不一致。【turn254386view4】【turn700224search0】【turn792338view0】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:39470410",
+      "relation": "unknown",
+      "basis": "Leavitt论文是Tübingen广义STN-DBS电极轨迹分析；Klocke 2024的12名患者同样来自Tübingen，接受常规STN-DBS并使用Percept PC。后者可能属于前者的广义临床电极数据库，但没有患者ID匹配证据。【turn254386view4】【turn700224search0】【turn608993view1】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:40926219",
+      "relation": "unknown",
+      "basis": "两篇研究均来自Tübingen。Weiss 2025分析10名接受Boston Scientific MICC nigral stimulation的患者；Leavitt的广义Tübingen电极轨迹数据库也包含Boston Scientific Vercise电极型号。硬件类别和中心存在交集，可能共享部分患者，但尚无电极编号或患者ID的直接对应。【turn254386view4】【turn700224search0】【turn623403view0】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "DOI:10.21203/rs.3.rs-9617843/v1",
+      "relation": "unknown",
+      "basis": "两篇均涉及Tübingen接受STN-DBS的患者。Leavitt论文的广义轨迹数据库可能包含Klocke预印本的13名Percept患者，但目前没有患者级ID匹配或明确的数据库纳入范围证明。【turn254386view4】【turn700224search0】【turn613821view0】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:42236313",
+      "relation": "unknown",
+      "basis": "EJN论文的13名患者来自Tübingen STN-DBS队列；Leavitt论文分析同一医院的广义DBS电极轨迹数据库。两者可能包含相同患者的不同数据分析，但缺少个体ID对应关系。Leavitt论文实际报告的是612条轨迹，而非题列59+38样本。【turn254386view4】【turn700224search0】【turn764283view0】"
+    },
+    {
+      "a": "PMID:42185340",
+      "b": "PMID:42860886",
+      "relation": "unknown",
+      "basis": "Leavitt论文分析Tübingen的广义DBS电极轨迹数据库；2026多中心试验也包含Tübingen中心，并从既有DBS患者队列招募。试验中的Tübingen患者可能属于该轨迹数据库，但多中心论文没有提供足以逐人核对的中心分层患者ID。【turn254386view4】【turn700224search0】【turn254386view3】"
+    }
+  ]
+}</escape>
