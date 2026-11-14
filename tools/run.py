@@ -1400,6 +1400,9 @@ def cmd_independence(args):
     c = kb.connect(); sp = OUT / args.tag / "synthesis.json"
     if not sp.exists(): raise SystemExit(f"{sp} 不存在：先把上游版本的 synthesis.json 复制过来")
     syn = json.loads(rd(sp))
+    nev = len(_ev_papers(c, args)); nmeta = c.execute("SELECT COUNT(*) FROM paper_meta WHERE run_id=? AND kind!='unknown'", (args.tag,)).fetchone()[0]
+    if nmeta < 0.95 * nev:   # 核对没做完时算出来的队列数偏少（缺的文献记 unknown、不计队列），不能拿去用
+        raise SystemExit(f"独立性核对只完成 {nmeta}/{nev} 篇（<95%），先重跑 cohorts")
     if not (OUT / args.tag / "synthesis_before_indep.json").exists(): wr(OUT / args.tag / "synthesis_before_indep.json", syn)
     else: syn = json.loads(rd(OUT / args.tag / "synthesis_before_indep.json"))
     packet = independence_packet(c, args, syn["claims"])
